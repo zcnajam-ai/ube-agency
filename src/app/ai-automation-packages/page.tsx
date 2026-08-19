@@ -15,11 +15,25 @@ import {
 import { COMPANY_INFO } from "@/data/company";
 
 export const metadata: Metadata = {
-  title: "AI Automation Packages & Pricing | Workflow, CRM & Chatbot Plans | Unified Branding Experts",
+  title: "AI Automation Packages & Pricing | Workflow & Chatbot Plans",
   description:
     "Compare AI automation packages built for every stage, from a one-time audit to a full-scale build. Workflow automation, CRM setups, AI chatbots, and integrations. Starting at $349.",
   alternates: {
-    canonical: "/ai-automation-packages",
+    canonical: "https://unifiedbrandingexperts.com/ai-automation-packages",
+  },
+  openGraph: {
+    title: "AI Automation Packages & Pricing | Workflow & Chatbot Plans",
+    description:
+      "Compare AI automation packages built for every stage, from a one-time audit to a full-scale build. Starting at $349.",
+    url: "https://unifiedbrandingexperts.com/ai-automation-packages",
+    images: [
+      {
+        url: "https://unifiedbrandingexperts.com/images/projects/project-web-1.webp",
+        width: 1200,
+        height: 630,
+        alt: "AI Automation Packages by Unified Branding Experts",
+      },
+    ],
   },
 };
 

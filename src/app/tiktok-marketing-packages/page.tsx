@@ -13,11 +13,25 @@ import {
 import { COMPANY_INFO } from "@/data/company";
 
 export const metadata: Metadata = {
-  title: "TikTok Marketing Packages & Pricing | Short-Form Video & Ads | Unified Branding Experts",
+  title: "TikTok Marketing Packages & Pricing | Short-Form Video & Ads",
   description:
     "Compare TikTok marketing packages built for every stage, from consistent organic posting to full-scale viral campaigns. Content calendars, hooks, and paid ads. Starting at $299/mo.",
   alternates: {
-    canonical: "/tiktok-marketing-packages",
+    canonical: "https://unifiedbrandingexperts.com/tiktok-marketing-packages",
+  },
+  openGraph: {
+    title: "TikTok Marketing Packages & Pricing | Short-Form Video & Ads",
+    description:
+      "Compare TikTok marketing packages built for every stage. Content calendars, video creative, and TikTok Shop setup starting at $299/mo.",
+    url: "https://unifiedbrandingexperts.com/tiktok-marketing-packages",
+    images: [
+      {
+        url: "https://unifiedbrandingexperts.com/images/projects/project-marketing-1.webp",
+        width: 1200,
+        height: 630,
+        alt: "TikTok Marketing Packages by Unified Branding Experts",
+      },
+    ],
   },
 };
 

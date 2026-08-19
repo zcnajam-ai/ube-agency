@@ -16,11 +16,25 @@ import {
 import { COMPANY_INFO } from "@/data/company";
 
 export const metadata: Metadata = {
-  title: "Service Packages & Pricing Directory | Unified Branding Experts",
+  title: "Service Packages & Pricing Directory",
   description:
     "Explore transparent pricing plans across Branding, AI SEO, AI Automation, TikTok Marketing, and Mobile App Development. Compare tiers and start scaling today.",
   alternates: {
-    canonical: "/packages",
+    canonical: "https://unifiedbrandingexperts.com/packages",
+  },
+  openGraph: {
+    title: "Service Packages & Pricing Directory",
+    description:
+      "Explore transparent pricing plans across Branding, AI SEO, AI Automation, TikTok Marketing, and Mobile App Development.",
+    url: "https://unifiedbrandingexperts.com/packages",
+    images: [
+      {
+        url: "https://unifiedbrandingexperts.com/images/projects/project-brand-1.webp",
+        width: 1200,
+        height: 630,
+        alt: "Service Packages - Unified Branding Experts",
+      },
+    ],
   },
 };
 

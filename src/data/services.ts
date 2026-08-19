@@ -168,6 +168,24 @@ export const SERVICE_PILLARS: ServicePillar[] = [
         technologies: ["React Native", "Flutter", "Swift", "Kotlin", "Firebase", "PostgreSQL"],
         deliverableScope: "Complete iOS & Android App Development",
       },
+      {
+        id: "ai-automation-dev",
+        slug: "ai-automation",
+        title: "AI Automation & Workflow Systems",
+        shortTitle: "AI Automation",
+        kicker: "Intelligent Workflows",
+        summary:
+          "Custom AI automation workflows, CRM lead routing, customer qualification chatbots, and multi-app integrations built to streamline repetitive business operations.",
+        deliverables: [
+          "Custom LLM & Chatbot Integration",
+          "Automated CRM Lead Scoring & Routing",
+          "Multi-Platform Workflow Sync (Zapier/Make/API)",
+          "Data Extraction & Automated Reporting Pipelines",
+          "Internal Knowledge Base Integration",
+        ],
+        technologies: ["OpenAI API", "Make.com", "Zapier", "Python", "Node.js", "PostgreSQL"],
+        deliverableScope: "Custom Workflow Automation Architecture",
+      },
     ],
   },
   {

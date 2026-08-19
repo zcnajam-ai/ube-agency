@@ -16,11 +16,25 @@ import {
 import { COMPANY_INFO } from "@/data/company";
 
 export const metadata: Metadata = {
-  title: "Branding Packages & Pricing | Logo, Identity & Brand System Plans | Unified Branding Experts",
+  title: "Branding Packages & Pricing | Logo & Identity Plans",
   description:
     "Compare branding packages built for every stage, from a professional logo to a full brand system. Logo design, brand identity, strategy, guidelines, and rebranding. Starting at $299.",
   alternates: {
-    canonical: "/branding-packages",
+    canonical: "https://unifiedbrandingexperts.com/branding-packages",
+  },
+  openGraph: {
+    title: "Branding Packages & Pricing | Logo & Identity Plans",
+    description:
+      "Compare branding packages built for every stage, from a professional logo to a full brand system. Starting at $299.",
+    url: "https://unifiedbrandingexperts.com/branding-packages",
+    images: [
+      {
+        url: "https://unifiedbrandingexperts.com/images/projects/project-brand-1.webp",
+        width: 1200,
+        height: 630,
+        alt: "Branding Packages by Unified Branding Experts",
+      },
+    ],
   },
 };
 
@@ -365,7 +379,7 @@ export default function BrandingPackagesPage() {
           </Link>
 
           <Link
-            href="/services/web-development"
+            href="/services/web-design-development"
             className="p-6 rounded-3xl bg-white border border-[#E0DDDB] hover:border-[#9F8BE7] space-y-2 transition-all group shadow-xs"
           >
             <span className="text-xs font-mono-num text-emerald-600 font-bold">NEXT STEP</span>

@@ -18,11 +18,25 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Best Logo Design Agency | Custom Brand Identity & Logo Design | Unified Branding Experts",
+  title: "Best Logo Design Agency | Custom Brand Mark & Identity",
   description:
-    "Award-winning custom logo design and brand identity services. 100% original vector logos, multiple concepts, full copyright ownership, and complete brand style guidelines.",
+    "Custom logo design and brand identity services. 100% original vector logos, multiple concepts, full copyright ownership, and complete brand style guidelines.",
   alternates: {
-    canonical: "/best-logo-design-agency",
+    canonical: "https://unifiedbrandingexperts.com/best-logo-design-agency",
+  },
+  openGraph: {
+    title: "Best Logo Design Agency | Custom Brand Mark & Identity",
+    description:
+      "Custom logo design and brand identity services. 100% original vector logos, multiple concepts, and full copyright ownership.",
+    url: "https://unifiedbrandingexperts.com/best-logo-design-agency",
+    images: [
+      {
+        url: "https://unifiedbrandingexperts.com/images/projects/project-brand-1.webp",
+        width: 1200,
+        height: 630,
+        alt: "Logo Design Agency - Unified Branding Experts",
+      },
+    ],
   },
 };
 

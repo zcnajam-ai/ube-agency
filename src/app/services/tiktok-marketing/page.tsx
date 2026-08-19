@@ -16,11 +16,25 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "TikTok Marketing Services | Viral Short-Form Video & Ads | Unified Branding Experts",
+  title: "TikTok Marketing Services | Video Strategy & Paid Ads",
   description:
-    "Turn scrolls into sales with organic short-form video strategy, high-converting TikTok ads, creator partnerships, and data-driven community growth.",
+    "Short-form video strategy, high-converting TikTok ads, creator partnerships, and data-driven community growth for modern brands.",
   alternates: {
-    canonical: "/services/tiktok-marketing",
+    canonical: "https://unifiedbrandingexperts.com/services/tiktok-marketing",
+  },
+  openGraph: {
+    title: "TikTok Marketing Services | Video Strategy & Paid Ads",
+    description:
+      "Short-form video strategy, high-converting TikTok ads, and creator partnerships.",
+    url: "https://unifiedbrandingexperts.com/services/tiktok-marketing",
+    images: [
+      {
+        url: "https://unifiedbrandingexperts.com/images/projects/project-marketing-1.webp",
+        width: 1200,
+        height: 630,
+        alt: "TikTok Marketing Services - Unified Branding Experts",
+      },
+    ],
   },
 };
 

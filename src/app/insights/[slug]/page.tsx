@@ -36,7 +36,7 @@ export async function generateMetadata({
   const canonicalUrl = `https://unifiedbrandingexperts.com/insights/${article.slug}`;
 
   return {
-    title: `${article.title} | Unified Branding Experts`,
+    title: article.title,
     description: article.summary,
     alternates: {
       canonical: canonicalUrl,

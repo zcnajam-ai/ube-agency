@@ -5,11 +5,25 @@ import { Sparkles, ArrowUpRight, CheckCircle2 } from "lucide-react";
 import { SERVICE_PILLARS } from "@/data/services";
 
 export const metadata: Metadata = {
-  title: "Services & Capabilities | eCommerce, Web Apps, Branding & AISEO",
+  title: "Services & Capabilities | eCommerce, Web Apps, Branding & AI SEO",
   description:
-    "Explore our full spectrum of digital agency services: eCommerce store setup, bespoke web development, mobile applications, brand strategy, AISEO, and performance advertising.",
+    "Explore our full spectrum of digital agency services: eCommerce store setup, bespoke web development, mobile applications, brand strategy, AI SEO, and performance advertising.",
   alternates: {
-    canonical: "/services",
+    canonical: "https://unifiedbrandingexperts.com/services",
+  },
+  openGraph: {
+    title: "Services & Capabilities | eCommerce, Web Apps, Branding & AI SEO",
+    description:
+      "Explore our full spectrum of digital agency services: eCommerce store setup, bespoke web development, mobile applications, brand strategy, and AI SEO.",
+    url: "https://unifiedbrandingexperts.com/services",
+    images: [
+      {
+        url: "https://unifiedbrandingexperts.com/images/projects/project-web-1.webp",
+        width: 1200,
+        height: 630,
+        alt: "Services - Unified Branding Experts",
+      },
+    ],
   },
 };
 

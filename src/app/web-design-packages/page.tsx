@@ -4,11 +4,25 @@ import { Metadata } from "next";
 import { Sparkles, Check, ArrowUpRight, ShieldCheck, Layout, HelpCircle } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Web Design Packages & Pricing | Responsive UI/UX Plans | Unified Branding Experts",
+  title: "Web Design Packages & Pricing | Responsive UI/UX Plans",
   description:
     "Explore transparent web design packages. From 3-page starter websites ($300) to 8-10 page standard sites ($649) and enterprise custom platforms ($1,200).",
   alternates: {
-    canonical: "/web-design-packages",
+    canonical: "https://unifiedbrandingexperts.com/web-design-packages",
+  },
+  openGraph: {
+    title: "Web Design Packages & Pricing | Responsive UI/UX Plans",
+    description:
+      "Explore transparent web design packages from 3-page websites ($300) to enterprise platforms.",
+    url: "https://unifiedbrandingexperts.com/web-design-packages",
+    images: [
+      {
+        url: "https://unifiedbrandingexperts.com/images/projects/project-web-1.webp",
+        width: 1200,
+        height: 630,
+        alt: "Web Design Packages by Unified Branding Experts",
+      },
+    ],
   },
 };
 

@@ -18,11 +18,25 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Custom Web Development | Bespoke Web Apps & Enterprise Software | Unified Branding Experts",
+  title: "Custom Web Development | Bespoke Web Apps & Software",
   description:
     "Bespoke custom web development. Tailor-made web applications, custom customer portals, high-volume database systems, and secure API integrations.",
   alternates: {
-    canonical: "/custom-web-development",
+    canonical: "https://unifiedbrandingexperts.com/custom-web-development",
+  },
+  openGraph: {
+    title: "Custom Web Development | Bespoke Web Apps & Software",
+    description:
+      "Bespoke custom web development. Tailor-made web applications, custom customer portals, and secure API integrations.",
+    url: "https://unifiedbrandingexperts.com/custom-web-development",
+    images: [
+      {
+        url: "https://unifiedbrandingexperts.com/images/projects/project-web-1.webp",
+        width: 1200,
+        height: 630,
+        alt: "Custom Web Development by Unified Branding Experts",
+      },
+    ],
   },
 };
 

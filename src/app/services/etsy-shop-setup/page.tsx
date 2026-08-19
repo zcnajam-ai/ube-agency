@@ -18,11 +18,25 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Etsy Shop Setup & Etsy SEO Optimization | Unified Branding Experts",
+  title: "Etsy Shop Setup & Etsy SEO Optimization",
   description:
     "Professional Etsy shop setup and Etsy SEO optimization services. Branded shop banners, 13-tag keyword research, listing copywriting, product mockups, and shop launch strategy.",
   alternates: {
-    canonical: "/services/etsy-shop-setup",
+    canonical: "https://unifiedbrandingexperts.com/services/etsy-shop-setup",
+  },
+  openGraph: {
+    title: "Etsy Shop Setup & Etsy SEO Optimization",
+    description:
+      "Professional Etsy shop setup and Etsy SEO optimization services.",
+    url: "https://unifiedbrandingexperts.com/services/etsy-shop-setup",
+    images: [
+      {
+        url: "https://unifiedbrandingexperts.com/images/projects/project-brand-1.webp",
+        width: 1200,
+        height: 630,
+        alt: "Etsy Shop Setup - Unified Branding Experts",
+      },
+    ],
   },
 };
 

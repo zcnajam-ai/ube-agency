@@ -18,11 +18,25 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Digital Marketing Services Agency | Full-Funnel Performance Marketing | Unified Branding Experts",
+  title: "Digital Marketing Services Agency | Paid Ads & Growth",
   description:
-    "Data-driven digital marketing services. Multi-channel paid acquisition across Google Ads, Meta, and TikTok, conversion rate optimization, and transparent ROI reporting.",
+    "Data-driven digital marketing services. Multi-channel paid acquisition across Google Ads, Meta, and TikTok, conversion rate optimization, and transparent reporting.",
   alternates: {
-    canonical: "/digital-marketing-services-agency",
+    canonical: "https://unifiedbrandingexperts.com/digital-marketing-services-agency",
+  },
+  openGraph: {
+    title: "Digital Marketing Services Agency | Paid Ads & Growth",
+    description:
+      "Data-driven digital marketing services. Multi-channel paid acquisition across Google Ads, Meta, and TikTok.",
+    url: "https://unifiedbrandingexperts.com/digital-marketing-services-agency",
+    images: [
+      {
+        url: "https://unifiedbrandingexperts.com/images/projects/project-marketing-1.webp",
+        width: 1200,
+        height: 630,
+        alt: "Digital Marketing Services by Unified Branding Experts",
+      },
+    ],
   },
 };
 

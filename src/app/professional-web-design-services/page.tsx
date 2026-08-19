@@ -18,11 +18,25 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Professional Web Design Services | UI/UX & Responsive Web Design | Unified Branding Experts",
+  title: "Professional Web Design Services | UI/UX & Responsive Web",
   description:
-    "Bespoke UI/UX web design services engineered for high conversion, sub-second load speeds, and seamless responsiveness across all screen sizes.",
+    "Bespoke UI/UX web design services engineered for clean navigation, fast load times, and seamless responsiveness across all screen sizes.",
   alternates: {
-    canonical: "/professional-web-design-services",
+    canonical: "https://unifiedbrandingexperts.com/professional-web-design-services",
+  },
+  openGraph: {
+    title: "Professional Web Design Services | UI/UX & Responsive Web",
+    description:
+      "Bespoke UI/UX web design services engineered for clean navigation, fast load times, and seamless responsiveness.",
+    url: "https://unifiedbrandingexperts.com/professional-web-design-services",
+    images: [
+      {
+        url: "https://unifiedbrandingexperts.com/images/projects/project-web-1.webp",
+        width: 1200,
+        height: 630,
+        alt: "Professional Web Design by Unified Branding Experts",
+      },
+    ],
   },
 };
 

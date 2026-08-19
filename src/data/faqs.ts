@@ -45,7 +45,7 @@ export const FAQS: FAQItem[] = [
     id: "faq-aiseo-explained",
     question: "What is AISEO and why is it essential for modern brands?",
     answer:
-      "AISEO (AI Search Optimization, GEO, and AEO) optimizes your digital footprint for next-generation Answer Engines such as Perplexity, ChatGPT Search, and Google AI Overviews. We build structured entity schemas and authoritative knowledge graphs so AI engines cite and recommend your brand first.",
+      "AISEO (AI Search Optimization, GEO, and AEO) optimizes your digital footprint for next-generation Answer Engines such as Perplexity, ChatGPT Search, and Google AI Overviews. We build structured entity schemas and authoritative knowledge graphs to help AI engines understand and reference your brand accurately.",
     category: "Technology",
   },
 ];

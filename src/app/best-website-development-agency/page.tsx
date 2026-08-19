@@ -18,11 +18,25 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Best Website Development Agency | Full-Stack Web & Next.js Development | Unified Branding Experts",
+  title: "Best Website Development Agency | Custom Full-Stack Web",
   description:
     "High-performance website development services. Custom Next.js, WordPress, headless architectures, API integrations, and enterprise security.",
   alternates: {
-    canonical: "/best-website-development-agency",
+    canonical: "https://unifiedbrandingexperts.com/best-website-development-agency",
+  },
+  openGraph: {
+    title: "Best Website Development Agency | Custom Full-Stack Web",
+    description:
+      "High-performance website development services. Custom Next.js, headless architectures, and API integrations.",
+    url: "https://unifiedbrandingexperts.com/best-website-development-agency",
+    images: [
+      {
+        url: "https://unifiedbrandingexperts.com/images/projects/project-web-1.webp",
+        width: 1200,
+        height: 630,
+        alt: "Website Development Agency - Unified Branding Experts",
+      },
+    ],
   },
 };
 

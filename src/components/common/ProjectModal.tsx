@@ -10,9 +10,10 @@ import { useScroll } from "@/components/providers/SmoothScrollProvider";
 export default function ProjectModal() {
   const { isProjectModalOpen, closeProjectModal, selectedServiceForModal } = useScroll();
 
-  const [mounted, setMounted] = useState(false);
   const overlayRef = useRef<HTMLDivElement>(null);
   const nameInputRef = useRef<HTMLInputElement>(null);
+  const emptySubscribe = React.useCallback(() => () => {}, []);
+  const mounted = React.useSyncExternalStore(emptySubscribe, () => true, () => false);
 
   const [formData, setFormData] = useState({
     name: "",
@@ -31,10 +32,6 @@ export default function ProjectModal() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [error, setError] = useState("");
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
 
   // Keyboard Escape listener
   useEffect(() => {

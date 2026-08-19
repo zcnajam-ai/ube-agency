@@ -6,9 +6,26 @@ import { COMPANY_INFO } from "@/data/company";
 import MagneticButton from "@/components/common/MagneticButton";
 
 export const metadata: Metadata = {
-  title: "About Unified Branding Experts | Agency Philosophy & Team",
+  title: "About Us | Agency Philosophy & Team",
   description:
-    "Learn about Unified Branding Experts, our 15+ years of digital craft, full-service philosophy, and multidisciplinary team.",
+    "Learn about Unified Branding Experts, our strategic craft, full-service philosophy, and multidisciplinary design and engineering team.",
+  alternates: {
+    canonical: "https://unifiedbrandingexperts.com/about",
+  },
+  openGraph: {
+    title: "About Us | Agency Philosophy & Team",
+    description:
+      "Learn about Unified Branding Experts, our strategic craft, full-service philosophy, and multidisciplinary team.",
+    url: "https://unifiedbrandingexperts.com/about",
+    images: [
+      {
+        url: "https://unifiedbrandingexperts.com/images/projects/project-brand-1.webp",
+        width: 1200,
+        height: 630,
+        alt: "About Unified Branding Experts",
+      },
+    ],
+  },
 };
 
 export default function AboutPage() {

@@ -3,8 +3,11 @@ import { Metadata } from "next";
 import { COMPANY_INFO } from "@/data/company";
 
 export const metadata: Metadata = {
-  title: "Terms & Conditions | Unified Branding Experts",
+  title: "Terms & Conditions",
   description: "Terms and conditions for client engagements and digital services at Unified Branding Experts.",
+  alternates: {
+    canonical: "https://unifiedbrandingexperts.com/terms",
+  },
 };
 
 export default function TermsPage() {

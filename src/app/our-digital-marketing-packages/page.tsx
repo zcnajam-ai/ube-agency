@@ -4,11 +4,25 @@ import { Metadata } from "next";
 import { Sparkles, Check, ArrowUpRight, ShieldCheck, TrendingUp, HelpCircle } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Digital Marketing Packages & Pricing | Paid Ads & Growth Plans | Unified Branding Experts",
+  title: "Digital Marketing Packages & Pricing | Paid Ads & Growth Plans",
   description:
     "Explore our digital marketing packages. Multi-channel advertising management across Google, Meta, and TikTok. Transparent monthly tiers starting from $299/mo.",
   alternates: {
-    canonical: "/our-digital-marketing-packages",
+    canonical: "https://unifiedbrandingexperts.com/our-digital-marketing-packages",
+  },
+  openGraph: {
+    title: "Digital Marketing Packages & Pricing | Paid Ads & Growth Plans",
+    description:
+      "Explore our digital marketing packages. Multi-channel advertising management starting from $299/mo.",
+    url: "https://unifiedbrandingexperts.com/our-digital-marketing-packages",
+    images: [
+      {
+        url: "https://unifiedbrandingexperts.com/images/projects/project-marketing-1.webp",
+        width: 1200,
+        height: 630,
+        alt: "Digital Marketing Packages - Unified Branding Experts",
+      },
+    ],
   },
 };
 

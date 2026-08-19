@@ -4,11 +4,25 @@ import { Metadata } from "next";
 import { Sparkles, Check, ArrowUpRight, ShieldCheck, PenTool, HelpCircle } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Content Writing Packages & Pricing | Copywriting Plans | Unified Branding Experts",
+  title: "Content Writing Packages & Pricing | Copywriting Plans",
   description:
     "Explore our professional content writing packages. Persuasive website copywriting, SEO articles, and brand storytelling starting from $199.",
   alternates: {
-    canonical: "/our-content-writing-packages",
+    canonical: "https://unifiedbrandingexperts.com/our-content-writing-packages",
+  },
+  openGraph: {
+    title: "Content Writing Packages & Pricing | Copywriting Plans",
+    description:
+      "Explore our professional content writing packages. Persuasive website copywriting and SEO articles starting from $199.",
+    url: "https://unifiedbrandingexperts.com/our-content-writing-packages",
+    images: [
+      {
+        url: "https://unifiedbrandingexperts.com/images/projects/project-brand-1.webp",
+        width: 1200,
+        height: 630,
+        alt: "Content Writing Packages - Unified Branding Experts",
+      },
+    ],
   },
 };
 

@@ -1291,7 +1291,7 @@ export const INSIGHTS: InsightArticle[] = [
   },
   {
     id: "insight-headless-ecommerce",
-    slug: "headless-ecommerce-and-sub-second-conversion-optimization",
+    slug: "headless-ecommerce-and-fast-conversion-optimization",
     title: "Headless eCommerce Architecture: The Formula for Fast Checkout & High Engagement",
     kicker: "Commerce Engineering",
     category: "eCommerce & Tech",

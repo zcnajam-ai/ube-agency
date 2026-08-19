@@ -4,11 +4,25 @@ import { Metadata } from "next";
 import { Sparkles, Check, ArrowUpRight, ShieldCheck, Cpu, HelpCircle } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Custom Web Design & Development Packages | Bespoke Systems & eCommerce | Unified Branding Experts",
+  title: "Custom Web Design & Development Packages | Bespoke Systems & eCommerce",
   description:
     "Explore our custom web design and development packages. Tailor-made web applications, high-volume eCommerce, custom portals, and dynamic architectures starting from $450.",
   alternates: {
-    canonical: "/our-custom-web-design-development-packages",
+    canonical: "https://unifiedbrandingexperts.com/our-custom-web-design-development-packages",
+  },
+  openGraph: {
+    title: "Custom Web Design & Development Packages | Bespoke Systems & eCommerce",
+    description:
+      "Explore our custom web design and development packages starting from $450.",
+    url: "https://unifiedbrandingexperts.com/our-custom-web-design-development-packages",
+    images: [
+      {
+        url: "https://unifiedbrandingexperts.com/images/projects/project-web-1.webp",
+        width: 1200,
+        height: 630,
+        alt: "Custom Web Design Packages - Unified Branding Experts",
+      },
+    ],
   },
 };
 

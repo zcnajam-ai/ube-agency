@@ -15,11 +15,25 @@ import {
 import { COMPANY_INFO } from "@/data/company";
 
 export const metadata: Metadata = {
-  title: "AI SEO Packages & Pricing | AEO, GEO & AI Overview Plans | Unified Branding Experts",
+  title: "AI SEO Packages & Pricing | AEO, GEO & Search Plans",
   description:
     "Compare AI SEO packages built for every stage, from a one-time audit to a full-scale retainer. AEO, GEO, structured data, and content clusters that earn AI search visibility. Starting at $349.",
   alternates: {
-    canonical: "/ai-seo-packages",
+    canonical: "https://unifiedbrandingexperts.com/ai-seo-packages",
+  },
+  openGraph: {
+    title: "AI SEO Packages & Pricing | AEO, GEO & Search Plans",
+    description:
+      "Compare AI SEO packages built for every stage, from a one-time audit to a full-scale retainer. Starting at $349.",
+    url: "https://unifiedbrandingexperts.com/ai-seo-packages",
+    images: [
+      {
+        url: "https://unifiedbrandingexperts.com/images/projects/project-marketing-1.webp",
+        width: 1200,
+        height: 630,
+        alt: "AI SEO Packages by Unified Branding Experts",
+      },
+    ],
   },
 };
 

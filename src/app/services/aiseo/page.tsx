@@ -16,11 +16,25 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "AI SEO Services | AEO, GEO & AI Search Optimization | Unified Branding Experts",
+  title: "AI SEO Services | AEO, GEO & Search Optimization",
   description:
     "Get found in Google AI Overviews, ChatGPT, Bing Copilot, and generative search. Answer Engine Optimization (AEO), Generative Engine Optimization (GEO), and structured data.",
   alternates: {
-    canonical: "/services/aiseo",
+    canonical: "https://unifiedbrandingexperts.com/services/aiseo",
+  },
+  openGraph: {
+    title: "AI SEO Services | AEO, GEO & Search Optimization",
+    description:
+      "Get found in Google AI Overviews, ChatGPT Search, and generative search engines.",
+    url: "https://unifiedbrandingexperts.com/services/aiseo",
+    images: [
+      {
+        url: "https://unifiedbrandingexperts.com/images/projects/project-marketing-1.webp",
+        width: 1200,
+        height: 630,
+        alt: "AI SEO Services - Unified Branding Experts",
+      },
+    ],
   },
 };
 

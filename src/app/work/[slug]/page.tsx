@@ -24,7 +24,7 @@ export async function generateMetadata({
   if (!project) return { title: "Project Not Found" };
 
   return {
-    title: `${project.title} — Case Study | Unified Branding Experts`,
+    title: `${project.title} — Case Study`,
     description: project.tagline,
     alternates: {
       canonical: `https://unifiedbrandingexperts.com/work/${project.slug}`,

@@ -16,11 +16,25 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "AI Automation Services | CRM & Workflow Solutions | Unified Branding Experts",
+  title: "AI Automation Services | CRM & Workflow Solutions",
   description:
     "Automate CRM pipelines, lead follow-ups, AI chatbots, email sequences, and multi-system workflows. Eliminate manual busywork and scale your operations.",
   alternates: {
-    canonical: "/services/ai-automation",
+    canonical: "https://unifiedbrandingexperts.com/services/ai-automation",
+  },
+  openGraph: {
+    title: "AI Automation Services | CRM & Workflow Solutions",
+    description:
+      "Automate CRM pipelines, lead follow-ups, AI chatbots, and multi-system workflows.",
+    url: "https://unifiedbrandingexperts.com/services/ai-automation",
+    images: [
+      {
+        url: "https://unifiedbrandingexperts.com/images/projects/project-web-1.webp",
+        width: 1200,
+        height: 630,
+        alt: "AI Automation Services by Unified Branding Experts",
+      },
+    ],
   },
 };
 

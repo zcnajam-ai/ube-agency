@@ -6,9 +6,26 @@ import { Sparkles, Clock, ArrowUpRight } from "lucide-react";
 import { INSIGHTS } from "@/data/insights";
 
 export const metadata: Metadata = {
-  title: "Editorial Insights & Thought Leadership | AISEO, Commerce & Strategy",
+  title: "Editorial Insights & Thought Leadership | AI SEO, Commerce & Strategy",
   description:
-    "Explore strategic articles and frameworks on AI Search Optimization (AISEO), Headless eCommerce, and Brand Ecosystems by Unified Branding Experts.",
+    "Explore strategic articles and frameworks on AI Search Optimization (AI SEO), eCommerce development, and Brand Ecosystems by Unified Branding Experts.",
+  alternates: {
+    canonical: "https://unifiedbrandingexperts.com/insights",
+  },
+  openGraph: {
+    title: "Editorial Insights & Thought Leadership | AI SEO, Commerce & Strategy",
+    description:
+      "Explore strategic articles and frameworks on AI Search Optimization, eCommerce development, and Brand Ecosystems.",
+    url: "https://unifiedbrandingexperts.com/insights",
+    images: [
+      {
+        url: "https://unifiedbrandingexperts.com/images/projects/project-brand-1.webp",
+        width: 1200,
+        height: 630,
+        alt: "Editorial Insights by Unified Branding Experts",
+      },
+    ],
+  },
 };
 
 export default function InsightsIndexPage() {

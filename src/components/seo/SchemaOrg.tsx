@@ -1,7 +1,5 @@
 import React from "react";
 import { COMPANY_INFO } from "@/data/company";
-import { FAQS } from "@/data/faqs";
-import { ALL_SERVICES } from "@/data/services";
 
 export default function SchemaOrg() {
   const organizationSchema = {
@@ -13,11 +11,12 @@ export default function SchemaOrg() {
     url: "https://unifiedbrandingexperts.com",
     logo: "https://unifiedbrandingexperts.com/images/logo/ube-logo.svg",
     image: "https://unifiedbrandingexperts.com/images/logo/ube-png-black.png",
-    description: COMPANY_INFO.subheadline,
+    description: "Professional web design, branding, eCommerce development, and digital marketing agency.",
     telephone: COMPANY_INFO.phone,
     email: COMPANY_INFO.email,
     address: {
       "@type": "PostalAddress",
+      streetAddress: COMPANY_INFO.address.street,
       addressLocality: COMPANY_INFO.address.city,
       addressRegion: COMPANY_INFO.address.state,
       addressCountry: COMPANY_INFO.address.country,
@@ -47,39 +46,11 @@ export default function SchemaOrg() {
     "@id": "https://unifiedbrandingexperts.com/#website",
     url: "https://unifiedbrandingexperts.com",
     name: COMPANY_INFO.name,
-    description: COMPANY_INFO.tagline,
+    description: "High-performance eCommerce, custom web development, brand identity systems, and search optimization.",
     publisher: {
       "@id": "https://unifiedbrandingexperts.com/#organization",
     },
     inLanguage: "en-US",
-  };
-
-  const servicesSchema = {
-    "@context": "https://schema.org",
-    "@type": "ItemList",
-    itemListElement: ALL_SERVICES.map((service, index) => ({
-      "@type": "Service",
-      position: index + 1,
-      name: service.title,
-      description: service.summary,
-      provider: {
-        "@id": "https://unifiedbrandingexperts.com/#organization",
-      },
-      url: `https://unifiedbrandingexperts.com/services/${service.slug}`,
-    })),
-  };
-
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: FAQS.map((faq) => ({
-      "@type": "Question",
-      name: faq.question,
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: faq.answer,
-      },
-    })),
   };
 
   return (
@@ -91,14 +62,6 @@ export default function SchemaOrg() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(servicesSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
     </>
   );

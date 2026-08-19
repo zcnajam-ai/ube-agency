@@ -4,11 +4,25 @@ import { Metadata } from "next";
 import { Sparkles, Check, ArrowUpRight, ShieldCheck, Code2, HelpCircle } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Website Development Packages & Pricing | Full-Stack & CMS Plans | Unified Branding Experts",
+  title: "Website Development Packages & Pricing | Full-Stack & CMS Plans",
   description:
     "Explore our website development packages. From 3-page CMS websites ($300) to 8-10 page dynamic standard builds ($649) and enterprise platforms ($1,200).",
   alternates: {
-    canonical: "/our-website-development-packages",
+    canonical: "https://unifiedbrandingexperts.com/our-website-development-packages",
+  },
+  openGraph: {
+    title: "Website Development Packages & Pricing | Full-Stack & CMS Plans",
+    description:
+      "Explore our website development packages starting from $300.",
+    url: "https://unifiedbrandingexperts.com/our-website-development-packages",
+    images: [
+      {
+        url: "https://unifiedbrandingexperts.com/images/projects/project-web-1.webp",
+        width: 1200,
+        height: 630,
+        alt: "Website Development Packages - Unified Branding Experts",
+      },
+    ],
   },
 };
 

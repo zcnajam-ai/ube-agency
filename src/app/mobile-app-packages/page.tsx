@@ -13,11 +13,25 @@ import {
 import { COMPANY_INFO } from "@/data/company";
 
 export const metadata: Metadata = {
-  title: "Mobile App Development Packages & Pricing | iOS & Android | Unified Branding Experts",
+  title: "Mobile App Development Packages & Pricing | iOS & Android",
   description:
     "Compare mobile app development packages from MVP prototypes to full custom iOS and Android builds. Wireframing, UI/UX, backend, and app store deployment. Starting at $999.",
   alternates: {
-    canonical: "/mobile-app-packages",
+    canonical: "https://unifiedbrandingexperts.com/mobile-app-packages",
+  },
+  openGraph: {
+    title: "Mobile App Development Packages & Pricing | iOS & Android",
+    description:
+      "Compare mobile app development packages from MVP prototypes to full custom iOS and Android builds. Starting at $999.",
+    url: "https://unifiedbrandingexperts.com/mobile-app-packages",
+    images: [
+      {
+        url: "https://unifiedbrandingexperts.com/images/projects/project-mobile-1.webp",
+        width: 1200,
+        height: 630,
+        alt: "Mobile App Packages by Unified Branding Experts",
+      },
+    ],
   },
 };
 

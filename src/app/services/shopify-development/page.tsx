@@ -18,11 +18,25 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Shopify Store Setup & Custom Theme Development | Unified Branding Experts",
+  title: "Shopify Store Setup & Custom Theme Development",
   description:
-    "End-to-end Shopify store setup and custom theme development. High-converting Shopify Plus stores, dropshipping automation, 3PL inventory sync, and sub-second checkout.",
+    "End-to-end Shopify store setup and custom theme development. Custom Shopify Plus stores, dropshipping automation, 3PL inventory sync, and responsive checkout flows.",
   alternates: {
-    canonical: "/services/shopify-development",
+    canonical: "https://unifiedbrandingexperts.com/services/shopify-development",
+  },
+  openGraph: {
+    title: "Shopify Store Setup & Custom Theme Development",
+    description:
+      "End-to-end Shopify store setup and custom theme development.",
+    url: "https://unifiedbrandingexperts.com/services/shopify-development",
+    images: [
+      {
+        url: "https://unifiedbrandingexperts.com/images/projects/project-ecommerce-1.webp",
+        width: 1200,
+        height: 630,
+        alt: "Shopify Development by Unified Branding Experts",
+      },
+    ],
   },
 };
 
@@ -30,37 +44,37 @@ export default function ShopifyDevelopmentPage() {
   const serviceIncludes = [
     {
       title: "Custom Shopify 2.0 Theme Architecture",
-      desc: "Bespoke Liquid and JSON templates engineered with modular drag-and-drop sections. Zero bloated third-party page builders for maximum site speed and easy content updates.",
+      desc: "Bespoke Liquid and JSON templates engineered with modular drag-and-drop sections. Built without bloated third-party page builders for clean maintenance and content updates.",
       icon: <ShoppingBag className="w-5 h-5 text-[#9F8BE7]" />,
       image: "/images/official/ecommerce/storefront-setup.jpeg",
     },
     {
-      title: "High-Converting Checkout & Cart Funnels",
-      desc: "Optimized slide-out cart drawers, tiered free shipping progress bars, one-click upsells, bundles, and Shopify Checkout Extensibility configured for maximum conversion rate.",
+      title: "Streamlined Checkout & Cart Funnels",
+      desc: "Slide-out cart drawers, tiered shipping bars, upsell configurations, bundles, and Shopify Checkout Extensibility configured to simplify purchasing.",
       icon: <CreditCard className="w-5 h-5 text-emerald-600" />,
       image: "/images/official/ecommerce/checkout-optimization.jpeg",
     },
     {
       title: "3PL, ERP & Multi-Warehouse Inventory Sync",
-      desc: "Real-time automated synchronization with fulfillment centers, ShipStation, multi-location warehouse routing, and automated dropshipping supplier feeds (DSers, CJ).",
+      desc: "Automated synchronization with fulfillment centers, ShipStation, multi-location warehouse routing, and dropshipping supplier feeds (DSers, CJ).",
       icon: <Truck className="w-5 h-5 text-purple-600" />,
       image: "/images/official/ecommerce/inventory-sync.jpeg",
     },
     {
-      title: "Sub-Second Speed & Core Web Vitals Optimization",
-      desc: "Optimized script loading, image CDN pipelines, lazy-loaded offscreen assets, and streamlined apps ensuring 90+ mobile Google PageSpeed and Lighthouse scores.",
+      title: "Performance & Core Web Vitals Optimization",
+      desc: "Optimized asset loading, responsive image formats, lazy-loaded offscreen media, and streamlined app configurations that support fast mobile browsing.",
       icon: <Zap className="w-5 h-5 text-blue-600" />,
       image: "/images/official/aiseo/ai-discovery.jpeg",
     },
     {
       title: "Custom App Development & Private APIs",
-      desc: "Need bespoke functionality? We engineer private Shopify apps, custom discount calculators, wholesale B2B pricing portals, and tailor-made third-party API connectors.",
+      desc: "Private Shopify apps, custom discount calculators, wholesale B2B pricing portals, and tailor-made third-party API connectors.",
       icon: <Settings2 className="w-5 h-5 text-[#DDF160]" />,
       image: "/images/official/automation/system-integration.jpeg",
     },
     {
-      title: "Complete Store Migration & SEO Preservation",
-      desc: "Seamlessly migrate from WooCommerce, Magento, BigCommerce, or Etsy to Shopify with 100% data preservation: customer history, order records, 301 URL redirects, and SEO rank.",
+      title: "Store Migration & 301 Redirect Mapping",
+      desc: "Migrate from WooCommerce, Magento, BigCommerce, or Etsy to Shopify with organized data mapping: customer records, order archives, and complete 301 URL redirect maps to support organic search continuity.",
       icon: <RefreshCw className="w-5 h-5 text-amber-600" />,
       image: "/images/official/branding/brand-strategy.jpeg",
     },

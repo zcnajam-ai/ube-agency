@@ -3,8 +3,11 @@ import { Metadata } from "next";
 import { COMPANY_INFO } from "@/data/company";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | Unified Branding Experts",
+  title: "Privacy Policy",
   description: "Privacy policy and data governance practices at Unified Branding Experts.",
+  alternates: {
+    canonical: "https://unifiedbrandingexperts.com/privacy-policy",
+  },
 };
 
 export default function PrivacyPolicyPage() {

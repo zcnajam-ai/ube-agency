@@ -16,11 +16,25 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Branding Services | Logo Design & Visual Identity | Unified Branding Experts",
+  title: "Branding Services & Logo Design",
   description:
     "Custom logo design, brand strategy, visual identity systems, brand guidelines, and rebranding. Built to make your business recognizable, memorable, and trusted.",
   alternates: {
-    canonical: "/services/branding",
+    canonical: "https://unifiedbrandingexperts.com/services/branding",
+  },
+  openGraph: {
+    title: "Branding Services & Logo Design",
+    description:
+      "Custom logo design, brand strategy, visual identity systems, and brand guidelines.",
+    url: "https://unifiedbrandingexperts.com/services/branding",
+    images: [
+      {
+        url: "https://unifiedbrandingexperts.com/images/projects/project-brand-1.webp",
+        width: 1200,
+        height: 630,
+        alt: "Branding Services - Unified Branding Experts",
+      },
+    ],
   },
 };
 

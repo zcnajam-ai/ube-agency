@@ -4,11 +4,25 @@ import { Metadata } from "next";
 import { Sparkles, Check, ArrowUpRight, ShieldCheck, Palette, HelpCircle } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Logo Design Packages & Pricing | Custom Brand Mark Plans | Unified Branding Experts",
+  title: "Logo Design Packages & Pricing | Custom Brand Mark Plans",
   description:
     "Explore transparent custom logo design packages. 100% original vector concepts, unlimited revisions on chosen mark, full copyright ownership, and complete brand style guides.",
   alternates: {
-    canonical: "/logo-design-packages",
+    canonical: "https://unifiedbrandingexperts.com/logo-design-packages",
+  },
+  openGraph: {
+    title: "Logo Design Packages & Pricing | Custom Brand Mark Plans",
+    description:
+      "Explore transparent custom logo design packages. 100% original vector concepts, full copyright ownership.",
+    url: "https://unifiedbrandingexperts.com/logo-design-packages",
+    images: [
+      {
+        url: "https://unifiedbrandingexperts.com/images/projects/project-brand-1.webp",
+        width: 1200,
+        height: 630,
+        alt: "Logo Design Packages by Unified Branding Experts",
+      },
+    ],
   },
 };
 

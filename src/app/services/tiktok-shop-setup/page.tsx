@@ -17,11 +17,25 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "TikTok Shop Setup & Creator Affiliate Marketing | Unified Branding Experts",
+  title: "TikTok Shop Setup & Creator Affiliate Marketing",
   description:
     "End-to-end TikTok Shop setup and marketing. TikTok Seller Center verification, product catalog sync, Creator Affiliate program management, and Shoppable Video Ads.",
   alternates: {
-    canonical: "/services/tiktok-shop-setup",
+    canonical: "https://unifiedbrandingexperts.com/services/tiktok-shop-setup",
+  },
+  openGraph: {
+    title: "TikTok Shop Setup & Creator Affiliate Marketing",
+    description:
+      "End-to-end TikTok Shop setup and Creator Affiliate program management.",
+    url: "https://unifiedbrandingexperts.com/services/tiktok-shop-setup",
+    images: [
+      {
+        url: "https://unifiedbrandingexperts.com/images/projects/project-marketing-1.webp",
+        width: 1200,
+        height: 630,
+        alt: "TikTok Shop Setup - Unified Branding Experts",
+      },
+    ],
   },
 };
 

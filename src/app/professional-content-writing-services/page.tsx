@@ -18,11 +18,25 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Professional Content Writing Services | Copywriting & SEO Content | Unified Branding Experts",
+  title: "Professional Content Writing Services | Copywriting & SEO Content",
   description:
-    "Persuasive copywriting and SEO content writing services. Website copy, brand storytelling, marketing ad copy, and AEO direct-answer content that converts.",
+    "Persuasive copywriting and SEO content writing services. Website copy, brand storytelling, marketing ad copy, and direct-answer content that converts.",
   alternates: {
-    canonical: "/professional-content-writing-services",
+    canonical: "https://unifiedbrandingexperts.com/professional-content-writing-services",
+  },
+  openGraph: {
+    title: "Professional Content Writing Services | Copywriting & SEO Content",
+    description:
+      "Persuasive copywriting and SEO content writing services. Website copy, brand storytelling, and ad copy.",
+    url: "https://unifiedbrandingexperts.com/professional-content-writing-services",
+    images: [
+      {
+        url: "https://unifiedbrandingexperts.com/images/projects/project-brand-1.webp",
+        width: 1200,
+        height: 630,
+        alt: "Content Writing Services - Unified Branding Experts",
+      },
+    ],
   },
 };
 
