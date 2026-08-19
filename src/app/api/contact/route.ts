@@ -86,7 +86,7 @@ export async function POST(request: Request) {
   } catch (err) {
     console.error("API /contact error:", err);
     return NextResponse.json(
-      { error: "Internal server error. Please contact us directly at contact@unifiedbrandingexperts.com" },
+      { error: "Internal server error. Please contact us directly at info@unifiedbrandingexperts.com" },
       { status: 500 }
     );
   }

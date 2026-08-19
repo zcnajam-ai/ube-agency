@@ -182,16 +182,21 @@ export default function AiSeoPackagesPage() {
       priceCurrency: "USD",
       lowPrice: "349",
       highPrice: "2999",
-      offerCount: "5",
-      offers: packages.map((pkg) => ({
-        "@type": "Offer",
-        name: pkg.name,
-        description: pkg.tagline,
-        price: pkg.price.replace(/[^0-9]/g, "") || "0",
-        priceCurrency: "USD",
-        availability: "https://schema.org/InStock",
-        url: `https://unifiedbrandingexperts.com/ai-seo-packages#${pkg.id}`,
-      })),
+      offers: packages.map((pkg) => {
+        const numeric = pkg.price.replace(/[^0-9]/g, "");
+        const offer: Record<string, unknown> = {
+          "@type": "Offer",
+          name: pkg.name,
+          description: pkg.tagline,
+          priceCurrency: "USD",
+          availability: "https://schema.org/InStock",
+          url: `https://unifiedbrandingexperts.com/ai-seo-packages#${pkg.id}`,
+        };
+        if (numeric) {
+          offer.price = numeric;
+        }
+        return offer;
+      }),
     },
   };
 

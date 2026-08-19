@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Contact & Project Inquiries | Unified Branding Experts",
+    title: "Contact & Project Inquiries",
     description:
       "Get in touch with Unified Branding Experts. Request a custom proposal for branding, web design, eCommerce development, or AI search optimization.",
     images: ["https://unifiedbrandingexperts.com/images/projects/project-brand-1.webp"],
@@ -42,8 +42,8 @@ export default function ContactPage() {
     mainEntity: {
       "@type": "Organization",
       name: "Unified Branding Experts",
-      telephone: "+1 (800) 861-8072",
-      email: "contact@unifiedbrandingexperts.com",
+      telephone: "+1 224-266-8081",
+      email: "info@unifiedbrandingexperts.com",
     },
   };
 

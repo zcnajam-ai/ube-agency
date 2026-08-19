@@ -179,16 +179,21 @@ export default function BrandingPackagesPage() {
       priceCurrency: "USD",
       lowPrice: "299",
       highPrice: "2499",
-      offerCount: "5",
-      offers: packages.map((pkg) => ({
-        "@type": "Offer",
-        name: pkg.name,
-        description: pkg.tagline,
-        price: pkg.price.replace(/[^0-9]/g, "") || "0",
-        priceCurrency: "USD",
-        availability: "https://schema.org/InStock",
-        url: `https://unifiedbrandingexperts.com/branding-packages#${pkg.id}`,
-      })),
+      offers: packages.map((pkg) => {
+        const numeric = pkg.price.replace(/[^0-9]/g, "");
+        const offer: Record<string, unknown> = {
+          "@type": "Offer",
+          name: pkg.name,
+          description: pkg.tagline,
+          priceCurrency: "USD",
+          availability: "https://schema.org/InStock",
+          url: `https://unifiedbrandingexperts.com/branding-packages#${pkg.id}`,
+        };
+        if (numeric) {
+          offer.price = numeric;
+        }
+        return offer;
+      }),
     },
   };
 
@@ -402,7 +407,7 @@ export default function BrandingPackagesPage() {
               <ArrowUpRight className="w-4 h-4 text-[#585858] group-hover:text-[#9F8BE7]" />
             </h3>
             <p className="text-xs text-[#585858]">
-              Rank in Google AI Overviews and ChatGPT search starting from $349.
+              Improve visibility across Google and AI-powered search starting from $349.
             </p>
           </Link>
         </section>

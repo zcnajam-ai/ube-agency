@@ -57,11 +57,11 @@ export const COMPANY_INFO: CompanyInfo = {
   phoneRaw: "+12242668081",
   email: "info@unifiedbrandingexperts.com",
   address: {
-    street: "Digital Global Headquarters",
+    street: "",
     city: "Chicago",
     state: "IL",
     country: "United States",
-    full: "Chicago, IL, United States & Global Network",
+    full: "Chicago, IL, United States",
   },
   stats: [
     {
