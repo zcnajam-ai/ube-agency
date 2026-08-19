@@ -6,6 +6,7 @@ import Navbar from "@/components/common/Navbar";
 import Footer from "@/components/common/Footer";
 import ProjectModal from "@/components/common/ProjectModal";
 import SchemaOrg from "@/components/seo/SchemaOrg";
+import ConciergeProvider from "@/components/concierge/ConciergeProvider";
 import { COMPANY_INFO } from "@/data/company";
 
 const funnelDisplay = Funnel_Display({
@@ -116,6 +117,9 @@ export default function RootLayout({
 
           {/* Interactive Project Inquiry Modal with Overlay Scroll */}
           <ProjectModal />
+
+          {/* UBE AI Sales & Service Concierge */}
+          <ConciergeProvider />
         </SmoothScrollProvider>
       </body>
     </html>
