@@ -1,0 +1,56 @@
+import { NextResponse } from "next/server";
+import { INSIGHTS } from "@/data/insights";
+import { ALL_SERVICES } from "@/data/services";
+
+export async function POST(request: Request) {
+  const host = "unifiedbrandingexperts.com";
+  const key = "0200cab578334723aaa039320bb17977";
+  const keyLocation = `https://${host}/api/indexnow`;
+
+  const insightUrls = INSIGHTS.map((i) => `https://${host}/insights/${i.slug}`);
+  const serviceUrls = ALL_SERVICES.map((s) => `https://${host}/services/${s.slug}`);
+  
+  const urlList = [
+    `https://${host}`,
+    `https://${host}/services`,
+    `https://${host}/packages`,
+    `https://${host}/work`,
+    `https://${host}/insights`,
+    `https://${host}/best-logo-design-agency`,
+    `https://${host}/professional-web-design-services`,
+    `https://${host}/best-website-development-agency`,
+    `https://${host}/digital-marketing-services-agency`,
+    `https://${host}/custom-web-development`,
+    `https://${host}/professional-content-writing-services`,
+    ...serviceUrls,
+    ...insightUrls,
+  ];
+
+  try {
+    const payload = {
+      host,
+      key,
+      keyLocation,
+      urlList,
+    };
+
+    const response = await fetch("https://api.indexnow.org/indexnow", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json; charset=utf-8",
+      },
+      body: JSON.stringify(payload),
+    });
+
+    return NextResponse.json({
+      success: response.ok,
+      status: response.status,
+      submittedUrlsCount: urlList.length,
+    });
+  } catch (error) {
+    return NextResponse.json(
+      { error: "Failed to submit URLs to IndexNow", details: String(error) },
+      { status: 500 }
+    );
+  }
+}

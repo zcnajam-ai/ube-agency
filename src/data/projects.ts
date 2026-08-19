@@ -1,0 +1,339 @@
+export interface Project {
+  id: string;
+  slug: string;
+  title: string;
+  client: string;
+  category: string;
+  tagline: string;
+  year: string;
+  platform: string;
+  services: string[];
+  summary: string;
+  challenge: string;
+  strategy: string;
+  execution: string;
+  results: Array<{
+    metric: string;
+    label: string;
+  }>;
+  heroImage: string;
+  galleryImages: string[];
+  technologies: string[];
+  accentColor: string;
+  typography?: string;
+  palette?: string[];
+  testimonial?: {
+    quote: string;
+    author: string;
+    role: string;
+  };
+}
+
+export const FEATURED_PROJECTS: Project[] = [
+  {
+    id: "eaudacity-fragrance",
+    slug: "eaudacity-luxury-fragrance-brand-system",
+    title: "Eau'dacity Luxury Fragrance & Visual Identity System",
+    client: "Eau'dacity Parfums",
+    category: "Brand Strategy & Packaging Architecture",
+    tagline: "Monochromatic luxury identity, bespoke bottle packaging, and high-converting fragrance storefront",
+    year: "2025",
+    platform: "Shopify / Figma / Cinema 4D",
+    services: ["Brand Strategy & Logo", "Luxury Packaging Design", "Typography & Color Systems", "eCommerce Experience"],
+    summary:
+      "A minimalist brand system for Eau'dacity luxury perfumery. Featuring monochromatic typography (Helvetica Neue Bold), premium gold/amber glass bottle packaging, tactile retail unboxing systems, and a direct-to-consumer digital storefront.",
+    challenge:
+      "Creating an unmistakably modern, high-end aesthetic that stands out in the luxury fragrance space while maintaining stark visual elegance across physical packaging, digital media, and retail signage.",
+    strategy:
+      "We recommended a high-contrast monochromatic identity system paired with warm amber glass product photography and minimalist packaging typography to emphasize premium craft.",
+    execution:
+      "We designed custom logomarks, secondary seals, embossed folding cartons, glass bottle mockups, social media editorial templates, and a streamlined direct-to-consumer storefront.",
+    results: [
+      { metric: "100%", label: "Bespoke Packaging Asset Matrix" },
+      { metric: "Custom", label: "Amber Glass Bottle System" },
+      { metric: "Omnichannel", label: "Retail & Digital Integration" },
+    ],
+    heroImage: "/images/projects/eaudacity/hero.jpg",
+    galleryImages: [
+      "/images/projects/eaudacity/showcase-0.jpg",
+      "/images/projects/eaudacity/showcase-2.jpg",
+      "/images/projects/eaudacity/showcase-7.jpg",
+      "/images/projects/eaudacity/showcase-8.jpg",
+      "/images/projects/eaudacity/showcase-9.jpg",
+      "/images/projects/eaudacity/showcase-10.jpg",
+    ],
+    technologies: ["Figma", "Adobe Illustrator", "3D Packaging Mockups", "Shopify"],
+    accentColor: "#C8A265",
+    typography: "Helvetica Neue Bold",
+    palette: ["#000000", "#FFFFFF", "#C8A265", "#FAF7F6"],
+    testimonial: {
+      quote:
+        "The brand system and packaging design by Unified Branding Experts gave Eau'dacity an immediate aura of luxury and prestige. Retail buyers and online customers were captivated from day one.",
+      author: "Camille Laurent",
+      role: "Founder & Master Perfumer, Eau'dacity",
+    },
+  },
+  {
+    id: "botane-beauty",
+    slug: "botane-plant-based-luxury-beauty",
+    title: "Botāne Plant-Based Luxury Perfume & Visual Identity",
+    client: "Botāne Beauty & Fragrance",
+    category: "Botanical Branding & Packaging System",
+    tagline: "Bloom Your Beauty: Organic botanical perfume branding, luxury packaging, and retail visual system",
+    year: "2026",
+    platform: "Shopify / Adobe Suite / Print Packaging",
+    services: ["Brand Identity & Logo", "Eco-Luxury Packaging Design", "Social Commerce Strategy", "Retail Display Guidelines"],
+    summary:
+      "A bespoke botanical luxury brand identity for Botāne Plant-Based Perfume. Integrating classic Big Caslon CC and contemporary Azo Sans typography, an earthy palette of Cream (#F9E7D8), Forest Green (#064E30), and Deep Noir (#161616), custom glass bottles, eco-friendly folding cartons, and curated social media commerce kits.",
+    challenge:
+      "Bridging the gap between 100% plant-based organic ethics and ultra-premium luxury aesthetics without falling into generic greenwashing tropes.",
+    strategy:
+      "We paired classic editorial serif typography with rich botanical green accents and tactile embossed packaging to communicate clean formulation with luxury heritage.",
+    execution:
+      "We created custom floral ligature logomarks, geometric foliage patterns, luxury packaging die-lines, retail counter displays, and curated social media launch kits.",
+    results: [
+      { metric: "Complete", label: "Brand Bible & Style Guide" },
+      { metric: "Eco-Luxury", label: "Sustainable Packaging Spec" },
+      { metric: "Omnichannel", label: "Social Commerce & In-Store" },
+    ],
+    heroImage: "/images/projects/botane/hero.jpg",
+    galleryImages: [
+      "/images/projects/botane/showcase-7.jpg",
+      "/images/projects/botane/showcase-6.jpg",
+      "/images/projects/botane/showcase-5.jpg",
+      "/images/projects/botane/showcase-8.jpg",
+      "/images/projects/botane/showcase-2.jpg",
+      "/images/projects/botane/showcase-1.jpg",
+    ],
+    technologies: ["Figma", "Adobe Illustrator", "Cinema 4D", "Shopify"],
+    accentColor: "#064E30",
+    typography: "Big Caslon CC / Azo Sans",
+    palette: ["#F9E7D8", "#064E30", "#161616", "#FFFFFF"],
+    testimonial: {
+      quote:
+        "Botāne's visual identity and packaging designed by UBE elevated our organic perfume to the level of heritage luxury houses. It gives our customers a truly magical unboxing experience.",
+      author: "Aria Montgomery",
+      role: "Founder & Creative Director, Botāne",
+    },
+  },
+  {
+    id: "bugle-chaser-apparel",
+    slug: "bugle-chaser-outdoor-apparel-brand",
+    title: "Bugle Chaser Outdoor Apparel & Lifestyle Brand Engine",
+    client: "Bugle Chaser Outdoor Co.",
+    category: "Apparel Merchandise & eCommerce Storefront",
+    tagline: "Outdoor apparel branding, rugged merchandise lineup, and automated Shopify store",
+    year: "2025",
+    platform: "Shopify / Print-on-Demand & Dropshipping",
+    services: ["Logo & Mascot Design", "Apparel & Merchandise Design", "Shopify Store Setup", "Social Video Advertising"],
+    summary:
+      "A complete lifestyle brand ecosystem for Bugle Chaser outdoor and hunting apparel. Combining the rugged Legend M54 and Robotto typography, Forest Black and Neon Green (#8BC53F) color system, technical merchandise (hoodies, headwear, flasks, outdoor gear), and a mobile-first eCommerce storefront.",
+    challenge:
+      "Creating an authentic outdoor brand identity with broad appeal to hunting and outdoor enthusiasts while establishing a seamless direct-to-consumer apparel store with automated fulfillment.",
+    strategy:
+      "We developed a high-visibility archery elk motif, high-contrast merchandise apparel mockups, and an automated Shopify store integrated with supplier dropshipping fulfillment.",
+    execution:
+      "We produced the master mascot emblem, hoodie & headwear collection tech-packs, Shopify storefront theme setup, payment gateway configuration, and short-form ad creatives.",
+    results: [
+      { metric: "15+", label: "Merchandise SKUs Configured" },
+      { metric: "Automated", label: "Dropshipping Fulfillment Flow" },
+      { metric: "Mobile-First", label: "Responsive Shopify Theme" },
+    ],
+    heroImage: "/images/projects/bugle-chaser/hero.jpg",
+    galleryImages: [
+      "/images/projects/bugle-chaser/showcase-4.jpg",
+      "/images/projects/bugle-chaser/showcase-5.jpg",
+      "/images/projects/bugle-chaser/showcase-7.jpg",
+      "/images/projects/bugle-chaser/showcase-8.jpg",
+      "/images/projects/bugle-chaser/showcase-13.jpg",
+      "/images/projects/bugle-chaser/showcase-17.jpg",
+    ],
+    technologies: ["Illustrator", "Photoshop", "Shopify", "TikTok Ads Manager", "Meta Ads"],
+    accentColor: "#8BC53F",
+    typography: "Legend M54 / Robotto",
+    palette: ["#000000", "#8BC53F", "#FFFFFF", "#FAF7F6"],
+    testimonial: {
+      quote:
+        "UBE nailed our vision on the first pass. From the emblem to our hats, hoodies, and storefront, they built a brand that our community wears with genuine pride.",
+      author: "Hunter Sterling",
+      role: "Founder, Bugle Chaser",
+    },
+  },
+  {
+    id: "apex-commerce",
+    slug: "apex-storefront-engine",
+    title: "Apex Storefront & eCommerce Platform",
+    client: "Apex Lifestyle Goods",
+    category: "eCommerce & Shopify Plus",
+    tagline: "Clean Shopify Plus storefront architecture with structured product collections and streamlined checkout",
+    year: "2025",
+    platform: "Shopify Plus / Next.js",
+    services: ["Shopify Plus", "Theme Customization", "Payment Gateways", "Collection Architecture"],
+    summary:
+      "A complete re-engineering of an online retail store. We developed a clean Next.js and Shopify Plus storefront, organized high-volume product catalogs, and optimized the mobile shopping experience.",
+    challenge:
+      "The client experienced mobile navigation friction and complex product filters during high-traffic sales events, leading to buyer hesitation and cart drop-offs.",
+    strategy:
+      "We restructured product categories with clean filtering, introduced an instant slide-out cart, and configured one-click mobile checkout with Apple Pay and Shop Pay.",
+    execution:
+      "We built custom Shopify Liquid templates, optimized product imagery pipelines, connected ERP inventory feeds, and implemented multi-currency pricing rules.",
+    results: [
+      { metric: "Mobile-First", label: "Responsive Checkout Funnel" },
+      { metric: "Optimized", label: "Catalog Filter Architecture" },
+      { metric: "Multi-Currency", label: "Global Payment Processing" },
+    ],
+    heroImage: "/images/projects/project-ecommerce-1.webp",
+    galleryImages: [
+      "/images/projects/project-ecommerce-1.webp",
+      "/images/projects/project-ecommerce-2.webp",
+    ],
+    technologies: ["Next.js", "Shopify Plus", "Tailwind CSS", "Stripe", "Klaviyo"],
+    accentColor: "#9F8BE7",
+    testimonial: {
+      quote:
+        "Unified Branding Experts transformed our online store into a responsive, easy-to-manage platform. The checkout process is clean and our customers love the mobile navigation.",
+      author: "David Vance",
+      role: "VP of Digital, Apex Lifestyle",
+    },
+  },
+  {
+    id: "vanguard-identity",
+    slug: "vanguard-brand-system",
+    title: "Vanguard Brand Architecture & Visual System",
+    client: "Vanguard Capital Partners",
+    category: "Brand Strategy & Identity",
+    tagline: "Corporate rebranding, typography guidelines, and digital asset kit",
+    year: "2025",
+    platform: "Figma / Digital Asset Bible",
+    services: ["Brand Strategy", "Logo Design", "Visual Guidelines", "Typography System"],
+    summary:
+      "A comprehensive brand identity for an institutional advisory firm. We developed a timeless typographic identity, geometric monogram, precision grid systems, and a digital brand guidelines kit.",
+    challenge:
+      "Vanguard's legacy visual branding lacked visual hierarchy across their divisions and failed to project modern technical sophistication.",
+    strategy:
+      "We designed an authoritative geometric monogram paired with bespoke typography and a deep obsidian and champagne palette codified in a comprehensive brand guidelines guide.",
+    execution:
+      "We crafted vector logo packages, corporate stationery templates, digital presentation decks, social media asset templates, and web UI component guidelines.",
+    results: [
+      { metric: "Unified", label: "Across 8 Divisional Sub-Brands" },
+      { metric: "60+ Pages", label: "Comprehensive Brand Guidelines" },
+      { metric: "Complete", label: "Master Vector Asset Matrix" },
+    ],
+    heroImage: "/images/projects/project-brand-1.webp",
+    galleryImages: [
+      "/images/projects/project-brand-1.webp",
+      "/images/projects/project-brand-2.webp",
+    ],
+    technologies: ["Figma", "Illustrator", "After Effects", "Cinema 4D"],
+    accentColor: "#38BDF8",
+    testimonial: {
+      quote:
+        "The brand kit and guidelines developed by UBE gave our company an unmistakable visual foundation that our clients and partners immediately commended.",
+      author: "Marcus Vance",
+      role: "Managing Director, Vanguard",
+    },
+  },
+  {
+    id: "aura-mobile-app",
+    slug: "aura-health-mobile-app",
+    title: "Aura Connected Mobile Experience",
+    client: "Aura Wellness Technologies",
+    category: "Mobile Application (iOS & Android)",
+    tagline: "Cross-platform mobile application with intuitive biometric data visualization",
+    year: "2026",
+    platform: "React Native / iOS & Android",
+    services: ["iOS Development", "Android App", "UX/UI Architecture", "Cloud APIs"],
+    summary:
+      "A mobile application connecting smart hardware with personalized daily health analytics. Built with intuitive navigation, fluid micro-interactions, and real-time Bluetooth device synchronization.",
+    challenge:
+      "Designing an interface capable of rendering rich daily health trends and telemetry without cluttering mobile screens or lagging on mid-tier hardware.",
+    strategy:
+      "We structured a modular card-based UI with clear data hierarchy, offline-first local caching, and lightweight chart components.",
+    execution:
+      "We engineered the React Native application, implemented secure authentication flows, built Bluetooth telemetry synchronizers, and prepared App Store & Google Play deployment assets.",
+    results: [
+      { metric: "Cross-Platform", label: "Single Codebase iOS & Android" },
+      { metric: "Offline-First", label: "Local SQLite Data Sync" },
+      { metric: "App Store", label: "Full Production Deployment" },
+    ],
+    heroImage: "/images/projects/project-mobile-1.webp",
+    galleryImages: [
+      "/images/projects/project-mobile-1.webp",
+      "/images/projects/project-mobile-2.webp",
+    ],
+    technologies: ["React Native", "TypeScript", "Node.js", "PostgreSQL", "Tailwind"],
+    accentColor: "#10B981",
+  },
+  {
+    id: "hyperscale-growth",
+    slug: "hyperscale-aiseo-paid-acquisition",
+    title: "NovaTech Search Discovery & Paid Marketing Engine",
+    client: "NovaTech Cloud Platforms",
+    category: "AISEO & Performance Marketing",
+    tagline: "Structured entity optimization and multi-channel Google & Meta acquisition funnels",
+    year: "2026",
+    platform: "Google Ads / Meta Ads / JSON-LD Schema",
+    services: ["AISEO (GEO/AEO)", "Google Search & Shopping", "Meta Ads", "Technical Schema"],
+    summary:
+      "A search optimization and paid media campaign. We positioned the client across high-intent search queries and generative search engines while configuring conversion tracking.",
+    challenge:
+      "Navigating shifting search behaviors across traditional Google Search and conversational AI answers while keeping customer acquisition organized.",
+    strategy:
+      "We deployed structured JSON-LD entity schema, structured FAQ content, exact-match keyword search groups, and Meta server-side Conversions API.",
+    execution:
+      "We published structured content architectures, calibrated Google Performance Max campaigns, built dedicated landing pages, and set up Looker Studio reporting dashboards.",
+    results: [
+      { metric: "Structured", label: "JSON-LD Entity Graph Schema" },
+      { metric: "Full-Funnel", label: "Google & Meta Paid Tracking" },
+      { metric: "Verified", label: "Server-Side Conversions API" },
+    ],
+    heroImage: "/images/projects/project-marketing-1.webp",
+    galleryImages: [
+      "/images/projects/project-marketing-1.webp",
+      "/images/projects/project-marketing-2.webp",
+    ],
+    technologies: ["JSON-LD Graphs", "Google Ads", "Meta CAPI", "Looker Studio"],
+    accentColor: "#F59E0B",
+    testimonial: {
+      quote:
+        "Unified Branding Experts helped us structure both our paid advertising and technical search presence. Clear communication, solid deliverables, and zero fluff.",
+      author: "Elena Rostova",
+      role: "Chief Growth Officer, NovaTech",
+    },
+  },
+  {
+    id: "lumina-custom-web",
+    slug: "lumina-enterprise-digital-platform",
+    title: "Lumina Enterprise Experience & Web Portal",
+    client: "Lumina Industrial Systems",
+    category: "Custom Web Application & UI/UX",
+    tagline: "Interactive product visualizer and high-performance corporate web portal",
+    year: "2025",
+    platform: "Next.js / TypeScript / Sanity CMS",
+    services: ["Custom Web Development", "Next.js App Router", "Responsive UI", "Headless CMS"],
+    summary:
+      "A corporate web platform for an industrial systems manufacturer. Features an interactive product spec explorer, global content distribution, and automated lead routing to enterprise CRM.",
+    challenge:
+      "The client had an expansive portfolio of technical systems that were difficult for prospective buyers to navigate through static PDF catalogs.",
+    strategy:
+      "We engineered a modular Next.js web application with interactive specification tables, instant search filtering, and clear quotation request workflows.",
+    execution:
+      "We built custom Next.js App Router pages, integrated Sanity headless CMS for marketing team editing, and automated inquiry routing to HubSpot CRM.",
+    results: [
+      { metric: "Modular", label: "Sanity Headless CMS Setup" },
+      { metric: "Interactive", label: "Product Spec Filter Engine" },
+      { metric: "Automated", label: "HubSpot CRM Lead Routing" },
+    ],
+    heroImage: "/images/projects/project-web-1.webp",
+    galleryImages: [
+      "/images/projects/project-web-1.webp",
+      "/images/projects/project-web-2.webp",
+    ],
+    technologies: ["Next.js", "TypeScript", "Sanity CMS", "Tailwind CSS"],
+    accentColor: "#EC4899",
+  },
+];
+
+export function getProjectBySlug(slug: string): Project | undefined {
+  return FEATURED_PROJECTS.find((p) => p.slug === slug);
+}
