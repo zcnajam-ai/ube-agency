@@ -1,12 +1,15 @@
 export type ConciergeEvent =
-  | "chat_opened"
-  | "service_selected"
-  | "package_viewed"
+  | "concierge_opened"
+  | "pathway_selected"
+  | "service_recommended"
+  | "package_clicked"
+  | "work_clicked"
   | "estimate_started"
   | "lead_submitted"
   | "human_handoff";
 
 export interface ConciergeEventPayload {
+  pathway?: string;
   serviceSlug?: string;
   packageName?: string;
   packagePrice?: string;
@@ -24,7 +27,7 @@ export function trackConciergeEvent(
 ) {
   try {
     if (typeof window !== "undefined") {
-      // 1. Dispatch custom DOM event for any embedded tracking listeners
+      // 1. Dispatch custom DOM event for embedded tracking listeners
       const customEvent = new CustomEvent("ube_concierge_event", {
         detail: { event, ...payload, timestamp: new Date().toISOString() },
       });
@@ -33,7 +36,8 @@ export function trackConciergeEvent(
       // 2. Google Analytics 4 integration (if present on window)
       if (typeof (window as unknown as { gtag?: (...args: unknown[]) => void }).gtag === "function") {
         (window as unknown as { gtag: (...args: unknown[]) => void }).gtag("event", event, {
-          event_category: "AI_Concierge",
+          event_category: "Project_Concierge",
+          pathway: payload?.pathway || "",
           service_slug: payload?.serviceSlug || "",
           package_name: payload?.packageName || "",
           project_type: payload?.projectType || "",
