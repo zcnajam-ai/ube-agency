@@ -5,6 +5,7 @@ import Link from "next/link";
 import { ArrowUpRight, CheckCircle2 } from "lucide-react";
 import { useScroll } from "@/components/providers/SmoothScrollProvider";
 import InteractiveMedia from "../common/InteractiveMedia";
+import TikTokMinimalVisual from "../common/TikTokMinimalVisual";
 import BackgroundGrid from "../common/BackgroundGrid";
 import PurpleGlowField from "../common/PurpleGlowField";
 import OversizedTypography from "../common/OversizedTypography";
@@ -200,13 +201,17 @@ export default function GrowthAdsMarketing() {
 
           {/* Visual Showcase Card */}
           <div className="lg:col-span-5">
-            <InteractiveMedia
-              key={current.image}
-              src={current.image}
-              alt={current.title}
-              aspectRatio="aspect-[4/3]"
-              badgeText={current.badge}
-            />
+            {activeTab === "tiktok" ? (
+              <TikTokMinimalVisual />
+            ) : (
+              <InteractiveMedia
+                key={current.image}
+                src={current.image}
+                alt={current.title}
+                aspectRatio="aspect-[4/3]"
+                badgeText={current.badge}
+              />
+            )}
           </div>
         </div>
       </div>

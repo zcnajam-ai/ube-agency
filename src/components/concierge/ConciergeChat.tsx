@@ -254,14 +254,16 @@ export default function ConciergeChat({ isOpen, onClose }: ConciergeChatProps) {
             id: uniqueId("asst"),
             role: "concierge",
             content:
-              "You can explore our verified client case studies including Everhome Real Estate, Eau'dacity Luxury Fragrance, and custom Shopify platforms.",
+              "You can explore our verified client case studies including Fixoria Studio, Happy Knot Creations, Everhome Real Estate, and Eau'dacity Luxury Fragrance.",
             recommendation: {
               title: "Client Case Studies & Portfolio",
               badge: "Verified Work",
               summary:
-                "Explore complete brand transformations, architectural identity kits, and custom eCommerce storefronts built for scale.",
+                "Explore complete brand transformations, architectural identity kits, and custom Shopify eCommerce storefronts built for scale.",
               actions: [
                 { type: "link", label: "View All Case Studies", url: "/work" },
+                { type: "link", label: "Fixoria Studio Brand System", url: "/work/fixoria-studio-brand-identity-system" },
+                { type: "link", label: "Happy Knot Shopify Storefront", url: "/work/happy-knot-creations-shopify-storefront" },
                 { type: "link", label: "Everhome Real Estate Study", url: "/work/everhome-real-estate-brand-system" },
                 { type: "estimate", label: "Get Project Estimate" },
               ],

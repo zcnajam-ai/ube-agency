@@ -31,6 +31,86 @@ export interface Project {
 
 export const FEATURED_PROJECTS: Project[] = [
   {
+    id: "fixoria-studio",
+    slug: "fixoria-studio-brand-identity-system",
+    title: "Fixoria Studio Modern Brand Architecture & Product System",
+    client: "Fixoria Studio",
+    category: "Brand Strategy & Product Identity System",
+    tagline: "Explore efficient solutions: Modern geometric 'F' logomark, signature Cyber Yellow palette, and complete print collateral / merchandise kit",
+    year: "2026",
+    platform: "Figma / Adobe Illustrator / Print & Merch Architecture",
+    services: ["Brand Strategy & Identity", "Vector Logomark Architecture", "Stationery & Collateral Kit", "Merchandise & Apparel Design"],
+    summary:
+      "A bold, modern visual identity and product system engineered for Fixoria Studio. Featuring a signature geometric 'F' logomark with an integrated directional corner triangle, vibrant Cyber Yellow (#FFE600) and Dark Charcoal (#1E1F24) color dynamics, employee badge systems, outdoor apparel, merchandise tote bags, and mobile app UI guidelines.",
+    challenge:
+      "Developing a high-energy, memorable corporate visual identity that bridges modern digital software utility with tangible physical merchandise and corporate stationery.",
+    strategy:
+      "We crafted a bold geometric 'F' emblem framed by clean architectural grids, paired with high-contrast Cyber Yellow (#FFE600) and Charcoal typography to project efficiency, confidence, and creative precision.",
+    execution:
+      "We delivered primary logomark matrices, employee identification badges, premium embroidered headwear & merchandise tote bags, dual-tone business cards, boardroom acrylic signage, and mobile application UI icons.",
+    results: [
+      { metric: "100%", label: "Bespoke Geometric 'F' Vector Architecture" },
+      { metric: "Omnichannel", label: "Print Stationery, ID Badges & Merch Kit" },
+      { metric: "Complete", label: "Mobile App UI & Social Brand System" },
+    ],
+    heroImage: "/images/projects/fixoria/hero.png",
+    galleryImages: [
+      "/images/projects/fixoria/hero.png",
+      "/images/projects/fixoria/showcase-1.png",
+      "/images/projects/fixoria/showcase-2.png",
+    ],
+    technologies: ["Figma", "Adobe Illustrator", "Space Grotesk", "Merchandise Tech Packs"],
+    accentColor: "#FFE600",
+    typography: "Space Grotesk & Outfit (Bold, Medium, Regular)",
+    palette: ["#FFE600", "#1E1F24", "#FFFFFF"],
+    testimonial: {
+      quote:
+        "Unified Branding Experts captured Fixoria's vision with extraordinary clarity. The bold yellow and black identity system instantly elevated our brand presence across digital apps, stationery, and team merchandise.",
+      author: "Milan Jak",
+      role: "Operations Director, Fixoria Studio",
+    },
+  },
+  {
+    id: "happy-knot-creations",
+    slug: "happy-knot-creations-shopify-storefront",
+    title: "Happy Knot Creations Custom Shopify Storefront & Brand Experience",
+    client: "Happy Knot Creations",
+    category: "eCommerce & Shopify D2C Storefront",
+    tagline: "Handmade Crochet Plushies & Custom Amigurumi: Bespoke Shopify 2.0 storefront, mobile-first product catalog, and optimized D2C checkout",
+    year: "2026",
+    platform: "Shopify 2.0 / Liquid / Custom Checkout",
+    services: ["Custom Shopify Storefront", "Mobile Catalog UX", "Payment & Shipping Integration", "Conversion Optimization"],
+    summary:
+      "A bespoke direct-to-consumer Shopify storefront engineered for Happy Knot Creations (happyknotcreations.com). Designed specifically for artisanal handcrafted crochet plushies, custom amigurumi, and nursery gifts with intuitive collection categorization, high-resolution product galleries, and frictionless mobile one-click checkout.",
+    challenge:
+      "Transitioning a handcrafted artisan boutique from marketplace fee dependency (Etsy) to an independent, high-converting branded Shopify storefront with full ownership over customer relationships, email marketing, and profit margins.",
+    strategy:
+      "We engineered a clean, warm, conversion-optimized Shopify 2.0 theme highlighting handmade craft authenticity, custom commission request workflows, and instant checkout with Apple Pay and Shop Pay.",
+    execution:
+      "We configured custom Liquid collection templates, multi-variant plushie product pages, automated shipping calculation rules, customer email capture flows, and mobile-first shopping navigation.",
+    results: [
+      { metric: "100%", label: "Bespoke Shopify 2.0 Theme Customization" },
+      { metric: "Direct D2C", label: "Independent Brand Storefront & Domain" },
+      { metric: "Seamless", label: "Mobile-First One-Click Checkout Funnel" },
+    ],
+    heroImage: "/images/projects/happy-knot/hero.webp",
+    galleryImages: [
+      "/images/projects/happy-knot/hero.webp",
+      "/images/projects/happy-knot/logo.png",
+      "/images/official/ecommerce/storefront-setup.jpeg",
+    ],
+    technologies: ["Shopify 2.0", "Liquid", "Tailwind CSS", "Apple Pay / Shop Pay", "Klaviyo"],
+    accentColor: "#9F8BE7",
+    typography: "Funnel Display & Funnel Sans",
+    palette: ["#FAF7F6", "#161616", "#9F8BE7", "#FFFFFF"],
+    testimonial: {
+      quote:
+        "Unified Branding Experts built an online store that truly reflects the love and craft behind Happy Knot Creations. Our collectors and gift shoppers love how simple and fast it is to order directly from us.",
+      author: "Happy Knot Creations Team",
+      role: "Founders, Happy Knot Creations",
+    },
+  },
+  {
     id: "everhome-real-estate",
     slug: "everhome-real-estate-brand-system",
     title: "Everhome Modern Real Estate Brand Architecture & Visual System",

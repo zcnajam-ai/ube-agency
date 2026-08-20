@@ -123,18 +123,29 @@ export default function EcommercePriority() {
           {/* Right Column: Visual eCommerce Showcase */}
           <div className="lg:col-span-5 space-y-4">
             <InteractiveMedia
-              src="/images/official/ecommerce/shopify-store.jpeg"
-              alt="Shopify and WooCommerce eCommerce Store Design by Unified Branding Experts"
+              src="/images/official/ecommerce/storefront-setup.jpeg"
+              alt="Shopify and Custom eCommerce Storefront Design by Unified Branding Experts"
               aspectRatio="aspect-[4/3]"
-              badgeText="Shopify, WooCommerce & Dropshipping"
+              badgeText="Shopify 2.0 & D2C Storefronts"
             />
-            <div className="p-6 rounded-3xl bg-white border border-[#E0DDDB] space-y-2 text-center shadow-xs">
-              <span className="text-xs font-mono-num font-bold text-[#161616] bg-[#FAF7F6] px-3.5 py-1 rounded-full border border-[#E0DDDB] inline-block">
-                Tailored Online Store Experiences
-              </span>
-              <p className="text-xs text-[#585858] font-body">
-                Built with intuitive collection hierarchy, responsive product grids, and frictionless checkout pathways.
+            <div className="p-6 rounded-3xl bg-white border border-[#E0DDDB] space-y-3 text-center shadow-xs">
+              <div className="flex items-center justify-center gap-2">
+                <span className="text-xs font-mono-num font-bold text-[#161616] bg-[#FAF7F6] px-3.5 py-1 rounded-full border border-[#E0DDDB] inline-block">
+                  Verified Client Work: Happy Knot Creations
+                </span>
+              </div>
+              <p className="text-xs text-[#585858] font-body leading-relaxed">
+                Bespoke D2C plushie &amp; amigurumi storefront featuring custom Liquid sections, mobile-first product filtering, and instant Shop Pay checkout.
               </p>
+              <div className="pt-2 border-t border-[#E0DDDB] flex items-center justify-center gap-4 text-xs font-mono-num">
+                <Link
+                  href="/work/happy-knot-creations-shopify-storefront"
+                  className="text-[#9F8BE7] font-bold hover:underline inline-flex items-center gap-1"
+                >
+                  <span>Explore Case Study</span>
+                  <ArrowUpRight className="w-3.5 h-3.5" />
+                </Link>
+              </div>
             </div>
           </div>
         </div>

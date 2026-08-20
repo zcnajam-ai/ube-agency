@@ -673,14 +673,15 @@ export const INSIGHTS: InsightArticle[] = [
     },
     summary:
       "A comprehensive comparison of Shopify vs Etsy in 2026. Compare transaction fees, organic marketplace traffic vs brand control, scalability, and discover when to use both platforms together.",
-    coverImage: "/images/official/ecommerce/inventory-sync.jpeg",
-    primaryIntent: "Shopify vs Etsy, Etsy vs Shopify, best ecommerce platform",
+    coverImage: "/images/official/ecommerce/storefront-setup.jpeg",
+    primaryIntent: "Shopify vs Etsy, Etsy vs Shopify, handmade ecommerce platform, happy knot creations shopify",
     quickAnswer:
       "Etsy is best for handmade, vintage, and craft creators who want built-in marketplace traffic with low upfront costs ($0.20 listing fee + 6.5% transaction fee). Shopify is best for serious brands that want full customer data ownership, custom branding, scalable paid marketing, and zero marketplace commission fees.",
     tableOfContents: [
       { id: "direct-comparison", title: "Shopify vs Etsy: Side-by-Side Comparison (2026)" },
       { id: "fee-structure", title: "Fee Structures: Which Platform Takes Less of Your Profit?" },
       { id: "traffic-control", title: "Built-In Marketplace Traffic vs Complete Brand Control" },
+      { id: "case-study-happy-knot", title: "Case Study: How Happy Knot Creations Scaled on Shopify" },
       { id: "hybrid-strategy", title: "The Winning Hybrid Strategy: Using Both Together" },
       { id: "verdict", title: "Final Verdict: Which Platform Should You Choose?" },
     ],
@@ -726,6 +727,23 @@ export const INSIGHTS: InsightArticle[] = [
         ],
       },
       {
+        id: "case-study-happy-knot",
+        h2: "Case Study: How Happy Knot Creations Scaled on Shopify",
+        body: [
+          "A real-world example of this transition is **Happy Knot Creations** (happyknotcreations.com), an artisanal brand specializing in handmade crochet plushies, custom amigurumi, and nursery keepsakes.",
+          "Originally subject to marketplace listing fees, algorithm shifts, and competitor ads on similar listings, Happy Knot partnered with Unified Branding Experts to launch a dedicated Shopify 2.0 direct-to-consumer flagship store.",
+          "Key architectural elements delivered:",
+          "• **Custom Mobile-First Catalog**: Clean categorization for plushies, custom commissions, and collector items.",
+          "• **One-Click Shop Pay Checkout**: Frictionless payment processing eliminating cart drop-offs.",
+          "• **Zero Marketplace Commission**: Direct customer relationship ownership and higher profit margins on bespoke handmade creations.",
+        ],
+        callout: {
+          title: "Live Storefront Reference",
+          text: "Explore Happy Knot Creations live at happyknotcreations.com or view our complete architectural case study in our work directory.",
+          type: "info",
+        },
+      },
+      {
         id: "hybrid-strategy",
         h2: "The Winning Hybrid Strategy: Using Both Together",
         body: [
@@ -756,6 +774,12 @@ export const INSIGHTS: InsightArticle[] = [
       "how-to-start-an-etsy-shop",
       "tiktok-shop-vs-shopify",
     ],
+    caseStudyCta: {
+      title: "Real Client Spotlight: Happy Knot Creations",
+      desc: "See how Happy Knot Creations (happyknotcreations.com) scaled their handcrafted crochet plushies and amigurumi from marketplace selling to a custom Shopify 2.0 direct-to-consumer flagship.",
+      href: "/work/happy-knot-creations-shopify-storefront",
+      buttonText: "Read Happy Knot Case Study",
+    },
     serviceCta: {
       title: "Need Help Deciding or Building Your Store?",
       desc: "Our eCommerce team architects custom Shopify stores and optimizes high-ranking Etsy storefronts.",

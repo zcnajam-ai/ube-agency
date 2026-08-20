@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
+import TikTokMinimalVisual from "@/components/common/TikTokMinimalVisual";
 import { Metadata } from "next";
 import {
   Sparkles,
@@ -193,20 +194,7 @@ export default function TikTokMarketingServicePage() {
         </div>
 
         <div className="lg:col-span-5">
-          <div className="relative aspect-[4/3] w-full rounded-3xl overflow-hidden bg-white border border-[#E0DDDB] shadow-md group">
-            <Image
-              src="/images/official/tiktok/tiktok-growth.jpeg"
-              alt="Unified Branding Experts TikTok Marketing and Video Strategy"
-              fill
-              priority
-              sizes="(max-width: 1024px) 100vw, 45vw"
-              className="object-cover object-center transition-transform duration-700 group-hover:scale-105"
-            />
-            <div className="absolute bottom-4 left-4 right-4 p-4 rounded-2xl bg-white/90 backdrop-blur-md border border-[#E0DDDB] text-xs font-mono-num text-[#161616] flex items-center justify-between shadow-xs">
-              <span className="font-bold">HOOKS • STRATEGY • ADS</span>
-              <span className="text-emerald-600 font-bold">PLANS FROM $299/MO</span>
-            </div>
-          </div>
+          <TikTokMinimalVisual />
         </div>
       </section>
 

@@ -108,9 +108,11 @@ export async function POST(request: NextRequest) {
         return NextResponse.json({
           role: "assistant",
           content:
-            "Explore our verified client case studies including Everhome Real Estate, Eau'dacity Luxury Fragrance, and custom Shopify storefronts.",
+            "Explore our verified client case studies including Fixoria Studio, Happy Knot Creations, Everhome Real Estate, and Eau'dacity Luxury Fragrance.",
           actions: [
             { type: "view_work", label: "View All Case Studies", route: "/work" },
+            { type: "view_work", label: "Fixoria Studio Brand System", route: "/work/fixoria-studio-brand-identity-system" },
+            { type: "view_work", label: "Happy Knot Shopify Storefront", route: "/work/happy-knot-creations-shopify-storefront" },
             { type: "view_work", label: "Everhome Real Estate Study", route: "/work/everhome-real-estate-brand-system" },
             { type: "open_project_estimate", label: "Get Project Estimate", route: "/contact" },
           ],
