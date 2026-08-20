@@ -31,6 +31,53 @@ export interface Project {
 
 export const FEATURED_PROJECTS: Project[] = [
   {
+    id: "everhome-real-estate",
+    slug: "everhome-real-estate-brand-system",
+    title: "Everhome Modern Real Estate Brand Architecture & Visual System",
+    client: "Everhome Real Estate",
+    category: "Brand Strategy & Visual Identity System",
+    tagline: "A place that truly feels like home: Minimalist real estate visual language, custom logomark, and multi-channel asset matrix",
+    year: "2026",
+    platform: "Figma / Adobe Illustrator / Print & Digital",
+    services: ["Custom Logo Design", "Visual Identity System", "Brand Strategy", "Stationery & Collateral"],
+    summary:
+      "Everhome is a modern real estate company that helps people find not just square metres, but a place that truly feels like home. The brand name reflects the idea of 'home forever'—a space where roots are built, memories are created, and a sense of stability begins. The brand identity combines a contemporary approach with warmth and comfort, emphasizing trust, stability, and care through clean geometric forms and a restrained earthy palette.",
+    challenge:
+      "Establishing an authentic, reassuring real estate identity that communicates institutional reliability and investment safety while delivering modern aesthetic warmth and approachable elegance.",
+    strategy:
+      "We crafted a geometric framing logomark inspired by the hand gesture of photographers searching for the perfect composition, paired with the clarity of Gotham Pro typography and a nature-inspired architectural color palette.",
+    execution:
+      "We engineered the complete brand identity system: primary logomarks and safe zone matrices, Gotham Pro typography guidelines, Moon Mist & Pastel Stone color specs, property catalogues, agent ID badges, stationery kits, and mobile application UI components.",
+    results: [
+      { metric: "100%", label: "Bespoke Geometric Logomark System" },
+      { metric: "Complete", label: "Gotham Pro Typography & Color Spec" },
+      { metric: "Omnichannel", label: "Print Catalogue & Digital App Assets" },
+    ],
+    heroImage: "/images/projects/everhome/hero.jpg",
+    galleryImages: [
+      "/images/projects/everhome/showcase-1.jpg",
+      "/images/projects/everhome/showcase-2.jpg",
+      "/images/projects/everhome/showcase-3.jpg",
+      "/images/projects/everhome/showcase-4.jpg",
+      "/images/projects/everhome/showcase-5.jpg",
+      "/images/projects/everhome/showcase-6.jpg",
+      "/images/projects/everhome/showcase-7.jpg",
+      "/images/projects/everhome/showcase-8.jpg",
+      "/images/projects/everhome/showcase-9.jpg",
+      "/images/projects/everhome/showcase-10.jpg",
+    ],
+    technologies: ["Figma", "Adobe Illustrator", "Gotham Pro Typography", "Architectural Mockups"],
+    accentColor: "#989388",
+    typography: "Gotham Pro (Bold, Medium, Regular, Light)",
+    palette: ["#E4E7DD", "#D0CEC1", "#989388", "#1E1F1D", "#FFFFFF"],
+    testimonial: {
+      quote:
+        "The visual identity and brand system created by Unified Branding Experts gave Everhome an immediate sense of warmth, trust, and architectural elegance. Clients and property developers resonated with our vision instantly.",
+      author: "Marcus Lindqvist",
+      role: "Managing Director, Everhome Real Estate",
+    },
+  },
+  {
     id: "eaudacity-fragrance",
     slug: "eaudacity-luxury-fragrance-brand-system",
     title: "Eau'dacity Luxury Fragrance & Visual Identity System",

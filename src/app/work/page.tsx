@@ -8,6 +8,7 @@ import BackgroundGrid from "@/components/common/BackgroundGrid";
 import OversizedTypography from "@/components/common/OversizedTypography";
 import PurpleGlowField from "@/components/common/PurpleGlowField";
 import { Heading3DSparkle } from "@/components/common/Brand3DIcons";
+import PortfolioAutoScroll from "@/components/work/PortfolioAutoScroll";
 
 export const metadata: Metadata = {
   title: "Featured Case Studies & Work Portfolio",
@@ -98,8 +99,29 @@ export default function WorkIndexPage() {
           </p>
         </div>
 
-        {/* Projects Grid */}
-        <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12">
+        {/* Featured Case Studies Spotlight Carousel (Auto-Scrolling) */}
+        <div className="relative z-10">
+          <PortfolioAutoScroll />
+        </div>
+
+        {/* Complete Client Work Directory */}
+        <div className="relative z-10 space-y-8 pt-6 border-t border-[#E0DDDB]">
+          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+            <div>
+              <h2 className="font-display text-2xl sm:text-3xl font-bold tracking-tight text-[#161616]">
+                All Client Case Studies
+              </h2>
+              <p className="text-xs sm:text-sm text-[#585858]">
+                Browse all verified project deliveries, branding kits, and custom storefront builds.
+              </p>
+            </div>
+            <span className="text-xs font-mono-num text-[#9F8BE7] font-bold bg-[#FAF7F6] px-3 py-1 rounded-full border border-[#E0DDDB]">
+              Showing {FEATURED_PROJECTS.length} Projects
+            </span>
+          </div>
+
+          {/* Projects Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12">
           {FEATURED_PROJECTS.map((project) => (
             <article
               key={project.id}
@@ -156,6 +178,7 @@ export default function WorkIndexPage() {
               </div>
             </article>
           ))}
+          </div>
         </div>
       </div>
     </>

@@ -3,9 +3,10 @@ import Link from "next/link";
 import Image from "next/image";
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { ArrowLeft, ArrowUpRight, Layers, Palette, Type, CheckCircle2 } from "lucide-react";
+import { ArrowLeft, Palette, Type } from "lucide-react";
 import { FEATURED_PROJECTS, getProjectBySlug } from "@/data/projects";
-import { Heading3DSparkle, Heading3DGrowth, Heading3DShield } from "@/components/common/Brand3DIcons";
+import { Heading3DSparkle } from "@/components/common/Brand3DIcons";
+import CaseStudyGalleryCarousel from "@/components/work/CaseStudyGalleryCarousel";
 
 export function generateStaticParams() {
   return FEATURED_PROJECTS.map((project) => ({
@@ -194,31 +195,9 @@ export default async function ProjectDetailPage({
         </div>
       )}
 
-      {/* Visual Showcase Gallery */}
+      {/* Visual Showcase Gallery (Auto-Scrolling Interactive Carousel) */}
       {project.galleryImages && project.galleryImages.length > 0 && (
-        <div className="space-y-6">
-          <div className="flex items-center gap-2 text-xs font-mono-num uppercase tracking-wider text-[#9F8BE7] font-bold">
-            <Layers className="w-4 h-4" />
-            <span>VISUAL ASSET MATRIX &amp; PACKAGING MOCKUPS</span>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {project.galleryImages.map((imgSrc, idx) => (
-              <div
-                key={idx}
-                className="relative aspect-[4/3] w-full rounded-3xl overflow-hidden border border-[#E0DDDB] bg-white shadow-xs group"
-              >
-                <Image
-                  src={imgSrc}
-                  alt={`${project.title} Asset Showcase ${idx + 1}`}
-                  fill
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                  className="object-cover object-center group-hover:scale-105 transition-transform duration-500"
-                />
-              </div>
-            ))}
-          </div>
-        </div>
+        <CaseStudyGalleryCarousel images={project.galleryImages} title={project.title} />
       )}
 
       {/* Testimonial Quote if available */}

@@ -574,6 +574,16 @@ export const UBE_PACKAGES_KNOWLEDGE: PackageKnowledge[] = [
 
 export const UBE_PROJECTS_KNOWLEDGE: ProjectKnowledge[] = [
   {
+    slug: "everhome-real-estate-brand-system",
+    title: "Everhome Modern Real Estate Brand Architecture & Visual System",
+    client: "Everhome Real Estate",
+    category: "Brand Strategy & Visual Identity System",
+    summary:
+      "A place that truly feels like home: Minimalist real estate visual language, custom geometric framing logomark, Gotham Pro typography, Moon Mist & Pastel Stone palette, and property catalogue / app design.",
+    deliverables: ["Bespoke Geometric Logomark System", "Gotham Pro Typography & Color Spec", "Print Catalogue & Digital App Assets"],
+    route: "/work/everhome-real-estate-brand-system",
+  },
+  {
     slug: "eaudacity-luxury-fragrance-brand-system",
     title: "Eau'dacity Luxury Fragrance & Visual Identity System",
     client: "Eau'dacity Parfums",
