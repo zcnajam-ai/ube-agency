@@ -211,7 +211,7 @@ export default function AiSeoServicePage() {
               fill
               priority
               sizes="(max-width: 1024px) 100vw, 45vw"
-              className="object-cover object-center transition-transform duration-700 group-hover:scale-105"
+              className="object-contain object-center p-2 transition-transform duration-700 group-hover:scale-102"
             />
             <div className="absolute bottom-4 left-4 right-4 p-4 rounded-2xl bg-white/90 backdrop-blur-md border border-[#E0DDDB] text-xs font-mono-num text-[#161616] flex items-center justify-between shadow-xs">
               <span className="font-bold">AEO • GEO • AI OVERVIEWS</span>
