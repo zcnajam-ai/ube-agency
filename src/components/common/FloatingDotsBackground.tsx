@@ -1,399 +1,233 @@
 "use client";
 
-import React, {
-  useRef,
-  useMemo,
-  useEffect,
-  useSyncExternalStore,
-} from "react";
-import { Canvas, useFrame, useThree } from "@react-three/fiber";
+import React, { useEffect, useRef } from "react";
 import * as THREE from "three";
+import { animate, remove } from "animejs";
 
-/* ─────────────────────────── constants ─────────────────────────── */
-
-const COLORS = {
-  main: new THREE.Color("#9F8BE7"),
-  white: new THREE.Color("#FFFFFF"),
-  dark: new THREE.Color("#303030"),
-};
-
-const OPACITY_MIN = 0.30;
-const OPACITY_MAX = 0.42;
-
-/** Responsive particle counts */
-function getParticleCount(): number {
-  if (typeof window === "undefined") return 110;
-  const w = window.innerWidth;
-  if (w < 640) return 45;
-  if (w < 1024) return 75;
-  return 110;
+interface FloatingDotsBackgroundProps {
+  color?: number;
+  accentColor?: number;
+  density?: number;
+  minParticles?: number;
+  maxParticles?: number;
+  opacity?: number;
+  size?: number;
+  pointerStrength?: number;
+  scrollStrength?: number;
+  className?: string;
+  isAbsolute?: boolean;
 }
 
-/* ─── weight-biased distribution toward the right side ────────── */
+export default function FloatingDotsBackground({
+  color = 0x9f8be7,
+  accentColor = 0x303030,
+  density = 0.00006,
+  minParticles = 35,
+  maxParticles = 120,
+  opacity = 0.45,
+  size = 0.048,
+  pointerStrength = 0.28,
+  scrollStrength = 0.00038,
+  className = "",
+  isAbsolute = true,
+}: FloatingDotsBackgroundProps) {
+  const canvasRef = useRef<HTMLCanvasElement | null>(null);
 
-/**
- * Returns a value in 0…1, biased so ~75 % of particles land in
- * the right 60 % of the canvas, and only ~25 % land further left.
- * The leftmost 30 % (where headline sits) gets very few particles.
- */
-function biasedX(): number {
-  const r = Math.random();
-  if (r < 0.75) {
-    // Right zone: 0.40 … 1.0
-    return 0.40 + Math.random() * 0.60;
-  }
-  // Left sparse zone: 0.0 … 0.40
-  return Math.random() * 0.40;
-}
-
-/* ─────────────────────── Particle System ────────────────────── */
-
-interface ParticleData {
-  /** Base positions as normalised 0…1 coordinates */
-  baseX: Float32Array;
-  baseY: Float32Array;
-  colors: Float32Array;
-  opacities: Float32Array;
-  /** Dot diameter in CSS-like pixels (2 – 5) */
-  sizes: Float32Array;
-  /** Per-particle random phase / speed seeds */
-  phaseX: Float32Array;
-  phaseY: Float32Array;
-  speed: Float32Array;
-  count: number;
-}
-
-function generateParticles(count: number): ParticleData {
-  const baseX = new Float32Array(count);
-  const baseY = new Float32Array(count);
-  const colors = new Float32Array(count * 3);
-  const opacities = new Float32Array(count);
-  const sizes = new Float32Array(count);
-  const phaseX = new Float32Array(count);
-  const phaseY = new Float32Array(count);
-  const speed = new Float32Array(count);
-
-  const rarePool = [COLORS.white, COLORS.dark];
-
-  for (let i = 0; i < count; i++) {
-    baseX[i] = biasedX();
-    baseY[i] = Math.random();
-
-    // Color: ~82 % main purple, ~18 % white / dark
-    const color =
-      Math.random() < 0.82
-        ? COLORS.main
-        : rarePool[Math.floor(Math.random() * rarePool.length)];
-    colors[i * 3] = color.r;
-    colors[i * 3 + 1] = color.g;
-    colors[i * 3 + 2] = color.b;
-
-    opacities[i] =
-      OPACITY_MIN + Math.random() * (OPACITY_MAX - OPACITY_MIN);
-    sizes[i] = 2.5 + Math.random() * 3.0; // 2.5 – 5.5 px diameter
-
-    phaseX[i] = Math.random() * Math.PI * 2;
-    phaseY[i] = Math.random() * Math.PI * 2;
-    speed[i] = 0.12 + Math.random() * 0.22;
-  }
-
-  return { baseX, baseY, colors, opacities, sizes, phaseX, phaseY, speed, count };
-}
-
-/* ─────────────────────── Points component ───────────────────── */
-
-interface DotsProps {
-  reducedMotion: boolean;
-  paused: boolean;
-}
-
-function Dots({ reducedMotion, paused }: DotsProps) {
-  const pointsRef = useRef<THREE.Points>(null);
-  const { size } = useThree(); // pixel dimensions of the canvas
-
-  const data = useMemo(() => generateParticles(getParticleCount()), []);
-
-  // Mutable state ref — avoids re-renders
-  const state = useRef({
-    pointer: { x: 0, y: 0 },
-    scrollY: 0,
-    pulseTime: -10,
-    elapsed: 0,
-  });
-
-  /* ── pointer tracking ───────────────────────────────────────── */
   useEffect(() => {
-    if (reducedMotion) return;
-    const onPointer = (e: PointerEvent) => {
-      state.current.pointer.x = (e.clientX / window.innerWidth) * 2 - 1;
-      state.current.pointer.y =
-        -((e.clientY / window.innerHeight) * 2 - 1);
-    };
-    window.addEventListener("pointermove", onPointer, { passive: true });
-    return () => window.removeEventListener("pointermove", onPointer);
-  }, [reducedMotion]);
+    if (typeof window === "undefined" || !canvasRef.current) return;
 
-  /* ── scroll tracking ────────────────────────────────────────── */
-  useEffect(() => {
-    if (reducedMotion) return;
-    const onScroll = () => {
-      state.current.scrollY = window.scrollY;
-    };
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, [reducedMotion]);
+    const canvas = canvasRef.current;
+    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-  /* ── click / tap pulse ──────────────────────────────────────── */
-  useEffect(() => {
-    if (reducedMotion) return;
-    const onPulse = () => {
-      state.current.pulseTime = state.current.elapsed;
-    };
-    window.addEventListener("pointerdown", onPulse, { passive: true });
-    return () => window.removeEventListener("pointerdown", onPulse);
-  }, [reducedMotion]);
+    const pointer = new THREE.Vector2();
+    const pointerTarget = new THREE.Vector2();
+    let scrollTarget = window.scrollY;
+    let scrollCurrent = window.scrollY;
+    const clock = new THREE.Clock();
+    let raf = 0;
+    let destroyed = false;
 
-  /* ── per-frame update ───────────────────────────────────────── */
-  useFrame((_, delta) => {
-    if (paused || !pointsRef.current) return;
+    // 1. WebGL Renderer with 1.5 Pixel Ratio Cap
+    const renderer = new THREE.WebGLRenderer({
+      canvas,
+      alpha: true,
+      antialias: false,
+      powerPreference: "low-power",
+    });
+    renderer.setClearColor(0x000000, 0);
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 1.5));
 
-    const pts = pointsRef.current;
-    const geom = pts.geometry;
-    const posAttr = geom.getAttribute("position") as THREE.BufferAttribute;
-    const opAttr = geom.getAttribute("aOpacity") as THREE.BufferAttribute;
-    const posArr = posAttr.array as Float32Array;
-    const opArr = opAttr.array as Float32Array;
+    // 2. Scene & Camera
+    const scene = new THREE.Scene();
+    const width = isAbsolute && canvas.parentElement ? canvas.parentElement.clientWidth : window.innerWidth;
+    const height = isAbsolute && canvas.parentElement ? canvas.parentElement.clientHeight : window.innerHeight;
 
-    const s = state.current;
-    s.elapsed += delta;
+    const camera = new THREE.PerspectiveCamera(52, width / height, 0.1, 100);
+    camera.position.z = 7;
 
-    const {
-      baseX, baseY, phaseX: phX, phaseY: phY, speed: spd,
-      opacities: baseOp, count,
-    } = data;
+    const group = new THREE.Group();
+    scene.add(group);
 
-    // Canvas pixel dimensions → Three.js world units
-    // With an orthographic camera matching pixel coords, 1 unit = 1 px.
-    const w = size.width;
-    const h = size.height;
+    // 3. Build Particles
+    const count = Math.round(
+      Math.min(maxParticles, Math.max(minParticles, width * height * density))
+    );
+    const positions = new Float32Array(count * 3);
+    const colors = new Float32Array(count * 3);
 
-    // Scroll influence (gentle vertical shift in px)
-    const scrollPx = s.scrollY * 0.03;
-
-    // Pulse easing – decays over 0.8 s
-    const pulseDt = s.elapsed - s.pulseTime;
-    const pulseStrength = pulseDt < 0.8 ? (1 - pulseDt / 0.8) : 0;
+    const primaryCol = new THREE.Color(color);
+    const accentCol = new THREE.Color(accentColor);
+    const lilacCol = new THREE.Color(0xc8bdfc);
+    const whiteCol = new THREE.Color(0xffffff);
 
     for (let i = 0; i < count; i++) {
-      const bx = baseX[i];
-      const by = baseY[i];
-      const sp = spd[i];
-      const pX = phX[i];
-      const pY = phY[i];
+      const i3 = i * 3;
+      // Density bias toward the open right side of hero (x > 0)
+      const xBias = Math.random() > 0.35 ? Math.random() * 0.6 : Math.random() - 0.5;
+      positions[i3] = xBias * 15;
+      positions[i3 + 1] = (Math.random() - 0.5) * 11;
+      positions[i3 + 2] = (Math.random() - 0.5) * 8;
 
-      if (reducedMotion) {
-        posArr[i * 3] = bx * w;
-        posArr[i * 3 + 1] = by * h;
-        posArr[i * 3 + 2] = 0;
-      } else {
-        const t = s.elapsed * sp;
-
-        // Slow floating offset (in px, ±15px max)
-        const fx = Math.sin(t + pX) * 15;
-        const fy = Math.cos(t * 0.7 + pY) * 12;
-
-        // Pointer parallax (±12px, depth-scaled)
-        const px = s.pointer.x * 12 * sp;
-        const py = s.pointer.y * 12 * sp;
-
-        // Pulse radial push (±8px max)
-        let ppx = 0, ppy = 0;
-        if (pulseStrength > 0) {
-          ppx = (bx - 0.5) * pulseStrength * 8;
-          ppy = (by - 0.5) * pulseStrength * 8;
-        }
-
-        posArr[i * 3] = bx * w + fx + px + ppx;
-        posArr[i * 3 + 1] = by * h + fy + py + ppy - scrollPx;
-        posArr[i * 3 + 2] = 0;
+      const rand = Math.random();
+      let selectedColor = primaryCol;
+      if (rand > 0.88) {
+        selectedColor = accentCol;
+      } else if (rand > 0.75) {
+        selectedColor = lilacCol;
+      } else if (rand > 0.65) {
+        selectedColor = whiteCol;
       }
 
-      // Gentle opacity shimmer
-      opArr[i] =
-        baseOp[i] +
-        (reducedMotion ? 0 : Math.sin(s.elapsed * 0.5 + pX) * 0.03) +
-        pulseStrength * 0.06;
+      colors[i3] = selectedColor.r;
+      colors[i3 + 1] = selectedColor.g;
+      colors[i3 + 2] = selectedColor.b;
     }
 
-    posAttr.needsUpdate = true;
-    opAttr.needsUpdate = true;
-  });
+    const geometry = new THREE.BufferGeometry();
+    geometry.setAttribute("position", new THREE.BufferAttribute(positions, 3));
+    geometry.setAttribute("color", new THREE.BufferAttribute(colors, 3));
 
-  /* ── geometry ───────────────────────────────────────────────── */
-  const geometry = useMemo(() => {
-    const geom = new THREE.BufferGeometry();
-    geom.setAttribute(
-      "position",
-      new THREE.Float32BufferAttribute(new Float32Array(data.count * 3), 3)
-    );
-    geom.setAttribute(
-      "aOpacity",
-      new THREE.Float32BufferAttribute(new Float32Array(data.opacities), 1)
-    );
-    geom.setAttribute(
-      "aSize",
-      new THREE.Float32BufferAttribute(data.sizes, 1)
-    );
-    geom.setAttribute(
-      "aColor",
-      new THREE.Float32BufferAttribute(data.colors, 3)
-    );
-    return geom;
-  }, [data]);
-
-  /* ── material (per-particle color via vertex attribute) ──────── */
-  const colorMaterial = useMemo(() => {
-    return new THREE.ShaderMaterial({
-      vertexShader: /* glsl */ `
-        attribute float aOpacity;
-        attribute float aSize;
-        attribute vec3 aColor;
-        varying float vOpacity;
-        varying vec3 vColor;
-        void main() {
-          vOpacity = aOpacity;
-          vColor = aColor;
-          vec4 mvPosition = modelViewMatrix * vec4(position, 1.0);
-          // aSize is the desired CSS-px diameter.
-          // With an ortho camera 1 unit = 1 px, so gl_PointSize = aSize directly.
-          gl_PointSize = aSize;
-          gl_Position = projectionMatrix * mvPosition;
-        }
-      `,
-      fragmentShader: /* glsl */ `
-        varying float vOpacity;
-        varying vec3 vColor;
-        void main() {
-          float d = length(gl_PointCoord - vec2(0.5));
-          if (d > 0.5) discard;
-          // Tighter smoothstep for a cleaner circular edge
-          float alpha = smoothstep(0.5, 0.35, d) * vOpacity;
-          gl_FragColor = vec4(vColor, alpha);
-        }
-      `,
+    const material = new THREE.PointsMaterial({
+      size,
+      vertexColors: true,
       transparent: true,
+      opacity,
       depthWrite: false,
       blending: THREE.NormalBlending,
+      sizeAttenuation: true,
     });
-  }, []);
 
-  // Clean up
-  useEffect(() => {
-    return () => {
-      geometry.dispose();
-      colorMaterial.dispose();
+    const points = new THREE.Points(geometry, material);
+    group.add(points);
+
+    // 4. Interaction Event Handlers
+    const onPointerMove = (event: PointerEvent) => {
+      const currentWidth = isAbsolute && canvas.parentElement ? canvas.parentElement.clientWidth : window.innerWidth;
+      const currentHeight = isAbsolute && canvas.parentElement ? canvas.parentElement.clientHeight : window.innerHeight;
+      pointerTarget.set(
+        (event.clientX / currentWidth) * 2 - 1,
+        -(event.clientY / currentHeight) * 2 + 1
+      );
     };
-  }, [geometry, colorMaterial]);
 
-  return <points ref={pointsRef} geometry={geometry} material={colorMaterial} />;
-}
+    const onTap = (event: PointerEvent) => {
+      if (reducedMotion) return;
+      const currentWidth = isAbsolute && canvas.parentElement ? canvas.parentElement.clientWidth : window.innerWidth;
+      const currentHeight = isAbsolute && canvas.parentElement ? canvas.parentElement.clientHeight : window.innerHeight;
+      const x = (event.clientX / currentWidth) * 2 - 1;
+      const y = -(event.clientY / currentHeight) * 2 + 1;
 
-/* ─────── external store subscriptions (avoids setState in effects) ── */
+      remove(group.scale);
+      animate(group.scale, {
+        x: [1, 1.12, 1],
+        y: [1, 1.12, 1],
+        z: [1, 1.12, 1],
+        duration: 900,
+        ease: "outElastic(1, .55)",
+      });
 
-function subscribeVisibility(cb: () => void) {
-  document.addEventListener("visibilitychange", cb);
-  return () => document.removeEventListener("visibilitychange", cb);
-}
-function getVisibilitySnapshot() {
-  return document.hidden;
-}
-function getVisibilityServerSnapshot() {
-  return false;
-}
+      remove(group.rotation);
+      animate(group.rotation, {
+        x: group.rotation.x + y * 0.08,
+        y: group.rotation.y + x * 0.08,
+        duration: 700,
+        ease: "outCubic",
+      });
+    };
 
-function subscribeReducedMotion(cb: () => void) {
-  const mql = window.matchMedia("(prefers-reduced-motion: reduce)");
-  mql.addEventListener("change", cb);
-  return () => mql.removeEventListener("change", cb);
-}
-function getReducedMotionSnapshot() {
-  return window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-}
-function getReducedMotionServerSnapshot() {
-  return false;
-}
+    const onScroll = () => {
+      scrollTarget = window.scrollY;
+    };
 
-/* ──────────────── main exported component ───────────────────── */
+    const onResize = () => {
+      const currentWidth = isAbsolute && canvas.parentElement ? canvas.parentElement.clientWidth : window.innerWidth;
+      const currentHeight = isAbsolute && canvas.parentElement ? canvas.parentElement.clientHeight : window.innerHeight;
+      camera.aspect = currentWidth / currentHeight;
+      camera.updateProjectionMatrix();
+      renderer.setSize(currentWidth, currentHeight, false);
+    };
 
-export default function FloatingDotsBackground() {
-  const paused = useSyncExternalStore(
-    subscribeVisibility,
-    getVisibilitySnapshot,
-    getVisibilityServerSnapshot
-  );
+    const onVisibilityChange = () => {
+      if (document.hidden) {
+        cancelAnimationFrame(raf);
+      } else {
+        render();
+      }
+    };
 
-  const reducedMotion = useSyncExternalStore(
-    subscribeReducedMotion,
-    getReducedMotionSnapshot,
-    getReducedMotionServerSnapshot
-  );
+    window.addEventListener("pointermove", onPointerMove, { passive: true });
+    window.addEventListener("pointerdown", onTap, { passive: true });
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", onResize, { passive: true });
+    document.addEventListener("visibilitychange", onVisibilityChange, { passive: true });
+
+    onResize();
+
+    // 5. Render Loop
+    const render = () => {
+      if (destroyed || document.hidden) return;
+      const elapsed = clock.getElapsedTime();
+      const motionFactor = reducedMotion ? 0.15 : 1;
+
+      pointer.lerp(pointerTarget, 0.045);
+      scrollCurrent += (scrollTarget - scrollCurrent) * 0.055;
+
+      group.rotation.y = elapsed * 0.018 * motionFactor + pointer.x * pointerStrength;
+      group.rotation.x =
+        Math.sin(elapsed * 0.18) * 0.08 * motionFactor - pointer.y * pointerStrength * 0.5;
+      group.position.y =
+        Math.sin(elapsed * 0.28) * 0.12 * motionFactor + scrollCurrent * scrollStrength;
+      group.position.x = pointer.x * 0.35;
+      camera.position.z = 7 + Math.sin(elapsed * 0.22) * 0.15 * motionFactor;
+
+      renderer.render(scene, camera);
+      raf = requestAnimationFrame(render);
+    };
+
+    render();
+
+    // 6. Cleanup & Resource Disposal
+    return () => {
+      destroyed = true;
+      cancelAnimationFrame(raf);
+
+      window.removeEventListener("pointermove", onPointerMove);
+      window.removeEventListener("pointerdown", onTap);
+      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("resize", onResize);
+      document.removeEventListener("visibilitychange", onVisibilityChange);
+
+      geometry.dispose();
+      material.dispose();
+      renderer.dispose();
+    };
+  }, [color, accentColor, density, minParticles, maxParticles, opacity, size, pointerStrength, scrollStrength, isAbsolute]);
 
   return (
-    <div
+    <canvas
+      ref={canvasRef}
       aria-hidden="true"
-      className="absolute inset-0 z-[1] pointer-events-none"
-    >
-      <Canvas
-        dpr={Math.min(window.devicePixelRatio, 1.5)}
-        orthographic
-        camera={{ position: [0, 0, 1], near: 0.1, far: 10, zoom: 1 }}
-        gl={{
-          alpha: true,
-          antialias: false,
-          powerPreference: "low-power",
-        }}
-        style={{ background: "transparent" }}
-        frameloop={paused ? "never" : "always"}
-        onCreated={({ camera, size }) => {
-          // Configure orthographic camera to match pixel coords:
-          // (0,0) = top-left, (width, height) = bottom-right
-          const cam = camera as THREE.OrthographicCamera;
-          cam.left = 0;
-          cam.right = size.width;
-          cam.bottom = 0;
-          cam.top = size.height;
-          cam.updateProjectionMatrix();
-        }}
-        resize={{
-          // React Three Fiber will auto-resize; update camera on resize
-          debounce: 100,
-        }}
-      >
-        <CameraSync />
-        <Dots reducedMotion={reducedMotion} paused={paused} />
-      </Canvas>
-    </div>
+      className={`${isAbsolute ? "absolute" : "fixed"} inset-0 w-full h-full pointer-events-none z-0 ${className}`}
+    />
   );
-}
-
-/**
- * Keeps the orthographic camera frustum in sync with canvas pixel dimensions.
- * Uses useFrame's state argument (not from a hook) to avoid the
- * react-hooks/immutability lint rule.
- */
-function CameraSync() {
-  const prevSize = useRef({ w: 0, h: 0 });
-  useFrame(({ camera, size }) => {
-    if (prevSize.current.w !== size.width || prevSize.current.h !== size.height) {
-      prevSize.current.w = size.width;
-      prevSize.current.h = size.height;
-      const cam = camera as THREE.OrthographicCamera;
-      cam.left = 0;
-      cam.right = size.width;
-      cam.bottom = 0;
-      cam.top = size.height;
-      cam.updateProjectionMatrix();
-    }
-  });
-  return null;
 }
