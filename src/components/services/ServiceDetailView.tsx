@@ -15,7 +15,7 @@ const SERVICE_PACKAGE_MAP: Record<
     packageUrl: "/mobile-app-packages",
     packageText: "Explore 5 Mobile App Packages",
     starting: "From $999 (MVP)",
-    heroImage: "/images/official/mobile-app/app-process.jpeg",
+    heroImage: "/images/official/mobile-app/mobile-app-showcase.png",
   },
   ecommerce: {
     packageUrl: "/packages",

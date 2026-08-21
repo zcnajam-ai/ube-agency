@@ -72,16 +72,14 @@ export default function AppsAndAutomation() {
                 </p>
               </div>
 
-              {/* Visual Preview with 3D Tilt */}
+              {/* Visual Preview */}
               <InteractiveMedia
-                src="/images/official/mobile-app/app-process.jpeg"
-                alt="Unified Branding Experts Mobile App Development"
-                aspectRatio="aspect-[16/9]"
-                enableTilt
-                enableParallax
-                enableReveal
-                revealType="clip-inset"
+                src="/images/official/mobile-app/mobile-app-showcase.png"
+                alt="Unified Branding Experts Mobile App Development iOS & Android Native Showcase"
+                aspectRatio="aspect-[4/3] sm:aspect-[16/11]"
+                objectFit="contain"
                 badgeText="iOS & Android Native"
+                className="bg-white"
               />
 
               <ul className="space-y-2 text-xs text-[#303030]">

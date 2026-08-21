@@ -92,7 +92,7 @@ export default function PackagesHubPage() {
       bestFor: "Founders Launching iOS & Android Products",
       description:
         "Concept MVP prototypes, native iOS/Android development, React Native cross-platform apps, backend architecture, and App Store release.",
-      image: "/images/official/mobile-app/app-process.jpeg",
+      image: "/images/official/mobile-app/mobile-app-showcase.png",
       tiers: ["App Concept MVP ($999)", "Starter App ($2,999)", "Growth App ($6,999)", "Advanced App ($14,999)", "Enterprise Custom"],
     },
   ];
