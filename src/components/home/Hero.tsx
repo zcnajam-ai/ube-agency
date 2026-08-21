@@ -2,7 +2,13 @@
 
 import React, { useRef } from "react";
 import Link from "next/link";
+import dynamic from "next/dynamic";
 import { ArrowUpRight, Smartphone, Bot, Palette } from "lucide-react";
+
+const FloatingDotsBackground = dynamic(
+  () => import("../common/FloatingDotsBackground"),
+  { ssr: false }
+);
 import { useScroll } from "@/components/providers/SmoothScrollProvider";
 import MagneticButton from "../common/MagneticButton";
 import BackgroundGrid from "../common/BackgroundGrid";
@@ -38,6 +44,9 @@ export default function Hero() {
       <BackgroundGrid opacity={0.03} size={72} maskRadial />
       <PurpleGlowField position="top-right" size={700} opacity={0.08} />
       <OversizedTypography text="COMMERCE" direction="left" className="top-6 opacity-40" />
+
+      {/* 1b. Floating Particle Dots (above grid, below content) */}
+      <FloatingDotsBackground />
 
       {/* 2. Foreground Hero Content */}
       <div className="relative z-10 max-w-7xl mx-auto space-y-8 sm:space-y-10">
