@@ -1,9 +1,9 @@
 "use client";
 
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import Link from "next/link";
 import dynamic from "next/dynamic";
-import { ArrowUpRight, Smartphone, Bot, Palette } from "lucide-react";
+import { ArrowUpRight, Smartphone, Bot, Palette, Volume2, VolumeX } from "lucide-react";
 
 const FloatingDotsBackground = dynamic(
   () => import("../common/FloatingDotsBackground"),
@@ -25,14 +25,56 @@ export default function Hero() {
   const { openProjectModal } = useScroll();
   const heroRef = useRef<HTMLElement>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
+  const [isMuted, setIsMuted] = useState(true);
 
   useEffect(() => {
-    if (videoRef.current) {
-      videoRef.current.play().catch(() => {
-        // Fallback for strict browser autoplay policies
-      });
+    // 1. Check existing session sound preference
+    const savedPref = sessionStorage.getItem("ube_video_sound_pref");
+    if (savedPref === "unmuted") {
+      setIsMuted(false);
+      if (videoRef.current) {
+        videoRef.current.muted = false;
+        videoRef.current.volume = 0.65;
+      }
     }
+
+    // 2. Unmute on visitor's FIRST trusted click or touch interaction
+    const handleFirstInteraction = () => {
+      const pref = sessionStorage.getItem("ube_video_sound_pref");
+      if (pref !== "muted" && videoRef.current) {
+        videoRef.current.muted = false;
+        videoRef.current.volume = 0.65;
+        setIsMuted(false);
+        sessionStorage.setItem("ube_video_sound_pref", "unmuted");
+        videoRef.current.play().catch(() => {});
+      }
+      window.removeEventListener("click", handleFirstInteraction);
+      window.removeEventListener("touchstart", handleFirstInteraction);
+    };
+
+    window.addEventListener("click", handleFirstInteraction, { once: true });
+    window.addEventListener("touchstart", handleFirstInteraction, { once: true });
+
+    return () => {
+      window.removeEventListener("click", handleFirstInteraction);
+      window.removeEventListener("touchstart", handleFirstInteraction);
+    };
   }, []);
+
+  const toggleMute = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    if (!videoRef.current) return;
+    const newMuted = !isMuted;
+    setIsMuted(newMuted);
+    videoRef.current.muted = newMuted;
+    if (!newMuted) {
+      videoRef.current.volume = 0.65;
+      videoRef.current.play().catch(() => {});
+      sessionStorage.setItem("ube_video_sound_pref", "unmuted");
+    } else {
+      sessionStorage.setItem("ube_video_sound_pref", "muted");
+    }
+  };
 
   const priorityPills = [
     { label: "Shopify & Dropshipping", href: "/services/shopify-development", icon: <Shopify3DIcon size={18} /> },
@@ -59,12 +101,12 @@ export default function Hero() {
 
       {/* 2. Foreground Hero Content Container */}
       <div className="relative z-10 max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 xl:gap-12 items-start">
           {/* Left Column: Headline, Description, Service Pathways & CTAs */}
-          <div className="lg:col-span-7 space-y-8 sm:space-y-10">
+          <div className="lg:col-span-6 xl:col-span-6 space-y-8 sm:space-y-10">
             {/* Hero Headline & Intro */}
             <div className="space-y-4">
-              <h1 className="font-display text-4xl sm:text-6xl lg:text-7xl font-bold text-[#161616] tracking-tighter leading-[1.06]">
+              <h1 className="font-display text-4xl sm:text-6xl lg:text-6xl xl:text-7xl font-bold text-[#161616] tracking-tighter leading-[1.06]">
                 High-Performance eCommerce, <br className="hidden sm:block" />
                 <span className="text-[#9F8BE7]">Growth Marketing</span> &amp; AI Systems.
               </h1>
@@ -116,20 +158,40 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* Right Column: Rayo-styled 16:9 Promotional Video Card */}
-          <div className="lg:col-span-5 w-full max-w-[560px] mx-auto lg:max-w-none">
-            <div className="relative aspect-[16/9] w-full rounded-[24px] overflow-hidden border border-[#E0DDDB] shadow-md bg-white/90 backdrop-blur-xs hover:border-[#9F8BE7] transition-all duration-300 group">
+          {/* Right Column: Prominent Upper-Right 16:9 Promotional Video Card */}
+          <div className="lg:col-span-6 xl:col-span-6 w-full mt-2 lg:mt-1">
+            <div className="relative aspect-[16/9] w-full rounded-[28px] overflow-hidden border border-[#E0DDDB] shadow-lg bg-white/95 backdrop-blur-xs hover:border-[#9F8BE7] transition-all duration-300 group">
               <video
                 ref={videoRef}
                 autoPlay
-                muted
+                muted={isMuted}
                 loop
                 playsInline
                 preload="metadata"
-                className="w-full h-full object-contain rounded-[24px] bg-[#FAF7F6]"
+                className="w-full h-full object-contain rounded-[28px] bg-[#FAF7F6]"
               >
                 <source src="/videos/ube-promotional-video.mp4" type="video/mp4" />
               </video>
+
+              {/* Sound Toggle Button Overlay */}
+              <button
+                type="button"
+                onClick={toggleMute}
+                className="absolute bottom-4 right-4 z-20 px-3.5 py-1.5 rounded-full bg-white/90 backdrop-blur-md border border-[#E0DDDB] hover:border-[#9F8BE7] text-xs font-mono-num font-bold text-[#161616] flex items-center gap-1.5 shadow-sm transition-all hover:scale-105"
+                aria-label={isMuted ? "Unmute promotional video" : "Mute promotional video"}
+              >
+                {isMuted ? (
+                  <>
+                    <VolumeX className="w-3.5 h-3.5 text-rose-500 shrink-0" />
+                    <span>Sound Off</span>
+                  </>
+                ) : (
+                  <>
+                    <Volume2 className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
+                    <span>Sound On</span>
+                  </>
+                )}
+              </button>
             </div>
           </div>
         </div>
