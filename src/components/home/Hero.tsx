@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useRef } from "react";
+import React, { useRef, useEffect } from "react";
 import Link from "next/link";
 import dynamic from "next/dynamic";
 import { ArrowUpRight, Smartphone, Bot, Palette } from "lucide-react";
@@ -24,6 +24,15 @@ import {
 export default function Hero() {
   const { openProjectModal } = useScroll();
   const heroRef = useRef<HTMLElement>(null);
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.play().catch(() => {
+        // Fallback for strict browser autoplay policies
+      });
+    }
+  }, []);
 
   const priorityPills = [
     { label: "Shopify & Dropshipping", href: "/services/shopify-development", icon: <Shopify3DIcon size={18} /> },
@@ -48,59 +57,81 @@ export default function Hero() {
       {/* 1b. Floating Particle Dots (above grid, below content) */}
       <FloatingDotsBackground />
 
-      {/* 2. Foreground Hero Content */}
-      <div className="relative z-10 max-w-7xl mx-auto space-y-8 sm:space-y-10">
-        {/* Hero Headline */}
-        <div className="space-y-4 max-w-5xl">
-          <h1 className="font-display text-4xl sm:text-6xl lg:text-7xl font-bold text-[#161616] tracking-tighter leading-[1.06]">
-            High-Performance eCommerce, <br className="hidden sm:block" />
-            <span className="text-[#9F8BE7]">Growth Marketing</span> &amp; AI Systems.
-          </h1>
+      {/* 2. Foreground Hero Content Container */}
+      <div className="relative z-10 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+          {/* Left Column: Headline, Description, Service Pathways & CTAs */}
+          <div className="lg:col-span-7 space-y-8 sm:space-y-10">
+            {/* Hero Headline & Intro */}
+            <div className="space-y-4">
+              <h1 className="font-display text-4xl sm:text-6xl lg:text-7xl font-bold text-[#161616] tracking-tighter leading-[1.06]">
+                High-Performance eCommerce, <br className="hidden sm:block" />
+                <span className="text-[#9F8BE7]">Growth Marketing</span> &amp; AI Systems.
+              </h1>
 
-          <p className="text-base sm:text-lg md:text-xl text-[#585858] font-body leading-relaxed max-w-3xl">
-            We scale ambitious brands with professional <strong className="text-[#161616] font-bold">Shopify &amp; Dropshipping storefronts</strong>, viral <strong className="text-[#161616] font-bold">TikTok Shop &amp; Meta ad campaigns</strong>, high-intent <strong className="text-[#161616] font-bold">Google Marketing</strong>, <strong className="text-[#161616] font-bold">AI SEO search visibility</strong>, custom <strong className="text-[#161616] font-bold">mobile apps</strong>, and intelligent <strong className="text-[#161616] font-bold">AI automations</strong>.
-          </p>
-        </div>
+              <p className="text-base sm:text-lg md:text-xl text-[#585858] font-body leading-relaxed max-w-3xl">
+                We scale ambitious brands with professional <strong className="text-[#161616] font-bold">Shopify &amp; Dropshipping storefronts</strong>, viral <strong className="text-[#161616] font-bold">TikTok Shop &amp; Meta ad campaigns</strong>, high-intent <strong className="text-[#161616] font-bold">Google Marketing</strong>, <strong className="text-[#161616] font-bold">AI SEO search visibility</strong>, custom <strong className="text-[#161616] font-bold">mobile apps</strong>, and intelligent <strong className="text-[#161616] font-bold">AI automations</strong>.
+              </p>
+            </div>
 
-        {/* Quick Service Pathways (Interactive Pills with 3D Icons) */}
-        <div className="space-y-2.5">
-          <span className="text-[11px] font-mono-num uppercase tracking-wider text-[#585858] font-bold block">
-            Direct Service &amp; Package Pathways
-          </span>
-          <div className="flex flex-wrap gap-2.5">
-            {priorityPills.map((pill) => (
-              <Link
-                key={pill.label}
-                href={pill.href}
-                className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/95 backdrop-blur-xs border border-[#E0DDDB] hover:border-[#9F8BE7] text-xs font-display font-semibold text-[#161616] hover:text-[#9F8BE7] transition-all shadow-2xs group"
+            {/* Quick Service Pathways (Interactive Pills with 3D Icons) */}
+            <div className="space-y-2.5">
+              <span className="text-[11px] font-mono-num uppercase tracking-wider text-[#585858] font-bold block">
+                Direct Service &amp; Package Pathways
+              </span>
+              <div className="flex flex-wrap gap-2.5">
+                {priorityPills.map((pill) => (
+                  <Link
+                    key={pill.label}
+                    href={pill.href}
+                    className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/95 backdrop-blur-xs border border-[#E0DDDB] hover:border-[#9F8BE7] text-xs font-display font-semibold text-[#161616] hover:text-[#9F8BE7] transition-all shadow-2xs group"
+                  >
+                    {pill.icon}
+                    <span>{pill.label}</span>
+                    <ArrowUpRight className="w-3 h-3 text-[#585858] group-hover:text-[#9F8BE7] transition-colors" />
+                  </Link>
+                ))}
+              </div>
+            </div>
+
+            {/* Action Conversion CTAs */}
+            <div className="pt-6 flex flex-wrap items-center gap-4 border-t border-[#E0DDDB]">
+              <MagneticButton
+                size="lg"
+                variant="primary"
+                showArrow
+                onClick={() => openProjectModal()}
+                className="w-full sm:w-auto shadow-[0_4px_20px_rgba(159,139,231,0.4)]"
               >
-                {pill.icon}
-                <span>{pill.label}</span>
-                <ArrowUpRight className="w-3 h-3 text-[#585858] group-hover:text-[#9F8BE7] transition-colors" />
+                Start Your Project
+              </MagneticButton>
+
+              <Link
+                href="/packages"
+                className="px-6 py-3.5 rounded-full border border-[#E0DDDB] bg-white hover:border-[#9F8BE7] text-xs sm:text-sm font-display font-bold text-[#161616] transition-all flex items-center justify-center gap-2 shadow-xs w-full sm:w-auto"
+              >
+                <span>Explore All Packages ($299+)</span>
+                <ArrowUpRight className="w-4 h-4 text-[#9F8BE7]" />
               </Link>
-            ))}
+            </div>
           </div>
-        </div>
 
-        {/* Action Conversion CTAs (Metrics block removed for clean, honest layout) */}
-        <div className="pt-6 flex flex-wrap items-center gap-4 border-t border-[#E0DDDB]">
-          <MagneticButton
-            size="lg"
-            variant="primary"
-            showArrow
-            onClick={() => openProjectModal()}
-            className="w-full sm:w-auto shadow-[0_4px_20px_rgba(159,139,231,0.4)]"
-          >
-            Start Your Project
-          </MagneticButton>
-
-          <Link
-            href="/packages"
-            className="px-6 py-3.5 rounded-full border border-[#E0DDDB] bg-white hover:border-[#9F8BE7] text-xs sm:text-sm font-display font-bold text-[#161616] transition-all flex items-center justify-center gap-2 shadow-xs w-full sm:w-auto"
-          >
-            <span>Explore All Packages ($299+)</span>
-            <ArrowUpRight className="w-4 h-4 text-[#9F8BE7]" />
-          </Link>
+          {/* Right Column: Rayo-styled 16:9 Promotional Video Card */}
+          <div className="lg:col-span-5 w-full max-w-[560px] mx-auto lg:max-w-none">
+            <div className="relative aspect-[16/9] w-full rounded-[24px] overflow-hidden border border-[#E0DDDB] shadow-md bg-white/90 backdrop-blur-xs hover:border-[#9F8BE7] transition-all duration-300 group">
+              <video
+                ref={videoRef}
+                autoPlay
+                muted
+                loop
+                playsInline
+                preload="metadata"
+                className="w-full h-full object-contain rounded-[24px] bg-[#FAF7F6]"
+              >
+                <source src="/videos/ube-promotional-video.mp4" type="video/mp4" />
+              </video>
+            </div>
+          </div>
         </div>
       </div>
     </section>
