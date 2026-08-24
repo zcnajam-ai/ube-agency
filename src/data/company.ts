@@ -58,10 +58,10 @@ export const COMPANY_INFO: CompanyInfo = {
   email: "info@unifiedbrandingexperts.com",
   address: {
     street: "",
-    city: "Chicago",
-    state: "IL",
-    country: "United States",
-    full: "Chicago, IL, United States",
+    city: "Texas",
+    state: "TX",
+    country: "USA",
+    full: "Texas, USA",
   },
   stats: [
     {

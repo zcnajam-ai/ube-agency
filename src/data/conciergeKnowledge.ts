@@ -642,7 +642,7 @@ export const UBE_COMPANY_KNOWLEDGE = {
   fullTagline: "Strategy, Creativity & Technology Unified Under One High-Performance Growth System",
   phone: "+1 224-266-8081",
   email: "info@unifiedbrandingexperts.com",
-  location: "Chicago, IL, United States",
+  location: "Texas, USA",
   experience: "15+ Years of Digital Craft",
   ratings: {
     trustpilot: "4.9 / 5.0 (142+ Reviews)",
