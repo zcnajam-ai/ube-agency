@@ -37,6 +37,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/ai-seo-packages`, lastModified: new Date("2026-02-14T00:00:00.000Z"), changeFrequency: "weekly", priority: 0.9 },
     { url: `${baseUrl}/ai-automation-packages`, lastModified: new Date("2026-02-14T00:00:00.000Z"), changeFrequency: "weekly", priority: 0.9 },
     { url: `${baseUrl}/tiktok-marketing-packages`, lastModified: new Date("2026-02-14T00:00:00.000Z"), changeFrequency: "weekly", priority: 0.9 },
+    { url: `${baseUrl}/ecommerce-growth-packages`, lastModified: new Date("2026-08-27T00:00:00.000Z"), changeFrequency: "weekly", priority: 0.9 },
     { url: `${baseUrl}/mobile-app-packages`, lastModified: new Date("2026-02-14T00:00:00.000Z"), changeFrequency: "weekly", priority: 0.9 },
   ];
 

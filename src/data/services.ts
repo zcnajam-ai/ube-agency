@@ -44,11 +44,11 @@ export const SERVICE_PILLARS: ServicePillar[] = [
       {
         id: "ecommerce-store-setup",
         slug: "ecommerce",
-        title: "eCommerce Store Design & Architecture",
-        shortTitle: "eCommerce Stores",
-        kicker: "Professional Online Stores",
+        title: "eCommerce Growth & Marketplace Services",
+        shortTitle: "eCommerce Growth",
+        kicker: "Multi-Channel eCommerce",
         summary:
-          "End-to-end custom eCommerce architecture tailored for high transaction volume, organized customer journeys, and seamless inventory management across global channels.",
+          "End-to-end eCommerce development and multi-channel marketplace strategy for Shopify, Amazon, Etsy, and eBay engineered to launch, optimize, and scale online stores.",
         deliverables: [
           "Custom Theme Architecture & UI/UX Design",
           "Cart & Checkout Navigation Optimization",

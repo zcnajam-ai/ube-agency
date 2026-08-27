@@ -41,6 +41,17 @@ export const metadata: Metadata = {
 export default function PackagesHubPage() {
   const packageHubs = [
     {
+      title: "eCommerce Growth Packages",
+      slug: "/ecommerce-growth-packages",
+      icon: <ShoppingBag className="w-6 h-6 text-[#9F8BE7]" />,
+      startingPrice: "From $399",
+      bestFor: "Shopify, Amazon, Etsy & eBay Brands",
+      description:
+        "Multi-channel storefront development, dropshipping supplier integrations, product listing SEO, marketplace optimization, and scalable commerce systems.",
+      image: "/images/projects/happy-knot/hero.png",
+      tiers: ["eCommerce Launch ($399)", "eCommerce Growth ($799)", "eCommerce Scale ($999)", "Multi-Channel Custom"],
+    },
+    {
       title: "Branding Packages",
       slug: "/branding-packages",
       icon: <Palette className="w-6 h-6 text-[#9F8BE7]" />,

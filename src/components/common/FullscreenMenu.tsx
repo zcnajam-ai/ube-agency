@@ -39,6 +39,7 @@ export default function FullscreenMenu({ isOpen, onClose }: FullscreenMenuProps)
   ];
 
   const packageLinks = [
+    { label: "eCommerce Growth Plans", href: "/ecommerce-growth-packages", starting: "From $399" },
     { label: "Logo Design Packages", href: "/logo-design-packages", starting: "From $299" },
     { label: "Web Design Packages", href: "/web-design-packages", starting: "From $300" },
     { label: "Website Dev Packages", href: "/our-website-development-packages", starting: "From $300" },
