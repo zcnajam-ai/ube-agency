@@ -1,7 +1,7 @@
-"use client";
-
 import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { useScroll } from "@/components/providers/SmoothScrollProvider";
 import {
   X,
   Send,
@@ -59,6 +59,9 @@ function uniqueId(prefix: string) {
 }
 
 export default function ConciergeChat({ isOpen, onClose }: ConciergeChatProps) {
+  const pathname = usePathname();
+  const { openProjectModal } = useScroll();
+
   const [messages, setMessages] = useState<ChatMessage[]>([INITIAL_GREETING_MESSAGE]);
   const [inputValue, setInputValue] = useState("");
   const [currentPathway, setCurrentPathway] = useState<string | null>(null);
@@ -77,6 +80,44 @@ export default function ConciergeChat({ isOpen, onClose }: ConciergeChatProps) {
 
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const chatScrollContainerRef = useRef<HTMLDivElement>(null);
+
+  // 1. Route Change Safety: Automatically minimize chatbot whenever pathname changes while open
+  useEffect(() => {
+    if (isOpen) {
+      onClose();
+    }
+  }, [pathname]);
+
+  // 2. Mobile Body Scroll Lock & Cleanup
+  useEffect(() => {
+    if (isOpen && typeof window !== "undefined" && window.innerWidth < 768) {
+      document.body.style.overflow = "hidden";
+    } else if (typeof window !== "undefined") {
+      document.body.style.overflow = "";
+    }
+
+    return () => {
+      if (typeof window !== "undefined") {
+        document.body.style.overflow = "";
+      }
+    };
+  }, [isOpen]);
+
+  // 3. Navigation & Modal Action Handlers
+  const handleLinkAction = (url?: string, label?: string) => {
+    if (url?.includes("package")) {
+      trackConciergeEvent("package_clicked", { packageName: label });
+    } else if (url?.includes("work")) {
+      trackConciergeEvent("work_clicked");
+    }
+    onClose(); // Auto-close chatbot panel on mobile/desktop navigation
+  };
+
+  const handleEstimateAction = (serviceName?: string) => {
+    trackConciergeEvent("estimate_started", { source: "rec_card" });
+    onClose(); // Close chatbot drawer first
+    openProjectModal(serviceName || estimateData.service); // Open global ProjectModal
+  };
 
   // Auto-scroll to latest message
   useEffect(() => {
@@ -540,10 +581,7 @@ export default function ConciergeChat({ isOpen, onClose }: ConciergeChatProps) {
                       {act.type === "link" && act.url ? (
                         <Link
                           href={act.url}
-                          onClick={() => {
-                            if (act.url?.includes("package")) trackConciergeEvent("package_clicked", { packageName: act.label });
-                            else if (act.url?.includes("work")) trackConciergeEvent("work_clicked");
-                          }}
+                          onClick={() => handleLinkAction(act.url, act.label)}
                           className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#FAF7F6] border border-[#E0DDDB] hover:border-[#9F8BE7] hover:bg-white text-xs font-mono-num font-bold text-[#161616] transition-all shadow-2xs group"
                         >
                           {act.url.includes("package") && <Layers className="w-3 h-3 text-[#9F8BE7]" />}
@@ -554,13 +592,7 @@ export default function ConciergeChat({ isOpen, onClose }: ConciergeChatProps) {
                         </Link>
                       ) : (
                         <button
-                          onClick={() => {
-                            trackConciergeEvent("estimate_started", { source: "rec_card" });
-                            if (m.recommendation?.title) {
-                              setEstimateData((prev) => ({ ...prev, service: m.recommendation!.title }));
-                            }
-                            setShowEstimateForm(true);
-                          }}
+                          onClick={() => handleEstimateAction(m.recommendation?.title)}
                           className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#161616] text-white hover:bg-black text-xs font-mono-num font-bold transition-all shadow-2xs cursor-pointer"
                         >
                           <Calculator className="w-3 h-3 text-[#9F8BE7]" />
@@ -583,7 +615,10 @@ export default function ConciergeChat({ isOpen, onClose }: ConciergeChatProps) {
                 <div className="space-y-2">
                   <a
                     href="tel:+12242668081"
-                    onClick={() => trackConciergeEvent("human_handoff", { source: "phone" })}
+                    onClick={() => {
+                      trackConciergeEvent("human_handoff", { source: "phone" });
+                      onClose();
+                    }}
                     className="flex items-center justify-between p-2.5 rounded-xl bg-[#FAF7F6] border border-[#E0DDDB] hover:border-[#9F8BE7] text-xs font-mono-num text-[#161616] transition-all"
                   >
                     <span className="flex items-center gap-2 font-bold">
@@ -595,7 +630,10 @@ export default function ConciergeChat({ isOpen, onClose }: ConciergeChatProps) {
 
                   <a
                     href="mailto:info@unifiedbrandingexperts.com"
-                    onClick={() => trackConciergeEvent("human_handoff", { source: "email" })}
+                    onClick={() => {
+                      trackConciergeEvent("human_handoff", { source: "email" });
+                      onClose();
+                    }}
                     className="flex items-center justify-between p-2.5 rounded-xl bg-[#FAF7F6] border border-[#E0DDDB] hover:border-[#9F8BE7] text-xs font-mono-num text-[#161616] transition-all"
                   >
                     <span className="flex items-center gap-2 font-bold truncate max-w-[220px]">
@@ -606,10 +644,7 @@ export default function ConciergeChat({ isOpen, onClose }: ConciergeChatProps) {
                   </a>
 
                   <button
-                    onClick={() => {
-                      trackConciergeEvent("estimate_started", { source: "contact_card" });
-                      setShowEstimateForm(true);
-                    }}
+                    onClick={() => handleEstimateAction()}
                     className="w-full py-2.5 rounded-xl bg-[#161616] text-white hover:bg-black text-xs font-display font-bold flex items-center justify-center gap-1.5 transition-all cursor-pointer shadow-xs"
                   >
                     <Calculator className="w-3.5 h-3.5 text-[#9F8BE7]" />
