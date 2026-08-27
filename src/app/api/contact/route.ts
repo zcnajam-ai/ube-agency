@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { sendProjectInquiryEmails } from "@/lib/emailService";
 
 export async function POST(request: Request) {
   try {
@@ -38,6 +39,7 @@ export async function POST(request: Request) {
     const timeline = typeof body.timeline === "string" ? body.timeline : "Flexible";
     const description = typeof body.description === "string" ? body.description : "";
     const honeypot = typeof body.honeypot === "string" ? body.honeypot : "";
+    const sourcePage = typeof body.sourcePage === "string" ? body.sourcePage : "";
 
     // 5. Bot Defense (Honeypot Check)
     if (honeypot.trim().length > 0) {
@@ -67,22 +69,31 @@ export async function POST(request: Request) {
       budget: budget.trim().slice(0, 50),
       timeline: timeline.trim().slice(0, 50),
       description: description.trim().slice(0, 2000),
+      sourcePage: sourcePage.trim().slice(0, 250),
     };
 
-    // Log generic non-PII audit event
+    // Log generic audit event
     console.log(`[Project Inquiry Received] Service: ${sanitized.service} | Budget: ${sanitized.budget}`);
+
+    // 8. Send Transactional Emails (Internal UBE Notification + Client Confirmation)
+    await sendProjectInquiryEmails(sanitized);
 
     return NextResponse.json(
       {
         success: true,
-        message: "Thank you! Your project inquiry has been received. Our team will contact you within 24 hours.",
+        message: `Thank you, ${sanitized.name}. We've received your project inquiry. Our team will review your requirements and follow up with you.`,
+        summary: {
+          service: sanitized.service,
+          budget: sanitized.budget,
+          timeline: sanitized.timeline,
+        },
       },
       { status: 200 }
     );
   } catch (err) {
-    console.error("API /contact error occurred");
+    console.error("API /contact error occurred", err);
     return NextResponse.json(
-      { error: "Internal server error. Please contact us directly at info@unifiedbrandingexperts.com" },
+      { error: "We couldn't submit your inquiry right now. Please try again." },
       { status: 500 }
     );
   }

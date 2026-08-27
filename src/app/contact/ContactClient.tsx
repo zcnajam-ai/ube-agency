@@ -103,7 +103,7 @@ export default function ContactClient() {
           Let&apos;s Build Your Growth System.
         </h1>
         <p className="text-base sm:text-xl text-[#585858] font-body leading-relaxed">
-          Tell us about your brand, goals, and timeline. Our senior team responds within 24 hours with an actionable roadmap.
+          Tell us about your brand, goals, and timeline. Our team will review your requirements and follow up with you.
         </p>
       </div>
 
@@ -169,7 +169,7 @@ export default function ContactClient() {
             </div>
             <div className="flex items-center gap-2 text-xs text-[#585858]">
               <CheckCircle2 className="w-4 h-4 text-emerald-600" />
-              <span>Full project scope proposal in 24 hours</span>
+              <span>Full project scope proposal tailored to your goals</span>
             </div>
           </div>
         </div>
@@ -177,24 +177,41 @@ export default function ContactClient() {
         {/* Right Side: Interactive Project Inquiry Form */}
         <div className="lg:col-span-8 p-8 sm:p-12 rounded-3xl bg-white border border-[#E0DDDB] shadow-sm">
           {isSubmitted ? (
-            <div className="text-center py-16 space-y-6 animate-fadeIn">
+            <div className="text-center py-12 space-y-6 animate-fadeIn">
               <div className="w-16 h-16 rounded-full bg-emerald-50 text-emerald-600 flex items-center justify-center mx-auto border border-emerald-200">
                 <CheckCircle2 className="w-8 h-8" />
               </div>
               <div className="space-y-2 max-w-md mx-auto">
-                <h3 className="font-display text-2xl font-bold text-[#161616]">
-                  Inquiry Received.
+                <h3 className="font-display text-2xl sm:text-3xl font-extrabold text-[#161616] tracking-tight uppercase">
+                  INQUIRY RECEIVED!
                 </h3>
-                <p className="text-sm text-[#585858]">
-                  Thank you for reaching out. A senior member of our team will review your requirements and respond within 24 hours.
+                <p className="text-sm text-[#585858] leading-relaxed">
+                  Thank you, <span className="text-[#161616] font-bold">{formData.name}</span>. We&apos;ve received your project inquiry. Our team will review your requirements and follow up with you.
                 </p>
               </div>
+
+              <div className="p-5 rounded-2xl bg-[#FAF7F6] border border-[#E0DDDB] max-w-md mx-auto text-xs font-mono-num text-[#303030] space-y-2 text-left shadow-2xs">
+                <div className="text-[11px] font-bold text-[#9F8BE7] uppercase tracking-wider border-b border-[#E0DDDB] pb-1.5 mb-2">
+                  Submission Summary
+                </div>
+                <div><span className="text-[#585858]">Service:</span> <strong className="text-[#161616]">{formData.service}</strong></div>
+                <div>
+                  <span className="text-[#585858]">Target Budget:</span>{" "}
+                  <strong className="text-[#161616]">
+                    {formData.budget === "Other / Custom Budget" && customBudgetInput
+                      ? `Custom: $${customBudgetInput}`
+                      : formData.budget}
+                  </strong>
+                </div>
+                <div><span className="text-[#585858]">Timeline:</span> <strong className="text-[#161616]">{formData.timeline}</strong></div>
+              </div>
+
               <button
                 type="button"
                 onClick={() => setIsSubmitted(false)}
-                className="px-6 py-2.5 rounded-full border border-[#E0DDDB] text-xs font-mono-num font-bold hover:border-[#9F8BE7] transition-all cursor-pointer"
+                className="px-8 py-3.5 rounded-full bg-[#9F8BE7] text-[#161616] font-display font-bold text-sm hover:bg-[#b4a3f7] transition-all shadow-md cursor-pointer min-w-[140px]"
               >
-                Submit Another Inquiry
+                Done
               </button>
             </div>
           ) : (

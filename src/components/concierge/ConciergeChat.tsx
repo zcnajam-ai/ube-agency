@@ -375,7 +375,7 @@ export default function ConciergeChat({ isOpen, onClose }: ConciergeChatProps) {
           {
             id: uniqueId("lead-confirm"),
             role: "concierge",
-            content: `Thank you, **${estimateData.name}**! Your project details have been received. A senior director will review your scope and contact you at **${estimateData.email || estimateData.phone}** within 24 hours.`,
+            content: `Thank you, **${estimateData.name}**! Your project details have been received. Our team will review your scope and follow up with you regarding next steps.`,
             timestamp: new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" }),
           },
         ]);
@@ -663,7 +663,7 @@ export default function ConciergeChat({ isOpen, onClose }: ConciergeChatProps) {
             {leadSuccess ? (
               <div className="p-3.5 rounded-xl bg-emerald-50 text-emerald-800 text-xs flex items-center gap-2">
                 <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
-                <span>Proposal request submitted! Our team will contact you within 24 hours.</span>
+                <span>Proposal request submitted! Our team will review your requirements and follow up with you.</span>
               </div>
             ) : (
               <form onSubmit={handleLeadSubmit} className="space-y-2.5 text-xs">

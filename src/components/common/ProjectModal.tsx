@@ -199,23 +199,35 @@ export default function ProjectModal() {
                 <CheckCircle2 className="w-8 h-8 text-[#9F8BE7]" />
               </div>
               <div className="space-y-2">
-                <h3 className="font-display text-2xl sm:text-3xl font-bold text-[#161616]">
-                  Inquiry Received!
+                <h3 className="font-display text-2xl sm:text-3xl font-extrabold text-[#161616] tracking-tight uppercase">
+                  INQUIRY RECEIVED!
                 </h3>
                 <p className="text-sm text-[#585858] max-w-md mx-auto leading-relaxed">
-                  Thank you, <span className="text-[#161616] font-bold">{formData.name}</span>. Our Senior Strategy
-                  Director will review your requirements and follow up within 24 hours.
+                  Thank you, <span className="text-[#161616] font-bold">{formData.name}</span>. We&apos;ve received your project inquiry. Our team will review your requirements and follow up with you.
                 </p>
               </div>
-              <div className="p-4 rounded-2xl bg-[#FAF7F6] border border-[#E0DDDB] max-w-sm mx-auto text-xs font-mono-num text-[#303030] space-y-1 text-left">
-                <div><span className="text-[#838383]">Service:</span> {activeService}</div>
-                <div><span className="text-[#838383]">Target Budget:</span> {formData.budget}</div>
-                <div><span className="text-[#838383]">Timeline:</span> {formData.timeline}</div>
+              <div className="p-5 rounded-2xl bg-[#FAF7F6] border border-[#E0DDDB] max-w-md mx-auto text-xs font-mono-num text-[#303030] space-y-2 text-left shadow-2xs">
+                <div className="text-[11px] font-bold text-[#9F8BE7] uppercase tracking-wider border-b border-[#E0DDDB] pb-1.5 mb-2">
+                  Submission Summary
+                </div>
+                <div><span className="text-[#585858]">Service:</span> <strong className="text-[#161616]">{activeService}</strong></div>
+                <div>
+                  <span className="text-[#585858]">Target Budget:</span>{" "}
+                  <strong className="text-[#161616]">
+                    {formData.budget === "Other / Custom Budget" && customBudgetInput
+                      ? `Custom: $${customBudgetInput}`
+                      : formData.budget}
+                  </strong>
+                </div>
+                <div><span className="text-[#585858]">Timeline:</span> <strong className="text-[#161616]">{formData.timeline}</strong></div>
               </div>
               <button
                 type="button"
-                onClick={handleReset}
-                className="px-8 py-3 rounded-full bg-[#9F8BE7] text-[#161616] font-display font-bold text-sm hover:bg-[#b4a3f7] transition-all shadow-md cursor-pointer"
+                onClick={() => {
+                  handleReset();
+                  closeProjectModal();
+                }}
+                className="px-8 py-3.5 rounded-full bg-[#9F8BE7] text-[#161616] font-display font-bold text-sm hover:bg-[#b4a3f7] transition-all shadow-md cursor-pointer min-w-[140px]"
               >
                 Done
               </button>
