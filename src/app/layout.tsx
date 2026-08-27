@@ -8,6 +8,7 @@ import ProjectModal from "@/components/common/ProjectModal";
 import SchemaOrg from "@/components/seo/SchemaOrg";
 import ConciergeProvider from "@/components/concierge/ConciergeProvider";
 import { COMPANY_INFO } from "@/data/company";
+import { Analytics } from "@vercel/analytics/next";
 
 const funnelDisplay = Funnel_Display({
   variable: "--font-display",
@@ -127,6 +128,9 @@ export default function RootLayout({
           {/* UBE AI Sales & Service Concierge */}
           <ConciergeProvider />
         </SmoothScrollProvider>
+
+        {/* Vercel Web Analytics */}
+        <Analytics />
       </body>
     </html>
   );
