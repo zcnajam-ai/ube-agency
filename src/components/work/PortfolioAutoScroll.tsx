@@ -52,23 +52,23 @@ export default function PortfolioAutoScroll() {
   return (
     <div className="space-y-6">
       {/* Top Header with Auto-Scroll Controls */}
-      <div className="flex items-center justify-between border-b border-[#E0DDDB] pb-4">
-        <div className="flex items-center gap-2 text-xs font-mono-num uppercase tracking-wider text-[#9F8BE7] font-bold">
-          <Sparkles className="w-3.5 h-3.5" />
-          <span>FEATURED SPOTLIGHT ({activeIndex + 1} OF {total})</span>
+      <div className="flex flex-wrap sm:flex-nowrap items-center justify-between gap-2 border-b border-[#E0DDDB] pb-4">
+        <div className="flex items-center gap-2 text-[11px] sm:text-xs font-mono-num uppercase tracking-wider text-[#9F8BE7] font-bold min-w-0">
+          <Sparkles className="w-3.5 h-3.5 shrink-0" />
+          <span className="truncate">FEATURED SPOTLIGHT ({activeIndex + 1} OF {total})</span>
         </div>
 
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-2 shrink-0">
           <button
             onClick={() => setIsPaused((prev) => !prev)}
-            className="px-3 py-1 rounded-full bg-white border border-[#E0DDDB] text-xs font-mono-num text-[#585858] hover:text-[#161616] flex items-center gap-1.5 transition-colors cursor-pointer"
+            className="px-3 py-1 rounded-full bg-white border border-[#E0DDDB] text-[11px] sm:text-xs font-mono-num text-[#585858] hover:text-[#161616] flex items-center gap-1.5 transition-colors cursor-pointer whitespace-nowrap shrink-0"
             title={isPaused ? "Resume auto-scroll" : "Pause auto-scroll"}
           >
-            {isPaused ? <Play className="w-3 h-3 text-emerald-600" /> : <Pause className="w-3 h-3" />}
-            <span className="hidden sm:inline">{isPaused ? "Auto-Play Paused" : "Auto-Scrolling"}</span>
+            {isPaused ? <Play className="w-3 h-3 text-emerald-600 shrink-0" /> : <Pause className="w-3 h-3 shrink-0" />}
+            <span className="whitespace-nowrap">{isPaused ? "Auto-Play Paused" : "Auto-Scrolling"}</span>
           </button>
 
-          <div className="flex items-center gap-1">
+          <div className="flex items-center gap-1 shrink-0">
             <button
               onClick={prevSlide}
               aria-label="Previous case study"

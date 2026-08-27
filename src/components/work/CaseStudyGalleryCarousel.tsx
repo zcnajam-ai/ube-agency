@@ -54,34 +54,34 @@ export default function CaseStudyGalleryCarousel({ images, title }: CaseStudyGal
   return (
     <div className="space-y-6">
       {/* Section Subtitle with Controls */}
-      <div className="flex items-center justify-between border-b border-[#E0DDDB] pb-3">
-        <div className="flex items-center gap-2 text-xs font-mono-num uppercase tracking-wider text-[#9F8BE7] font-bold">
-          <Sparkles className="w-3.5 h-3.5" />
-          <span>VISUAL ASSET MATRIX &amp; SHOWCASE ({total} ASSETS)</span>
+      <div className="flex flex-wrap sm:flex-nowrap items-center justify-between gap-2 border-b border-[#E0DDDB] pb-3">
+        <div className="flex items-center gap-2 text-[11px] sm:text-xs font-mono-num uppercase tracking-wider text-[#9F8BE7] font-bold min-w-0">
+          <Sparkles className="w-3.5 h-3.5 shrink-0" />
+          <span className="truncate">VISUAL ASSET MATRIX &amp; SHOWCASE ({total} ASSETS)</span>
         </div>
 
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-2 shrink-0">
           <button
             onClick={() => setIsPaused((prev) => !prev)}
-            className="px-3 py-1 rounded-full bg-white border border-[#E0DDDB] text-xs font-mono-num text-[#585858] hover:text-[#161616] flex items-center gap-1.5 transition-colors cursor-pointer"
+            className="px-3 py-1 rounded-full bg-white border border-[#E0DDDB] text-[11px] sm:text-xs font-mono-num text-[#585858] hover:text-[#161616] flex items-center gap-1.5 transition-colors cursor-pointer whitespace-nowrap shrink-0"
             title={isPaused ? "Resume auto-scroll" : "Pause auto-scroll"}
           >
-            {isPaused ? <Play className="w-3 h-3 text-emerald-600" /> : <Pause className="w-3 h-3" />}
-            <span>{isPaused ? "Auto-Scroll Paused" : "Auto-Scrolling"}</span>
+            {isPaused ? <Play className="w-3 h-3 text-emerald-600 shrink-0" /> : <Pause className="w-3 h-3 shrink-0" />}
+            <span className="whitespace-nowrap">{isPaused ? "Auto-Scroll Paused" : "Auto-Scrolling"}</span>
           </button>
 
-          <div className="flex items-center gap-1">
+          <div className="flex items-center gap-1 shrink-0">
             <button
               onClick={prevSlide}
               aria-label="Previous image"
-              className="w-7 h-7 rounded-full bg-white border border-[#E0DDDB] hover:bg-[#161616] hover:text-white flex items-center justify-center transition-colors cursor-pointer"
+              className="w-7 h-7 rounded-full bg-white border border-[#E0DDDB] hover:bg-[#161616] hover:text-white flex items-center justify-center transition-colors cursor-pointer shrink-0"
             >
               <ChevronLeft className="w-3.5 h-3.5" />
             </button>
             <button
               onClick={nextSlide}
               aria-label="Next image"
-              className="w-7 h-7 rounded-full bg-white border border-[#E0DDDB] hover:bg-[#161616] hover:text-white flex items-center justify-center transition-colors cursor-pointer"
+              className="w-7 h-7 rounded-full bg-white border border-[#E0DDDB] hover:bg-[#161616] hover:text-white flex items-center justify-center transition-colors cursor-pointer shrink-0"
             >
               <ChevronRight className="w-3.5 h-3.5" />
             </button>
