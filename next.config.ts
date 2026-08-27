@@ -62,6 +62,25 @@ const nextConfig: NextConfig = {
       },
     ];
   },
+  async redirects() {
+    return [
+      // Legacy Service Overlaps -> Canonical Service Destinations
+      { source: "/best-logo-design-agency", destination: "/services/branding", permanent: true },
+      { source: "/professional-web-design-services", destination: "/services/web-design-development", permanent: true },
+      { source: "/best-website-development-agency", destination: "/services/web-design-development", permanent: true },
+      { source: "/custom-web-development", destination: "/services/web-design-development", permanent: true },
+      { source: "/digital-marketing-services-agency", destination: "/services/meta-ads", permanent: true },
+      { source: "/professional-content-writing-services", destination: "/services", permanent: true },
+
+      // Legacy Package Overlaps -> Canonical Package Destinations
+      { source: "/logo-design-packages", destination: "/branding-packages", permanent: true },
+      { source: "/web-design-packages", destination: "/packages", permanent: true },
+      { source: "/our-website-development-packages", destination: "/packages", permanent: true },
+      { source: "/our-digital-marketing-packages", destination: "/tiktok-marketing-packages", permanent: true },
+      { source: "/our-custom-web-design-development-packages", destination: "/ecommerce-growth-packages", permanent: true },
+      { source: "/our-content-writing-packages", destination: "/packages", permanent: true },
+    ];
+  },
 };
 
 export default nextConfig;

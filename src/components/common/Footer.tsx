@@ -113,33 +113,33 @@ export default function Footer() {
             </h4>
             <ul className="space-y-1.5 text-xs font-body text-[#ACACAC]">
               <li>
-                <Link href="/best-logo-design-agency" className="hover:text-white transition-colors">
-                  Logo Design Agency
+                <Link href="/services/branding" className="hover:text-white transition-colors">
+                  Branding &amp; Identity
                 </Link>
               </li>
               <li>
-                <Link href="/professional-web-design-services" className="hover:text-white transition-colors">
+                <Link href="/services/web-design-development" className="hover:text-white transition-colors">
                   Professional Web Design
                 </Link>
               </li>
               <li>
-                <Link href="/best-website-development-agency" className="hover:text-white transition-colors">
-                  Website Development
+                <Link href="/services/ecommerce" className="hover:text-white transition-colors">
+                  eCommerce Growth &amp; Marketplaces
                 </Link>
               </li>
               <li>
-                <Link href="/custom-web-development" className="hover:text-white transition-colors">
-                  Custom Web Development
+                <Link href="/services/mobile-app-development" className="hover:text-white transition-colors">
+                  Mobile App Development
                 </Link>
               </li>
               <li>
-                <Link href="/digital-marketing-services-agency" className="hover:text-white transition-colors">
-                  Digital Marketing Services
+                <Link href="/services/meta-ads" className="hover:text-white transition-colors">
+                  Meta Ads &amp; Paid Social
                 </Link>
               </li>
               <li>
-                <Link href="/professional-content-writing-services" className="hover:text-white transition-colors">
-                  Professional Content Writing
+                <Link href="/services/ai-automation" className="hover:text-white transition-colors">
+                  AI Systems &amp; Automations
                 </Link>
               </li>
               <li>
@@ -149,7 +149,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link href="/services/shopify-development" className="hover:text-white transition-colors">
-                  Shopify &amp; eCommerce Development
+                  Shopify &amp; Dropshipping Storefronts
                 </Link>
               </li>
             </ul>
