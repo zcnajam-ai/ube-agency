@@ -16,7 +16,7 @@ export default function ConciergeTrigger({ isOpen, onToggle }: ConciergeTriggerP
       onClick={onToggle}
       aria-label="Open UBE Project Concierge"
       aria-expanded={isOpen}
-      className="fixed bottom-6 right-6 z-[9998] flex items-center gap-2.5 px-4 py-3 sm:px-5 sm:py-3.5 rounded-full bg-[#161616] hover:bg-black text-white border border-[#333] shadow-2xl hover:shadow-[0_0_25px_rgba(159,139,231,0.35)] transition-all duration-300 transform hover:-translate-y-0.5 active:translate-y-0 select-none group cursor-pointer"
+      className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-[9998] flex items-center gap-2 sm:gap-2.5 px-3.5 py-2.5 sm:px-5 sm:py-3.5 rounded-full bg-[#161616] hover:bg-black text-white border border-[#333] shadow-2xl hover:shadow-[0_0_25px_rgba(159,139,231,0.35)] transition-all duration-300 transform hover:-translate-y-0.5 active:translate-y-0 select-none group cursor-pointer"
     >
       {/* 3D-styled Sparkle Badge with Ambient Pulse */}
       <div className="relative w-6 h-6 rounded-full bg-[#242424] text-[#9F8BE7] flex items-center justify-center group-hover:rotate-12 transition-transform duration-300">

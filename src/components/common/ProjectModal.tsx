@@ -164,7 +164,7 @@ export default function ProjectModal() {
       >
         <div
           data-lenis-prevent="true"
-          className="relative w-full max-w-3xl my-6 sm:my-10 bg-white border border-[#E0DDDB] rounded-3xl p-6 sm:p-10 md:p-12 shadow-[0_25px_80px_rgba(0,0,0,0.4)] text-[#161616]"
+          className="relative w-full max-w-3xl my-3 sm:my-10 bg-white border border-[#E0DDDB] rounded-2xl sm:rounded-3xl p-5 sm:p-10 md:p-12 shadow-[0_25px_80px_rgba(0,0,0,0.4)] text-[#161616]"
           onClick={(e) => e.stopPropagation()}
         >
           {/* Close Button */}

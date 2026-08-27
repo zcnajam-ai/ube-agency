@@ -106,12 +106,12 @@ export default function Hero() {
           <div className="lg:col-span-6 xl:col-span-6 space-y-8 sm:space-y-10">
             {/* Hero Headline & Intro */}
             <div className="space-y-4">
-              <h1 className="font-display text-4xl sm:text-6xl lg:text-6xl xl:text-7xl font-bold text-[#161616] tracking-tighter leading-[1.06]">
+              <h1 className="font-display text-3xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-[#161616] tracking-tighter leading-[1.06] break-words">
                 High-Performance eCommerce, <br className="hidden sm:block" />
                 <span className="text-[#9F8BE7]">Growth Marketing</span> &amp; AI Systems.
               </h1>
 
-              <p className="text-base sm:text-lg md:text-xl text-[#585858] font-body leading-relaxed max-w-3xl">
+              <p className="text-sm sm:text-base md:text-lg lg:text-xl text-[#585858] font-body leading-relaxed max-w-3xl">
                 We scale ambitious brands with professional <strong className="text-[#161616] font-bold">Shopify &amp; Dropshipping storefronts</strong>, viral <strong className="text-[#161616] font-bold">TikTok Shop &amp; Meta ad campaigns</strong>, high-intent <strong className="text-[#161616] font-bold">Google Marketing</strong>, <strong className="text-[#161616] font-bold">AI SEO search visibility</strong>, custom <strong className="text-[#161616] font-bold">mobile apps</strong>, and intelligent <strong className="text-[#161616] font-bold">AI automations</strong>.
               </p>
             </div>
@@ -121,12 +121,12 @@ export default function Hero() {
               <span className="text-[11px] font-mono-num uppercase tracking-wider text-[#585858] font-bold block">
                 Direct Service &amp; Package Pathways
               </span>
-              <div className="flex flex-wrap gap-2.5">
+              <div className="flex flex-wrap gap-2 sm:gap-2.5">
                 {priorityPills.map((pill) => (
                   <Link
                     key={pill.label}
                     href={pill.href}
-                    className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/95 backdrop-blur-xs border border-[#E0DDDB] hover:border-[#9F8BE7] text-xs font-display font-semibold text-[#161616] hover:text-[#9F8BE7] transition-all shadow-2xs group"
+                    className="inline-flex items-center gap-2 px-3 py-1.5 sm:px-3.5 sm:py-1.5 rounded-full bg-white/95 backdrop-blur-xs border border-[#E0DDDB] hover:border-[#9F8BE7] text-xs font-display font-semibold text-[#161616] hover:text-[#9F8BE7] transition-all shadow-2xs group"
                   >
                     {pill.icon}
                     <span>{pill.label}</span>
@@ -137,7 +137,7 @@ export default function Hero() {
             </div>
 
             {/* Action Conversion CTAs */}
-            <div className="pt-6 flex flex-wrap items-center gap-4 border-t border-[#E0DDDB]">
+            <div className="pt-6 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 border-t border-[#E0DDDB]">
               <MagneticButton
                 size="lg"
                 variant="primary"
@@ -150,7 +150,7 @@ export default function Hero() {
 
               <Link
                 href="/packages"
-                className="px-6 py-3.5 rounded-full border border-[#E0DDDB] bg-white hover:border-[#9F8BE7] text-xs sm:text-sm font-display font-bold text-[#161616] transition-all flex items-center justify-center gap-2 shadow-xs w-full sm:w-auto"
+                className="px-6 py-3.5 rounded-full border border-[#E0DDDB] bg-white hover:border-[#9F8BE7] text-xs sm:text-sm font-display font-bold text-[#161616] transition-all flex items-center justify-center gap-2 shadow-xs w-full sm:w-auto min-h-[44px]"
               >
                 <span>Explore All Packages ($299+)</span>
                 <ArrowUpRight className="w-4 h-4 text-[#9F8BE7]" />
@@ -159,8 +159,8 @@ export default function Hero() {
           </div>
 
           {/* Right Column: Prominent Upper-Right 16:9 Promotional Video Card */}
-          <div className="lg:col-span-6 xl:col-span-6 w-full mt-2 lg:mt-1">
-            <div className="relative aspect-[16/9] w-full rounded-[28px] overflow-hidden border border-[#E0DDDB] shadow-lg bg-white/95 backdrop-blur-xs hover:border-[#9F8BE7] transition-all duration-300 group">
+          <div className="lg:col-span-6 xl:col-span-6 w-full mt-4 lg:mt-1">
+            <div className="relative aspect-[16/9] w-full rounded-2xl sm:rounded-[28px] overflow-hidden border border-[#E0DDDB] shadow-lg bg-white/95 backdrop-blur-xs hover:border-[#9F8BE7] transition-all duration-300 group">
               <video
                 ref={videoRef}
                 autoPlay
@@ -168,7 +168,7 @@ export default function Hero() {
                 loop
                 playsInline
                 preload="metadata"
-                className="w-full h-full object-contain rounded-[28px] bg-[#FAF7F6]"
+                className="w-full h-full object-contain rounded-2xl sm:rounded-[28px] bg-[#FAF7F6]"
               >
                 <source src="/videos/ube-promotional-video.mp4" type="video/mp4" />
               </video>
@@ -177,7 +177,7 @@ export default function Hero() {
               <button
                 type="button"
                 onClick={toggleMute}
-                className="absolute bottom-4 right-4 z-20 px-3.5 py-1.5 rounded-full bg-white/90 backdrop-blur-md border border-[#E0DDDB] hover:border-[#9F8BE7] text-xs font-mono-num font-bold text-[#161616] flex items-center gap-1.5 shadow-sm transition-all hover:scale-105"
+                className="absolute bottom-3 right-3 sm:bottom-4 sm:right-4 z-20 px-3 py-1.5 sm:px-3.5 sm:py-1.5 rounded-full bg-white/90 backdrop-blur-md border border-[#E0DDDB] hover:border-[#9F8BE7] text-xs font-mono-num font-bold text-[#161616] flex items-center gap-1.5 shadow-sm transition-all hover:scale-105 min-h-[36px]"
                 aria-label={isMuted ? "Unmute promotional video" : "Mute promotional video"}
               >
                 {isMuted ? (

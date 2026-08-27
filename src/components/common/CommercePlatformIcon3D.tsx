@@ -79,12 +79,13 @@ export default function CommercePlatformIcon3D({
   const platformLabel = label || config.name;
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    if (typeof window !== "undefined" && window.matchMedia("(pointer: coarse)").matches) return;
     const rect = e.currentTarget.getBoundingClientRect();
     const x = e.clientX - rect.left - rect.width / 2;
     const y = e.clientY - rect.top - rect.height / 2;
-    // Limit tilt to 4-5 degrees
-    const rotateY = (x / (rect.width / 2)) * 5;
-    const rotateX = -(y / (rect.height / 2)) * 5;
+    // Limit tilt to 4-5 degrees max on desktop
+    const rotateY = (x / (rect.width / 2)) * 4;
+    const rotateX = -(y / (rect.height / 2)) * 4;
     setRotate({ x: rotateX, y: rotateY });
   };
 

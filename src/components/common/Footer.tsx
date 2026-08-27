@@ -231,19 +231,19 @@ export default function Footer() {
         </div>
 
         {/* Monolithic Headline */}
-        <div className="border-t border-b border-white/10 py-8 sm:py-12 text-center select-none overflow-hidden">
-          <span className="font-display font-black text-4xl sm:text-7xl md:text-8xl tracking-tighter text-white/90 leading-none block">
+        <div className="border-t border-b border-white/10 py-6 sm:py-12 text-center select-none overflow-hidden max-w-full">
+          <span className="font-display font-black text-footer-mono tracking-tighter text-white/90 leading-none block break-words">
             BUILD. GROW. SCALE.
           </span>
         </div>
 
-        {/* Bottom Legal & Back to Top (llms.txt link removed per Part 7) */}
-        <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono-num text-[#838383]">
+        {/* Bottom Legal & Back to Top */}
+        <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-xs font-mono-num text-[#838383] text-center md:text-left">
           <div>
             © {new Date().getFullYear()} {COMPANY_INFO.name}. All rights reserved.
           </div>
 
-          <div className="flex items-center gap-6">
+          <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6">
             <Link href="/privacy-policy" className="hover:text-white transition-colors">
               Privacy Policy
             </Link>
@@ -259,7 +259,7 @@ export default function Footer() {
             type="button"
             onClick={handleBackToTop}
             aria-label="Back to top"
-            className="flex items-center gap-2 px-4 py-2 rounded-full border border-white/10 bg-white/5 hover:bg-white/10 hover:border-[#9F8BE7] text-white transition-all cursor-pointer"
+            className="flex items-center gap-2 px-4 py-2 rounded-full border border-white/10 bg-white/5 hover:bg-white/10 hover:border-[#9F8BE7] text-white transition-all cursor-pointer min-h-[44px]"
           >
             <span>BACK TO TOP</span>
             <ArrowUp className="w-3.5 h-3.5 text-[#9F8BE7]" />

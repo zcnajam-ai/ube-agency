@@ -402,8 +402,47 @@ export default function EcommercePackagesPage() {
           </h2>
         </div>
 
-        {/* Responsive Table */}
-        <div className="overflow-x-auto rounded-3xl border border-[#E0DDDB] bg-white shadow-xs">
+        {/* Mobile Stacked Feature Cards (< 640px) */}
+        <div className="block sm:hidden space-y-4">
+          {comparisonFeatures.map((row) => (
+            <div key={row.feature} className="p-4 rounded-2xl bg-white border border-[#E0DDDB] space-y-3 shadow-2xs">
+              <div className="font-display font-bold text-sm text-[#161616] border-b border-[#E0DDDB] pb-2">
+                {row.feature}
+              </div>
+              <div className="grid grid-cols-3 gap-2 text-center text-xs font-mono-num">
+                <div className="p-2 rounded-xl bg-[#FAF7F6]">
+                  <span className="text-[10px] text-[#585858] block mb-1">Launch</span>
+                  {typeof row.launch === "boolean" ? (
+                    row.launch ? <CheckCircle2 className="w-4 h-4 text-emerald-600 mx-auto" /> : <X className="w-4 h-4 text-[#ACACAC] mx-auto" />
+                  ) : (
+                    <span className="font-bold text-[#161616]">{row.launch}</span>
+                  )}
+                </div>
+
+                <div className="p-2 rounded-xl bg-[#9F8BE7]/15">
+                  <span className="text-[10px] text-[#9F8BE7] font-bold block mb-1">Growth</span>
+                  {typeof row.growth === "boolean" ? (
+                    row.growth ? <CheckCircle2 className="w-4 h-4 text-emerald-600 mx-auto" /> : <X className="w-4 h-4 text-[#ACACAC] mx-auto" />
+                  ) : (
+                    <span className="font-bold text-[#161616]">{row.growth}</span>
+                  )}
+                </div>
+
+                <div className="p-2 rounded-xl bg-[#FAF7F6]">
+                  <span className="text-[10px] text-[#585858] block mb-1">Scale</span>
+                  {typeof row.scale === "boolean" ? (
+                    row.scale ? <CheckCircle2 className="w-4 h-4 text-emerald-600 mx-auto" /> : <X className="w-4 h-4 text-[#ACACAC] mx-auto" />
+                  ) : (
+                    <span className="font-bold text-[#161616]">{row.scale}</span>
+                  )}
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Responsive Desktop Table (>= 640px) */}
+        <div className="hidden sm:block overflow-x-auto rounded-3xl border border-[#E0DDDB] bg-white shadow-xs">
           <table className="w-full text-left border-collapse min-w-[640px]">
             <thead>
               <tr className="border-b border-[#E0DDDB] bg-[#FAF7F6] text-xs font-display font-bold text-[#161616]">

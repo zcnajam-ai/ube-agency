@@ -75,8 +75,8 @@ export default function Navbar() {
           }`}
         >
           {/* Official UBE Logo */}
-          <Link href="/" className="flex items-center gap-3 group">
-            <div className="relative h-7 sm:h-8 md:h-9 w-36 sm:w-44 md:w-48 transition-transform duration-300 group-hover:scale-[1.02]">
+          <Link href="/" className="flex items-center gap-2 sm:gap-3 group shrink-0">
+            <div className="relative h-6 sm:h-8 md:h-9 w-32 xs:w-36 sm:w-44 md:w-48 transition-transform duration-300 group-hover:scale-[1.02]">
               <Image
                 src="/images/logo/ube-logo-black.svg"
                 alt="Unified Branding Experts"

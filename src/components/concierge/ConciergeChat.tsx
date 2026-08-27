@@ -417,7 +417,7 @@ export default function ConciergeChat({ isOpen, onClose }: ConciergeChatProps) {
       role="dialog"
       aria-label="UBE Project Concierge"
       data-lenis-prevent="true"
-      className="fixed z-[9999] inset-0 sm:inset-auto sm:bottom-6 sm:right-6 w-full sm:w-[430px] sm:max-w-[calc(100vw-3rem)] h-full sm:h-[660px] sm:max-h-[calc(100vh-5rem)] flex flex-col bg-[#FAF7F6] sm:rounded-3xl sm:border sm:border-[#E0DDDB] sm:shadow-2xl overflow-hidden font-body text-[#161616] animate-in fade-in slide-in-from-bottom-5 duration-300"
+      className="fixed z-[9999] inset-0 sm:inset-auto sm:bottom-6 sm:right-6 w-full sm:w-[430px] sm:max-w-[calc(100vw-3rem)] h-[100dvh] sm:h-[660px] sm:max-h-[calc(100vh-5rem)] flex flex-col bg-[#FAF7F6] sm:rounded-3xl sm:border sm:border-[#E0DDDB] sm:shadow-2xl overflow-hidden font-body text-[#161616] animate-in fade-in slide-in-from-bottom-5 duration-300"
     >
       {/* 1. Header */}
       <div className="flex items-center justify-between px-5 py-4 bg-white/95 backdrop-blur-md border-b border-[#E0DDDB] select-none">
