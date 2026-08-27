@@ -20,7 +20,7 @@ interface TikTokMinimalVisualProps {
 export default function TikTokMinimalVisual({ className = "" }: TikTokMinimalVisualProps) {
   return (
     <div
-      className={`relative w-full aspect-[4/3] rounded-3xl bg-[#161616] border border-[#333333] shadow-2xl p-5 sm:p-7 flex flex-col justify-between overflow-hidden text-white select-none group ${className}`}
+      className={`relative w-full aspect-auto min-h-[320px] sm:aspect-[4/3] rounded-3xl bg-[#161616] border border-[#333333] shadow-2xl p-4 sm:p-7 flex flex-col justify-between overflow-hidden text-white select-none group ${className}`}
     >
       {/* Subtle Ambient Radial Gradients (TikTok Cyan & Magenta Glow) */}
       <div className="absolute -top-16 -left-16 w-52 h-52 rounded-full bg-[#25F4EE]/15 blur-3xl pointer-events-none" />

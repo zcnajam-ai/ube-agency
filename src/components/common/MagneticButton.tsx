@@ -119,7 +119,7 @@ export default function MagneticButton({
       disabled={disabled}
       className={`relative inline-flex items-center justify-center gap-2 rounded-full cursor-pointer transition-colors duration-200 active:scale-95 disabled:opacity-50 disabled:pointer-events-none will-change-transform ${variantStyles[variant]} ${sizeStyles[size]} ${className}`}
     >
-      <span ref={textRef} className="relative z-10 will-change-transform inline-block">
+      <span ref={textRef} className="relative z-10 will-change-transform inline-block whitespace-nowrap">
         {children}
       </span>
       {showArrow && (

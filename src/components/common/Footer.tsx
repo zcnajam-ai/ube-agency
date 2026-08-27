@@ -216,10 +216,10 @@ export default function Footer() {
 
               <a
                 href={`mailto:${COMPANY_INFO.email}`}
-                className="flex items-center gap-2.5 p-2.5 rounded-2xl bg-white/5 border border-white/10 hover:border-[#9F8BE7] transition-all text-white"
+                className="flex items-center gap-2.5 p-2.5 rounded-2xl bg-white/5 border border-white/10 hover:border-[#9F8BE7] transition-all text-white min-w-0"
               >
                 <Mail className="w-4 h-4 text-[#9F8BE7] shrink-0" />
-                <span className="truncate">{COMPANY_INFO.email}</span>
+                <span className="break-all text-xs font-mono-num min-w-0">{COMPANY_INFO.email}</span>
               </a>
 
               <div className="flex items-start gap-2.5 p-2.5 rounded-2xl bg-white/5 border border-white/10">

@@ -143,17 +143,17 @@ export default function Hero() {
                 variant="primary"
                 showArrow
                 onClick={() => openProjectModal()}
-                className="w-full sm:w-auto shadow-[0_4px_20px_rgba(159,139,231,0.4)]"
+                className="w-full sm:w-auto min-h-[48px] justify-center shadow-[0_4px_20px_rgba(159,139,231,0.4)]"
               >
                 Start Your Project
               </MagneticButton>
 
               <Link
                 href="/packages"
-                className="px-6 py-3.5 rounded-full border border-[#E0DDDB] bg-white hover:border-[#9F8BE7] text-xs sm:text-sm font-display font-bold text-[#161616] transition-all flex items-center justify-center gap-2 shadow-xs w-full sm:w-auto min-h-[44px]"
+                className="px-6 py-3.5 rounded-full border border-[#E0DDDB] bg-white hover:border-[#9F8BE7] text-xs sm:text-sm font-display font-bold text-[#161616] transition-all flex items-center justify-center gap-2 shadow-xs w-full sm:w-auto min-h-[48px] whitespace-nowrap"
               >
                 <span>Explore All Packages ($299+)</span>
-                <ArrowUpRight className="w-4 h-4 text-[#9F8BE7]" />
+                <ArrowUpRight className="w-4 h-4 text-[#9F8BE7] shrink-0" />
               </Link>
             </div>
           </div>

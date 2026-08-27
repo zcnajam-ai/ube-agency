@@ -737,10 +737,11 @@ export default function ConciergeChat({ isOpen, onClose }: ConciergeChatProps) {
                       onChange={(e) => setEstimateData({ ...estimateData, budget: e.target.value })}
                       className="w-full px-2 py-2 rounded-lg bg-[#FAF7F6] border border-[#E0DDDB] focus:outline-none focus:border-[#9F8BE7] text-xs"
                     >
-                      <option value="$500 - $1,500">$500 – $1,500</option>
-                      <option value="$1,500 - $3,500">$1,500 – $3,500</option>
-                      <option value="$3,500 - $7,500">$3,500 – $7,500</option>
-                      <option value="$7,500+">$7,500+</option>
+                      <option value="$500 – $1,000">$500 – $1,000</option>
+                      <option value="$1,000 – $1,500">$1,000 – $1,500</option>
+                      <option value="$1,500 – $2,000">$1,500 – $2,000</option>
+                      <option value="$2,000+">$2,000+</option>
+                      <option value="Other / Custom Budget">Other / Custom Budget</option>
                     </select>
                   </div>
                 </div>

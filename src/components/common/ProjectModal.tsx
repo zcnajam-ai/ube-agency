@@ -21,11 +21,13 @@ export default function ProjectModal() {
     phone: "",
     company: "",
     service: "",
-    budget: "$15k – $30k",
+    budget: "$500 – $1,000",
     timeline: "1–2 Months",
     description: "",
     honeypot: "",
   });
+
+  const [customBudgetInput, setCustomBudgetInput] = useState("");
 
   const activeService = formData.service || selectedServiceForModal || "eCommerce Store Setup";
 
@@ -76,7 +78,13 @@ export default function ProjectModal() {
     "TikTok & Social Media",
   ];
 
-  const budgetList = ["< $5,000", "$5k – $15k", "$15k – $30k", "$30k – $60k", "$60k+"];
+  const budgetList = [
+    "$500 – $1,000",
+    "$1,000 – $1,500",
+    "$1,500 – $2,000",
+    "$2,000+",
+    "Other / Custom Budget",
+  ];
   const timelineList = ["Immediately (ASAP)", "1–2 Months", "3–6 Months", "Flexible"];
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -91,12 +99,20 @@ export default function ProjectModal() {
     setError("");
     setIsSubmitting(true);
 
+    const finalBudget =
+      formData.budget === "Other / Custom Budget"
+        ? customBudgetInput
+          ? `Custom: $${customBudgetInput}`
+          : "Other / Custom Budget"
+        : formData.budget;
+
     try {
       const res = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           ...formData,
+          budget: finalBudget,
           service: activeService,
         }),
       });
@@ -278,6 +294,24 @@ export default function ProjectModal() {
                     </button>
                   ))}
                 </div>
+
+                {formData.budget === "Other / Custom Budget" && (
+                  <div className="mt-3 space-y-1.5 animate-fadeIn">
+                    <label className="block text-[11px] font-mono-num font-bold text-[#161616]">
+                      Your Estimated Budget
+                    </label>
+                    <div className="relative flex items-center">
+                      <span className="absolute left-3.5 text-xs font-mono-num font-bold text-[#585858]">$</span>
+                      <input
+                        type="text"
+                        placeholder="e.g. 750 or 2,500"
+                        value={customBudgetInput}
+                        onChange={(e) => setCustomBudgetInput(e.target.value)}
+                        className="w-full pl-8 pr-4 py-2.5 rounded-xl bg-[#FAF7F6] border border-[#E0DDDB] text-xs font-mono-num text-[#161616] focus:outline-none focus:border-[#9F8BE7]"
+                      />
+                    </div>
+                  </div>
+                )}
               </div>
 
               {/* 3. Timeline Selection */}

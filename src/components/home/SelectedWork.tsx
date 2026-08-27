@@ -15,6 +15,17 @@ export default function SelectedWork() {
   const touchStartX = useRef<number | null>(null);
   const autoPlayRef = useRef<NodeJS.Timeout | null>(null);
 
+  const [isDesktop, setIsDesktop] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsDesktop(window.innerWidth >= 1024);
+    };
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   const projects = FEATURED_PROJECTS;
   const totalSlides = projects.length;
 
@@ -120,7 +131,7 @@ export default function SelectedWork() {
 
         {/* Auto-Scrolling Carousel Track */}
         <div
-          className="relative overflow-hidden"
+          className="relative overflow-hidden w-full"
           onMouseEnter={() => setIsPaused(true)}
           onMouseLeave={() => setIsPaused(false)}
           onTouchStart={handleTouchStart}
@@ -129,7 +140,7 @@ export default function SelectedWork() {
           <div
             className="flex transition-transform duration-700 ease-out gap-6"
             style={{
-              transform: `translateX(-${activeIndex * (100 / (typeof window !== "undefined" && window.innerWidth >= 1024 ? 2 : 1))}%)`,
+              transform: `translateX(calc(-${activeIndex} * (${isDesktop ? "50% + 0.75rem" : "100% + 1.5rem"})))`,
             }}
           >
             {projects.map((project, idx) => (
@@ -146,7 +157,7 @@ export default function SelectedWork() {
                     className="object-cover object-center group-hover:scale-105 transition-transform duration-700"
                   />
 
-                  <div className="absolute top-4 left-4 z-10 px-3 py-1 rounded-full bg-white/90 backdrop-blur-md border border-[#E0DDDB] text-[11px] font-mono-num font-bold text-[#161616] shadow-xs">
+                  <div className="absolute top-4 left-4 z-10 px-3 py-1 rounded-full bg-white/90 backdrop-blur-md border border-[#E0DDDB] text-[11px] font-mono-num font-bold text-[#161616] shadow-xs max-w-[calc(100%-4rem)] truncate">
                     {project.category}
                   </div>
 
@@ -159,25 +170,25 @@ export default function SelectedWork() {
                   </div>
                 </Link>
 
-                <div className="p-6 sm:p-7 flex flex-col justify-between flex-1 space-y-4">
-                  <div className="space-y-2">
+                <div className="p-6 sm:p-7 flex flex-col justify-between flex-1 space-y-4 min-w-0">
+                  <div className="space-y-2 min-w-0">
                     <div className="flex items-center justify-between text-xs font-mono-num text-[#585858]">
-                      <span>Client: <strong className="text-[#161616]">{project.client}</strong></span>
-                      <span className="text-[#9F8BE7] font-bold">0{idx + 1} / 0{totalSlides}</span>
+                      <span className="truncate max-w-[70%]">Client: <strong className="text-[#161616]">{project.client}</strong></span>
+                      <span className="text-[#9F8BE7] font-bold shrink-0">0{idx + 1} / 0{totalSlides}</span>
                     </div>
 
-                    <h3 className="font-display text-xl sm:text-2xl font-bold text-[#161616] group-hover:text-[#9F8BE7] transition-colors line-clamp-1">
+                    <h3 className="font-display text-xl sm:text-2xl font-bold text-[#161616] group-hover:text-[#9F8BE7] transition-colors break-words leading-snug">
                       <Link href={`/work/${project.slug}`}>{project.title}</Link>
                     </h3>
 
-                    <p className="text-xs sm:text-sm text-[#585858] font-body line-clamp-2 leading-relaxed">
+                    <p className="text-xs sm:text-sm text-[#585858] font-body leading-relaxed break-words">
                       {project.tagline}
                     </p>
                   </div>
 
-                  <div className="pt-3 border-t border-[#E0DDDB] flex items-center justify-between">
+                  <div className="pt-3 border-t border-[#E0DDDB] flex flex-wrap items-center justify-between gap-2">
                     <span className="text-xs font-mono-num text-[#585858]">Deliverable Highlight:</span>
-                    <span className="text-xs font-mono-num text-[#161616] font-bold bg-white px-3 py-1 rounded-full border border-[#E0DDDB] shadow-2xs">
+                    <span className="text-xs font-mono-num text-[#161616] font-bold bg-white px-3 py-1 rounded-full border border-[#E0DDDB] shadow-2xs break-words max-w-full">
                       {project.results[0]?.metric} {project.results[0]?.label}
                     </span>
                   </div>

@@ -46,7 +46,7 @@ export default function InteractiveMedia({
       />
 
       {badgeText && (
-        <div className="absolute top-3 left-3 z-10 pointer-events-none">
+        <div className="absolute top-3 left-3 z-10 pointer-events-none hidden sm:block">
           <span className="px-3 py-1 rounded-full bg-white/90 backdrop-blur-md border border-[#E0DDDB] text-[11px] font-mono-num text-[#161616] font-bold shadow-xs">
             {badgeText}
           </span>

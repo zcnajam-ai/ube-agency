@@ -12,12 +12,13 @@ export default function ContactClient() {
     phone: "",
     company: "",
     service: "eCommerce Store Setup",
-    budget: "$15k – $30k",
+    budget: "$500 – $1,000",
     timeline: "1–2 Months",
     description: "",
     honeypot: "",
   });
 
+  const [customBudgetInput, setCustomBudgetInput] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [error, setError] = useState("");
@@ -32,7 +33,13 @@ export default function ContactClient() {
     "TikTok & Social Media",
   ];
 
-  const budgetList = ["< $5,000", "$5k – $15k", "$15k – $30k", "$30k – $60k", "$60k+"];
+  const budgetList = [
+    "$500 – $1,000",
+    "$1,000 – $1,500",
+    "$1,500 – $2,000",
+    "$2,000+",
+    "Other / Custom Budget",
+  ];
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -46,11 +53,21 @@ export default function ContactClient() {
     setError("");
     setIsSubmitting(true);
 
+    const finalBudget =
+      formData.budget === "Other / Custom Budget"
+        ? customBudgetInput
+          ? `Custom: $${customBudgetInput}`
+          : "Other / Custom Budget"
+        : formData.budget;
+
     try {
       const res = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+          ...formData,
+          budget: finalBudget,
+        }),
       });
 
       if (!res.ok) {
@@ -126,7 +143,7 @@ export default function ContactClient() {
               </div>
               <div>
                 <span className="text-[10px] text-[#585858] block">EMAIL</span>
-                <span className="font-bold truncate block max-w-[220px]">
+                <span className="font-bold break-all block min-w-0 text-xs">
                   {COMPANY_INFO.email}
                 </span>
               </div>
@@ -296,6 +313,24 @@ export default function ContactClient() {
                       </button>
                     ))}
                   </div>
+
+                  {formData.budget === "Other / Custom Budget" && (
+                    <div className="mt-2 space-y-1 animate-fadeIn">
+                      <label className="block text-[11px] font-mono-num font-bold text-[#161616]">
+                        Your Estimated Budget
+                      </label>
+                      <div className="relative flex items-center">
+                        <span className="absolute left-3 text-xs font-mono-num font-bold text-[#585858]">$</span>
+                        <input
+                          type="text"
+                          placeholder="e.g. 750 or 2,500"
+                          value={customBudgetInput}
+                          onChange={(e) => setCustomBudgetInput(e.target.value)}
+                          className="w-full pl-7 pr-3 py-2 rounded-xl bg-[#FAF7F6] border border-[#E0DDDB] text-xs font-mono-num text-[#161616] focus:outline-none focus:border-[#9F8BE7]"
+                        />
+                      </div>
+                    </div>
+                  )}
                 </div>
 
                 <div className="space-y-1.5">
