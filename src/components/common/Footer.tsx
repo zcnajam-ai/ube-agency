@@ -42,20 +42,20 @@ export default function Footer() {
             </p>
           </div>
 
-          <div className="flex flex-wrap items-center gap-4 w-full lg:w-auto">
+          <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 sm:gap-4 w-full lg:w-auto">
             <button
               type="button"
               onClick={() => openProjectModal()}
-              className="px-8 py-4 rounded-full bg-[#9F8BE7] text-[#161616] font-display font-bold text-sm md:text-base hover:bg-[#b4a3f7] transition-all shadow-[0_4px_20px_rgba(159,139,231,0.4)] flex items-center justify-center gap-2 flex-1 sm:flex-initial cursor-pointer"
+              className="w-full sm:w-auto px-7 py-3.5 rounded-full bg-[#9F8BE7] text-[#161616] font-display font-bold text-sm md:text-base hover:bg-[#b4a3f7] transition-all shadow-[0_4px_20px_rgba(159,139,231,0.4)] flex items-center justify-center gap-2 whitespace-nowrap min-h-[48px] cursor-pointer"
             >
               <span>Start Your Project</span>
-              <ArrowUpRight className="w-4 h-4" />
+              <ArrowUpRight className="w-4 h-4 shrink-0" />
             </button>
             <a
               href={`tel:${COMPANY_INFO.phoneRaw}`}
-              className="px-6 py-4 rounded-full border border-white/20 bg-white/5 hover:bg-white/10 hover:border-[#9F8BE7] transition-all text-xs sm:text-sm font-mono-num text-white flex items-center justify-center gap-2 flex-1 sm:flex-initial"
+              className="w-full sm:w-auto px-6 py-3.5 rounded-full border border-white/20 bg-white/5 hover:bg-white/10 hover:border-[#9F8BE7] transition-all text-xs sm:text-sm font-mono-num text-white flex items-center justify-center gap-2 whitespace-nowrap min-h-[48px]"
             >
-              <Phone className="w-4 h-4 text-[#9F8BE7]" />
+              <Phone className="w-4 h-4 text-[#9F8BE7] shrink-0" />
               <span>{COMPANY_INFO.phone}</span>
             </a>
           </div>

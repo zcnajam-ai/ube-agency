@@ -420,16 +420,16 @@ export default function BrandingPackagesPage() {
           <p className="text-sm sm:text-base text-[#ACACAC] max-w-xl mx-auto">
             Start with a logo or step straight into a full identity. Request a quote and tell us where your business is headed.
           </p>
-          <div className="flex flex-wrap items-center justify-center gap-4 pt-2">
+          <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3 sm:gap-4 pt-2">
             <Link
               href="/contact?type=branding"
-              className="px-8 py-4 rounded-full bg-[#9F8BE7] text-[#161616] font-display font-bold text-sm hover:bg-[#b4a3f7] transition-all shadow-md"
+              className="w-full sm:w-auto px-8 py-4 rounded-full bg-[#9F8BE7] text-[#161616] font-display font-bold text-sm hover:bg-[#b4a3f7] transition-all shadow-md text-center min-h-[48px] whitespace-nowrap flex items-center justify-center"
             >
               Request a Custom Quote
             </Link>
             <a
               href={`tel:${COMPANY_INFO.phoneRaw}`}
-              className="px-8 py-4 rounded-full border border-white/20 bg-white/5 hover:bg-white/10 text-white font-display font-bold text-sm transition-all"
+              className="w-full sm:w-auto px-8 py-4 rounded-full border border-white/20 bg-white/5 hover:bg-white/10 text-white font-display font-bold text-sm transition-all text-center min-h-[48px] whitespace-nowrap flex items-center justify-center"
             >
               Call {COMPANY_INFO.phone}
             </a>
