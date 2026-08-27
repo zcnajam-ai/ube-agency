@@ -30,10 +30,8 @@ const spaceGrotesk = Space_Grotesk({
   display: "swap",
 });
 
-// Environment-aware indexing (Part 24: staging noindex protection)
-const isProductionDomain =
-  process.env.NEXT_PUBLIC_SITE_URL === "https://unifiedbrandingexperts.com" ||
-  process.env.VERCEL_ENV === "production";
+// Environment-aware indexing: allow indexing on production domain by default, noindex ONLY on Vercel preview builds
+const isProductionDomain = process.env.VERCEL_ENV !== "preview";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://unifiedbrandingexperts.com"),
