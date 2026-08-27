@@ -62,6 +62,14 @@ export const metadata: Metadata = {
         index: false,
         follow: false,
       },
+  icons: {
+    icon: [
+      { url: "/icon.png", sizes: "180x180", type: "image/png" },
+      { url: "/favicon.ico" },
+    ],
+    shortcut: "/icon.png",
+    apple: "/apple-icon.png",
+  },
   openGraph: {
     type: "website",
     locale: "en_US",
@@ -72,10 +80,10 @@ export const metadata: Metadata = {
       "Unified Branding Experts provides professional web design, branding, eCommerce development, AI SEO, paid advertising, mobile apps and digital growth services for businesses ready to scale.",
     images: [
       {
-        url: "/images/projects/project-brand-1.webp",
+        url: "/images/ube-social-preview-2026.svg",
         width: 1200,
         height: 630,
-        alt: "Unified Branding Experts - Digital Agency",
+        alt: "Unified Branding Experts - Digital Growth Agency",
       },
     ],
   },
@@ -84,7 +92,7 @@ export const metadata: Metadata = {
     title: "Web Design, Branding & Digital Marketing Agency | Unified Branding Experts",
     description:
       "Unified Branding Experts provides professional web design, branding, eCommerce development, AI SEO, paid advertising, mobile apps and digital growth services for businesses ready to scale.",
-    images: ["/images/projects/project-brand-1.webp"],
+    images: ["/images/ube-social-preview-2026.svg"],
   },
   alternates: {
     canonical: "https://unifiedbrandingexperts.com",
