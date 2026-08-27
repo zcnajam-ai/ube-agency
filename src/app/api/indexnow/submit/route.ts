@@ -48,8 +48,9 @@ export async function POST(request: Request) {
       submittedUrlsCount: urlList.length,
     });
   } catch (error) {
+    console.error("IndexNow submission error occurred");
     return NextResponse.json(
-      { error: "Failed to submit URLs to IndexNow", details: String(error) },
+      { error: "Failed to submit URLs to IndexNow." },
       { status: 500 }
     );
   }

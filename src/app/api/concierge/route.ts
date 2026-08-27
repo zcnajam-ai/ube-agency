@@ -4,44 +4,6 @@ import {
   matchKeywordIntent,
 } from "@/data/conciergeDecisionTree";
 
-// In-memory sliding window rate limiter (20 req/min)
-interface RateLimitEntry {
-  count: number;
-  resetTime: number;
-}
-const ipRateMap = new Map<string, RateLimitEntry>();
-const MAX_REQUESTS_PER_MINUTE = 30;
-const WINDOW_MS = 60 * 1000;
-
-function checkRateLimit(ip: string): boolean {
-  const now = Date.now();
-  const entry = ipRateMap.get(ip);
-
-  if (!entry || now > entry.resetTime) {
-    ipRateMap.set(ip, { count: 1, resetTime: now + WINDOW_MS });
-    return true;
-  }
-
-  if (entry.count >= MAX_REQUESTS_PER_MINUTE) {
-    return false;
-  }
-
-  entry.count++;
-  return true;
-}
-
-// Clean stale entries periodically
-if (typeof setInterval !== "undefined") {
-  setInterval(() => {
-    const now = Date.now();
-    for (const [ip, entry] of ipRateMap.entries()) {
-      if (now > entry.resetTime) {
-        ipRateMap.delete(ip);
-      }
-    }
-  }, 5 * 60 * 1000);
-}
-
 export interface ConciergeApiAction {
   type: "recommend_service" | "recommend_package" | "open_project_estimate" | "view_work" | "contact_team";
   label: string;
@@ -50,18 +12,12 @@ export interface ConciergeApiAction {
 
 export async function POST(request: NextRequest) {
   try {
-    // 1. Rate Limiting Check
-    const ip =
-      request.headers.get("x-forwarded-for")?.split(",")[0].trim() ||
-      request.headers.get("x-real-ip") ||
-      "127.0.0.1";
-
-    if (!checkRateLimit(ip)) {
+    // 1. Content-Type Check
+    const contentType = request.headers.get("content-type") || "";
+    if (!contentType.toLowerCase().includes("application/json")) {
       return NextResponse.json(
-        {
-          error: "Rate limit exceeded. Please wait a moment before sending another message.",
-        },
-        { status: 429 }
+        { error: "Content-Type must be application/json" },
+        { status: 400 }
       );
     }
 
@@ -78,7 +34,7 @@ export async function POST(request: NextRequest) {
     try {
       parsedBody = JSON.parse(rawBody);
     } catch {
-      return NextResponse.json({ error: "Invalid JSON payload." }, { status: 400 });
+      return NextResponse.json({ error: "Invalid JSON payload format." }, { status: 400 });
     }
 
     const { messages = [] } = parsedBody;
@@ -86,8 +42,13 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: "Messages array is required." }, { status: 400 });
     }
 
-    const lastUserMsg =
-      messages.filter((m) => m.role === "user").slice(-1)[0]?.content || "";
+    // Limit array size to prevent heavy iterations
+    const safeMessages = messages.slice(-10);
+
+    const lastUserMsgRaw =
+      safeMessages.filter((m) => m && typeof m.content === "string" && m.role === "user").slice(-1)[0]?.content || "";
+
+    const lastUserMsg = lastUserMsgRaw.trim().slice(0, 1000);
 
     const match = matchKeywordIntent(lastUserMsg);
 
@@ -152,7 +113,7 @@ export async function POST(request: NextRequest) {
       ],
     });
   } catch (err) {
-    console.error("Concierge API Error:", err);
+    console.error("Concierge API Error occurred");
     return NextResponse.json(
       {
         error: "An unexpected error occurred. Please try again or contact info@unifiedbrandingexperts.com.",

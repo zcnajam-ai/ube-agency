@@ -1,43 +1,34 @@
 import { NextResponse } from "next/server";
 
-// In-memory rate limiting map for form submissions (IP-based sliding window)
-const rateLimitMap = new Map<string, { count: number; lastReset: number }>();
-const RATE_LIMIT_WINDOW_MS = 60 * 1000; // 1 minute
-const MAX_REQUESTS_PER_WINDOW = 10;
-
 export async function POST(request: Request) {
   try {
-    // 1. IP Rate Limiting
-    const forwardedFor = request.headers.get("x-forwarded-for");
-    const ip = forwardedFor ? forwardedFor.split(",")[0].trim() : "127.0.0.1";
-    const now = Date.now();
-
-    const clientRate = rateLimitMap.get(ip) || { count: 0, lastReset: now };
-
-    if (now - clientRate.lastReset > RATE_LIMIT_WINDOW_MS) {
-      clientRate.count = 1;
-      clientRate.lastReset = now;
-    } else {
-      clientRate.count += 1;
-    }
-
-    rateLimitMap.set(ip, clientRate);
-
-    if (clientRate.count > MAX_REQUESTS_PER_WINDOW) {
+    // 1. Content-Type Check
+    const contentType = request.headers.get("content-type") || "";
+    if (!contentType.toLowerCase().includes("application/json")) {
       return NextResponse.json(
-        { error: "Too many requests. Please wait a moment before trying again." },
-        { status: 429 }
+        { error: "Content-Type must be application/json" },
+        { status: 400 }
       );
     }
 
-    // 2. Parse & Validate Payload
-    let body: Record<string, unknown> = {};
-    try {
-      body = await request.json();
-    } catch {
-      return NextResponse.json({ error: "Invalid JSON request." }, { status: 400 });
+    // 2. Body Reading with Length Enforcement (Max 32KB)
+    const rawBody = await request.text();
+    if (rawBody.length > 32768) {
+      return NextResponse.json(
+        { error: "Payload size exceeds maximum allowed threshold (32KB)." },
+        { status: 413 }
+      );
     }
 
+    // 3. Parse JSON Body safely
+    let body: Record<string, unknown> = {};
+    try {
+      body = JSON.parse(rawBody);
+    } catch {
+      return NextResponse.json({ error: "Invalid JSON payload format." }, { status: 400 });
+    }
+
+    // 4. Extract and Type-Check Allowed Fields
     const name = typeof body.name === "string" ? body.name : "";
     const email = typeof body.email === "string" ? body.email : "";
     const phone = typeof body.phone === "string" ? body.phone : "";
@@ -48,24 +39,28 @@ export async function POST(request: Request) {
     const description = typeof body.description === "string" ? body.description : "";
     const honeypot = typeof body.honeypot === "string" ? body.honeypot : "";
 
-    // Honeypot check (bot protection)
+    // 5. Bot Defense (Honeypot Check)
     if (honeypot.trim().length > 0) {
+      // Quietly return success to bots without processing
       return NextResponse.json({ success: true, message: "Inquiry received." }, { status: 200 });
     }
 
-    // Required fields check
-    if (!name.trim() || name.trim().length < 2) {
-      return NextResponse.json({ error: "Please provide a valid name." }, { status: 400 });
+    // 6. Strict Field Validation
+    const trimmedName = name.trim();
+    if (!trimmedName || trimmedName.length < 2 || trimmedName.length > 100) {
+      return NextResponse.json({ error: "Please provide a valid name (2-100 characters)." }, { status: 400 });
     }
 
-    if (!email.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.trim())) {
+    const trimmedEmail = email.trim().toLowerCase();
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    if (!trimmedEmail || !emailRegex.test(trimmedEmail) || trimmedEmail.length > 120) {
       return NextResponse.json({ error: "Please provide a valid email address." }, { status: 400 });
     }
 
-    // Sanitize lengths
+    // 7. Sanitize Field Values & Length Limits
     const sanitized = {
-      name: name.trim().slice(0, 100),
-      email: email.trim().slice(0, 120),
+      name: trimmedName.slice(0, 100),
+      email: trimmedEmail.slice(0, 120),
       phone: phone.trim().slice(0, 30),
       company: company.trim().slice(0, 100),
       service: service.trim().slice(0, 100),
@@ -74,7 +69,8 @@ export async function POST(request: Request) {
       description: description.trim().slice(0, 2000),
     };
 
-    console.log(`[Project Inquiry] Name: ${sanitized.name} | Email: ${sanitized.email} | Service: ${sanitized.service}`);
+    // Log generic non-PII audit event
+    console.log(`[Project Inquiry Received] Service: ${sanitized.service} | Budget: ${sanitized.budget}`);
 
     return NextResponse.json(
       {
@@ -84,7 +80,7 @@ export async function POST(request: Request) {
       { status: 200 }
     );
   } catch (err) {
-    console.error("API /contact error:", err);
+    console.error("API /contact error occurred");
     return NextResponse.json(
       { error: "Internal server error. Please contact us directly at info@unifiedbrandingexperts.com" },
       { status: 500 }
