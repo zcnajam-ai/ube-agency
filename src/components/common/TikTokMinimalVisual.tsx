@@ -33,7 +33,7 @@ export default function TikTokMinimalVisual({ className = "" }: TikTokMinimalVis
           <div className="w-4 h-4 sm:w-5 sm:h-5 flex items-center justify-center shrink-0">
             <TikTok3DIcon size={16} />
           </div>
-          <span className="text-[11px] sm:text-xs font-display font-bold tracking-tight text-white whitespace-nowrap truncate">
+          <span className="text-[10px] sm:text-xs font-display font-bold tracking-tight text-white whitespace-nowrap truncate">
             TikTok Commerce &amp; Ads
           </span>
         </div>
@@ -85,11 +85,13 @@ export default function TikTokMinimalVisual({ className = "" }: TikTokMinimalVis
 
         {/* Dynamic Engagement Trend Bar */}
         <div className="p-2.5 sm:p-3.5 rounded-2xl bg-[#222222]/80 border border-[#333333] backdrop-blur-md space-y-2">
-          <div className="flex items-center justify-between text-[10px] sm:text-[11px] font-mono-num gap-1">
-            <span className="text-[#A0A0A0] whitespace-nowrap">Performance Trajectory</span>
-            <span className="text-emerald-400 font-bold flex items-center gap-1 whitespace-nowrap">
+          <div className="flex items-center justify-between text-[9px] xs:text-[10px] sm:text-[11px] font-mono-num gap-1 min-w-0">
+            <span className="text-[#A0A0A0] whitespace-nowrap shrink">
+              Performance<span className="hidden sm:inline"> Trajectory</span>
+            </span>
+            <span className="text-emerald-400 font-bold flex items-center gap-1 whitespace-nowrap shrink-0">
               <TrendingUp className="w-3 h-3 shrink-0" />
-              High Engagement Rate
+              <span>High Engagement Rate</span>
             </span>
           </div>
 
@@ -116,8 +118,8 @@ export default function TikTokMinimalVisual({ className = "" }: TikTokMinimalVis
           <div className="w-5 h-5 sm:w-6 sm:h-6 rounded-lg bg-[#FE2C55] flex items-center justify-center text-white shrink-0">
             <ShoppingBag className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
           </div>
-          <span className="font-display font-medium text-[11px] sm:text-xs text-white truncate min-w-0">
-            TikTok Shop Integrated Product Anchor
+          <span className="font-display font-medium text-[10px] sm:text-xs text-white truncate min-w-0">
+            TikTok Shop Product Anchor
           </span>
         </div>
 
