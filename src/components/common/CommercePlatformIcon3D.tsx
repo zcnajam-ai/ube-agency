@@ -59,10 +59,10 @@ const PLATFORM_CONFIG: Record<
 };
 
 const SIZE_MAP = {
-  sm: { container: "w-11 h-11 rounded-xl p-2", iconSize: 24, text: "text-xs" },
-  md: { container: "w-14 h-14 rounded-2xl p-2.5", iconSize: 32, text: "text-xs" },
-  lg: { container: "w-20 h-20 rounded-3xl p-3.5", iconSize: 44, text: "text-sm" },
-  xl: { container: "w-28 h-28 rounded-3xl p-5", iconSize: 64, text: "text-base" },
+  sm: { container: "w-9 h-9 sm:w-11 sm:h-11 rounded-xl p-1.5 sm:p-2", iconSize: 20, text: "text-xs" },
+  md: { container: "w-10 h-10 sm:w-14 sm:h-14 rounded-xl sm:rounded-2xl p-2 sm:p-2.5", iconSize: 24, text: "text-xs" },
+  lg: { container: "w-16 h-16 sm:w-20 sm:h-20 rounded-2xl sm:rounded-3xl p-3 sm:p-3.5", iconSize: 36, text: "text-sm" },
+  xl: { container: "w-22 h-22 sm:w-28 sm:h-28 rounded-2xl sm:rounded-3xl p-4 sm:p-5", iconSize: 52, text: "text-base" },
 };
 
 export default function CommercePlatformIcon3D({

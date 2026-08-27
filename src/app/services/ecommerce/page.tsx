@@ -153,40 +153,36 @@ export default function EcommerceGrowthServicePage() {
               </div>
 
               {/* 3D Platform Cluster */}
-              <div className="grid grid-cols-2 gap-2 sm:gap-4">
-                <div className="p-2 sm:p-3.5 rounded-2xl bg-white border border-[#E0DDDB] flex items-center gap-2 sm:gap-3 shadow-2xs min-w-0">
-                  <CommercePlatformIcon3D platform="shopify" size="sm" className="sm:hidden shrink-0" />
-                  <CommercePlatformIcon3D platform="shopify" size="md" className="hidden sm:inline-flex shrink-0" />
+              <div className="grid grid-cols-2 gap-2.5 sm:gap-4">
+                <div className="p-2.5 sm:p-3.5 rounded-2xl bg-white border border-[#E0DDDB] flex items-center gap-2.5 sm:gap-3 shadow-2xs min-w-0">
+                  <CommercePlatformIcon3D platform="shopify" size="md" className="shrink-0" />
                   <div className="min-w-0 flex-1">
-                    <span className="font-display font-bold text-[11px] sm:text-xs text-[#161616] whitespace-nowrap block leading-tight">Shopify</span>
-                    <span className="text-[9px] sm:text-[10px] text-[#585858] font-mono-num whitespace-nowrap block leading-tight">Storefront</span>
+                    <span className="font-display font-bold text-xs text-[#161616] whitespace-nowrap block leading-tight">Shopify</span>
+                    <span className="text-[10px] text-[#585858] font-mono-num whitespace-nowrap block leading-tight">Storefront</span>
                   </div>
                 </div>
 
-                <div className="p-2 sm:p-3.5 rounded-2xl bg-white border border-[#E0DDDB] flex items-center gap-2 sm:gap-3 shadow-2xs min-w-0">
-                  <CommercePlatformIcon3D platform="amazon" size="sm" className="sm:hidden shrink-0" />
-                  <CommercePlatformIcon3D platform="amazon" size="md" className="hidden sm:inline-flex shrink-0" />
+                <div className="p-2.5 sm:p-3.5 rounded-2xl bg-white border border-[#E0DDDB] flex items-center gap-2.5 sm:gap-3 shadow-2xs min-w-0">
+                  <CommercePlatformIcon3D platform="amazon" size="md" className="shrink-0" />
                   <div className="min-w-0 flex-1">
-                    <span className="font-display font-bold text-[11px] sm:text-xs text-[#161616] whitespace-nowrap block leading-tight">Amazon</span>
-                    <span className="text-[9px] sm:text-[10px] text-[#585858] font-mono-num whitespace-nowrap block leading-tight">Marketplace</span>
+                    <span className="font-display font-bold text-xs text-[#161616] whitespace-nowrap block leading-tight">Amazon</span>
+                    <span className="text-[10px] text-[#585858] font-mono-num whitespace-nowrap block leading-tight">Marketplace</span>
                   </div>
                 </div>
 
-                <div className="p-2 sm:p-3.5 rounded-2xl bg-white border border-[#E0DDDB] flex items-center gap-2 sm:gap-3 shadow-2xs min-w-0">
-                  <CommercePlatformIcon3D platform="etsy" size="sm" className="sm:hidden shrink-0" />
-                  <CommercePlatformIcon3D platform="etsy" size="md" className="hidden sm:inline-flex shrink-0" />
+                <div className="p-2.5 sm:p-3.5 rounded-2xl bg-white border border-[#E0DDDB] flex items-center gap-2.5 sm:gap-3 shadow-2xs min-w-0">
+                  <CommercePlatformIcon3D platform="etsy" size="md" className="shrink-0" />
                   <div className="min-w-0 flex-1">
-                    <span className="font-display font-bold text-[11px] sm:text-xs text-[#161616] whitespace-nowrap block leading-tight">Etsy</span>
-                    <span className="text-[9px] sm:text-[10px] text-[#585858] font-mono-num whitespace-nowrap block leading-tight">Niche Shop</span>
+                    <span className="font-display font-bold text-xs text-[#161616] whitespace-nowrap block leading-tight">Etsy</span>
+                    <span className="text-[10px] text-[#585858] font-mono-num whitespace-nowrap block leading-tight">Niche Shop</span>
                   </div>
                 </div>
 
-                <div className="p-2 sm:p-3.5 rounded-2xl bg-white border border-[#E0DDDB] flex items-center gap-2 sm:gap-3 shadow-2xs min-w-0">
-                  <CommercePlatformIcon3D platform="ebay" size="sm" className="sm:hidden shrink-0" />
-                  <CommercePlatformIcon3D platform="ebay" size="md" className="hidden sm:inline-flex shrink-0" />
+                <div className="p-2.5 sm:p-3.5 rounded-2xl bg-white border border-[#E0DDDB] flex items-center gap-2.5 sm:gap-3 shadow-2xs min-w-0">
+                  <CommercePlatformIcon3D platform="ebay" size="md" className="shrink-0" />
                   <div className="min-w-0 flex-1">
-                    <span className="font-display font-bold text-[11px] sm:text-xs text-[#161616] whitespace-nowrap block leading-tight">eBay</span>
-                    <span className="text-[9px] sm:text-[10px] text-[#585858] font-mono-num whitespace-nowrap block leading-tight">Listings</span>
+                    <span className="font-display font-bold text-xs text-[#161616] whitespace-nowrap block leading-tight">eBay</span>
+                    <span className="text-[10px] text-[#585858] font-mono-num whitespace-nowrap block leading-tight">Listings</span>
                   </div>
                 </div>
               </div>
