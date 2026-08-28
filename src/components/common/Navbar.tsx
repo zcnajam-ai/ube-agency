@@ -124,34 +124,46 @@ export default function Navbar() {
                 <div className="absolute top-full left-1/2 -translate-x-1/2 pt-3 w-[740px] z-50 animate-in fade-in zoom-in-95 duration-200">
                   <div className="p-6 rounded-3xl bg-white border border-[#E0DDDB] shadow-[0_20px_50px_rgba(0,0,0,0.12)] space-y-6">
                     <div className="grid grid-cols-3 gap-6">
-                      {/* Column 1: Brand & Design */}
+                      {/* Column 1: Primary Core Pillars */}
                       <div className="space-y-3">
                         <span className="text-[10px] font-mono-num font-bold text-[#9F8BE7] uppercase tracking-wider block border-b border-[#E0DDDB] pb-1.5">
-                          Brand &amp; Design
+                          Primary Core Pillars
                         </span>
                         <div className="space-y-1.5">
                           <Link
-                            href="/best-logo-design-agency"
+                            href="/services/ecommerce"
                             onClick={() => setServicesOpen(false)}
                             className="p-2 rounded-xl hover:bg-[#FAF7F6] block transition-colors group"
                           >
                             <div className="font-display font-bold text-xs text-[#161616] group-hover:text-[#9F8BE7] flex items-center justify-between">
-                              <span>Logo Design Agency</span>
+                              <span>eCommerce Growth Services</span>
                               <ArrowUpRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
                             </div>
-                            <p className="text-[10px] text-[#585858] line-clamp-1">Custom vector identity</p>
+                            <p className="text-[10px] text-[#585858] line-clamp-1">Shopify, Amazon, Etsy &amp; eBay</p>
                           </Link>
 
                           <Link
-                            href="/professional-web-design-services"
+                            href="/services/aiseo"
                             onClick={() => setServicesOpen(false)}
                             className="p-2 rounded-xl hover:bg-[#FAF7F6] block transition-colors group"
                           >
                             <div className="font-display font-bold text-xs text-[#161616] group-hover:text-[#9F8BE7] flex items-center justify-between">
-                              <span>Web Design Services</span>
+                              <span>AI SEO &amp; Answer Engines</span>
                               <ArrowUpRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
                             </div>
-                            <p className="text-[10px] text-[#585858] line-clamp-1">Responsive UI/UX Figma</p>
+                            <p className="text-[10px] text-[#585858] line-clamp-1">AEO, GEO &amp; AI Overviews</p>
+                          </Link>
+
+                          <Link
+                            href="/services/digital-marketing"
+                            onClick={() => setServicesOpen(false)}
+                            className="p-2 rounded-xl hover:bg-[#FAF7F6] block transition-colors group"
+                          >
+                            <div className="font-display font-bold text-xs text-[#161616] group-hover:text-[#9F8BE7] flex items-center justify-between">
+                              <span>Digital Marketing Services</span>
+                              <ArrowUpRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
+                            </div>
+                            <p className="text-[10px] text-[#585858] line-clamp-1">Google, Meta &amp; TikTok Ads</p>
                           </Link>
 
                           <Link
@@ -160,54 +172,30 @@ export default function Navbar() {
                             className="p-2 rounded-xl hover:bg-[#FAF7F6] block transition-colors group"
                           >
                             <div className="font-display font-bold text-xs text-[#161616] group-hover:text-[#9F8BE7] flex items-center justify-between">
-                              <span>Brand Strategy &amp; Identity</span>
+                              <span>Branding &amp; Brand Identity</span>
                               <ArrowUpRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
                             </div>
-                            <p className="text-[10px] text-[#585858] line-clamp-1">Full brand guidelines</p>
+                            <p className="text-[10px] text-[#585858] line-clamp-1">Full visual identity systems</p>
                           </Link>
                         </div>
                       </div>
 
-                      {/* Column 2: Development & Engineering */}
+                      {/* Column 2: Web & Mobile Engineering */}
                       <div className="space-y-3">
                         <span className="text-[10px] font-mono-num font-bold text-emerald-600 uppercase tracking-wider block border-b border-[#E0DDDB] pb-1.5">
-                          Code &amp; Commerce
+                          Web &amp; Mobile Systems
                         </span>
                         <div className="space-y-1.5">
                           <Link
-                            href="/best-website-development-agency"
+                            href="/services/web-design-development"
                             onClick={() => setServicesOpen(false)}
                             className="p-2 rounded-xl hover:bg-[#FAF7F6] block transition-colors group"
                           >
                             <div className="font-display font-bold text-xs text-[#161616] group-hover:text-[#9F8BE7] flex items-center justify-between">
-                              <span>Website Development</span>
+                              <span>Website Design &amp; Dev</span>
                               <ArrowUpRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
                             </div>
                             <p className="text-[10px] text-[#585858] line-clamp-1">Fast Next.js &amp; CMS</p>
-                          </Link>
-
-                          <Link
-                            href="/custom-web-development"
-                            onClick={() => setServicesOpen(false)}
-                            className="p-2 rounded-xl hover:bg-[#FAF7F6] block transition-colors group"
-                          >
-                            <div className="font-display font-bold text-xs text-[#161616] group-hover:text-[#9F8BE7] flex items-center justify-between">
-                              <span>Custom Web Development</span>
-                              <ArrowUpRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
-                            </div>
-                            <p className="text-[10px] text-[#585858] line-clamp-1">Bespoke portals &amp; apps</p>
-                          </Link>
-
-                          <Link
-                            href="/services/ecommerce"
-                            onClick={() => setServicesOpen(false)}
-                            className="p-2 rounded-xl hover:bg-[#FAF7F6] block transition-colors group"
-                          >
-                            <div className="font-display font-bold text-xs text-[#161616] group-hover:text-[#9F8BE7] flex items-center justify-between">
-                              <span>eCommerce Growth &amp; Marketplaces</span>
-                              <ArrowUpRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
-                            </div>
-                            <p className="text-[10px] text-[#585858] line-clamp-1">Shopify, Amazon, Etsy &amp; eBay</p>
                           </Link>
 
                           <Link
@@ -221,37 +209,17 @@ export default function Navbar() {
                             </div>
                             <p className="text-[10px] text-[#585858] line-clamp-1">iOS &amp; Android MVP</p>
                           </Link>
-                        </div>
-                      </div>
 
-                      {/* Column 3: Growth & AI */}
-                      <div className="space-y-3">
-                        <span className="text-[10px] font-mono-num font-bold text-purple-600 uppercase tracking-wider block border-b border-[#E0DDDB] pb-1.5">
-                          Growth &amp; AI Systems
-                        </span>
-                        <div className="space-y-1.5">
                           <Link
-                            href="/digital-marketing-services-agency"
+                            href="/services/shopify-development"
                             onClick={() => setServicesOpen(false)}
                             className="p-2 rounded-xl hover:bg-[#FAF7F6] block transition-colors group"
                           >
                             <div className="font-display font-bold text-xs text-[#161616] group-hover:text-[#9F8BE7] flex items-center justify-between">
-                              <span>Digital Marketing Agency</span>
+                              <span>Shopify Development</span>
                               <ArrowUpRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
                             </div>
-                            <p className="text-[10px] text-[#585858] line-clamp-1">Google, Meta, TikTok Ads</p>
-                          </Link>
-
-                          <Link
-                            href="/services/aiseo"
-                            onClick={() => setServicesOpen(false)}
-                            className="p-2 rounded-xl hover:bg-[#FAF7F6] block transition-colors group"
-                          >
-                            <div className="font-display font-bold text-xs text-[#161616] group-hover:text-[#9F8BE7] flex items-center justify-between">
-                              <span>AI SEO &amp; Answer Engines</span>
-                              <ArrowUpRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
-                            </div>
-                            <p className="text-[10px] text-[#585858] line-clamp-1">AEO, GEO &amp; Overviews</p>
+                            <p className="text-[10px] text-[#585858] line-clamp-1">Custom themes &amp; stores</p>
                           </Link>
 
                           <Link
@@ -260,22 +228,66 @@ export default function Navbar() {
                             className="p-2 rounded-xl hover:bg-[#FAF7F6] block transition-colors group"
                           >
                             <div className="font-display font-bold text-xs text-[#161616] group-hover:text-[#9F8BE7] flex items-center justify-between">
-                              <span>AI Automation &amp; CRM</span>
+                              <span>AI Automation &amp; Workflows</span>
                               <ArrowUpRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
                             </div>
-                            <p className="text-[10px] text-[#585858] line-clamp-1">Workflows &amp; Chatbots</p>
+                            <p className="text-[10px] text-[#585858] line-clamp-1">CRM sync &amp; Chatbots</p>
                           </Link>
+                        </div>
+                      </div>
 
+                      {/* Column 3: Paid Advertising Channels */}
+                      <div className="space-y-3">
+                        <span className="text-[10px] font-mono-num font-bold text-purple-600 uppercase tracking-wider block border-b border-[#E0DDDB] pb-1.5">
+                          Paid Advertising Channels
+                        </span>
+                        <div className="space-y-1.5">
                           <Link
-                            href="/professional-content-writing-services"
+                            href="/services/google-ads"
                             onClick={() => setServicesOpen(false)}
                             className="p-2 rounded-xl hover:bg-[#FAF7F6] block transition-colors group"
                           >
                             <div className="font-display font-bold text-xs text-[#161616] group-hover:text-[#9F8BE7] flex items-center justify-between">
-                              <span>Content Writing Services</span>
+                              <span>Google Ads &amp; Search</span>
                               <ArrowUpRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
                             </div>
-                            <p className="text-[10px] text-[#585858] line-clamp-1">SEO Copywriting &amp; Story</p>
+                            <p className="text-[10px] text-[#585858] line-clamp-1">Search &amp; Performance Max</p>
+                          </Link>
+
+                          <Link
+                            href="/services/meta-ads"
+                            onClick={() => setServicesOpen(false)}
+                            className="p-2 rounded-xl hover:bg-[#FAF7F6] block transition-colors group"
+                          >
+                            <div className="font-display font-bold text-xs text-[#161616] group-hover:text-[#9F8BE7] flex items-center justify-between">
+                              <span>Meta Ads (FB &amp; IG)</span>
+                              <ArrowUpRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
+                            </div>
+                            <p className="text-[10px] text-[#585858] line-clamp-1">Direct-response visual funnels</p>
+                          </Link>
+
+                          <Link
+                            href="/services/tiktok-marketing"
+                            onClick={() => setServicesOpen(false)}
+                            className="p-2 rounded-xl hover:bg-[#FAF7F6] block transition-colors group"
+                          >
+                            <div className="font-display font-bold text-xs text-[#161616] group-hover:text-[#9F8BE7] flex items-center justify-between">
+                              <span>TikTok Ads &amp; Video</span>
+                              <ArrowUpRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
+                            </div>
+                            <p className="text-[10px] text-[#585858] line-clamp-1">Viral video &amp; Spark ads</p>
+                          </Link>
+
+                          <Link
+                            href="/work"
+                            onClick={() => setServicesOpen(false)}
+                            className="p-2 rounded-xl hover:bg-[#FAF7F6] block transition-colors group"
+                          >
+                            <div className="font-display font-bold text-xs text-[#161616] group-hover:text-[#9F8BE7] flex items-center justify-between">
+                              <span>Case Studies &amp; Work</span>
+                              <ArrowUpRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
+                            </div>
+                            <p className="text-[10px] text-[#585858] line-clamp-1">Client proof &amp; results</p>
                           </Link>
                         </div>
                       </div>

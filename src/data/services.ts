@@ -243,6 +243,24 @@ export const SERVICE_PILLARS: ServicePillar[] = [
     ],
     subServices: [
       {
+        id: "digital-marketing-hub",
+        slug: "digital-marketing",
+        title: "Digital Marketing Services | Google Ads, Meta Ads & TikTok",
+        shortTitle: "Digital Marketing",
+        kicker: "Multi-Channel Paid Growth & Advertising",
+        summary:
+          "Integrated paid acquisition and marketing strategy combining Google Ads, Meta Ads (Facebook & Instagram), TikTok Marketing, and paid social performance funnels engineered for scalable ROI.",
+        deliverables: [
+          "Multi-Channel Campaign Strategy & Media Buying",
+          "Google Search, Shopping & Performance Max Campaigns",
+          "Meta Ads (Facebook & Instagram) Direct Response Funnels",
+          "TikTok Video Ads & Creator Spark Ad Integration",
+          "Server-Side Tracking (CAPI, GA4, GTM) & Live ROI Dashboards",
+        ],
+        technologies: ["Google Ads", "Meta Ads Manager", "TikTok Ads Manager", "GA4", "Meta CAPI"],
+        deliverableScope: "Full Omnichannel Digital Marketing Strategy",
+      },
+      {
         id: "aiseo-search",
         slug: "aiseo",
         title: "AI Search Optimization & Structured Content",

@@ -109,47 +109,60 @@ export default function Footer() {
           {/* Dedicated Services Column */}
           <div className="lg:col-span-3 space-y-3">
             <h4 className="font-display text-xs font-bold uppercase tracking-[0.2em] text-[#DDF160]">
-              Dedicated Services
+              Primary Services
             </h4>
             <ul className="space-y-1.5 text-xs font-body text-[#ACACAC]">
               <li>
-                <Link href="/services/branding" className="hover:text-white transition-colors">
-                  Branding &amp; Identity
+                <Link href="/services/ecommerce" className="hover:text-white transition-colors flex items-center justify-between">
+                  <span>eCommerce Growth &amp; Marketplaces</span>
+                  <span className="text-[10px] text-[#DDF160] font-mono-num font-bold">01</span>
                 </Link>
+              </li>
+              <li>
+                <Link href="/services/aiseo" className="hover:text-white transition-colors flex items-center justify-between">
+                  <span>AI Search Optimization (AEO/GEO)</span>
+                  <span className="text-[10px] text-[#DDF160] font-mono-num font-bold">02</span>
+                </Link>
+              </li>
+              <li>
+                <Link href="/services/digital-marketing" className="hover:text-white transition-colors flex items-center justify-between">
+                  <span>Digital Marketing &amp; Paid Ads</span>
+                  <span className="text-[10px] text-[#DDF160] font-mono-num font-bold">03</span>
+                </Link>
+              </li>
+              <li>
+                <Link href="/services/branding" className="hover:text-white transition-colors flex items-center justify-between">
+                  <span>Branding &amp; Visual Identity</span>
+                  <span className="text-[10px] text-[#DDF160] font-mono-num font-bold">04</span>
+                </Link>
+              </li>
+              <li>
+                <Link href="/work" className="hover:text-white transition-colors flex items-center justify-between font-bold text-white">
+                  <span>Our Work &amp; Case Studies</span>
+                  <span className="text-[10px] text-[#9F8BE7] font-mono-num">05</span>
+                </Link>
+              </li>
+              <li className="pt-2 border-t border-white/10 text-[11px] text-[#838383] font-mono-num uppercase tracking-wider">
+                Secondary Solutions:
               </li>
               <li>
                 <Link href="/services/web-design-development" className="hover:text-white transition-colors">
-                  Professional Web Design
-                </Link>
-              </li>
-              <li>
-                <Link href="/services/ecommerce" className="hover:text-white transition-colors">
-                  eCommerce Growth &amp; Marketplaces
+                  Web Design &amp; Development
                 </Link>
               </li>
               <li>
                 <Link href="/services/mobile-app-development" className="hover:text-white transition-colors">
-                  Mobile App Development
-                </Link>
-              </li>
-              <li>
-                <Link href="/services/meta-ads" className="hover:text-white transition-colors">
-                  Meta Ads &amp; Paid Social
+                  Mobile App Engineering
                 </Link>
               </li>
               <li>
                 <Link href="/services/ai-automation" className="hover:text-white transition-colors">
-                  AI Systems &amp; Automations
-                </Link>
-              </li>
-              <li>
-                <Link href="/services/aiseo" className="hover:text-white transition-colors">
-                  AI Search Optimization
+                  AI Automation &amp; CRM Systems
                 </Link>
               </li>
               <li>
                 <Link href="/services/shopify-development" className="hover:text-white transition-colors">
-                  Shopify &amp; Dropshipping Storefronts
+                  Shopify Storefront Setup
                 </Link>
               </li>
             </ul>
@@ -158,37 +171,37 @@ export default function Footer() {
           {/* Transparent Packages Column */}
           <div className="lg:col-span-3 space-y-3">
             <h4 className="font-display text-xs font-bold uppercase tracking-[0.2em] text-[#9F8BE7]">
-              Service Packages
+              Commercial Packages
             </h4>
             <ul className="space-y-1.5 text-xs font-body text-[#ACACAC]">
               <li>
+                <Link href="/ecommerce-growth-packages" className="hover:text-white transition-colors flex items-center justify-between">
+                  <span>eCommerce Growth Plans</span>
+                  <span className="text-[10px] text-emerald-400 font-mono-num font-bold">$399+</span>
+                </Link>
+              </li>
+              <li>
+                <Link href="/ai-seo-packages" className="hover:text-white transition-colors flex items-center justify-between">
+                  <span>AI SEO &amp; AEO Packages</span>
+                  <span className="text-[10px] text-emerald-400 font-mono-num font-bold">$349+</span>
+                </Link>
+              </li>
+              <li>
+                <Link href="/digital-marketing-packages" className="hover:text-white transition-colors flex items-center justify-between">
+                  <span>Digital Marketing Packages</span>
+                  <span className="text-[10px] text-emerald-400 font-mono-num font-bold">$299/mo</span>
+                </Link>
+              </li>
+              <li>
                 <Link href="/branding-packages" className="hover:text-white transition-colors flex items-center justify-between">
-                  <span>Branding &amp; Logo Packages</span>
+                  <span>Branding &amp; Identity Packages</span>
                   <span className="text-[10px] text-emerald-400 font-mono-num font-bold">$299+</span>
                 </Link>
               </li>
               <li>
                 <Link href="/web-design-packages" className="hover:text-white transition-colors flex items-center justify-between">
                   <span>Web Design Packages</span>
-                  <span className="text-[10px] text-emerald-400 font-mono-num font-bold">$499+</span>
-                </Link>
-              </li>
-              <li>
-                <Link href="/ai-seo-packages" className="hover:text-white transition-colors flex items-center justify-between">
-                  <span>AI SEO Packages</span>
-                  <span className="text-[10px] text-emerald-400 font-mono-num font-bold">$349+</span>
-                </Link>
-              </li>
-              <li>
-                <Link href="/ai-automation-packages" className="hover:text-white transition-colors flex items-center justify-between">
-                  <span>AI Automation Packages</span>
-                  <span className="text-[10px] text-emerald-400 font-mono-num font-bold">$349+</span>
-                </Link>
-              </li>
-              <li>
-                <Link href="/tiktok-marketing-packages" className="hover:text-white transition-colors flex items-center justify-between">
-                  <span>TikTok Video Packages</span>
-                  <span className="text-[10px] text-emerald-400 font-mono-num font-bold">$299/mo</span>
+                  <span className="text-[10px] text-emerald-400 font-mono-num font-bold">$300+</span>
                 </Link>
               </li>
               <li>

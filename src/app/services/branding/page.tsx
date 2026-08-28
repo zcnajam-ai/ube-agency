@@ -16,14 +16,14 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Branding Services & Logo Design",
+  title: "Branding Services & Brand Identity | Unified Branding Experts",
   description:
     "Custom logo design, brand strategy, visual identity systems, brand guidelines, and rebranding. Built to make your business recognizable, memorable, and trusted.",
   alternates: {
     canonical: "https://unifiedbrandingexperts.com/services/branding",
   },
   openGraph: {
-    title: "Branding Services & Logo Design",
+    title: "Branding Services & Brand Identity | Unified Branding Experts",
     description:
       "Custom logo design, brand strategy, visual identity systems, and brand guidelines.",
     url: "https://unifiedbrandingexperts.com/services/branding",
@@ -137,8 +137,37 @@ export default function BrandingServicePage() {
     },
   ];
 
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: "https://unifiedbrandingexperts.com",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Services",
+        item: "https://unifiedbrandingexperts.com/services",
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: "Branding",
+        item: "https://unifiedbrandingexperts.com/services/branding",
+      },
+    ],
+  };
+
   return (
     <div className="pt-32 pb-24 px-4 sm:px-6 md:px-12 max-w-7xl mx-auto space-y-24">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       {/* 1. Hero Section */}
       <section className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center border-b border-[#E0DDDB] pb-16">
         <div className="lg:col-span-7 space-y-6">
@@ -148,7 +177,7 @@ export default function BrandingServicePage() {
           </div>
 
           <h1 className="font-display text-4xl sm:text-6xl font-bold tracking-tight text-[#161616] leading-tight">
-            Build a Brand People Recognize, Remember, and Trust.
+            Branding Services &amp; Visual Identity Engineering
           </h1>
 
           <p className="text-base sm:text-lg text-[#585858] font-body leading-relaxed max-w-2xl">

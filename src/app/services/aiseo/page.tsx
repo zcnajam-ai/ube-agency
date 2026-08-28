@@ -16,14 +16,14 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "AI SEO Services | AEO, GEO & Search Optimization",
+  title: "AI SEO Services | AEO, GEO & Search Optimization | Unified Branding Experts",
   description:
     "Get found in Google AI Overviews, ChatGPT, Bing Copilot, and generative search. Answer Engine Optimization (AEO), Generative Engine Optimization (GEO), and structured data.",
   alternates: {
     canonical: "https://unifiedbrandingexperts.com/services/aiseo",
   },
   openGraph: {
-    title: "AI SEO Services | AEO, GEO & Search Optimization",
+    title: "AI SEO Services | AEO, GEO & Search Optimization | Unified Branding Experts",
     description:
       "Get found in Google AI Overviews, ChatGPT Search, and generative search engines.",
     url: "https://unifiedbrandingexperts.com/services/aiseo",
@@ -39,6 +39,30 @@ export const metadata: Metadata = {
 };
 
 export default function AiSeoServicePage() {
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: "https://unifiedbrandingexperts.com",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Services",
+        item: "https://unifiedbrandingexperts.com/services",
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: "AI SEO",
+        item: "https://unifiedbrandingexperts.com/services/aiseo",
+      },
+    ],
+  };
   const serviceIncludes = [
     {
       title: "AI-Driven Search Optimization",
@@ -145,6 +169,10 @@ export default function AiSeoServicePage() {
 
   return (
     <div className="pt-32 pb-24 px-4 sm:px-6 md:px-12 max-w-7xl mx-auto space-y-24">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       {/* 1. Hero Section */}
       <section className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center border-b border-[#E0DDDB] pb-16">
         <div className="lg:col-span-7 space-y-6">

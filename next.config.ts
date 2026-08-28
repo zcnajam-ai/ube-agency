@@ -64,12 +64,24 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     return [
+      // Legacy Portfolio URLs -> Canonical Work Destination (/work)
+      { source: "/portfolio", destination: "/work", permanent: true },
+      { source: "/portfolio/", destination: "/work", permanent: true },
+      { source: "/pricing", destination: "/packages", permanent: true },
+      { source: "/pricing/", destination: "/packages", permanent: true },
+
+      // Legacy WordPress Category Archives -> Canonical Destinations
+      { source: "/category/ui-ux-design", destination: "/services/web-design-development", permanent: true },
+      { source: "/category/ui-ux-design/", destination: "/services/web-design-development", permanent: true },
+      { source: "/category/case-studies", destination: "/work", permanent: true },
+      { source: "/category/case-studies/", destination: "/work", permanent: true },
+
       // Legacy Service Overlaps -> Canonical Service Destinations
       { source: "/best-logo-design-agency", destination: "/services/branding", permanent: true },
       { source: "/professional-web-design-services", destination: "/services/web-design-development", permanent: true },
       { source: "/best-website-development-agency", destination: "/services/web-design-development", permanent: true },
       { source: "/custom-web-development", destination: "/services/web-design-development", permanent: true },
-      { source: "/digital-marketing-services-agency", destination: "/services/meta-ads", permanent: true },
+      { source: "/digital-marketing-services-agency", destination: "/services/digital-marketing", permanent: true },
       { source: "/professional-content-writing-services", destination: "/services", permanent: true },
 
       // Legacy Package Overlaps -> Canonical Package Destinations

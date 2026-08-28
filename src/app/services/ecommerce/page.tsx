@@ -23,14 +23,14 @@ import EcommerceAutomationVisual from "@/components/services/EcommerceAutomation
 import ServiceProjectModalTrigger from "@/components/services/ServiceProjectModalTrigger";
 
 export const metadata: Metadata = {
-  title: "eCommerce Growth Services | Shopify, Amazon, Etsy & eBay | UBE",
+  title: "eCommerce Growth Services | Shopify, Amazon, Etsy & eBay | Unified Branding Experts",
   description:
     "Grow your online business across Shopify, Amazon, Etsy and eBay with professional store development, marketplace optimization, product SEO, automation and multi-channel eCommerce strategy from Unified Branding Experts.",
   alternates: {
     canonical: "https://unifiedbrandingexperts.com/services/ecommerce",
   },
   openGraph: {
-    title: "eCommerce Growth Services | Shopify, Amazon, Etsy & eBay | UBE",
+    title: "eCommerce Growth Services | Shopify, Amazon, Etsy & eBay | Unified Branding Experts",
     description:
       "Grow your online business across Shopify, Amazon, Etsy and eBay with professional store development, marketplace optimization, product SEO, automation and multi-channel eCommerce strategy from Unified Branding Experts.",
     url: "https://unifiedbrandingexperts.com/services/ecommerce",
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "eCommerce Growth Services | Shopify, Amazon, Etsy & eBay | UBE",
+    title: "eCommerce Growth Services | Shopify, Amazon, Etsy & eBay | Unified Branding Experts",
     description:
       "Professional eCommerce store development, marketplace optimization, product SEO, and multi-channel strategy for Shopify, Amazon, Etsy, and eBay.",
     images: ["https://unifiedbrandingexperts.com/images/projects/happy-knot/hero.png"],

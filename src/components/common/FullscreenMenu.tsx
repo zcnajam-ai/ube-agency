@@ -28,13 +28,13 @@ export default function FullscreenMenu({ isOpen, onClose }: FullscreenMenuProps)
   ];
 
   const dedicatedServices = [
-    { label: "Best Logo Design Agency", href: "/best-logo-design-agency" },
-    { label: "Professional Web Design", href: "/professional-web-design-services" },
-    { label: "Best Website Development", href: "/best-website-development-agency" },
-    { label: "Digital Marketing Agency", href: "/digital-marketing-services-agency" },
-    { label: "Custom Web Development", href: "/custom-web-development" },
-    { label: "Content Writing Services", href: "/professional-content-writing-services" },
+    { label: "eCommerce Growth Services", href: "/services/ecommerce" },
     { label: "AI SEO & Answer Engines", href: "/services/aiseo" },
+    { label: "Digital Marketing Services", href: "/services/digital-marketing" },
+    { label: "Branding & Visual Identity", href: "/services/branding" },
+    { label: "Our Work & Case Studies", href: "/work" },
+    { label: "Web Design & Development", href: "/services/web-design-development" },
+    { label: "Mobile App Engineering", href: "/services/mobile-app-development" },
     { label: "AI Automation & CRM", href: "/services/ai-automation" },
   ];
 

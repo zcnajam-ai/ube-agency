@@ -32,7 +32,7 @@ export async function GET() {
 
 ## Case Studies
 
-- [Work & Portfolio](https://unifiedbrandingexperts.com/work): Explore case studies across eCommerce, web platforms, branding systems, and AI search architecture.
+- [Our Work & Case Studies](https://unifiedbrandingexperts.com/work): Explore case studies across eCommerce, web platforms, branding systems, and AI search architecture.
 - [Fixoria Studio Brand Identity](https://unifiedbrandingexperts.com/work/fixoria-studio-brand-identity-system): Comprehensive visual identity and vector asset system.
 - [Happy Knot Creations Shopify Storefront](https://unifiedbrandingexperts.com/work/happy-knot-creations-shopify-storefront): High-converting custom Shopify storefront.
 - [Everhome Real Estate Brand System](https://unifiedbrandingexperts.com/work/everhome-real-estate-brand-system): Modern real estate identity and digital platform.

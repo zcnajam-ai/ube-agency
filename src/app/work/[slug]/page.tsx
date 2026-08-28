@@ -65,7 +65,7 @@ export default async function ProjectDetailPage({
         className="inline-flex items-center gap-2 text-xs font-mono-num text-[#585858] hover:text-[#161616] transition-colors"
       >
         <ArrowLeft className="w-3.5 h-3.5" />
-        <span>BACK TO PORTFOLIO</span>
+        <span>BACK TO OUR WORK</span>
       </Link>
 
       {/* Header */}
