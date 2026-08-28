@@ -35,10 +35,10 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "https://unifiedbrandingexperts.com/images/projects/project-marketing-1.webp",
+        url: "https://unifiedbrandingexperts.com/images/official/digital-marketing/digital-marketing-hero.webp",
         width: 1200,
         height: 630,
-        alt: "Digital Marketing Services - Unified Branding Experts",
+        alt: "Digital marketing campaign dashboard showing Google Ads, Meta Ads, TikTok and conversion performance",
       },
     ],
   },
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     title: "Digital Marketing Services | Google Ads, Meta Ads & TikTok | Unified Branding Experts",
     description:
       "Integrated digital marketing services across Google Ads, Meta Ads, TikTok Marketing, and paid social funnels.",
-    images: ["https://unifiedbrandingexperts.com/images/projects/project-marketing-1.webp"],
+    images: ["https://unifiedbrandingexperts.com/images/official/digital-marketing/digital-marketing-hero.webp"],
   },
 };
 
@@ -181,14 +181,16 @@ export default function DigitalMarketingServiceHubPage() {
             </div>
           </div>
 
-          <div className="lg:col-span-5 relative">
-            <div className="relative aspect-[4/3] rounded-3xl overflow-hidden border border-[#E0DDDB] shadow-lg bg-[#FAF7F6]">
+          {/* HERO VISUAL (45-50% Desktop Width, Responsive Container) */}
+          <div className="lg:col-span-5 relative w-full">
+            <div className="relative aspect-[16/10] sm:aspect-[4/3] w-full rounded-3xl overflow-hidden border border-[#E0DDDB] shadow-lg bg-[#FAF7F6] group">
               <Image
-                src="/images/official/marketing/google-ads.jpeg"
-                alt="Digital Marketing Services - Unified Branding Experts"
+                src="/images/official/digital-marketing/digital-marketing-hero.webp"
+                alt="Digital marketing campaign dashboard showing Google Ads, Meta Ads, TikTok and conversion performance"
                 fill
                 priority
-                className="object-cover object-center"
+                sizes="(max-width: 1024px) 100vw, 45vw"
+                className="object-cover object-center group-hover:scale-[1.02] transition-transform duration-500"
               />
             </div>
           </div>
@@ -253,40 +255,57 @@ export default function DigitalMarketingServiceHubPage() {
         </div>
       </section>
 
-      {/* 3. CAMPAIGN PERFORMANCE STANDARDS */}
-      <section className="p-8 sm:p-12 rounded-3xl bg-[#FAF7F6] border border-[#E0DDDB] space-y-8">
-        <div className="text-center max-w-2xl mx-auto space-y-2">
-          <span className="text-xs font-mono-num text-[#9F8BE7] font-bold uppercase tracking-wider block">
-            SCALABLE MEDIA MANAGEMENT
-          </span>
-          <h2 className="font-display text-2xl sm:text-3xl font-bold text-[#161616]">
-            Built for Transparent Revenue Growth
-          </h2>
-        </div>
+      {/* 3. CAMPAIGN PERFORMANCE STANDARDS & FULL-FUNNEL VISUAL */}
+      <section className="p-8 sm:p-12 rounded-3xl bg-[#FAF7F6] border border-[#E0DDDB] space-y-10">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          <div className="lg:col-span-7 space-y-4">
+            <span className="text-xs font-mono-num text-[#9F8BE7] font-bold uppercase tracking-wider block">
+              FULL-FUNNEL DIGITAL MARKETING
+            </span>
+            <h2 className="font-display text-2xl sm:text-4xl font-bold text-[#161616]">
+              Strategies Built Around Your Business Goals
+            </h2>
+            <p className="text-xs sm:text-sm text-[#585858] leading-relaxed">
+              We don&apos;t believe in one-size-fits-all marketing. Every business has different audiences, offers, and customer behaviors. Our strategies are built to attract the right people, bring them in, and turn them into paying customers.
+            </p>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          <div className="p-5 rounded-2xl bg-white border border-[#E0DDDB] space-y-2">
-            <Target className="w-6 h-6 text-emerald-600" />
-            <h4 className="font-display font-bold text-sm text-[#161616]">Precision Audience Targeting</h4>
-            <p className="text-xs text-[#585858]">Custom intent segments, buyer personas, and granular keyword bidding strategies.</p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+              <div className="p-4 rounded-2xl bg-white border border-[#E0DDDB] space-y-1">
+                <Target className="w-5 h-5 text-emerald-600" />
+                <h4 className="font-display font-bold text-xs text-[#161616]">Data-Driven Strategy</h4>
+                <p className="text-[11px] text-[#585858]">Every campaign starts with research, insights, and real data — not guesswork.</p>
+              </div>
+
+              <div className="p-4 rounded-2xl bg-white border border-[#E0DDDB] space-y-1">
+                <TrendingUp className="w-5 h-5 text-[#9F8BE7]" />
+                <h4 className="font-display font-bold text-xs text-[#161616]">High-Performing Creative</h4>
+                <p className="text-[11px] text-[#585858]">Scroll-stopping ads that connect with your audience and drive action.</p>
+              </div>
+
+              <div className="p-4 rounded-2xl bg-white border border-[#E0DDDB] space-y-1">
+                <BarChart3 className="w-5 h-5 text-purple-600" />
+                <h4 className="font-display font-bold text-xs text-[#161616]">Full Funnel Approach</h4>
+                <p className="text-[11px] text-[#585858]">From awareness to conversion, we optimize every step of the customer journey.</p>
+              </div>
+
+              <div className="p-4 rounded-2xl bg-white border border-[#E0DDDB] space-y-1">
+                <Users className="w-5 h-5 text-blue-600" />
+                <h4 className="font-display font-bold text-xs text-[#161616]">Transparent Reporting</h4>
+                <p className="text-[11px] text-[#585858]">Clear reports that show what&apos;s working, what&apos;s improving, and what&apos;s next.</p>
+              </div>
+            </div>
           </div>
 
-          <div className="p-5 rounded-2xl bg-white border border-[#E0DDDB] space-y-2">
-            <TrendingUp className="w-6 h-6 text-[#9F8BE7]" />
-            <h4 className="font-display font-bold text-sm text-[#161616]">ROAS-Driven Optimization</h4>
-            <p className="text-xs text-[#585858]">Weekly budget reallocation towards highest-performing ad angles and audience pools.</p>
-          </div>
-
-          <div className="p-5 rounded-2xl bg-white border border-[#E0DDDB] space-y-2">
-            <BarChart3 className="w-6 h-6 text-purple-600" />
-            <h4 className="font-display font-bold text-sm text-[#161616]">Server-Side Tracking</h4>
-            <p className="text-xs text-[#585858]">Meta CAPI and TikTok Events API setup to capture true conversion attribution.</p>
-          </div>
-
-          <div className="p-5 rounded-2xl bg-white border border-[#E0DDDB] space-y-2">
-            <Users className="w-6 h-6 text-blue-600" />
-            <h4 className="font-display font-bold text-sm text-[#161616]">Senior Media Strategy</h4>
-            <p className="text-xs text-[#585858]">Direct access to lead media buyers managing your campaign creative and media spend.</p>
+          <div className="lg:col-span-5 relative w-full">
+            <div className="relative aspect-[16/10] sm:aspect-[4/3] w-full rounded-2xl overflow-hidden border border-[#E0DDDB] bg-white shadow-md">
+              <Image
+                src="/images/official/digital-marketing/digital-marketing-funnel.webp"
+                alt="Full-funnel digital marketing approach from brand awareness to customer retention"
+                fill
+                sizes="(max-width: 1024px) 100vw, 40vw"
+                className="object-cover object-center"
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -338,4 +357,3 @@ export default function DigitalMarketingServiceHubPage() {
     </main>
   );
 }
-

@@ -9,10 +9,8 @@ import {
   HelpCircle,
   ShoppingBag,
   Zap,
-  Layers,
   Settings2,
   RefreshCw,
-  ShieldCheck,
   CreditCard,
   Truck,
 } from "lucide-react";
@@ -27,14 +25,14 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Shopify Store Setup & Custom Theme Development",
     description:
-      "End-to-end Shopify store setup and custom theme development.",
+      "End-to-end Shopify store setup and custom theme development with responsive storefront and ecommerce performance analytics.",
     url: "https://unifiedbrandingexperts.com/services/shopify-development",
     images: [
       {
-        url: "https://unifiedbrandingexperts.com/images/projects/project-ecommerce-1.webp",
+        url: "https://unifiedbrandingexperts.com/images/official/shopify/shopify-development-hero.webp",
         width: 1200,
         height: 630,
-        alt: "Shopify Development by Unified Branding Experts",
+        alt: "Shopify store setup and custom theme development with responsive storefront and ecommerce performance analytics",
       },
     ],
   },
@@ -52,7 +50,7 @@ export default function ShopifyDevelopmentPage() {
       title: "Streamlined Checkout & Cart Funnels",
       desc: "Slide-out cart drawers, tiered shipping bars, upsell configurations, bundles, and Shopify Checkout Extensibility configured to simplify purchasing.",
       icon: <CreditCard className="w-5 h-5 text-emerald-600" />,
-      image: "/images/official/ecommerce/checkout-optimization.jpeg",
+      image: "/images/official/shopify/shopify-conversion-metrics.webp",
     },
     {
       title: "3PL, ERP & Multi-Warehouse Inventory Sync",
@@ -64,7 +62,7 @@ export default function ShopifyDevelopmentPage() {
       title: "Performance & Core Web Vitals Optimization",
       desc: "Optimized asset loading, responsive image formats, lazy-loaded offscreen media, and streamlined app configurations that support fast mobile browsing.",
       icon: <Zap className="w-5 h-5 text-blue-600" />,
-      image: "/images/official/aiseo/ai-discovery.jpeg",
+      image: "/images/official/shopify/shopify-performance.webp",
     },
     {
       title: "Custom App Development & Private APIs",
@@ -147,7 +145,7 @@ export default function ShopifyDevelopmentPage() {
 
   return (
     <div className="pt-32 pb-24 px-4 sm:px-6 md:px-12 max-w-7xl mx-auto space-y-24">
-      {/* 1. Hero */}
+      {/* 1. HERO SECTION */}
       <section className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center border-b border-[#E0DDDB] pb-16">
         <div className="lg:col-span-7 space-y-6">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-[#E0DDDB] text-xs font-mono-num text-[#9F8BE7] font-bold shadow-xs">
@@ -198,11 +196,12 @@ export default function ShopifyDevelopmentPage() {
           </div>
         </div>
 
-        <div className="lg:col-span-5">
-          <div className="relative aspect-[4/3] w-full rounded-3xl overflow-hidden bg-white border border-[#E0DDDB] shadow-md group">
+        {/* HERO VISUAL (45-50% Desktop Width, Responsive Container) */}
+        <div className="lg:col-span-5 relative w-full">
+          <div className="relative aspect-[16/10] sm:aspect-[4/3] w-full rounded-3xl overflow-hidden bg-white border border-[#E0DDDB] shadow-md group">
             <Image
-              src="/images/official/ecommerce/storefront-setup.jpeg"
-              alt="Unified Branding Experts Shopify Development Showcase"
+              src="/images/official/shopify/shopify-development-hero.webp"
+              alt="Shopify store setup and custom theme development with responsive storefront and ecommerce performance analytics"
               fill
               priority
               sizes="(max-width: 1024px) 100vw, 45vw"
@@ -216,13 +215,13 @@ export default function ShopifyDevelopmentPage() {
         </div>
       </section>
 
-      {/* 2. Deep Dive */}
+      {/* 2. DEEP DIVE (WITH SHOPIFY PERFORMANCE VISUAL) */}
       <section className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
         <div className="lg:col-span-6 order-2 lg:order-1">
-          <div className="relative aspect-[4/3] w-full rounded-3xl overflow-hidden bg-white border border-[#E0DDDB] shadow-sm">
+          <div className="relative aspect-[16/10] sm:aspect-[4/3] w-full rounded-3xl overflow-hidden bg-white border border-[#E0DDDB] shadow-sm">
             <Image
-              src="/images/official/ecommerce/checkout-optimization.jpeg"
-              alt="Shopify Checkout and Conversion Funnel Architecture"
+              src="/images/official/shopify/shopify-performance.webp"
+              alt="Shopify mobile storefront optimization, fast loading speeds, and checkout conversion features"
               fill
               sizes="(max-width: 1024px) 100vw, 50vw"
               className="object-cover object-center"
@@ -249,7 +248,7 @@ export default function ShopifyDevelopmentPage() {
         </div>
       </section>
 
-      {/* 3. Capabilities Grid */}
+      {/* 3. CAPABILITIES GRID */}
       <section className="space-y-12">
         <div className="max-w-2xl space-y-3">
           <span className="text-xs font-mono-num text-[#9F8BE7] uppercase tracking-widest font-bold">
@@ -297,7 +296,7 @@ export default function ShopifyDevelopmentPage() {
         </div>
       </section>
 
-      {/* 4. Process Steps */}
+      {/* 4. PROCESS STEPS */}
       <section className="p-8 sm:p-12 rounded-3xl bg-white border border-[#E0DDDB] space-y-8 shadow-xs">
         <div className="max-w-2xl space-y-2">
           <span className="text-xs font-mono-num text-[#9F8BE7] uppercase tracking-widest font-bold">
@@ -340,7 +339,7 @@ export default function ShopifyDevelopmentPage() {
         </div>
       </section>
 
-      {/* 5. Package CTA */}
+      {/* 5. PACKAGE CTA */}
       <section className="p-8 sm:p-12 rounded-3xl bg-gradient-to-br from-white to-[#F4EFEB] border-2 border-[#9F8BE7] shadow-sm flex flex-col md:flex-row items-center justify-between gap-8">
         <div className="space-y-2 max-w-2xl">
           <span className="text-xs font-mono-num text-emerald-600 font-bold uppercase tracking-wider block">
@@ -363,7 +362,7 @@ export default function ShopifyDevelopmentPage() {
         </Link>
       </section>
 
-      {/* 6. FAQs */}
+      {/* 6. FAQS */}
       <section className="space-y-8">
         <div className="max-w-2xl space-y-2">
           <span className="text-xs font-mono-num text-[#9F8BE7] uppercase tracking-widest font-bold">
@@ -392,7 +391,7 @@ export default function ShopifyDevelopmentPage() {
         </div>
       </section>
 
-      {/* 7. Final CTA */}
+      {/* 7. FINAL CTA */}
       <section className="p-8 sm:p-14 rounded-3xl bg-[#161616] text-white text-center space-y-6 shadow-xl">
         <h2 className="font-display text-3xl sm:text-5xl font-bold tracking-tight text-white">
           Ready to Build Your High-Velocity Shopify Store?
