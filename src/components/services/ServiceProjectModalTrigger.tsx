@@ -5,12 +5,14 @@ import { useScroll } from "@/components/providers/SmoothScrollProvider";
 
 interface ServiceProjectModalTriggerProps {
   label?: string;
+  service?: string;
   className?: string;
   variant?: "primary" | "secondary" | "outline";
 }
 
 export default function ServiceProjectModalTrigger({
   label = "Start Your Project",
+  service,
   className = "",
   variant = "secondary",
 }: ServiceProjectModalTriggerProps) {
@@ -29,7 +31,7 @@ export default function ServiceProjectModalTrigger({
   return (
     <button
       type="button"
-      onClick={() => openProjectModal()}
+      onClick={() => openProjectModal(service)}
       className={`${baseStyle} ${variantStyle} ${className}`}
     >
       {label}

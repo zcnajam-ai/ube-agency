@@ -4,78 +4,73 @@ import { Metadata } from "next";
 import {
   CheckCircle2,
   Sparkles,
-  Monitor,
-  Code,
-  Zap,
-  ShieldCheck,
+  TrendingUp,
+  Target,
+  BarChart3,
+  Users,
 } from "lucide-react";
 import ServiceProjectModalTrigger from "@/components/services/ServiceProjectModalTrigger";
 
 export const metadata: Metadata = {
-  title: "Web Design & Development Packages | Fixed Pricing & Plans",
+  title: "Digital Marketing & Paid Ads Packages | Pricing & Plans",
   description:
-    "Transparent Web Design & Development packages starting at $300. Compare responsive UI/UX Figma design, CMS & Next.js platforms, and bespoke web application plans.",
+    "Transparent Digital Marketing and Paid Ads packages starting at $299/mo. Compare Meta, TikTok, and Google ad management plans.",
   alternates: {
-    canonical: "https://unifiedbrandingexperts.com/web-design-packages",
+    canonical: "https://unifiedbrandingexperts.com/digital-marketing-packages",
   },
 };
 
-export default function WebDesignPackagesPage() {
+export default function DigitalMarketingPackagesPage() {
   const packages = [
     {
       id: "starter",
-      name: "Starter Web Design",
-      price: "$300",
-      period: "one-time",
-      description: "Ideal for startups & small businesses needing a clean, high-converting responsive web presence.",
+      name: "Starter Ads Management",
+      price: "$299",
+      period: "month",
+      description: "Essential paid advertising management for single-channel lead generation or eCommerce growth.",
       highlight: false,
-      badge: "Quick Turnaround",
+      badge: "Single Channel",
       features: [
-        "Up to 3 Custom Designed Pages",
-        "Responsive UI/UX Figma Design",
-        "3 Custom Graphics & Banners",
-        "Contact Form & Lead Notification Setup",
-        "Basic On-Page SEO & Google Indexing",
-        "Mobile & Tablet Touch Optimization",
-        "48 - 72 Hour Delivery",
+        "1 Platform (Meta Ads or TikTok Ads)",
+        "Ad Copywriting & Angle Testing",
+        "Target Audience & Pixel Tracking Setup",
+        "Monthly Ad Spend Management (Up to $3,000/mo)",
+        "Monthly Performance & ROAS Reporting",
+        "Ad Creative Guidance & Briefs",
       ],
     },
     {
       id: "growth",
-      name: "Growth Website & CMS",
-      price: "$649",
-      period: "one-time",
-      description: "For expanding brands requiring content management, animations, and search engine authority.",
+      name: "Growth Multi-Channel Ads",
+      price: "$699",
+      period: "month",
+      description: "Multi-channel ad campaign scaling for brands targeting aggressive revenue & customer growth.",
       highlight: true,
       badge: "Most Popular",
       features: [
-        "Up to 8 Custom Designed Pages",
-        "CMS Integration (WordPress / Sanity / Next.js)",
-        "Custom GSAP & Framer Motion Animations",
-        "Blog & Resource Hub Setup",
-        "Core Web Vitals & Speed Optimization",
-        "Full Schema Markup & AEO Optimization",
-        "Social Media & Analytics Integration",
-        "1 Week Delivery",
+        "2 Platforms (Meta Ads + TikTok or Google Ads)",
+        "Advanced A/B Creative Testing & Ad Angles",
+        "Custom Conversion Tracking & Retargeting Funnels",
+        "Monthly Ad Spend Management (Up to $10,000/mo)",
+        "Bi-Weekly Performance Calls & Reporting",
+        "Short-Form Video Hook & Copywriting Strategy",
       ],
     },
     {
       id: "scale",
-      name: "Scale Business System",
-      price: "$1,200",
-      period: "one-time",
-      description: "Bespoke Next.js web application architecture built for high traffic, speed, and market leadership.",
+      name: "Scale Commercial Marketing",
+      price: "$1,499",
+      period: "month",
+      description: "Full multi-channel marketing & creative production for established brands scaling past 6-figures.",
       highlight: false,
-      badge: "Enterprise Ready",
+      badge: "Full Scale",
       features: [
-        "Up to 15 Custom Application Pages",
-        "Full Headless Next.js App Router Architecture",
-        "Custom API & Third-Party Integrations",
-        "Advanced Interactive Calculators & Components",
-        "Comprehensive On-Page AEO & GEO Citation Signals",
-        "Dedicated Lead Strategy Lead",
-        "Priority Support & Source Code Handover",
-        "2 Week Delivery",
+        "Full Multi-Channel Suite (Meta, TikTok & Google)",
+        "In-House Video & Graphic Ad Creative Production",
+        "Landing Page Conversion Rate Optimization (CRO)",
+        "Unlimited Ad Spend Management Scope",
+        "Weekly Strategy Calls & Live Performance Dashboard",
+        "Dedicated Marketing Director & Lead Media Buyer",
       ],
     },
   ];
@@ -84,17 +79,17 @@ export default function WebDesignPackagesPage() {
     <div className="pt-32 pb-24 px-4 sm:px-6 md:px-12 max-w-7xl mx-auto space-y-20">
       {/* 1. Header Section */}
       <section className="text-center space-y-5 max-w-4xl mx-auto">
-        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-[#E0DDDB] text-xs font-mono-num text-[#9F8BE7] font-bold shadow-xs">
+        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-[#E0DDDB] text-xs font-mono-num text-emerald-600 font-bold shadow-xs">
           <Sparkles className="w-3.5 h-3.5" />
-          <span>TRANSPARENT WEB PACKAGES</span>
+          <span>TRANSPARENT MARKETING PACKAGES</span>
         </div>
 
         <h1 className="font-display text-4xl sm:text-6xl font-bold tracking-tight text-[#161616]">
-          Web Design &amp; Development Packages
+          Digital Marketing &amp; Paid Ads Packages
         </h1>
 
         <p className="text-sm sm:text-base text-[#585858] font-body leading-relaxed max-w-2xl mx-auto">
-          Choose a web engineering package engineered for speed, conversion, and long-term scalability. Every plan includes 100% full source code ownership with zero hidden fees.
+          Scale your customer acquisition with data-backed paid ad campaigns across Meta, TikTok, and Google. Clear monthly management pricing with zero long-term lock-in contracts.
         </p>
       </section>
 
@@ -121,7 +116,7 @@ export default function WebDesignPackagesPage() {
                   {pkg.badge}
                 </span>
                 <span className={`text-xs font-mono-num font-bold ${pkg.highlight ? "text-[#9F8BE7]" : "text-emerald-600"}`}>
-                  Fixed Price
+                  Monthly Retainer
                 </span>
               </div>
 
@@ -155,7 +150,7 @@ export default function WebDesignPackagesPage() {
 
             <div className="pt-6">
               <ServiceProjectModalTrigger
-                service={`Web Design & Dev - ${pkg.name}`}
+                service={`Digital Marketing - ${pkg.name}`}
                 label={`Select ${pkg.name}`}
                 className={`w-full py-3.5 rounded-full font-display text-xs font-bold transition-all shadow-xs text-center justify-center ${
                   pkg.highlight
@@ -168,40 +163,40 @@ export default function WebDesignPackagesPage() {
         ))}
       </section>
 
-      {/* 3. Included Core Standards */}
+      {/* 3. Marketing Standards */}
       <section className="p-8 sm:p-10 rounded-3xl bg-[#FAF7F6] border border-[#E0DDDB] space-y-8 shadow-xs">
         <div className="text-center max-w-2xl mx-auto space-y-2">
-          <span className="text-xs font-mono-num text-[#9F8BE7] font-bold uppercase tracking-wider block">
-            BUILT-IN ENGINEERING STANDARDS
+          <span className="text-xs font-mono-num text-emerald-600 font-bold uppercase tracking-wider block">
+            CAMPAIGN PERFORMANCE STANDARDS
           </span>
           <h2 className="font-display text-2xl sm:text-3xl font-bold text-[#161616]">
-            Every Web Package Includes as Standard
+            Why Brands Scale Paid Marketing With UBE
           </h2>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           <div className="p-5 rounded-2xl bg-white border border-[#E0DDDB] space-y-2">
-            <Monitor className="w-6 h-6 text-[#9F8BE7]" />
-            <h4 className="font-display font-bold text-sm text-[#161616]">100% Mobile Responsive</h4>
-            <p className="text-xs text-[#585858]">Tested across 320px to 1440px+ viewports with zero horizontal overflow.</p>
+            <Target className="w-6 h-6 text-emerald-600" />
+            <h4 className="font-display font-bold text-sm text-[#161616]">Precision Audience Targeting</h4>
+            <p className="text-xs text-[#585858]">Data-driven audience segmentation, lookalikes, and intent-based retargeting.</p>
           </div>
 
           <div className="p-5 rounded-2xl bg-white border border-[#E0DDDB] space-y-2">
-            <Code className="w-6 h-6 text-emerald-600" />
-            <h4 className="font-display font-bold text-sm text-[#161616]">Full Source Code Ownership</h4>
-            <p className="text-xs text-[#585858]">You own all code, assets, repository access, and domain configurations.</p>
+            <TrendingUp className="w-6 h-6 text-[#9F8BE7]" />
+            <h4 className="font-display font-bold text-sm text-[#161616]">ROAS-Focused Optimization</h4>
+            <p className="text-xs text-[#585858]">Continuous bid management, budget reallocation, and ROAS scaling strategies.</p>
           </div>
 
           <div className="p-5 rounded-2xl bg-white border border-[#E0DDDB] space-y-2">
-            <Zap className="w-6 h-6 text-purple-600" />
-            <h4 className="font-display font-bold text-sm text-[#161616]">Sub-Second Speed Performance</h4>
-            <p className="text-xs text-[#585858]">Optimized Core Web Vitals, lightweight assets, and fast CDN delivery.</p>
+            <BarChart3 className="w-6 h-6 text-purple-600" />
+            <h4 className="font-display font-bold text-sm text-[#161616]">Transparent Analytics</h4>
+            <p className="text-xs text-[#585858]">Live dashboard reporting tracking true acquisition costs and revenue conversion.</p>
           </div>
 
           <div className="p-5 rounded-2xl bg-white border border-[#E0DDDB] space-y-2">
-            <ShieldCheck className="w-6 h-6 text-blue-600" />
-            <h4 className="font-display font-bold text-sm text-[#161616]">Security &amp; SSL Hardening</h4>
-            <p className="text-xs text-[#585858]">HTTPS security headers, API protections, and sanitized form submissions.</p>
+            <Users className="w-6 h-6 text-blue-600" />
+            <h4 className="font-display font-bold text-sm text-[#161616]">Dedicated Media Buyers</h4>
+            <p className="text-xs text-[#585858]">Direct communication with senior media strategists managing your ad spend.</p>
           </div>
         </div>
       </section>
@@ -209,22 +204,22 @@ export default function WebDesignPackagesPage() {
       {/* 4. Bottom Conversion Banner */}
       <section className="p-8 sm:p-12 rounded-3xl bg-[#161616] text-white text-center space-y-6 shadow-xl">
         <h2 className="font-display text-3xl sm:text-4xl font-bold tracking-tight">
-          Ready to Start Your Website Project?
+          Ready to Scale Your Paid Ads Return?
         </h2>
         <p className="text-sm text-[#ACACAC] max-w-lg mx-auto">
-          Connect with our Senior Strategy Director to review your specifications and select the right web package for your goals.
+          Schedule a strategy audit to review your current ad accounts, creative performance, and scale potential.
         </p>
         <div className="pt-2 flex flex-wrap items-center justify-center gap-4">
           <ServiceProjectModalTrigger
-            service="Web Design & Development"
-            label="Start Your Web Project"
+            service="Digital Marketing & Paid Ads"
+            label="Start Paid Ads Strategy"
             className="px-8 py-4 rounded-full bg-[#9F8BE7] text-[#161616] font-display font-bold text-sm hover:bg-[#b4a3f7] transition-all shadow-md"
           />
           <Link
-            href="/services/web-design-development"
+            href="/services/meta-ads"
             className="px-8 py-4 rounded-full border border-white/20 bg-white/5 hover:bg-white/10 text-white font-display font-bold text-sm transition-all"
           >
-            Explore Web Services Overview
+            Explore Meta &amp; Paid Ads Services
           </Link>
         </div>
       </section>

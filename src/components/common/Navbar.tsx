@@ -394,7 +394,7 @@ export default function Navbar() {
                           </Link>
 
                           <Link
-                            href="/our-website-development-packages"
+                            href="/web-design-packages"
                             onClick={() => setPackagesOpen(false)}
                             className="p-2 rounded-xl hover:bg-[#FAF7F6] block transition-colors group"
                           >
@@ -450,7 +450,7 @@ export default function Navbar() {
                           </Link>
 
                           <Link
-                            href="/our-digital-marketing-packages"
+                            href="/digital-marketing-packages"
                             onClick={() => setPackagesOpen(false)}
                             className="p-2 rounded-xl hover:bg-[#FAF7F6] block transition-colors group"
                           >

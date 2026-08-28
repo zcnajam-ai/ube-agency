@@ -74,9 +74,8 @@ const nextConfig: NextConfig = {
 
       // Legacy Package Overlaps -> Canonical Package Destinations
       { source: "/logo-design-packages", destination: "/branding-packages", permanent: true },
-      { source: "/web-design-packages", destination: "/packages", permanent: true },
-      { source: "/our-website-development-packages", destination: "/packages", permanent: true },
-      { source: "/our-digital-marketing-packages", destination: "/tiktok-marketing-packages", permanent: true },
+      { source: "/our-website-development-packages", destination: "/web-design-packages", permanent: true },
+      { source: "/our-digital-marketing-packages", destination: "/digital-marketing-packages", permanent: true },
       { source: "/our-custom-web-design-development-packages", destination: "/ecommerce-growth-packages", permanent: true },
       { source: "/our-content-writing-packages", destination: "/packages", permanent: true },
     ];

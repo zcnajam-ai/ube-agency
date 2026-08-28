@@ -23,9 +23,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: new Date(),
   }));
 
-  // 3. Dedicated Package Hub Pages (6)
+  // 3. Dedicated Package Hub Pages (8)
   const packageRoutes: MetadataRoute.Sitemap = [
     { url: `${baseUrl}/branding-packages`, lastModified: new Date() },
+    { url: `${baseUrl}/web-design-packages`, lastModified: new Date() },
+    { url: `${baseUrl}/digital-marketing-packages`, lastModified: new Date() },
     { url: `${baseUrl}/ai-seo-packages`, lastModified: new Date() },
     { url: `${baseUrl}/ai-automation-packages`, lastModified: new Date() },
     { url: `${baseUrl}/tiktok-marketing-packages`, lastModified: new Date() },
