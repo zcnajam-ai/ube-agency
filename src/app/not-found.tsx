@@ -42,6 +42,13 @@ export default function NotFound() {
             </Link>
 
             <Link
+              href="/work"
+              className="px-6 py-3 rounded-full bg-[#FAF7F6] border border-[#E0DDDB] hover:border-[#9F8BE7] text-[#161616] transition-all"
+            >
+              Our Work
+            </Link>
+
+            <Link
               href="/contact"
               className="px-6 py-3 rounded-full bg-[#9F8BE7] text-[#161616] hover:bg-[#b4a3f7] transition-all"
             >

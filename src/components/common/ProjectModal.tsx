@@ -6,6 +6,7 @@ import { X, CheckCircle2, Send, Sparkles, Phone, Mail } from "lucide-react";
 import confetti from "canvas-confetti";
 import { COMPANY_INFO } from "@/data/company";
 import { useScroll } from "@/components/providers/SmoothScrollProvider";
+import { trackLeadSubmit, trackPhoneClick, trackEmailClick } from "@/lib/analytics";
 
 export default function ProjectModal() {
   const { isProjectModalOpen, closeProjectModal, selectedServiceForModal } = useScroll();
@@ -123,6 +124,14 @@ export default function ProjectModal() {
       }
 
       setIsSubmitted(true);
+
+      // Track conversion event (safe parameters only, NO PII)
+      trackLeadSubmit({
+        service: activeService,
+        budget_range: finalBudget,
+        timeline: formData.timeline,
+        source_page: "ProjectModal",
+      });
 
       try {
         confetti({

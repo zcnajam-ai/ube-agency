@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import { Phone, Mail, MapPin, Sparkles, Send, CheckCircle2, ShieldCheck } from "lucide-react";
 import confetti from "canvas-confetti";
 import { COMPANY_INFO } from "@/data/company";
+import { trackLeadSubmit, trackPhoneClick, trackEmailClick } from "@/lib/analytics";
 
 export default function ContactClient() {
   const [formData, setFormData] = useState({
@@ -76,6 +77,15 @@ export default function ContactClient() {
       }
 
       setIsSubmitted(true);
+
+      // Track lead conversion event (safe properties, NO PII)
+      trackLeadSubmit({
+        service: formData.service,
+        budget_range: finalBudget,
+        timeline: formData.timeline,
+        source_page: "/contact",
+      });
+
       try {
         confetti({
           particleCount: 90,
@@ -123,6 +133,7 @@ export default function ContactClient() {
           <div className="space-y-4 text-sm font-mono-num">
             <a
               href={`tel:${COMPANY_INFO.phoneRaw}`}
+              onClick={() => trackPhoneClick(COMPANY_INFO.phone)}
               className="flex items-center gap-3 p-4 rounded-2xl bg-[#FAF7F6] border border-[#E0DDDB] hover:border-[#9F8BE7] transition-all text-[#161616]"
             >
               <div className="w-9 h-9 rounded-xl bg-[#9F8BE7]/20 flex items-center justify-center text-[#161616] font-bold">
@@ -136,6 +147,7 @@ export default function ContactClient() {
 
             <a
               href={`mailto:${COMPANY_INFO.email}`}
+              onClick={() => trackEmailClick(COMPANY_INFO.email)}
               className="flex items-center gap-3 p-4 rounded-2xl bg-[#FAF7F6] border border-[#E0DDDB] hover:border-[#9F8BE7] transition-all text-[#161616]"
             >
               <div className="w-9 h-9 rounded-xl bg-[#9F8BE7]/20 flex items-center justify-center text-[#161616] font-bold">

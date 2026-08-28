@@ -7,6 +7,7 @@ import Footer from "@/components/common/Footer";
 import ProjectModal from "@/components/common/ProjectModal";
 import SchemaOrg from "@/components/seo/SchemaOrg";
 import ConciergeProvider from "@/components/concierge/ConciergeProvider";
+import AnalyticsScripts from "@/components/analytics/AnalyticsScripts";
 import { COMPANY_INFO } from "@/data/company";
 
 const funnelDisplay = Funnel_Display({
@@ -108,6 +109,9 @@ export default function RootLayout({
       className={`${funnelDisplay.variable} ${funnelSans.variable} ${spaceGrotesk.variable} antialiased selection:bg-[#9F8BE7] selection:text-[#161616]`}
     >
       <body className="bg-[#FAF7F6] text-[#161616] font-body flex flex-col min-h-screen relative overflow-x-hidden">
+        {/* GA4, Google Ads, and Meta Pixel Analytics Scripts */}
+        <AnalyticsScripts />
+
         {/* Organization & WebSite JSON-LD Schema */}
         <SchemaOrg />
 
