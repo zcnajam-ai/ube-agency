@@ -36,8 +36,8 @@ export const metadata: Metadata = {
     images: [
       {
         url: "https://unifiedbrandingexperts.com/images/official/digital-marketing/digital-marketing-hero.webp",
-        width: 1200,
-        height: 630,
+        width: 2048,
+        height: 676,
         alt: "Digital marketing campaign dashboard showing Google Ads, Meta Ads, TikTok and conversion performance",
       },
     ],
@@ -181,16 +181,16 @@ export default function DigitalMarketingServiceHubPage() {
             </div>
           </div>
 
-          {/* HERO VISUAL (45-50% Desktop Width, Responsive Container) */}
+          {/* HERO VISUAL (Exact Intrinsic 2048/676 Aspect Ratio Container) */}
           <div className="lg:col-span-5 relative w-full">
-            <div className="relative aspect-[16/10] sm:aspect-[4/3] w-full rounded-3xl overflow-hidden border border-[#E0DDDB] shadow-lg bg-[#FAF7F6] group">
+            <div className="relative w-full aspect-[2048/676] rounded-3xl overflow-hidden border border-[#E0DDDB] shadow-lg bg-white group">
               <Image
                 src="/images/official/digital-marketing/digital-marketing-hero.webp"
                 alt="Digital marketing campaign dashboard showing Google Ads, Meta Ads, TikTok and conversion performance"
                 fill
                 priority
                 sizes="(max-width: 1024px) 100vw, 45vw"
-                className="object-cover object-center group-hover:scale-[1.02] transition-transform duration-500"
+                className="object-contain object-center group-hover:scale-[1.01] transition-transform duration-500"
               />
             </div>
           </div>
@@ -297,13 +297,13 @@ export default function DigitalMarketingServiceHubPage() {
           </div>
 
           <div className="lg:col-span-5 relative w-full">
-            <div className="relative aspect-[16/10] sm:aspect-[4/3] w-full rounded-2xl overflow-hidden border border-[#E0DDDB] bg-white shadow-md">
+            <div className="relative w-full aspect-[1024/684] rounded-2xl overflow-hidden border border-[#E0DDDB] bg-white shadow-md">
               <Image
                 src="/images/official/digital-marketing/digital-marketing-funnel.webp"
                 alt="Full-funnel digital marketing approach from brand awareness to customer retention"
                 fill
                 sizes="(max-width: 1024px) 100vw, 40vw"
-                className="object-cover object-center"
+                className="object-contain object-center"
               />
             </div>
           </div>

@@ -30,8 +30,8 @@ export const metadata: Metadata = {
     images: [
       {
         url: "https://unifiedbrandingexperts.com/images/official/shopify/shopify-development-hero.webp",
-        width: 1200,
-        height: 630,
+        width: 2048,
+        height: 684,
         alt: "Shopify store setup and custom theme development with responsive storefront and ecommerce performance analytics",
       },
     ],
@@ -56,7 +56,7 @@ export default function ShopifyDevelopmentPage() {
       title: "3PL, ERP & Multi-Warehouse Inventory Sync",
       desc: "Automated synchronization with fulfillment centers, ShipStation, multi-location warehouse routing, and dropshipping supplier feeds (DSers, CJ).",
       icon: <Truck className="w-5 h-5 text-purple-600" />,
-      image: "/images/official/ecommerce/inventory-sync.jpeg",
+      image: "/images/official/ecommerce/multichannel-growth.jpeg",
     },
     {
       title: "Performance & Core Web Vitals Optimization",
@@ -196,18 +196,18 @@ export default function ShopifyDevelopmentPage() {
           </div>
         </div>
 
-        {/* HERO VISUAL (45-50% Desktop Width, Responsive Container) */}
+        {/* HERO VISUAL (Exact Intrinsic 2048/684 Aspect Ratio Container) */}
         <div className="lg:col-span-5 relative w-full">
-          <div className="relative aspect-[16/10] sm:aspect-[4/3] w-full rounded-3xl overflow-hidden bg-white border border-[#E0DDDB] shadow-md group">
+          <div className="relative w-full aspect-[2048/684] rounded-3xl overflow-hidden bg-white border border-[#E0DDDB] shadow-md group">
             <Image
               src="/images/official/shopify/shopify-development-hero.webp"
               alt="Shopify store setup and custom theme development with responsive storefront and ecommerce performance analytics"
               fill
               priority
               sizes="(max-width: 1024px) 100vw, 45vw"
-              className="object-cover object-center transition-transform duration-700 group-hover:scale-105"
+              className="object-contain object-center transition-transform duration-700 group-hover:scale-[1.01]"
             />
-            <div className="absolute bottom-4 left-4 right-4 p-4 rounded-2xl bg-white/90 backdrop-blur-md border border-[#E0DDDB] text-xs font-mono-num text-[#161616] flex items-center justify-between shadow-xs">
+            <div className="absolute bottom-3 left-3 right-3 p-3 rounded-2xl bg-white/90 backdrop-blur-md border border-[#E0DDDB] text-xs font-mono-num text-[#161616] flex items-center justify-between shadow-xs">
               <span className="font-bold">SHOPIFY • DROPSHIPPING • ECOMMERCE</span>
               <span className="text-emerald-600 font-bold">FROM $450</span>
             </div>
@@ -218,13 +218,13 @@ export default function ShopifyDevelopmentPage() {
       {/* 2. DEEP DIVE (WITH SHOPIFY PERFORMANCE VISUAL) */}
       <section className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
         <div className="lg:col-span-6 order-2 lg:order-1">
-          <div className="relative aspect-[16/10] sm:aspect-[4/3] w-full rounded-3xl overflow-hidden bg-white border border-[#E0DDDB] shadow-sm">
+          <div className="relative w-full aspect-[1024/684] rounded-3xl overflow-hidden bg-white border border-[#E0DDDB] shadow-sm">
             <Image
               src="/images/official/shopify/shopify-performance.webp"
               alt="Shopify mobile storefront optimization, fast loading speeds, and checkout conversion features"
               fill
               sizes="(max-width: 1024px) 100vw, 50vw"
-              className="object-cover object-center"
+              className="object-contain object-center"
             />
           </div>
         </div>
