@@ -28,6 +28,7 @@ export interface InsightArticle {
   slug: string;
   title: string;
   h1?: string;
+  disableFaqSchema?: boolean;
   kicker: string;
   category: string;
   readTime: string;
@@ -623,6 +624,7 @@ export const INSIGHTS: InsightArticle[] = [
     slug: "shopify-ai-seo-guide",
     title: "Shopify AI SEO: Optimize for ChatGPT, Gemini & AI Search in 2026",
     h1: "Shopify AI SEO: How to Optimize Your Store for ChatGPT, Gemini & AI Search in 2026",
+    disableFaqSchema: true,
     kicker: "Shopify AI Commerce",
     category: "eCommerce & AI SEO",
     readTime: "14 min read",
@@ -691,7 +693,7 @@ export const INSIGHTS: InsightArticle[] = [
           "<strong>10. Optimize Product Images for Search and AI Discovery:</strong> Provide high-quality photography, multiple angles, modern formats (WebP), and descriptive alt text (e.g. <em>'Men's black waterproof trail running shoe, side view'</em>).",
           "<strong>11. Complete Shipping, Returns and Store Policies:</strong> Maintain clear Shipping, Return/Refund, Privacy, Terms, and Contact policy pages. Shopify requires core store policies for participation in agentic storefront experiences.",
           "<strong>12. Use Shopify Knowledge Base Where Appropriate:</strong> Utilize Shopify's Knowledge Base app to review and customize store FAQs used by AI shopping agents, ensuring policy and store answers remain accurate.",
-          "<strong>13. Strengthen Brand and Store Entity Signals:</strong> Communicate brand story, contact info, real reviews, and Organization structured data so search engines recognize your store as an established brand.",
+          "<strong>13. Strengthen Brand and Store Entity Signals:</strong> Communicate brand story, contact info, real reviews, and Organization structured data so search engines recognize your store as an established brand. For example, in our custom <a href=\"/work/happy-knot-creations-shopify-storefront\" className=\"text-[#9F8BE7] underline font-medium hover:text-[#161616]\">Happy Knot Creations D2C Shopify storefront</a>, unifying brand visual identity with clean Product schema and structured collection taxonomy strengthened mobile user experience and search discoverability.",
           "<strong>14. Build Supporting Informational Content:</strong> Publish educational buying guides (e.g. <em>'Best Golf Polo Materials for Hot Weather'</em>) that naturally link internally to commercial collections and products.",
           "<strong>15. Build External Product and Brand Authority:</strong> Earn genuine customer reviews, editorial mentions, product reviews, and creator coverage to provide independent corroboration across the web."
         ]

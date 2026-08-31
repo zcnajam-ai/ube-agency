@@ -137,7 +137,7 @@ export default async function InsightArticlePage({
     ],
   };
 
-  const faqSchema = article.faqs && article.faqs.length > 0 ? {
+  const faqSchema = !article.disableFaqSchema && article.faqs && article.faqs.length > 0 ? {
     "@context": "https://schema.org",
     "@type": "FAQPage",
     mainEntity: article.faqs.map((faq) => ({
