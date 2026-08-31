@@ -27,6 +27,7 @@ export interface InsightArticle {
   id: string;
   slug: string;
   title: string;
+  h1?: string;
   kicker: string;
   category: string;
   readTime: string;
@@ -421,6 +422,7 @@ export const INSIGHTS: InsightArticle[] = [
     id: "insight-how-to-optimize-for-google-ai-overviews",
     slug: "how-to-optimize-for-google-ai-overviews",
     title: "How to Optimize for Google AI Overviews: 10 Steps for 2026",
+    h1: "How to Optimize Your Website for Google AI Overviews in 2026",
     kicker: "Google AI Search Guide",
     category: "AI Search & Discovery",
     readTime: "11 min read",

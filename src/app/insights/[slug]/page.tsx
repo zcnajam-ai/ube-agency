@@ -200,7 +200,7 @@ export default async function InsightArticlePage({
           </div>
 
           <h1 className="font-display text-3xl sm:text-5xl md:text-6xl font-bold tracking-tight text-[#161616] leading-[1.15]">
-            {article.title}
+            {article.h1 || article.title}
           </h1>
 
           <p className="text-base sm:text-xl text-[#585858] font-body leading-relaxed max-w-4xl">
