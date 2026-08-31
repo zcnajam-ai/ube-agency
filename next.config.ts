@@ -6,10 +6,10 @@ const cspHeader = `
   style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
   img-src 'self' blob: data: https:;
   font-src 'self' https://fonts.gstatic.com data:;
-  object-src 'none';
+  object-src 'self' blob: data:;
   base-uri 'self';
   form-action 'self';
-  frame-ancestors 'none';
+  frame-ancestors 'self';
   connect-src 'self' https:;
   upgrade-insecure-requests;
 `.replace(/\s{2,}/g, ' ').trim();
@@ -29,7 +29,7 @@ const securityHeaders = [
   },
   {
     key: "X-Frame-Options",
-    value: "DENY",
+    value: "SAMEORIGIN",
   },
   {
     key: "Referrer-Policy",
@@ -56,6 +56,13 @@ const nextConfig: NextConfig = {
   },
   async headers() {
     return [
+      {
+        source: "/case-studies/(.*)",
+        headers: [
+          { key: "X-Frame-Options", value: "SAMEORIGIN" },
+          { key: "Content-Security-Policy", value: "default-src 'self'; object-src 'self' blob: data:; frame-ancestors 'self';" },
+        ],
+      },
       {
         source: "/(.*)",
         headers: securityHeaders,
