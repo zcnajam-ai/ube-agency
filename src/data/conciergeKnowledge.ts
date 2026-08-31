@@ -645,8 +645,8 @@ export const UBE_COMPANY_KNOWLEDGE = {
   location: "Texas, USA",
   experience: "15+ Years of Digital Craft",
   ratings: {
-    trustpilot: "4.9 / 5.0 (142+ Reviews)",
-    google: "5.0 / 5.0 (88+ Verified Reviews)",
+    trustpilot: "Verified Trustpilot Profile (Read Reviews)",
+    google: "Verified Google Business Profile (Read Reviews)",
   },
   process: [
     { step: 1, name: "Discovery & Scope Alignment", desc: "Understanding goals, audience, and technical specs." },

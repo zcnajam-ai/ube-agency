@@ -89,7 +89,7 @@ export default function Footer() {
                   rel="noopener noreferrer"
                   className="hover:text-[#9F8BE7] transition-colors"
                 >
-                  Trustpilot <strong className="text-white">4.9/5</strong>
+                  Trustpilot Profile <strong className="text-white">(Read Reviews)</strong>
                 </a>
               </div>
               <div className="flex items-center gap-2 text-[#ACACAC]">
@@ -100,7 +100,7 @@ export default function Footer() {
                   rel="noopener noreferrer"
                   className="hover:text-[#9F8BE7] transition-colors"
                 >
-                  Google Reviews <strong className="text-white">5.0/5</strong>
+                  Google Business <strong className="text-white">(Read Reviews)</strong>
                 </a>
               </div>
             </div>
