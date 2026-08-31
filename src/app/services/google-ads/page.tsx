@@ -22,7 +22,7 @@ import ServiceProjectModalTrigger from "@/components/services/ServiceProjectModa
 import { COMPANY_INFO } from "@/data/company";
 
 export const metadata: Metadata = {
-  title: "Google Ads Management & Performance Max | Unified Branding Experts",
+  title: "Google Ads Management & Performance Max",
   description:
     "Google Ads management for businesses ready to reach high-intent customers. Search, Shopping and Performance Max campaigns with conversion tracking, landing page alignment and ongoing optimization.",
   alternates: {

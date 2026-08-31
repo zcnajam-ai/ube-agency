@@ -11,7 +11,7 @@ import { Heading3DSparkle } from "@/components/common/Brand3DIcons";
 import PortfolioAutoScroll from "@/components/work/PortfolioAutoScroll";
 
 export const metadata: Metadata = {
-  title: "Our Work & Case Studies | Unified Branding Experts",
+  title: "Our Work & Case Studies",
   description:
     "Explore case studies in custom Shopify eCommerce, brand identity design, Next.js web applications, and multi-channel performance marketing.",
   alternates: {

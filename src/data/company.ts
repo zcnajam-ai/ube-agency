@@ -102,12 +102,12 @@ export const COMPANY_INFO: CompanyInfo = {
   },
   ratings: {
     trustpilot: {
-      score: "4.9/5.0",
+      score: "Verified Profile",
       reviewsCount: 142,
       url: "https://www.trustpilot.com/review/unifiedbrandingexperts.com",
     },
     google: {
-      score: "5.0/5.0",
+      score: "Verified Profile",
       reviewsCount: 88,
       url: "https://share.google/vER55Ui41l2QeKXT9",
     },

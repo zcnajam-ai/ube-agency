@@ -22,7 +22,7 @@ import ServiceProjectModalTrigger from "@/components/services/ServiceProjectModa
 import { COMPANY_INFO } from "@/data/company";
 
 export const metadata: Metadata = {
-  title: "Mobile App Development Services | iOS, Android & Cross-Platform | Unified Branding Experts",
+  title: "Mobile App Development Services | iOS, Android & Cross-Platform",
   description:
     "Build a mobile app your customers keep. UBE designs and develops iOS, Android and cross-platform apps with user-focused UI/UX, backend integrations, testing and launch support.",
   alternates: {

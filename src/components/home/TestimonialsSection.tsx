@@ -79,8 +79,8 @@ export default function TestimonialsSection() {
               >
                 <TrustpilotOfficialIcon size={22} />
                 <div className="text-left leading-tight">
-                  <span className="text-[#161616] font-bold block text-xs">4.9 / 5.0</span>
-                  <span className="text-[10px] text-[#585858]">Trustpilot Reviews</span>
+                  <span className="text-[#161616] font-bold block text-xs">Read Reviews</span>
+                  <span className="text-[10px] text-[#585858]">Trustpilot Profile</span>
                 </div>
               </a>
 
@@ -92,8 +92,8 @@ export default function TestimonialsSection() {
               >
                 <GoogleOfficialIcon size={22} />
                 <div className="text-left leading-tight">
-                  <span className="text-[#161616] font-bold block text-xs">5.0 / 5.0</span>
-                  <span className="text-[10px] text-[#585858]">Google Reviews</span>
+                  <span className="text-[#161616] font-bold block text-xs">Read Reviews</span>
+                  <span className="text-[10px] text-[#585858]">Google Profile</span>
                 </div>
               </a>
             </div>

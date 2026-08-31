@@ -16,7 +16,7 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "AI SEO Services | AEO, GEO & Search Optimization | Unified Branding Experts",
+  title: "AI SEO Services | AEO, GEO & Search Optimization",
   description:
     "Get found in Google AI Overviews, ChatGPT, Bing Copilot, and generative search. Answer Engine Optimization (AEO), Generative Engine Optimization (GEO), and structured data.",
   alternates: {

@@ -25,7 +25,7 @@ import ServiceProjectModalTrigger from "@/components/services/ServiceProjectModa
 import { COMPANY_INFO } from "@/data/company";
 
 export const metadata: Metadata = {
-  title: "Website Design & Custom Web Development | Unified Branding Experts",
+  title: "Website Design & Custom Web Development",
   description:
     "Custom website design and web development for businesses that need speed, usability and room to grow. UBE builds responsive websites, custom platforms, WordPress solutions and modern web applications with SEO-ready architecture.",
   alternates: {

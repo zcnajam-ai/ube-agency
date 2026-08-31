@@ -16,7 +16,7 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Branding Services & Brand Identity | Unified Branding Experts",
+  title: "Branding Services & Brand Identity",
   description:
     "Custom logo design, brand strategy, visual identity systems, brand guidelines, and rebranding. Built to make your business recognizable, memorable, and trusted.",
   alternates: {

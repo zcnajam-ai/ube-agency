@@ -24,7 +24,7 @@ import ServiceProjectModalTrigger from "@/components/services/ServiceProjectModa
 import { COMPANY_INFO } from "@/data/company";
 
 export const metadata: Metadata = {
-  title: "Meta Ads Management | Facebook & Instagram Advertising | Unified Branding Experts",
+  title: "Meta Ads Management | Facebook & Instagram Advertising",
   description:
     "Facebook and Instagram advertising built around creative testing, audience strategy, retargeting and conversion measurement. UBE manages Meta Ads for eCommerce, lead generation and growth campaigns.",
   alternates: {

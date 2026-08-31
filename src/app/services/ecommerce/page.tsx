@@ -23,7 +23,7 @@ import EcommerceAutomationVisual from "@/components/services/EcommerceAutomation
 import ServiceProjectModalTrigger from "@/components/services/ServiceProjectModalTrigger";
 
 export const metadata: Metadata = {
-  title: "eCommerce Growth Services | Shopify, Amazon, Etsy & eBay | Unified Branding Experts",
+  title: "eCommerce Growth Services | Shopify, Amazon, Etsy & eBay",
   description:
     "Grow your online business across Shopify, Amazon, Etsy and eBay with professional store development, marketplace optimization, product SEO, automation and multi-channel eCommerce strategy from Unified Branding Experts.",
   alternates: {

@@ -19,7 +19,7 @@ import {
 import ServiceProjectModalTrigger from "@/components/services/ServiceProjectModalTrigger";
 
 export const metadata: Metadata = {
-  title: "Digital Marketing Services | Google Ads, Meta Ads & TikTok | Unified Branding Experts",
+  title: "Digital Marketing Services | Google Ads, Meta Ads & TikTok",
   description:
     "Integrated digital marketing services across Google Ads, Meta Ads (Facebook & Instagram), TikTok Marketing, and paid social performance funnels engineered for revenue growth.",
   alternates: {
