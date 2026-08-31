@@ -391,7 +391,7 @@ export default function FixoriaEditorialGallery() {
           {/* PDF Viewer Header */}
           <div className="p-4 sm:p-5 bg-[#161616] border-b border-[#333] flex items-center justify-between gap-4 shrink-0">
             <div className="flex items-center gap-3 min-w-0">
-              <div className="w-8 h-8 rounded-lg bg-[#FFE600]/20 border border-[#FFE600]/40 flex items-center justify-center text-[#FFE600] font-bold text-xs shrink-0">
+              <div className="w-9 h-9 rounded-xl bg-[#FFE600]/20 border border-[#FFE600]/40 flex items-center justify-center text-[#FFE600] font-bold text-xs shrink-0 shadow-xs">
                 PDF
               </div>
               <div className="min-w-0">
@@ -399,21 +399,21 @@ export default function FixoriaEditorialGallery() {
                   Fixoria Studio Complete Brand Portfolio
                 </h3>
                 <span className="text-[11px] text-[#A0A0A0] font-mono-num block">
-                  Official Presentation • 1.52 MB
+                  Official Presentation Document • 1.52 MB
                 </span>
               </div>
             </div>
 
-            <div className="flex items-center gap-3 shrink-0">
+            <div className="flex items-center gap-2 sm:gap-3 shrink-0">
               <a
                 href="/case-studies/fixoria/portfolio/fixoria-complete-portfolio.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-3.5 py-1.5 rounded-full bg-white/10 hover:bg-white/20 text-white text-xs font-mono-num flex items-center gap-1.5 transition-colors"
+                className="px-3.5 py-1.5 rounded-full bg-[#FFE600] hover:bg-[#ebd300] text-[#161616] font-display font-bold text-xs flex items-center gap-1.5 transition-all shadow-md"
                 title="Open PDF in new browser tab"
               >
-                <ExternalLink className="w-3.5 h-3.5 text-[#FFE600]" />
-                <span className="hidden sm:inline">Open in New Tab</span>
+                <ExternalLink className="w-3.5 h-3.5 text-[#161616]" />
+                <span>Open Direct</span>
               </a>
 
               <button
@@ -427,26 +427,60 @@ export default function FixoriaEditorialGallery() {
             </div>
           </div>
 
-          {/* PDF Viewer Body (iframe with touch scrolling) */}
-          <div className="flex-1 w-full bg-[#1e1e1e] relative overflow-hidden flex items-center justify-center">
-            <iframe
-              src="/case-studies/fixoria/portfolio/fixoria-complete-portfolio.pdf#toolbar=1&navpanes=0"
-              title="Fixoria Studio Complete Brand Portfolio PDF"
+          {/* PDF Viewer Body (Robust Multi-Layer Object/Iframe & Mobile Fallback) */}
+          <div className="flex-1 w-full bg-[#1c1c1c] relative overflow-hidden flex flex-col items-center justify-center">
+            <object
+              data="/case-studies/fixoria/portfolio/fixoria-complete-portfolio.pdf"
+              type="application/pdf"
               className="w-full h-full border-0 block"
-            />
+            >
+              <iframe
+                src="/case-studies/fixoria/portfolio/fixoria-complete-portfolio.pdf#toolbar=1&navpanes=0"
+                title="Fixoria Studio Complete Brand Portfolio PDF"
+                className="w-full h-full border-0 block"
+              >
+                {/* Fallback for browsers blocking PDF embeds */}
+                <div className="p-8 text-center text-white space-y-4 my-auto">
+                  <FileText className="w-16 h-16 text-[#FFE600] mx-auto animate-pulse" />
+                  <h4 className="text-xl font-bold font-display text-white">Fixoria Studio Complete Portfolio</h4>
+                  <p className="text-xs sm:text-sm text-[#A0A0A0] max-w-md mx-auto leading-relaxed font-body">
+                    Your browser has restricted inline PDF previews. Tap below to view the presentation directly or download the document.
+                  </p>
+                  <div className="flex flex-wrap items-center justify-center gap-3 pt-2">
+                    <a
+                      href="/case-studies/fixoria/portfolio/fixoria-complete-portfolio.pdf"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="px-6 py-3 rounded-full bg-[#FFE600] text-[#161616] font-display font-bold text-xs sm:text-sm flex items-center gap-2 shadow-lg"
+                    >
+                      <ExternalLink className="w-4 h-4" />
+                      <span>Open PDF in New Tab</span>
+                    </a>
+                    <a
+                      href="/case-studies/fixoria/portfolio/fixoria-complete-portfolio.pdf"
+                      download
+                      className="px-6 py-3 rounded-full bg-white/10 hover:bg-white/20 text-white font-mono-num text-xs flex items-center gap-2"
+                    >
+                      <Download className="w-4 h-4" />
+                      <span>Download PDF</span>
+                    </a>
+                  </div>
+                </div>
+              </iframe>
+            </object>
           </div>
 
           {/* PDF Viewer Footer */}
-          <div className="p-3 bg-[#161616] border-t border-[#333] flex items-center justify-between text-xs font-mono-num text-[#888] shrink-0">
+          <div className="p-3.5 bg-[#161616] border-t border-[#333] flex items-center justify-between text-xs font-mono-num text-[#888] shrink-0">
             <span>Fixoria Studio Complete Portfolio Presentation</span>
             <div className="flex items-center gap-4">
               <a
                 href="/case-studies/fixoria/portfolio/fixoria-complete-portfolio.pdf"
                 download
-                className="text-[#FFE600] hover:underline flex items-center gap-1"
+                className="text-[#FFE600] hover:underline flex items-center gap-1 font-bold"
               >
                 <Download className="w-3.5 h-3.5" />
-                <span>Download PDF</span>
+                <span>Download PDF File (1.52 MB)</span>
               </a>
             </div>
           </div>
