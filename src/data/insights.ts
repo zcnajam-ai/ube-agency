@@ -138,7 +138,7 @@ export const INSIGHTS: InsightArticle[] = [
         body: [
           "AI models prioritize content that provides unambiguous factual data. To improve citation eligibility in Google AI Overviews and ChatGPT Search, structure key sections using answer-first formatting.",
           "Begin sections with a direct definition, follow with bulleted supporting facts, and conclude with concrete operational details. Avoid generic buzzwords or unsupported claims, as AI engines filter out promotional filler.",
-          "For example, in our recent <a href=\"/work/hyperscale-aiseo-paid-acquisition\" className=\"text-[#9F8BE7] underline font-medium hover:text-[#161616]\">AI SEO case study</a>, structuring technical schema and entity graphs significantly expanded organic search discovery and citation eligibility. Read our complete guide on <a href=\"/insights/how-to-get-your-business-mentioned-in-chatgpt\" className=\"text-[#9F8BE7] underline font-medium hover:text-[#161616]\">how to improve your business visibility in ChatGPT</a> for step-by-step execution."
+          "For example, in our recent <a href=\"/work/hyperscale-aiseo-paid-acquisition\" className=\"text-[#9F8BE7] underline font-medium hover:text-[#161616]\">AI SEO case study</a>, structuring technical schema and entity graphs significantly expanded organic search discovery and citation eligibility. Read our complete guide on <a href=\"/insights/how-to-get-your-business-mentioned-in-chatgpt\" className=\"text-[#9F8BE7] underline font-medium hover:text-[#161616]\">how to improve your business visibility in ChatGPT</a>, or learn <a href=\"/insights/how-to-optimize-for-google-ai-overviews\" className=\"text-[#9F8BE7] underline font-medium hover:text-[#161616]\">how to optimize for Google AI Overviews</a> using official Google Search Central standards."
         ]
       },
       {
@@ -356,7 +356,8 @@ export const INSIGHTS: InsightArticle[] = [
           "• <a href=\"https://platform.openai.com/docs/bots/oai-searchbot\" target=\"_blank\" rel=\"noopener noreferrer\" className=\"text-[#9F8BE7] underline font-medium hover:text-[#161616]\">OpenAI OAI-SearchBot Documentation</a> — Official specification for OpenAI's search discovery crawler.",
           "• <a href=\"https://help.openai.com/en/articles/10008544-chatgpt-search\" target=\"_blank\" rel=\"noopener noreferrer\" className=\"text-[#9F8BE7] underline font-medium hover:text-[#161616]\">OpenAI ChatGPT Search & Publisher Guidance</a> — Guidance on public website eligibility, retrieval factors, and UTM referral tracking.",
           "• <a href=\"https://platform.openai.com/docs/bots/gptbot\" target=\"_blank\" rel=\"noopener noreferrer\" className=\"text-[#9F8BE7] underline font-medium hover:text-[#161616]\">OpenAI GPTBot Documentation</a> — Specifications for model training crawlers and robots.txt rules.",
-          "• <a href=\"/insights/ai-seo-aeo-geo-guide\" className=\"text-[#9F8BE7] underline font-medium hover:text-[#161616]\">AI SEO, AEO & GEO: Complete Guide for 2026</a> — Unified Branding Experts primary authority framework for AI search optimization."
+          "• <a href=\"/insights/ai-seo-aeo-geo-guide\" className=\"text-[#9F8BE7] underline font-medium hover:text-[#161616]\">AI SEO, AEO & GEO: Complete Guide for 2026</a> — Unified Branding Experts primary authority framework for AI search optimization.",
+          "• <a href=\"/insights/how-to-optimize-for-google-ai-overviews\" className=\"text-[#9F8BE7] underline font-medium hover:text-[#161616]\">How to Optimize Your Website for Google AI Overviews</a> — 10-step guide based on official Google Search Central guidance."
         ]
       }
     ],
@@ -415,6 +416,204 @@ export const INSIGHTS: InsightArticle[] = [
     }
   },
 
+  // 2. How to Optimize Your Website for Google AI Overviews in 2026 (Supporting Article #2)
+  {
+    id: "insight-how-to-optimize-for-google-ai-overviews",
+    slug: "how-to-optimize-for-google-ai-overviews",
+    title: "How to Optimize for Google AI Overviews: 10 Steps for 2026",
+    kicker: "Google AI Search Guide",
+    category: "AI Search & Discovery",
+    readTime: "11 min read",
+    publishedAt: "August 2026",
+    updatedAt: "August 2026",
+    author: {
+      name: "Unified Branding Experts Editorial Team",
+      role: "AI Search & Web Engineering Group",
+      avatar: "/images/logo/ube-png-black.png",
+    },
+    summary:
+      "Learn 10 practical ways to improve your website's eligibility and visibility in Google AI Overviews and AI Mode using Google's current search guidance.",
+    coverImage: "/images/projects/project-marketing-3.webp",
+    primaryIntent: "how to optimize for Google AI Overviews",
+    quickAnswer:
+      "Optimizing for Google AI Overviews and AI Mode relies on established SEO foundations: ensuring pages are indexed and eligible for snippets, satisfying real search intent, structuring content with direct self-contained answers, building topical depth through query fan-out coverage, and verifying entity data. Google explicitly states there are no special AI markup tags or secret algorithms — eligibility is built through standard technical SEO and helpful, authoritative content.",
+    tableOfContents: [
+      { id: "what-are-google-ai-overviews", title: "What Are Google AI Overviews & AI Mode?" },
+      { id: "how-google-finds-sources-for-ai-search", title: "How Does Google Find Sources for AI Search?" },
+      { id: "can-you-optimize-specifically", title: "Can You Optimize Specifically for Google AI Overviews?" },
+      { id: "10-ways-to-improve-visibility", title: "10 Ways to Improve Visibility in Google AI Overviews" },
+      { id: "what-google-says-you-dont-need", title: "What Google Says You DON'T Need (Debunking AI SEO Hacks)" },
+      { id: "ai-overviews-vs-traditional-search", title: "AI Overviews vs. Traditional Search & Measurement" },
+      { id: "google-ai-overview-checklist", title: "Actionable 2026 Google AI Overview Checklist" },
+      { id: "sources-and-further-reading", title: "Official Google Sources & Further Reading" },
+    ],
+    sections: [
+      {
+        id: "what-are-google-ai-overviews",
+        h2: "What Are Google AI Overviews & AI Mode?",
+        body: [
+          "Google Search is evolving beyond the traditional list of organic results. AI Overviews and AI Mode can help users research complex questions, compare options and explore topics through AI-generated responses supported by links to web sources.",
+          "<strong>What Are Google AI Overviews?</strong><br>AI Overviews are AI-generated summaries that Google may display for searches where its systems determine that an overview can provide additional value beyond traditional search results. These responses can include links to supporting websites so users can explore the subject further.",
+          "AI Overviews are particularly useful for questions where users may benefit from information synthesized across multiple sources or concepts. They do not appear for every query. Google determines when an AI Overview adds value to the search experience.",
+          "<strong>What Is Google AI Mode?</strong><br>AI Mode provides a more conversational and exploratory Google Search experience. Users can ask longer, more nuanced questions and continue with follow-up questions.",
+          "Google describes AI Mode as particularly useful for complex questions, comparisons, exploration, reasoning-oriented searches, and multi-part research. AI Mode responses can include links to websites supporting different parts of the generated response.",
+          "From an SEO perspective, this means businesses should think beyond one keyword and one result page. Content needs to provide genuine value across the broader topic surrounding a user's question."
+        ],
+        callout: {
+          title: "Google Official Guidance",
+          text: "Google states that its established SEO best practices continue to apply to AI features in Search. There is no secret 'AI Overview schema' or shortcut that guarantees inclusion.",
+          type: "info"
+        }
+      },
+      {
+        id: "how-google-finds-sources-for-ai-search",
+        h2: "How Does Google Find Sources for AI Search?",
+        body: [
+          "Google states that AI Overviews and AI Mode are rooted in its core Search ranking and quality systems. Google's generative AI features can retrieve information from its Search index and may use techniques such as retrieval-augmented generation to ground generated responses in relevant web information.",
+          "Google also describes a technique called <strong>query fan-out</strong>. Instead of relying only on the exact query typed by the user, Google's systems may perform multiple related searches across subtopics and data sources while developing an AI response.",
+          "For example, when a user asks: <em>'What's the best way to improve a Shopify store that gets traffic but isn't generating enough sales?'</em> related information could involve:",
+          "• <a href=\"/services/ecommerce\" className=\"text-[#9F8BE7] underline font-medium hover:text-[#161616]\">Shopify conversion optimization</a> and product-page UX<br>• Store speed, mobile usability, and checkout friction<br>• Product descriptions, trust signals, and analytics setup",
+          "This is one reason comprehensive topical expertise can be more valuable than repeating one exact keyword throughout a page."
+        ]
+      },
+      {
+        id: "can-you-optimize-specifically",
+        h2: "Can You Optimize Specifically for Google AI Overviews?",
+        body: [
+          "Yes — but not through a secret AI-specific ranking trick.",
+          "Google states that the SEO practices used for Search overall continue to apply to AI Overviews and AI Mode. To be eligible as a supporting link, a page must be indexed and eligible to appear in Google Search with a snippet. Google says there are no additional technical requirements specifically for AI Overviews or AI Mode.",
+          "That means the practical strategy is: <strong>Strong SEO foundations + useful content + clear structure + authority + evidence</strong> rather than trying to manipulate a separate AI ranking algorithm."
+        ],
+        callout: {
+          title: "Core Eligibility Rule",
+          text: "Snippet eligibility + traditional Search indexing creates technical eligibility for Google AI Overviews. Placement depends on content usefulness, relevance, and domain authority.",
+          type: "tip"
+        }
+      },
+      {
+        id: "10-ways-to-improve-visibility",
+        h2: "10 Ways to Improve Visibility in Google AI Overviews",
+        body: [
+          "Follow these ten practical steps based on Google Search Central guidance to strengthen your website's eligibility for Google AI Overviews and AI Mode:",
+          "<strong>1. Make Sure Google Can Crawl and Index the Page:</strong> Start with basic technical SEO. A page cannot become a useful Google Search source if Google cannot properly access or index it. Important pages should return HTTP 200, be accessible to Googlebot, contain indexable content, use appropriate canonical URLs, avoid accidental noindex directives, be discoverable through internal links, and be included appropriately in XML sitemaps.",
+          "<strong>2. Satisfy the User's Real Search Intent:</strong> Don't optimize content around a keyword while ignoring the actual problem behind the search. Someone searching <em>'Shopify store not getting sales'</em> probably doesn't want a definition of Shopify — they need actionable guidance on traffic quality, conversion rate, pricing, trust, and checkout friction. Build content around complete user needs.",
+          "<strong>3. Provide Clear, Self-Contained Answers:</strong> Users often ask Google increasingly specific and conversational questions. Follow the structured pattern: <em>Question → Direct Answer (40-60 words) → Explanation → Evidence → Next Step</em>. For example: <em>Does schema guarantee inclusion in Google AI Overviews? No. Structured data can help Google understand information on a page, but it does not guarantee inclusion.</em>",
+          "<strong>4. Build Topical Depth (Query Fan-Out Optimization):</strong> Google's description of query fan-out provides another reason to think beyond exact-match keywords. A strong website should cover meaningful subtopics surrounding its areas of expertise. A comprehensive pillar like our <a href=\"/insights/ai-seo-aeo-geo-guide\" className=\"text-[#9F8BE7] underline font-medium hover:text-[#161616]\">AI SEO, AEO & GEO Complete Guide</a> connects AI search, AEO, GEO, schema, and measurement.",
+          "<strong>5. Strengthen Internal Linking:</strong> Internal links help users and search engines discover related information. A supporting article should naturally connect to the primary AI SEO pillar, specialized <a href=\"/services/aiseo\" className=\"text-[#9F8BE7] underline font-medium hover:text-[#161616]\">AI SEO services</a>, related <a href=\"/insights/how-to-get-your-business-mentioned-in-chatgpt\" className=\"text-[#9F8BE7] underline font-medium hover:text-[#161616]\">ChatGPT Search guides</a>, and empirical <a href=\"/work/hyperscale-aiseo-paid-acquisition\" className=\"text-[#9F8BE7] underline font-medium hover:text-[#161616]\">AI SEO case studies</a>.",
+          "<strong>6. Use Structured Data Accurately:</strong> Structured data remains useful — but it should not be treated as an AI ranking hack. Google says structured data should match visible page content. Useful schema types include <code>Organization</code>, <code>WebSite</code>, <code>WebPage</code>, <code>Article</code>, <code>Service</code>, and <code>BreadcrumbList</code>. Never manufacture fake reviews, fake ratings, or imaginary 'AI Overview schema.'",
+          "<strong>7. Demonstrate Real Experience and Evidence:</strong> Generic statements are easy to reproduce; real experience is harder to replace. Strengthen important content with legitimate case studies, process screenshots, first-party data, and expert commentary.",
+          "<strong>8. Publish Original Information:</strong> Google emphasizes unique, valuable, non-commodity content in its guidance for AI search experiences. Original research, benchmarks, frameworks, or industry surveys give external publishers and retrieval systems stronger reasons to reference your work.",
+          "<strong>9. Improve Page Experience and Multimedia:</strong> Google specifically recommends maintaining a strong page experience for visitors arriving through classic and AI search results. Prioritize mobile usability, Core Web Vitals performance, clear navigation, and accessible design. Incorporate high-quality images and video where they genuinely help explain the topic.",
+          "<strong>10. Build Authority Beyond Your Own Website:</strong> Your website is only one part of your brand's presence online. Strengthen legitimate external authority through editorial backlinks, industry mentions, verified business profiles, interviews, and client references. The objective is independent corroboration."
+        ]
+      },
+      {
+        id: "what-google-says-you-dont-need",
+        h2: "What Google Says You DON'T Need (Debunking AI SEO Hacks)",
+        body: [
+          "There is a growing industry around selling supposed 'AI SEO hacks.' Google's own guidance provides a much more grounded picture:",
+          "❌ <strong>You Don't Need Special AI Overview Schema:</strong> There is no special schema type required to appear in AI Overviews. Use normal supported structured data where it accurately describes visible content.",
+          "❌ <strong>You Don't Need Special AI Text Files for Google Search:</strong> Google does not require a special AI text file as a condition for appearing in AI Overviews or AI Mode.",
+          "❌ <strong>You Don't Need to Rewrite Every Page as an FAQ:</strong> Question-and-answer structures can be useful when they match user intent, but that does not mean every paragraph needs to become an FAQ.",
+          "❌ <strong>You Don't Need Hundreds of AI-Generated Articles:</strong> Mass-producing pages without meaningful added value can create quality problems. Google's guidance makes clear that scaled content created without added user value may violate spam policies.",
+          "❌ <strong>You Don't Need Keyword Stuffing:</strong> Modern search systems understand context. Cover topics naturally and comprehensively."
+        ]
+      },
+      {
+        id: "ai-overviews-vs-traditional-search",
+        h2: "AI Overviews vs. Traditional Search & Measurement",
+        body: [
+          "Traditional organic search and Google's AI experiences should not be treated as completely separate ecosystems. Google says its generative AI features are rooted in its core Search ranking and quality systems.",
+          "The practical difference is the search experience: Traditional Search surfaces individual web links; AI Overviews synthesize information with supporting links; AI Mode supports deeper exploratory research.",
+          "<strong>How to Measure Google AI Search Visibility:</strong><br>Google Search Console now features a dedicated Generative AI performance report being rolled out progressively to eligible properties. Website owners can analyze generative AI impressions over time, top performing pages, countries, and devices.",
+          "Where available, establish a baseline in Search Console and monitor AI performance alongside overall organic impressions, clicks, CTR, and lead conversion rates."
+        ],
+        table: {
+          headers: ["Measurement Metric", "Tracking Source", "Target KPI / Outcome"],
+          rows: [
+            ["Generative AI Impressions", "Search Console Generative AI Performance Report", "Track total impressions & URL appearances in AI Overviews & AI Mode"],
+            ["Classic Organic Search CTR", "Google Search Console (Search Type: Web)", "Monitor click-through rate & snippet performance alongside AI features"],
+            ["Branded Search Growth", "Google Search Console & Analytics trend analysis", "Measure growth in direct brand queries & organic entity recognition"],
+            ["Commercial Conversion Rate", "Google Analytics 4 Goal Attribution", "Evaluate lead quality & conversion rate from organic AI touchpoints"]
+          ]
+        }
+      },
+      {
+        id: "google-ai-overview-checklist",
+        h2: "Actionable 2026 Google AI Overview Checklist",
+        body: [
+          "Use this 5-stage checklist to evaluate your website's readiness for Google AI Overviews and AI Mode:",
+          "✓ <strong>Technical:</strong> Verify Googlebot access, HTTP 200 status, indexability, canonical tags, and XML sitemap health.",
+          "✓ <strong>Content & Intent:</strong> Add 40-60 word self-contained answers under key headings and cover subtopics matching query fan-out patterns.",
+          "✓ <strong>Entity & Trust:</strong> Implement valid Organization schema linking core capabilities, team, and verified profiles.",
+          "✓ <strong>Proof & Authority:</strong> Publish citation-worthy original data and earn independent editorial mentions.",
+          "✓ <strong>Analytics:</strong> Monitor Search Console Generative AI reports using specialized <a href=\"/services/aiseo\" className=\"text-[#9F8BE7] underline font-medium hover:text-[#161616]\">AI SEO services</a> and transparent <a href=\"/ai-seo-packages\" className=\"text-[#9F8BE7] underline font-medium hover:text-[#161616]\">AI SEO growth packages</a>."
+        ]
+      },
+      {
+        id: "sources-and-further-reading",
+        h2: "Official Google Sources & Further Reading",
+        body: [
+          "For authoritative documentation directly from Google Search Central, consult these official resources:",
+          "• <a href=\"https://developers.google.com/search/docs/appearance/ai-features\" target=\"_blank\" rel=\"noopener noreferrer\" className=\"text-[#9F8BE7] underline font-medium hover:text-[#161616]\">Google Search Central: Optimizing your website for generative AI features on Google Search</a> — Official Google guidance on Search technical requirements, snippet eligibility, and supporting links.",
+          "• <a href=\"https://developers.google.com/search/docs/appearance/ai-features\" target=\"_blank\" rel=\"noopener noreferrer\" className=\"text-[#9F8BE7] underline font-medium hover:text-[#161616]\">Google Search Central: AI features and your website</a> — Overview of how Google Search incorporates generative AI and links to supporting web sources.",
+          "• <a href=\"https://developers.google.com/search/docs/fundamentals/creating-helpful-content\" target=\"_blank\" rel=\"noopener noreferrer\" className=\"text-[#9F8BE7] underline font-medium hover:text-[#161616]\">Google Search Central: Top ways to ensure your content performs well in Google's AI experiences</a> — Key recommendations on helpful content and clear page structure.",
+          "• <a href=\"https://support.google.com/webmasters/answer/15174000\" target=\"_blank\" rel=\"noopener noreferrer\" className=\"text-[#9F8BE7] underline font-medium hover:text-[#161616]\">Google Search Console Help: Generative AI performance report (Search)</a> — Official documentation on tracking AI Overviews and AI Mode impressions.",
+          "• <a href=\"https://developers.google.com/search/docs/fundamentals/ai-generated-content\" target=\"_blank\" rel=\"noopener noreferrer\" className=\"text-[#9F8BE7] underline font-medium hover:text-[#161616]\">Google Search Central: Google Search's guidance about AI-generated content</a> — Standards on content quality, added user value, and search spam policies.",
+          "• <a href=\"/insights/ai-seo-aeo-geo-guide\" className=\"text-[#9F8BE7] underline font-medium hover:text-[#161616]\">AI SEO, AEO & GEO: Complete Guide for 2026</a> — Unified Branding Experts primary authority framework for AI search optimization."
+        ]
+      }
+    ],
+    faqs: [
+      {
+        q: "Can I guarantee my website will appear in Google AI Overviews?",
+        a: "No. Meeting Google's technical requirements and best practices does not guarantee that Google will crawl, index or display a page in a particular search feature."
+      },
+      {
+        q: "Does Google have a special AI Overview ranking algorithm I can optimize for?",
+        a: "Google does not provide a separate public formula that marketers can manipulate for guaranteed AI Overview placement. Its official guidance emphasizes established SEO foundations, useful content and Search eligibility."
+      },
+      {
+        q: "Do I need special schema for Google AI Overviews?",
+        a: "No. Google states that there are no additional technical requirements specifically for AI Overviews or AI Mode. Use accurate supported structured data when appropriate."
+      },
+      {
+        q: "Does llms.txt help Google AI Overviews?",
+        a: "Google does not require llms.txt for AI Overview or AI Mode eligibility. Focus on Google's established Search crawl and indexing requirements."
+      },
+      {
+        q: "Are backlinks still relevant?",
+        a: "External links and mentions remain useful components of broader SEO and authority building. Do not treat backlinks as a guaranteed AI Overview trigger."
+      },
+      {
+        q: "Can I track AI Overview impressions?",
+        a: "Google has introduced a dedicated Generative AI performance report in Search Console for eligible properties. The rollout is progressive, so the report may not yet be available for every website."
+      }
+    ],
+    relatedSlugs: [
+      "ai-seo-aeo-geo-guide",
+      "how-to-get-your-business-mentioned-in-chatgpt",
+      "how-much-does-a-small-business-website-cost"
+    ],
+    serviceCta: {
+      title: "Optimize Your Website for Google AI Search",
+      desc: "Our AI SEO architects engineer entity schemas, Search Central compliance, and query fan-out content clusters.",
+      href: "/services/aiseo",
+      buttonText: "Explore AI SEO Services"
+    },
+    packageCta: {
+      title: "AI SEO & Search Growth Packages",
+      priceBadge: "From $349/mo",
+      href: "/ai-seo-packages",
+      buttonText: "View AI SEO Packages"
+    },
+    caseStudyCta: {
+      title: "NovaTech AI SEO Case Study",
+      desc: "See how structured schema and AI search optimization expanded organic search discovery.",
+      href: "/work/hyperscale-aiseo-paid-acquisition",
+      buttonText: "Read Case Study"
+    }
+  },
   // 1. How Much Does Professional Logo Design Cost in 2026?
   {
     id: "insight-logo-cost",
