@@ -139,7 +139,7 @@ export const INSIGHTS: InsightArticle[] = [
         body: [
           "AI models prioritize content that provides unambiguous factual data. To improve citation eligibility in Google AI Overviews and ChatGPT Search, structure key sections using answer-first formatting.",
           "Begin sections with a direct definition, follow with bulleted supporting facts, and conclude with concrete operational details. Avoid generic buzzwords or unsupported claims, as AI engines filter out promotional filler.",
-          "For example, in our recent <a href=\"/work/hyperscale-aiseo-paid-acquisition\" className=\"text-[#9F8BE7] underline font-medium hover:text-[#161616]\">AI SEO case study</a>, structuring technical schema and entity graphs significantly expanded organic search discovery and citation eligibility. Read our complete guide on <a href=\"/insights/how-to-get-your-business-mentioned-in-chatgpt\" className=\"text-[#9F8BE7] underline font-medium hover:text-[#161616]\">how to improve your business visibility in ChatGPT</a>, or learn <a href=\"/insights/how-to-optimize-for-google-ai-overviews\" className=\"text-[#9F8BE7] underline font-medium hover:text-[#161616]\">how to optimize for Google AI Overviews</a> using official Google Search Central standards."
+          "For example, in our recent <a href=\"/work/hyperscale-aiseo-paid-acquisition\" className=\"text-[#9F8BE7] underline font-medium hover:text-[#161616]\">AI SEO case study</a>, structuring technical schema and entity graphs significantly expanded organic search discovery and citation eligibility. Read our complete guide on <a href=\"/insights/how-to-get-your-business-mentioned-in-chatgpt\" className=\"text-[#9F8BE7] underline font-medium hover:text-[#161616]\">how to improve your business visibility in ChatGPT</a>, explore <a href=\"/insights/how-to-optimize-for-google-ai-overviews\" className=\"text-[#9F8BE7] underline font-medium hover:text-[#161616]\">how to optimize for Google AI Overviews</a>, or master <a href=\"/insights/shopify-ai-seo-guide\" className=\"text-[#9F8BE7] underline font-medium hover:text-[#161616]\">Shopify AI SEO</a> for eCommerce product discovery."
         ]
       },
       {
@@ -358,7 +358,8 @@ export const INSIGHTS: InsightArticle[] = [
           "• <a href=\"https://help.openai.com/en/articles/10008544-chatgpt-search\" target=\"_blank\" rel=\"noopener noreferrer\" className=\"text-[#9F8BE7] underline font-medium hover:text-[#161616]\">OpenAI ChatGPT Search & Publisher Guidance</a> — Guidance on public website eligibility, retrieval factors, and UTM referral tracking.",
           "• <a href=\"https://platform.openai.com/docs/bots/gptbot\" target=\"_blank\" rel=\"noopener noreferrer\" className=\"text-[#9F8BE7] underline font-medium hover:text-[#161616]\">OpenAI GPTBot Documentation</a> — Specifications for model training crawlers and robots.txt rules.",
           "• <a href=\"/insights/ai-seo-aeo-geo-guide\" className=\"text-[#9F8BE7] underline font-medium hover:text-[#161616]\">AI SEO, AEO & GEO: Complete Guide for 2026</a> — Unified Branding Experts primary authority framework for AI search optimization.",
-          "• <a href=\"/insights/how-to-optimize-for-google-ai-overviews\" className=\"text-[#9F8BE7] underline font-medium hover:text-[#161616]\">How to Optimize Your Website for Google AI Overviews</a> — 10-step guide based on official Google Search Central guidance."
+          "• <a href=\"/insights/how-to-optimize-for-google-ai-overviews\" className=\"text-[#9F8BE7] underline font-medium hover:text-[#161616]\">How to Optimize Your Website for Google AI Overviews</a> — 10-step guide based on official Google Search Central guidance.",
+          "• <a href=\"/insights/shopify-ai-seo-guide\" className=\"text-[#9F8BE7] underline font-medium hover:text-[#161616]\">Shopify AI SEO: How to Optimize Your Store for AI Search</a> — Complete guide for ChatGPT Catalog discovery and Merchant Center integration."
         ]
       }
     ],
@@ -614,6 +615,209 @@ export const INSIGHTS: InsightArticle[] = [
       desc: "See how structured schema and AI search optimization expanded organic search discovery.",
       href: "/work/hyperscale-aiseo-paid-acquisition",
       buttonText: "Read Case Study"
+    }
+  },
+  // 3. Shopify AI SEO: How to Optimize Your Store for ChatGPT, Gemini & AI Search in 2026 (Supporting Article #3)
+  {
+    id: "insight-shopify-ai-seo-guide",
+    slug: "shopify-ai-seo-guide",
+    title: "Shopify AI SEO: Optimize for ChatGPT, Gemini & AI Search in 2026",
+    h1: "Shopify AI SEO: How to Optimize Your Store for ChatGPT, Gemini & AI Search in 2026",
+    kicker: "Shopify AI Commerce",
+    category: "eCommerce & AI SEO",
+    readTime: "14 min read",
+    publishedAt: "August 2026",
+    updatedAt: "August 2026",
+    author: {
+      name: "Unified Branding Experts Editorial Team",
+      role: "eCommerce & AI Search Engineering Group",
+      avatar: "/images/logo/ube-png-black.png",
+    },
+    summary:
+      "Learn how to optimize a Shopify store for ChatGPT, Google AI Mode, Gemini and traditional search using stronger product data, Merchant Center, structured data and AI-ready content.",
+    coverImage: "/images/official/ecommerce/storefront-setup.jpeg",
+    primaryIntent: "Shopify AI SEO",
+    quickAnswer:
+      "Shopify AI SEO combines traditional search optimization with product-data completeness, Merchant Center feeds, Product structured data, and agentic storefront readiness. By optimizing core product attributes (GTIN, variants, materials, care instructions, policies) and connecting eligible stores to Shopify Catalog and Google Merchant Center, merchants create machine-readable product data eligible for discovery across ChatGPT, Google AI Mode, Gemini, and search engines.",
+    tableOfContents: [
+      { id: "what-is-shopify-ai-seo", title: "What Is Shopify AI SEO & Agentic Commerce?" },
+      { id: "3-layers-of-shopify-ai-visibility", title: "The 3 Layers of Shopify AI Visibility" },
+      { id: "15-steps-to-optimize-shopify-for-ai", title: "15 Steps to Optimize a Shopify Store for AI Search" },
+      { id: "shopify-ai-seo-for-dropshipping", title: "Shopify AI SEO for Dropshipping Stores" },
+      { id: "shopify-catalog-chatgpt-gemini", title: "Shopify Catalog, ChatGPT & Google AI Mode Channels" },
+      { id: "what-doesnt-work-pitfalls", title: "What DOESN'T Work? Common Pitfalls & Wasteful Tactics" },
+      { id: "shopify-ai-search-checklist", title: "Actionable Shopify AI Search Optimization Checklist" },
+      { id: "sources-and-further-reading", title: "Official Sources & Further Reading" },
+    ],
+    sections: [
+      {
+        id: "what-is-shopify-ai-seo",
+        h2: "What Is Shopify AI SEO & Agentic Commerce?",
+        body: [
+          "Shopify SEO is no longer only about getting a product page into Google's traditional organic results. Customers can increasingly discover and compare products through AI-powered search and shopping experiences across ChatGPT, Google AI Mode, Gemini, Microsoft Copilot, Google Search, Google Shopping, Google Images, Google Lens, and Shop.",
+          "Shopify itself now provides infrastructure specifically designed to help eligible products become discoverable through AI-powered shopping channels. This changes the way merchants should think about product optimization.",
+          "Traditional SEO still matters, but modern Shopify optimization increasingly requires three connected layers: <strong>Search Visibility + Product Understanding + AI Discovery</strong>."
+        ],
+        callout: {
+          title: "Agentic Commerce Evolution",
+          text: "Shopify now supports agentic storefronts. Eligible products can be discovered through AI channels including ChatGPT, Google AI Mode, Gemini, Microsoft Copilot, and Meta via Shopify Catalog and connected feeds.",
+          type: "info"
+        }
+      },
+      {
+        id: "3-layers-of-shopify-ai-visibility",
+        h2: "The 3 Layers of Shopify AI Visibility",
+        body: [
+          "<strong>Layer 1: Crawlability and Traditional Search</strong><br>Google, Bing, and other search engines still need to access and understand the store. Important Shopify pages need crawlable URLs, indexable content, correct canonicals, clean internal links, usable navigation, XML sitemap discovery, descriptive titles, useful collection pages, and strong mobile UX.",
+          "Shopify provides built-in technical SEO foundations automatically (canonical tags, sitemap generation, robots.txt, SSL). However, Shopify's built-in features do not automatically make product content competitive — merchant optimization is still required.",
+          "<strong>Layer 2: Product Understanding</strong><br>AI shopping systems need much more than a vague product name. A strong product record clearly defines: <em>What the product is, Brand, Product category/type, Who it is for, Features, Benefits, Materials, Size, Color, Variants, Price, Availability, Images, GTIN/UPC/ISBN, Shipping info, Return info, and Care instructions</em>. Detailed, accurate product data eliminates ambiguity.",
+          "<strong>Layer 3: AI Discovery</strong><br>Traditional searches look like <em>'men's waterproof hiking jacket'</em>. AI shopping requests are more detailed: <em>'I need a lightweight waterproof jacket for hiking in cool weather that packs easily and costs under $150.'</em> A product page with detailed attributes allows AI systems to match specific user constraints accurately."
+        ]
+      },
+      {
+        id: "15-steps-to-optimize-shopify-for-ai",
+        h2: "15 Steps to Optimize a Shopify Store for AI Search",
+        body: [
+          "Follow these fifteen practical steps based on official Shopify Help Center and Google Search Central guidance:",
+          "<strong>1. Make Sure the Store Is Public, Crawlable and Indexable:</strong> Verify domain, HTTPS, robots.txt, sitemap.xml, canonicals, and HTTP response codes. Avoid accidental password protection or noindex tags on public products.",
+          "<strong>2. Rewrite Weak Product Titles:</strong> Replace vague names (e.g. <em>'Essential Pro'</em>) with clear, descriptive titles (e.g. <em>'Women's Lightweight Waterproof Hiking Jacket'</em>). Avoid keyword stuffing while ensuring title clarity.",
+          "<strong>3. Stop Using Supplier Product Descriptions:</strong> Avoid direct copies of manufacturer descriptions. Transform supplier data into genuinely useful original copy with clear summaries, specifications, materials, and care instructions.",
+          "<strong>4. Make Product Descriptions Answer Buying Questions:</strong> Structure descriptions to answer core purchase questions: <em>What is this? Who is it for? What problem does it solve? What materials are used? What is included? What are its limitations?</em>",
+          "<strong>5. Optimize Product Organization Data:</strong> Populate Shopify's structured fields accurately: product type, vendor, collections, tags, variants, option names, SKUs, and GTIN/UPC values where legitimately available.",
+          "<strong>6. Build Strong Collection Architecture:</strong> Create logical collections matching real shopping behavior (e.g. <em>Shop → Men's Apparel → Performance Golf Polos</em>) with descriptive introductions and internal navigation.",
+          "<strong>7. Implement Accurate Product Structured Data:</strong> Ensure Product, Offer, price, availability, shipping, and returns schema match visible page content. Audit variant relationships using ProductGroup markup.",
+          "<strong>8. Connect Shopify to Google Merchant Center:</strong> Use the Google & YouTube sales channel to synchronize product data with Google. Eligible free listings can appear across Search, Shopping, Images, Lens, and Gemini.",
+          "<strong>9. Use Both Product Structured Data and Product Feeds:</strong> Product schema and Merchant Center feeds are complementary. Keep website price, availability, URL, shipping, and returns strictly synchronized.",
+          "<strong>10. Optimize Product Images for Search and AI Discovery:</strong> Provide high-quality photography, multiple angles, modern formats (WebP), and descriptive alt text (e.g. <em>'Men's black waterproof trail running shoe, side view'</em>).",
+          "<strong>11. Complete Shipping, Returns and Store Policies:</strong> Maintain clear Shipping, Return/Refund, Privacy, Terms, and Contact policy pages. Shopify requires core store policies for participation in agentic storefront experiences.",
+          "<strong>12. Use Shopify Knowledge Base Where Appropriate:</strong> Utilize Shopify's Knowledge Base app to review and customize store FAQs used by AI shopping agents, ensuring policy and store answers remain accurate.",
+          "<strong>13. Strengthen Brand and Store Entity Signals:</strong> Communicate brand story, contact info, real reviews, and Organization structured data so search engines recognize your store as an established brand.",
+          "<strong>14. Build Supporting Informational Content:</strong> Publish educational buying guides (e.g. <em>'Best Golf Polo Materials for Hot Weather'</em>) that naturally link internally to commercial collections and products.",
+          "<strong>15. Build External Product and Brand Authority:</strong> Earn genuine customer reviews, editorial mentions, product reviews, and creator coverage to provide independent corroboration across the web."
+        ]
+      },
+      {
+        id: "shopify-ai-seo-for-dropshipping",
+        h2: "Shopify AI SEO for Dropshipping Stores",
+        body: [
+          "Dropshipping stores face a specific AI-search problem: commodity content. If hundreds of stores import identical supplier titles, descriptions, specifications, and photos, search engines and AI systems have no reason to prioritize one store over another.",
+          "The solution is adding genuine customer value: <strong>Original positioning + Structured specifications tables + Detailed use cases + Pre-purchase FAQs + Unique imagery + Logical collection taxonomy</strong>.",
+          "The objective is creating a superior buying resource than the raw supplier feed alone."
+        ],
+        callout: {
+          title: "Dropshipping Quality Standard",
+          text: "Never invent unverified product specifications. Transform raw supplier data into clear, machine-readable buying guides with verified specs, care instructions, and structured attribute tables.",
+          type: "tip"
+        }
+      },
+      {
+        id: "shopify-catalog-chatgpt-gemini",
+        h2: "Shopify Catalog, ChatGPT & Google AI Mode Channels",
+        body: [
+          "<strong>Shopify Catalog & ChatGPT Product Discovery:</strong><br>Eligible Shopify merchants can make products discoverable through Shopify Catalog. Shopify currently describes ChatGPT as a discovery-focused referral channel. For eligible stores, ChatGPT directs shoppers to the merchant's Shopify checkout.",
+          "Eligibility does not guarantee placement for a particular user request. Individual AI channels determine which products to display based on relevance and data quality.",
+          "<strong>Shopify + Google AI Mode & Gemini:</strong><br>Shopify supports product discovery in Google AI Mode and Gemini through the Google & YouTube sales channel. This functionality is in early access and is not yet available to every store. For eligible merchants and users, Shopify also supports a direct checkout experience within Google AI Mode and Gemini.",
+          "Check Shopify's current requirements, as channel eligibility, geography, and capabilities evolve."
+        ]
+      },
+      {
+        id: "what-doesnt-work-pitfalls",
+        h2: "What DOESN'T Work? Common Pitfalls & Wasteful Tactics",
+        body: [
+          "Avoid wasteful tactics that fail to build genuine store authority:",
+          "❌ <strong>Copying Supplier Descriptions:</strong> Using raw manufacturer text unchanged creates duplicate content issues across web indexes.",
+          "❌ <strong>Creating Fake Reviews or Ratings:</strong> Manufacturing fake social proof damages trust signals and risks merchant penalties.",
+          "❌ <strong>Fake GTINs:</strong> Inventing invalid GTINs or barcode numbers triggers product feed disapprovals.",
+          "❌ <strong>Relying on Non-Existent 'AI Schema':</strong> No magic schema tag forces ChatGPT or Gemini recommendation. Use standard Product schema.",
+          "❌ <strong>Assuming Catalog Access Guarantees Placement:</strong> Eligibility creates opportunity; AI channels decide relevance dynamically."
+        ]
+      },
+      {
+        id: "shopify-ai-search-checklist",
+        h2: "Actionable Shopify AI Search Optimization Checklist",
+        body: [
+          "Use this 5-stage checklist to evaluate your store's readiness for AI search:",
+          "✓ <strong>Technical:</strong> Public store, custom domain, HTTPS, indexable products, clean canonicals, healthy XML sitemap.",
+          "✓ <strong>Product Data:</strong> Descriptive titles, original descriptions, accurate price, availability, GTINs, variants, WebP images with clear ALT text.",
+          "✓ <strong>Feeds & Channels:</strong> Google & YouTube channel connected, Merchant Center synced, Shopify Catalog configured, policies complete.",
+          "✓ <strong>Structured Data:</strong> Valid Product and Offer JSON-LD schema with live pricing and availability.",
+          "✓ <strong>Authority & Experience:</strong> Real reviews, complete policy pages, educational content hubs, and specialized <a href=\"/services/shopify-development\" className=\"text-[#9F8BE7] underline font-medium hover:text-[#161616]\">Shopify development services</a> and transparent <a href=\"/ecommerce-growth-packages\" className=\"text-[#9F8BE7] underline font-medium hover:text-[#161616]\">eCommerce growth packages</a>."
+        ]
+      },
+      {
+        id: "sources-and-further-reading",
+        h2: "Official Sources & Further Reading",
+        body: [
+          "For authoritative documentation directly from Shopify, Google, and OpenAI, consult these official documentation resources:",
+          "• <a href=\"https://help.shopify.com/en/manual/online-store/search-and-discovery\" target=\"_blank\" rel=\"noopener noreferrer\" className=\"text-[#9F8BE7] underline font-medium hover:text-[#161616]\">Shopify Help Center: Optimizing your store for AI</a> — Official Shopify guidance on AI search and discovery readiness.",
+          "• <a href=\"https://help.shopify.com/en/manual/products/details\" target=\"_blank\" rel=\"noopener noreferrer\" className=\"text-[#9F8BE7] underline font-medium hover:text-[#161616]\">Shopify Help Center: Optimizing your products for AI platforms</a> — Product details, organization data, and attribute recommendations.",
+          "• <a href=\"https://help.shopify.com/en/manual/online-store/agentic-storefronts\" target=\"_blank\" rel=\"noopener noreferrer\" className=\"text-[#9F8BE7] underline font-medium hover:text-[#161616]\">Shopify Help Center: Shopify agentic storefronts</a> — Specifications for agentic storefront channels.",
+          "• <a href=\"https://help.shopify.com/en/manual/online-store/agentic-storefronts/chatgpt\" target=\"_blank\" rel=\"noopener noreferrer\" className=\"text-[#9F8BE7] underline font-medium hover:text-[#161616]\">Shopify Help Center: Selling on ChatGPT</a> — Official documentation on Shopify Catalog, ChatGPT product discovery, and checkout flows.",
+          "• <a href=\"https://help.shopify.com/en/manual/online-store/agentic-storefronts/google-ai-mode\" target=\"_blank\" rel=\"noopener noreferrer\" className=\"text-[#9F8BE7] underline font-medium hover:text-[#161616]\">Shopify Help Center: Selling on Google AI Mode and Gemini</a> — Google & YouTube sales channel and Merchant Center integration.",
+          "• <a href=\"https://help.shopify.com/en/manual/online-store/agentic-storefronts/catalog-discovery\" target=\"_blank\" rel=\"noopener noreferrer\" className=\"text-[#9F8BE7] underline font-medium hover:text-[#161616]\">Shopify Help Center: Shopify Catalog and product discovery</a> — Technical overview of agentic storefront product matching.",
+          "• <a href=\"https://help.shopify.com/en/manual/promoting-marketing/seo/adding-keywords\" target=\"_blank\" rel=\"noopener noreferrer\" className=\"text-[#9F8BE7] underline font-medium hover:text-[#161616]\">Shopify Help Center: Adding keywords for SEO to your Shopify store</a> — Standard SEO guidelines for Shopify merchants.",
+          "• <a href=\"https://developers.google.com/search/docs/appearance/structured-data/product\" target=\"_blank\" rel=\"noopener noreferrer\" className=\"text-[#9F8BE7] underline font-medium hover:text-[#161616]\">Google Search Central: Introduction to Product structured data</a> — Product and Offer JSON-LD schema standards.",
+          "• <a href=\"https://developers.google.com/search/docs/appearance/structured-data/merchant-listing\" target=\"_blank\" rel=\"noopener noreferrer\" className=\"text-[#9F8BE7] underline font-medium hover:text-[#161616]\">Google Search Central: Merchant listing structured data</a> — Technical requirements for free merchant listings.",
+          "• <a href=\"https://developers.google.com/search/docs/appearance/structured-data/product-variants\" target=\"_blank\" rel=\"noopener noreferrer\" className=\"text-[#9F8BE7] underline font-medium hover:text-[#161616]\">Google Search Central: Product variant structured data</a> — Specifications for ProductGroup and variant relationships.",
+          "• <a href=\"https://developers.google.com/search/docs/appearance/structured-data/product#share-product-data\" target=\"_blank\" rel=\"noopener noreferrer\" className=\"text-[#9F8BE7] underline font-medium hover:text-[#161616]\">Google Search Central: Share your product data with Google</a> — Combining Product schema with Merchant Center feeds.",
+          "• <a href=\"https://support.google.com/merchants/answer/9825611\" target=\"_blank\" rel=\"noopener noreferrer\" className=\"text-[#9F8BE7] underline font-medium hover:text-[#161616]\">Google Merchant Center: Show your products for free on Google</a> — Setup for free listings across Google Search, Images, Lens, and Gemini.",
+          "• <a href=\"https://platform.openai.com/docs/bots/oai-searchbot\" target=\"_blank\" rel=\"noopener noreferrer\" className=\"text-[#9F8BE7] underline font-medium hover:text-[#161616]\">OpenAI: OAI-SearchBot Documentation</a> — Publisher guidance for search discovery crawlers.",
+          "• <a href=\"/insights/ai-seo-aeo-geo-guide\" className=\"text-[#9F8BE7] underline font-medium hover:text-[#161616]\">AI SEO, AEO & GEO: Complete Guide for 2026</a> — Primary authority framework for AI search optimization."
+        ]
+      }
+    ],
+    faqs: [
+      {
+        q: "Can Shopify products appear in ChatGPT?",
+        a: "Shopify currently supports product discovery through ChatGPT for eligible stores using Shopify Catalog. Eligibility does not guarantee that a product will appear for every request."
+      },
+      {
+        q: "Can Shopify products appear in Gemini?",
+        a: "Google's free product listings can appear across several Google surfaces including Gemini, depending on eligibility. Shopify also supports Google AI Mode and Gemini product discovery through its Google & YouTube sales channel, with its agentic-storefront integration currently in early access."
+      },
+      {
+        q: "Does Shopify automatically optimize products for AI?",
+        a: "Shopify provides infrastructure that can help product discovery, but merchants are still responsible for accurate product information, descriptions, imagery, organization, policies and other store data."
+      },
+      {
+        q: "Do I need Google Merchant Center?",
+        a: "Merchant Center is not required for every form of Google organic search appearance. However, it is an important product-data channel and is required for some commerce surfaces. For Shopify merchants pursuing broad product visibility on Google, Merchant Center is highly valuable."
+      },
+      {
+        q: "Does Product schema help AI search?",
+        a: "Accurate Product structured data helps search engines understand explicit product information. It should be viewed as a product-understanding tool — not a guaranteed AI ranking mechanism."
+      },
+      {
+        q: "Should dropshipping stores rewrite supplier descriptions?",
+        a: "Shopify's SEO guidance recommends avoiding direct manufacturer-description copies because the same content may already appear elsewhere. Create useful original product content without inventing product details."
+      },
+      {
+        q: "Can AI SEO guarantee Shopify sales?",
+        a: "No. AI SEO can improve product discoverability and search readiness. Actual sales depend on factors such as product-market fit, offer, pricing, traffic, trust, conversion rate, competition, fulfillment, and customer experience."
+      }
+    ],
+    relatedSlugs: [
+      "ai-seo-aeo-geo-guide",
+      "how-to-get-your-business-mentioned-in-chatgpt",
+      "how-to-optimize-for-google-ai-overviews"
+    ],
+    serviceCta: {
+      title: "Optimize Your Shopify Store for AI Search",
+      desc: "Our Shopify AI SEO engineers optimize product data, Merchant Center feeds, Product schema, and agentic storefront readiness.",
+      href: "/services/shopify-development",
+      buttonText: "Explore Shopify Services"
+    },
+    packageCta: {
+      title: "Shopify & eCommerce Growth Packages",
+      priceBadge: "From $450",
+      href: "/ecommerce-growth-packages",
+      buttonText: "View eCommerce Packages"
+    },
+    caseStudyCta: {
+      title: "Happy Knot Creations Shopify Storefront",
+      desc: "Explore how we built a custom, high-converting D2C Shopify storefront optimized for search and mobile commerce.",
+      href: "/work/happy-knot-creations-shopify-storefront",
+      buttonText: "Read Storefront Case Study"
     }
   },
   // 1. How Much Does Professional Logo Design Cost in 2026?
