@@ -190,7 +190,7 @@ export default function AiSeoServicePage() {
           </p>
 
           <p className="text-sm sm:text-base text-[#303030] font-body font-medium">
-            At Unified Branding Experts, we help you get found where search is heading. We optimize your content for traditional rankings and for the AI systems now shaping how people discover businesses.
+            At Unified Branding Experts, we help you get found where search is heading. We optimize your content for traditional rankings and for the AI systems now shaping how people discover businesses. <Link href="/insights/ai-seo-aeo-geo-guide" className="text-[#9F8BE7] underline font-bold hover:text-[#161616]">Read our complete guide to AI SEO, AEO and GEO</Link> for an in-depth breakdown of machine-readable entity architecture.
           </p>
 
           {/* Core Deliverable Highlights */}

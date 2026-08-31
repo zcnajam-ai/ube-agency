@@ -292,9 +292,11 @@ export default async function InsightArticlePage({
                 )}
 
                 {section.body.map((paragraph, pIdx) => (
-                  <p key={pIdx} className="text-sm sm:text-base leading-relaxed text-[#404040]">
-                    {paragraph}
-                  </p>
+                  <p
+                    key={pIdx}
+                    className="text-sm sm:text-base leading-relaxed text-[#404040]"
+                    dangerouslySetInnerHTML={{ __html: paragraph }}
+                  />
                 ))}
 
                 {/* Optional Table */}
@@ -314,9 +316,11 @@ export default async function InsightArticlePage({
                         {section.table.rows.map((row, rIdx) => (
                           <tr key={rIdx} className="hover:bg-[#FAF7F6]/50 transition-colors">
                             {row.map((cell, cIdx) => (
-                              <td key={cIdx} className="p-3.5 sm:p-4 text-[#303030]">
-                                {cell}
-                              </td>
+                              <td
+                                key={cIdx}
+                                className="p-3.5 sm:p-4 text-[#303030]"
+                                dangerouslySetInnerHTML={{ __html: cell }}
+                              />
                             ))}
                           </tr>
                         ))}
