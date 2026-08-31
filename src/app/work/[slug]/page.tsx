@@ -7,6 +7,7 @@ import { ArrowLeft, Palette, Type } from "lucide-react";
 import { FEATURED_PROJECTS, getProjectBySlug } from "@/data/projects";
 import { Heading3DSparkle } from "@/components/common/Brand3DIcons";
 import CaseStudyGalleryCarousel from "@/components/work/CaseStudyGalleryCarousel";
+import FixoriaEditorialGallery from "@/components/work/FixoriaEditorialGallery";
 
 export function generateStaticParams() {
   return FEATURED_PROJECTS.map((project) => ({
@@ -195,9 +196,13 @@ export default async function ProjectDetailPage({
         </div>
       )}
 
-      {/* Visual Showcase Gallery (Auto-Scrolling Interactive Carousel) */}
-      {project.galleryImages && project.galleryImages.length > 0 && (
-        <CaseStudyGalleryCarousel images={project.galleryImages} title={project.title} />
+      {/* Visual Showcase Gallery */}
+      {project.slug === "fixoria-studio-brand-identity-system" ? (
+        <FixoriaEditorialGallery />
+      ) : (
+        project.galleryImages && project.galleryImages.length > 0 && (
+          <CaseStudyGalleryCarousel images={project.galleryImages} title={project.title} />
+        )
       )}
 
       {/* Testimonial Quote if available */}
