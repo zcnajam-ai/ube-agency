@@ -102,6 +102,8 @@ const nextConfig: NextConfig = {
       // Legacy Insights Cannibalization -> Canonical Pillar Destination
       { source: "/insights/what-is-ai-seo-seo-vs-aeo-vs-geo-explained", destination: "/insights/ai-seo-aeo-geo-guide", permanent: true },
       { source: "/insights/what-is-ai-seo-seo-vs-aeo-vs-geo-explained/", destination: "/insights/ai-seo-aeo-geo-guide", permanent: true },
+      { source: "/insights/the-death-of-10-blue-links-mastering-aiseo-and-answer-engines", destination: "/insights/ai-seo-aeo-geo-guide", permanent: true },
+      { source: "/insights/the-death-of-10-blue-links-mastering-aiseo-and-answer-engines/", destination: "/insights/ai-seo-aeo-geo-guide", permanent: true },
     ];
   },
 };
