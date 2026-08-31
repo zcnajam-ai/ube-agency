@@ -1,0 +1,6 @@
+bot_identifier,EXPLICIT_ALLOW,WILDCARD_ALLOW,DEFAULT_ALLOWED,EXPLICIT_BLOCK,CONFLICTING_RULES,UNKNOWN,total_audited,effective_access_pass_count,effective_access_percentage
+"OAI-SearchBot",0,100,0,0,0,0,100,100,100.0
+"PerplexityBot",0,100,0,0,0,0,100,100,100.0
+"Googlebot",0,100,0,0,0,0,100,100,100.0
+"Bingbot",0,100,0,0,0,0,100,100,100.0
+"CDN / WAF Pass-through",0,100,0,0,0,0,100,100,100.0

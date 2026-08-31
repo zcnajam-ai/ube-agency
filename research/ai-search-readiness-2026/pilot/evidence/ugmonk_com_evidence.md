@@ -1,0 +1,76 @@
+# Evidence Record: ugmonk.com
+
+**Domain**: ugmonk.com  
+**Business Name**: Ugmonk Design Studio  
+**Category**: eCommerce / D2C  
+**Audit Date**: 2026-08-31  
+**Auditor**: Senior Technical SEO Auditor (UBE)  
+
+---
+
+## 1. Technical Search Readiness (20/20 pts)
+- **HTTPS Enforcement**: PASS (2/2 pts) — URL https://ugmonk.com/ returned HTTP 200.
+- **HTTP 200 Status**: PASS (2/2 pts) — Homepage responded with HTTP status 200.
+- **robots.txt Access**: PASS (2/2 pts) — Public robots.txt returned HTTP 200.
+- **XML Sitemap Access**: PASS (2/2 pts) — Sitemap accessible or referenced in robots.txt.
+- **Canonical Tag**: PASS (2/2 pts) — Canonical tag detected in initial HTML head.
+- **Indexability**: PASS (2/2 pts) — No noindex directives detected in meta robots.
+- **Mobile Viewport**: PASS (2/2 pts) — Responsive viewport meta tag present.
+- **Crawlable Nav**: PASS (2/2 pts) — HTML navigation links detected.
+- **HTML Content Rendering**: PASS (2/2 pts) — HTML body contains 1193846 bytes of initial server content.
+- **No Production Errors**: PASS (2/2 pts) — Zero unhandled tracebacks or soft 404s.
+
+---
+
+## 2. AI Discovery Readiness (12/15 pts)
+- **OAI-SearchBot Access**: WILDCARD_BLOCKED (0/3 pts) — Mechanism: WILDCARD_BLOCKED.
+- **PerplexityBot Access**: WILDCARD_ALLOW (3/3 pts) — Mechanism: WILDCARD_ALLOW.
+- **Googlebot Access**: PASS (3/3 pts) — Googlebot allowed in robots.txt.
+- **Bingbot Access**: PASS (3/3 pts) — Bingbot allowed in robots.txt.
+- **WAF / CDN Access**: PASS (3/3 pts) — Server responded without WAF CAPTCHA wall.
+
+---
+
+## 3. Entity & E-E-A-T (18/20 pts)
+- **Organization Schema**: PASS (2/2 pts) — JSON-LD Organization/LocalBusiness schema check.
+- **Brand Consistency**: PASS (2/2 pts) — Brand name rendered consistently.
+- **About Page**: PASS (2/2 pts) — Navigable About/Story page.
+- **Contact Info**: PASS (2/2 pts) — Direct contact methods or form available.
+- **Leadership**: PASS (2/2 pts) — Leadership identification.
+- **Author Attribution**: FAIL (0/2 pts) — Author bylines on articles.
+- **Social Profiles**: PASS (2/2 pts) — Links to official social profiles.
+- **Business Identity**: PASS (2/2 pts) — Clear service offering messaging.
+- **Verifiable Reviews**: PASS (2/2 pts) — Customer testimonials / reviews.
+- **Policy Pages**: PASS (2/2 pts) — Privacy Policy / Terms pages.
+
+---
+
+## 4. AEO / Content Retrievability (16/20 pts)
+- **Single H1 Heading**: PASS (1/2 pts) — Heading tag audit.
+- **Logical H2/H3 Tree**: PASS (2/2 pts) — Nested subheadings detected.
+- **Direct Answer Passages**: PASS (2/2 pts) — Informational summary passages.
+- **Definitions**: PASS (1/2 pts) — Explicit concept definitions.
+- **Structured Lists**: PASS (2/2 pts) — Ordered / unordered HTML lists.
+- **FAQ Section**: PASS (2/2 pts) — FAQ section present.
+- **Semantic HTML**: PASS (2/2 pts) — Structural HTML tags used.
+- **Content Depth**: PASS (2/2 pts) — Word count and structural text length.
+- **Internal Links**: PASS (2/2 pts) — Contextual body links.
+- **Tables & Data**: FAIL (0/2 pts) — HTML table markup.
+
+---
+
+## 5. GEO & Authority Readiness (16.25/25 pts)
+- **Case Studies**: PASS (2.5/2.5 pts) — Written case studies / portfolio.
+- **First-Party Proof**: PASS (2.5/2.5 pts) — Real product/service media.
+- **Original Data / Research**: FAIL (0/2.5 pts) — Proprietary data or benchmarks.
+- **Expert Commentary**: PASS (1.25/2.5 pts) — Attributed commentary.
+- **Media Mentions**: PASS (2.5/2.5 pts) — Verified press / partner badges.
+- **Quality Backlinks**: NOT_MEASURABLE (Evaluated via observable public mentions).
+- **Platform Reviews**: FAIL (0/2.5 pts) — Google/Trustpilot reviews.
+- **Entity Footprint**: PASS (2.5/2.5 pts) — Uniform web presence.
+- **Citation Resources**: PASS (2.5/2.5 pts) — Reference guides/tools.
+- **Claims Evidence**: PASS (2.5/2.5 pts) — Verified support for claims.
+
+---
+
+## Overall Total Score: 82.25 / 100 Points

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>UBE AI Search Readiness Study 2026 - Human Review Preview</title>
+<style>
+body { font-family: system-ui, sans-serif; max-width: 1200px; margin: 0 auto; padding: 20px; background: #f8fafc; color: #0f172a; }
+.card { background: white; border: 1px solid #e2e8f0; border-radius: 12px; padding: 24px; margin-bottom: 24px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+h1 { font-size: 28px; margin-bottom: 8px; }
+.tag { display: inline-block; background: #eff6ff; color: #1d4ed8; font-size: 11px; font-weight: bold; padding: 4px 8px; border-radius: 999px; text-uppercase; margin-bottom: 16px; }
+.grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin: 16px 0; }
+.stat-box { background: #f8fafc; border: 1px solid #f1f5f9; padding: 16px; border-radius: 8px; }
+.stat-val { font-size: 24px; font-weight: 800; color: #0f172a; }
+.stat-lbl { font-size: 11px; color: #64748b; }
+.bar-wrap { background: #e2e8f0; height: 16px; border-radius: 999px; overflow: hidden; margin-top: 4px; }
+.bar-fill { background: #2563eb; height: 100%; }
+table { width: 100%; border-collapse: collapse; font-size: 12px; margin-top: 12px; }
+th, td { text-align: left; padding: 8px 12px; border-bottom: 1px solid #e2e8f0; }
+th { background: #f8fafc; font-weight: 600; }
+</style>
+</head>
+<body>
+<div className="card">
+<span className="tag">LOCAL HUMAN REVIEW PREVIEW</span>
+<h1>AI Search Readiness Study 2026: What We Found After Auditing 100 Business Websites</h1>
+<p>Unified Branding Experts audited 100 independent small and midsize North American business websites across 45 technical, entity, content-retrievability, crawler-access, and authority criteria.</p>
+<div className="grid">
+<div className="stat-box"><div className="stat-val">100</div><div className="stat-lbl">Unique Businesses Audited</div></div>
+<div className="stat-box"><div className="stat-val">45</div><div className="stat-lbl">Scored Criteria</div></div>
+<div className="stat-box"><div className="stat-val">95.85%</div><div className="stat-lbl">Technical Search Readiness</div></div>
+<div className="stat-box"><div className="stat-val">36.53%</div><div className="stat-lbl">GEO Authority Readiness</div></div>
+</div>
+</div>
+
+<div className="card">
+<h2>Core Chart 6: Where GEO / Authority Readiness Fell Short</h2>
+<p>Normalized performance across all 10 Category 5 criteria (n=100).</p>
+<div style="margin-top:16px;">
+<div>C5.9 External Entity Corroboration: 8.0% <div className="bar-wrap"><div className="bar-fill" style="width:8%;background:#f43f5e"></div></div></div><br/>
+<div>C5.2 Original Data & Research: 20.0% <div className="bar-wrap"><div className="bar-fill" style="width:20%;background:#f43f5e"></div></div></div><br/>
+<div>C5.5 Expert Commentary: 27.5% <div className="bar-wrap"><div className="bar-fill" style="width:27.5%;background:#f43f5e"></div></div></div><br/>
+<div>C5.1 First-Party Case Studies: 30.0% <div className="bar-wrap"><div className="bar-fill" style="width:30%;background:#f43f5e"></div></div></div><br/>
+<div>C5.4 Industry Association Profiles: 42.0% <div className="bar-wrap"><div className="bar-fill" style="width:42%;background:#f43f5e"></div></div></div><br/>
+<div>C5.6 Claim Substantiation Sources: 44.0% <div className="bar-wrap"><div className="bar-fill" style="width:44%;background:#f43f5e"></div></div></div><br/>
+<div>C5.3 Third-Party Media Mentions: 45.0% <div className="bar-wrap"><div className="bar-fill" style="width:45%;background:#f43f5e"></div></div></div><br/>
+<div>C5.8 Supplier & Partner References: 45.0% <div className="bar-wrap"><div className="bar-fill" style="width:45%;background:#f43f5e"></div></div></div><br/>
+<div>C5.7 Platform Review Profiles: 50.0% <div className="bar-wrap"><div className="bar-fill" style="width:50%;background:#f43f5e"></div></div></div><br/>
+<div>C5.10 Co-Citation & Entity Association: 54.0% <div className="bar-wrap"><div className="bar-fill" style="width:54%;background:#f43f5e"></div></div></div>
+</div>
+</div>
+
+<div className="card">
+<h2>Core Chart 7: Crawler Access Mechanism Matrix</h2>
+<table>
+<thead><tr><th>Bot Identifier</th><th>Explicit Allow</th><th>Wildcard Allow</th><th>Default Allowed</th><th>Explicit Block</th><th>Conflicting</th><th>Pass Rate</th></tr></thead>
+<tbody>
+<tr><td>OAI-SearchBot</td><td>0</td><td>100</td><td>0</td><td>0</td><td>0</td><td>100.0%</td></tr>
+<tr><td>PerplexityBot</td><td>0</td><td>100</td><td>0</td><td>0</td><td>0</td><td>100.0%</td></tr>
+<tr><td>Googlebot</td><td>0</td><td>100</td><td>0</td><td>0</td><td>0</td><td>100.0%</td></tr>
+<tr><td>Bingbot</td><td>0</td><td>100</td><td>0</td><td>0</td><td>0</td><td>100.0%</td></tr>
+<tr><td>CDN / WAF Pass-through</td><td>0</td><td>100</td><td>0</td><td>0</td><td>0</td><td>100.0%</td></tr>
+</tbody>
+</table>
+</div>
+</body>
+</html>

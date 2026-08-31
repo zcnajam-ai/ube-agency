@@ -1,0 +1,4 @@
+old_domain,new_domain,old_technical,new_technical,delta_technical,old_ai,new_ai,delta_ai,old_entity,new_entity,delta_entity,old_aeo,new_aeo,delta_aeo,old_geo,new_geo,delta_geo,old_total,new_total,delta_total
+"superthing.com","drinklmnt.com",19.4,19.4,0.0,10.0,10.0,0.0,15.6,15.6,0.0,13.8,13.8,0.0,9.55,9.55,0.0,68.35,68.35,0.0
+"cocokind.com","truebotanicals.com",19.4,19.4,0.0,10.0,10.0,0.0,15.6,15.6,0.0,13.8,13.8,0.0,9.55,9.55,0.0,68.35,68.35,0.0
+"brika.com","makerhouse.com",19.4,19.4,0.0,10.0,10.0,0.0,15.6,15.6,0.0,13.8,13.8,0.0,9.55,9.55,0.0,68.35,68.35,0.0

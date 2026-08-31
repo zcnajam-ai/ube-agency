@@ -32,17 +32,40 @@ export default function InsightsIndexPage() {
   return (
     <div className="pt-32 pb-24 px-6 md:px-12 max-w-7xl mx-auto space-y-16">
       {/* Editorial Page Hero (Clean & Fast) */}
-      <div className="space-y-4 max-w-3xl border-b border-[#E0DDDB] pb-12">
+      <div className="space-y-4 max-w-3xl border-b border-[#E0DDDB] pb-8">
         <div className="inline-flex items-center gap-2 text-xs font-mono-num uppercase tracking-[0.25em] text-[#9F8BE7] font-bold">
           <Sparkles className="w-3.5 h-3.5" />
-          <span>EDITORIAL INSIGHTS & METHODOLOGY</span>
+          <span>EDITORIAL INSIGHTS & ORIGINAL RESEARCH</span>
         </div>
         <h1 className="font-display text-4xl sm:text-6xl font-bold tracking-tight text-[#161616] leading-tight">
           Perspectives on Code, Commerce & AI Search.
         </h1>
         <p className="text-base sm:text-lg text-[#585858] font-body leading-relaxed max-w-2xl">
-          Actionable frameworks written by our senior strategists and engineers to help your brand compete and lead digitally.
+          Actionable frameworks and original empirical research written by our senior strategists and engineers to help your brand compete and lead digitally.
         </p>
+      </div>
+
+      {/* Featured Original Research Study Card */}
+      <div className="p-6 sm:p-8 rounded-3xl bg-gradient-to-r from-blue-900 to-indigo-900 text-white space-y-4 shadow-xl">
+        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/20 border border-blue-400/30 text-blue-300 text-xs font-bold uppercase tracking-wider">
+          <Sparkles className="w-3.5 h-3.5 text-blue-300" />
+          FEATURED ORIGINAL RESEARCH · 2026
+        </div>
+        <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight">
+          AI Search Readiness Study 2026: 100 Websites Audited
+        </h2>
+        <p className="text-sm sm:text-base text-slate-200 max-w-3xl leading-relaxed">
+          We audited 100 small and midsize North American business websites across 45 criteria to determine their technical, entity, content retrievability, and GEO authority readiness for Google AI Overviews, ChatGPT Search, and generative discovery engines.
+        </p>
+        <div className="pt-2">
+          <Link
+            href="/research/ai-search-readiness-study-2026"
+            className="inline-flex items-center gap-2 px-6 py-3 bg-white hover:bg-blue-50 text-blue-950 font-bold text-xs uppercase tracking-wider rounded-xl transition-colors shadow-md"
+          >
+            <span>Explore Full 100-Site Study &amp; Data</span>
+            <ArrowUpRight className="w-4 h-4 text-blue-600" />
+          </Link>
+        </div>
       </div>
 
       {/* Articles Grid (Clean White Cards) */}

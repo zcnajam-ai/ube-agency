@@ -568,7 +568,7 @@ export default function Navbar() {
               size="sm"
               variant="primary"
               onClick={() => openProjectModal()}
-              className="hidden sm:inline-flex whitespace-nowrap shadow-[0_4px_15px_rgba(159,139,231,0.35)]"
+              className="hidden md:inline-flex whitespace-nowrap shadow-[0_4px_15px_rgba(159,139,231,0.35)]"
             >
               Estimate Project
             </MagneticButton>

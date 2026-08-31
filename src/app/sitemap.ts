@@ -6,7 +6,7 @@ import { INSIGHTS } from "@/data/insights";
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://unifiedbrandingexperts.com";
 
-  // 1. Core Pages (7)
+  // 1. Core & Research Pages
   const coreRoutes: MetadataRoute.Sitemap = [
     { url: baseUrl, lastModified: new Date() },
     { url: `${baseUrl}/services`, lastModified: new Date() },
@@ -14,6 +14,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/work`, lastModified: new Date() },
     { url: `${baseUrl}/about`, lastModified: new Date() },
     { url: `${baseUrl}/insights`, lastModified: new Date() },
+    { url: `${baseUrl}/research/ai-search-readiness-study-2026`, lastModified: new Date("2026-08-31") },
     { url: `${baseUrl}/contact`, lastModified: new Date() },
   ];
 

@@ -1,0 +1,46 @@
+criterion_id,criterion_name,category,max_points,PASS_count,PASS_percentage,PARTIAL_count,PARTIAL_percentage,FAIL_count,FAIL_percentage,NOT_MEASURABLE_count,mean_score,normalized_mean
+C1.1,"HTTPS Enforcement","Technical Search Readiness",2.0,100,100.0,0,0.0,0,0.0,0,2.0,100.0
+C1.2,"Direct HTTP 200","Technical Search Readiness",2.0,98,98.0,2,2.0,0,0.0,0,1.96,98.0
+C1.3,"robots.txt Accessibility","Technical Search Readiness",2.0,100,100.0,0,0.0,0,0.0,0,2.0,100.0
+C1.4,"XML Sitemap Access","Technical Search Readiness",2.0,95,95.0,0,0.0,5,5.0,0,1.9,95.0
+C1.5,"Canonical Tag","Technical Search Readiness",2.0,98,98.0,0,0.0,2,2.0,0,1.96,98.0
+C1.6,"Indexability Meta Tag","Technical Search Readiness",2.0,100,100.0,0,0.0,0,0.0,0,2.0,100.0
+C1.7,"Mobile Viewport","Technical Search Readiness",2.0,100,100.0,0,0.0,0,0.0,0,2.0,100.0
+C1.8,"Crawlable Nav","Technical Search Readiness",2.0,99,99.0,0,0.0,1,1.0,0,1.98,99.0
+C1.9,"Core Content HTML","Technical Search Readiness",2.0,88,88.0,12,12.0,0,0.0,0,1.76,88.0
+C1.10,"Clean Error Response","Technical Search Readiness",2.0,95,95.0,0,0.0,5,5.0,0,1.9,95.0
+C2.1,"OAI-SearchBot Access","AI Discovery Accessibility",2.0,100,100.0,0,0.0,0,0.0,0,2.0,100.0
+C2.2,"PerplexityBot Access","AI Discovery Accessibility",2.0,100,100.0,0,0.0,0,0.0,0,2.0,100.0
+C2.3,"Googlebot Access","AI Discovery Accessibility",2.0,100,100.0,0,0.0,0,0.0,0,2.0,100.0
+C2.4,"Bingbot Access","AI Discovery Accessibility",2.0,100,100.0,0,0.0,0,0.0,0,2.0,100.0
+C2.5,"CDN / WAF Pass-through","AI Discovery Accessibility",2.0,100,100.0,0,0.0,0,0.0,0,2.0,100.0
+C3.1,"Organization Schema","Entity & E-E-A-T",2.0,42,42.0,0,0.0,58,58.0,0,0.84,42.0
+C3.2,"Brand Name Consistency","Entity & E-E-A-T",2.0,100,100.0,0,0.0,0,0.0,0,2.0,100.0
+C3.3,"About Page Presence","Entity & E-E-A-T",2.0,92,92.0,0,0.0,8,8.0,0,1.84,92.0
+C3.4,"Contact Info Transparency","Entity & E-E-A-T",2.0,96,96.0,0,0.0,4,4.0,0,1.92,96.0
+C3.5,"Leadership / Founder Info","Entity & E-E-A-T",2.0,68,68.0,0,0.0,32,32.0,0,1.36,68.0
+C3.6,"Expert / Author Bylines","Entity & E-E-A-T",2.0,35,35.0,25,25.0,40,40.0,0,0.95,47.5
+C3.7,"Physical Business Address","Entity & E-E-A-T",2.0,88,88.0,0,0.0,12,12.0,0,1.76,88.0
+C3.8,"Privacy & Terms Policies","Entity & E-E-A-T",2.0,98,98.0,0,0.0,2,2.0,0,1.96,98.0
+C3.9,"Customer Support Channels","Entity & E-E-A-T",2.0,95,95.0,0,0.0,5,5.0,0,1.9,95.0
+C3.10,"Social / Entity Profiles","Entity & E-E-A-T",2.0,92,92.0,0,0.0,8,8.0,0,1.84,92.0
+C4.1,"Single H1 Tag","AEO / Content Retrievability",2.0,82,82.0,15,15.0,3,3.0,0,1.79,89.5
+C4.2,"Logical H2/H3 Hierarchy","AEO / Content Retrievability",2.0,85,85.0,12,12.0,3,3.0,0,1.82,91.0
+C4.3,"Direct Answer Passages","AEO / Content Retrievability",2.0,48,48.0,32,32.0,20,20.0,0,1.28,64.0
+C4.4,"Structured Lists / Tables","AEO / Content Retrievability",2.0,62,62.0,28,28.0,10,10.0,0,1.52,76.0
+C4.5,"FAQ Structure","AEO / Content Retrievability",2.0,38,38.0,22,22.0,40,40.0,0,0.98,49.0
+C4.6,"Self-Contained Content","AEO / Content Retrievability",2.0,75,75.0,20,20.0,5,5.0,0,1.7,85.0
+C4.7,"Definition / Glossary Terms","AEO / Content Retrievability",2.0,25,25.0,15,15.0,60,60.0,0,0.65,32.5
+C4.8,"Contextual Internal Linking","AEO / Content Retrievability",2.0,78,78.0,18,18.0,4,4.0,0,1.74,87.0
+C4.9,"Entity-Dense Sentences","AEO / Content Retrievability",2.0,60,60.0,30,30.0,10,10.0,0,1.5,75.0
+C4.10,"Article / Blog Schema","AEO / Content Retrievability",2.0,23,23.0,0,0.0,77,77.0,0,0.46,23.0
+C5.1,"First-Party Case Studies","GEO / Authority Readiness",3.0,18,18.0,12,12.0,70,70.0,0,0.9,30.0
+C5.2,"Original Data / Research","GEO / Authority Readiness",3.0,12,12.0,8,8.0,80,80.0,0,0.6,20.0
+C5.3,"Third-Party Media Mentions","GEO / Authority Readiness",3.0,35,35.0,20,20.0,45,45.0,0,1.35,45.0
+C5.4,"Industry Association Profiles","GEO / Authority Readiness",3.0,42,42.0,0,0.0,58,58.0,0,1.26,42.0
+C5.5,"Expert Commentary / Quotes","GEO / Authority Readiness",3.0,20,20.0,15,15.0,65,65.0,0,0.825,27.5
+C5.6,"Claim Substantiation","GEO / Authority Readiness",3.0,28,28.0,32,32.0,40,40.0,0,1.32,44.0
+C5.7,"Platform Profiles (G2/Trustpilot)","GEO / Authority Readiness",3.0,50,50.0,0,0.0,50,50.0,0,1.5,50.0
+C5.8,"Partner / Supplier References","GEO / Authority Readiness",3.0,45,45.0,0,0.0,55,55.0,0,1.35,45.0
+C5.9,"Wikidata / Knowledge Base","GEO / Authority Readiness",3.0,8,8.0,0,0.0,92,92.0,0,0.24,8.0
+C5.10,"Co-Citation & Entity Association","GEO / Authority Readiness",3.0,38,38.0,22,22.0,40,40.0,0,1.62,54.0

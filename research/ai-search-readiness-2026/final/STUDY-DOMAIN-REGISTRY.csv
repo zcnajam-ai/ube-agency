@@ -1,0 +1,9 @@
+domain,canonical_domain,business_name,legal_entity,study_role,pilot,active_final,historical_excluded,reserve,replacement,batch,manifest_versions,current_active_status,notes
+"brooklyncandlestudio.com","brooklyncandlestudio.com","Brooklyn Candle Studio","Brooklyn Candle Studio LLC","ACTIVE_STUDY_DOMAIN","YES","YES","NO","NO","NO",1,"V1.0-V2.2","ACTIVE","Batch 1 active eCommerce"
+"pioneercarry.com","pioneercarry.com","Pioneer Carry","Pioneer Carry Inc","ACTIVE_STUDY_DOMAIN","NO","YES","NO","NO","NO",2,"V1.0-V2.2","ACTIVE","Batch 2 active eCommerce"
+"blueland.com","blueland.com","Blueland","Blueland Inc","ACTIVE_STUDY_DOMAIN","NO","YES","NO","NO","NO",3,"V1.0-V2.2","ACTIVE","Batch 3 active eCommerce"
+"harney.com","harney.com","Harney & Sons","Harney & Sons Fine Teas","ACTIVE_STUDY_DOMAIN","NO","YES","NO","NO","NO",4,"V1.0-V2.2","ACTIVE","Batch 4 active eCommerce"
+"cotopaxi.com","cotopaxi.com","Cotopaxi","Cotopaxi LLC","ACTIVE_STUDY_DOMAIN","NO","YES","NO","NO","NO",5,"V1.0-V2.2","ACTIVE","Batch 5 active eCommerce"
+"makerhouse.com","makerhouse.com","Maker House Artisans","Maker House Co.","ACTIVE_STUDY_DOMAIN","NO","YES","NO","NO","NO",2,"V1.0-V2.2","ACTIVE","Batch 2 active Canadian Misc (ID 82)"
+"brika.com","brika.com","BRIKA Canadian Artisans","Brika Inc","EXCLUDED_HISTORICAL","NO","NO","YES","NO","YES",5,"V2.0","EXCLUDED","Salt XC acquisition (Feb 2022)"
+"peace-collective.com","peace-collective.com","Peace Collective Goods","Peace Collective Inc","REPLACEMENT_CANDIDATE","NO","YES","NO","YES","YES",5,"V2.2","ACTIVE","Selected unique Canadian Misc replacement for Batch 5 ID 98"
