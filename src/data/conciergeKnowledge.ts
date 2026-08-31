@@ -613,26 +613,6 @@ export const UBE_PROJECTS_KNOWLEDGE: ProjectKnowledge[] = [
     deliverables: ["Merchandise SKU Lineup", "Dropshipping Fulfillment Flow", "Mobile-First Responsive Shopify Storefront"],
     route: "/work/bugle-chaser-outdoor-apparel-brand",
   },
-  {
-    slug: "apex-storefront-engine",
-    title: "Apex Storefront & eCommerce Platform",
-    client: "Apex Lifestyle Goods",
-    category: "eCommerce & Shopify Plus",
-    summary:
-      "Next.js and Shopify Plus storefront architecture with restructured product catalog filtering, slide-out cart, and multi-currency checkout.",
-    deliverables: ["Responsive Checkout Funnel", "Catalog Filter Architecture", "Multi-Currency Global Payment Processing"],
-    route: "/work",
-  },
-  {
-    slug: "aura-health-mobile-app",
-    title: "Aura Connected Mobile Experience",
-    client: "Aura Wellness Technologies",
-    category: "Mobile Application (iOS & Android)",
-    summary:
-      "Cross-platform React Native health application with intuitive biometric data charts, offline-first SQLite caching, and Bluetooth device connectivity.",
-    deliverables: ["Cross-Platform Single Codebase", "Offline-First Local Data Sync", "Production App Store Deployment"],
-    route: "/work",
-  },
 ];
 
 export const UBE_COMPANY_KNOWLEDGE = {

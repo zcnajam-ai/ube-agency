@@ -140,7 +140,7 @@ export const INSIGHTS: InsightArticle[] = [
         body: [
           "AI models prioritize content that provides unambiguous factual data. To improve citation eligibility in Google AI Overviews and ChatGPT Search, structure key sections using answer-first formatting.",
           "Begin sections with a direct definition, follow with bulleted supporting facts, and conclude with concrete operational details. Avoid generic buzzwords or unsupported claims, as AI engines filter out promotional filler.",
-          "For example, in our recent <a href=\"/work/hyperscale-aiseo-paid-acquisition\" className=\"text-[#9F8BE7] underline font-medium hover:text-[#161616]\">AI SEO case study</a>, structuring technical schema and entity graphs significantly expanded organic search discovery and citation eligibility. In our empirical <a href=\"/research/ai-search-readiness-study-2026\" className=\"text-[#9F8BE7] underline font-medium hover:text-[#161616]\">AI Search Readiness Study 2026</a>, 80 of 100 audited business websites lacked proprietary research assets, highlighting a primary gap in generative authority. Read our complete guide on <a href=\"/insights/how-to-get-your-business-mentioned-in-chatgpt\" className=\"text-[#9F8BE7] underline font-medium hover:text-[#161616]\">how to improve your business visibility in ChatGPT</a>, explore <a href=\"/insights/how-to-optimize-for-google-ai-overviews\" className=\"text-[#9F8BE7] underline font-medium hover:text-[#161616]\">how to optimize for Google AI Overviews</a>, or master <a href=\"/insights/shopify-ai-seo-guide\" className=\"text-[#9F8BE7] underline font-medium hover:text-[#161616]\">Shopify AI SEO</a> for eCommerce product discovery."
+          "For example, in our empirical <a href=\"/research/ai-search-readiness-study-2026\" className=\"text-[#9F8BE7] underline font-medium hover:text-[#161616]\">AI Search Readiness Study 2026</a>, auditing 100 business websites across 45 scored criteria revealed critical gaps in generative authority and content retrievability. Read our complete guide on <a href=\"/insights/how-to-get-your-business-mentioned-in-chatgpt\" className=\"text-[#9F8BE7] underline font-medium hover:text-[#161616]\">how to improve your business visibility in ChatGPT</a>, explore <a href=\"/insights/how-to-optimize-for-google-ai-overviews\" className=\"text-[#9F8BE7] underline font-medium hover:text-[#161616]\">how to optimize for Google AI Overviews</a>, or master <a href=\"/insights/shopify-ai-seo-guide\" className=\"text-[#9F8BE7] underline font-medium hover:text-[#161616]\">Shopify AI SEO</a> for eCommerce product discovery."
         ]
       },
       {
@@ -214,9 +214,9 @@ export const INSIGHTS: InsightArticle[] = [
       buttonText: "View AI SEO Packages"
     },
     caseStudyCta: {
-      title: "NovaTech AI SEO Case Study",
-      desc: "See how structured schema and AI search optimization expanded organic search discovery.",
-      href: "/work/hyperscale-aiseo-paid-acquisition",
+      title: "Fixoria Studio Brand Case Study",
+      desc: "See how modern brand architecture and geometric logomark design elevated Fixoria Studio.",
+      href: "/work/fixoria-studio-brand-identity-system",
       buttonText: "Read Case Study"
     }
   },
@@ -302,7 +302,7 @@ export const INSIGHTS: InsightArticle[] = [
           "<strong>3. Make Your Business Entity Extremely Clear:</strong> An AI system shouldn't have to infer what your business does. Consistently connect entity relationships across your ecosystem: <code>Company → Services → Expertise → People → Evidence → External Profiles</code>. For example, Unified Branding Experts connects core capabilities across <a href=\"/services/shopify-development\" className=\"text-[#9F8BE7] underline font-medium hover:text-[#161616]\">Shopify development</a> and <a href=\"/services/web-design-development\" className=\"text-[#9F8BE7] underline font-medium hover:text-[#161616]\">custom web development</a>.",
           "<strong>4. Create Content That Directly Answers Real Questions:</strong> Move from promotional marketing copy to direct Q&A formatting. Follow the structured pattern: <em>Question → Direct Answer (40-60 words) → Explanation → Evidence → Next Step</em>. This aligns with machine-reading frameworks.",
           "<strong>5. Build Topical Authority Instead of Publishing Random Blogs:</strong> Avoid sporadic, disconnected blog posts. Build interconnected content hubs. A comprehensive pillar like our <a href=\"/insights/ai-seo-aeo-geo-guide\" className=\"text-[#9F8BE7] underline font-medium hover:text-[#161616]\">AI SEO, AEO & GEO Complete Guide</a> supported by targeted guides establishes domain authority.",
-          "<strong>6. Publish Information Worth Citing:</strong> Generic advice is easily replaced by AI synthesis. Publish original research, industry benchmarks, proprietary frameworks, or first-party case study data (such as our <a href=\"/work/hyperscale-aiseo-paid-acquisition\" className=\"text-[#9F8BE7] underline font-medium hover:text-[#161616]\">AI SEO case study</a>). Original research can give external publishers and retrieval systems stronger reasons to reference the source.",
+          "<strong>6. Publish Information Worth Citing:</strong> Generic advice is easily replaced by AI synthesis. Publish original research, industry benchmarks, proprietary frameworks, or first-party research data (such as our <a href=\"/research/ai-search-readiness-study-2026\" className=\"text-[#9F8BE7] underline font-medium hover:text-[#161616]\">2026 AI Search Readiness Study</a>). Original research can give external publishers and retrieval systems stronger reasons to reference the source.",
           "<strong>7. Earn Independent Mentions and Backlinks:</strong> First-party claims require independent corroboration. Mentions across industry publications, verified business directories, podcasts, interviews, and client websites validate your entity presence in knowledge graphs.",
           "<strong>8. Strengthen Real Reputation Signals:</strong> When users ask conversational AI for service recommendations, trust signals matter. Maintain verified profiles on Google Business and Trustpilot, display real client testimonials, and publish clear company leadership details. Never manufacture fake reviews or unverified claims.",
           "<strong>9. Measure ChatGPT Visibility & Track Referral Traffic:</strong> Track AI discovery systematically using web analytics and prompt benchmarks."
@@ -412,9 +412,9 @@ export const INSIGHTS: InsightArticle[] = [
       buttonText: "View AI SEO Packages"
     },
     caseStudyCta: {
-      title: "NovaTech AI SEO Case Study",
-      desc: "See how structured schema and AI search optimization expanded organic search discovery.",
-      href: "/work/hyperscale-aiseo-paid-acquisition",
+      title: "Fixoria Studio Brand Case Study",
+      desc: "See how modern brand architecture and geometric logomark design elevated Fixoria Studio.",
+      href: "/work/fixoria-studio-brand-identity-system",
       buttonText: "Read Case Study"
     }
   },
@@ -503,7 +503,7 @@ export const INSIGHTS: InsightArticle[] = [
           "<strong>2. Satisfy the User's Real Search Intent:</strong> Don't optimize content around a keyword while ignoring the actual problem behind the search. Someone searching <em>'Shopify store not getting sales'</em> probably doesn't want a definition of Shopify — they need actionable guidance on traffic quality, conversion rate, pricing, trust, and checkout friction. Build content around complete user needs.",
           "<strong>3. Provide Clear, Self-Contained Answers:</strong> Users often ask Google increasingly specific and conversational questions. Follow the structured pattern: <em>Question → Direct Answer (40-60 words) → Explanation → Evidence → Next Step</em>. For example: <em>Does schema guarantee inclusion in Google AI Overviews? No. Structured data can help Google understand information on a page, but it does not guarantee inclusion.</em>",
           "<strong>4. Build Topical Depth (Query Fan-Out Optimization):</strong> Google's description of query fan-out provides another reason to think beyond exact-match keywords. A strong website should cover meaningful subtopics surrounding its areas of expertise. A comprehensive pillar like our <a href=\"/insights/ai-seo-aeo-geo-guide\" className=\"text-[#9F8BE7] underline font-medium hover:text-[#161616]\">AI SEO, AEO & GEO Complete Guide</a> connects AI search, AEO, GEO, schema, and measurement.",
-          "<strong>5. Strengthen Internal Linking:</strong> Internal links help users and search engines discover related information. A supporting article should naturally connect to the primary AI SEO pillar, specialized <a href=\"/services/aiseo\" className=\"text-[#9F8BE7] underline font-medium hover:text-[#161616]\">AI SEO services</a>, related <a href=\"/insights/how-to-get-your-business-mentioned-in-chatgpt\" className=\"text-[#9F8BE7] underline font-medium hover:text-[#161616]\">ChatGPT Search guides</a>, and empirical <a href=\"/work/hyperscale-aiseo-paid-acquisition\" className=\"text-[#9F8BE7] underline font-medium hover:text-[#161616]\">AI SEO case studies</a>.",
+          "<strong>5. Strengthen Internal Linking:</strong> Internal links help users and search engines discover related information. A supporting article should naturally connect to the primary AI SEO pillar, specialized <a href=\"/services/aiseo\" className=\"text-[#9F8BE7] underline font-medium hover:text-[#161616]\">AI SEO services</a>, related <a href=\"/insights/how-to-get-your-business-mentioned-in-chatgpt\" className=\"text-[#9F8BE7] underline font-medium hover:text-[#161616]\">ChatGPT Search guides</a>, and empirical <a href=\"/research/ai-search-readiness-study-2026\" className=\"text-[#9F8BE7] underline font-medium hover:text-[#161616]\">AI Search Readiness Study 2026</a>.",
           "<strong>6. Use Structured Data Accurately:</strong> Structured data remains useful — but it should not be treated as an AI ranking hack. Google says structured data should match visible page content. Useful schema types include <code>Organization</code>, <code>WebSite</code>, <code>WebPage</code>, <code>Article</code>, <code>Service</code>, and <code>BreadcrumbList</code>. Never manufacture fake reviews, fake ratings, or imaginary 'AI Overview schema.'",
           "<strong>7. Demonstrate Real Experience and Evidence:</strong> Generic statements are easy to reproduce; real experience is harder to replace. Strengthen important content with legitimate case studies, process screenshots, first-party data, and expert commentary.",
           "<strong>8. Publish Original Information:</strong> Google emphasizes unique, valuable, non-commodity content in its guidance for AI search experiences. According to UBE's <a href=\"/research/ai-search-readiness-study-2026\" className=\"text-[#9F8BE7] underline font-medium hover:text-[#161616]\">audit of 100 business websites</a>, content retrievability and direct-answer formatting averaged only 62.20% of maximum possible framework points. Original research, benchmarks, frameworks, or industry surveys give external publishers and retrieval systems stronger reasons to reference your work.",
@@ -612,9 +612,9 @@ export const INSIGHTS: InsightArticle[] = [
       buttonText: "View AI SEO Packages"
     },
     caseStudyCta: {
-      title: "NovaTech AI SEO Case Study",
-      desc: "See how structured schema and AI search optimization expanded organic search discovery.",
-      href: "/work/hyperscale-aiseo-paid-acquisition",
+      title: "Fixoria Studio Brand Case Study",
+      desc: "See how modern brand architecture and geometric logomark design elevated Fixoria Studio.",
+      href: "/work/fixoria-studio-brand-identity-system",
       buttonText: "Read Case Study"
     }
   },
