@@ -138,7 +138,7 @@ export const INSIGHTS: InsightArticle[] = [
         body: [
           "AI models prioritize content that provides unambiguous factual data. To improve citation eligibility in Google AI Overviews and ChatGPT Search, structure key sections using answer-first formatting.",
           "Begin sections with a direct definition, follow with bulleted supporting facts, and conclude with concrete operational details. Avoid generic buzzwords or unsupported claims, as AI engines filter out promotional filler.",
-          "For example, in our recent <a href=\"/work/hyperscale-aiseo-paid-acquisition\" className=\"text-[#9F8BE7] underline font-medium hover:text-[#161616]\">AI SEO case study</a>, structuring technical schema and entity graphs significantly expanded organic search discovery and citation eligibility."
+          "For example, in our recent <a href=\"/work/hyperscale-aiseo-paid-acquisition\" className=\"text-[#9F8BE7] underline font-medium hover:text-[#161616]\">AI SEO case study</a>, structuring technical schema and entity graphs significantly expanded organic search discovery and citation eligibility. Read our complete guide on <a href=\"/insights/how-to-get-your-business-mentioned-in-chatgpt\" className=\"text-[#9F8BE7] underline font-medium hover:text-[#161616]\">how to improve your business visibility in ChatGPT</a> for step-by-step execution."
         ]
       },
       {
@@ -196,7 +196,7 @@ export const INSIGHTS: InsightArticle[] = [
       }
     ],
     relatedSlugs: [
-      "the-death-of-10-blue-links-mastering-aiseo-and-answer-engines",
+      "how-to-get-your-business-mentioned-in-chatgpt",
       "why-isolated-branding-fails-the-power-of-unified-ecosystems"
     ],
     serviceCta: {
@@ -218,6 +218,203 @@ export const INSIGHTS: InsightArticle[] = [
       buttonText: "Read Case Study"
     }
   },
+  // 0.1 How to Get Your Business Mentioned in ChatGPT: 9 Practical Steps for 2026 (Supporting Guide)
+  {
+    id: "insight-how-to-get-your-business-mentioned-in-chatgpt",
+    slug: "how-to-get-your-business-mentioned-in-chatgpt",
+    title: "How to Get Your Business Mentioned in ChatGPT: 9 Steps for 2026",
+    kicker: "ChatGPT Search Guide",
+    category: "AI Search & Discovery",
+    readTime: "10 min read",
+    publishedAt: "August 2026",
+    updatedAt: "August 2026",
+    author: {
+      name: "Unified Branding Experts Editorial Team",
+      role: "AI Search & Web Engineering Group",
+      avatar: "/images/logo/ube-png-black.png",
+    },
+    summary:
+      "Learn 9 practical ways to improve your business's eligibility for discovery, mentions and citations in ChatGPT Search, from OAI-SearchBot access to content authority.",
+    coverImage: "/images/projects/project-marketing-2.webp",
+    primaryIntent: "how to get your business mentioned in ChatGPT",
+    quickAnswer:
+      "Getting your business mentioned in ChatGPT Search requires technical accessibility via OAI-SearchBot, clear Organization entity structure, answer-first content formatting, topical authority clusters, and independent reputation signals across the web. There is no paid submission or guaranteed shortcut — eligibility is earned through web authority and machine-readable data.",
+    tableOfContents: [
+      { id: "can-you-get-listed-on-chatgpt", title: "Can You Get Your Business Listed on ChatGPT?" },
+      { id: "how-chatgpt-search-finds-information", title: "How Does ChatGPT Search Find Information?" },
+      { id: "chatgpt-search-vs-gpt-training", title: "ChatGPT Search vs. GPT Training: Understanding Crawlers" },
+      { id: "9-ways-to-improve-visibility", title: "9 Practical Ways to Improve Your Business's Visibility in ChatGPT" },
+      { id: "what-doesnt-work", title: "What Doesn't Work? Common Pitfalls & Wasteful Tactics" },
+      { id: "paying-chatgpt-or-timeline", title: "Paying for Visibility & Realistic Timelines" },
+      { id: "chatgpt-visibility-checklist", title: "Actionable 2026 ChatGPT Visibility Checklist" },
+      { id: "sources-and-further-reading", title: "Official Sources & Further Reading" },
+    ],
+    sections: [
+      {
+        id: "can-you-get-listed-on-chatgpt",
+        h2: "Can You Get Your Business Listed on ChatGPT?",
+        body: [
+          "Getting your business mentioned in ChatGPT isn't as simple as submitting your company to a traditional directory or adding a special piece of schema markup to your website. There is no 'Add My Business to ChatGPT' button.",
+          "According to <a href=\"https://help.openai.com/en/articles/10008544-chatgpt-search\" target=\"_blank\" rel=\"noopener noreferrer\" className=\"text-[#9F8BE7] underline font-medium hover:text-[#161616]\">official OpenAI publisher guidance</a>, public websites can appear in ChatGPT Search results. For content to be discoverable and eligible to appear in summaries and snippets, OpenAI recommends allowing its dedicated search crawler, <code>OAI-SearchBot</code>, to access your website.",
+          "That creates eligibility. It does not guarantee placement. OpenAI explicitly states that ChatGPT Search uses multiple retrieval factors intended to help users find relevant and reliable information, and there is no way to pay for top placement.",
+          "The strategic distinction is crucial: <strong>Crawler access = eligibility. Relevance, usefulness and authority = potential visibility.</strong> Businesses should therefore think beyond simply 'getting indexed.' The true objective is establishing your brand as a useful, credible source for the questions potential customers ask."
+        ],
+        callout: {
+          title: "Key Rule of Discovery",
+          text: "Allowing OAI-SearchBot removes technical barriers to discovery. Surfacing in AI search outputs depends on genuine topical authority, clear entity signals, and independent external proof.",
+          type: "info"
+        }
+      },
+      {
+        id: "how-chatgpt-search-finds-information",
+        h2: "How Does ChatGPT Search Find Information?",
+        body: [
+          "When a question benefits from current web information, ChatGPT can search the web and provide an answer supported by inline links and citations.",
+          "OpenAI states that ChatGPT Search can work with third-party search providers and may rewrite a user's question into more targeted searches.",
+          "For example, when a user asks: <em>'Who can help optimize my Shopify store for AI search?'</em> the underlying retrieval mechanism may investigate related concepts such as: <code>Shopify AI SEO agencies</code>, <code>Shopify SEO companies</code>, <code>AI search optimization services</code>, <code>eCommerce GEO agencies</code>, and <code>Shopify AEO consultants</code>.",
+          "This multi-query expansion is why businesses shouldn't optimize around a single exact-match keyword. The broader objective is establishing clear topical relevance around the problems your company solves."
+        ]
+      },
+      {
+        id: "chatgpt-search-vs-gpt-training",
+        h2: "ChatGPT Search vs. GPT Training: Understanding Crawlers",
+        body: [
+          "This distinction is frequently misunderstood by website owners and marketers. OpenAI operates distinct crawlers for different operational purposes:",
+          "<strong>OAI-SearchBot:</strong> Dedicated to search-related discovery. If you want public website content to be eligible for discovery and inclusion in ChatGPT Search summaries and snippets, OpenAI recommends that you do not block <code>OAI-SearchBot</code>.",
+          "<strong>GPTBot:</strong> Relates to content that may be used for improving OpenAI's generative AI models. Publishers can make different decisions regarding search visibility versus model training participation.",
+          "In other words, allowing ChatGPT Search discovery does not require treating every OpenAI crawler identically. Website owners can configure crawler access according to their publishing, copyright, and data-use preferences in <code>robots.txt</code>."
+        ],
+        callout: {
+          title: "Crawler Separation",
+          text: "OAI-SearchBot handles real-time web search citations. GPTBot handles AI model training. You can allow OAI-SearchBot while managing GPTBot permissions independently.",
+          type: "tip"
+        }
+      },
+      {
+        id: "9-ways-to-improve-visibility",
+        h2: "9 Practical Ways to Improve Your Business's Visibility in ChatGPT",
+        body: [
+          "Follow these nine practical steps to strengthen your company's visibility across conversational AI platforms:",
+          "<strong>1. Make Sure OAI-SearchBot Can Access Your Website:</strong> Start with technical accessibility. If <code>OAI-SearchBot</code> is blocked by server rate-limiting, firewall rules, or CDN bot protection, your content cannot be retrieved. Ensure your <code>robots.txt</code> explicitly permits <code>User-agent: OAI-SearchBot</code> on public routes while administrative endpoints remain secure.",
+          "<strong>2. Establish Traditional Search Visibility:</strong> AI search expands upon traditional SEO foundations rather than replacing them. Established SEO fundamentals — XML sitemaps, clean canonical tags, strong page titles, fast mobile performance, and internal link structure — directly support AI retrieval systems.",
+          "<strong>3. Make Your Business Entity Extremely Clear:</strong> An AI system shouldn't have to infer what your business does. Consistently connect entity relationships across your ecosystem: <code>Company → Services → Expertise → People → Evidence → External Profiles</code>. For example, Unified Branding Experts connects core capabilities across <a href=\"/services/shopify-development\" className=\"text-[#9F8BE7] underline font-medium hover:text-[#161616]\">Shopify development</a> and <a href=\"/services/web-design-development\" className=\"text-[#9F8BE7] underline font-medium hover:text-[#161616]\">custom web development</a>.",
+          "<strong>4. Create Content That Directly Answers Real Questions:</strong> Move from promotional marketing copy to direct Q&A formatting. Follow the structured pattern: <em>Question → Direct Answer (40-60 words) → Explanation → Evidence → Next Step</em>. This aligns with machine-reading frameworks.",
+          "<strong>5. Build Topical Authority Instead of Publishing Random Blogs:</strong> Avoid sporadic, disconnected blog posts. Build interconnected content hubs. A comprehensive pillar like our <a href=\"/insights/ai-seo-aeo-geo-guide\" className=\"text-[#9F8BE7] underline font-medium hover:text-[#161616]\">AI SEO, AEO & GEO Complete Guide</a> supported by targeted guides establishes domain authority.",
+          "<strong>6. Publish Information Worth Citing:</strong> Generic advice is easily replaced by AI synthesis. Publish original research, industry benchmarks, proprietary frameworks, or first-party case study data (such as our <a href=\"/work/hyperscale-aiseo-paid-acquisition\" className=\"text-[#9F8BE7] underline font-medium hover:text-[#161616]\">AI SEO case study</a>) that external sites and AI models naturally cite as primary proof.",
+          "<strong>7. Earn Independent Mentions and Backlinks:</strong> First-party claims require independent corroboration. Mentions across industry publications, verified business directories, podcasts, interviews, and client websites validate your entity presence in knowledge graphs.",
+          "<strong>8. Strengthen Real Reputation Signals:</strong> When users ask conversational AI for service recommendations, trust signals matter. Maintain verified profiles on Google Business and Trustpilot, display real client testimonials, and publish clear company leadership details. Never manufacture fake reviews or unverified claims.",
+          "<strong>9. Measure ChatGPT Visibility & Track Referral Traffic:</strong> Track AI discovery systematically using web analytics and prompt benchmarks."
+        ],
+        table: {
+          headers: ["Visibility Metric", "Tracking Method", "Target KPI / Outcome"],
+          rows: [
+            ["ChatGPT Referral Traffic", "Analytics filter for utm_source=chatgpt.com", "Identify referral sessions, landing pages & lead conversion"],
+            ["Prompt Visibility Benchmark", "Monthly standardized prompt test matrix", "Directional tracking of brand mentions & cited URLs"],
+            ["Branded Search Growth", "Google Search Console & Analytics trend analysis", "Measure brand discovery and organic search demand"],
+            ["AI Lead Conversion Rate", "Form submissions & goal completion by AI visitors", "Evaluate commercial quality of AI search traffic"]
+          ]
+        }
+      },
+      {
+        id: "what-doesnt-work",
+        h2: "What Doesn't Work? Common Pitfalls & Wasteful Tactics",
+        body: [
+          "Avoid wasteful tactics that fail to build genuine search authority:",
+          "❌ <strong>Keyword Stuffing:</strong> Repeating keywords destroys readability and triggers quality filters. Write naturally around user intent.",
+          "❌ <strong>Thin AI Content Volume:</strong> Mass-publishing low-quality AI-generated posts creates index bloat without building authority.",
+          "❌ <strong>Fake Reviews & Unverifiable Claims:</strong> Manufacturing fake ratings or testimonials damages E-E-A-T and risks penalization.",
+          "❌ <strong>Low-Quality Link Schemes:</strong> Purchasing thousands of automated spam backlinks creates severe algorithmic risk.",
+          "❌ <strong>Relying on Non-Existent 'ChatGPT Schema':</strong> No secret JSON-LD tag forces AI recommendation. Use standard schema.org types.",
+          "❌ <strong>Treating llms.txt as a Magic File:</strong> An experimental text file cannot compensate for a poorly structured or thin website."
+        ]
+      },
+      {
+        id: "paying-chatgpt-or-timeline",
+        h2: "Paying for Visibility & Realistic Timelines",
+        body: [
+          "<strong>Can You Pay ChatGPT to Recommend Your Business Organically?</strong><br>No. Organic ChatGPT Search discovery cannot be purchased. Sponsored advertising on digital platforms is separate from organic citations. Organic AI visibility is earned discovery based on accessibility, relevance, usefulness, and authority.",
+          "<strong>How Long Does It Take to Appear in ChatGPT?</strong><br>There is no guaranteed timeline. While technical fixes like unblocking <code>OAI-SearchBot</code> take effect upon recrawling, building topical authority, brand mentions, and independent reputation usually develops over months. Consistent execution compounds over time."
+        ]
+      },
+      {
+        id: "chatgpt-visibility-checklist",
+        h2: "Actionable 2026 ChatGPT Visibility Checklist",
+        body: [
+          "Use this 5-stage checklist to evaluate your website's readiness for ChatGPT Search:",
+          "✓ <strong>Technical:</strong> Ensure public pages return HTTP 200, verify <code>robots.txt</code> permits <code>OAI-SearchBot</code>, and check CDN/firewalls.",
+          "✓ <strong>Entity Alignment:</strong> Implement valid <code>Organization</code> JSON-LD schema linking core capabilities, team, and verified profiles.",
+          "✓ <strong>Content Architecture:</strong> Add 40-60 word answer-first passages under key headings and cluster content around core pillars.",
+          "✓ <strong>Authority & Proof:</strong> Publish citation-worthy first-party data and earn independent editorial mentions.",
+          "✓ <strong>Analytics & Measurement:</strong> Monitor <code>utm_source=chatgpt.com</code> referral traffic and maintain monthly prompt benchmarks using specialized <a href=\"/services/aiseo\" className=\"text-[#9F8BE7] underline font-medium hover:text-[#161616]\">AI SEO services</a> and transparent <a href=\"/ai-seo-packages\" className=\"text-[#9F8BE7] underline font-medium hover:text-[#161616]\">AI SEO growth packages</a>."
+        ]
+      },
+      {
+        id: "sources-and-further-reading",
+        h2: "Official Sources & Further Reading",
+        body: [
+          "For authoritative publisher specifications directly from OpenAI, consult these official documentation resources:",
+          "• <a href=\"https://platform.openai.com/docs/bots/oai-searchbot\" target=\"_blank\" rel=\"noopener noreferrer\" className=\"text-[#9F8BE7] underline font-medium hover:text-[#161616]\">OpenAI OAI-SearchBot Documentation</a> — Official specification for OpenAI's search discovery crawler.",
+          "• <a href=\"https://help.openai.com/en/articles/10008544-chatgpt-search\" target=\"_blank\" rel=\"noopener noreferrer\" className=\"text-[#9F8BE7] underline font-medium hover:text-[#161616]\">OpenAI ChatGPT Search & Publisher Guidance</a> — Guidance on public website eligibility, retrieval factors, and UTM referral tracking.",
+          "• <a href=\"https://platform.openai.com/docs/bots/gptbot\" target=\"_blank\" rel=\"noopener noreferrer\" className=\"text-[#9F8BE7] underline font-medium hover:text-[#161616]\">OpenAI GPTBot Documentation</a> — Specifications for model training crawlers and robots.txt rules.",
+          "• <a href=\"/insights/ai-seo-aeo-geo-guide\" className=\"text-[#9F8BE7] underline font-medium hover:text-[#161616]\">AI SEO, AEO & GEO: Complete Guide for 2026</a> — Unified Branding Experts primary authority framework for AI search optimization."
+        ]
+      }
+    ],
+    faqs: [
+      {
+        q: "Can any website appear in ChatGPT Search?",
+        a: "OpenAI states that public websites can appear in ChatGPT Search. Website owners who want their content discoverable and eligible for summaries and snippets should make sure they are not blocking OAI-SearchBot."
+      },
+      {
+        q: "Does OAI-SearchBot guarantee my website will appear?",
+        a: "No. Crawler access creates eligibility for discovery. It does not guarantee placement, citations or recommendations."
+      },
+      {
+        q: "Is OAI-SearchBot the same as GPTBot?",
+        a: "No. OAI-SearchBot is associated with search discovery, while GPTBot relates to content that may be used for improving OpenAI's generative AI models."
+      },
+      {
+        q: "Do I need special ChatGPT schema?",
+        a: "No universal 'ChatGPT schema' guarantees visibility. Use accurate standard structured data where appropriate to help describe your organization, services, articles and other entities."
+      },
+      {
+        q: "Can backlinks help ChatGPT visibility?",
+        a: "There is no public formula stating that a specific number or type of backlinks will produce a ChatGPT citation. Legitimate external mentions and links can strengthen broader web authority, entity corroboration and traditional search visibility."
+      },
+      {
+        q: "Can I track traffic coming from ChatGPT?",
+        a: "Yes. OpenAI states that ChatGPT Search referral URLs automatically include utm_source=chatgpt.com. This can help identify ChatGPT Search traffic in analytics."
+      },
+      {
+        q: "Can someone guarantee ChatGPT recommendations?",
+        a: "No. No credible provider should guarantee that ChatGPT will recommend or cite a particular company for a particular query."
+      }
+    ],
+    relatedSlugs: [
+      "ai-seo-aeo-geo-guide",
+      "why-isolated-branding-fails-the-power-of-unified-ecosystems",
+      "how-much-does-a-small-business-website-cost"
+    ],
+    serviceCta: {
+      title: "Structure Your Brand for ChatGPT Search",
+      desc: "Our AI SEO architects engineer entity schemas, OAI-SearchBot accessibility, and GEO content clusters.",
+      href: "/services/aiseo",
+      buttonText: "Explore AI SEO Services"
+    },
+    packageCta: {
+      title: "AI SEO & ChatGPT Growth Packages",
+      priceBadge: "From $349/mo",
+      href: "/ai-seo-packages",
+      buttonText: "View AI SEO Packages"
+    },
+    caseStudyCta: {
+      title: "NovaTech AI SEO Case Study",
+      desc: "See how structured schema and AI search optimization expanded organic search discovery.",
+      href: "/work/hyperscale-aiseo-paid-acquisition",
+      buttonText: "Read Case Study"
+    }
+  },
+
   // 1. How Much Does Professional Logo Design Cost in 2026?
   {
     id: "insight-logo-cost",
