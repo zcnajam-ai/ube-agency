@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     type: "article",
     images: [
       {
-        url: "https://unifiedbrandingexperts.com/images/ube-social-preview-2026.svg",
+        url: "https://unifiedbrandingexperts.com/og-default.png",
         width: 1200,
         height: 630,
         alt: "UBE AI Search Readiness Study 2026",
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "AI Search Readiness Study 2026 | Unified Branding Experts",
     description: "Original research auditing 100 business websites across 45 AI search readiness criteria.",
-    images: ["https://unifiedbrandingexperts.com/images/ube-social-preview-2026.svg"],
+    images: ["https://unifiedbrandingexperts.com/og-default.png"],
   }
 };
 

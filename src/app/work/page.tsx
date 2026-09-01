@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "https://unifiedbrandingexperts.com/images/projects/project-brand-1.webp",
+        url: "https://unifiedbrandingexperts.com/og-default.png",
         width: 1200,
         height: 630,
         alt: "Unified Branding Experts Portfolio",
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     title: "Featured Case Studies & Work Portfolio | Unified Branding Experts",
     description:
       "Explore case studies in custom Shopify eCommerce, brand identity design, Next.js web applications, and multi-channel performance marketing.",
-    images: ["https://unifiedbrandingexperts.com/images/projects/project-brand-1.webp"],
+    images: ["https://unifiedbrandingexperts.com/og-default.png"],
   },
 };
 

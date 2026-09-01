@@ -51,7 +51,7 @@ export async function generateMetadata({
       authors: [article.author.name],
       images: [
         {
-          url: `https://unifiedbrandingexperts.com${article.coverImage}`,
+          url: "https://unifiedbrandingexperts.com/og-default.png",
           width: 1200,
           height: 630,
           alt: article.title,
@@ -62,7 +62,7 @@ export async function generateMetadata({
       card: "summary_large_image",
       title: article.title,
       description: article.summary,
-      images: [`https://unifiedbrandingexperts.com${article.coverImage}`],
+      images: ["https://unifiedbrandingexperts.com/og-default.png"],
     },
   };
 }
@@ -103,7 +103,7 @@ export default async function InsightArticlePage({
       url: "https://unifiedbrandingexperts.com",
       logo: {
         "@type": "ImageObject",
-        url: "https://unifiedbrandingexperts.com/images/logo/ube-logo-black.svg",
+        url: "https://unifiedbrandingexperts.com/og-default.png",
       },
     },
     mainEntityOfPage: {

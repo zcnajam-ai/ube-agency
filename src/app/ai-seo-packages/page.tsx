@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     url: "https://unifiedbrandingexperts.com/ai-seo-packages",
     images: [
       {
-        url: "https://unifiedbrandingexperts.com/images/projects/project-marketing-1.webp",
+        url: "https://unifiedbrandingexperts.com/og-default.png",
         width: 1200,
         height: 630,
         alt: "AI SEO Packages by Unified Branding Experts",

@@ -63,11 +63,18 @@ export const metadata: Metadata = {
       },
   icons: {
     icon: [
-      { url: "/icon.png", sizes: "180x180", type: "image/png" },
       { url: "/favicon.ico" },
+      { url: "https://unifiedbrandingexperts.com/og-default.png", sizes: "16x16", type: "image/png" },
+      { url: "https://unifiedbrandingexperts.com/og-default.png", sizes: "32x32", type: "image/png" },
+      { url: "https://unifiedbrandingexperts.com/og-default.png", sizes: "48x48", type: "image/png" },
+      { url: "https://unifiedbrandingexperts.com/og-default.png", sizes: "96x96", type: "image/png" },
+      { url: "https://unifiedbrandingexperts.com/og-default.png", sizes: "512x512", type: "image/png" },
     ],
-    shortcut: "/icon.png",
-    apple: "/apple-icon.png",
+    shortcut: "/favicon.ico",
+    apple: [
+      { url: "https://unifiedbrandingexperts.com/og-default.png", sizes: "180x180", type: "image/png" },
+      { url: "https://unifiedbrandingexperts.com/og-default.png", sizes: "180x180", type: "image/png" },
+    ],
   },
   openGraph: {
     type: "website",
@@ -79,10 +86,10 @@ export const metadata: Metadata = {
       "Unified Branding Experts provides professional web design, branding, eCommerce development, AI SEO, paid advertising, mobile apps and digital growth services for businesses ready to scale.",
     images: [
       {
-        url: "/images/ube-social-preview-2026.svg",
+        url: "https://unifiedbrandingexperts.com/og-default.png",
         width: 1200,
         height: 630,
-        alt: "Unified Branding Experts - Digital Growth Agency",
+        alt: "Unified Branding Experts - Official Visual Identity",
       },
     ],
   },
@@ -91,7 +98,7 @@ export const metadata: Metadata = {
     title: "Web Design, Branding & Digital Marketing Agency | Unified Branding Experts",
     description:
       "Unified Branding Experts provides professional web design, branding, eCommerce development, AI SEO, paid advertising, mobile apps and digital growth services for businesses ready to scale.",
-    images: ["/images/ube-social-preview-2026.svg"],
+    images: ["/og-default.png"],
   },
   alternates: {
     canonical: "https://unifiedbrandingexperts.com",

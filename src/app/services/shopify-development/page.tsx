@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     url: "https://unifiedbrandingexperts.com/services/shopify-development",
     images: [
       {
-        url: "https://unifiedbrandingexperts.com/images/official/shopify/shopify-development-hero.webp",
+        url: "https://unifiedbrandingexperts.com/og-default.png",
         width: 2048,
         height: 684,
         alt: "Shopify store setup and custom theme development with responsive storefront and ecommerce performance analytics",

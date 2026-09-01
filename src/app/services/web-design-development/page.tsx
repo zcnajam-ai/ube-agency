@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     url: "https://unifiedbrandingexperts.com/services/web-design-development",
     images: [
       {
-        url: "https://unifiedbrandingexperts.com/images/projects/project-brand-1.webp",
+        url: "https://unifiedbrandingexperts.com/og-default.png",
         width: 1200,
         height: 630,
         alt: "Website Design & Custom Web Development - Unified Branding Experts",

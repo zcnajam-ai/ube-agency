@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     url: "https://unifiedbrandingexperts.com/services/tiktok-marketing",
     images: [
       {
-        url: "https://unifiedbrandingexperts.com/images/projects/project-marketing-1.webp",
+        url: "https://unifiedbrandingexperts.com/og-default.png",
         width: 1200,
         height: 630,
         alt: "TikTok Marketing Services - Unified Branding Experts",

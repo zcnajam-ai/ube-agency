@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     url: "https://unifiedbrandingexperts.com/services/etsy-shop-setup",
     images: [
       {
-        url: "https://unifiedbrandingexperts.com/images/projects/project-brand-1.webp",
+        url: "https://unifiedbrandingexperts.com/og-default.png",
         width: 1200,
         height: 630,
         alt: "Etsy Shop Setup - Unified Branding Experts",

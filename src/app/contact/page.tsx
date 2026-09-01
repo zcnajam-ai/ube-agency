@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "https://unifiedbrandingexperts.com/images/projects/project-brand-1.webp",
+        url: "https://unifiedbrandingexperts.com/og-default.png",
         width: 1200,
         height: 630,
         alt: "Contact Unified Branding Experts",
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     title: "Contact & Project Inquiries",
     description:
       "Get in touch with Unified Branding Experts. Request a custom proposal for branding, web design, eCommerce development, or AI search optimization.",
-    images: ["https://unifiedbrandingexperts.com/images/projects/project-brand-1.webp"],
+    images: ["https://unifiedbrandingexperts.com/og-default.png"],
   },
 };
 

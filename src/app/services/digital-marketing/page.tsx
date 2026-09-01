@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "https://unifiedbrandingexperts.com/images/official/digital-marketing/digital-marketing-hero.webp",
+        url: "https://unifiedbrandingexperts.com/og-default.png",
         width: 2048,
         height: 676,
         alt: "Digital marketing campaign dashboard showing Google Ads, Meta Ads, TikTok and conversion performance",
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     title: "Digital Marketing Services | Google Ads, Meta Ads & TikTok | Unified Branding Experts",
     description:
       "Integrated digital marketing services across Google Ads, Meta Ads, TikTok Marketing, and paid social funnels.",
-    images: ["https://unifiedbrandingexperts.com/images/official/digital-marketing/digital-marketing-hero.webp"],
+    images: ["https://unifiedbrandingexperts.com/og-default.png"],
   },
 };
 
