@@ -274,3 +274,45 @@
     scroll-behavior: auto !important;
   }
 }
+
+/* Below-The-Fold Render Containment Utilities */
+.cv-contain-ads {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 850px;
+}
+
+.cv-contain-seo {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 850px;
+}
+
+.cv-contain-apps {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 850px;
+}
+
+.cv-contain-packages {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 1250px;
+}
+
+.cv-contain-work {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 1450px;
+}
+
+.cv-contain-testimonials {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 950px;
+}
+
+.cv-contain-cta {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 550px;
+}
+
+.cv-contain-footer {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 500px;
+}
+

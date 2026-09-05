@@ -12,32 +12,46 @@ import FinalCTA from "@/components/home/FinalCTA";
 export default function HomePage() {
   return (
     <div className="relative overflow-hidden bg-[#FAF7F6]">
-      {/* 1. Hero Section */}
+      {/* 1. Hero Section — UNTOUCHED ABOVE FOLD */}
       <Hero />
 
-      {/* 2. Priority 1: eCommerce Storefronts, Shopify & Dropshipping Automation */}
+      {/* 2. Priority 1: eCommerce Storefronts — UNTOUCHED NEAR FOLD */}
       <EcommercePriority />
 
       {/* 3. Priority 2 & 3: TikTok Shop, Meta Ads & Google Marketing */}
-      <GrowthAdsMarketing />
+      <div className="cv-contain-ads">
+        <GrowthAdsMarketing />
+      </div>
 
-      {/* 4. Priority 4 & 5: AI SEO (AEO/GEO) & Branding (Logo Design from $299) */}
-      <AISEOAndBranding />
+      {/* 4. Priority 4 & 5: AI SEO (AEO/GEO) & Branding */}
+      <div className="cv-contain-seo">
+        <AISEOAndBranding />
+      </div>
 
-      {/* 5. Priority 6 & 7: Mobile App Engineering ($999+) & AI CRM Automation ($349+) */}
-      <AppsAndAutomation />
+      {/* 5. Priority 6 & 7: Mobile App Engineering & AI CRM */}
+      <div className="cv-contain-apps">
+        <AppsAndAutomation />
+      </div>
 
       {/* 6. Commercial Packages Directory Grid */}
-      <HomePackagesGrid />
+      <div className="cv-contain-packages">
+        <HomePackagesGrid />
+      </div>
 
       {/* 7. Selected Case Studies & Proven Results */}
-      <SelectedWork />
+      <div className="cv-contain-work">
+        <SelectedWork />
+      </div>
 
       {/* 8. Verified Client Reviews & Trust Badges */}
-      <TestimonialsSection />
+      <div className="cv-contain-testimonials">
+        <TestimonialsSection />
+      </div>
 
       {/* 9. Final High-Contrast Conversion Banner */}
-      <FinalCTA />
+      <div className="cv-contain-cta">
+        <FinalCTA />
+      </div>
     </div>
   );
 }

@@ -23,7 +23,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="relative bg-[#161616] text-white border-t border-white/10 overflow-hidden pt-20 pb-12">
+    <footer className="cv-contain-footer relative bg-[#161616] text-white border-t border-white/10 overflow-hidden pt-20 pb-12">
       {/* Background Radial Glow */}
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[800px] h-[350px] bg-gradient-to-t from-[#9F8BE7]/10 via-[#DDF160]/05 to-transparent blur-3xl pointer-events-none" />
 
