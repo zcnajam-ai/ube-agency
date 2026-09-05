@@ -3,6 +3,8 @@
 import React from "react";
 import { useScroll } from "@/components/providers/SmoothScrollProvider";
 
+import { trackStartProjectClick } from "@/lib/analytics";
+
 interface ServiceProjectModalTriggerProps {
   label?: string;
   service?: string;
@@ -18,6 +20,11 @@ export default function ServiceProjectModalTrigger({
 }: ServiceProjectModalTriggerProps) {
   const { openProjectModal } = useScroll();
 
+  const handleClick = () => {
+    trackStartProjectClick(service || label);
+    openProjectModal(service);
+  };
+
   const baseStyle =
     "px-7 py-3.5 rounded-full text-xs font-display font-bold transition-all cursor-pointer shadow-xs";
 
@@ -31,7 +38,7 @@ export default function ServiceProjectModalTrigger({
   return (
     <button
       type="button"
-      onClick={() => openProjectModal(service)}
+      onClick={handleClick}
       className={`${baseStyle} ${variantStyle} ${className}`}
     >
       {label}

@@ -13,6 +13,7 @@ import {
   ShoppingBag,
   Check,
 } from "lucide-react";
+import { trackPackageInquiryClick } from "@/lib/analytics";
 
 export default function HomePackagesGrid() {
   const packages = [
@@ -193,6 +194,7 @@ export default function HomePackagesGrid() {
               <div className="pt-4 border-t border-[#E0DDDB]/30">
                 <Link
                   href={pkg.slug}
+                  onClick={() => trackPackageInquiryClick(pkg.title, pkg.price)}
                   className={`w-full py-3 px-4 min-h-[44px] rounded-full font-display font-bold text-xs flex items-center justify-center gap-1.5 transition-all cursor-pointer text-center ${
                     pkg.popular
                       ? "bg-[#9F8BE7] text-[#161616] hover:bg-[#b4a3f7] shadow-[0_4px_15px_rgba(159,139,231,0.35)]"

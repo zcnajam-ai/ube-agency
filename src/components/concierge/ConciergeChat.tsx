@@ -19,6 +19,7 @@ import {
   Headphones,
 } from "lucide-react";
 import { trackConciergeEvent } from "@/lib/conciergeAnalytics";
+import { trackChatbotOpen, trackChatbotCtaClick, trackStartProjectClick } from "@/lib/analytics";
 import {
   INITIAL_PATHWAYS,
   CONCIERGE_DECISION_TREE,
@@ -105,6 +106,9 @@ export default function ConciergeChat({ isOpen, onClose }: ConciergeChatProps) {
 
   // 3. Navigation & Modal Action Handlers
   const handleLinkAction = (url?: string, label?: string) => {
+    if (url) {
+      trackChatbotCtaClick(url, label);
+    }
     if (url?.includes("package")) {
       trackConciergeEvent("package_clicked", { packageName: label });
     } else if (url?.includes("work")) {
@@ -114,6 +118,8 @@ export default function ConciergeChat({ isOpen, onClose }: ConciergeChatProps) {
   };
 
   const handleEstimateAction = (serviceName?: string) => {
+    trackChatbotCtaClick("ProjectModal", serviceName);
+    trackStartProjectClick(serviceName || estimateData.service || "Concierge Recommendation");
     trackConciergeEvent("estimate_started", { source: "rec_card" });
     onClose(); // Close chatbot drawer first
     openProjectModal(serviceName || estimateData.service); // Open global ProjectModal
@@ -123,6 +129,7 @@ export default function ConciergeChat({ isOpen, onClose }: ConciergeChatProps) {
   useEffect(() => {
     if (isOpen) {
       messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+      trackChatbotOpen();
       trackConciergeEvent("concierge_opened");
     }
   }, [isOpen, messages, showEstimateForm]);
