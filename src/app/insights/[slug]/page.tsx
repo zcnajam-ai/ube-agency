@@ -14,7 +14,7 @@ import {
   AlertCircle,
   Lightbulb,
 } from "lucide-react";
-import { INSIGHTS, getInsightBySlug } from "@/data/insights";
+import { INSIGHTS, getInsightBySlug, ArticleFAQ, ArticleSection } from "@/data/insights";
 import { COMPANY_INFO } from "@/data/company";
 
 export function generateStaticParams() {
@@ -146,7 +146,7 @@ export default async function InsightArticlePage({
   const faqSchema = !article.disableFaqSchema && article.faqs && article.faqs.length > 0 ? {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    mainEntity: article.faqs.map((faq) => ({
+    mainEntity: article.faqs.map((faq: ArticleFAQ) => ({
       "@type": "Question",
       name: faq.q,
       acceptedAnswer: {
@@ -267,7 +267,7 @@ export default async function InsightArticlePage({
               Table of Contents
             </h3>
             <ul className="space-y-2 text-xs sm:text-sm font-body">
-              {article.tableOfContents.map((toc, index) => (
+              {article.tableOfContents.map((toc: { id: string; title: string }, index: number) => (
                 <li key={toc.id}>
                   <a
                     href={`#${toc.id}`}
@@ -285,7 +285,7 @@ export default async function InsightArticlePage({
         {/* 6. Main Content Sections */}
         <div className="space-y-12 text-[#303030] font-body text-base sm:text-lg leading-relaxed">
           {article.sections &&
-            article.sections.map((section) => (
+            article.sections.map((section: ArticleSection) => (
               <section key={section.id} id={section.id} className="space-y-4 pt-4 scroll-mt-24">
                 <h2 className="font-display text-2xl sm:text-3xl font-bold tracking-tight text-[#161616] border-b border-[#E0DDDB] pb-3">
                   {section.h2}
@@ -297,7 +297,7 @@ export default async function InsightArticlePage({
                   </h3>
                 )}
 
-                {section.body.map((paragraph, pIdx) => (
+                {section.body.map((paragraph: string, pIdx: number) => (
                   <p
                     key={pIdx}
                     className="text-sm sm:text-base leading-relaxed text-[#404040]"
@@ -311,7 +311,7 @@ export default async function InsightArticlePage({
                     <table className="w-full text-left text-xs sm:text-sm">
                       <thead className="bg-[#FAF7F6] border-b border-[#E0DDDB] text-[#161616] font-display font-bold">
                         <tr>
-                          {section.table.headers.map((header) => (
+                          {section.table.headers.map((header: string) => (
                             <th key={header} className="p-3.5 sm:p-4">
                               {header}
                             </th>
@@ -319,9 +319,9 @@ export default async function InsightArticlePage({
                         </tr>
                       </thead>
                       <tbody className="divide-y divide-[#E0DDDB]/60">
-                        {section.table.rows.map((row, rIdx) => (
+                        {section.table.rows.map((row: string[], rIdx: number) => (
                           <tr key={rIdx} className="hover:bg-[#FAF7F6]/50 transition-colors">
-                            {row.map((cell, cIdx) => (
+                            {row.map((cell: string, cIdx: number) => (
                               <td
                                 key={cIdx}
                                 className="p-3.5 sm:p-4 text-[#303030]"
@@ -432,7 +432,7 @@ export default async function InsightArticlePage({
             </div>
 
             <div className="grid grid-cols-1 gap-4">
-              {article.faqs.map((faq) => (
+              {article.faqs.map((faq: ArticleFAQ) => (
                 <div
                   key={faq.q}
                   className="p-6 rounded-2xl bg-white border border-[#E0DDDB] space-y-2 shadow-xs"

@@ -350,6 +350,69 @@ export default function TikTokShopSetupPage() {
         </Link>
       </section>
 
+      {/* Ecosystem Links */}
+      <section className="p-8 sm:p-12 rounded-3xl bg-[#FAF7F6] border border-[#E0DDDB] space-y-6">
+        <h2 className="font-display text-2xl sm:text-3xl font-bold text-[#161616]">
+          Connected TikTok Commerce &amp; Growth Pathways
+        </h2>
+        <p className="text-sm text-[#585858] font-body max-w-3xl">
+          Selling through TikTok Shop works best when integrated with your broader storefront, video marketing, and inventory systems:
+        </p>
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 pt-2">
+          <Link
+            href="/services/tiktok-marketing"
+            className="p-5 rounded-2xl bg-white border border-[#E0DDDB] hover:border-[#9F8BE7] transition-all space-y-2 group shadow-2xs"
+          >
+            <span className="font-display font-bold text-sm text-[#161616] group-hover:text-[#9F8BE7] transition-colors flex items-center justify-between">
+              <span>TikTok Marketing</span>
+              <ArrowUpRight className="w-4 h-4 text-[#9F8BE7]" />
+            </span>
+            <p className="text-[11px] text-[#585858] font-body">
+              Short-form video strategy, Spark Ads, and brand campaign management.
+            </p>
+          </Link>
+
+          <Link
+            href="/services/shopify-development"
+            className="p-5 rounded-2xl bg-white border border-[#E0DDDB] hover:border-[#9F8BE7] transition-all space-y-2 group shadow-2xs"
+          >
+            <span className="font-display font-bold text-sm text-[#161616] group-hover:text-[#9F8BE7] transition-colors flex items-center justify-between">
+              <span>Shopify Development</span>
+              <ArrowUpRight className="w-4 h-4 text-[#9F8BE7]" />
+            </span>
+            <p className="text-[11px] text-[#585858] font-body">
+              Sync your primary Shopify catalog and inventory directly with TikTok Shop.
+            </p>
+          </Link>
+
+          <Link
+            href="/services/dropshipping"
+            className="p-5 rounded-2xl bg-white border border-[#E0DDDB] hover:border-[#9F8BE7] transition-all space-y-2 group shadow-2xs"
+          >
+            <span className="font-display font-bold text-sm text-[#161616] group-hover:text-[#9F8BE7] transition-colors flex items-center justify-between">
+              <span>Dropshipping Setup</span>
+              <ArrowUpRight className="w-4 h-4 text-[#9F8BE7]" />
+            </span>
+            <p className="text-[11px] text-[#585858] font-body">
+              Automated product importing and supplier fulfillment routing.
+            </p>
+          </Link>
+
+          <Link
+            href="/work/happy-knot-creations-shopify-storefront"
+            className="p-5 rounded-2xl bg-white border border-[#E0DDDB] hover:border-[#9F8BE7] transition-all space-y-2 group shadow-2xs"
+          >
+            <span className="font-display font-bold text-sm text-[#161616] group-hover:text-[#9F8BE7] transition-colors flex items-center justify-between">
+              <span>Happy Knot Case Study</span>
+              <ArrowUpRight className="w-4 h-4 text-[#9F8BE7]" />
+            </span>
+            <p className="text-[11px] text-[#585858] font-body">
+              Explore custom eCommerce storefront architecture and product catalog engineering.
+            </p>
+          </Link>
+        </div>
+      </section>
+
       {/* 6. FAQs */}
       <section className="space-y-8">
         <div className="max-w-2xl space-y-2">

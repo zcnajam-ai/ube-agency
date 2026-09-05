@@ -78,6 +78,24 @@ export const SERVICE_PILLARS: ServicePillar[] = [
         deliverableScope: "Turnkey Custom Shopify Store Launch",
       },
       {
+        id: "dropshipping-setup-service",
+        slug: "dropshipping",
+        title: "Dropshipping Store Setup & Automation",
+        shortTitle: "Dropshipping",
+        kicker: "Automated Supplier Storefronts",
+        summary:
+          "Launch a professional dropshipping store with DSers, CJ Dropshipping, Zendrop, inventory sync, and automated order fulfillment.",
+        deliverables: [
+          "Shopify 2.0 Theme Customization & Layout",
+          "Supplier App & Feed API Connection (DSers, CJ, Zendrop)",
+          "Automated Inventory & Price Margin Synchronization",
+          "Automated Supplier Order Routing & Tracking Sync",
+          "Payment Gateway, Taxes & Custom Domain Setup",
+        ],
+        technologies: ["Shopify", "DSers", "CJ Dropshipping", "Zendrop", "Klaviyo"],
+        deliverableScope: "Turnkey Dropshipping Store Launch",
+      },
+      {
         id: "etsy-shop-setup-service",
         slug: "etsy-shop-setup",
         title: "Etsy Shop Setup & Etsy SEO Optimization",

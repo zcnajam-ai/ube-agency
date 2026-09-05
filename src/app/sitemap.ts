@@ -18,7 +18,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/contact`, lastModified: new Date() },
   ];
 
-  // 2. Primary Service Pages (13)
+  // 2. Primary Service Pages (14)
   const serviceRoutes: MetadataRoute.Sitemap = ALL_SERVICES.map((s) => ({
     url: `${baseUrl}/services/${s.slug}`,
     lastModified: new Date(),
@@ -48,7 +48,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: new Date(),
   }));
 
-  // 6. Insights Articles (/insights/[slug] - 13)
+  // 6. Insights Articles (/insights/[slug] - 23)
   const insightRoutes: MetadataRoute.Sitemap = INSIGHTS.map((i) => ({
     url: `${baseUrl}/insights/${i.slug}`,
     lastModified: new Date(),
