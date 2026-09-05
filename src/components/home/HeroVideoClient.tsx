@@ -8,6 +8,13 @@ export default function HeroVideoClient() {
   const [isMuted, setIsMuted] = useState(true);
 
   useEffect(() => {
+    // Defer video playback slightly to allow critical hero fonts and layout to finish rendering first
+    const timer = setTimeout(() => {
+      if (videoRef.current) {
+        videoRef.current.play().catch(() => {});
+      }
+    }, 400);
+
     // 1. Check existing session sound preference
     const savedPref = sessionStorage.getItem("ube_video_sound_pref");
     if (savedPref === "unmuted") {
@@ -36,6 +43,7 @@ export default function HeroVideoClient() {
     window.addEventListener("touchstart", handleFirstInteraction, { once: true });
 
     return () => {
+      clearTimeout(timer);
       window.removeEventListener("click", handleFirstInteraction);
       window.removeEventListener("touchstart", handleFirstInteraction);
     };
@@ -64,7 +72,7 @@ export default function HeroVideoClient() {
         muted={isMuted}
         loop
         playsInline
-        preload="metadata"
+        preload="none"
         className="w-full h-full object-contain rounded-2xl sm:rounded-[28px] bg-[#FAF7F6]"
       >
         <source src="/videos/ube-promotional-video.mp4" type="video/mp4" />

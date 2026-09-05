@@ -112,33 +112,33 @@ export default function Footer() {
             <h4 className="font-display text-xs font-bold uppercase tracking-[0.2em] text-[#DDF160]">
               Primary Services
             </h4>
-            <ul className="space-y-1.5 text-xs font-body text-[#ACACAC]">
+            <ul className="space-y-2 text-xs font-body text-[#ACACAC]">
               <li>
-                <Link href="/services/ecommerce" className="hover:text-white transition-colors flex items-center justify-between">
+                <Link href="/services/ecommerce" className="hover:text-white transition-colors flex items-center justify-between py-1 min-h-[28px]">
                   <span>eCommerce Growth &amp; Marketplaces</span>
                   <span className="text-[10px] text-[#DDF160] font-mono-num font-bold">01</span>
                 </Link>
               </li>
               <li>
-                <Link href="/services/aiseo" className="hover:text-white transition-colors flex items-center justify-between">
+                <Link href="/services/aiseo" className="hover:text-white transition-colors flex items-center justify-between py-1 min-h-[28px]">
                   <span>AI Search Optimization (AEO/GEO)</span>
                   <span className="text-[10px] text-[#DDF160] font-mono-num font-bold">02</span>
                 </Link>
               </li>
               <li>
-                <Link href="/services/digital-marketing" className="hover:text-white transition-colors flex items-center justify-between">
+                <Link href="/services/digital-marketing" className="hover:text-white transition-colors flex items-center justify-between py-1 min-h-[28px]">
                   <span>Digital Marketing &amp; Paid Ads</span>
                   <span className="text-[10px] text-[#DDF160] font-mono-num font-bold">03</span>
                 </Link>
               </li>
               <li>
-                <Link href="/services/branding" className="hover:text-white transition-colors flex items-center justify-between">
+                <Link href="/services/branding" className="hover:text-white transition-colors flex items-center justify-between py-1 min-h-[28px]">
                   <span>Branding &amp; Visual Identity</span>
                   <span className="text-[10px] text-[#DDF160] font-mono-num font-bold">04</span>
                 </Link>
               </li>
               <li>
-                <Link href="/work" className="hover:text-white transition-colors flex items-center justify-between font-bold text-white">
+                <Link href="/work" className="hover:text-white transition-colors flex items-center justify-between font-bold text-white py-1 min-h-[28px]">
                   <span>Our Work &amp; Case Studies</span>
                   <span className="text-[10px] text-[#9F8BE7] font-mono-num">05</span>
                 </Link>
@@ -147,22 +147,22 @@ export default function Footer() {
                 Secondary Solutions:
               </li>
               <li>
-                <Link href="/services/web-design-development" className="hover:text-white transition-colors">
+                <Link href="/services/web-design-development" className="hover:text-white transition-colors inline-block py-1 min-h-[28px]">
                   Web Design &amp; Development
                 </Link>
               </li>
               <li>
-                <Link href="/services/mobile-app-development" className="hover:text-white transition-colors">
+                <Link href="/services/mobile-app-development" className="hover:text-white transition-colors inline-block py-1 min-h-[28px]">
                   Mobile App Engineering
                 </Link>
               </li>
               <li>
-                <Link href="/services/ai-automation" className="hover:text-white transition-colors">
+                <Link href="/services/ai-automation" className="hover:text-white transition-colors inline-block py-1 min-h-[28px]">
                   AI Automation &amp; CRM Systems
                 </Link>
               </li>
               <li>
-                <Link href="/services/shopify-development" className="hover:text-white transition-colors">
+                <Link href="/services/shopify-development" className="hover:text-white transition-colors inline-block py-1 min-h-[28px]">
                   Shopify Storefront Setup
                 </Link>
               </li>
@@ -174,39 +174,39 @@ export default function Footer() {
             <h4 className="font-display text-xs font-bold uppercase tracking-[0.2em] text-[#9F8BE7]">
               Commercial Packages
             </h4>
-            <ul className="space-y-1.5 text-xs font-body text-[#ACACAC]">
+            <ul className="space-y-2 text-xs font-body text-[#ACACAC]">
               <li>
-                <Link href="/ecommerce-growth-packages" className="hover:text-white transition-colors flex items-center justify-between">
+                <Link href="/ecommerce-growth-packages" className="hover:text-white transition-colors flex items-center justify-between py-1 min-h-[28px]">
                   <span>eCommerce Growth Plans</span>
                   <span className="text-[10px] text-emerald-400 font-mono-num font-bold">$399+</span>
                 </Link>
               </li>
               <li>
-                <Link href="/ai-seo-packages" className="hover:text-white transition-colors flex items-center justify-between">
+                <Link href="/ai-seo-packages" className="hover:text-white transition-colors flex items-center justify-between py-1 min-h-[28px]">
                   <span>AI SEO &amp; AEO Packages</span>
                   <span className="text-[10px] text-emerald-400 font-mono-num font-bold">$349+</span>
                 </Link>
               </li>
               <li>
-                <Link href="/digital-marketing-packages" className="hover:text-white transition-colors flex items-center justify-between">
+                <Link href="/digital-marketing-packages" className="hover:text-white transition-colors flex items-center justify-between py-1 min-h-[28px]">
                   <span>Digital Marketing Packages</span>
                   <span className="text-[10px] text-emerald-400 font-mono-num font-bold">$299/mo</span>
                 </Link>
               </li>
               <li>
-                <Link href="/branding-packages" className="hover:text-white transition-colors flex items-center justify-between">
+                <Link href="/branding-packages" className="hover:text-white transition-colors flex items-center justify-between py-1 min-h-[28px]">
                   <span>Branding &amp; Identity Packages</span>
                   <span className="text-[10px] text-emerald-400 font-mono-num font-bold">$299+</span>
                 </Link>
               </li>
               <li>
-                <Link href="/web-design-packages" className="hover:text-white transition-colors flex items-center justify-between">
+                <Link href="/web-design-packages" className="hover:text-white transition-colors flex items-center justify-between py-1 min-h-[28px]">
                   <span>Web Design Packages</span>
                   <span className="text-[10px] text-emerald-400 font-mono-num font-bold">$300+</span>
                 </Link>
               </li>
               <li>
-                <Link href="/mobile-app-packages" className="hover:text-white transition-colors flex items-center justify-between">
+                <Link href="/mobile-app-packages" className="hover:text-white transition-colors flex items-center justify-between py-1 min-h-[28px]">
                   <span>Mobile App Packages</span>
                   <span className="text-[10px] text-emerald-400 font-mono-num font-bold">$999+</span>
                 </Link>
