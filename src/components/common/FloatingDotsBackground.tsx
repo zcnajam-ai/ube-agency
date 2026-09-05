@@ -231,19 +231,23 @@ export default function FloatingDotsBackground({
       };
     };
 
-    if ("requestIdleCallback" in window) {
-      idleId = (window as any).requestIdleCallback(initThree, { timeout: 1500 });
-    } else {
-      timerId = setTimeout(initThree, 800);
-    }
+    const start = () => {
+      initThree();
+      window.removeEventListener("pointermove", start);
+      window.removeEventListener("scroll", start);
+    };
+
+    window.addEventListener("pointermove", start, { passive: true, once: true });
+    window.addEventListener("scroll", start, { passive: true, once: true });
+
+    timerId = setTimeout(start, 3000);
 
     return () => {
-      if (idleId !== null && "cancelIdleCallback" in window) {
-        (window as any).cancelIdleCallback(idleId);
-      }
       if (timerId !== null) {
         clearTimeout(timerId);
       }
+      window.removeEventListener("pointermove", start);
+      window.removeEventListener("scroll", start);
       if (cleanupFn) {
         cleanupFn();
       }

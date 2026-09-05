@@ -1,10 +1,32 @@
 "use client";
 
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Script from "next/script";
 import { GA_MEASUREMENT_ID, GOOGLE_ADS_ID, META_PIXEL_ID } from "@/lib/analytics";
 
 export default function AnalyticsScripts() {
+  const [shouldLoad, setShouldLoad] = useState(false);
+
+  useEffect(() => {
+    const handleInteraction = () => {
+      setShouldLoad(true);
+    };
+
+    window.addEventListener("scroll", handleInteraction, { passive: true, once: true });
+    window.addEventListener("pointerdown", handleInteraction, { passive: true, once: true });
+
+    const timer = setTimeout(() => {
+      setShouldLoad(true);
+    }, 2500);
+
+    return () => {
+      clearTimeout(timer);
+      window.removeEventListener("scroll", handleInteraction);
+      window.removeEventListener("pointerdown", handleInteraction);
+    };
+  }, []);
+
+  if (!shouldLoad) return null;
   return (
     <>
       {/* 1. Google Analytics 4 (gtag.js) */}

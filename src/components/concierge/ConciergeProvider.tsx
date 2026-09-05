@@ -24,9 +24,12 @@ function getServerSnapshot() {
 export default function ConciergeProvider() {
   const [isOpen, setIsOpen] = useState(false);
   const [hasOpened, setHasOpened] = useState(false);
+  const [mounted, setMounted] = useState(false);
   const isClient = useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot);
 
   useEffect(() => {
+    const timer = setTimeout(() => setMounted(true), 2500);
+
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === "Escape") {
         setIsOpen(false);
@@ -34,10 +37,13 @@ export default function ConciergeProvider() {
     };
 
     window.addEventListener("keydown", handleKeyDown);
-    return () => window.removeEventListener("keydown", handleKeyDown);
+    return () => {
+      clearTimeout(timer);
+      window.removeEventListener("keydown", handleKeyDown);
+    };
   }, []);
 
-  if (!isClient) return null;
+  if (!isClient || !mounted) return null;
 
   const handleToggle = () => {
     if (!hasOpened) setHasOpened(true);
