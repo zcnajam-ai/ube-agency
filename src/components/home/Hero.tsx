@@ -1,16 +1,8 @@
-"use client";
-
-import React, { useRef, useEffect, useState } from "react";
+import React from "react";
 import Link from "next/link";
-import dynamic from "next/dynamic";
-import { ArrowUpRight, Smartphone, Bot, Palette, Volume2, VolumeX } from "lucide-react";
+import { ArrowUpRight, Smartphone, Bot, Palette } from "lucide-react";
 
-const FloatingDotsBackground = dynamic(
-  () => import("../common/FloatingDotsBackground"),
-  { ssr: false }
-);
-import { useScroll } from "@/components/providers/SmoothScrollProvider";
-import MagneticButton from "../common/MagneticButton";
+import FloatingDotsBackground from "../common/FloatingDotsBackground";
 import BackgroundGrid from "../common/BackgroundGrid";
 import PurpleGlowField from "../common/PurpleGlowField";
 import OversizedTypography from "../common/OversizedTypography";
@@ -20,62 +12,10 @@ import {
   Google3DIcon,
   Heading3DSparkle,
 } from "../common/Brand3DIcons";
+import HeroVideoClient from "./HeroVideoClient";
+import HeroInteractiveCTA from "./HeroInteractiveCTA";
 
 export default function Hero() {
-  const { openProjectModal } = useScroll();
-  const heroRef = useRef<HTMLElement>(null);
-  const videoRef = useRef<HTMLVideoElement>(null);
-  const [isMuted, setIsMuted] = useState(true);
-
-  useEffect(() => {
-    // 1. Check existing session sound preference
-    const savedPref = sessionStorage.getItem("ube_video_sound_pref");
-    if (savedPref === "unmuted") {
-      setIsMuted(false);
-      if (videoRef.current) {
-        videoRef.current.muted = false;
-        videoRef.current.volume = 0.65;
-      }
-    }
-
-    // 2. Unmute on visitor's FIRST trusted click or touch interaction
-    const handleFirstInteraction = () => {
-      const pref = sessionStorage.getItem("ube_video_sound_pref");
-      if (pref !== "muted" && videoRef.current) {
-        videoRef.current.muted = false;
-        videoRef.current.volume = 0.65;
-        setIsMuted(false);
-        sessionStorage.setItem("ube_video_sound_pref", "unmuted");
-        videoRef.current.play().catch(() => {});
-      }
-      window.removeEventListener("click", handleFirstInteraction);
-      window.removeEventListener("touchstart", handleFirstInteraction);
-    };
-
-    window.addEventListener("click", handleFirstInteraction, { once: true });
-    window.addEventListener("touchstart", handleFirstInteraction, { once: true });
-
-    return () => {
-      window.removeEventListener("click", handleFirstInteraction);
-      window.removeEventListener("touchstart", handleFirstInteraction);
-    };
-  }, []);
-
-  const toggleMute = (e: React.MouseEvent) => {
-    e.stopPropagation();
-    if (!videoRef.current) return;
-    const newMuted = !isMuted;
-    setIsMuted(newMuted);
-    videoRef.current.muted = newMuted;
-    if (!newMuted) {
-      videoRef.current.volume = 0.65;
-      videoRef.current.play().catch(() => {});
-      sessionStorage.setItem("ube_video_sound_pref", "unmuted");
-    } else {
-      sessionStorage.setItem("ube_video_sound_pref", "muted");
-    }
-  };
-
   const priorityPills = [
     { label: "Shopify & Dropshipping", href: "/services/shopify-development", icon: <Shopify3DIcon size={18} /> },
     { label: "TikTok Shop & Meta Ads", href: "/tiktok-marketing-packages", icon: <TikTok3DIcon size={18} /> },
@@ -88,7 +28,6 @@ export default function Hero() {
 
   return (
     <section
-      ref={heroRef}
       className="relative pt-28 sm:pt-36 pb-16 sm:pb-24 px-4 sm:px-6 md:px-12 bg-[#FAF7F6] overflow-hidden border-b border-[#E0DDDB]"
     >
       {/* 1. Ambient Background Layers */}
@@ -138,15 +77,7 @@ export default function Hero() {
 
             {/* Action Conversion CTAs */}
             <div className="pt-6 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 border-t border-[#E0DDDB]">
-              <MagneticButton
-                size="lg"
-                variant="primary"
-                showArrow
-                onClick={() => openProjectModal()}
-                className="w-full sm:w-auto min-h-[48px] justify-center shadow-[0_4px_20px_rgba(159,139,231,0.4)]"
-              >
-                Start Your Project
-              </MagneticButton>
+              <HeroInteractiveCTA />
 
               <Link
                 href="/packages"
@@ -160,39 +91,7 @@ export default function Hero() {
 
           {/* Right Column: Prominent Upper-Right 16:9 Promotional Video Card */}
           <div className="lg:col-span-6 xl:col-span-6 w-full mt-4 lg:mt-1">
-            <div className="relative aspect-[16/9] w-full rounded-2xl sm:rounded-[28px] overflow-hidden border border-[#E0DDDB] shadow-lg bg-white/95 backdrop-blur-xs hover:border-[#9F8BE7] transition-all duration-300 group">
-              <video
-                ref={videoRef}
-                autoPlay
-                muted={isMuted}
-                loop
-                playsInline
-                preload="metadata"
-                className="w-full h-full object-contain rounded-2xl sm:rounded-[28px] bg-[#FAF7F6]"
-              >
-                <source src="/videos/ube-promotional-video.mp4" type="video/mp4" />
-              </video>
-
-              {/* Sound Toggle Button Overlay */}
-              <button
-                type="button"
-                onClick={toggleMute}
-                className="absolute bottom-3 right-3 sm:bottom-4 sm:right-4 z-20 px-3 py-1.5 sm:px-3.5 sm:py-1.5 rounded-full bg-white/90 backdrop-blur-md border border-[#E0DDDB] hover:border-[#9F8BE7] text-xs font-mono-num font-bold text-[#161616] flex items-center gap-1.5 shadow-sm transition-all hover:scale-105 min-h-[36px]"
-                aria-label={isMuted ? "Unmute promotional video" : "Mute promotional video"}
-              >
-                {isMuted ? (
-                  <>
-                    <VolumeX className="w-3.5 h-3.5 text-rose-500 shrink-0" />
-                    <span>Sound Off</span>
-                  </>
-                ) : (
-                  <>
-                    <Volume2 className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
-                    <span>Sound On</span>
-                  </>
-                )}
-              </button>
-            </div>
+            <HeroVideoClient />
           </div>
         </div>
       </div>
