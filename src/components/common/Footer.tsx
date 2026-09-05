@@ -13,6 +13,7 @@ import {
   MetaOfficialIcon,
 } from "./OfficialBrandLogos";
 import { Heading3DSparkle } from "./Brand3DIcons";
+import { trackPhoneClick, trackEmailClick } from "@/lib/analytics";
 
 export default function Footer() {
   const { scrollTo, openProjectModal } = useScroll();
@@ -221,6 +222,7 @@ export default function Footer() {
             <div className="space-y-2.5 text-xs font-mono-num text-[#ACACAC]">
               <a
                 href={`tel:${COMPANY_INFO.phoneRaw}`}
+                onClick={() => trackPhoneClick("footer")}
                 className="flex items-center gap-2.5 p-2.5 rounded-2xl bg-white/5 border border-white/10 hover:border-[#9F8BE7] transition-all text-white"
               >
                 <Phone className="w-4 h-4 text-[#9F8BE7] shrink-0" />
@@ -229,6 +231,7 @@ export default function Footer() {
 
               <a
                 href={`mailto:${COMPANY_INFO.email}`}
+                onClick={() => trackEmailClick("footer")}
                 className="flex items-center gap-2.5 p-2.5 rounded-2xl bg-white/5 border border-white/10 hover:border-[#9F8BE7] transition-all text-white min-w-0"
               >
                 <Mail className="w-4 h-4 text-[#9F8BE7] shrink-0" />

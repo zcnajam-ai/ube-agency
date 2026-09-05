@@ -13,6 +13,7 @@ import { COMPANY_INFO } from "@/data/company";
 import { useScroll } from "@/components/providers/SmoothScrollProvider";
 import MagneticButton from "./MagneticButton";
 import FullscreenMenu from "./FullscreenMenu";
+import { trackPhoneClick } from "@/lib/analytics";
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -557,6 +558,7 @@ export default function Navbar() {
             {/* Direct Phone link */}
             <a
               href={`tel:${COMPANY_INFO.phoneRaw}`}
+              onClick={() => trackPhoneClick("header")}
               className="hidden md:flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#FAF7F6] border border-[#E0DDDB] hover:border-[#9F8BE7] text-xs font-mono-num text-[#161616] transition-all shadow-xs"
             >
               <Phone className="w-3.5 h-3.5 text-[#9F8BE7]" />

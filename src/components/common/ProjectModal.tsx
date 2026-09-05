@@ -254,7 +254,7 @@ export default function ProjectModal() {
                 </h2>
                 <p className="text-xs sm:text-sm text-[#585858] mt-2 leading-relaxed">
                   Fill out the project scope below, or call our team directly at{" "}
-                  <a href={`tel:${COMPANY_INFO.phoneRaw}`} className="text-[#161616] font-bold underline font-mono-num">
+                  <a href={`tel:${COMPANY_INFO.phoneRaw}`} onClick={() => trackPhoneClick("project_modal")} className="text-[#161616] font-bold underline font-mono-num">
                     {COMPANY_INFO.phone}
                   </a>.
                 </p>
@@ -440,11 +440,11 @@ export default function ProjectModal() {
               {/* Bottom Bar with Contact & Submit Button */}
               <div className="pt-4 border-t border-[#E0DDDB] flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                 <div className="flex flex-wrap items-center gap-4 text-xs font-mono-num text-[#585858]">
-                  <a href={`tel:${COMPANY_INFO.phoneRaw}`} className="flex items-center gap-1.5 hover:text-[#161616] transition-colors">
+                  <a href={`tel:${COMPANY_INFO.phoneRaw}`} onClick={() => trackPhoneClick("project_modal_footer")} className="flex items-center gap-1.5 hover:text-[#161616] transition-colors">
                     <Phone className="w-3.5 h-3.5 text-[#9F8BE7]" />
                     <span>{COMPANY_INFO.phone}</span>
                   </a>
-                  <a href={`mailto:${COMPANY_INFO.email}`} className="flex items-center gap-1.5 hover:text-[#161616] transition-colors">
+                  <a href={`mailto:${COMPANY_INFO.email}`} onClick={() => trackEmailClick("project_modal_footer")} className="flex items-center gap-1.5 hover:text-[#161616] transition-colors">
                     <Mail className="w-3.5 h-3.5 text-[#9F8BE7]" />
                     <span>{COMPANY_INFO.email}</span>
                   </a>

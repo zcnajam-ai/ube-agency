@@ -62,20 +62,26 @@ export function trackLeadSubmit(data: {
 
 /**
  * 2. PHONE CLICK -> phone_click
+ * Safe parameters only (source_page, cta_location, link_type: "phone").
+ * NO PII (phone_number) sent to analytics.
  */
-export function trackPhoneClick(phoneNumber?: string) {
+export function trackPhoneClick(ctaLocation: string = "header") {
   trackEvent("phone_click", {
-    phone_number: phoneNumber || "Direct Call",
+    cta_location: ctaLocation,
+    link_type: "phone",
     source_page: typeof window !== "undefined" ? window.location.pathname : "/",
   });
 }
 
 /**
  * 3. EMAIL CLICK -> email_click
+ * Safe parameters only (source_page, cta_location, link_type: "email").
+ * NO PII (email_address) sent to analytics.
  */
-export function trackEmailClick(emailAddress?: string) {
+export function trackEmailClick(ctaLocation: string = "header") {
   trackEvent("email_click", {
-    email_address: emailAddress || "Direct Email",
+    cta_location: ctaLocation,
+    link_type: "email",
     source_page: typeof window !== "undefined" ? window.location.pathname : "/",
   });
 }
