@@ -26,14 +26,8 @@ export default function Hero() {
   const heroRef = useRef<HTMLElement>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isMuted, setIsMuted] = useState(true);
-  const [videoSrc, setVideoSrc] = useState<string>("");
 
   useEffect(() => {
-    // Defer video network fetching until after initial critical render/paint
-    const timer = setTimeout(() => {
-      setVideoSrc("/videos/ube-promotional-video.mp4");
-    }, 200);
-
     // 1. Check existing session sound preference
     const savedPref = sessionStorage.getItem("ube_video_sound_pref");
     if (savedPref === "unmuted") {
@@ -173,10 +167,10 @@ export default function Hero() {
                 muted={isMuted}
                 loop
                 playsInline
-                preload="none"
+                preload="metadata"
                 className="w-full h-full object-contain rounded-2xl sm:rounded-[28px] bg-[#FAF7F6]"
               >
-                {videoSrc && <source src={videoSrc} type="video/mp4" />}
+                <source src="/videos/ube-promotional-video.mp4" type="video/mp4" />
               </video>
 
               {/* Sound Toggle Button Overlay */}

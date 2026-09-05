@@ -75,7 +75,7 @@ export default function TestimonialsSection() {
                 href={COMPANY_INFO.ratings.trustpilot.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2.5 px-4 py-2.5 rounded-2xl bg-[#FAF7F6] border border-[#E0DDDB] hover:border-[#00B67A] transition-colors duration-200 shadow-2xs group"
+                className="flex items-center gap-2.5 px-4 py-2.5 rounded-2xl bg-[#FAF7F6] border border-[#E0DDDB] hover:border-[#00B67A] transition-all shadow-2xs group"
               >
                 <TrustpilotOfficialIcon size={22} />
                 <div className="text-left leading-tight">
@@ -88,7 +88,7 @@ export default function TestimonialsSection() {
                 href={COMPANY_INFO.ratings.google.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2.5 px-4 py-2.5 rounded-2xl bg-[#FAF7F6] border border-[#E0DDDB] hover:border-[#4285F4] transition-colors duration-200 shadow-2xs group"
+                className="flex items-center gap-2.5 px-4 py-2.5 rounded-2xl bg-[#FAF7F6] border border-[#E0DDDB] hover:border-[#4285F4] transition-all shadow-2xs group"
               >
                 <GoogleOfficialIcon size={22} />
                 <div className="text-left leading-tight">
@@ -104,7 +104,7 @@ export default function TestimonialsSection() {
                 type="button"
                 onClick={prevSlide}
                 aria-label="Previous review"
-                className="w-10 h-10 rounded-full border border-[#E0DDDB] bg-[#FAF7F6] hover:border-[#9F8BE7] flex items-center justify-center text-[#161616] transition-colors duration-200 cursor-pointer shadow-2xs"
+                className="w-10 h-10 rounded-full border border-[#E0DDDB] bg-[#FAF7F6] hover:border-[#9F8BE7] flex items-center justify-center text-[#161616] transition-all cursor-pointer shadow-2xs"
               >
                 <ChevronLeft className="w-5 h-5" />
               </button>
@@ -112,7 +112,7 @@ export default function TestimonialsSection() {
                 type="button"
                 onClick={nextSlide}
                 aria-label="Next review"
-                className="w-10 h-10 rounded-full border border-[#E0DDDB] bg-[#FAF7F6] hover:border-[#9F8BE7] flex items-center justify-center text-[#161616] transition-colors duration-200 cursor-pointer shadow-2xs"
+                className="w-10 h-10 rounded-full border border-[#E0DDDB] bg-[#FAF7F6] hover:border-[#9F8BE7] flex items-center justify-center text-[#161616] transition-all cursor-pointer shadow-2xs"
               >
                 <ChevronRight className="w-5 h-5" />
               </button>
@@ -138,7 +138,7 @@ export default function TestimonialsSection() {
                 style={{
                   width: `calc(${100 / cardsPerView}% - ${(24 * (cardsPerView - 1)) / cardsPerView}px)`,
                 }}
-                className="shrink-0 p-7 sm:p-8 rounded-3xl bg-[#FAF7F6] border border-[#E0DDDB] flex flex-col justify-between space-y-6 shadow-xs hover:border-[#9F8BE7]/60 transition-colors duration-200 min-h-[290px]"
+                className="shrink-0 p-7 sm:p-8 rounded-3xl bg-[#FAF7F6] border border-[#E0DDDB] flex flex-col justify-between space-y-6 shadow-xs hover:border-[#9F8BE7]/60 transition-all min-h-[290px]"
               >
                 {/* Review Header: Golden Stars Only */}
                 <div className="space-y-4">
@@ -185,7 +185,7 @@ export default function TestimonialsSection() {
               className="relative w-8 h-2 rounded-full bg-[#E0DDDB] overflow-hidden cursor-pointer"
             >
               <span
-                className={`absolute inset-0 bg-[#9F8BE7] rounded-full transition-transform duration-300 origin-left ${
+                className={`absolute inset-0 bg-[#9F8BE7] rounded-full transition-all duration-300 origin-left ${
                   currentIndex === i ? "scale-x-100 opacity-100" : "scale-x-0 opacity-0"
                 }`}
               />
