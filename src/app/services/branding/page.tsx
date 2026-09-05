@@ -137,6 +137,27 @@ export default function BrandingServicePage() {
     },
   ];
 
+  const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: "Branding Services & Custom Visual Identity Systems",
+    serviceType: "Brand Strategy & Visual Identity Design",
+    provider: {
+      "@type": "Organization",
+      name: "Unified Branding Experts",
+      url: "https://unifiedbrandingexperts.com",
+    },
+    areaServed: "Worldwide",
+    description: "Custom logo design, brand strategy, visual identity systems, brand guidelines, and packaging design built to make your business memorable.",
+    url: "https://unifiedbrandingexperts.com/services/branding",
+    offers: {
+      "@type": "Offer",
+      price: "299.00",
+      priceCurrency: "USD",
+      url: "https://unifiedbrandingexperts.com/branding-packages",
+    },
+  };
+
   const breadcrumbSchema = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -164,6 +185,10 @@ export default function BrandingServicePage() {
 
   return (
     <div className="pt-32 pb-24 px-4 sm:px-6 md:px-12 max-w-7xl mx-auto space-y-24">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}

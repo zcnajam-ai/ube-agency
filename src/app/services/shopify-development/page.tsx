@@ -133,18 +133,65 @@ export default function ShopifyDevelopmentPage() {
       q: "Can you migrate my existing store from WooCommerce or Etsy to Shopify?",
       a: "Yes. We handle 100% of product data, customer accounts, past orders, and critical 301 URL redirects so you retain all your organic search engine rankings.",
     },
-    {
-      q: "Do I have to pay ongoing fees to Unified Branding Experts?",
-      a: "No. Our Shopify build packages are transparent, fixed one-time investments. You own 100% of your store and theme once deployed.",
-    },
-    {
-      q: "What are your custom eCommerce package prices?",
-      a: "Our custom eCommerce and web design packages start at $450 for Basic (up to 150 products), $700 for Standard (up to 300 products), and $1,400 for Enterprise (up to 500+ products with custom workflows).",
-    },
   ];
+
+  const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: "Shopify Store Setup & Custom Theme Development Services",
+    serviceType: "eCommerce Development",
+    provider: {
+      "@type": "Organization",
+      name: "Unified Branding Experts",
+      url: "https://unifiedbrandingexperts.com",
+    },
+    areaServed: "Worldwide",
+    description: "End-to-end Shopify store setup and custom theme development. Custom Shopify Plus stores, dropshipping automation, 3PL inventory sync, and responsive checkout flows.",
+    url: "https://unifiedbrandingexperts.com/services/shopify-development",
+    offers: {
+      "@type": "Offer",
+      price: "450.00",
+      priceCurrency: "USD",
+      url: "https://unifiedbrandingexperts.com/ecommerce-growth-packages",
+    },
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: "https://unifiedbrandingexperts.com",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Services",
+        item: "https://unifiedbrandingexperts.com/services",
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: "Shopify Development",
+        item: "https://unifiedbrandingexperts.com/services/shopify-development",
+      },
+    ],
+  };
 
   return (
     <div className="pt-32 pb-24 px-4 sm:px-6 md:px-12 max-w-7xl mx-auto space-y-24">
+      {/* Schema Markup */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       {/* 1. HERO SECTION */}
       <section className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center border-b border-[#E0DDDB] pb-16">
         <div className="lg:col-span-7 space-y-6">

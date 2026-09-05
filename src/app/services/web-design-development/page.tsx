@@ -48,29 +48,25 @@ export const metadata: Metadata = {
 };
 
 export default function WebDesignServicePage() {
-  const breadcrumbSchema = {
+  const serviceSchema = {
     "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      {
-        "@type": "ListItem",
-        position: 1,
-        name: "Home",
-        item: "https://unifiedbrandingexperts.com",
-      },
-      {
-        "@type": "ListItem",
-        position: 2,
-        name: "Services",
-        item: "https://unifiedbrandingexperts.com/services",
-      },
-      {
-        "@type": "ListItem",
-        position: 3,
-        name: "Website Design & Development",
-        item: "https://unifiedbrandingexperts.com/services/web-design-development",
-      },
-    ],
+    "@type": "Service",
+    name: "Custom Web Design & Custom Web Development Services",
+    serviceType: "Web Development & UI/UX Design",
+    provider: {
+      "@type": "Organization",
+      name: COMPANY_INFO.name,
+      url: "https://unifiedbrandingexperts.com",
+    },
+    areaServed: "Worldwide",
+    description: "Custom website design and web development for businesses that need speed, usability and room to grow.",
+    url: "https://unifiedbrandingexperts.com/services/web-design-development",
+    offers: {
+      "@type": "Offer",
+      price: "499.00",
+      priceCurrency: "USD",
+      url: "https://unifiedbrandingexperts.com/web-design-packages",
+    },
   };
 
   const faqs = [
@@ -113,9 +109,38 @@ export default function WebDesignServicePage() {
     })),
   };
 
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: "https://unifiedbrandingexperts.com",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Services",
+        item: "https://unifiedbrandingexperts.com/services",
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: "Website Design & Development",
+        item: "https://unifiedbrandingexperts.com/services/web-design-development",
+      },
+    ],
+  };
+
   return (
     <div className="pt-32 pb-24 px-4 sm:px-6 md:px-12 max-w-7xl mx-auto space-y-24">
       {/* Schema Markup */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}

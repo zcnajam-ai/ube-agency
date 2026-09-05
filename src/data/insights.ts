@@ -39,6 +39,12 @@ export interface InsightArticle {
     role: string;
     avatar: string;
   };
+  reviewer?: {
+    name: string;
+    role: string;
+    avatar: string;
+  };
+  lastReviewedDate?: string;
   summary: string;
   coverImage: string;
   primaryIntent: string;

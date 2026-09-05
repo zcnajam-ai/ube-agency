@@ -16,9 +16,9 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "AI SEO Services | AEO, GEO & Search Optimization",
+  title: "AI SEO & GEO Services | Google AI Overviews & ChatGPT Search",
   description:
-    "Get found in Google AI Overviews, ChatGPT, Bing Copilot, and generative search. Answer Engine Optimization (AEO), Generative Engine Optimization (GEO), and structured data.",
+    "Get found in Google AI Overviews, ChatGPT Search, Perplexity, and generative search. Professional AI SEO, Answer Engine Optimization (AEO), Generative Engine Optimization (GEO), and JSON-LD schema architecture.",
   alternates: {
     canonical: "https://unifiedbrandingexperts.com/services/aiseo",
   },
@@ -39,6 +39,27 @@ export const metadata: Metadata = {
 };
 
 export default function AiSeoServicePage() {
+  const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: "AI SEO & Generative Engine Optimization (GEO) Services",
+    serviceType: "Search Engine Optimization & Generative AI Visibility",
+    provider: {
+      "@type": "Organization",
+      name: "Unified Branding Experts",
+      url: "https://unifiedbrandingexperts.com",
+    },
+    areaServed: "Worldwide",
+    description: "Get found in Google AI Overviews, ChatGPT Search, Perplexity, and generative search engines with Answer Engine Optimization (AEO) and JSON-LD schema.",
+    url: "https://unifiedbrandingexperts.com/services/aiseo",
+    offers: {
+      "@type": "Offer",
+      price: "349.00",
+      priceCurrency: "USD",
+      url: "https://unifiedbrandingexperts.com/ai-seo-packages",
+    },
+  };
+
   const breadcrumbSchema = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -171,6 +192,10 @@ export default function AiSeoServicePage() {
     <div className="pt-32 pb-24 px-4 sm:px-6 md:px-12 max-w-7xl mx-auto space-y-24">
       <script
         type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
+      <script
+        type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
       {/* 1. Hero Section */}
@@ -182,8 +207,12 @@ export default function AiSeoServicePage() {
           </div>
 
           <h1 className="font-display text-4xl sm:text-6xl font-bold tracking-tight text-[#161616] leading-tight">
-            Get Found in the Search Everyone&apos;s Actually Using.
+            AI SEO &amp; Generative Engine Optimization (GEO) Services.
           </h1>
+
+          <p className="text-lg sm:text-xl font-display font-semibold text-[#9F8BE7]">
+            Get Found in Google AI Overviews, ChatGPT Search &amp; Generative AI Engines.
+          </p>
 
           <p className="text-base sm:text-lg text-[#585858] font-body leading-relaxed max-w-2xl">
             Search has changed. For years, ranking meant climbing to the top of a page of blue links. But today your customers ask ChatGPT, read Google&apos;s AI Overviews, and get answers before they ever click. If your business isn&apos;t showing up in those answers, you&apos;re invisible to the people already looking for you.

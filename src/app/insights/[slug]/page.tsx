@@ -92,10 +92,16 @@ export default async function InsightArticlePage({
     datePublished: "2026-02-01T00:00:00Z",
     dateModified: "2026-02-18T00:00:00Z",
     author: {
-      "@type": "Organization",
+      "@type": "Person",
       name: article.author.name,
       jobTitle: article.author.role,
-      url: "https://unifiedbrandingexperts.com",
+      url: "https://unifiedbrandingexperts.com/about",
+    },
+    reviewedBy: {
+      "@type": "Person",
+      name: article.reviewer?.name || "Zain Najam",
+      jobTitle: article.reviewer?.role || "Senior Technical Director & AI Architect",
+      url: "https://unifiedbrandingexperts.com/about",
     },
     publisher: {
       "@type": "Organization",
@@ -103,7 +109,7 @@ export default async function InsightArticlePage({
       url: "https://unifiedbrandingexperts.com",
       logo: {
         "@type": "ImageObject",
-        url: "https://unifiedbrandingexperts.com/og-default.png",
+        url: "https://unifiedbrandingexperts.com/web-app-manifest-512x512.png",
       },
     },
     mainEntityOfPage: {
