@@ -2,7 +2,6 @@ import React from "react";
 import Link from "next/link";
 import { ArrowUpRight, Smartphone, Bot, Palette } from "lucide-react";
 
-import FloatingDotsBackground from "../common/FloatingDotsBackground";
 import BackgroundGrid from "../common/BackgroundGrid";
 import PurpleGlowField from "../common/PurpleGlowField";
 import OversizedTypography from "../common/OversizedTypography";
@@ -14,6 +13,7 @@ import {
 } from "../common/Brand3DIcons";
 import HeroVideoClient from "./HeroVideoClient";
 import HeroInteractiveCTA from "./HeroInteractiveCTA";
+import HeroDotsClient from "./HeroDotsClient";
 
 export default function Hero() {
   const priorityPills = [
@@ -36,7 +36,7 @@ export default function Hero() {
       <OversizedTypography text="COMMERCE" direction="left" className="top-6 opacity-40" />
 
       {/* 1b. Floating Particle Dots (above grid, below content) */}
-      <FloatingDotsBackground />
+      <HeroDotsClient />
 
       {/* 2. Foreground Hero Content Container */}
       <div className="relative z-10 max-w-7xl mx-auto">

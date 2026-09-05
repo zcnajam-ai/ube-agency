@@ -36,26 +36,32 @@ export default function FloatingDotsBackground({
   useEffect(() => {
     if (typeof window === "undefined" || !canvasRef.current || window.innerWidth < 768) return;
 
-    const canvas = canvasRef.current;
-    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    let cleanupFn: (() => void) | null = null;
+    let timerId: ReturnType<typeof setTimeout> | null = null;
+    let idleId: number | null = null;
 
-    const pointer = new THREE.Vector2();
-    const pointerTarget = new THREE.Vector2();
-    let scrollTarget = window.scrollY;
-    let scrollCurrent = window.scrollY;
-    const clock = new THREE.Clock();
-    let raf = 0;
-    let destroyed = false;
+    const initThree = () => {
+      if (!canvasRef.current) return;
+      const canvas = canvasRef.current;
+      const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-    // 1. WebGL Renderer with 1.5 Pixel Ratio Cap
-    const renderer = new THREE.WebGLRenderer({
-      canvas,
-      alpha: true,
-      antialias: false,
-      powerPreference: "low-power",
-    });
-    renderer.setClearColor(0x000000, 0);
-    renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 1.5));
+      const pointer = new THREE.Vector2();
+      const pointerTarget = new THREE.Vector2();
+      let scrollTarget = window.scrollY;
+      let scrollCurrent = window.scrollY;
+      const clock = new THREE.Clock();
+      let raf = 0;
+      let destroyed = false;
+
+      // 1. WebGL Renderer with 1.5 Pixel Ratio Cap
+      const renderer = new THREE.WebGLRenderer({
+        canvas,
+        alpha: true,
+        antialias: false,
+        powerPreference: "low-power",
+      });
+      renderer.setClearColor(0x000000, 0);
+      renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 1.5));
 
     // 2. Scene & Camera
     const scene = new THREE.Scene();
@@ -206,20 +212,39 @@ export default function FloatingDotsBackground({
 
     render();
 
-    // 6. Cleanup & Resource Disposal
+      // 6. Cleanup & Resource Disposal
+      cleanupFn = () => {
+        destroyed = true;
+        cancelAnimationFrame(raf);
+
+        window.removeEventListener("pointermove", onPointerMove);
+        window.removeEventListener("pointerdown", onTap);
+        window.removeEventListener("scroll", onScroll);
+        window.removeEventListener("resize", onResize);
+        document.removeEventListener("visibilitychange", onVisibilityChange);
+
+        geometry.dispose();
+        material.dispose();
+        renderer.dispose();
+      };
+    };
+
+    if ("requestIdleCallback" in window) {
+      idleId = (window as any).requestIdleCallback(initThree, { timeout: 1500 });
+    } else {
+      timerId = setTimeout(initThree, 800);
+    }
+
     return () => {
-      destroyed = true;
-      cancelAnimationFrame(raf);
-
-      window.removeEventListener("pointermove", onPointerMove);
-      window.removeEventListener("pointerdown", onTap);
-      window.removeEventListener("scroll", onScroll);
-      window.removeEventListener("resize", onResize);
-      document.removeEventListener("visibilitychange", onVisibilityChange);
-
-      geometry.dispose();
-      material.dispose();
-      renderer.dispose();
+      if (idleId !== null && "cancelIdleCallback" in window) {
+        (window as any).cancelIdleCallback(idleId);
+      }
+      if (timerId !== null) {
+        clearTimeout(timerId);
+      }
+      if (cleanupFn) {
+        cleanupFn();
+      }
     };
   }, [color, accentColor, density, minParticles, maxParticles, opacity, size, pointerStrength, scrollStrength, isAbsolute]);
 
