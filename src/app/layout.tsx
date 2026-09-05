@@ -29,6 +29,7 @@ const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
   display: "swap",
+  preload: false,
 });
 
 // Environment-aware indexing: allow indexing on production domain by default, noindex ONLY on Vercel preview builds
