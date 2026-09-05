@@ -76,7 +76,7 @@ export default function AISEOAndBranding() {
 
               {/* Visual Preview */}
               <InteractiveMedia
-                src="/images/official/aiseo/google-search-aiseo-hub.png"
+                src="/images/official/aiseo/google-search-aiseo-hub.webp"
                 alt="Unified Branding Experts AI Search Optimization Architecture on Google"
                 aspectRatio="aspect-[4/3] sm:aspect-[16/11]"
                 objectFit="contain"
@@ -141,7 +141,7 @@ export default function AISEOAndBranding() {
 
               {/* Visual Preview */}
               <InteractiveMedia
-                src="/images/official/branding/branding-hero.jpeg"
+                src="/images/official/branding/branding-hero.webp"
                 alt="Unified Branding Experts Corporate Branding & Visual System"
                 aspectRatio="aspect-[16/9]"
                 badgeText="Complete Brand Guidelines"

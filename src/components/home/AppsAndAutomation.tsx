@@ -74,7 +74,7 @@ export default function AppsAndAutomation() {
 
               {/* Visual Preview */}
               <InteractiveMedia
-                src="/images/official/mobile-app/mobile-app-showcase.png"
+                src="/images/official/mobile-app/mobile-app-showcase.webp"
                 alt="Unified Branding Experts Mobile App Development iOS & Android Native Showcase"
                 aspectRatio="aspect-[4/3] sm:aspect-[16/11]"
                 objectFit="contain"
@@ -132,7 +132,7 @@ export default function AppsAndAutomation() {
 
               {/* Visual Preview with 3D Tilt */}
               <InteractiveMedia
-                src="/images/official/automation/system-integration.jpeg"
+                src="/images/official/automation/system-integration.webp"
                 alt="Unified Branding Experts Automation Strategy"
                 aspectRatio="aspect-[16/9]"
                 enableTilt

@@ -146,7 +146,7 @@ export const FEATURED_PROJECTS: Project[] = [
       { metric: "Complete", label: "Gotham Pro Typography & Color Spec" },
       { metric: "Omnichannel", label: "Print Catalogue & Digital App Assets" },
     ],
-    heroImage: "/images/projects/everhome/hero.jpg",
+    heroImage: "/images/projects/everhome/hero.webp",
     galleryImages: [
       "/images/projects/everhome/showcase-1.jpg",
       "/images/projects/everhome/showcase-2.jpg",
@@ -193,7 +193,7 @@ export const FEATURED_PROJECTS: Project[] = [
       { metric: "Custom", label: "Amber Glass Bottle System" },
       { metric: "Omnichannel", label: "Retail & Digital Integration" },
     ],
-    heroImage: "/images/projects/eaudacity/hero.jpg",
+    heroImage: "/images/projects/eaudacity/hero.webp",
     galleryImages: [
       "/images/projects/eaudacity/showcase-0.jpg",
       "/images/projects/eaudacity/showcase-2.jpg",
@@ -236,7 +236,7 @@ export const FEATURED_PROJECTS: Project[] = [
       { metric: "Eco-Luxury", label: "Sustainable Packaging Spec" },
       { metric: "Omnichannel", label: "Social Commerce & In-Store" },
     ],
-    heroImage: "/images/projects/botane/hero.jpg",
+    heroImage: "/images/projects/botane/hero.webp",
     galleryImages: [
       "/images/projects/botane/showcase-7.jpg",
       "/images/projects/botane/showcase-6.jpg",
@@ -279,7 +279,7 @@ export const FEATURED_PROJECTS: Project[] = [
       { metric: "Automated", label: "Dropshipping Fulfillment Flow" },
       { metric: "Mobile-First", label: "Responsive Shopify Theme" },
     ],
-    heroImage: "/images/projects/bugle-chaser/hero.jpg",
+    heroImage: "/images/projects/bugle-chaser/hero.webp",
     galleryImages: [
       "/images/projects/bugle-chaser/showcase-4.jpg",
       "/images/projects/bugle-chaser/showcase-5.jpg",

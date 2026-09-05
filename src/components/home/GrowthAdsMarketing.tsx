@@ -42,7 +42,7 @@ export default function GrowthAdsMarketing() {
       tagline: "Visual Advertising & Conversion API Funnels",
       badge: "META AD MANAGEMENT",
       packageUrl: "/services/meta-ads",
-      image: "/images/official/branding/branding-hero.jpeg",
+      image: "/images/official/branding/branding-hero.webp",
       desc: "We architect full-funnel Meta advertising campaigns with structured audience segmentation, visual creative variations, catalog sales ads, and Meta Conversions API (CAPI) server-side tracking.",
       icon: <Meta3DIcon size={24} />,
       deliverables: [
