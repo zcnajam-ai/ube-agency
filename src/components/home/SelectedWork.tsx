@@ -146,14 +146,14 @@ export default function SelectedWork() {
             {projects.map((project, idx) => (
               <div
                 key={project.id}
-                className="w-full lg:w-[calc(50%-0.75rem)] shrink-0 flex flex-col justify-between rounded-3xl bg-[#FAF7F6] border border-[#E0DDDB] hover:border-[#9F8BE7] transition-all duration-300 shadow-xs group overflow-hidden"
+                className="w-full lg:w-[calc(50%-0.75rem)] shrink-0 flex flex-col justify-between rounded-3xl bg-[#FAF7F6] border border-[#E0DDDB] hover:border-[#9F8BE7] transition-colors duration-300 shadow-xs group overflow-hidden"
               >
                 <Link href={`/work/${project.slug}`} className="block relative aspect-[16/10] overflow-hidden bg-black/5">
                   <Image
                     src={project.heroImage}
                     alt={`${project.title} Case Study`}
                     fill
-                    sizes="(max-width: 1024px) 100vw, 50vw"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     className="object-cover object-center group-hover:scale-105 transition-transform duration-700"
                   />
 
@@ -165,7 +165,7 @@ export default function SelectedWork() {
                     {project.year}
                   </div>
 
-                  <div className="absolute bottom-4 right-4 z-20 w-11 h-11 rounded-full bg-[#9F8BE7] text-[#161616] flex items-center justify-center shadow-lg transition-all duration-300 group-hover:scale-110 group-hover:rotate-45 group-hover:bg-[#b4a3f7]">
+                  <div className="absolute bottom-4 right-4 z-20 w-11 h-11 rounded-full bg-[#9F8BE7] text-[#161616] flex items-center justify-center shadow-lg transition-transform duration-300 group-hover:scale-110 group-hover:rotate-45 group-hover:bg-[#b4a3f7]">
                     <ArrowUpRight className="w-5 h-5" />
                   </div>
                 </Link>
@@ -208,7 +208,7 @@ export default function SelectedWork() {
               className="relative w-8 h-2 rounded-full bg-[#E0DDDB] overflow-hidden cursor-pointer"
             >
               <span
-                className={`absolute inset-0 bg-[#9F8BE7] rounded-full transition-all duration-300 origin-left ${
+                className={`absolute inset-0 bg-[#9F8BE7] rounded-full transition-transform duration-300 origin-left ${
                   activeIndex === idx ? "scale-x-100 opacity-100" : "scale-x-0 opacity-0"
                 }`}
               />
