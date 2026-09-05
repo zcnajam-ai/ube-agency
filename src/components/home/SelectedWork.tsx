@@ -205,12 +205,14 @@ export default function SelectedWork() {
               key={idx}
               onClick={() => setActiveIndex(idx)}
               aria-label={`Go to slide ${idx + 1}`}
-              className={`h-2 rounded-full transition-all duration-300 cursor-pointer ${
-                activeIndex === idx
-                  ? "w-8 bg-[#9F8BE7]"
-                  : "w-2 bg-[#E0DDDB] hover:bg-[#A0A0A0]"
-              }`}
-            />
+              className="relative w-8 h-2 rounded-full bg-[#E0DDDB] overflow-hidden cursor-pointer"
+            >
+              <span
+                className={`absolute inset-0 bg-[#9F8BE7] rounded-full transition-all duration-300 origin-left ${
+                  activeIndex === idx ? "scale-x-100 opacity-100" : "scale-x-0 opacity-0"
+                }`}
+              />
+            </button>
           ))}
         </div>
       </div>

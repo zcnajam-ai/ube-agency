@@ -34,7 +34,7 @@ export default function FloatingDotsBackground({
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
 
   useEffect(() => {
-    if (typeof window === "undefined" || !canvasRef.current) return;
+    if (typeof window === "undefined" || !canvasRef.current || window.innerWidth < 768) return;
 
     const canvas = canvasRef.current;
     const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;

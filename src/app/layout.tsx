@@ -4,7 +4,7 @@ import "./globals.css";
 import SmoothScrollProvider from "@/components/providers/SmoothScrollProvider";
 import Navbar from "@/components/common/Navbar";
 import Footer from "@/components/common/Footer";
-import ProjectModal from "@/components/common/ProjectModal";
+import ClientProjectModal from "@/components/common/ClientProjectModal";
 import SchemaOrg from "@/components/seo/SchemaOrg";
 import ConciergeProvider from "@/components/concierge/ConciergeProvider";
 import AnalyticsScripts from "@/components/analytics/AnalyticsScripts";
@@ -133,7 +133,7 @@ export default function RootLayout({
           <Footer />
 
           {/* Interactive Project Inquiry Modal with Overlay Scroll */}
-          <ProjectModal />
+          <ClientProjectModal />
 
           {/* UBE AI Sales & Service Concierge */}
           <ConciergeProvider />

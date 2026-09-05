@@ -2,8 +2,12 @@
 
 import React, { useState, useEffect, useSyncExternalStore } from "react";
 import { createPortal } from "react-dom";
+import dynamic from "next/dynamic";
 import ConciergeTrigger from "./ConciergeTrigger";
-import ConciergeChat from "./ConciergeChat";
+
+const ConciergeChat = dynamic(() => import("./ConciergeChat"), {
+  ssr: false,
+});
 
 function subscribe(callback: () => void) {
   return () => {};
@@ -19,6 +23,7 @@ function getServerSnapshot() {
 
 export default function ConciergeProvider() {
   const [isOpen, setIsOpen] = useState(false);
+  const [hasOpened, setHasOpened] = useState(false);
   const isClient = useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot);
 
   useEffect(() => {
@@ -34,10 +39,15 @@ export default function ConciergeProvider() {
 
   if (!isClient) return null;
 
+  const handleToggle = () => {
+    if (!hasOpened) setHasOpened(true);
+    setIsOpen((prev) => !prev);
+  };
+
   return createPortal(
     <>
-      <ConciergeTrigger isOpen={isOpen} onToggle={() => setIsOpen((prev) => !prev)} />
-      <ConciergeChat isOpen={isOpen} onClose={() => setIsOpen(false)} />
+      <ConciergeTrigger isOpen={isOpen} onToggle={handleToggle} />
+      {hasOpened && <ConciergeChat isOpen={isOpen} onClose={() => setIsOpen(false)} />}
     </>,
     document.body
   );

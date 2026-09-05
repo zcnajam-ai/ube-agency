@@ -182,12 +182,14 @@ export default function TestimonialsSection() {
               type="button"
               onClick={() => setCurrentIndex(i)}
               aria-label={`Go to slide ${i + 1}`}
-              className={`h-2 rounded-full transition-all cursor-pointer ${
-                currentIndex === i
-                  ? "w-8 bg-[#9F8BE7]"
-                  : "w-2 bg-[#E0DDDB] hover:bg-[#B2AEAD]"
-              }`}
-            />
+              className="relative w-8 h-2 rounded-full bg-[#E0DDDB] overflow-hidden cursor-pointer"
+            >
+              <span
+                className={`absolute inset-0 bg-[#9F8BE7] rounded-full transition-all duration-300 origin-left ${
+                  currentIndex === i ? "scale-x-100 opacity-100" : "scale-x-0 opacity-0"
+                }`}
+              />
+            </button>
           ))}
         </div>
       </div>
