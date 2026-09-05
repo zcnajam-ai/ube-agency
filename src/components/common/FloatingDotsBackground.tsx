@@ -1,8 +1,6 @@
 "use client";
 
 import React, { useEffect, useRef } from "react";
-import * as THREE from "three";
-import { animate, remove } from "animejs";
 
 interface FloatingDotsBackgroundProps {
   color?: number;
@@ -40,10 +38,14 @@ export default function FloatingDotsBackground({
     let timerId: ReturnType<typeof setTimeout> | null = null;
     let idleId: number | null = null;
 
-    const initThree = () => {
+    const initThree = async () => {
       if (!canvasRef.current) return;
       const canvas = canvasRef.current;
       const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+      // Dynamic import of heavy 3D & animation modules off the critical hydration path
+      const THREE = await import("three");
+      const { animate, remove } = await import("animejs");
 
       const pointer = new THREE.Vector2();
       const pointerTarget = new THREE.Vector2();

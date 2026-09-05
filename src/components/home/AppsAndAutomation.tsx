@@ -26,7 +26,7 @@ export default function AppsAndAutomation() {
         {/* Header */}
         <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 border-b border-[#E0DDDB] pb-6">
           <div className="space-y-2 max-w-3xl">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#FAF7F6] border border-[#E0DDDB] text-xs font-mono-num text-[#9F8BE7] font-bold shadow-2xs">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#FAF7F6] border border-[#E0DDDB] text-xs font-mono-num text-[#6B46C1] font-bold shadow-2xs">
               <Zap className="w-3.5 h-3.5" />
               <span>ENGINEERING &amp; EFFICIENCY • MOBILE APPS &amp; AUTOMATION</span>
             </div>

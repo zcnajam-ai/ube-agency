@@ -57,7 +57,7 @@ export default function EcommercePriority() {
         {/* Section Header */}
         <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 border-b border-[#E0DDDB] pb-6">
           <div className="space-y-2 max-w-3xl">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white border border-[#E0DDDB] text-xs font-mono-num text-[#9F8BE7] font-bold shadow-2xs">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white border border-[#E0DDDB] text-xs font-mono-num text-[#6B46C1] font-bold shadow-2xs">
               <Heading3DSparkle size={16} />
               <span>ECOMMERCE DESIGN &amp; DEVELOPMENT</span>
             </div>

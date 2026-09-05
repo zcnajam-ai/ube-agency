@@ -115,6 +115,10 @@ export default function RootLayout({
       lang="en"
       className={`${funnelDisplay.variable} ${funnelSans.variable} ${spaceGrotesk.variable} antialiased selection:bg-[#9F8BE7] selection:text-[#161616]`}
     >
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+      </head>
       <body className="bg-[#FAF7F6] text-[#161616] font-body flex flex-col min-h-screen relative overflow-x-hidden">
         {/* GA4, Google Ads, and Meta Pixel Analytics Scripts */}
         <AnalyticsScripts />
