@@ -35,6 +35,12 @@ export async function generateMetadata({
 
   const canonicalUrl = `https://unifiedbrandingexperts.com/insights/${article.slug}`;
 
+  const ogImageUrl = article.coverImage
+    ? article.coverImage.startsWith("http")
+      ? article.coverImage
+      : `https://unifiedbrandingexperts.com${article.coverImage}`
+    : "https://unifiedbrandingexperts.com/og-default.png";
+
   return {
     title: article.title,
     description: article.summary,
@@ -51,10 +57,10 @@ export async function generateMetadata({
       authors: [article.author.name],
       images: [
         {
-          url: "https://unifiedbrandingexperts.com/og-default.png",
+          url: ogImageUrl,
           width: 1200,
           height: 630,
-          alt: article.title,
+          alt: article.coverAlt || article.title,
         },
       ],
     },
@@ -62,7 +68,7 @@ export async function generateMetadata({
       card: "summary_large_image",
       title: article.title,
       description: article.summary,
-      images: ["https://unifiedbrandingexperts.com/og-default.png"],
+      images: [ogImageUrl],
     },
   };
 }
@@ -239,7 +245,7 @@ export default async function InsightArticlePage({
         <div className="relative aspect-[16/9] w-full rounded-3xl overflow-hidden border border-[#E0DDDB] shadow-md bg-[#FAF7F6]">
           <Image
             src={article.coverImage}
-            alt={article.title}
+            alt={article.coverAlt || article.title}
             fill
             priority
             sizes="(max-width: 1024px) 100vw, 1000px"

@@ -47,6 +47,7 @@ export interface InsightArticle {
   lastReviewedDate?: string;
   summary: string;
   coverImage: string;
+  coverAlt?: string;
   primaryIntent: string;
   quickAnswer: string;
   tableOfContents: { id: string; title: string }[];
@@ -443,7 +444,8 @@ export const INSIGHTS: InsightArticle[] = [
     },
     summary:
       "Learn 10 practical ways to improve your website's eligibility and visibility in Google AI Overviews and AI Mode using Google's current search guidance.",
-    coverImage: "/images/projects/project-marketing-3.webp",
+    coverImage: "/images/insights/how-to-optimize-for-google-ai-overviews-2026.webp",
+    coverAlt: "How to optimize your website for Google AI Overviews in 2026",
     primaryIntent: "how to optimize for Google AI Overviews",
     quickAnswer:
       "Optimizing for Google AI Overviews and AI Mode relies on established SEO foundations: ensuring pages are indexed and eligible for snippets, satisfying real search intent, structuring content with direct self-contained answers, building topical depth through query fan-out coverage, and verifying entity data. Google explicitly states there are no special AI markup tags or secret algorithms — eligibility is built through standard technical SEO and helpful, authoritative content.",
@@ -3012,7 +3014,8 @@ export const INSIGHTS: InsightArticle[] = [
   },
   "lastReviewedDate": "2026-03-05",
   "summary": "Practical guide to earning citation links in Google AI Overviews and AI Mode using Search Central best practices, clear Q&A structure, and schema.",
-  "coverImage": "/images/official/aiseo/aeo-structure.jpeg",
+  "coverImage": "/images/insights/how-to-optimize-for-google-ai-overviews-2026.webp",
+  "coverAlt": "How to optimize your website for Google AI Overviews in 2026",
   "primaryIntent": "Practical optimization guidance for Google AI Overviews.",
   "quickAnswer": "Optimizing for Google AI Overviews involves ensuring Googlebot can crawl and index your pages, structuring content to directly satisfy user search intent, publishing clear 40–60 word answer passages under descriptive headings, and implementing accurate JSON-LD structured data.",
   "tableOfContents": [

@@ -82,7 +82,7 @@ export default function InsightsIndexPage() {
               >
                 <Image
                   src={article.coverImage}
-                  alt={article.title}
+                  alt={article.coverAlt || article.title}
                   fill
                   sizes="(max-width: 768px) 100vw, 33vw"
                   className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
