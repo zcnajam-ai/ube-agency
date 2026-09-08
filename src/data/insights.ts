@@ -92,7 +92,8 @@ export const INSIGHTS: InsightArticle[] = [
     },
     summary:
       "Learn how AI SEO, AEO and GEO help businesses improve visibility across Google AI Overviews, ChatGPT, Gemini and other AI-powered search experiences.",
-    coverImage: "/images/projects/project-marketing-1.webp",
+    coverImage: "/images/insights/ai-seo-aeo-geo-complete-guide-2026.webp",
+    coverAlt: "AI SEO, AEO and GEO complete guide for 2026",
     primaryIntent: "AI SEO, AEO, GEO, Answer Engine Optimization, Generative Engine Optimization, ChatGPT SEO",
     quickAnswer:
       "AI SEO combines traditional search engine optimization with Answer Engine Optimization (AEO) and Generative Engine Optimization (GEO) to format brand data for direct citation in Google AI Overviews, ChatGPT Search, Bing Copilot, and Perplexity.",

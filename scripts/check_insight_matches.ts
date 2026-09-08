@@ -6,6 +6,6 @@ const matches = INSIGHTS.map((article, idx) => ({
   slug: article.slug,
   title: article.title,
   coverImage: article.coverImage
-})).filter(a => a.slug === "how-to-optimize-for-google-ai-overviews");
+})).filter(a => a.slug === "ai-seo-aeo-geo-guide");
 
 console.log("Matches:", matches);
