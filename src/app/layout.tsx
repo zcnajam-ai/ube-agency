@@ -37,11 +37,11 @@ const isProductionDomain = process.env.VERCEL_ENV !== "preview";
 export const metadata: Metadata = {
   metadataBase: new URL("https://unifiedbrandingexperts.com"),
   title: {
-    default: "Web Design, Branding & Digital Marketing Agency | Unified Branding Experts",
+    default: "Web Design, Shopify, AI SEO & Digital Marketing Agency | Unified Branding Experts",
     template: "%s | Unified Branding Experts",
   },
   description:
-    "Unified Branding Experts provides professional web design, branding, eCommerce development, AI SEO, paid advertising, mobile apps and digital growth services for businesses ready to scale.",
+    "Grow your business with expert Shopify development, eCommerce, AI SEO, branding, web design, Google Ads and digital marketing services across the U.S.",
   authors: [{ name: "Unified Branding Experts", url: "https://unifiedbrandingexperts.com" }],
   creator: "Unified Branding Experts",
   publisher: "Unified Branding Experts",
@@ -64,16 +64,17 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       { url: "/favicon.ico" },
-      { url: "https://unifiedbrandingexperts.com/og-default.png", sizes: "16x16", type: "image/png" },
-      { url: "https://unifiedbrandingexperts.com/og-default.png", sizes: "32x32", type: "image/png" },
-      { url: "https://unifiedbrandingexperts.com/og-default.png", sizes: "48x48", type: "image/png" },
-      { url: "https://unifiedbrandingexperts.com/og-default.png", sizes: "96x96", type: "image/png" },
-      { url: "https://unifiedbrandingexperts.com/og-default.png", sizes: "512x512", type: "image/png" },
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon-48x48.png", sizes: "48x48", type: "image/png" },
+      { url: "/favicon-96x96.png", sizes: "96x96", type: "image/png" },
+      { url: "/icon-192x192.png", sizes: "192x192", type: "image/png" },
+      { url: "/icon-512x512.png", sizes: "512x512", type: "image/png" },
+      { url: "/favicon.svg", type: "image/svg+xml" },
     ],
     shortcut: "/favicon.ico",
     apple: [
-      { url: "https://unifiedbrandingexperts.com/og-default.png", sizes: "180x180", type: "image/png" },
-      { url: "https://unifiedbrandingexperts.com/og-default.png", sizes: "180x180", type: "image/png" },
+      { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
     ],
   },
   openGraph: {
@@ -81,9 +82,9 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://unifiedbrandingexperts.com",
     siteName: COMPANY_INFO.name,
-    title: "Web Design, Branding & Digital Marketing Agency | Unified Branding Experts",
+    title: "Web Design, Shopify, AI SEO & Digital Marketing Agency",
     description:
-      "Unified Branding Experts provides professional web design, branding, eCommerce development, AI SEO, paid advertising, mobile apps and digital growth services for businesses ready to scale.",
+      "Grow your business with expert Shopify development, eCommerce, AI SEO, branding, web design, Google Ads and digital marketing services across the U.S.",
     images: [
       {
         url: "https://unifiedbrandingexperts.com/og-default.png",
@@ -95,9 +96,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Web Design, Branding & Digital Marketing Agency | Unified Branding Experts",
+    title: "Web Design, Shopify, AI SEO & Digital Marketing Agency",
     description:
-      "Unified Branding Experts provides professional web design, branding, eCommerce development, AI SEO, paid advertising, mobile apps and digital growth services for businesses ready to scale.",
+      "Grow your business with expert Shopify development, eCommerce, AI SEO, branding, web design, Google Ads and digital marketing services across the U.S.",
     images: ["/og-default.png"],
   },
   alternates: {

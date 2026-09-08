@@ -1,4 +1,5 @@
 import React from "react";
+import type { Metadata } from "next";
 import Hero from "@/components/home/Hero";
 import EcommercePriority from "@/components/home/EcommercePriority";
 import GrowthAdsMarketing from "@/components/home/GrowthAdsMarketing";
@@ -8,6 +9,26 @@ import HomePackagesGrid from "@/components/home/HomePackagesGrid";
 import SelectedWork from "@/components/home/SelectedWork";
 import TestimonialsSection from "@/components/home/TestimonialsSection";
 import FinalCTA from "@/components/home/FinalCTA";
+
+export const metadata: Metadata = {
+  title: {
+    absolute: "Web Design, Shopify, AI SEO & Digital Marketing Agency",
+  },
+  description:
+    "Grow your business with expert Shopify development, eCommerce, AI SEO, branding, web design, Google Ads and digital marketing services across the U.S.",
+  openGraph: {
+    title: "Web Design, Shopify, AI SEO & Digital Marketing Agency",
+    description:
+      "Grow your business with expert Shopify development, eCommerce, AI SEO, branding, web design, Google Ads and digital marketing services across the U.S.",
+    url: "https://unifiedbrandingexperts.com",
+    siteName: "Unified Branding Experts",
+  },
+  twitter: {
+    title: "Web Design, Shopify, AI SEO & Digital Marketing Agency",
+    description:
+      "Grow your business with expert Shopify development, eCommerce, AI SEO, branding, web design, Google Ads and digital marketing services across the U.S.",
+  },
+};
 
 export default function HomePage() {
   return (

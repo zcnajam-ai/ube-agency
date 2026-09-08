@@ -5,7 +5,7 @@ export default function manifest(): MetadataRoute.Manifest {
     name: "Unified Branding Experts",
     short_name: "UBE",
     description:
-      "Unified Branding Experts provides professional web design, branding, eCommerce development, AI SEO, paid advertising, mobile apps and digital growth services.",
+      "Grow your business with expert Shopify development, eCommerce, AI SEO, branding, web design, Google Ads and digital marketing services across the U.S.",
     start_url: "/",
     display: "standalone",
     background_color: "#FAF7F6",
