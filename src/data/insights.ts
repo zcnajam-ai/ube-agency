@@ -245,7 +245,8 @@ export const INSIGHTS: InsightArticle[] = [
     },
     summary:
       "Learn 9 practical ways to improve your business's eligibility for discovery, mentions and citations in ChatGPT Search, from OAI-SearchBot access to content authority.",
-    coverImage: "/images/projects/project-marketing-2.webp",
+    coverImage: "/images/insights/how-to-get-your-business-mentioned-in-chatgpt.webp",
+    coverAlt: "How to get your business mentioned in ChatGPT in 2026",
     primaryIntent: "how to get your business mentioned in ChatGPT",
     quickAnswer:
       "Getting your business mentioned in ChatGPT Search requires technical accessibility via OAI-SearchBot, clear Organization entity structure, answer-first content formatting, topical authority clusters, and independent reputation signals across the web. There is no paid submission or guaranteed shortcut — eligibility is earned through web authority and machine-readable data.",
