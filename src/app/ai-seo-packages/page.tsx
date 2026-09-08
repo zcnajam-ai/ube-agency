@@ -15,16 +15,16 @@ import {
 import { COMPANY_INFO } from "@/data/company";
 
 export const metadata: Metadata = {
-  title: "AI SEO Packages & Pricing | AEO, GEO & Search Plans",
+  title: "AI SEO Packages & Pricing for AEO, GEO & AI Search",
   description:
-    "Compare AI SEO packages built for every stage, from a one-time audit to a full-scale retainer. AEO, GEO, structured data, and content clusters that earn AI search visibility. Starting at $349.",
+    "Compare AI SEO packages for Google AI Overviews, ChatGPT, AEO and GEO. One-time audits from $349; ongoing SEO plans from $749/month.",
   alternates: {
     canonical: "https://unifiedbrandingexperts.com/ai-seo-packages",
   },
   openGraph: {
-    title: "AI SEO Packages & Pricing | AEO, GEO & Search Plans",
+    title: "AI SEO Packages & Pricing for AEO, GEO & AI Search",
     description:
-      "Compare AI SEO packages built for every stage, from a one-time audit to a full-scale retainer. Starting at $349.",
+      "Compare AI SEO packages for Google AI Overviews, ChatGPT, AEO and GEO. One-time audits from $349; ongoing SEO plans from $749/month.",
     url: "https://unifiedbrandingexperts.com/ai-seo-packages",
     images: [
       {
@@ -200,11 +200,26 @@ export default function AiSeoPackagesPage() {
     },
   };
 
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://unifiedbrandingexperts.com" },
+      { "@type": "ListItem", position: 2, name: "Services", item: "https://unifiedbrandingexperts.com/services" },
+      { "@type": "ListItem", position: 3, name: "AI SEO", item: "https://unifiedbrandingexperts.com/services/aiseo" },
+      { "@type": "ListItem", position: 4, name: "AI SEO Packages", item: "https://unifiedbrandingexperts.com/ai-seo-packages" },
+    ],
+  };
+
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
 
       <div className="pt-32 pb-24 px-4 sm:px-6 md:px-12 max-w-7xl mx-auto space-y-20">
@@ -238,7 +253,7 @@ export default function AiSeoPackagesPage() {
           </p>
 
           <p className="text-sm sm:text-base text-[#585858] font-body leading-relaxed max-w-2xl mx-auto">
-            Search is shifting faster than most businesses can keep up with. Some brands need a first, honest look at where they stand. Others are ready to compete for a permanent spot in AI answers.
+            AI SEO packages combine technical SEO, Answer Engine Optimization, Generative Engine Optimization, structured data, and content improvements to help your business become discoverable across Google AI Overviews, ChatGPT, and conventional search. Start with a one-time audit from $349 or an ongoing plan from $749/month for implementation and growth.
           </p>
 
           <div className="inline-block p-3 rounded-2xl bg-white border border-[#E0DDDB] text-xs font-mono-num text-[#161616] font-bold shadow-xs">

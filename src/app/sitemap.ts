@@ -8,50 +8,47 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // 1. Core & Research Pages
   const coreRoutes: MetadataRoute.Sitemap = [
-    { url: baseUrl, lastModified: new Date() },
-    { url: `${baseUrl}/services`, lastModified: new Date() },
-    { url: `${baseUrl}/packages`, lastModified: new Date() },
-    { url: `${baseUrl}/work`, lastModified: new Date() },
-    { url: `${baseUrl}/about`, lastModified: new Date() },
-    { url: `${baseUrl}/insights`, lastModified: new Date() },
+    { url: baseUrl },
+    { url: `${baseUrl}/services` },
+    { url: `${baseUrl}/packages` },
+    { url: `${baseUrl}/work` },
+    { url: `${baseUrl}/about` },
+    { url: `${baseUrl}/insights` },
     { url: `${baseUrl}/research/ai-search-readiness-study-2026`, lastModified: new Date("2026-08-31") },
-    { url: `${baseUrl}/contact`, lastModified: new Date() },
+    { url: `${baseUrl}/contact` },
   ];
 
   // 2. Primary Service Pages (14)
   const serviceRoutes: MetadataRoute.Sitemap = ALL_SERVICES.map((s) => ({
     url: `${baseUrl}/services/${s.slug}`,
-    lastModified: new Date(),
   }));
 
   // 3. Dedicated Package Hub Pages (8)
   const packageRoutes: MetadataRoute.Sitemap = [
-    { url: `${baseUrl}/branding-packages`, lastModified: new Date() },
-    { url: `${baseUrl}/web-design-packages`, lastModified: new Date() },
-    { url: `${baseUrl}/digital-marketing-packages`, lastModified: new Date() },
-    { url: `${baseUrl}/ai-seo-packages`, lastModified: new Date() },
-    { url: `${baseUrl}/ai-automation-packages`, lastModified: new Date() },
-    { url: `${baseUrl}/tiktok-marketing-packages`, lastModified: new Date() },
-    { url: `${baseUrl}/mobile-app-packages`, lastModified: new Date() },
-    { url: `${baseUrl}/ecommerce-growth-packages`, lastModified: new Date() },
+    { url: `${baseUrl}/branding-packages` },
+    { url: `${baseUrl}/web-design-packages` },
+    { url: `${baseUrl}/digital-marketing-packages` },
+    { url: `${baseUrl}/ai-seo-packages` },
+    { url: `${baseUrl}/ai-automation-packages` },
+    { url: `${baseUrl}/tiktok-marketing-packages` },
+    { url: `${baseUrl}/mobile-app-packages` },
+    { url: `${baseUrl}/ecommerce-growth-packages` },
   ];
 
   // 4. Legal / Information Pages (2)
   const legalRoutes: MetadataRoute.Sitemap = [
-    { url: `${baseUrl}/privacy-policy`, lastModified: new Date() },
-    { url: `${baseUrl}/terms`, lastModified: new Date() },
+    { url: `${baseUrl}/privacy-policy` },
+    { url: `${baseUrl}/terms` },
   ];
 
   // 5. Case Studies (/work/[slug] - 11)
   const projectRoutes: MetadataRoute.Sitemap = FEATURED_PROJECTS.map((p) => ({
     url: `${baseUrl}/work/${p.slug}`,
-    lastModified: new Date(),
   }));
 
   // 6. Insights Articles (/insights/[slug] - 23)
   const insightRoutes: MetadataRoute.Sitemap = INSIGHTS.map((i) => ({
     url: `${baseUrl}/insights/${i.slug}`,
-    lastModified: new Date(),
   }));
 
   return [
