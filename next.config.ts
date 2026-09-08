@@ -104,8 +104,8 @@ const nextConfig: NextConfig = {
       { source: "/our-website-development-packages/", destination: "/web-design-packages", permanent: true },
       { source: "/our-digital-marketing-packages", destination: "/digital-marketing-packages", permanent: true },
       { source: "/our-digital-marketing-packages/", destination: "/digital-marketing-packages", permanent: true },
-      { source: "/our-custom-web-design-development-packages", destination: "/ecommerce-growth-packages", permanent: true },
-      { source: "/our-custom-web-design-development-packages/", destination: "/ecommerce-growth-packages", permanent: true },
+      { source: "/our-custom-web-design-development-packages", destination: "/web-design-packages", permanent: true },
+      { source: "/our-custom-web-design-development-packages/", destination: "/web-design-packages", permanent: true },
       // Legacy Insights Cannibalization -> Canonical Pillar Destination
       { source: "/insights/what-is-ai-seo-seo-vs-aeo-vs-geo-explained", destination: "/insights/ai-seo-aeo-geo-guide", permanent: true },
       { source: "/insights/what-is-ai-seo-seo-vs-aeo-vs-geo-explained/", destination: "/insights/ai-seo-aeo-geo-guide", permanent: true },
