@@ -6,23 +6,18 @@ import {
   Sparkles,
   ArrowUpRight,
   ArrowLeft,
-  Bot,
-  Cpu,
-  Search,
-  ShieldCheck,
-  Zap,
 } from "lucide-react";
 import { COMPANY_INFO } from "@/data/company";
 
 export const metadata: Metadata = {
-  title: "AI SEO Packages & Pricing for AEO, GEO & AI Search",
+  title: "AI SEO Packages & AEO Pricing",
   description:
     "Compare AI SEO packages for Google AI Overviews, ChatGPT, AEO and GEO. One-time audits from $349; ongoing SEO plans from $749/month.",
   alternates: {
     canonical: "https://unifiedbrandingexperts.com/ai-seo-packages",
   },
   openGraph: {
-    title: "AI SEO Packages & Pricing for AEO, GEO & AI Search",
+    title: "AI SEO Packages & AEO Pricing",
     description:
       "Compare AI SEO packages for Google AI Overviews, ChatGPT, AEO and GEO. One-time audits from $349; ongoing SEO plans from $749/month.",
     url: "https://unifiedbrandingexperts.com/ai-seo-packages",
@@ -173,6 +168,7 @@ export default function AiSeoPackagesPage() {
     name: "Unified Branding Experts AI SEO Packages",
     description:
       "AEO, GEO, and generative AI search optimization packages starting from $349 audit to full-scale monthly retainers.",
+    image: "https://unifiedbrandingexperts.com/og-default.png",
     brand: {
       "@type": "Brand",
       name: COMPANY_INFO.name,
@@ -182,7 +178,8 @@ export default function AiSeoPackagesPage() {
       priceCurrency: "USD",
       lowPrice: "349",
       highPrice: "2999",
-      offers: packages.map((pkg) => {
+      offerCount: 4,
+      offers: packages.filter((pkg) => pkg.price !== "Custom").map((pkg) => {
         const numeric = pkg.price.replace(/[^0-9]/g, "");
         const offer: Record<string, unknown> = {
           "@type": "Offer",
