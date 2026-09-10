@@ -170,6 +170,10 @@ export default function BrandingPackagesPage() {
       "@type": "Organization",
       name: COMPANY_INFO.name,
       url: "https://unifiedbrandingexperts.com",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://unifiedbrandingexperts.com/icon-512x512.png",
+      },
     },
     offers: {
       "@type": "AggregateOffer",
