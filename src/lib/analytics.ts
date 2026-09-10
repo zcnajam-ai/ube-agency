@@ -1,10 +1,9 @@
 /**
  * Unified Analytics & Conversion Event Manager for Unified Branding Experts
- * Supports GA4 (NEXT_PUBLIC_GA_MEASUREMENT_ID), Google Ads (NEXT_PUBLIC_GOOGLE_ADS_ID),
+ * Supports GA4 through Google Tag Manager, Google Ads (NEXT_PUBLIC_GOOGLE_ADS_ID),
  * and Meta Pixel (NEXT_PUBLIC_META_PIXEL_ID) without sending PII.
  */
 
-export const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || "";
 export const GOOGLE_ADS_ID = process.env.NEXT_PUBLIC_GOOGLE_ADS_ID || "";
 export const META_PIXEL_ID = process.env.NEXT_PUBLIC_META_PIXEL_ID || "";
 
