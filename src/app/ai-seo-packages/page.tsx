@@ -164,14 +164,16 @@ export default function AiSeoPackagesPage() {
   // Offer / Schema structured data
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "Product",
+    "@type": "Service",
     name: "Unified Branding Experts AI SEO Packages",
+    serviceType: "AI Search Engine Optimization",
     description:
       "AEO, GEO, and generative AI search optimization packages starting from $349 audit to full-scale monthly retainers.",
     image: "https://unifiedbrandingexperts.com/og-default.png",
-    brand: {
-      "@type": "Brand",
+    provider: {
+      "@type": "Organization",
       name: COMPANY_INFO.name,
+      url: "https://unifiedbrandingexperts.com",
     },
     offers: {
       "@type": "AggregateOffer",

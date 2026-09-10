@@ -160,14 +160,16 @@ export default function BrandingPackagesPage() {
   // Offer / Schema structured data
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "Product",
+    "@type": "Service",
     name: "Unified Branding Experts Branding Packages",
+    serviceType: "Brand Identity and Logo Design",
     description:
       "Professional branding and logo design packages starting from $299 to full enterprise brand systems.",
     image: "https://unifiedbrandingexperts.com/og-default.png",
-    brand: {
-      "@type": "Brand",
+    provider: {
+      "@type": "Organization",
       name: COMPANY_INFO.name,
+      url: "https://unifiedbrandingexperts.com",
     },
     offers: {
       "@type": "AggregateOffer",
