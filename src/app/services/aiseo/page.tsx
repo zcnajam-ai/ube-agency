@@ -16,9 +16,9 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "AI SEO & GEO Services | Google AI Overviews & ChatGPT Search",
+  title: "AI SEO Services for AEO & GEO",
   description:
-    "Get found in Google AI Overviews, ChatGPT Search, Perplexity, and generative search. Professional AI SEO, Answer Engine Optimization (AEO), Generative Engine Optimization (GEO), and JSON-LD schema architecture.",
+    "Improve visibility across Google AI Overviews, ChatGPT and search with technical AI SEO, Answer Engine Optimization, GEO and structured content.",
   alternates: {
     canonical: "https://unifiedbrandingexperts.com/services/aiseo",
   },
@@ -48,6 +48,10 @@ export default function AiSeoServicePage() {
       "@type": "Organization",
       name: "Unified Branding Experts",
       url: "https://unifiedbrandingexperts.com",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://unifiedbrandingexperts.com/icon-512x512.png",
+      },
     },
     areaServed: "Worldwide",
     description: "Get found in Google AI Overviews, ChatGPT Search, Perplexity, and generative search engines with Answer Engine Optimization (AEO) and JSON-LD schema.",

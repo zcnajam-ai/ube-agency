@@ -6,24 +6,18 @@ import {
   Sparkles,
   ArrowUpRight,
   ArrowLeft,
-  ShieldCheck,
-  Clock,
-  Layers,
-  FileCheck,
-  Users,
-  Briefcase,
 } from "lucide-react";
 import { COMPANY_INFO } from "@/data/company";
 
 export const metadata: Metadata = {
-  title: "Branding Packages & Pricing | Logo & Identity Plans",
+  title: "Branding Packages & Pricing",
   description:
-    "Compare branding packages built for every stage, from a professional logo to a full brand system. Logo design, brand identity, strategy, guidelines, and rebranding. Starting at $299.",
+    "Compare logo and branding packages from $299, including brand identity, strategy, guidelines, source files and complete visual systems.",
   alternates: {
     canonical: "https://unifiedbrandingexperts.com/branding-packages",
   },
   openGraph: {
-    title: "Branding Packages & Pricing | Logo & Identity Plans",
+    title: "Branding Packages & Pricing",
     description:
       "Compare branding packages built for every stage, from a professional logo to a full brand system. Starting at $299.",
     url: "https://unifiedbrandingexperts.com/branding-packages",
@@ -170,6 +164,7 @@ export default function BrandingPackagesPage() {
     name: "Unified Branding Experts Branding Packages",
     description:
       "Professional branding and logo design packages starting from $299 to full enterprise brand systems.",
+    image: "https://unifiedbrandingexperts.com/og-default.png",
     brand: {
       "@type": "Brand",
       name: COMPANY_INFO.name,
@@ -179,7 +174,8 @@ export default function BrandingPackagesPage() {
       priceCurrency: "USD",
       lowPrice: "299",
       highPrice: "2499",
-      offers: packages.map((pkg) => {
+      offerCount: 4,
+      offers: packages.filter((pkg) => pkg.price !== "Custom").map((pkg) => {
         const numeric = pkg.price.replace(/[^0-9]/g, "");
         const offer: Record<string, unknown> = {
           "@type": "Offer",
