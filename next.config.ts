@@ -2,7 +2,7 @@ import type { NextConfig } from "next";
 
 const cspHeader = `
   default-src 'self';
-  script-src 'self' 'unsafe-inline';
+  script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://connect.facebook.net;
   style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
   img-src 'self' blob: data: https:;
   font-src 'self' https://fonts.gstatic.com data:;
@@ -10,6 +10,7 @@ const cspHeader = `
   base-uri 'self';
   form-action 'self';
   frame-ancestors 'self';
+  frame-src 'self' https://www.googletagmanager.com;
   connect-src 'self' https:;
   upgrade-insecure-requests;
 `.replace(/\s{2,}/g, ' ').trim();

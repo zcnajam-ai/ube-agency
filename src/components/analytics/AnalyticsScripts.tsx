@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import Script from "next/script";
-import { GA_MEASUREMENT_ID, GOOGLE_ADS_ID, META_PIXEL_ID } from "@/lib/analytics";
+import { GOOGLE_ADS_ID, META_PIXEL_ID } from "@/lib/analytics";
 
 export default function AnalyticsScripts() {
   const [shouldLoad, setShouldLoad] = useState(false);
@@ -29,28 +29,9 @@ export default function AnalyticsScripts() {
   if (!shouldLoad) return null;
   return (
     <>
-      {/* 1. Google Analytics 4 (gtag.js) */}
-      {GA_MEASUREMENT_ID && (
-        <>
-          <Script
-            src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
-            strategy="lazyOnload"
-          />
-          <Script id="ga-gtag-init" strategy="lazyOnload">
-            {`
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', '${GA_MEASUREMENT_ID}', {
-                page_path: window.location.pathname,
-              });
-            `}
-          </Script>
-        </>
-      )}
-
-      {/* 2. Google Ads Tag */}
-      {GOOGLE_ADS_ID && GOOGLE_ADS_ID !== GA_MEASUREMENT_ID && (
+      {/* Google Analytics is configured once through GTM-T3W5QR6T. */}
+      {/* Google Ads Tag */}
+      {GOOGLE_ADS_ID && (
         <>
           <Script
             src={`https://www.googletagmanager.com/gtag/js?id=${GOOGLE_ADS_ID}`}
@@ -67,7 +48,7 @@ export default function AnalyticsScripts() {
         </>
       )}
 
-      {/* 3. Meta Pixel */}
+      {/* Meta Pixel */}
       {META_PIXEL_ID && (
         <Script id="meta-pixel-init" strategy="lazyOnload">
           {`
