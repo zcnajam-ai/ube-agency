@@ -12,20 +12,19 @@ import {
   ShoppingBag,
   TrendingUp,
   Share2,
-  DollarSign,
   ShieldCheck,
   Zap,
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "TikTok Shop Setup & Creator Affiliate Marketing",
+  title: "TikTok Shop Setup Services & Shopify Integration",
   description:
-    "End-to-end TikTok Shop setup and marketing. TikTok Seller Center verification, product catalog sync, Creator Affiliate program management, and Shoppable Video Ads.",
+    "TikTok Shop setup services for Seller Center onboarding, Shopify catalog integration, product sync, creator affiliate workflows and shoppable campaigns.",
   alternates: {
     canonical: "https://unifiedbrandingexperts.com/services/tiktok-shop-setup",
   },
   openGraph: {
-    title: "TikTok Shop Setup & Creator Affiliate Marketing",
+    title: "TikTok Shop Setup Services & Shopify Integration",
     description:
       "End-to-end TikTok Shop setup and Creator Affiliate program management.",
     url: "https://unifiedbrandingexperts.com/services/tiktok-shop-setup",
@@ -124,6 +123,10 @@ export default function TikTokShopSetupPage() {
       a: "Yes. We install and configure the official TikTok for Shopify connector, enabling automatic real-time sync of products, inventory levels, order data, and tracking numbers.",
     },
     {
+      q: "What is included in a TikTok Shop setup service?",
+      a: "A TikTok Shop setup service can cover Seller Center onboarding, business and payout configuration, catalog mapping, Shopify or WooCommerce synchronization, shipping settings, affiliate workflows, product approval checks, and launch support. Your exact scope is confirmed before work begins.",
+    },
+    {
       q: "How does the TikTok Shop Affiliate program work?",
       a: "We set up commission rates (e.g., 10-20%) so TikTok creators can add your product to their videos with zero upfront cost to you. You only pay the creator a commission when a verified sale occurs.",
     },
@@ -156,11 +159,15 @@ export default function TikTokShopSetupPage() {
           </div>
 
           <h1 className="font-display text-4xl sm:text-6xl font-bold tracking-tight text-[#161616] leading-tight">
-            TikTok Shop Setup &amp; Creator Affiliate Marketing.
+            TikTok Shop Setup Services &amp; Shopify Integration
           </h1>
 
           <p className="text-base sm:text-lg text-[#585858] font-body leading-relaxed max-w-2xl">
             Tap into the world&apos;s fastest-growing social commerce engine. We handle <strong className="text-[#161616]">TikTok Seller Center verification</strong>, <strong className="text-[#161616]">Shopify catalog sync</strong>, Creator Affiliate recruitment, and high-converting Shoppable Video Ads.
+          </p>
+
+          <p className="text-sm text-[#585858] font-body leading-relaxed max-w-2xl">
+            Already researching the process? Read our <Link href="/insights/how-to-start-a-tiktok-shop-2026" className="font-semibold text-[#6B46C1] underline underline-offset-4">step-by-step TikTok Shop guide</Link>. If you want the setup handled for you, this service is the commercial implementation path.
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">

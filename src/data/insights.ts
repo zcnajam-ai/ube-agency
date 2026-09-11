@@ -1660,7 +1660,7 @@ export const INSIGHTS: InsightArticle[] = [
     relatedSlugs: [
       "shopify-vs-etsy",
       "how-much-does-professional-logo-design-cost",
-      "how-to-start-a-tiktok-shop",
+      "how-to-start-a-tiktok-shop-2026",
     ],
     serviceCta: {
       title: "Need Professional Etsy Shop Setup & SEO?",
@@ -1872,7 +1872,7 @@ export const INSIGHTS: InsightArticle[] = [
       },
     ],
     relatedSlugs: [
-      "how-to-start-a-tiktok-shop",
+      "how-to-start-a-tiktok-shop-2026",
       "shopify-store-setup-cost",
       "shopify-vs-etsy",
     ],

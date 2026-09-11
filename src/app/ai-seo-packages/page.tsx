@@ -161,6 +161,33 @@ export default function AiSeoPackagesPage() {
     },
   ];
 
+  const faqs = [
+    {
+      q: "How much does AI SEO cost?",
+      a: "Our one-time AI SEO Audit starts at $349. Ongoing implementation starts at $749 per month, with Growth at $1,499 per month and Authority at $2,999 per month. Custom pricing depends on site size, markets, and content scope.",
+    },
+    {
+      q: "What does an AI SEO package include?",
+      a: "Depending on the tier, an AI SEO package can include a technical audit, keyword and question mapping, on-page improvements, direct-answer formatting, structured data, content clusters, AI visibility monitoring, and reporting. Each package above states its exact limits and cadence.",
+    },
+    {
+      q: "What is the difference between SEO, AEO, and GEO?",
+      a: "SEO improves visibility in conventional search results. AEO structures clear answers for answer-led search experiences. GEO improves the clarity, evidence, and entity signals that generative systems may use when producing cited responses. Strong programs use all three together.",
+    },
+    {
+      q: "Which AI SEO package is best for a small business?",
+      a: "Choose the $349 audit when you need priorities before committing to implementation. The $749 monthly Starter plan fits a small site that needs foundational fixes across up to 10 pages. Growth is better when ongoing content clusters and broader page optimization are required.",
+    },
+    {
+      q: "How long does AI SEO take to work?",
+      a: "Technical fixes can be completed quickly, but meaningful ranking, citation, and lead growth usually develops over several months. Timing depends on competition, crawl and indexing, existing authority, content quality, and how consistently recommendations are implemented.",
+    },
+    {
+      q: "Can AI SEO guarantee placement in ChatGPT or Google AI Overviews?",
+      a: "No agency can guarantee inclusion because each search or answer engine controls its results. We improve eligibility by strengthening technical access, answer quality, structured information, entity consistency, supporting evidence, and relevant authority signals.",
+    },
+  ];
+
   // Offer / Schema structured data
   const jsonLd = {
     "@context": "https://schema.org",
@@ -406,7 +433,31 @@ export default function AiSeoPackagesPage() {
           </div>
         </section>
 
-        {/* 4. Cross-Links */}
+        {/* 4. Buyer questions based on Search Console demand */}
+        <section className="space-y-8">
+          <div className="max-w-3xl space-y-2">
+            <span className="text-xs font-mono-num text-[#9F8BE7] uppercase tracking-widest font-bold">
+              AI SEO COST &amp; PACKAGE FAQS
+            </span>
+            <h2 className="font-display text-3xl sm:text-4xl font-bold tracking-tight text-[#161616]">
+              AI SEO Package Questions, Answered
+            </h2>
+            <p className="text-sm text-[#585858] font-body leading-relaxed">
+              Straight answers about price, scope, timelines, and the difference between SEO, AEO, and GEO—so you can choose a package based on what your site actually needs.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {faqs.map((faq) => (
+              <article key={faq.q} className="p-6 rounded-3xl bg-white border border-[#E0DDDB] space-y-2 shadow-xs">
+                <h3 className="font-display text-base font-bold text-[#161616]">{faq.q}</h3>
+                <p className="text-xs sm:text-sm text-[#585858] font-body leading-relaxed">{faq.a}</p>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        {/* 5. Cross-Links */}
         <section className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <Link
             href="/services/aiseo"
@@ -451,7 +502,7 @@ export default function AiSeoPackagesPage() {
           </Link>
         </section>
 
-        {/* 5. Final CTA */}
+        {/* 6. Final CTA */}
         <section className="p-8 sm:p-14 rounded-3xl bg-[#161616] text-white text-center space-y-6 shadow-xl">
           <h2 className="font-display text-3xl sm:text-5xl font-bold tracking-tight text-white">
             Ready to Get Found in AI Search?

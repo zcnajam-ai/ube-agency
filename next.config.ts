@@ -112,6 +112,8 @@ const nextConfig: NextConfig = {
       { source: "/insights/what-is-ai-seo-seo-vs-aeo-vs-geo-explained/", destination: "/insights/ai-seo-aeo-geo-guide", permanent: true },
       { source: "/insights/the-death-of-10-blue-links-mastering-aiseo-and-answer-engines", destination: "/insights/ai-seo-aeo-geo-guide", permanent: true },
       { source: "/insights/the-death-of-10-blue-links-mastering-aiseo-and-answer-engines/", destination: "/insights/ai-seo-aeo-geo-guide", permanent: true },
+      { source: "/insights/how-to-start-a-tiktok-shop", destination: "/insights/how-to-start-a-tiktok-shop-2026", permanent: true },
+      { source: "/insights/how-to-start-a-tiktok-shop/", destination: "/insights/how-to-start-a-tiktok-shop-2026", permanent: true },
     ];
   },
 };

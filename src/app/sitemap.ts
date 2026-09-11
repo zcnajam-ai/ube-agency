@@ -46,8 +46,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     url: `${baseUrl}/work/${p.slug}`,
   }));
 
-  // 6. Insights Articles (/insights/[slug] - 23)
-  const insightRoutes: MetadataRoute.Sitemap = INSIGHTS.map((i) => ({
+  // 6. Canonical insight articles. Redirected legacy slugs stay out of the sitemap.
+  const insightRoutes: MetadataRoute.Sitemap = INSIGHTS.filter(
+    (i) => i.slug !== "how-to-start-a-tiktok-shop",
+  ).map((i) => ({
     url: `${baseUrl}/insights/${i.slug}`,
   }));
 
