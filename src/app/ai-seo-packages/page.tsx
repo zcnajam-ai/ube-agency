@@ -10,16 +10,16 @@ import {
 import { COMPANY_INFO } from "@/data/company";
 
 export const metadata: Metadata = {
-  title: "AI SEO Packages & AEO Pricing",
+  title: "AI SEO & Video Search Packages",
   description:
-    "Compare AI SEO packages for Google AI Overviews, ChatGPT, AEO and GEO. One-time audits from $349; ongoing SEO plans from $749/month.",
+    "Compare AI SEO and video search packages for Google AI Overviews, ChatGPT, AEO, GEO and video-supporting content. Audits from $349; plans from $749/month.",
   alternates: {
     canonical: "https://unifiedbrandingexperts.com/ai-seo-packages",
   },
   openGraph: {
-    title: "AI SEO Packages & AEO Pricing",
+    title: "AI SEO & Video Search Packages",
     description:
-      "Compare AI SEO packages for Google AI Overviews, ChatGPT, AEO and GEO. One-time audits from $349; ongoing SEO plans from $749/month.",
+      "Compare AI SEO and video search packages for Google AI Overviews, ChatGPT, AEO, GEO and video-supporting content. Audits from $349; plans from $749/month.",
     url: "https://unifiedbrandingexperts.com/ai-seo-packages",
     images: [
       {
@@ -248,7 +248,7 @@ export default function AiSeoPackagesPage() {
           </div>
 
           <h1 className="font-display text-4xl sm:text-6xl font-bold tracking-tight text-[#161616]">
-            AI SEO Packages &amp; Pricing
+            AI SEO &amp; Video Search Packages
           </h1>
 
           <p className="text-xl sm:text-2xl font-display font-medium text-[#303030]">
@@ -256,11 +256,29 @@ export default function AiSeoPackagesPage() {
           </p>
 
           <p className="text-sm sm:text-base text-[#585858] font-body leading-relaxed max-w-2xl mx-auto">
-            AI SEO packages combine technical SEO, Answer Engine Optimization, Generative Engine Optimization, structured data, and content improvements to help your business become discoverable across Google AI Overviews, ChatGPT, and conventional search. Start with a one-time audit from $349 or an ongoing plan from $749/month for implementation and growth.
+            AI SEO packages combine technical SEO, Answer Engine Optimization, Generative Engine Optimization, structured data, and content improvements to help your business become discoverable across Google AI Overviews, ChatGPT, video search, and conventional search. Start with a one-time audit from $349 or an ongoing plan from $749/month for implementation and growth.
           </p>
 
           <div className="inline-block p-3 rounded-2xl bg-white border border-[#E0DDDB] text-xs font-mono-num text-[#161616] font-bold shadow-xs">
             Starting from <span className="text-emerald-600 font-black text-sm">$349</span> for a one-time AI SEO audit. Monthly retainers available for ongoing growth.
+          </div>
+        </section>
+
+        {/* Direct answer for a high-impression search question */}
+        <section className="p-8 sm:p-10 rounded-3xl bg-white border border-[#E0DDDB] shadow-xs">
+          <div className="max-w-4xl mx-auto space-y-4">
+            <span className="text-xs font-mono-num text-[#9F8BE7] uppercase tracking-widest font-bold">
+              PACKAGE GUIDANCE
+            </span>
+            <h2 className="font-display text-2xl sm:text-3xl font-bold tracking-tight text-[#161616]">
+              What Is the Best SEO Package for AI and Video Search?
+            </h2>
+            <p className="text-sm sm:text-base text-[#585858] font-body leading-relaxed">
+              Start with the <a href="#ai-seo-audit" className="font-semibold text-[#6B46C1] underline underline-offset-4">AI SEO Audit</a> if you need a clear diagnosis before committing to ongoing work. Choose the <a href="#ai-seo-growth" className="font-semibold text-[#6B46C1] underline underline-offset-4">AI SEO Growth plan</a> when you need continuous technical SEO, AEO and GEO improvements, structured data, and content clusters that support discovery across conventional, AI, and video-led search journeys.
+            </p>
+            <p className="text-sm text-[#585858] font-body leading-relaxed">
+              Dedicated video production or channel management is quoted separately. Every recommendation is based on your site, market, current rankings, and the search surfaces most likely to generate qualified leads.
+            </p>
           </div>
         </section>
 
