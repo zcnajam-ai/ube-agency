@@ -1,26 +1,19 @@
 import React from "react";
 import Link from "next/link";
-import Image from "next/image";
 import { Metadata } from "next";
 import {
   Sparkles,
-  ArrowRight,
   CheckCircle2,
   X,
-  HelpCircle,
   ShieldAlert,
-  ArrowUpRight,
-  ShoppingBag,
-  Zap,
-  TrendingUp,
 } from "lucide-react";
 import CommercePlatformIcon3D from "@/components/common/CommercePlatformIcon3D";
 import ServiceProjectModalTrigger from "@/components/services/ServiceProjectModalTrigger";
 
 export const metadata: Metadata = {
-  title: "eCommerce Packages & Pricing | Shopify, Amazon, Etsy & eBay | UBE",
+  title: "eCommerce Growth & Marketing Packages | Shopify & Marketplaces",
   description:
-    "Compare eCommerce development and growth packages from Unified Branding Experts. Shopify setup, marketplace optimization, dropshipping integrations, SEO, automation and multi-channel growth plans from $399.",
+    "Compare eCommerce growth and marketing packages for Shopify, Amazon, Etsy and eBay. Store builds start at $399; ongoing SEO and advertising are scoped separately.",
   alternates: {
     canonical: "https://unifiedbrandingexperts.com/ecommerce-growth-packages",
   },
@@ -150,11 +143,11 @@ export default function EcommercePackagesPage() {
         </div>
 
         <h1 className="font-display text-4xl sm:text-6xl font-bold tracking-tight text-[#161616]">
-          eCommerce Growth Packages
+          eCommerce Growth &amp; Marketing Packages
         </h1>
 
         <p className="text-sm sm:text-base text-[#585858] font-body leading-relaxed max-w-2xl mx-auto">
-          Choose the level of eCommerce support that matches where your business is today. Whether you need a professional storefront, a dropshipping-ready system or a more advanced multi-channel commerce operation, our packages provide a clear starting point with room to grow.
+          Choose the level of eCommerce support that matches where your business is today. These fixed-price packages build the storefront, tracking, SEO foundation, automation, and marketplace structure. Ongoing content, paid advertising, and campaign management are available as a separately scoped marketing retainer.
         </p>
 
         {/* 3D Platform Cluster Badge */}
@@ -559,7 +552,7 @@ export default function EcommercePackagesPage() {
           Third-party subscription fees, marketplace seller fees, Shopify subscription fees, advertising budgets, premium themes/apps, inventory purchases, shipping/fulfillment charges, supplier charges and other third-party expenses are separate unless specifically included in a written proposal.
         </p>
         <p className="text-xs text-[#585858] leading-relaxed">
-          Marketplace approval remains subject to each platform's eligibility, verification, product and seller policies. Unified Branding Experts does not control third-party platform seller approvals.
+          Marketplace approval remains subject to each platform&apos;s eligibility, verification, product and seller policies. Unified Branding Experts does not control third-party platform seller approvals.
         </p>
       </section>
 
@@ -604,10 +597,28 @@ export default function EcommercePackagesPage() {
 
           <div className="p-6 rounded-2xl bg-[#FAF7F6] border border-[#E0DDDB] space-y-2">
             <h3 className="font-display text-base font-bold text-[#161616]">
-              Is advertising included?
+              What do eCommerce marketing packages include?
             </h3>
             <p className="text-xs text-[#585858] leading-relaxed">
-              Paid advertising management and advertising spend are not automatically included unless explicitly stated in the selected proposal.
+              The packages on this page include the technical growth foundation: storefront setup, product organization, tracking, on-page SEO, conversion features, automation, and marketplace preparation according to the selected tier. Ongoing SEO content, email campaigns, and paid advertising management require a separate written retainer.
+            </p>
+          </div>
+
+          <div className="p-6 rounded-2xl bg-[#FAF7F6] border border-[#E0DDDB] space-y-2">
+            <h3 className="font-display text-base font-bold text-[#161616]">
+              Which platforms can an eCommerce package support?
+            </h3>
+            <p className="text-xs text-[#585858] leading-relaxed">
+              We support Shopify and WooCommerce storefronts plus Amazon, Etsy, eBay, and TikTok Shop expansion. Platform availability, listing limits, and integrations depend on the chosen package and marketplace eligibility.
+            </p>
+          </div>
+
+          <div className="p-6 rounded-2xl bg-[#FAF7F6] border border-[#E0DDDB] space-y-2">
+            <h3 className="font-display text-base font-bold text-[#161616]">
+              Where can I compare Shopify setup costs?
+            </h3>
+            <p className="text-xs text-[#585858] leading-relaxed">
+              Review our <Link href="/insights/shopify-store-setup-cost-2026" className="font-semibold text-[#6B46C1] underline underline-offset-4">Shopify store setup cost guide</Link> for platform fees, theme and app considerations, and implementation budget factors.
             </p>
           </div>
 
@@ -628,7 +639,7 @@ export default function EcommercePackagesPage() {
           Not Sure Which eCommerce Package Fits Your Business?
         </h2>
         <p className="text-sm sm:text-base text-[#ACACAC] max-w-xl mx-auto">
-          Tell us what you're selling, where you currently sell and where you want to grow. We'll help determine the most appropriate platform and starting package.
+          Tell us what you&apos;re selling, where you currently sell and where you want to grow. We&apos;ll help determine the most appropriate platform and starting package.
         </p>
         <div className="flex flex-wrap items-center justify-center gap-4 pt-2">
           <ServiceProjectModalTrigger label="Start Your eCommerce Project" />
