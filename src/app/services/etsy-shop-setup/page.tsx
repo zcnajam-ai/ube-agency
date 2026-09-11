@@ -13,19 +13,17 @@ import {
   Tag,
   Camera,
   Star,
-  FileCheck,
-  ShieldCheck,
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Etsy Shop Setup & Etsy SEO Optimization",
+  title: "Etsy Shop Setup & SEO Services | From $299",
   description:
-    "Professional Etsy shop setup and Etsy SEO optimization services. Branded shop banners, 13-tag keyword research, listing copywriting, product mockups, and shop launch strategy.",
+    "Compare Etsy shop setup and SEO services from $299. Get shop branding, buyer-intent keyword research, listing copy, product mockups, policies, and launch support.",
   alternates: {
     canonical: "https://unifiedbrandingexperts.com/services/etsy-shop-setup",
   },
   openGraph: {
-    title: "Etsy Shop Setup & Etsy SEO Optimization",
+    title: "Etsy Shop Setup & SEO Services | Unified Branding Experts",
     description:
       "Professional Etsy shop setup and Etsy SEO optimization services.",
     url: "https://unifiedbrandingexperts.com/services/etsy-shop-setup",
@@ -55,8 +53,8 @@ export default function EtsyShopSetupPage() {
       image: "/images/official/branding/branding-hero.jpeg",
     },
     {
-      title: "Advanced Etsy SEO & 13-Tag Research",
-      desc: "In-depth keyword research using eRank, Marmalead, and EverBee. Optimized listing titles, long-tail tags (all 13 slots utilized), and attribute mapping for high search rankings.",
+      title: "Etsy SEO & 13-Tag Research",
+      desc: "Buyer-intent keyword research, optimized listing titles, relevant long-tail tags, categories, and attribute mapping designed to improve listing relevance and discoverability.",
       icon: <Search className="w-5 h-5 text-purple-600" />,
       image: "/images/official/aiseo/ai-discovery.jpeg",
     },
@@ -73,8 +71,8 @@ export default function EtsyShopSetupPage() {
       image: "/images/official/branding/brand-identity.jpeg",
     },
     {
-      title: "Review Strategy & Post-Launch Support",
-      desc: "Automated message-to-buyer templates, coupon code workflows for repeat purchases, and customer service frameworks designed to earn 5-star Star Seller status fast.",
+      title: "Customer Experience & Post-Launch Support",
+      desc: "Message-to-buyer templates, coupon workflows for repeat purchases, and customer-service guidance designed to support a consistent buyer experience after launch.",
       icon: <Star className="w-5 h-5 text-amber-600" />,
       image: "/images/official/automation/system-integration.jpeg",
     },
@@ -100,7 +98,7 @@ export default function EtsyShopSetupPage() {
       title: "Listing Creation & 13-Tag SEO",
       review: "Product dimensions, variations, SKUs, and target search phrases.",
       setup: "Optimized titles, full 13 tags, detailed descriptions, and high-res mockups.",
-      avoid: "Keyword stuffing or leaving tag slots blank, cutting your organic reach in half.",
+      avoid: "Keyword stuffing, irrelevant tags, or incomplete listing information that can weaken relevance.",
     },
     {
       number: "04",
@@ -111,10 +109,10 @@ export default function EtsyShopSetupPage() {
     },
     {
       number: "05",
-      title: "Shop Launch & Star Seller Strategy",
-      review: "Final listing live checks, search ranking tests, and buyer messaging templates.",
+      title: "Shop Launch & Measurement Plan",
+      review: "Final listing checks, Etsy Shop Stats baselines, and buyer messaging templates.",
       setup: "Official shop launch, launch discount promotion, and ongoing Etsy Ads strategy roadmap.",
-      avoid: "Zero sales after launch due to lack of initial ranking momentum.",
+      avoid: "Launching without a baseline, measurement plan, or clear next actions.",
     },
   ];
 
@@ -125,7 +123,7 @@ export default function EtsyShopSetupPage() {
     },
     {
       q: "What tools do you use for Etsy SEO keyword research?",
-      a: "We utilize eRank, Marmalead, EverBee, and real-time Etsy search suggest data to identify low-competition, high-volume search terms for your 13 tags and listing titles.",
+      a: "We combine Etsy search suggestions, marketplace and competitor review, and specialist research tools when appropriate. Recommendations are based on relevance and buyer intent; no keyword or tool can guarantee ranking or sales.",
     },
     {
       q: "How many product listings are included in the initial setup?",
@@ -142,6 +140,10 @@ export default function EtsyShopSetupPage() {
     {
       q: "What are your Etsy setup packages?",
       a: "Our Etsy shop setup packages start from $299 for basic shop branding & 5 listings setup, up to $699 for full-scale launch suites with advanced SEO and 20 listings.",
+    },
+    {
+      q: "Do Etsy SEO services guarantee rankings or sales?",
+      a: "No. Etsy controls search placement, and results depend on product demand, competition, pricing, listing quality, customer response, and shop performance. We improve the research, content, merchandising, and measurement foundation without promising a specific position or sales volume.",
     },
   ];
 
@@ -160,7 +162,7 @@ export default function EtsyShopSetupPage() {
           </h1>
 
           <p className="text-base sm:text-lg text-[#585858] font-body leading-relaxed max-w-2xl">
-            Launch a profitable, high-ranking Etsy storefront. We handle everything from <strong className="text-[#161616]">shop branding and banner kits</strong> to <strong className="text-[#161616]">13-tag keyword SEO</strong>, lifestyle mockups, and conversion-optimized listing copy.
+            Build a credible, search-ready Etsy storefront. We handle everything from <strong className="text-[#161616]">shop branding and banner kits</strong> to <strong className="text-[#161616]">buyer-intent keyword research</strong>, relevant tags, lifestyle mockups, and conversion-focused listing copy.
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
@@ -186,12 +188,12 @@ export default function EtsyShopSetupPage() {
             </Link>
 
             <Link
-              href="/branding-packages"
+              href="/ecommerce-growth-packages#etsy"
               className="px-8 py-4 rounded-full border border-[#E0DDDB] bg-white hover:border-[#9F8BE7] text-sm font-display font-bold text-[#161616] transition-all flex items-center gap-2 shadow-xs"
             >
-              <span>View Branding Packages</span>
+              <span>View eCommerce Packages</span>
               <span className="text-xs font-mono-num text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-full">
-                From $299
+                From $399
               </span>
               <ArrowUpRight className="w-4 h-4 text-[#9F8BE7]" />
             </Link>
@@ -235,16 +237,16 @@ export default function EtsyShopSetupPage() {
             SEARCH VISIBILITY
           </span>
           <h2 className="font-display text-3xl sm:text-5xl font-bold tracking-tight text-[#161616]">
-            Dominate Etsy Search with Data-Driven SEO.
+            Improve Etsy Search Relevance with Buyer-Focused SEO.
           </h2>
           <p className="text-base text-[#585858] font-body leading-relaxed">
-            Etsy is a specialized search engine with over 90 million active buyers. Having great products is not enough—if your titles, tags, categories, and attributes don&apos;t match customer search intent, your listings remain invisible.
+            Etsy search uses listing and shop information to connect shoppers with relevant products. Strong products still need clear titles, tags, categories, attributes, images, pricing, and policies that match buyer intent.
           </p>
           <p className="text-sm sm:text-base text-[#585858] font-body leading-relaxed">
-            We identify high-volume, low-competition buyer keywords and structure your listings to earn organic rank, high click-through rates, and consistent daily sales.
+            We research how buyers describe products, organize listing information clearly, and establish an Etsy Shop Stats baseline so future changes can be evaluated against impressions, visits, favorites, and orders.
           </p>
           <p className="text-xs font-mono-num text-[#161616] font-bold">
-            Built for fast ranking, customer trust, and 5-star Star Seller status.
+            Built for relevance, customer clarity, and measurable improvement—without ranking or sales guarantees.
           </p>
         </div>
       </section>
@@ -347,18 +349,18 @@ export default function EtsyShopSetupPage() {
             AFFORDABLE LAUNCH TIERS
           </span>
           <h2 className="font-display text-2xl sm:text-4xl font-bold text-[#161616]">
-            Explore Branding &amp; Store Setup Packages
+            Compare Etsy &amp; eCommerce Setup Options
           </h2>
           <p className="text-xs sm:text-sm text-[#585858] font-body">
-            Combine Etsy shop launch with professional logo design and full branding starting from $299.
+            Start with Etsy setup from $299, or compare broader eCommerce packages for storefront and multi-channel expansion.
           </p>
         </div>
 
         <Link
-          href="/branding-packages"
+          href="/ecommerce-growth-packages#etsy"
           className="px-8 py-4 rounded-full bg-[#9F8BE7] text-[#161616] font-display font-bold text-sm hover:bg-[#b4a3f7] transition-all shadow-[0_4px_20px_rgba(159,139,231,0.35)] shrink-0 flex items-center gap-2"
         >
-          <span>View Branding Packages</span>
+          <span>Compare eCommerce Packages</span>
           <ArrowUpRight className="w-4 h-4" />
         </Link>
       </section>
@@ -395,7 +397,7 @@ export default function EtsyShopSetupPage() {
       {/* 7. Final CTA */}
       <section className="p-8 sm:p-14 rounded-3xl bg-[#161616] text-white text-center space-y-6 shadow-xl">
         <h2 className="font-display text-3xl sm:text-5xl font-bold tracking-tight text-white">
-          Ready to Launch Your High-Ranking Etsy Shop?
+          Ready to Launch a Search-Ready Etsy Shop?
         </h2>
         <p className="text-sm sm:text-base text-[#ACACAC] max-w-xl mx-auto">
           From initial seller account setup to advanced 13-tag SEO optimization and banner design.
@@ -408,7 +410,7 @@ export default function EtsyShopSetupPage() {
             Start Etsy Shop Setup
           </Link>
           <Link
-            href="/branding-packages"
+            href="/ecommerce-growth-packages#etsy"
             className="px-8 py-4 rounded-full border border-white/20 bg-white/5 hover:bg-white/10 text-white font-display font-bold text-sm transition-all"
           >
             Compare Package Pricing

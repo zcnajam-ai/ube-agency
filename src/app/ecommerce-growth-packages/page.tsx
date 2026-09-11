@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Metadata } from "next";
 import {
   Sparkles,
+  ArrowUpRight,
   CheckCircle2,
   X,
   ShieldAlert,
@@ -499,33 +500,42 @@ export default function EcommercePackagesPage() {
             Marketplace Add-ons &amp; Custom Scope
           </h2>
           <p className="text-xs sm:text-sm text-[#585858]">
-            Expand beyond your core storefront into dedicated marketplace channels.
+            Choose a marketplace pathway based on your product, margins, fulfillment model, and customer demand. Amazon, Etsy, and eBay work is custom-scoped because seller eligibility, catalog complexity, and platform requirements vary.
           </p>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-          <div className="p-5 rounded-2xl bg-white border border-[#E0DDDB] space-y-2 shadow-2xs">
+          <div id="amazon" className="p-5 rounded-2xl bg-white border border-[#E0DDDB] space-y-3 shadow-2xs scroll-mt-24">
             <CommercePlatformIcon3D platform="amazon" size="sm" />
             <h4 className="font-display text-sm font-bold text-[#161616]">Amazon Store &amp; Listings</h4>
             <p className="text-xs text-[#585858] leading-relaxed">
               Marketplace setup, product organization, listing content, keyword optimization and storefront support.
             </p>
+            <Link href="/contact?type=amazon" className="inline-flex items-center gap-1 text-xs font-bold text-[#6B46C1] underline underline-offset-4">
+              Request an Amazon scope <ArrowUpRight className="h-3.5 w-3.5" />
+            </Link>
           </div>
 
-          <div className="p-5 rounded-2xl bg-white border border-[#E0DDDB] space-y-2 shadow-2xs">
+          <div id="etsy" className="p-5 rounded-2xl bg-white border border-[#E0DDDB] space-y-3 shadow-2xs scroll-mt-24">
             <CommercePlatformIcon3D platform="etsy" size="sm" />
             <h4 className="font-display text-sm font-bold text-[#161616]">Etsy Shop Optimization</h4>
             <p className="text-xs text-[#585858] leading-relaxed">
               Shop branding, 13-tag Etsy SEO, titles, tags, categories and product listing copywriting.
             </p>
+            <Link href="/services/etsy-shop-setup" className="inline-flex items-center gap-1 text-xs font-bold text-[#6B46C1] underline underline-offset-4">
+              Explore Etsy setup services <ArrowUpRight className="h-3.5 w-3.5" />
+            </Link>
           </div>
 
-          <div className="p-5 rounded-2xl bg-white border border-[#E0DDDB] space-y-2 shadow-2xs">
+          <div id="ebay" className="p-5 rounded-2xl bg-white border border-[#E0DDDB] space-y-3 shadow-2xs scroll-mt-24">
             <CommercePlatformIcon3D platform="ebay" size="sm" />
             <h4 className="font-display text-sm font-bold text-[#161616]">eBay Store Optimization</h4>
             <p className="text-xs text-[#585858] leading-relaxed">
               Store organization, categories, item specifics, listings and marketplace structure.
             </p>
+            <Link href="/contact?type=ebay" className="inline-flex items-center gap-1 text-xs font-bold text-[#6B46C1] underline underline-offset-4">
+              Request an eBay scope <ArrowUpRight className="h-3.5 w-3.5" />
+            </Link>
           </div>
 
           <div className="p-5 rounded-2xl bg-white border border-[#E0DDDB] space-y-2 shadow-2xs">
@@ -610,6 +620,24 @@ export default function EcommercePackagesPage() {
             </h3>
             <p className="text-xs text-[#585858] leading-relaxed">
               We support Shopify and WooCommerce storefronts plus Amazon, Etsy, eBay, and TikTok Shop expansion. Platform availability, listing limits, and integrations depend on the chosen package and marketplace eligibility.
+            </p>
+          </div>
+
+          <div className="p-6 rounded-2xl bg-[#FAF7F6] border border-[#E0DDDB] space-y-2">
+            <h3 className="font-display text-base font-bold text-[#161616]">
+              Is Amazon, Etsy, or eBay best for my products?
+            </h3>
+            <p className="text-xs text-[#585858] leading-relaxed">
+              It depends on what you sell and how you operate. Etsy is often suited to handmade, designed, personalized, or vintage products; Amazon can fit standardized products with competitive fulfillment; and eBay can fit collectibles, refurbished goods, parts, and broad catalog inventory. We review demand, fees, margins, fulfillment, and policy requirements before recommending a channel.
+            </p>
+          </div>
+
+          <div className="p-6 rounded-2xl bg-[#FAF7F6] border border-[#E0DDDB] space-y-2">
+            <h3 className="font-display text-base font-bold text-[#161616]">
+              What does marketplace listing optimization include?
+            </h3>
+            <p className="text-xs text-[#585858] leading-relaxed">
+              A custom scope can include category and competitor research, titles, attributes or item specifics, product copy, image guidance, variations, policies, storefront organization, and a measurement baseline. Deliverables depend on the marketplace, catalog size, and verified product information you provide.
             </p>
           </div>
 
