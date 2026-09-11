@@ -47,6 +47,7 @@ export interface InsightArticle {
   lastReviewedDate?: string;
   summary: string;
   coverImage: string;
+  coverAlt?: string;
   primaryIntent: string;
   quickAnswer: string;
   tableOfContents: { id: string; title: string }[];
@@ -91,7 +92,8 @@ export const INSIGHTS: InsightArticle[] = [
     },
     summary:
       "Learn how AI SEO, AEO and GEO help businesses improve visibility across Google AI Overviews, ChatGPT, Gemini and other AI-powered search experiences.",
-    coverImage: "/images/projects/project-marketing-1.webp",
+    coverImage: "/images/insights/ai-seo-aeo-geo-complete-guide-2026.webp",
+    coverAlt: "AI SEO, AEO and GEO complete guide for 2026",
     primaryIntent: "AI SEO, AEO, GEO, Answer Engine Optimization, Generative Engine Optimization, ChatGPT SEO",
     quickAnswer:
       "AI SEO combines traditional search engine optimization with Answer Engine Optimization (AEO) and Generative Engine Optimization (GEO) to format brand data for direct citation in Google AI Overviews, ChatGPT Search, Bing Copilot, and Perplexity.",
@@ -243,7 +245,8 @@ export const INSIGHTS: InsightArticle[] = [
     },
     summary:
       "Learn 9 practical ways to improve your business's eligibility for discovery, mentions and citations in ChatGPT Search, from OAI-SearchBot access to content authority.",
-    coverImage: "/images/projects/project-marketing-2.webp",
+    coverImage: "/images/insights/how-to-get-your-business-mentioned-in-chatgpt.webp",
+    coverAlt: "How to get your business mentioned in ChatGPT in 2026",
     primaryIntent: "how to get your business mentioned in ChatGPT",
     quickAnswer:
       "Getting your business mentioned in ChatGPT Search requires technical accessibility via OAI-SearchBot, clear Organization entity structure, answer-first content formatting, topical authority clusters, and independent reputation signals across the web. There is no paid submission or guaranteed shortcut — eligibility is earned through web authority and machine-readable data.",
@@ -443,7 +446,8 @@ export const INSIGHTS: InsightArticle[] = [
     },
     summary:
       "Learn 10 practical ways to improve your website's eligibility and visibility in Google AI Overviews and AI Mode using Google's current search guidance.",
-    coverImage: "/images/projects/project-marketing-3.webp",
+    coverImage: "/images/insights/how-to-optimize-for-google-ai-overviews-2026.webp",
+    coverAlt: "How to optimize your website for Google AI Overviews in 2026",
     primaryIntent: "how to optimize for Google AI Overviews",
     quickAnswer:
       "Optimizing for Google AI Overviews and AI Mode relies on established SEO foundations: ensuring pages are indexed and eligible for snippets, satisfying real search intent, structuring content with direct self-contained answers, building topical depth through query fan-out coverage, and verifying entity data. Google explicitly states there are no special AI markup tags or secret algorithms — eligibility is built through standard technical SEO and helpful, authoritative content.",
@@ -3012,7 +3016,8 @@ export const INSIGHTS: InsightArticle[] = [
   },
   "lastReviewedDate": "2026-03-05",
   "summary": "Practical guide to earning citation links in Google AI Overviews and AI Mode using Search Central best practices, clear Q&A structure, and schema.",
-  "coverImage": "/images/official/aiseo/aeo-structure.jpeg",
+  "coverImage": "/images/insights/how-to-optimize-for-google-ai-overviews-2026.webp",
+  "coverAlt": "How to optimize your website for Google AI Overviews in 2026",
   "primaryIntent": "Practical optimization guidance for Google AI Overviews.",
   "quickAnswer": "Optimizing for Google AI Overviews involves ensuring Googlebot can crawl and index your pages, structuring content to directly satisfy user search intent, publishing clear 40–60 word answer passages under descriptive headings, and implementing accurate JSON-LD structured data.",
   "tableOfContents": [
