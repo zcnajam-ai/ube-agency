@@ -3,8 +3,6 @@
 import React from "react";
 import { useScroll } from "@/components/providers/SmoothScrollProvider";
 
-import { trackStartProjectClick } from "@/lib/analytics";
-
 interface ServiceProjectModalTriggerProps {
   label?: string;
   service?: string;
@@ -21,7 +19,6 @@ export default function ServiceProjectModalTrigger({
   const { openProjectModal } = useScroll();
 
   const handleClick = () => {
-    trackStartProjectClick(service || label);
     openProjectModal(service);
   };
 

@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useEffect, createContext, useContext, useState, useCallback } from "react";
+import { trackStartProjectClick } from "@/lib/analytics";
 
 interface ScrollContextType {
   getLenis: () => null;
@@ -69,6 +70,7 @@ export default function SmoothScrollProvider({ children }: { children: React.Rea
 
   const openProjectModal = useCallback((service?: string) => {
     if (service) setSelectedServiceForModal(service);
+    trackStartProjectClick(service || "General Project Inquiry");
     setIsProjectModalOpen(true);
   }, []);
 
