@@ -48,7 +48,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // 6. Canonical insight articles. Redirected legacy slugs stay out of the sitemap.
   const insightRoutes: MetadataRoute.Sitemap = INSIGHTS.filter(
-    (i) => i.slug !== "how-to-start-a-tiktok-shop",
+    (i) => ![
+      "how-to-start-a-tiktok-shop",
+      "shopify-store-setup-cost",
+    ].includes(i.slug),
   ).map((i) => ({
     url: `${baseUrl}/insights/${i.slug}`,
   }));
