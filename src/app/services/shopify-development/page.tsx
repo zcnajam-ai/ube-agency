@@ -16,9 +16,9 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Shopify Store Setup & Custom Theme Development",
+  title: "Shopify Store Setup Services & Pricing",
   description:
-    "End-to-end Shopify store setup and custom theme development. Custom Shopify Plus stores, dropshipping automation, 3PL inventory sync, and responsive checkout flows.",
+    "Shopify store setup services from $399, including theme configuration, product organization, payments, shipping, responsive design and custom development.",
   alternates: {
     canonical: "https://unifiedbrandingexperts.com/services/shopify-development",
   },
@@ -122,16 +122,20 @@ export default function ShopifyDevelopmentPage() {
       a: "A standard custom Shopify build typically takes 7 to 14 business days, depending on product catalog size, custom functionality requirements, and app integrations.",
     },
     {
+      q: "How much does Shopify store setup cost?",
+      a: "UBE Shopify and ecommerce setup packages start at $399. Larger catalogs, custom themes, migrations, third-party apps, subscriptions, copywriting, and private integrations can increase the total scope. We confirm all included work in a written proposal before development begins.",
+    },
+    {
       q: "Can you help set up automated dropshipping on Shopify?",
       a: "Yes. We configure automated supplier feeds (DSers, Zendrop, CJ Dropshipping, or private agents), automated order fulfillment, and real-time tracking number syncing.",
     },
     {
       q: "Will my Shopify store load quickly on mobile devices?",
-      a: "Yes. We build clean Shopify 2.0 themes without heavy code bloat, optimizing image formats (WebP) and minifying scripts to achieve sub-second load times and 90+ Lighthouse speed scores.",
+      a: "We build clean Shopify 2.0 themes, optimize responsive images, and limit unnecessary app code to support strong mobile performance. Final Core Web Vitals and Lighthouse results depend on the theme, installed apps, tracking scripts, catalog media, and hosting conditions.",
     },
     {
       q: "Can you migrate my existing store from WooCommerce or Etsy to Shopify?",
-      a: "Yes. We handle 100% of product data, customer accounts, past orders, and critical 301 URL redirects so you retain all your organic search engine rankings.",
+      a: "Yes. We can migrate product data, eligible customer and order records, and critical URL mappings. Careful 301 redirects support organic search continuity, but no migration provider can guarantee that every ranking will remain unchanged.",
     },
   ];
 
@@ -150,7 +154,7 @@ export default function ShopifyDevelopmentPage() {
     url: "https://unifiedbrandingexperts.com/services/shopify-development",
     offers: {
       "@type": "Offer",
-      price: "450.00",
+      price: "399.00",
       priceCurrency: "USD",
       url: "https://unifiedbrandingexperts.com/ecommerce-growth-packages",
     },
@@ -201,7 +205,7 @@ export default function ShopifyDevelopmentPage() {
           </div>
 
           <h1 className="font-display text-4xl sm:text-6xl font-bold tracking-tight text-[#161616] leading-tight">
-            Shopify Store Setup &amp; Custom Theme Development.
+            Shopify Store Setup Services &amp; Custom Theme Development
           </h1>
 
           <p className="text-base sm:text-lg text-[#585858] font-body leading-relaxed max-w-2xl">
@@ -231,12 +235,12 @@ export default function ShopifyDevelopmentPage() {
             </Link>
 
             <Link
-              href="/our-custom-web-design-development-packages"
+              href="/ecommerce-growth-packages"
               className="px-8 py-4 rounded-full border border-[#E0DDDB] bg-white hover:border-[#9F8BE7] text-sm font-display font-bold text-[#161616] transition-all flex items-center gap-2 shadow-xs"
             >
               <span>View eCom Packages</span>
               <span className="text-xs font-mono-num text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-full">
-                From $450
+                From $399
               </span>
               <ArrowUpRight className="w-4 h-4 text-[#9F8BE7]" />
             </Link>
@@ -407,12 +411,12 @@ export default function ShopifyDevelopmentPage() {
             Explore eCommerce Packages &amp; Pricing
           </h2>
           <p className="text-xs sm:text-sm text-[#585858] font-body">
-            Compare Custom Web &amp; eCommerce Basic ($450), Standard ($700), and Enterprise ($1,400) packages.
+            Compare eCommerce Launch ($399), Growth ($799), and Scale ($999) packages.
           </p>
         </div>
 
         <Link
-          href="/our-custom-web-design-development-packages"
+          href="/ecommerce-growth-packages"
           className="px-8 py-4 rounded-full bg-[#9F8BE7] text-[#161616] font-display font-bold text-sm hover:bg-[#b4a3f7] transition-all shadow-[0_4px_20px_rgba(159,139,231,0.35)] shrink-0 flex items-center gap-2"
         >
           <span>View eCom Packages</span>
@@ -465,7 +469,7 @@ export default function ShopifyDevelopmentPage() {
             Start Shopify Project
           </Link>
           <Link
-            href="/our-custom-web-design-development-packages"
+            href="/ecommerce-growth-packages"
             className="px-8 py-4 rounded-full border border-white/20 bg-white/5 hover:bg-white/10 text-white font-display font-bold text-sm transition-all"
           >
             Compare Package Pricing

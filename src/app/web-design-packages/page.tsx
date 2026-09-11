@@ -12,9 +12,9 @@ import {
 import ServiceProjectModalTrigger from "@/components/services/ServiceProjectModalTrigger";
 
 export const metadata: Metadata = {
-  title: "Web Design & Development Packages | Fixed Pricing & Plans",
+  title: "Small Business Web Design Packages & Pricing",
   description:
-    "Transparent Web Design & Development packages starting at $300. Compare responsive UI/UX Figma design, CMS & Next.js platforms, and bespoke web application plans.",
+    "Compare small business web design packages from $300, including responsive design, CMS options, on-page SEO, lead forms and custom development.",
   alternates: {
     canonical: "https://unifiedbrandingexperts.com/web-design-packages",
   },
@@ -80,6 +80,25 @@ export default function WebDesignPackagesPage() {
     },
   ];
 
+  const faqs = [
+    {
+      q: "How much does a small business website cost?",
+      a: "UBE's fixed-price website packages currently range from $300 for a three-page starter site to $1,200 for a larger custom business system. Your final cost depends on page count, CMS, integrations, copy, ecommerce requirements, and custom functionality.",
+    },
+    {
+      q: "What is included in a small business web design package?",
+      a: "Every package includes responsive design, lead-capture setup, basic on-page SEO, mobile optimization, and source-code ownership. Larger packages add a CMS, blog, animations, structured data, speed work, and custom integrations.",
+    },
+    {
+      q: "Are domain, hosting, maintenance, and third-party fees included?",
+      a: "Not unless they are listed in your proposal. Domain registration, hosting, premium plugins, paid APIs, ongoing maintenance, and third-party subscriptions are scoped separately so the project price remains transparent.",
+    },
+    {
+      q: "Which website package is best for a growing business?",
+      a: "The $649 Growth Website & CMS package is the usual fit when you need editable pages, a blog, analytics, schema, and speed optimization. Choose the Starter package for a smaller brochure site or Scale when integrations and application features are required.",
+    },
+  ];
+
   return (
     <div className="pt-32 pb-24 px-4 sm:px-6 md:px-12 max-w-7xl mx-auto space-y-20">
       {/* 1. Header Section */}
@@ -96,6 +115,22 @@ export default function WebDesignPackagesPage() {
         <p className="text-sm sm:text-base text-[#585858] font-body leading-relaxed max-w-2xl mx-auto">
           Choose a web engineering package engineered for speed, conversion, and long-term scalability. Every plan includes 100% full source code ownership with zero hidden fees.
         </p>
+      </section>
+
+      {/* Direct pricing answer based on Search Console demand */}
+      <section className="p-8 sm:p-10 rounded-3xl bg-white border border-[#E0DDDB] shadow-xs space-y-4">
+        <span className="text-xs font-mono-num text-[#9F8BE7] font-bold uppercase tracking-wider block">
+          SMALL BUSINESS WEBSITE COST
+        </span>
+        <h2 className="font-display text-2xl sm:text-3xl font-bold text-[#161616]">
+          How Much Does a Small Business Website Cost?
+        </h2>
+        <p className="text-sm sm:text-base text-[#585858] font-body leading-relaxed max-w-4xl">
+          A small business website with UBE starts at $300 for a focused three-page site. An editable CMS website starts at $649, while a custom business platform starts at $1,200. The right budget depends on content, page count, integrations, ecommerce, and ongoing support—not just the visual design.
+        </p>
+        <Link href="/insights/how-much-does-a-small-business-website-cost" className="inline-flex text-sm font-semibold text-[#6B46C1] underline underline-offset-4">
+          Read the complete small business website cost guide
+        </Link>
       </section>
 
       {/* 2. Package Cards Grid */}
@@ -206,7 +241,23 @@ export default function WebDesignPackagesPage() {
         </div>
       </section>
 
-      {/* 4. Bottom Conversion Banner */}
+      {/* 4. Pricing FAQs */}
+      <section className="space-y-8">
+        <div className="max-w-2xl space-y-2">
+          <span className="text-xs font-mono-num text-[#9F8BE7] font-bold uppercase tracking-wider block">PACKAGE QUESTIONS</span>
+          <h2 className="font-display text-3xl sm:text-4xl font-bold text-[#161616]">Website Pricing FAQs</h2>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          {faqs.map((faq) => (
+            <article key={faq.q} className="p-6 rounded-3xl bg-white border border-[#E0DDDB] space-y-2 shadow-xs">
+              <h3 className="font-display text-base font-bold text-[#161616]">{faq.q}</h3>
+              <p className="text-xs sm:text-sm text-[#585858] leading-relaxed">{faq.a}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      {/* 5. Bottom Conversion Banner */}
       <section className="p-8 sm:p-12 rounded-3xl bg-[#161616] text-white text-center space-y-6 shadow-xl">
         <h2 className="font-display text-3xl sm:text-4xl font-bold tracking-tight">
           Ready to Start Your Website Project?
