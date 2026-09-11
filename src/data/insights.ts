@@ -432,30 +432,32 @@ export const INSIGHTS: InsightArticle[] = [
   {
     id: "insight-how-to-optimize-for-google-ai-overviews",
     slug: "how-to-optimize-for-google-ai-overviews",
-    title: "How to Optimize for Google AI Overviews: 10 Steps for 2026",
-    h1: "How to Optimize Your Website for Google AI Overviews in 2026",
+    title: "How to Optimize for Google AI Overviews: 10-Step Guide",
+    h1: "How to Optimize for Google AI Overviews in 2026",
+    disableFaqSchema: true,
     kicker: "Google AI Search Guide",
     category: "AI Search & Discovery",
     readTime: "11 min read",
     publishedAt: "August 2026",
-    updatedAt: "August 2026",
+    updatedAt: "September 2026",
     author: {
       name: "Unified Branding Experts Editorial Team",
       role: "AI Search & Web Engineering Group",
       avatar: "/images/logo/ube-png-black.png",
     },
     summary:
-      "Learn 10 practical ways to improve your website's eligibility and visibility in Google AI Overviews and AI Mode using Google's current search guidance.",
+      "Learn how to optimize for Google AI Overviews with a practical 10-step strategy based on Google Search Central guidance and current Search Console demand.",
     coverImage: "/images/insights/how-to-optimize-for-google-ai-overviews-2026.webp",
     coverAlt: "How to optimize your website for Google AI Overviews in 2026",
     primaryIntent: "how to optimize for Google AI Overviews",
     quickAnswer:
-      "Optimizing for Google AI Overviews and AI Mode relies on established SEO foundations: ensuring pages are indexed and eligible for snippets, satisfying real search intent, structuring content with direct self-contained answers, building topical depth through query fan-out coverage, and verifying entity data. Google explicitly states there are no special AI markup tags or secret algorithms — eligibility is built through standard technical SEO and helpful, authoritative content.",
+      "To optimize for Google AI Overviews, make every important page crawlable, indexed and eligible for a search snippet; answer the query directly; support claims with first-party evidence and trustworthy sources; connect related subtopics with descriptive internal links; and keep structured data consistent with visible content. Google does not require special AI markup.",
     tableOfContents: [
       { id: "what-are-google-ai-overviews", title: "What Are Google AI Overviews & AI Mode?" },
       { id: "how-google-finds-sources-for-ai-search", title: "How Does Google Find Sources for AI Search?" },
       { id: "can-you-optimize-specifically", title: "Can You Optimize Specifically for Google AI Overviews?" },
-      { id: "10-ways-to-improve-visibility", title: "10 Ways to Improve Visibility in Google AI Overviews" },
+      { id: "search-console-demand", title: "What Are People Searching About AI Overviews?" },
+      { id: "10-ways-to-improve-visibility", title: "How to Optimize for AI Overviews: 10-Step Strategy" },
       { id: "what-google-says-you-dont-need", title: "What Google Says You DON'T Need (Debunking AI SEO Hacks)" },
       { id: "ai-overviews-vs-traditional-search", title: "AI Overviews vs. Traditional Search & Measurement" },
       { id: "google-ai-overview-checklist", title: "Actionable 2026 Google AI Overview Checklist" },
@@ -505,8 +507,22 @@ export const INSIGHTS: InsightArticle[] = [
         }
       },
       {
+        id: "search-console-demand",
+        h2: "What Are People Searching About AI Overviews?",
+        body: [
+          "Search demand is strongly action-oriented. In Unified Branding Experts' Search Console data for June 11 through September 8, 2026, related searches included <em>'how to optimize for AI Overviews,' 'optimize for AI Overviews,' 'strategies to appear in Google AI Overviews,' 'optimizing for AI Overviews,'</em> and <em>'Google AI Overviews SEO.'</em>",
+          "Those query variations produced more than 600 combined impressions but no clicks, with many average positions between roughly 50 and 85. That gap is why this guide now leads with a concise answer, uses headings that match the questions searchers actually ask, and separates documented Google requirements from unproven tactics.",
+          "<strong>How do you get a brand mentioned in Google AI Overviews?</strong><br>There is no submission form or guaranteed placement. Build pages that are eligible for Search, answer specific questions clearly, demonstrate relevant experience, cite reliable evidence, maintain consistent organization and author information, and earn independent mentions that corroborate the brand's expertise."
+        ],
+        callout: {
+          title: "Method Note",
+          text: "The query observations above come from this site's Google Search Console property. Impressions show demand and visibility, not guaranteed ranking progress or AI Overview inclusion.",
+          type: "info"
+        }
+      },
+      {
         id: "10-ways-to-improve-visibility",
-        h2: "10 Ways to Improve Visibility in Google AI Overviews",
+        h2: "How to Optimize for AI Overviews: 10-Step Strategy",
         body: [
           "Follow these ten practical steps based on Google Search Central guidance to strengthen your website's eligibility for Google AI Overviews and AI Mode:",
           "<strong>1. Make Sure Google Can Crawl and Index the Page:</strong> Start with basic technical SEO. A page cannot become a useful Google Search source if Google cannot properly access or index it. Important pages should return HTTP 200, be accessible to Googlebot, contain indexable content, use appropriate canonical URLs, avoid accidental noindex directives, be discoverable through internal links, and be included appropriately in XML sitemaps.",
@@ -602,6 +618,10 @@ export const INSIGHTS: InsightArticle[] = [
       {
         q: "Can I track AI Overview impressions?",
         a: "Google has introduced a dedicated Generative AI performance report in Search Console for eligible properties. The rollout is progressive, so the report may not yet be available for every website."
+      },
+      {
+        q: "What are the best strategies to appear in Google AI Overviews?",
+        a: "Start with crawlability, indexability and snippet eligibility; answer the search intent directly; add verifiable evidence; cover related subtopics; use descriptive internal links; keep structured data accurate; and improve authority through legitimate third-party mentions. None of these steps guarantees inclusion."
       }
     ],
     relatedSlugs: [
