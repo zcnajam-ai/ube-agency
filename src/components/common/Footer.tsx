@@ -223,6 +223,7 @@ export default function Footer() {
               <a
                 href={`tel:${COMPANY_INFO.phoneRaw}`}
                 onClick={() => trackPhoneClick("footer")}
+                data-analytics-handled="true"
                 className="flex items-center gap-2.5 p-2.5 rounded-2xl bg-white/5 border border-white/10 hover:border-[#9F8BE7] transition-all text-white"
               >
                 <Phone className="w-4 h-4 text-[#9F8BE7] shrink-0" />
@@ -232,6 +233,7 @@ export default function Footer() {
               <a
                 href={`mailto:${COMPANY_INFO.email}`}
                 onClick={() => trackEmailClick("footer")}
+                data-analytics-handled="true"
                 className="flex items-center gap-2.5 p-2.5 rounded-2xl bg-white/5 border border-white/10 hover:border-[#9F8BE7] transition-all text-white min-w-0"
               >
                 <Mail className="w-4 h-4 text-[#9F8BE7] shrink-0" />

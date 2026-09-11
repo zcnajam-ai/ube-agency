@@ -559,6 +559,7 @@ export default function Navbar() {
             <a
               href={`tel:${COMPANY_INFO.phoneRaw}`}
               onClick={() => trackPhoneClick("header")}
+              data-analytics-handled="true"
               className="hidden md:flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#FAF7F6] border border-[#E0DDDB] hover:border-[#9F8BE7] text-xs font-mono-num text-[#161616] transition-all shadow-xs"
             >
               <Phone className="w-3.5 h-3.5 text-[#9F8BE7]" />

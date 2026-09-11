@@ -9,7 +9,7 @@ export const META_PIXEL_ID = process.env.NEXT_PUBLIC_META_PIXEL_ID || "";
 
 declare global {
   interface Window {
-    gtag?: (...args: unknown[]) => void;
+    dataLayer?: unknown[];
     fbq?: (...args: unknown[]) => void;
   }
 }
@@ -21,10 +21,10 @@ export function trackEvent(eventName: string, params: Record<string, unknown> = 
   try {
     if (typeof window === "undefined") return;
 
-    // 1. Google Analytics 4 & Google Ads (gtag.js)
-    if (typeof window.gtag === "function") {
-      window.gtag("event", eventName, params);
-    }
+    // 1. Queue a named custom event for Google Tag Manager. A GTM Custom Event
+    // trigger forwards these events to the linked GA4 property.
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({ event: eventName, ...params });
 
     // 2. Meta Pixel (fbq)
     if (typeof window.fbq === "function") {
@@ -60,12 +60,12 @@ export function trackLeadSubmit(data: {
 }
 
 /**
- * 2. PHONE CLICK -> phone_click
+ * 2. PHONE CLICK -> click_to_call
  * Safe parameters only (source_page, cta_location, link_type: "phone").
  * NO PII (phone_number) sent to analytics.
  */
 export function trackPhoneClick(ctaLocation: string = "header") {
-  trackEvent("phone_click", {
+  trackEvent("click_to_call", {
     cta_location: ctaLocation,
     link_type: "phone",
     source_page: typeof window !== "undefined" ? window.location.pathname : "/",
@@ -73,12 +73,12 @@ export function trackPhoneClick(ctaLocation: string = "header") {
 }
 
 /**
- * 3. EMAIL CLICK -> email_click
+ * 3. EMAIL CLICK -> click_email
  * Safe parameters only (source_page, cta_location, link_type: "email").
  * NO PII (email_address) sent to analytics.
  */
 export function trackEmailClick(ctaLocation: string = "header") {
-  trackEvent("email_click", {
+  trackEvent("click_email", {
     cta_location: ctaLocation,
     link_type: "email",
     source_page: typeof window !== "undefined" ? window.location.pathname : "/",
@@ -86,20 +86,20 @@ export function trackEmailClick(ctaLocation: string = "header") {
 }
 
 /**
- * 4. START PROJECT CTA -> start_project_click
+ * 4. START PROJECT CTA -> open_lead_form
  */
 export function trackStartProjectClick(source: string = "Hero CTA") {
-  trackEvent("start_project_click", {
+  trackEvent("open_lead_form", {
     cta_source: source,
     source_page: typeof window !== "undefined" ? window.location.pathname : "/",
   });
 }
 
 /**
- * 5. PACKAGE CTA -> package_inquiry_click
+ * 5. PACKAGE CTA -> select_package
  */
 export function trackPackageInquiryClick(packageName: string, startingPrice?: string) {
-  trackEvent("package_inquiry_click", {
+  trackEvent("select_package", {
     package_name: packageName,
     starting_price: startingPrice || "Custom",
     source_page: typeof window !== "undefined" ? window.location.pathname : "/",

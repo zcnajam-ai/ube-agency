@@ -8,6 +8,7 @@ import ClientProjectModal from "@/components/common/ClientProjectModal";
 import SchemaOrg from "@/components/seo/SchemaOrg";
 import ConciergeProvider from "@/components/concierge/ConciergeProvider";
 import AnalyticsScripts from "@/components/analytics/AnalyticsScripts";
+import AnalyticsEventBridge from "@/components/analytics/AnalyticsEventBridge";
 import { COMPANY_INFO } from "@/data/company";
 
 const funnelDisplay = Funnel_Display({
@@ -144,6 +145,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         {/* End Google Tag Manager (noscript) */}
         {/* GA4, Google Ads, and Meta Pixel Analytics Scripts */}
         <AnalyticsScripts />
+        <AnalyticsEventBridge />
 
         {/* Organization & WebSite JSON-LD Schema */}
         <SchemaOrg />

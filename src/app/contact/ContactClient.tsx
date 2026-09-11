@@ -134,6 +134,7 @@ export default function ContactClient() {
             <a
               href={`tel:${COMPANY_INFO.phoneRaw}`}
               onClick={() => trackPhoneClick("contact_card")}
+              data-analytics-handled="true"
               className="flex items-center gap-3 p-4 rounded-2xl bg-[#FAF7F6] border border-[#E0DDDB] hover:border-[#9F8BE7] transition-all text-[#161616]"
             >
               <div className="w-9 h-9 rounded-xl bg-[#9F8BE7]/20 flex items-center justify-center text-[#161616] font-bold">
@@ -148,6 +149,7 @@ export default function ContactClient() {
             <a
               href={`mailto:${COMPANY_INFO.email}`}
               onClick={() => trackEmailClick("contact_card")}
+              data-analytics-handled="true"
               className="flex items-center gap-3 p-4 rounded-2xl bg-[#FAF7F6] border border-[#E0DDDB] hover:border-[#9F8BE7] transition-all text-[#161616]"
             >
               <div className="w-9 h-9 rounded-xl bg-[#9F8BE7]/20 flex items-center justify-center text-[#161616] font-bold">
