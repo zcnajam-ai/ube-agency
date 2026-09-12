@@ -50,6 +50,15 @@
     word-break: break-word;
   }
 
+  /* Allow content columns and long headings to shrink within mobile cards. */
+  main :where(.grid, .flex) > :where(div, section, article, header) {
+    min-width: 0;
+  }
+
+  main :where(h1, h2, h3, p, li) {
+    overflow-wrap: anywhere;
+  }
+
   /* Responsive Media Controls */
   img, video, svg, canvas {
     max-width: 100%;

@@ -81,7 +81,7 @@ export default function Hero() {
 
               <Link
                 href="/packages"
-                className="px-6 py-3.5 rounded-full border border-[#E0DDDB] bg-white hover:border-[#9F8BE7] text-xs sm:text-sm font-display font-bold text-[#161616] transition-all flex items-center justify-center gap-2 shadow-xs w-full sm:w-auto min-h-[48px] whitespace-nowrap"
+                className="px-6 py-3.5 rounded-full border border-[#E0DDDB] bg-white hover:border-[#9F8BE7] text-xs sm:text-sm font-display font-bold text-[#161616] transition-all flex items-center justify-center gap-2 shadow-xs w-full sm:w-auto min-h-[48px] whitespace-normal text-center"
               >
                 <span>Explore All Packages ($299+)</span>
                 <ArrowUpRight className="w-4 h-4 text-[#9F8BE7] shrink-0" />
