@@ -170,13 +170,13 @@ export default function MobileAppServicePage() {
           </div>
         </div>
 
-        {/* HERO VISUAL (Approved Mobile App Asset) */}
+        {/* App development visual */}
         <div className="lg:col-span-5 relative group">
           <div className="relative rounded-3xl overflow-hidden border border-[#E0DDDB] bg-white p-3 shadow-xl">
             <div className="relative h-[380px] sm:h-[440px] w-full rounded-2xl overflow-hidden bg-[#FAF7F6]">
               <Image
-                src="/images/official/mobile-app/mobile-app-showcase.png"
-                alt="iOS and Android mobile application interface development by Unified Branding Experts"
+                src="/images/editorial/mobile-app-development.webp"
+                alt="Mobile app interface shown in light and dark modes on two smartphones"
                 fill
                 priority
                 className="object-cover object-center group-hover:scale-[1.03] transition-transform duration-500"

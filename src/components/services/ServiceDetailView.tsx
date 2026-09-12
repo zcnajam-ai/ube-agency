@@ -15,7 +15,7 @@ const SERVICE_PACKAGE_MAP: Record<
     packageUrl: "/mobile-app-packages",
     packageText: "Explore 5 Mobile App Packages",
     starting: "From $999 (MVP)",
-    heroImage: "/images/official/mobile-app/mobile-app-showcase.png",
+    heroImage: "/images/editorial/mobile-app-development.webp",
   },
   ecommerce: {
     packageUrl: "/packages",
@@ -24,16 +24,16 @@ const SERVICE_PACKAGE_MAP: Record<
     heroImage: "/images/official/ecommerce/storefront-setup.jpeg",
   },
   "web-design-development": {
-    packageUrl: "/branding-packages",
-    packageText: "Explore Brand & Web Systems",
-    starting: "From $299",
-    heroImage: "/images/official/branding/brand-identity.jpeg",
+    packageUrl: "/web-design-packages",
+    packageText: "Explore Web Design Packages",
+    starting: "From $300",
+    heroImage: "/images/editorial/responsive-web-design.webp",
   },
   "social-media-management": {
     packageUrl: "/tiktok-marketing-packages",
     packageText: "Explore Video Marketing Plans",
     starting: "From $299/mo",
-    heroImage: "/images/official/tiktok/tiktok-growth.jpeg",
+    heroImage: "/images/editorial/social-content-planning.webp",
   },
 };
 

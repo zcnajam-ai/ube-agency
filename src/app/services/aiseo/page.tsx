@@ -284,8 +284,8 @@ export default function AiSeoServicePage() {
         <div className="lg:col-span-5">
           <div className="relative aspect-[4/3] w-full rounded-3xl overflow-hidden bg-white border border-[#E0DDDB] shadow-md group">
             <Image
-              src="/images/official/aiseo/google-search-aiseo-hub.png"
-              alt="Unified Branding Experts AI SEO Discovery and generative search intelligence on Google"
+              src="/images/editorial/ai-search-content-strategy.webp"
+              alt="Search strategist reviewing answer-oriented content and topic relationships"
               fill
               priority
               sizes="(max-width: 1024px) 100vw, 45vw"
