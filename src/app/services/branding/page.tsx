@@ -16,14 +16,14 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Branding Services & Brand Identity",
+  title: "Branding Agency Services: Strategy, Logo & Identity",
   description:
-    "Custom logo design, brand strategy, visual identity systems, brand guidelines, and rebranding. Built to make your business recognizable, memorable, and trusted.",
+    "Work with Unified Branding Experts on custom logo design, brand strategy, visual identity, guidelines and rebranding. Explore real project examples and packages from $299.",
   alternates: {
     canonical: "https://unifiedbrandingexperts.com/services/branding",
   },
   openGraph: {
-    title: "Branding Services & Brand Identity | Unified Branding Experts",
+    title: "Branding Agency Services | Unified Branding Experts",
     description:
       "Custom logo design, brand strategy, visual identity systems, and brand guidelines.",
     url: "https://unifiedbrandingexperts.com/services/branding",
@@ -202,7 +202,7 @@ export default function BrandingServicePage() {
           </div>
 
           <h1 className="font-display text-4xl sm:text-6xl font-bold tracking-tight text-[#161616] leading-tight">
-            Branding Services &amp; Visual Identity Engineering
+            Branding Services, Logo Design &amp; Visual Identity
           </h1>
 
           <p className="text-base sm:text-lg text-[#585858] font-body leading-relaxed max-w-2xl">
@@ -452,6 +452,26 @@ export default function BrandingServicePage() {
               </div>
             </div>
           ))}
+        </div>
+      </section>
+
+      <section className="rounded-3xl border border-[#E0DDDB] bg-[#FAF7F6] p-8 sm:p-12 space-y-5" aria-label="Branding portfolio examples">
+        <div className="space-y-2 max-w-3xl">
+          <span className="text-xs font-mono-num text-[#9F8BE7] font-bold uppercase tracking-wider">SELECTED BRAND IDENTITY WORK</span>
+          <h2 className="font-display text-3xl sm:text-4xl font-bold text-[#161616]">See how our branding work takes shape</h2>
+          <p className="text-sm sm:text-base text-[#585858] leading-relaxed">Review published project examples before choosing a package. The case studies show the actual visual systems and applications; they are not claims of guaranteed sales or search rankings.</p>
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <Link href="/work/fixoria-studio-brand-identity-system" className="rounded-2xl bg-white border border-[#E0DDDB] hover:border-[#9F8BE7] p-5 space-y-2 transition-colors">
+            <h3 className="font-display font-bold text-lg text-[#161616]">Fixoria Studio identity system</h3>
+            <p className="text-xs sm:text-sm text-[#585858]">Geometric logo, color and typography, stationery, signage and merchandise applications.</p>
+            <span className="inline-flex items-center gap-1 text-xs font-bold text-[#6B46C1]">View the brand case study <ArrowUpRight className="w-4 h-4" /></span>
+          </Link>
+          <Link href="/work/everhome-real-estate-brand-system" className="rounded-2xl bg-white border border-[#E0DDDB] hover:border-[#9F8BE7] p-5 space-y-2 transition-colors">
+            <h3 className="font-display font-bold text-lg text-[#161616]">Everhome real estate brand system</h3>
+            <p className="text-xs sm:text-sm text-[#585858]">Logo system, brand palette, typography and print and digital applications.</p>
+            <span className="inline-flex items-center gap-1 text-xs font-bold text-[#6B46C1]">View the brand case study <ArrowUpRight className="w-4 h-4" /></span>
+          </Link>
         </div>
       </section>
 
