@@ -2,7 +2,6 @@
 
 import React, { useRef, useEffect } from "react";
 import { ArrowUpRight } from "lucide-react";
-import { gsap } from "gsap";
 
 interface MagneticButtonProps {
   children: React.ReactNode;
@@ -39,14 +38,9 @@ export default function MagneticButton({
     const arrow = arrowRef.current;
     if (!button) return;
 
-    const xTo = gsap.quickTo(button, "x", { duration: 0.35, ease: "power2.out" });
-    const yTo = gsap.quickTo(button, "y", { duration: 0.35, ease: "power2.out" });
-
-    const textXTo = text ? gsap.quickTo(text, "x", { duration: 0.25, ease: "power2.out" }) : null;
-    const textYTo = text ? gsap.quickTo(text, "y", { duration: 0.25, ease: "power2.out" }) : null;
-
-    const arrowXTo = arrow ? gsap.quickTo(arrow, "x", { duration: 0.25, ease: "power2.out" }) : null;
-    const arrowYTo = arrow ? gsap.quickTo(arrow, "y", { duration: 0.25, ease: "power2.out" }) : null;
+    button.style.transition = "transform 0.25s cubic-bezier(0.25, 1, 0.5, 1)";
+    if (text) text.style.transition = "transform 0.25s cubic-bezier(0.25, 1, 0.5, 1)";
+    if (arrow) arrow.style.transition = "transform 0.25s cubic-bezier(0.25, 1, 0.5, 1)";
 
     const handleMouseMove = (e: MouseEvent) => {
       const rect = button.getBoundingClientRect();
@@ -55,32 +49,15 @@ export default function MagneticButton({
       const distanceX = e.clientX - centerX;
       const distanceY = e.clientY - centerY;
 
-      // Subtle magnetic pull
-      xTo(distanceX * 0.18);
-      yTo(distanceY * 0.18);
-
-      if (textXTo && textYTo) {
-        textXTo(distanceX * 0.08);
-        textYTo(distanceY * 0.08);
-      }
-
-      if (arrowXTo && arrowYTo) {
-        arrowXTo(distanceX * 0.12 + 2);
-        arrowYTo(distanceY * 0.12 - 2);
-      }
+      button.style.transform = `translate3d(${distanceX * 0.18}px, ${distanceY * 0.18}px, 0)`;
+      if (text) text.style.transform = `translate3d(${distanceX * 0.08}px, ${distanceY * 0.08}px, 0)`;
+      if (arrow) arrow.style.transform = `translate3d(${distanceX * 0.12 + 2}px, ${distanceY * 0.12 - 2}px, 0)`;
     };
 
     const handleMouseLeave = () => {
-      xTo(0);
-      yTo(0);
-      if (textXTo && textYTo) {
-        textXTo(0);
-        textYTo(0);
-      }
-      if (arrowXTo && arrowYTo) {
-        arrowXTo(0);
-        arrowYTo(0);
-      }
+      button.style.transform = "translate3d(0, 0, 0)";
+      if (text) text.style.transform = "translate3d(0, 0, 0)";
+      if (arrow) arrow.style.transform = "translate3d(0, 0, 0)";
     };
 
     button.addEventListener("mousemove", handleMouseMove);

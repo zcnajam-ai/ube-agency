@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import { gsap } from "gsap";
 
 interface PointerTarget {
   ref: React.RefObject<HTMLElement | null>;
@@ -29,18 +28,10 @@ export function usePointerParallax(
     isEnabledRef.current = true;
     const container = containerRef.current || document.body;
 
-    // Create gsap quickTo functions for each target
-    const quickSetters = targets.map((t) => {
-      const el = t.ref.current;
-      if (!el) return null;
-
-      const xTo = gsap.quickTo(el, "x", { duration: 0.6, ease: "power2.out" });
-      const yTo = gsap.quickTo(el, "y", { duration: 0.6, ease: "power2.out" });
-      const rTo = t.rotate
-        ? gsap.quickTo(el, "rotation", { duration: 0.8, ease: "power2.out" })
-        : null;
-
-      return { xTo, yTo, rTo, depth: t.depth ?? 15, rotate: t.rotate };
+    targets.forEach((t) => {
+      if (t.ref.current) {
+        t.ref.current.style.transition = "transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1)";
+      }
     });
 
     const handleMouseMove = (e: MouseEvent) => {
@@ -54,28 +45,25 @@ export function usePointerParallax(
       const normX = (e.clientX - centerX) / (rect.width / 2);
       const normY = (e.clientY - centerY) / (rect.height / 2);
 
-      quickSetters.forEach((setter) => {
-        if (!setter) return;
-        const targetX = normX * setter.depth;
-        const targetY = normY * setter.depth;
-
-        setter.xTo(targetX);
-        setter.yTo(targetY);
-
-        if (setter.rTo) {
-          setter.rTo(normX * 4);
-        }
+      targets.forEach((t) => {
+        const el = t.ref.current;
+        if (!el) return;
+        const depth = t.depth ?? 15;
+        const targetX = normX * depth;
+        const targetY = normY * depth;
+        const rot = t.rotate ? normX * 4 : 0;
+        el.style.transform = `translate3d(${targetX}px, ${targetY}px, 0) rotate(${rot}deg)`;
       });
     };
 
     const handleMouseLeave = () => {
       if (!isEnabledRef.current) return;
 
-      quickSetters.forEach((setter) => {
-        if (!setter) return;
-        setter.xTo(0);
-        setter.yTo(0);
-        if (setter.rTo) setter.rTo(0);
+      targets.forEach((t) => {
+        const el = t.ref.current;
+        if (el) {
+          el.style.transform = "translate3d(0, 0, 0) rotate(0deg)";
+        }
       });
     };
 

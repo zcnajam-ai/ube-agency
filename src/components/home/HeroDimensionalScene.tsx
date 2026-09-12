@@ -2,7 +2,6 @@
 
 import React, { useRef, useEffect } from "react";
 import { TrendingUp, Zap } from "lucide-react";
-import { gsap } from "gsap";
 import { usePointerParallax } from "@/hooks/usePointerParallax";
 
 export default function HeroDimensionalScene() {
@@ -28,45 +27,51 @@ export default function HeroDimensionalScene() {
     const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     const isMobile = window.innerWidth < 768;
 
-    if (prefersReducedMotion) return;
+    if (prefersReducedMotion || isMobile) return;
 
-    const ctx = gsap.context(() => {
-      // Entrance Timeline
-      const tl = gsap.timeline({ defaults: { ease: "power3.out" } });
+    let ctx: { revert: () => void } | null = null;
 
-      tl.fromTo(
-        objGlassOrbRef.current,
-        { scale: 0.4, opacity: 0, y: 40, rotation: -20 },
-        { scale: 1, opacity: 1, y: 0, rotation: 0, duration: 1.2 },
-        0.1
-      )
-        .fromTo(
-          objPurplePillRef.current,
-          { scale: 0.5, opacity: 0, x: 30, rotation: 15 },
-          { scale: 1, opacity: 1, x: 0, rotation: 0, duration: 1.1 },
-          0.2
-        )
-        .fromTo(
-          objChromeRingRef.current,
-          { scale: 0.3, opacity: 0, rotation: -45 },
-          { scale: 1, opacity: 1, rotation: 0, duration: 1.3 },
-          0.15
-        )
-        .fromTo(
-          objBadgeRef.current,
-          { y: 30, opacity: 0, scale: 0.9 },
-          { y: 0, opacity: 1, scale: 1, duration: 1.0 },
-          0.3
-        )
-        .fromTo(
-          objUbeMarkRef.current,
-          { scale: 0.6, opacity: 0, rotation: 30 },
-          { scale: 1, opacity: 0.9, rotation: 0, duration: 1.2 },
-          0.25
-        );
-    }, sceneRef);
+    import("gsap").then(({ gsap }) => {
+      ctx = gsap.context(() => {
+        // Entrance Timeline
+        const tl = gsap.timeline({ defaults: { ease: "power3.out" } });
 
-    return () => ctx.revert();
+        tl.fromTo(
+          objGlassOrbRef.current,
+          { scale: 0.4, opacity: 0, y: 40, rotation: -20 },
+          { scale: 1, opacity: 1, y: 0, rotation: 0, duration: 1.2 },
+          0.1
+        )
+          .fromTo(
+            objPurplePillRef.current,
+            { scale: 0.5, opacity: 0, x: 30, rotation: 15 },
+            { scale: 1, opacity: 1, x: 0, rotation: 0, duration: 1.1 },
+            0.2
+          )
+          .fromTo(
+            objChromeRingRef.current,
+            { scale: 0.3, opacity: 0, rotation: -45 },
+            { scale: 1, opacity: 1, rotation: 0, duration: 1.3 },
+            0.15
+          )
+          .fromTo(
+            objBadgeRef.current,
+            { y: 30, opacity: 0, scale: 0.9 },
+            { y: 0, opacity: 1, scale: 1, duration: 1.0 },
+            0.3
+          )
+          .fromTo(
+            objUbeMarkRef.current,
+            { scale: 0.6, opacity: 0, rotation: 30 },
+            { scale: 1, opacity: 0.9, rotation: 0, duration: 1.2 },
+            0.25
+          );
+      }, sceneRef);
+    });
+
+    return () => {
+      if (ctx) ctx.revert();
+    };
   }, []);
 
   return (

@@ -2,7 +2,6 @@
 
 import React, { useRef, useEffect } from "react";
 import Image from "next/image";
-import { gsap } from "gsap";
 
 interface CursorImagePreviewProps {
   activeImage: string | null;
@@ -32,26 +31,19 @@ export default function CursorImagePreview({
     const el = containerRef.current;
     if (!el) return;
 
-    // Follow pointer with smooth lag
-    const xTo = gsap.quickTo(el, "x", { duration: 0.45, ease: "power2.out" });
-    const yTo = gsap.quickTo(el, "y", { duration: 0.45, ease: "power2.out" });
-    const rTo = gsap.quickTo(el, "rotation", { duration: 0.6, ease: "power2.out" });
+    el.style.transition = "transform 0.15s ease-out";
 
     let lastX = 0;
 
     const handleMouseMove = (e: MouseEvent) => {
-      if (!isEnabledRef.current) return;
+      if (!isEnabledRef.current || !containerRef.current) return;
 
       const deltaX = e.clientX - lastX;
       lastX = e.clientX;
 
-      // Position offset near cursor
-      xTo(e.clientX + 30);
-      yTo(e.clientY - 120);
-
       // Subtle dynamic rotation based on horizontal movement
       const rot = Math.max(-8, Math.min(8, deltaX * 0.4));
-      rTo(rot);
+      containerRef.current.style.transform = `translate3d(${e.clientX + 30}px, ${e.clientY - 120}px, 0) rotate(${rot}deg)`;
     };
 
     window.addEventListener("mousemove", handleMouseMove);
