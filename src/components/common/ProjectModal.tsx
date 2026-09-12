@@ -3,7 +3,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { createPortal } from "react-dom";
 import { X, CheckCircle2, Send, Sparkles, Phone, Mail } from "lucide-react";
-import confetti from "canvas-confetti";
 import { COMPANY_INFO } from "@/data/company";
 import { useScroll } from "@/components/providers/SmoothScrollProvider";
 import { trackLeadSubmit, trackPhoneClick, trackEmailClick } from "@/lib/analytics";
@@ -134,6 +133,7 @@ export default function ProjectModal() {
       });
 
       try {
+        const confetti = (await import("canvas-confetti")).default;
         confetti({
           particleCount: 80,
           spread: 70,

@@ -54,6 +54,7 @@ const nextConfig: NextConfig = {
   },
   experimental: {
     cpus: 2,
+    optimizePackageImports: ["lucide-react"],
   },
   async headers() {
     return [
