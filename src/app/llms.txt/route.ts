@@ -7,6 +7,9 @@ export async function GET() {
 
 ## Services
 
+- [eCommerce Store Management](https://unifiedbrandingexperts.com/services/ecommerce-store-management): Ongoing catalog updates, inventory checks, order monitoring and reporting.
+- [Store Management Packages](https://unifiedbrandingexperts.com/ecommerce-store-management-packages): Essentials $249/month, Growth $499/month and Scale $899/month. Annual billing saves two months’ fees.
+
 - [Branding Services](https://unifiedbrandingexperts.com/services/branding): Custom visual identity systems, vector logos, typography, and brand style guides.
 - [Website Design & Development](https://unifiedbrandingexperts.com/services/web-design-development): Bespoke Next.js and React web applications engineered for speed and conversion.
 - [eCommerce Development](https://unifiedbrandingexperts.com/services/ecommerce): High-conversion online store architecture, custom cart UX, and catalog management.

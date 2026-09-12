@@ -1,4 +1,5 @@
 import React from "react";
+import StoreManagementLink from "@/components/services/StoreManagementLink";
 import Link from "next/link";
 import { Metadata } from "next";
 import {
@@ -679,6 +680,7 @@ export default function EcommercePackagesPage() {
           </Link>
         </div>
       </section>
+      <StoreManagementLink />
     </main>
   );
 }

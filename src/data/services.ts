@@ -42,6 +42,17 @@ export const SERVICE_PILLARS: ServicePillar[] = [
     ],
     subServices: [
       {
+        id: "ecommerce-store-management",
+        slug: "ecommerce-store-management",
+        title: "eCommerce Store Management",
+        shortTitle: "Store Management",
+        kicker: "Ongoing Store Operations",
+        summary: "Product updates, inventory checks, order monitoring, merchandising and reporting for existing stores. Monthly plans from $249 with discounted annual billing.",
+        deliverables: ["Catalog & Listing Updates", "Inventory & Order Monitoring", "Scheduled Promotion Updates", "Monthly Activity Reports"],
+        technologies: ["Shopify", "WooCommerce", "Amazon", "Etsy", "eBay", "TikTok Shop"],
+        deliverableScope: "Monthly Store Management Retainer",
+      },
+      {
         id: "ecommerce-store-setup",
         slug: "ecommerce",
         title: "eCommerce Growth & Marketplace Services",

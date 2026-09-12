@@ -69,6 +69,7 @@ export default function ProjectModal() {
   if (!isProjectModalOpen || !mounted) return null;
 
   const servicesList = [
+    "eCommerce Store Management",
     "eCommerce Store Setup",
     "Website Design & Dev",
     "Mobile App Development",

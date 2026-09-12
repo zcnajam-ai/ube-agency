@@ -132,6 +132,13 @@ export default function Navbar() {
                         </span>
                         <div className="space-y-1.5">
                           <Link
+                            href="/services/ecommerce-store-management"
+                            onClick={() => setServicesOpen(false)}
+                            className="p-2 rounded-xl hover:bg-[#FAF7F6] block text-xs font-bold"
+                          >
+                            Store Management · $249/mo
+                          </Link>
+                          <Link
                             href="/services/ecommerce"
                             onClick={() => setServicesOpen(false)}
                             className="p-2 rounded-xl hover:bg-[#FAF7F6] block transition-colors group"
@@ -394,6 +401,13 @@ export default function Navbar() {
                           Development Packages
                         </span>
                         <div className="space-y-1.5">
+                          <Link
+                            href="/ecommerce-store-management-packages"
+                            onClick={() => setPackagesOpen(false)}
+                            className="p-2 rounded-xl hover:bg-[#FAF7F6] block text-xs font-bold"
+                          >
+                            Store Management Plans · $249/mo
+                          </Link>
                           <Link
                             href="/ecommerce-growth-packages"
                             onClick={() => setPackagesOpen(false)}

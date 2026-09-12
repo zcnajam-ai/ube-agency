@@ -114,6 +114,9 @@ export default function Footer() {
             </h4>
             <ul className="space-y-2 text-xs font-body text-[#ACACAC]">
               <li>
+                <Link href="/services/ecommerce-store-management" className="hover:text-white transition-colors block py-1">Store Management Services</Link>
+              </li>
+              <li>
                 <Link href="/services/ecommerce" className="hover:text-white transition-colors flex items-center justify-between py-1 min-h-[28px]">
                   <span>eCommerce Growth &amp; Marketplaces</span>
                   <span className="text-[10px] text-[#DDF160] font-mono-num font-bold">01</span>
@@ -175,6 +178,9 @@ export default function Footer() {
               Commercial Packages
             </h4>
             <ul className="space-y-2 text-xs font-body text-[#ACACAC]">
+              <li>
+                <Link href="/ecommerce-store-management-packages" className="hover:text-white transition-colors block py-1">Store Management · $249/mo</Link>
+              </li>
               <li>
                 <Link href="/ecommerce-growth-packages" className="hover:text-white transition-colors flex items-center justify-between py-1 min-h-[28px]">
                   <span>eCommerce Growth Plans</span>
