@@ -55,7 +55,7 @@ export default function FinalCTA() {
 
           <a
             href={`tel:${COMPANY_INFO.phoneRaw}`}
-            className="w-full sm:w-auto px-6 py-3.5 rounded-full border border-white/20 bg-white/5 hover:bg-white/10 hover:border-[#9F8BE7] text-xs sm:text-sm font-mono-num text-white transition-all flex items-center justify-center gap-2 whitespace-nowrap min-h-[48px]"
+            className="w-full sm:w-auto px-6 py-3.5 rounded-full border border-white/20 bg-white/5 hover:bg-white/10 hover:border-[#9F8BE7] text-xs sm:text-sm font-mono-num text-white transition-all flex items-center justify-center gap-2 whitespace-normal text-center min-h-[48px]"
           >
             <Phone className="w-4 h-4 text-[#9F8BE7] shrink-0" />
             <span>Call {COMPANY_INFO.phone}</span>

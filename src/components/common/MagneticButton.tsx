@@ -94,13 +94,13 @@ export default function MagneticButton({
       type={type}
       onClick={onClick}
       disabled={disabled}
-      className={`relative inline-flex items-center justify-center gap-2 rounded-full cursor-pointer transition-colors duration-200 active:scale-95 disabled:opacity-50 disabled:pointer-events-none will-change-transform ${variantStyles[variant]} ${sizeStyles[size]} ${className}`}
+      className={`relative max-w-full min-w-0 inline-flex items-center justify-center gap-2 rounded-full cursor-pointer transition-colors duration-200 active:scale-95 disabled:opacity-50 disabled:pointer-events-none will-change-transform ${variantStyles[variant]} ${sizeStyles[size]} ${className}`}
     >
-      <span ref={textRef} className="relative z-10 will-change-transform inline-block whitespace-nowrap">
+      <span ref={textRef} className="relative z-10 will-change-transform inline-block min-w-0 whitespace-normal break-words text-center">
         {children}
       </span>
       {showArrow && (
-        <span ref={arrowRef} className="relative z-10 will-change-transform inline-flex items-center justify-center">
+        <span ref={arrowRef} className="relative z-10 shrink-0 will-change-transform inline-flex items-center justify-center">
           <ArrowUpRight className="w-4 h-4" />
         </span>
       )}

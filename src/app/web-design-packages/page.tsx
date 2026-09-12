@@ -245,11 +245,8 @@ export default function WebDesignPackagesPage() {
               <ServiceProjectModalTrigger
                 service={`Web Design & Dev - ${pkg.name}`}
                 label={`Select ${pkg.name}`}
-                className={`w-full py-3.5 rounded-full font-display text-xs font-bold transition-all shadow-xs text-center justify-center ${
-                  pkg.highlight
-                    ? "bg-[#9F8BE7] text-[#161616] hover:bg-[#b4a3f7]"
-                    : "bg-[#161616] text-white hover:bg-black"
-                }`}
+                variant={pkg.highlight ? "primary" : "dark"}
+                className="w-full py-3.5 text-center"
               />
             </div>
           </div>
@@ -322,7 +319,8 @@ export default function WebDesignPackagesPage() {
           <ServiceProjectModalTrigger
             service="Web Design & Development"
             label="Start Your Web Project"
-            className="px-8 py-4 rounded-full bg-[#9F8BE7] text-[#161616] font-display font-bold text-sm hover:bg-[#b4a3f7] transition-all shadow-md"
+            variant="primary"
+            className="px-8 py-4 text-sm"
           />
           <Link
             href="/services/web-design-development"
