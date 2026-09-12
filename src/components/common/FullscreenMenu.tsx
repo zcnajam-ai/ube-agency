@@ -28,6 +28,7 @@ export default function FullscreenMenu({ isOpen, onClose }: FullscreenMenuProps)
   ];
 
   const dedicatedServices = [
+    { label: "eCommerce Store Management", href: "/services/ecommerce-store-management" },
     { label: "eCommerce Growth Services", href: "/services/ecommerce" },
     { label: "AI SEO & Answer Engines", href: "/services/aiseo" },
     { label: "Digital Marketing Services", href: "/services/digital-marketing" },
@@ -39,6 +40,7 @@ export default function FullscreenMenu({ isOpen, onClose }: FullscreenMenuProps)
   ];
 
   const packageLinks = [
+    { label: "eCommerce Store Management", href: "/ecommerce-store-management-packages", starting: "From $249/mo" },
     { label: "eCommerce Growth Plans", href: "/ecommerce-growth-packages", starting: "From $399" },
     { label: "Logo Design Packages", href: "/branding-packages", starting: "From $299" },
     { label: "Web Design Packages", href: "/web-design-packages", starting: "From $300" },
@@ -166,15 +168,15 @@ export default function FullscreenMenu({ isOpen, onClose }: FullscreenMenuProps)
           <div className="space-y-1.5 max-h-[380px] overflow-y-auto pr-1">
             {packageLinks.map((pkg) => (
               <Link
-                key={pkg.href}
+                key={`${pkg.href}-${pkg.label}`}
                 href={pkg.href}
                 onClick={onClose}
-                className="flex items-center justify-between p-2.5 rounded-xl bg-white/5 hover:bg-white/10 border border-white/5 hover:border-[#9F8BE7]/40 transition-all text-xs group"
+                className="flex items-center justify-between gap-3 p-2.5 rounded-xl bg-white/5 hover:bg-white/10 border border-white/5 hover:border-[#9F8BE7]/40 transition-all text-xs group"
               >
                 <span className="text-white font-medium group-hover:text-[#9F8BE7] transition-colors">
                   {pkg.label}
                 </span>
-                <span className="text-[10px] font-mono-num px-2 py-0.5 rounded-full bg-emerald-500/15 text-emerald-300 font-bold">
+                <span className="shrink-0 whitespace-nowrap text-[10px] font-mono-num px-2 py-0.5 rounded-full bg-emerald-500/15 text-emerald-300 font-bold">
                   {pkg.starting}
                 </span>
               </Link>
