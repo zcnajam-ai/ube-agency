@@ -41,6 +41,16 @@ export const metadata: Metadata = {
 export default function PackagesHubPage() {
   const packageHubs = [
     {
+      title: "eCommerce Store Management Packages",
+      slug: "/ecommerce-store-management-packages",
+      icon: <ShoppingBag className="w-6 h-6 text-[#9F8BE7]" />,
+      startingPrice: "From $249/month",
+      bestFor: "Existing Stores Needing Ongoing Operations",
+      description: "Catalog updates, inventory checks, order monitoring, merchandising and reporting. Choose monthly billing or save 16.7% with an annual plan.",
+      image: "/images/editorial/shopify-storefront-development.webp",
+      tiers: ["Essentials ($249/mo)", "Growth ($499/mo)", "Scale ($899/mo)"],
+    },
+    {
       title: "eCommerce Growth Packages",
       slug: "/ecommerce-growth-packages",
       icon: <ShoppingBag className="w-6 h-6 text-[#9F8BE7]" />,

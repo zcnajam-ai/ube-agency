@@ -1,4 +1,5 @@
 import React from "react";
+import StoreManagementLink from "@/components/services/StoreManagementLink";
 import Link from "next/link";
 import Image from "next/image";
 import { Metadata } from "next";
@@ -476,6 +477,7 @@ export default function ShopifyDevelopmentPage() {
           </Link>
         </div>
       </section>
+      <StoreManagementLink />
     </div>
   );
 }

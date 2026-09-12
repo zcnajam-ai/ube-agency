@@ -1,4 +1,5 @@
 import React from "react";
+import StoreManagementLink from "@/components/services/StoreManagementLink";
 import Link from "next/link";
 import Image from "next/image";
 import { Metadata } from "next";
@@ -843,6 +844,7 @@ export default function EcommerceGrowthServicePage() {
           <ServiceProjectModalTrigger label="Start Your Project" />
         </div>
       </section>
+      <StoreManagementLink />
     </main>
   );
 }

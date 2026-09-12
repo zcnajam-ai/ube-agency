@@ -1,4 +1,5 @@
 import React from "react";
+import StoreManagementLink from "@/components/services/StoreManagementLink";
 import Link from "next/link";
 import { Metadata } from "next";
 import {
@@ -427,6 +428,7 @@ export default function DropshippingServicePage() {
           variant="primary"
         />
       </section>
+      <StoreManagementLink />
     </div>
   );
 }

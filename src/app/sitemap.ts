@@ -25,6 +25,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // 3. Dedicated Package Hub Pages (8)
   const packageRoutes: MetadataRoute.Sitemap = [
+    { url: `${baseUrl}/ecommerce-store-management-packages` },
     { url: `${baseUrl}/branding-packages` },
     { url: `${baseUrl}/web-design-packages` },
     { url: `${baseUrl}/digital-marketing-packages` },

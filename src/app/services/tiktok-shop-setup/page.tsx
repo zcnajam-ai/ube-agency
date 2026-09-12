@@ -1,4 +1,5 @@
 import React from "react";
+import StoreManagementLink from "@/components/services/StoreManagementLink";
 import Link from "next/link";
 import Image from "next/image";
 import TikTokMinimalVisual from "@/components/common/TikTokMinimalVisual";
@@ -472,6 +473,7 @@ export default function TikTokShopSetupPage() {
           </Link>
         </div>
       </section>
+      <StoreManagementLink />
     </div>
   );
 }

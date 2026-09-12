@@ -22,6 +22,14 @@ const SERVICE_VISUALS: Record<
     starting: string;
   }
 > = {
+  "ecommerce-store-management": {
+    image: "/images/editorial/shopify-storefront-development.webp",
+    kicker: "Ongoing Store Operations",
+    metrics: "Catalog, Orders & Inventory",
+    packageUrl: "/ecommerce-store-management-packages",
+    packageText: "Compare Management Plans",
+    starting: "From $249/mo",
+  },
   "ecommerce-store-setup": {
     image: "/images/editorial/shopify-storefront-development.webp",
     kicker: "eCommerce Storefronts",

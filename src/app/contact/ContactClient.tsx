@@ -25,6 +25,7 @@ export default function ContactClient() {
   const [error, setError] = useState("");
 
   const servicesList = [
+    "eCommerce Store Management",
     "eCommerce Store Setup",
     "Website Design & Dev",
     "Mobile App Development",
