@@ -45,37 +45,37 @@ export default function TikTokShopSetupPage() {
       title: "TikTok Seller Center Account Verification",
       desc: "Complete business registration, tax documentation, banking verification, and warehouse fulfillment settings compliant with strict TikTok Shop seller policies.",
       icon: <ShoppingBag className="w-5 h-5 text-[#9F8BE7]" />,
-      image: "/images/official/tiktok/tiktok-growth.jpeg",
+      image: "/images/editorial/social-shop-catalog.webp",
     },
     {
       title: "Shopify / WooCommerce Product Catalog Sync",
       desc: "Real-time automated integration connecting your existing Shopify or WooCommerce store directly to TikTok Shop for instant stock, order, and pricing synchronization.",
       icon: <Share2 className="w-5 h-5 text-emerald-600" />,
-      image: "/images/official/ecommerce/storefront-setup.jpeg",
+      image: "/images/editorial/social-shop-catalog.webp",
     },
     {
       title: "TikTok Shop Affiliate Program & Creator Outreach",
       desc: "Recruit hundreds of creators to promote your products. We set up commission rates, target creator discovery lists, manage sample requests, and track affiliate GMV.",
       icon: <TrendingUp className="w-5 h-5 text-purple-600" />,
-      image: "/images/official/tiktok/tiktok-growth.jpeg",
+      image: "/images/editorial/social-commerce-creator.webp",
     },
     {
       title: "Shoppable Video Ads & Spark Ads Amplification",
       desc: "Turn organic viral videos into paid revenue drivers with direct in-feed shopping links, anchor product tags, and conversion-optimized Spark Ads campaigns.",
       icon: <Video className="w-5 h-5 text-blue-600" />,
-      image: "/images/official/tiktok/tiktok-growth.jpeg",
+      image: "/images/editorial/social-commerce-creator.webp",
     },
     {
       title: "Live Shopping Stream Architecture",
       desc: "Technical setup for live selling: real-time flash sales, pin-to-screen featured products, live coupon drops, and moderator workflow optimization.",
       icon: <Zap className="w-5 h-5 text-[#DDF160]" />,
-      image: "/images/official/branding/branding-hero.jpeg",
+      image: "/images/editorial/social-commerce-creator.webp",
     },
     {
       title: "Seller Performance & Compliance Governance",
       desc: "Maintain flawless seller health scores: on-time dispatch rate, low cancellation rates, customer service response times, and review dispute management.",
       icon: <ShieldCheck className="w-5 h-5 text-amber-600" />,
-      image: "/images/official/automation/system-integration.jpeg",
+      image: "/images/editorial/social-shop-catalog.webp",
     },
   ];
 
@@ -215,8 +215,8 @@ export default function TikTokShopSetupPage() {
         <div className="lg:col-span-6 order-2 lg:order-1">
           <div className="relative aspect-[4/3] w-full rounded-3xl overflow-hidden bg-white border border-[#E0DDDB] shadow-sm">
             <Image
-              src="/images/official/ecommerce/storefront-setup.jpeg"
-              alt="TikTok Shop Frictionless In-App Checkout"
+              src="/images/editorial/social-commerce-creator.webp"
+              alt="Small business creator filming a product video beside a store catalog"
               fill
               sizes="(max-width: 1024px) 100vw, 50vw"
               className="object-cover object-center"

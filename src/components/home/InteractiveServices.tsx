@@ -23,7 +23,7 @@ const SERVICE_VISUALS: Record<
   }
 > = {
   "ecommerce-store-setup": {
-    image: "/images/official/ecommerce/storefront-setup.jpeg",
+    image: "/images/editorial/shopify-storefront-development.webp",
     kicker: "eCommerce Storefronts",
     metrics: "Custom Store Architecture",
     packageUrl: "/our-custom-web-design-development-packages",
@@ -31,7 +31,7 @@ const SERVICE_VISUALS: Record<
     starting: "From $450",
   },
   "shopify-development-service": {
-    image: "/images/official/ecommerce/storefront-setup.jpeg",
+    image: "/images/editorial/shopify-storefront-development.webp",
     kicker: "Shopify Store Setup",
     metrics: "Custom Theme & Integrations",
     packageUrl: "/our-custom-web-design-development-packages",
@@ -39,7 +39,7 @@ const SERVICE_VISUALS: Record<
     starting: "From $450",
   },
   "etsy-shop-setup-service": {
-    image: "/images/official/branding/brand-guidelines.jpeg",
+    image: "/images/editorial/etsy-seller-listing.webp",
     kicker: "13-Tag Etsy SEO & Launch",
     metrics: "13/13 Optimized Listing Tags",
     packageUrl: "/branding-packages",
@@ -47,7 +47,7 @@ const SERVICE_VISUALS: Record<
     starting: "From $299",
   },
   "tiktok-shop-setup-service": {
-    image: "/images/official/tiktok/tiktok-growth.jpeg",
+    image: "/images/editorial/social-commerce-creator.webp",
     kicker: "Social Commerce & Affiliates",
     metrics: "TikTok Seller & Catalog Sync",
     packageUrl: "/tiktok-marketing-packages",
@@ -55,7 +55,7 @@ const SERVICE_VISUALS: Record<
     starting: "From $299/mo",
   },
   "web-design-dev": {
-    image: "/images/official/branding/brand-identity.jpeg",
+    image: "/images/editorial/responsive-web-design.webp",
     kicker: "Next.js Web Development",
     metrics: "Responsive Design & CMS",
     packageUrl: "/web-design-packages",
@@ -63,7 +63,7 @@ const SERVICE_VISUALS: Record<
     starting: "From $300",
   },
   "mobile-app-dev": {
-    image: "/images/official/automation/system-integration.jpeg",
+    image: "/images/editorial/mobile-app-development.webp",
     kicker: "iOS & Android Apps",
     metrics: "Cross-Platform Engineering",
     packageUrl: "/mobile-app-packages",
@@ -87,7 +87,7 @@ const SERVICE_VISUALS: Record<
     starting: "From $349",
   },
   "google-ads": {
-    image: "/images/official/aiseo/ai-monitoring.jpeg",
+    image: "/images/editorial/paid-media-creative.webp",
     kicker: "High-Intent Paid Search",
     metrics: "Google Search & Shopping",
     packageUrl: "/our-digital-marketing-packages",
@@ -95,7 +95,7 @@ const SERVICE_VISUALS: Record<
     starting: "From $299/mo",
   },
   "meta-ads": {
-    image: "/images/official/tiktok/tiktok-growth.jpeg",
+    image: "/images/editorial/paid-media-creative.webp",
     kicker: "Visual Social Funnels",
     metrics: "Meta CAPI & Creative Testing",
     packageUrl: "/our-digital-marketing-packages",
@@ -103,7 +103,7 @@ const SERVICE_VISUALS: Record<
     starting: "From $299/mo",
   },
   "tiktok-marketing": {
-    image: "/images/official/tiktok/tiktok-growth.jpeg",
+    image: "/images/editorial/social-commerce-creator.webp",
     kicker: "Short-Form Video Ads",
     metrics: "Creative Scripting & Ads",
     packageUrl: "/tiktok-marketing-packages",
@@ -111,7 +111,7 @@ const SERVICE_VISUALS: Record<
     starting: "From $299/mo",
   },
   "social-media-management": {
-    image: "/images/official/branding/brand-strategy.jpeg",
+    image: "/images/editorial/social-content-planning.webp",
     kicker: "Omnichannel Brand Voice",
     metrics: "Consistent Social Authority",
     packageUrl: "/our-digital-marketing-packages",

@@ -74,8 +74,8 @@ export default function AppsAndAutomation() {
 
               {/* Visual Preview */}
               <InteractiveMedia
-                src="/images/official/mobile-app/mobile-app-showcase.webp"
-                alt="Unified Branding Experts Mobile App Development iOS & Android Native Showcase"
+                src="/images/editorial/mobile-app-development.webp"
+                alt="Mobile app interface shown in light and dark modes on two smartphones"
                 aspectRatio="aspect-[4/3] sm:aspect-[16/11]"
                 objectFit="contain"
                 badgeText="iOS & Android Native"

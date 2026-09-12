@@ -92,7 +92,7 @@ export default function PackagesHubPage() {
       bestFor: "Brands Scaling Viral Short-Form Video",
       description:
         "Short-form video strategy, content calendars, hook writing, community engagement, and paid TikTok ad campaign management.",
-      image: "/images/official/tiktok/tiktok-growth.jpeg",
+      image: "/images/editorial/social-commerce-creator.webp",
       tiers: ["Starter ($299/mo)", "Growth ($699/mo)", "Pro ($1,499/mo)", "Authority ($2,999/mo)", "Enterprise"],
     },
     {
@@ -103,7 +103,7 @@ export default function PackagesHubPage() {
       bestFor: "Founders Launching iOS & Android Products",
       description:
         "Concept MVP prototypes, native iOS/Android development, React Native cross-platform apps, backend architecture, and App Store release.",
-      image: "/images/official/mobile-app/mobile-app-showcase.png",
+      image: "/images/editorial/mobile-app-development.webp",
       tiers: ["App Concept MVP ($999)", "Starter App ($2,999)", "Growth App ($6,999)", "Advanced App ($14,999)", "Enterprise Custom"],
     },
   ];

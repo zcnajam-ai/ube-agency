@@ -74,7 +74,7 @@ export default function ShopifyDevelopmentPage() {
       title: "Store Migration & 301 Redirect Mapping",
       desc: "Migrate from WooCommerce, Magento, BigCommerce, or Etsy to Shopify with organized data mapping: customer records, order archives, and complete 301 URL redirect maps to support organic search continuity.",
       icon: <RefreshCw className="w-5 h-5 text-amber-600" />,
-      image: "/images/official/branding/brand-strategy.jpeg",
+      image: "/images/official/ecommerce/multichannel-growth.jpeg",
     },
   ];
 
@@ -247,16 +247,16 @@ export default function ShopifyDevelopmentPage() {
           </div>
         </div>
 
-        {/* HERO VISUAL (Exact Intrinsic 2048/684 Aspect Ratio Container) */}
+        {/* Storefront visual */}
         <div className="lg:col-span-5 relative w-full">
-          <div className="relative w-full aspect-[2048/684] rounded-3xl overflow-hidden bg-white border border-[#E0DDDB] shadow-md group">
+          <div className="relative w-full aspect-[4/3] rounded-3xl overflow-hidden bg-white border border-[#E0DDDB] shadow-md group">
             <Image
-              src="/images/official/shopify/shopify-development-hero.webp"
-              alt="Shopify store setup and custom theme development with responsive storefront and ecommerce performance analytics"
+              src="/images/editorial/shopify-storefront-development.webp"
+              alt="Online retailer reviewing a responsive product storefront on desktop and mobile"
               fill
               priority
               sizes="(max-width: 1024px) 100vw, 45vw"
-              className="object-contain object-center transition-transform duration-700 group-hover:scale-[1.01]"
+              className="object-cover object-center transition-transform duration-700 group-hover:scale-[1.01]"
             />
             <div className="absolute bottom-3 left-3 right-3 p-3 rounded-2xl bg-white/90 backdrop-blur-md border border-[#E0DDDB] text-xs font-mono-num text-[#161616] flex items-center justify-between shadow-xs">
               <span className="font-bold">SHOPIFY • DROPSHIPPING • ECOMMERCE</span>

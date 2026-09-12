@@ -89,11 +89,11 @@ export default function EcommerceShowcase() {
                 </div>
               </div>
 
-              {/* Viewport Image using official eCommerce asset */}
+              {/* Storefront preview */}
               <div className="relative aspect-[16/10] w-full overflow-hidden bg-[#FAF7F6]">
                 <Image
-                  src="/images/official/ecommerce/storefront-setup.jpeg"
-                  alt="Unified Branding Experts eCommerce Architecture & Multi-Channel Storefront"
+                  src="/images/editorial/shopify-storefront-development.webp"
+                  alt="Responsive product storefront viewed on desktop and mobile"
                   fill
                   sizes="(max-width: 1024px) 100vw, 60vw"
                   className="object-cover object-center transition-transform duration-700 group-hover:scale-105"

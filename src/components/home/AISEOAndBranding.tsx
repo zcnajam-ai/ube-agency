@@ -76,8 +76,8 @@ export default function AISEOAndBranding() {
 
               {/* Visual Preview */}
               <InteractiveMedia
-                src="/images/official/aiseo/google-search-aiseo-hub.webp"
-                alt="Unified Branding Experts AI Search Optimization Architecture on Google"
+                src="/images/editorial/ai-search-content-strategy.webp"
+                alt="Content strategist reviewing search result structures and entity relationships"
                 aspectRatio="aspect-[4/3] sm:aspect-[16/11]"
                 objectFit="contain"
                 badgeText="Structured Search Architecture"
