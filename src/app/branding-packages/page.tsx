@@ -10,14 +10,14 @@ import {
 import { COMPANY_INFO } from "@/data/company";
 
 export const metadata: Metadata = {
-  title: "Branding Packages & Pricing",
+  title: "Branding Packages & Pricing: Logo to Full Identity",
   description:
-    "Compare logo and branding packages from $299, including brand identity, strategy, guidelines, source files and complete visual systems.",
+    "Compare branding packages: logo design $299, brand starter $599, full identity $1,199 and rebranding $2,499. See exact deliverables, ownership and timelines.",
   alternates: {
     canonical: "https://unifiedbrandingexperts.com/branding-packages",
   },
   openGraph: {
-    title: "Branding Packages & Pricing",
+    title: "Branding Packages & Pricing | Unified Branding Experts",
     description:
       "Compare branding packages built for every stage, from a professional logo to a full brand system. Starting at $299.",
     url: "https://unifiedbrandingexperts.com/branding-packages",
@@ -237,7 +237,7 @@ export default function BrandingPackagesPage() {
           </p>
 
           <p className="text-sm sm:text-base text-[#585858] font-body leading-relaxed max-w-2xl mx-auto">
-            Every business starts with a first impression. For some, that means a single mark to launch with confidence. For others, it means a complete identity that holds up across every screen, shelf, and touchpoint.
+            Compare what you actually receive: a custom logo from $299, a starter identity from $599, a complete brand identity from $1,199, or a rebrand from $2,499. Each tier below lists its deliverables and one-time price; larger systems are scoped individually.
           </p>
 
           <div className="inline-block p-3 rounded-2xl bg-white border border-[#E0DDDB] text-xs font-mono-num text-[#161616] font-bold shadow-xs">
@@ -338,6 +338,29 @@ export default function BrandingPackagesPage() {
               </div>
             </div>
           ))}
+        </section>
+
+        {/* Buyer questions and visible proof support the package decision. */}
+        <section className="grid grid-cols-1 lg:grid-cols-2 gap-6" aria-label="Branding package questions and examples">
+          <div className="p-7 rounded-3xl bg-white border border-[#E0DDDB] space-y-4">
+            <h2 className="font-display text-2xl font-bold text-[#161616]">What is included in a branding package?</h2>
+            <p className="text-sm text-[#585858] leading-relaxed">
+              A logo package covers the core mark and final files. A broader brand identity adds a color system, typography, supporting marks and guidelines. Strategy, collateral and rebranding research appear in higher tiers. Compare the individual cards above before selecting a scope.
+            </p>
+            <h3 className="font-display text-lg font-bold text-[#161616]">How much does a complete brand identity cost?</h3>
+            <p className="text-sm text-[#585858] leading-relaxed">
+              Our Brand Identity tier is $1,199 one-time and includes positioning, a visual system, guidelines, and business stationery. Brand Elevate is $2,499 for a more extensive rebrand. The custom tier is quoted after a discovery conversation; third-party production and printing are not included unless stated in your proposal.
+            </p>
+          </div>
+          <div className="p-7 rounded-3xl bg-[#FAF7F6] border border-[#E0DDDB] space-y-4">
+            <h2 className="font-display text-2xl font-bold text-[#161616]">See the work behind the packages</h2>
+            <p className="text-sm text-[#585858] leading-relaxed">Explore published visual identity examples, including the logo systems, typography and applications shown in each project.</p>
+            <div className="flex flex-col gap-3 text-sm font-semibold">
+              <Link href="/work/fixoria-studio-brand-identity-system" className="text-[#6B46C1] underline underline-offset-4 hover:text-[#161616]">Fixoria Studio brand identity and applications</Link>
+              <Link href="/work/everhome-real-estate-brand-system" className="text-[#6B46C1] underline underline-offset-4 hover:text-[#161616]">Everhome real estate visual system</Link>
+            </div>
+            <Link href="/contact?type=branding" className="inline-flex items-center gap-2 text-sm font-bold text-[#161616] hover:text-[#6B46C1]">Ask which tier fits your project <ArrowUpRight className="w-4 h-4" /></Link>
+          </div>
         </section>
 
         {/* 3. Important Package Information */}
