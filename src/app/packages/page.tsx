@@ -108,8 +108,40 @@ export default function PackagesHubPage() {
     },
   ];
 
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://unifiedbrandingexperts.com" },
+      { "@type": "ListItem", position: 2, name: "Packages", item: "https://unifiedbrandingexperts.com/packages" },
+    ],
+  };
+
+  const itemListSchema = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: "Service Packages & Pricing Directory",
+    description: "Explore transparent pricing plans across Branding, AI SEO, AI Automation, TikTok Marketing, eCommerce and Mobile App Development.",
+    numberOfItems: packageHubs.length,
+    itemListElement: packageHubs.map((hub, idx) => ({
+      "@type": "ListItem",
+      position: idx + 1,
+      name: hub.title,
+      url: `https://unifiedbrandingexperts.com${hub.slug}`,
+    })),
+  };
+
   return (
-    <div className="pt-32 pb-24 px-4 sm:px-6 md:px-12 max-w-7xl mx-auto space-y-20">
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }}
+      />
+      <div className="pt-32 pb-24 px-4 sm:px-6 md:px-12 max-w-7xl mx-auto space-y-20">
       {/* 1. Header Section */}
       <section className="text-center space-y-5 max-w-4xl mx-auto">
         <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-[#E0DDDB] text-xs font-mono-num text-[#9F8BE7] font-bold shadow-xs">
@@ -266,5 +298,6 @@ export default function PackagesHubPage() {
         </div>
       </section>
     </div>
+    </>
   );
 }

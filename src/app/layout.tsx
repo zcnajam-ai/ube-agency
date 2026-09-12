@@ -1,15 +1,17 @@
 import type { Metadata } from "next";
+import dynamic from "next/dynamic";
 import { Funnel_Display, Funnel_Sans, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import SmoothScrollProvider from "@/components/providers/SmoothScrollProvider";
 import Navbar from "@/components/common/Navbar";
-import Footer from "@/components/common/Footer";
-import ClientProjectModal from "@/components/common/ClientProjectModal";
 import SchemaOrg from "@/components/seo/SchemaOrg";
-import ConciergeProvider from "@/components/concierge/ConciergeProvider";
 import AnalyticsScripts from "@/components/analytics/AnalyticsScripts";
 import AnalyticsEventBridge from "@/components/analytics/AnalyticsEventBridge";
 import { COMPANY_INFO } from "@/data/company";
+
+const Footer = dynamic(() => import("@/components/common/Footer"));
+const ClientProjectModal = dynamic(() => import("@/components/common/ClientProjectModal"));
+const ConciergeProvider = dynamic(() => import("@/components/concierge/ConciergeProvider"));
 
 const funnelDisplay = Funnel_Display({
   variable: "--font-display",

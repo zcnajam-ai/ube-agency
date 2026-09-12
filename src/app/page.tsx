@@ -1,14 +1,16 @@
 import React from "react";
 import type { Metadata } from "next";
+import dynamic from "next/dynamic";
 import Hero from "@/components/home/Hero";
-import EcommercePriority from "@/components/home/EcommercePriority";
-import GrowthAdsMarketing from "@/components/home/GrowthAdsMarketing";
-import AISEOAndBranding from "@/components/home/AISEOAndBranding";
-import AppsAndAutomation from "@/components/home/AppsAndAutomation";
-import HomePackagesGrid from "@/components/home/HomePackagesGrid";
-import SelectedWork from "@/components/home/SelectedWork";
-import TestimonialsSection from "@/components/home/TestimonialsSection";
-import FinalCTA from "@/components/home/FinalCTA";
+
+const EcommercePriority = dynamic(() => import("@/components/home/EcommercePriority"));
+const GrowthAdsMarketing = dynamic(() => import("@/components/home/GrowthAdsMarketing"));
+const AISEOAndBranding = dynamic(() => import("@/components/home/AISEOAndBranding"));
+const AppsAndAutomation = dynamic(() => import("@/components/home/AppsAndAutomation"));
+const HomePackagesGrid = dynamic(() => import("@/components/home/HomePackagesGrid"));
+const SelectedWork = dynamic(() => import("@/components/home/SelectedWork"));
+const TestimonialsSection = dynamic(() => import("@/components/home/TestimonialsSection"));
+const FinalCTA = dynamic(() => import("@/components/home/FinalCTA"));
 
 export const metadata: Metadata = {
   title: {

@@ -132,8 +132,60 @@ export default function TikTokMarketingPackagesPage() {
     },
   ];
 
+  const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: "TikTok Marketing Packages & Pricing",
+    serviceType: "TikTok & Short-Form Video Marketing",
+    description: "Compare TikTok marketing packages built for every stage, from consistent organic posting to full-scale viral campaigns. Starting at $299/mo.",
+    provider: {
+      "@type": "Organization",
+      name: COMPANY_INFO.name,
+      url: "https://unifiedbrandingexperts.com",
+    },
+    image: {
+      "@type": "ImageObject",
+      url: "https://unifiedbrandingexperts.com/og-default.png",
+    },
+    offers: {
+      "@type": "AggregateOffer",
+      priceCurrency: "USD",
+      lowPrice: "299",
+      highPrice: "2999",
+      offerCount: packages.length,
+      offers: packages.map((pkg) => ({
+        "@type": "Offer",
+        name: pkg.name,
+        description: pkg.tagline,
+        priceCurrency: "USD",
+        price: pkg.price.replace(/[^0-9]/g, ""),
+        availability: "https://schema.org/InStock",
+        url: `https://unifiedbrandingexperts.com/tiktok-marketing-packages#${pkg.id}`,
+      })),
+    },
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://unifiedbrandingexperts.com" },
+      { "@type": "ListItem", position: 2, name: "Packages", item: "https://unifiedbrandingexperts.com/packages" },
+      { "@type": "ListItem", position: 3, name: "TikTok Marketing Packages", item: "https://unifiedbrandingexperts.com/tiktok-marketing-packages" },
+    ],
+  };
+
   return (
-    <div className="pt-32 pb-24 px-4 sm:px-6 md:px-12 max-w-7xl mx-auto space-y-20">
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <div className="pt-32 pb-24 px-4 sm:px-6 md:px-12 max-w-7xl mx-auto space-y-20">
       {/* Breadcrumb */}
       <div className="flex items-center justify-between border-b border-[#E0DDDB] pb-4">
         <Link
@@ -291,5 +343,6 @@ export default function TikTokMarketingPackagesPage() {
         </div>
       </section>
     </div>
+    </>
   );
 }

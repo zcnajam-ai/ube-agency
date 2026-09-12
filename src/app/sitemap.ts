@@ -46,13 +46,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
     url: `${baseUrl}/work/${p.slug}`,
   }));
 
-  // 6. Canonical insight articles. Redirected legacy slugs stay out of the sitemap.
-  const insightRoutes: MetadataRoute.Sitemap = INSIGHTS.filter(
-    (i) => ![
-      "how-to-start-a-tiktok-shop",
-      "shopify-store-setup-cost",
-    ].includes(i.slug),
-  ).map((i) => ({
+  // 6. Canonical unique insight articles. Redirected legacy slugs & duplicates stay out of the sitemap.
+  const seenInsightSlugs = new Set<string>();
+  const uniqueInsights = INSIGHTS.filter((i) => {
+    if (["how-to-start-a-tiktok-shop", "shopify-store-setup-cost"].includes(i.slug)) return false;
+    if (seenInsightSlugs.has(i.slug)) return false;
+    seenInsightSlugs.add(i.slug);
+    return true;
+  });
+
+  const insightRoutes: MetadataRoute.Sitemap = uniqueInsights.map((i) => ({
     url: `${baseUrl}/insights/${i.slug}`,
   }));
 

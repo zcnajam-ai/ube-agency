@@ -29,8 +29,47 @@ export const metadata: Metadata = {
 };
 
 export default function InsightsIndexPage() {
+  const seenInsightSlugs = new Set<string>();
+  const uniqueArticles = INSIGHTS.filter((i) => {
+    if (seenInsightSlugs.has(i.slug)) return false;
+    seenInsightSlugs.add(i.slug);
+    return true;
+  });
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://unifiedbrandingexperts.com" },
+      { "@type": "ListItem", position: 2, name: "Insights", item: "https://unifiedbrandingexperts.com/insights" },
+    ],
+  };
+
+  const itemListSchema = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: "Editorial Insights & Thought Leadership",
+    description: "Frameworks and original research on AI SEO, AEO, GEO, eCommerce, branding and digital engineering.",
+    numberOfItems: uniqueArticles.length,
+    itemListElement: uniqueArticles.map((article, idx) => ({
+      "@type": "ListItem",
+      position: idx + 1,
+      name: article.title,
+      url: `https://unifiedbrandingexperts.com/insights/${article.slug}`,
+    })),
+  };
+
   return (
-    <div className="pt-32 pb-24 px-6 md:px-12 max-w-7xl mx-auto space-y-16">
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }}
+      />
+      <div className="pt-32 pb-24 px-6 md:px-12 max-w-7xl mx-auto space-y-16">
       {/* Editorial Page Hero (Clean & Fast) */}
       <div className="space-y-4 max-w-3xl border-b border-[#E0DDDB] pb-8">
         <div className="inline-flex items-center gap-2 text-xs font-mono-num uppercase tracking-[0.25em] text-[#9F8BE7] font-bold">
@@ -70,7 +109,7 @@ export default function InsightsIndexPage() {
 
       {/* Articles Grid (Clean White Cards) */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-        {INSIGHTS.map((article) => (
+        {uniqueArticles.map((article) => (
           <article
             key={article.id}
             className="rounded-3xl bg-white border border-[#E0DDDB] overflow-hidden hover:border-[#9F8BE7] transition-all duration-300 flex flex-col justify-between group shadow-xs"
@@ -98,25 +137,28 @@ export default function InsightsIndexPage() {
                 <div className="flex items-center justify-between text-xs font-mono-num text-[#585858]">
                   <span>{article.publishedAt}</span>
                   <span className="flex items-center gap-1">
-                    <Clock className="w-3 h-3 text-[#9F8BE7]" />
+                    <Clock className="w-3.5 h-3.5" />
                     {article.readTime}
                   </span>
                 </div>
 
-                <h2 className="font-display text-xl font-bold text-[#161616] group-hover:text-[#9F8BE7] transition-colors leading-snug">
-                  <Link href={`/insights/${article.slug}`}>{article.title}</Link>
-                </h2>
+                <Link href={`/insights/${article.slug}`}>
+                  <h2 className="font-display text-lg font-bold text-[#161616] group-hover:text-[#9F8BE7] transition-colors leading-snug line-clamp-2">
+                    {article.title}
+                  </h2>
+                </Link>
 
-                <p className="text-xs sm:text-sm text-[#585858] font-body line-clamp-3 leading-relaxed">
+                <p className="text-xs text-[#585858] font-body line-clamp-3 leading-relaxed">
                   {article.summary}
                 </p>
               </div>
             </div>
 
-            <div className="p-6 sm:p-7 pt-0 border-t border-[#E0DDDB]/60">
+            <div className="p-6 sm:p-7 pt-0 border-t border-[#E0DDDB]/60 flex items-center justify-between text-xs font-mono-num font-bold">
+              <span className="text-[#585858]">{article.author.name}</span>
               <Link
                 href={`/insights/${article.slug}`}
-                className="inline-flex items-center gap-2 text-xs font-display font-bold text-[#161616] hover:text-[#9F8BE7] transition-colors group-hover:translate-x-1 duration-200"
+                className="inline-flex items-center gap-1 text-[#161616] group-hover:text-[#9F8BE7] transition-colors"
               >
                 <span>Read Full Article</span>
                 <ArrowUpRight className="w-3.5 h-3.5 text-[#9F8BE7]" />
@@ -126,5 +168,6 @@ export default function InsightsIndexPage() {
         ))}
       </div>
     </div>
+    </>
   );
 }

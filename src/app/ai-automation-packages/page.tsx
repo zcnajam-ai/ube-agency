@@ -162,8 +162,60 @@ export default function AiAutomationPackagesPage() {
     },
   ];
 
+  const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: "AI Automation Packages & Pricing",
+    serviceType: "AI Workflow & Automation",
+    description: "Compare AI automation packages built for every stage, from a one-time audit to a full-scale build. Starting at $349.",
+    provider: {
+      "@type": "Organization",
+      name: COMPANY_INFO.name,
+      url: "https://unifiedbrandingexperts.com",
+    },
+    image: {
+      "@type": "ImageObject",
+      url: "https://unifiedbrandingexperts.com/og-default.png",
+    },
+    offers: {
+      "@type": "AggregateOffer",
+      priceCurrency: "USD",
+      lowPrice: "349",
+      highPrice: "2999",
+      offerCount: packages.length,
+      offers: packages.map((pkg) => ({
+        "@type": "Offer",
+        name: pkg.name,
+        description: pkg.tagline,
+        priceCurrency: "USD",
+        price: pkg.price.replace(/[^0-9]/g, ""),
+        availability: "https://schema.org/InStock",
+        url: `https://unifiedbrandingexperts.com/ai-automation-packages#${pkg.id}`,
+      })),
+    },
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://unifiedbrandingexperts.com" },
+      { "@type": "ListItem", position: 2, name: "Packages", item: "https://unifiedbrandingexperts.com/packages" },
+      { "@type": "ListItem", position: 3, name: "AI Automation Packages", item: "https://unifiedbrandingexperts.com/ai-automation-packages" },
+    ],
+  };
+
   return (
-    <div className="pt-32 pb-24 px-4 sm:px-6 md:px-12 max-w-7xl mx-auto space-y-20">
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <div className="pt-32 pb-24 px-4 sm:px-6 md:px-12 max-w-7xl mx-auto space-y-20">
       {/* Breadcrumb */}
       <div className="flex items-center justify-between border-b border-[#E0DDDB] pb-4">
         <Link
@@ -350,5 +402,6 @@ export default function AiAutomationPackagesPage() {
         </div>
       </section>
     </div>
+    </>
   );
 }

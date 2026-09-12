@@ -10,6 +10,7 @@ import {
   Users,
 } from "lucide-react";
 import ServiceProjectModalTrigger from "@/components/services/ServiceProjectModalTrigger";
+import { COMPANY_INFO } from "@/data/company";
 
 export const metadata: Metadata = {
   title: "Digital Marketing & Paid Ads Packages | Pricing & Plans",
@@ -75,8 +76,60 @@ export default function DigitalMarketingPackagesPage() {
     },
   ];
 
+  const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: "Digital Marketing & Paid Ads Packages",
+    serviceType: "Digital Marketing & Paid Ads",
+    description: "Transparent Digital Marketing and Paid Ads packages starting at $299/mo.",
+    provider: {
+      "@type": "Organization",
+      name: COMPANY_INFO.name,
+      url: "https://unifiedbrandingexperts.com",
+    },
+    image: {
+      "@type": "ImageObject",
+      url: "https://unifiedbrandingexperts.com/og-default.png",
+    },
+    offers: {
+      "@type": "AggregateOffer",
+      priceCurrency: "USD",
+      lowPrice: "299",
+      highPrice: "1499",
+      offerCount: packages.length,
+      offers: packages.map((pkg) => ({
+        "@type": "Offer",
+        name: pkg.name,
+        description: pkg.description,
+        priceCurrency: "USD",
+        price: pkg.price.replace(/[^0-9]/g, ""),
+        availability: "https://schema.org/InStock",
+        url: `https://unifiedbrandingexperts.com/digital-marketing-packages#${pkg.id}`,
+      })),
+    },
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://unifiedbrandingexperts.com" },
+      { "@type": "ListItem", position: 2, name: "Packages", item: "https://unifiedbrandingexperts.com/packages" },
+      { "@type": "ListItem", position: 3, name: "Digital Marketing Packages", item: "https://unifiedbrandingexperts.com/digital-marketing-packages" },
+    ],
+  };
+
   return (
-    <div className="pt-32 pb-24 px-4 sm:px-6 md:px-12 max-w-7xl mx-auto space-y-20">
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <div className="pt-32 pb-24 px-4 sm:px-6 md:px-12 max-w-7xl mx-auto space-y-20">
       {/* 1. Header Section */}
       <section className="text-center space-y-5 max-w-4xl mx-auto">
         <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-[#E0DDDB] text-xs font-mono-num text-emerald-600 font-bold shadow-xs">
@@ -224,5 +277,6 @@ export default function DigitalMarketingPackagesPage() {
         </div>
       </section>
     </div>
+    </>
   );
 }

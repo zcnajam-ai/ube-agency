@@ -220,6 +220,8 @@ export default function FixoriaEditorialGallery() {
               <img
                 src={asset.webpSrc}
                 alt={`${asset.title} — Fixoria Studio Brand Identity System by Unified Branding Experts`}
+                width={1200}
+                height={800}
                 loading={index === 0 ? "eager" : "lazy"}
                 className="w-full h-auto object-contain block transition-transform duration-500 group-hover:scale-[1.008]"
                 style={{ width: "100%", height: "auto", objectFit: "contain" }}
@@ -355,6 +357,9 @@ export default function FixoriaEditorialGallery() {
               <img
                 src={FIXORIA_ASSETS[lightboxIndex].webpSrc}
                 alt={FIXORIA_ASSETS[lightboxIndex].title}
+                width={1200}
+                height={800}
+                loading="lazy"
                 className="max-w-full h-auto object-contain rounded-lg shadow-2xl mx-auto border border-white/10"
                 style={{ maxHeight: "85vh", width: "auto" }}
               />
