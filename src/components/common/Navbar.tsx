@@ -136,7 +136,7 @@ export default function Navbar() {
                             onClick={() => setServicesOpen(false)}
                             className="p-2 rounded-xl hover:bg-[#FAF7F6] block text-xs font-bold"
                           >
-                            Store Management · $249/mo
+                            eCommerce Store Management
                           </Link>
                           <Link
                             href="/services/ecommerce"
@@ -406,7 +406,7 @@ export default function Navbar() {
                             onClick={() => setPackagesOpen(false)}
                             className="p-2 rounded-xl hover:bg-[#FAF7F6] block text-xs font-bold"
                           >
-                            Store Management Plans · $249/mo
+                            eCommerce Store Management · $249/mo
                           </Link>
                           <Link
                             href="/ecommerce-growth-packages"
