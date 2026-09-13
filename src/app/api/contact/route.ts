@@ -90,8 +90,8 @@ export async function POST(request: Request) {
       },
       { status: 200 }
     );
-  } catch (err) {
-    console.error("API /contact error occurred", err);
+  } catch {
+    console.error("API /contact delivery or processing failed");
     return NextResponse.json(
       { error: "We couldn't submit your inquiry right now. Please try again." },
       { status: 500 }

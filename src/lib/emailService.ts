@@ -206,11 +206,11 @@ Digital Branding, Technology & Growth
 info@unifiedbrandingexperts.com
   `.trim();
 
-  // Execute Dispatch via Resend SDK or Log in Development
-  if (resend) {
-    try {
+  // Never acknowledge a lead that has not reached the notification provider.
+  if (!resend) throw new Error("Inquiry email delivery is not configured");
+
       // 1. Internal UBE Notification
-      await resend.emails.send({
+      const notification = await resend.emails.send({
         from: FROM_EMAIL,
         to: [RECIPIENT_EMAIL],
         replyTo: inquiry.email,
@@ -218,33 +218,27 @@ info@unifiedbrandingexperts.com
         html: internalHtml,
         text: internalText,
       });
+      if (notification.error || !notification.data?.id) {
+        throw new Error("Inquiry notification was not accepted");
+      }
 
       // 2. Client Confirmation
-      await resend.emails.send({
+      // The lead is already accepted. A confirmation failure must not ask the
+      // visitor to resubmit and create a second internal inquiry.
+    try {
+      const confirmation = await resend.emails.send({
         from: FROM_EMAIL,
         to: [inquiry.email],
         subject: "We’ve Received Your Project Inquiry | Unified Branding Experts",
         html: clientHtml,
         text: clientText,
       });
-
-      console.log(`[Email Dispatch Success] Sent notification & confirmation for ${inquiry.email}`);
-    } catch (err) {
-      console.error("[Email Dispatch Error]", err);
-      // Do not throw so client still receives clean HTTP response if email fails in staging
+      if (confirmation.error || !confirmation.data?.id) {
+        console.error("[Inquiry confirmation not accepted]");
+      }
+    } catch {
+      console.error("[Inquiry confirmation delivery failed]");
     }
-  } else {
-    console.log("=================================================");
-    console.log("[DEV EMAIL LOG - RESEND_API_KEY NOT SET]");
-    console.log(`Internal To: ${RECIPIENT_EMAIL} | ReplyTo: ${inquiry.email}`);
-    console.log(`Subject: New Project Inquiry — ${inquiry.service} — ${inquiry.name}`);
-    console.log(internalText);
-    console.log("-------------------------------------------------");
-    console.log(`Client To: ${inquiry.email}`);
-    console.log("Subject: We’ve Received Your Project Inquiry | Unified Branding Experts");
-    console.log(clientText);
-    console.log("=================================================");
-  }
 }
 
 function escapeHtml(str: string): string {

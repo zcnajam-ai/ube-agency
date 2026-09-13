@@ -36,16 +36,21 @@ export default function FloatingDotsBackground({
 
     let cleanupFn: (() => void) | null = null;
     let timerId: ReturnType<typeof setTimeout> | null = null;
-    let idleId: number | null = null;
+    let started = false;
+    let cancelled = false;
 
     const initThree = async () => {
       if (!canvasRef.current) return;
       const canvas = canvasRef.current;
       const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      if (reducedMotion) return;
+      const context = canvas.getContext("webgl2", { alpha: true, antialias: false });
+      if (!context) return; // Decorative enhancement is optional on unsupported devices.
 
       // Dynamic import of heavy 3D & animation modules off the critical hydration path
       const THREE = await import("three");
       const { animate, remove } = await import("animejs");
+      if (cancelled) return;
 
       const pointer = new THREE.Vector2();
       const pointerTarget = new THREE.Vector2();
@@ -58,6 +63,7 @@ export default function FloatingDotsBackground({
       // 1. WebGL Renderer with 1.5 Pixel Ratio Cap
       const renderer = new THREE.WebGLRenderer({
         canvas,
+        context,
         alpha: true,
         antialias: false,
         powerPreference: "low-power",
@@ -232,7 +238,9 @@ export default function FloatingDotsBackground({
     };
 
     const start = () => {
-      initThree();
+      if (started || cancelled) return;
+      started = true;
+      void initThree().catch(() => { /* Keep content usable if decoration cannot initialize. */ });
       window.removeEventListener("pointermove", start);
       window.removeEventListener("scroll", start);
     };
@@ -243,6 +251,7 @@ export default function FloatingDotsBackground({
     timerId = setTimeout(start, 3000);
 
     return () => {
+      cancelled = true;
       if (timerId !== null) {
         clearTimeout(timerId);
       }

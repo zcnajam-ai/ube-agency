@@ -20,7 +20,7 @@ import ServiceProjectModalTrigger from "@/components/services/ServiceProjectModa
 import { COMPANY_INFO } from "@/data/company";
 
 export const metadata: Metadata = {
-  title: "Dropshipping Store Setup & Automation | Shopify Dropshipping Services | Unified Branding Experts",
+  title: "Shopify Dropshipping Setup & Supplier Integrations",
   description:
     "Launch a professional dropshipping store with supplier integrations, product setup, inventory sync and automated fulfillment. Unified Branding Experts builds Shopify dropshipping systems designed for organized store operations and scalable growth.",
   alternates: {

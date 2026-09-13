@@ -62,16 +62,22 @@ export default function FinalCTA() {
           </a>
         </div>
 
-        {/* Confidence Indicators */}
+        <p className="max-w-3xl mx-auto text-sm leading-relaxed text-[#ACACAC] text-center">
+          We build and optimize digital systems; we cannot guarantee sales or search rankings.
+          Results also depend on your offer, product-market fit, pricing, traffic, competition,
+          budget, customer service and ongoing marketing.
+        </p>
+
+        {/* Scope Indicators */}
         <div className="flex flex-wrap items-center justify-center gap-4 pt-2 text-xs font-mono-num text-[#838383] relative z-10">
           <span className="flex items-center gap-1.5">
             <ShieldCheck className="w-4 h-4 text-emerald-400" />
-            200+ Delivered Projects
+            Defined Project Scope
           </span>
           <span>•</span>
-          <span>90% Client Retention</span>
+          <span>Store Design &amp; Marketing</span>
           <span>•</span>
-          <span>24-Hour Scope Response</span>
+          <span>Discuss Your Requirements</span>
         </div>
       </div>
     </section>

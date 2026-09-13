@@ -9,26 +9,25 @@ const AISEOAndBranding = dynamic(() => import("@/components/home/AISEOAndBrandin
 const AppsAndAutomation = dynamic(() => import("@/components/home/AppsAndAutomation"));
 const HomePackagesGrid = dynamic(() => import("@/components/home/HomePackagesGrid"));
 const SelectedWork = dynamic(() => import("@/components/home/SelectedWork"));
-const TestimonialsSection = dynamic(() => import("@/components/home/TestimonialsSection"));
 const FinalCTA = dynamic(() => import("@/components/home/FinalCTA"));
 
 export const metadata: Metadata = {
   title: {
-    absolute: "Unified Branding Experts | Web Design, Shopify & AI SEO",
+    absolute: "eCommerce Web Design & Growth Agency | Unified Branding Experts",
   },
   description:
-    "Unified Branding Experts builds brand identities, websites and Shopify stores, with AI SEO and digital marketing to support business growth across the U.S.",
+    "Shopify and WooCommerce web design, branding, search optimization and growth marketing for U.S. businesses. Discuss your store, goals and project scope.",
   openGraph: {
-    title: "Unified Branding Experts | Web Design, Shopify & AI SEO",
+    title: "eCommerce Web Design & Growth Agency | Unified Branding Experts",
     description:
-      "Brand identity, web design, Shopify development, AI SEO and digital marketing from Unified Branding Experts.",
+      "Shopify and WooCommerce web design, branding, search optimization and growth marketing for U.S. businesses.",
     url: "https://unifiedbrandingexperts.com",
     siteName: "Unified Branding Experts",
   },
   twitter: {
-    title: "Unified Branding Experts | Web Design, Shopify & AI SEO",
+    title: "eCommerce Web Design & Growth Agency | Unified Branding Experts",
     description:
-      "Brand identity, web design, Shopify development, AI SEO and digital marketing from Unified Branding Experts.",
+      "Shopify and WooCommerce web design, branding, search optimization and growth marketing for U.S. businesses.",
   },
 };
 
@@ -57,7 +56,6 @@ export default function HomePage() {
       <SelectedWork />
 
       {/* 8. Verified Client Reviews & Trust Badges */}
-      <TestimonialsSection />
 
       {/* 9. Final High-Contrast Conversion Banner */}
       <FinalCTA />

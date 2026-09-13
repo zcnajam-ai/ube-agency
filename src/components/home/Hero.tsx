@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { ArrowUpRight, Smartphone, Bot, Palette } from "lucide-react";
+import { ArrowUpRight, Palette } from "lucide-react";
 
 import BackgroundGrid from "../common/BackgroundGrid";
 import PurpleGlowField from "../common/PurpleGlowField";
@@ -22,8 +22,6 @@ export default function Hero() {
     { label: "Google Marketing", href: "/services/google-ads", icon: <Google3DIcon size={18} /> },
     { label: "AI SEO & Overviews", href: "/ai-seo-packages", icon: <Heading3DSparkle size={18} /> },
     { label: "Branding (From $299)", href: "/branding-packages", icon: <Palette className="w-4 h-4 text-blue-600" /> },
-    { label: "Mobile Apps (From $999)", href: "/mobile-app-packages", icon: <Smartphone className="w-4 h-4 text-amber-600" /> },
-    { label: "AI Automation (From $349)", href: "/ai-automation-packages", icon: <Bot className="w-4 h-4 text-[#9F8BE7]" /> },
   ];
 
   return (
@@ -46,12 +44,12 @@ export default function Hero() {
             {/* Hero Headline & Intro */}
             <div className="space-y-4">
               <h1 className="font-display text-3xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-[#161616] tracking-tighter leading-[1.06] break-words">
-                High-Performance eCommerce, <br className="hidden sm:block" />
-                <span className="text-[#9F8BE7]">Growth Marketing</span> &amp; AI Systems.
+                eCommerce Web Design <br className="hidden sm:block" />
+                &amp; <span className="text-[#9F8BE7]">Growth Marketing</span>.
               </h1>
 
               <p className="text-sm sm:text-base md:text-lg lg:text-xl text-[#585858] font-body leading-relaxed max-w-3xl">
-                We scale ambitious brands with professional <strong className="text-[#161616] font-bold">Shopify &amp; Dropshipping storefronts</strong>, viral <strong className="text-[#161616] font-bold">TikTok Shop &amp; Meta ad campaigns</strong>, high-intent <strong className="text-[#161616] font-bold">Google Marketing</strong>, <strong className="text-[#161616] font-bold">AI SEO search visibility</strong>, custom <strong className="text-[#161616] font-bold">mobile apps</strong>, and intelligent <strong className="text-[#161616] font-bold">AI automations</strong>.
+                We help U.S. businesses build and improve Shopify and WooCommerce stores, connect marketplace operations, and bring their branding, search optimization and marketing into a clear plan. Start with the store you need today and scope the work that comes next.
               </p>
             </div>
 
@@ -83,7 +81,7 @@ export default function Hero() {
                 href="/packages"
                 className="px-6 py-3.5 rounded-full border border-[#E0DDDB] bg-white hover:border-[#9F8BE7] text-xs sm:text-sm font-display font-bold text-[#161616] transition-all flex items-center justify-center gap-2 shadow-xs w-full sm:w-auto min-h-[48px] whitespace-normal text-center"
               >
-                <span>Explore All Packages ($299+)</span>
+                <span>Compare Service Packages</span>
                 <ArrowUpRight className="w-4 h-4 text-[#9F8BE7] shrink-0" />
               </Link>
             </div>

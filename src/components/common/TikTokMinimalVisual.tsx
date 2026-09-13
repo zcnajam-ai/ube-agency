@@ -41,7 +41,7 @@ export default function TikTokMinimalVisual({ className = "" }: TikTokMinimalVis
         <div className="flex items-center gap-2 shrink-0">
           <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-[#25F4EE]/10 border border-[#25F4EE]/30 text-[9px] sm:text-[10px] font-mono-num font-bold text-[#25F4EE] whitespace-nowrap shrink-0">
             <span className="w-1.5 h-1.5 rounded-full bg-[#25F4EE] animate-pulse shrink-0" />
-            LIVE CAMPAIGN
+            ILLUSTRATIVE FORMAT
           </span>
         </div>
       </div>
@@ -57,7 +57,7 @@ export default function TikTokMinimalVisual({ className = "" }: TikTokMinimalVis
             </div>
             <div className="min-w-0">
               <div className="text-[11px] sm:text-xs font-display font-bold text-white flex items-center gap-1.5 whitespace-nowrap truncate">
-                <span>Viral Short-Form Video</span>
+                <span>Short-Form Video Creative</span>
                 <Sparkles className="w-3 h-3 text-[#25F4EE] shrink-0" />
               </div>
               <div className="text-[9px] sm:text-[10px] text-[#A0A0A0] font-mono-num flex items-center gap-1 whitespace-nowrap truncate">
@@ -70,15 +70,15 @@ export default function TikTokMinimalVisual({ className = "" }: TikTokMinimalVis
           <div className="flex items-center gap-2.5 sm:gap-3 text-[10px] sm:text-xs text-[#A0A0A0] font-mono-num whitespace-nowrap shrink-0">
             <span className="flex items-center gap-1 whitespace-nowrap">
               <Heart className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-[#FE2C55] fill-[#FE2C55] shrink-0" />
-              38.4K
+              Likes
             </span>
             <span className="flex items-center gap-1 whitespace-nowrap">
               <MessageCircle className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-white shrink-0" />
-              1.2K
+              Comments
             </span>
             <span className="flex items-center gap-1 whitespace-nowrap">
               <Share2 className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-[#25F4EE] shrink-0" />
-              4.6K
+              Shares
             </span>
           </div>
         </div>
@@ -91,7 +91,7 @@ export default function TikTokMinimalVisual({ className = "" }: TikTokMinimalVis
             </span>
             <span className="text-emerald-400 font-bold flex items-center gap-1 whitespace-nowrap shrink-0">
               <TrendingUp className="w-3 h-3 shrink-0" />
-              <span>High Engagement Rate</span>
+              <span>Engagement reporting</span>
             </span>
           </div>
 

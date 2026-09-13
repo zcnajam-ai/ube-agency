@@ -295,7 +295,7 @@ export default function ShopifyDevelopmentPage() {
             We build native Shopify storefronts with custom section architecture, clean Liquid logic, and responsive loading speeds, providing a frictionless shopping experience.
           </p>
           <p className="text-xs font-mono-num text-[#161616] font-bold">
-            Scale your brand on a rock-solid commerce foundation built for millions in GMV.
+            Build a commerce foundation around your catalog, customer journey and operating requirements.
           </p>
         </div>
       </section>

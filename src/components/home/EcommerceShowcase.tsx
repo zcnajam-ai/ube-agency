@@ -52,7 +52,7 @@ export default function EcommerceShowcase() {
               From Storefront to Scale.
             </h2>
             <p className="text-sm sm:text-base text-[#585858] font-body max-w-2xl">
-              We engineer conversion-focused eCommerce experiences on Shopify Plus, WooCommerce, and modern Headless Commerce architectures built to handle millions in monthly transaction volume.
+              We engineer conversion-focused eCommerce experiences on Shopify Plus, WooCommerce, and modern Headless Commerce architectures scoped around your catalog, integrations and store operations.
             </p>
           </div>
 
