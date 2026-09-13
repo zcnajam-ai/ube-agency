@@ -73,6 +73,14 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     return [
+      // Keep previously advertised icon URLs working with the current brand mark.
+      ...[
+        "/favicon.ico", "/favicon.svg", "/icon.png", "/apple-icon.png",
+        "/favicon-16x16.png", "/favicon-32x32.png", "/favicon-48x48.png",
+        "/favicon-96x96.png", "/icon-192x192.png", "/icon-512x512.png",
+        "/apple-touch-icon.png", "/web-app-manifest-192x192.png",
+        "/web-app-manifest-512x512.png",
+      ].map(source => ({ source, destination: "/favicon.jpg", permanent: true })),
       // Legacy Portfolio URLs -> Canonical Work Destination (/work)
       { source: "/portfolio", destination: "/work", permanent: true },
       { source: "/portfolio/", destination: "/work", permanent: true },
