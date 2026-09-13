@@ -1,3 +1,4 @@
+import { SHOPIFY_SETUP_PRICE_LABEL, SHOPIFY_SETUP_START_PRICE } from "@/data/commerce-pricing";
 import React from "react";
 import StoreManagementLink from "@/components/services/StoreManagementLink";
 import Link from "next/link";
@@ -19,7 +20,7 @@ import {
 export const metadata: Metadata = {
   title: "Shopify Store Setup Services & Pricing",
   description:
-    "Shopify store setup services from $399, including theme configuration, product organization, payments, shipping, responsive design and custom development.",
+    `Shopify store setup services from ${SHOPIFY_SETUP_PRICE_LABEL}, including theme configuration, product organization, payments, shipping, responsive design and custom development.`,
   alternates: {
     canonical: "https://unifiedbrandingexperts.com/services/shopify-development",
   },
@@ -124,7 +125,7 @@ export default function ShopifyDevelopmentPage() {
     },
     {
       q: "How much does Shopify store setup cost?",
-      a: "UBE Shopify and ecommerce setup packages start at $399. Larger catalogs, custom themes, migrations, third-party apps, subscriptions, copywriting, and private integrations can increase the total scope. We confirm all included work in a written proposal before development begins.",
+      a: `UBE Shopify and ecommerce setup packages start at ${SHOPIFY_SETUP_PRICE_LABEL}. Larger catalogs, custom themes, migrations, third-party apps, subscriptions, copywriting, and private integrations can increase the total scope. We confirm all included work in a written proposal before development begins.`,
     },
     {
       q: "Can you help set up automated dropshipping on Shopify?",
@@ -155,7 +156,7 @@ export default function ShopifyDevelopmentPage() {
     url: "https://unifiedbrandingexperts.com/services/shopify-development",
     offers: {
       "@type": "Offer",
-      price: "399.00",
+      price: SHOPIFY_SETUP_START_PRICE.toFixed(2),
       priceCurrency: "USD",
       url: "https://unifiedbrandingexperts.com/ecommerce-growth-packages",
     },
@@ -241,7 +242,7 @@ export default function ShopifyDevelopmentPage() {
             >
               <span>View eCom Packages</span>
               <span className="text-xs font-mono-num text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-full">
-                From $399
+                From {SHOPIFY_SETUP_PRICE_LABEL}
               </span>
               <ArrowUpRight className="w-4 h-4 text-[#9F8BE7]" />
             </Link>
@@ -261,7 +262,7 @@ export default function ShopifyDevelopmentPage() {
             />
             <div className="absolute bottom-3 left-3 right-3 p-3 rounded-2xl bg-white/90 backdrop-blur-md border border-[#E0DDDB] text-xs font-mono-num text-[#161616] flex items-center justify-between shadow-xs">
               <span className="font-bold">SHOPIFY • DROPSHIPPING • ECOMMERCE</span>
-              <span className="text-emerald-600 font-bold">FROM $450</span>
+              <span className="text-emerald-600 font-bold">FROM {SHOPIFY_SETUP_PRICE_LABEL}</span>
             </div>
           </div>
         </div>
@@ -412,7 +413,7 @@ export default function ShopifyDevelopmentPage() {
             Explore eCommerce Packages &amp; Pricing
           </h2>
           <p className="text-xs sm:text-sm text-[#585858] font-body">
-            Compare eCommerce Launch ($399), Growth ($799), and Scale ($999) packages.
+            Compare eCommerce Launch ({SHOPIFY_SETUP_PRICE_LABEL}), Growth ($799), and Scale ($999) packages.
           </p>
         </div>
 

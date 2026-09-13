@@ -1,3 +1,4 @@
+import { SHOPIFY_SETUP_PRICE_LABEL } from "@/data/commerce-pricing";
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -54,12 +55,12 @@ export default function PackagesHubPage() {
       title: "eCommerce Growth Packages",
       slug: "/ecommerce-growth-packages",
       icon: <ShoppingBag className="w-6 h-6 text-[#9F8BE7]" />,
-      startingPrice: "From $399",
+      startingPrice: `From ${SHOPIFY_SETUP_PRICE_LABEL}`,
       bestFor: "Shopify, Amazon, Etsy & eBay Brands",
       description:
         "Multi-channel storefront development, dropshipping supplier integrations, product listing SEO, marketplace optimization, and scalable commerce systems.",
       image: "/images/projects/happy-knot/hero.png",
-      tiers: ["eCommerce Launch ($399)", "eCommerce Growth ($799)", "eCommerce Scale ($999)", "Multi-Channel Custom"],
+      tiers: [`eCommerce Launch (${SHOPIFY_SETUP_PRICE_LABEL})`, "eCommerce Growth ($799)", "eCommerce Scale ($999)", "Multi-Channel Custom"],
     },
     {
       title: "Branding Packages",

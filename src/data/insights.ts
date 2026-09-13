@@ -1,3 +1,4 @@
+import { SHOPIFY_SETUP_PRICE_LABEL } from "@/data/commerce-pricing";
 export interface TableData {
   headers: string[];
   rows: string[][];
@@ -841,7 +842,7 @@ export const INSIGHTS: InsightArticle[] = [
     },
     packageCta: {
       title: "Shopify & eCommerce Growth Packages",
-      priceBadge: "From $450",
+      priceBadge: `From ${SHOPIFY_SETUP_PRICE_LABEL}`,
       href: "/ecommerce-growth-packages",
       buttonText: "View eCommerce Packages"
     },
@@ -1343,11 +1344,11 @@ export const INSIGHTS: InsightArticle[] = [
       avatar: "/images/logo/ube-png-black.png",
     },
     summary:
-      "A complete breakdown of Shopify store setup costs in 2026. Review official Shopify subscription tiers ($39-$399/mo), custom theme design costs ($450-$1,400), essential apps, and payment gateway fees.",
+      `Shopify store setup costs explained: UBE setup starts at ${SHOPIFY_SETUP_PRICE_LABEL}. Budget separately for platform subscriptions, themes, apps, domains and payment fees.`,
     coverImage: "/images/official/ecommerce/storefront-setup.jpeg",
     primaryIntent: "Shopify store setup, Shopify store cost, Shopify website design, Shopify developer",
     quickAnswer:
-      "Setting up a professional Shopify store in 2026 costs between $450 and $1,400 for custom design and development with an agency, plus Shopify's platform subscription ($39/mo for Basic, $105/mo for Shopify, $399/mo for Advanced) and approximately $14/year for a custom domain.",
+      `UBE Shopify setup starts at ${SHOPIFY_SETUP_PRICE_LABEL}. Custom development is scoped separately; recurring platform, app and payment fees are additional.`,
     tableOfContents: [
       { id: "cost-summary", title: "Complete Shopify Cost Breakdown (2026)" },
       { id: "shopify-plans", title: "Official Shopify Subscription Plans Explained" },
@@ -1367,7 +1368,7 @@ export const INSIGHTS: InsightArticle[] = [
           rows: [
             ["Shopify Platform Subscription", "$39 – $399 / mo", "Monthly", "Basic ($39), Shopify ($105), Advanced ($399)"],
             ["Custom Domain Name", "$14 – $20 / yr", "Annual", ".com domain via Namecheap or Shopify"],
-            ["Custom Shopify Theme & Setup (UBE)", "$450 – $1,400", "One-Time", "Shopify 2.0, dropshipping/3PL, custom checkout"],
+            ["Custom Shopify Theme & Setup (UBE)", `${SHOPIFY_SETUP_PRICE_LABEL} – $1,400`, "One-Time", "Shopify 2.0, dropshipping/3PL, custom checkout"],
             ["Essential Shopify Apps (Klaviyo, Reviews)", "$0 – $80 / mo", "Monthly", "Email automation, product reviews, upsells"],
             ["Transaction Fees", "2.4% – 2.9% + 30¢", "Per Sale", "Standard credit card processing rate"],
           ],
@@ -1387,7 +1388,7 @@ export const INSIGHTS: InsightArticle[] = [
         h2: "Custom Shopify Development & Setup Costs",
         body: [
           "While DIY templates exist, serious eCommerce merchants invest in custom Shopify 2.0 themes to maximize mobile speed and checkout conversion.",
-          "Unified Branding Experts offers fixed-price eCommerce packages starting at $450 (up to 150 products), $700 for Standard stores (up to 300 products), and $1,400 for Enterprise custom platforms.",
+          `Unified Branding Experts offers fixed-price eCommerce packages starting at ${SHOPIFY_SETUP_PRICE_LABEL} (up to 150 products), $700 for Standard stores (up to 300 products), and $1,400 for Enterprise custom platforms.`,
         ],
       },
       {
@@ -1412,7 +1413,7 @@ export const INSIGHTS: InsightArticle[] = [
     faqs: [
       {
         q: "How much does a custom Shopify store cost with Unified Branding Experts?",
-        a: "Our custom eCommerce and Shopify setup packages range from $450 for Basic (up to 150 products) to $1,400 for Enterprise custom builds.",
+        a: `Our custom eCommerce and Shopify setup packages range from ${SHOPIFY_SETUP_PRICE_LABEL} for Basic (up to 150 products) to $1,400 for Enterprise custom builds.`,
       },
       {
         q: "Can I use dropshipping on Shopify?",
@@ -1436,7 +1437,7 @@ export const INSIGHTS: InsightArticle[] = [
     },
     packageCta: {
       title: "View Custom eCommerce Packages",
-      priceBadge: "From $450 One-Time",
+      priceBadge: `From ${SHOPIFY_SETUP_PRICE_LABEL} One-Time`,
       href: "/our-custom-web-design-development-packages",
       buttonText: "Compare eCom Packages",
     },
@@ -1574,7 +1575,7 @@ export const INSIGHTS: InsightArticle[] = [
     },
     packageCta: {
       title: "Explore eCommerce Packages",
-      priceBadge: "From $450 One-Time",
+      priceBadge: `From ${SHOPIFY_SETUP_PRICE_LABEL} One-Time`,
       href: "/our-custom-web-design-development-packages",
       buttonText: "View eCom Packages",
     },
@@ -1972,7 +1973,7 @@ export const INSIGHTS: InsightArticle[] = [
     },
     packageCta: {
       title: "View eCommerce Packages",
-      priceBadge: "From $450",
+      priceBadge: `From ${SHOPIFY_SETUP_PRICE_LABEL}`,
       href: "/our-custom-web-design-development-packages",
       buttonText: "View Packages",
     },
@@ -2068,7 +2069,7 @@ export const INSIGHTS: InsightArticle[] = [
   "summary": "Detailed 2026 breakdown of Shopify store setup costs, including design, development, apps, themes, payment processing, and agency pricing tiers.",
   "coverImage": "/images/editorial/shopify-storefront-development.webp",
   "primaryIntent": "Commercial budgeting and platform cost planning for Shopify storefronts.",
-  "quickAnswer": "In 2026, building a professional Shopify store typically ranges from $450 to $3,500+ depending on whether you choose a custom theme setup, complex app integrations, or custom Liquid engineering. Core recurring expenses include Shopify monthly plans ($39/mo Basic, $105/mo Shopify, $399/mo Advanced), domain registration (~$15/yr), and payment processing fees (2.9% + 30¢ on Basic).",
+  "quickAnswer": `UBE Shopify setup starts at ${SHOPIFY_SETUP_PRICE_LABEL}. The final project price depends on the agreed catalog, theme work and integrations. Shopify subscriptions, paid themes, apps, domains and transaction fees are separate.`,
   "tableOfContents": [
     {
       "id": "core-cost-factors",
@@ -2126,7 +2127,7 @@ export const INSIGHTS: InsightArticle[] = [
           ],
           [
             "Professional Agency Setup",
-            "$450 – $1,500",
+            `UBE from ${SHOPIFY_SETUP_PRICE_LABEL}; custom work quoted separately`,
             "Growing retail brands & dropshippers",
             "Custom theme setup, catalog import, conversion design, speed optimization"
           ],
@@ -2172,7 +2173,7 @@ export const INSIGHTS: InsightArticle[] = [
   "faqs": [
     {
       "q": "How much does a basic Shopify store cost to build?",
-      "a": "A professional basic Shopify store setup typically starts at $450 with Unified Branding Experts, covering theme customization, catalog setup, and mobile optimization."
+      "a": `A professional basic Shopify store setup typically starts at ${SHOPIFY_SETUP_PRICE_LABEL} with Unified Branding Experts, covering theme customization, catalog setup, and mobile optimization.`
     },
     {
       "q": "Are there transaction fees on Shopify?",
@@ -2192,7 +2193,7 @@ export const INSIGHTS: InsightArticle[] = [
   },
   "packageCta": {
     "title": "eCommerce Growth Packages",
-    "priceBadge": "From $450",
+    "priceBadge": `From ${SHOPIFY_SETUP_PRICE_LABEL}`,
     "href": "/ecommerce-growth-packages",
     "buttonText": "Explore Growth Packages"
   },
@@ -2325,7 +2326,7 @@ export const INSIGHTS: InsightArticle[] = [
   },
   "packageCta": {
     "title": "eCommerce Growth Packages",
-    "priceBadge": "From $450",
+    "priceBadge": `From ${SHOPIFY_SETUP_PRICE_LABEL}`,
     "href": "/ecommerce-growth-packages",
     "buttonText": "Explore Growth Packages"
   },
@@ -2389,7 +2390,7 @@ export const INSIGHTS: InsightArticle[] = [
         "• <strong>Shopify Platform Plan:</strong> $39/month (Basic plan).",
         "• <strong>Custom Domain Name:</strong> ~$15/year.",
         "• <strong>Supplier Integration Apps:</strong> $0–$49/month (DSers free tier, Zendrop Pro, etc.).",
-        "• <strong>Professional Store Setup:</strong> $450–$1,500 for custom theme setup, catalog import, and automated routing.",
+        `• <strong>Professional Store Setup:</strong> UBE setup starts at ${SHOPIFY_SETUP_PRICE_LABEL}; catalog imports, theme work and supplier integrations depend on the agreed package.`,
         "• <strong>Initial Product Samples:</strong> $50–$150 to verify product quality and shoot custom media."
       ]
     },
@@ -2422,7 +2423,7 @@ export const INSIGHTS: InsightArticle[] = [
         "rows": [
           [
             "Storefront Development",
-            "$450 – $1,200",
+            `UBE from ${SHOPIFY_SETUP_PRICE_LABEL}; custom work quoted separately`,
             "Professional Shopify setup, theme customization & app routing"
           ],
           [
@@ -2463,7 +2464,7 @@ export const INSIGHTS: InsightArticle[] = [
   },
   "packageCta": {
     "title": "eCommerce Growth Packages",
-    "priceBadge": "From $450",
+    "priceBadge": `From ${SHOPIFY_SETUP_PRICE_LABEL}`,
     "href": "/ecommerce-growth-packages",
     "buttonText": "Explore Growth Packages"
   },
@@ -2733,7 +2734,7 @@ export const INSIGHTS: InsightArticle[] = [
   },
   "packageCta": {
     "title": "eCommerce Growth Packages",
-    "priceBadge": "From $450",
+    "priceBadge": `From ${SHOPIFY_SETUP_PRICE_LABEL}`,
     "href": "/ecommerce-growth-packages",
     "buttonText": "Explore Growth Packages"
   },
@@ -2854,7 +2855,7 @@ export const INSIGHTS: InsightArticle[] = [
   },
   "packageCta": {
     "title": "eCommerce Growth Packages",
-    "priceBadge": "From $450",
+    "priceBadge": `From ${SHOPIFY_SETUP_PRICE_LABEL}`,
     "href": "/ecommerce-growth-packages",
     "buttonText": "Explore Growth Packages"
   },

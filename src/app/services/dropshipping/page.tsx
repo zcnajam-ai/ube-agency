@@ -1,3 +1,4 @@
+import { SHOPIFY_SETUP_START_PRICE } from "@/data/commerce-pricing";
 import React from "react";
 import StoreManagementLink from "@/components/services/StoreManagementLink";
 import Link from "next/link";
@@ -66,7 +67,7 @@ export default function DropshippingServicePage() {
     url: "https://unifiedbrandingexperts.com/services/dropshipping",
     offers: {
       "@type": "Offer",
-      price: "450.00",
+      price: SHOPIFY_SETUP_START_PRICE.toFixed(2),
       priceCurrency: "USD",
       url: "https://unifiedbrandingexperts.com/ecommerce-growth-packages",
     },
