@@ -17,6 +17,38 @@ import {
 import { INSIGHTS, getInsightBySlug, ArticleFAQ, ArticleSection } from "@/data/insights";
 import { COMPANY_INFO } from "@/data/company";
 
+const MONTH_NUMBER: Record<string, string> = {
+  January: "01",
+  February: "02",
+  March: "03",
+  April: "04",
+  May: "05",
+  June: "06",
+  July: "07",
+  August: "08",
+  September: "09",
+  October: "10",
+  November: "11",
+  December: "12",
+};
+
+function toSchemaDate(value: string): string {
+  const normalized = value.trim();
+
+  if (/^\d{4}-\d{2}(-\d{2})?$/.test(normalized)) {
+    return normalized;
+  }
+
+  const [month, year] = normalized.split(/\s+/);
+  const monthNumber = MONTH_NUMBER[month];
+
+  if (!monthNumber || !/^\d{4}$/.test(year)) {
+    throw new Error(`Invalid insight date: ${value}`);
+  }
+
+  return `${year}-${monthNumber}`;
+}
+
 export function generateStaticParams() {
   return INSIGHTS.map((article) => ({
     slug: article.slug,
@@ -34,6 +66,8 @@ export async function generateMetadata({
   if (!article) return { title: "Article Not Found | Unified Branding Experts" };
 
   const canonicalUrl = `https://unifiedbrandingexperts.com/insights/${article.slug}`;
+  const publishedTime = toSchemaDate(article.publishedAt);
+  const modifiedTime = toSchemaDate(article.updatedAt);
 
   const ogImageUrl = article.coverImage
     ? article.coverImage.startsWith("http")
@@ -52,8 +86,8 @@ export async function generateMetadata({
       description: article.summary,
       url: canonicalUrl,
       type: "article",
-      publishedTime: "2026-02-01T00:00:00Z",
-      modifiedTime: "2026-02-18T00:00:00Z",
+      publishedTime,
+      modifiedTime,
       authors: [article.author.name],
       images: [
         {
@@ -83,6 +117,9 @@ export default async function InsightArticlePage({
 
   if (!article) return notFound();
 
+  const publishedDate = toSchemaDate(article.publishedAt);
+  const modifiedDate = toSchemaDate(article.updatedAt);
+
   // Find related articles
   const relatedArticles = article.relatedSlugs
     ? INSIGHTS.filter((a) => article.relatedSlugs.includes(a.slug))
@@ -95,8 +132,8 @@ export default async function InsightArticlePage({
     headline: article.title,
     description: article.summary,
     image: `https://unifiedbrandingexperts.com${article.coverImage}`,
-    datePublished: "2026-02-01T00:00:00Z",
-    dateModified: "2026-02-18T00:00:00Z",
+    datePublished: publishedDate,
+    dateModified: modifiedDate,
     author: {
       "@type": "Person",
       name: article.author.name,
@@ -199,10 +236,14 @@ export default async function InsightArticlePage({
             <span className="px-3 py-1 rounded-full bg-[#FAF7F6] border border-[#E0DDDB] text-xs font-mono-num text-[#585858]">
               {article.kicker}
             </span>
-            <div className="flex items-center gap-4 text-xs font-mono-num text-[#585858] ml-auto">
+            <div className="flex flex-wrap items-center gap-4 text-xs font-mono-num text-[#585858] sm:ml-auto">
               <span className="flex items-center gap-1.5">
                 <Calendar className="w-3.5 h-3.5" />
-                Updated {article.updatedAt}
+                Published {article.publishedAt}
+              </span>
+              <span className="flex items-center gap-1.5">
+                <Calendar className="w-3.5 h-3.5" />
+                Last updated {article.updatedAt}
               </span>
               <span className="flex items-center gap-1.5">
                 <Clock className="w-3.5 h-3.5" />
