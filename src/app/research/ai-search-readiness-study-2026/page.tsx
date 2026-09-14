@@ -811,7 +811,7 @@ export default function AiSearchReadinessStudyPage() {
             <div>
               <h2 className="text-lg sm:text-2xl font-bold text-slate-900">Cite This Research</h2>
               <p className="text-xs sm:text-sm text-slate-600 mt-1">
-                Suggested academic and editorial citation format.
+                Suggested academic and editorial citation format. <Link href="/ai-seo" className="font-semibold text-blue-700 underline hover:text-blue-900">Read the AI SEO methodology that produced this study</Link>.
               </p>
             </div>
             <a
