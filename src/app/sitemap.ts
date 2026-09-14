@@ -14,6 +14,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/work` },
     { url: `${baseUrl}/about` },
     { url: `${baseUrl}/insights` },
+    { url: `${baseUrl}/ai-seo`, lastModified: new Date("2026-09-14") },
     { url: `${baseUrl}/research/ai-search-readiness-study-2026`, lastModified: new Date("2026-08-31") },
     { url: `${baseUrl}/contact` },
   ];
