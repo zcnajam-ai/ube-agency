@@ -15,17 +15,7 @@ export default function HeroVideoClient() {
       }
     }, 400);
 
-    // 1. Check existing session sound preference
-    const savedPref = sessionStorage.getItem("ube_video_sound_pref");
-    if (savedPref === "unmuted") {
-      setIsMuted(false);
-      if (videoRef.current) {
-        videoRef.current.muted = false;
-        videoRef.current.volume = 0.65;
-      }
-    }
-
-    // 2. Unmute on visitor's FIRST trusted click or touch interaction
+    // Unmute on the visitor's first trusted click or touch interaction.
     const handleFirstInteraction = () => {
       const pref = sessionStorage.getItem("ube_video_sound_pref");
       if (pref !== "muted" && videoRef.current) {
