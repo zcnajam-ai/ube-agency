@@ -1,5 +1,8 @@
 "use client";
 
+import { SHOPIFY_SETUP_PRICE_LABEL } from "@/data/commerce-pricing";
+
+
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -41,12 +44,12 @@ export default function FullscreenMenu({ isOpen, onClose }: FullscreenMenuProps)
 
   const packageLinks = [
     { label: "eCommerce Store Management", href: "/ecommerce-store-management-packages", starting: "From $249/mo" },
-    { label: "eCommerce Growth Plans", href: "/ecommerce-growth-packages", starting: "From $399" },
+    { label: "eCommerce Growth Plans", href: "/ecommerce-growth-packages", starting: `From ${SHOPIFY_SETUP_PRICE_LABEL}` },
     { label: "Logo Design Packages", href: "/branding-packages", starting: "From $299" },
     { label: "Web Design Packages", href: "/web-design-packages", starting: "From $300" },
     { label: "Website Dev Packages", href: "/web-design-packages", starting: "From $300" },
     { label: "Digital Marketing Packages", href: "/digital-marketing-packages", starting: "From $299/mo" },
-    { label: "Custom Web & eCom Plans", href: "/ecommerce-growth-packages", starting: "From $450" },
+    { label: "Custom Web & eCom Plans", href: "/ecommerce-growth-packages", starting: `From ${SHOPIFY_SETUP_PRICE_LABEL}` },
     { label: "Content Writing Packages", href: "/packages", starting: "From $199" },
     { label: "AI SEO Packages", href: "/ai-seo-packages", starting: "From $349" },
     { label: "TikTok Marketing Packages", href: "/tiktok-marketing-packages", starting: "From $299/mo" },

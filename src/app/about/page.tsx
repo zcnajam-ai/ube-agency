@@ -152,7 +152,7 @@ export default function AboutPage() {
             2. High-Performance Engineering
           </h3>
           <p className="text-xs text-[#585858] font-body leading-relaxed">
-            Built on clean React/Next.js, modular Shopify Liquid, and semantic HTML structure optimized for sub-second load times and 90+ Core Web Vitals performance.
+            We review loading performance, mobile layouts and semantic HTML as part of the agreed website scope. Results depend on the platform, theme, content and third-party integrations.
           </p>
         </div>
         <div className="p-8 rounded-3xl bg-white border border-[#E0DDDB] space-y-3 shadow-xs">

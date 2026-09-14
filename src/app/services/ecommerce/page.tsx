@@ -1,3 +1,4 @@
+import { SHOPIFY_SETUP_PRICE_LABEL } from "@/data/commerce-pricing";
 import React from "react";
 import StoreManagementLink from "@/components/services/StoreManagementLink";
 import Link from "next/link";
@@ -695,7 +696,7 @@ export default function EcommerceGrowthServicePage() {
             <div className="space-y-4">
               <div className="flex items-center justify-between">
                 <span className="text-xs font-mono-num font-bold text-[#161616]">eCommerce Launch</span>
-                <span className="text-lg font-mono-num font-bold text-emerald-600">$399</span>
+                <span className="text-lg font-mono-num font-bold text-emerald-600">{SHOPIFY_SETUP_PRICE_LABEL}</span>
               </div>
               <p className="text-xs text-[#585858]">
                 Best for new businesses needing a professional storefront foundation up to 50 products.
@@ -832,7 +833,7 @@ export default function EcommerceGrowthServicePage() {
           Ready to Build a Stronger eCommerce System?
         </h2>
         <p className="text-sm sm:text-base text-[#ACACAC] max-w-xl mx-auto">
-          Whether you're launching on Shopify, expanding to Amazon, building an Etsy presence, optimizing eBay or connecting multiple selling channels, Unified Branding Experts can help create the foundation.
+          Whether you&apos;re launching on Shopify, expanding to Amazon, building an Etsy presence, optimizing eBay or connecting multiple selling channels, Unified Branding Experts can help create the foundation.
         </p>
         <div className="flex flex-wrap items-center justify-center gap-4 pt-2">
           <Link

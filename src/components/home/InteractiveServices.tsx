@@ -1,5 +1,8 @@
 "use client";
 
+import { SHOPIFY_SETUP_PRICE_LABEL } from "@/data/commerce-pricing";
+
+
 import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -36,7 +39,7 @@ const SERVICE_VISUALS: Record<
     metrics: "Custom Store Architecture",
     packageUrl: "/our-custom-web-design-development-packages",
     packageText: "Explore eCommerce Packages",
-    starting: "From $450",
+    starting: `From ${SHOPIFY_SETUP_PRICE_LABEL}`,
   },
   "shopify-development-service": {
     image: "/images/editorial/shopify-storefront-development.webp",
@@ -44,7 +47,7 @@ const SERVICE_VISUALS: Record<
     metrics: "Custom Theme & Integrations",
     packageUrl: "/our-custom-web-design-development-packages",
     packageText: "Explore Shopify Packages",
-    starting: "From $450",
+    starting: `From ${SHOPIFY_SETUP_PRICE_LABEL}`,
   },
   "etsy-shop-setup-service": {
     image: "/images/editorial/etsy-seller-listing.webp",

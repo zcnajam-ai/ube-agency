@@ -29,7 +29,7 @@ export default function ProductListingOptimizationVisual() {
           </div>
           <div className="space-y-2 text-xs text-[#585858]">
             <div className="p-3 rounded-xl bg-white border border-rose-100 font-mono-num text-[11px] space-y-1">
-              <p className="font-bold text-[#161616]">Title: "Cute Handmade Pillow Case White"</p>
+              <p className="font-bold text-[#161616]">Title: &ldquo;Cute Handmade Pillow Case White&rdquo;</p>
               <p className="text-rose-500">❌ Vague title missing platform keywords &amp; materials</p>
             </div>
             <ul className="space-y-1.5 text-[11px]">
@@ -58,7 +58,7 @@ export default function ProductListingOptimizationVisual() {
           <div className="space-y-2 text-xs text-[#161616]">
             <div className="p-3 rounded-xl bg-white border border-emerald-200 font-mono-num text-[11px] space-y-1 shadow-2xs">
               <p className="font-bold text-[#161616]">
-                Title: "Organic Cotton Tufted Boho Pillow Cover (18x18) — Textured Farmhouse Cushion"
+                Title: &ldquo;Organic Cotton Tufted Boho Pillow Cover (18x18) — Textured Farmhouse Cushion&rdquo;
               </p>
               <p className="text-emerald-600 font-bold">✓ High-intent search terms + material specs included</p>
             </div>

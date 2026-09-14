@@ -1,5 +1,8 @@
 "use client";
 
+import { SHOPIFY_SETUP_PRICE_LABEL } from "@/data/commerce-pricing";
+
+
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -184,7 +187,7 @@ export default function Footer() {
               <li>
                 <Link href="/ecommerce-growth-packages" className="hover:text-white transition-colors flex items-center justify-between py-1 min-h-[28px]">
                   <span>eCommerce Growth Plans</span>
-                  <span className="text-[10px] text-emerald-400 font-mono-num font-bold">$399+</span>
+                  <span className="text-[10px] text-emerald-400 font-mono-num font-bold">{SHOPIFY_SETUP_PRICE_LABEL}+</span>
                 </Link>
               </li>
               <li>

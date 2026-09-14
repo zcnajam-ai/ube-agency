@@ -1,3 +1,4 @@
+import { SHOPIFY_SETUP_PRICE_LABEL, SHOPIFY_SETUP_START_PRICE } from "@/data/commerce-pricing";
 import React from "react";
 import StoreManagementLink from "@/components/services/StoreManagementLink";
 import Link from "next/link";
@@ -15,14 +16,14 @@ import ServiceProjectModalTrigger from "@/components/services/ServiceProjectModa
 export const metadata: Metadata = {
   title: "eCommerce Growth & Marketing Packages | Shopify & Marketplaces",
   description:
-    "Compare eCommerce growth and marketing packages for Shopify, Amazon, Etsy and eBay. Store builds start at $399; ongoing SEO and advertising are scoped separately.",
+    `Compare eCommerce growth and marketing packages for Shopify, Amazon, Etsy and eBay. Store builds start at ${SHOPIFY_SETUP_PRICE_LABEL}; ongoing SEO and advertising are scoped separately.`,
   alternates: {
     canonical: "https://unifiedbrandingexperts.com/ecommerce-growth-packages",
   },
   openGraph: {
     title: "eCommerce Packages & Pricing | Shopify, Amazon, Etsy & eBay | UBE",
     description:
-      "Compare eCommerce development and growth packages from Unified Branding Experts. Shopify setup, marketplace optimization, dropshipping integrations, SEO, automation and multi-channel growth plans from $399.",
+      `Compare eCommerce development and growth packages from Unified Branding Experts. Shopify setup, marketplace optimization, dropshipping integrations, SEO, automation and multi-channel growth plans from ${SHOPIFY_SETUP_PRICE_LABEL}.`,
     url: "https://unifiedbrandingexperts.com/ecommerce-growth-packages",
     siteName: "Unified Branding Experts",
     locale: "en_US",
@@ -40,7 +41,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "eCommerce Packages & Pricing | Shopify, Amazon, Etsy & eBay | UBE",
     description:
-      "Shopify store setup, dropshipping integrations, marketplace optimization, product SEO, and multi-channel growth plans from $399.",
+      `Shopify store setup, dropshipping integrations, marketplace optimization, product SEO, and multi-channel growth plans from ${SHOPIFY_SETUP_PRICE_LABEL}.`,
     images: ["https://unifiedbrandingexperts.com/og-default.png"],
   },
 };
@@ -55,7 +56,7 @@ export default function EcommercePackagesPage() {
         "url": "https://unifiedbrandingexperts.com/ecommerce-growth-packages",
         "name": "eCommerce Packages & Pricing | Shopify, Amazon, Etsy & eBay | UBE",
         "description":
-          "Compare eCommerce development and growth packages from Unified Branding Experts. Shopify setup, marketplace optimization, dropshipping integrations, SEO, automation and multi-channel growth plans from $399.",
+          `Compare eCommerce development and growth packages from Unified Branding Experts. Shopify setup, marketplace optimization, dropshipping integrations, SEO, automation and multi-channel growth plans from ${SHOPIFY_SETUP_PRICE_LABEL}.`,
         "breadcrumb": {
           "@type": "BreadcrumbList",
           "itemListElement": [
@@ -83,7 +84,7 @@ export default function EcommercePackagesPage() {
             {
               "@type": "Offer",
               "name": "eCommerce Launch Package",
-              "price": "399.00",
+              "price": SHOPIFY_SETUP_START_PRICE.toFixed(2),
               "priceCurrency": "USD",
               "url": "https://unifiedbrandingexperts.com/ecommerce-growth-packages#launch",
               "description": "Professional storefront setup for up to 50 products, payment gateway configuration, mobile responsive design, and essential pages.",
@@ -141,7 +142,7 @@ export default function EcommercePackagesPage() {
       <section className="text-center space-y-6 max-w-4xl mx-auto">
         <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-[#E0DDDB] text-xs font-mono-num text-[#9F8BE7] font-bold shadow-xs">
           <Sparkles className="w-3.5 h-3.5" />
-          <span>STARTING FROM $399 — TRANSPARENT COMMERCIAL PLANS</span>
+          <span>STARTING FROM {SHOPIFY_SETUP_PRICE_LABEL} — TRANSPARENT COMMERCIAL PLANS</span>
         </div>
 
         <h1 className="font-display text-4xl sm:text-6xl font-bold tracking-tight text-[#161616]">
@@ -177,7 +178,7 @@ export default function EcommercePackagesPage() {
                 eCommerce Launch
               </h3>
               <div className="flex items-baseline gap-1">
-                <span className="font-mono-num text-3xl font-bold text-[#161616]">$399</span>
+                <span className="font-mono-num text-3xl font-bold text-[#161616]">{SHOPIFY_SETUP_PRICE_LABEL}</span>
                 <span className="text-xs font-mono-num text-[#585858]">one-time</span>
               </div>
               <p className="text-xs text-[#585858] font-body leading-relaxed pt-1">
@@ -233,7 +234,7 @@ export default function EcommercePackagesPage() {
           </div>
 
           <div className="pt-4 border-t border-[#E0DDDB]">
-            <ServiceProjectModalTrigger label="Start with eCommerce Launch — $399" />
+            <ServiceProjectModalTrigger label={`Start with eCommerce Launch — ${SHOPIFY_SETUP_PRICE_LABEL}`} />
           </div>
         </div>
 
@@ -442,7 +443,7 @@ export default function EcommercePackagesPage() {
             <thead>
               <tr className="border-b border-[#E0DDDB] bg-[#FAF7F6] text-xs font-display font-bold text-[#161616]">
                 <th className="p-4 sm:p-5">Feature Deliverable</th>
-                <th className="p-4 sm:p-5 text-center w-36">Launch ($399)</th>
+                <th className="p-4 sm:p-5 text-center w-36">Launch ({SHOPIFY_SETUP_PRICE_LABEL})</th>
                 <th className="p-4 sm:p-5 text-center w-36 bg-[#9F8BE7]/10 text-[#9F8BE7]">Growth ($799)</th>
                 <th className="p-4 sm:p-5 text-center w-36">Scale ($999)</th>
               </tr>

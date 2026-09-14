@@ -32,12 +32,12 @@ export interface CompanyInfo {
   ratings: {
     trustpilot: {
       score: string;
-      reviewsCount: number;
+      reviewsCount?: number;
       url: string;
     };
     google: {
       score: string;
-      reviewsCount: number;
+      reviewsCount?: number;
       url: string;
     };
     crunchbase: {
@@ -63,36 +63,8 @@ export const COMPANY_INFO: CompanyInfo = {
     country: "USA",
     full: "Texas, USA",
   },
-  stats: [
-    {
-      value: "200+",
-      number: 200,
-      suffix: "+",
-      label: "Projects Delivered",
-      sublabel: "Across eCommerce, web applications & brand identity",
-    },
-    {
-      value: "90%",
-      number: 90,
-      suffix: "%",
-      label: "Client Retention Rate",
-      sublabel: "Partners returning for multi-year growth & product scaling",
-    },
-    {
-      value: "15+",
-      number: 15,
-      suffix: "+",
-      label: "Years of Craft",
-      sublabel: "Engineering high-converting digital ecosystems",
-    },
-    {
-      value: "20+",
-      number: 20,
-      suffix: "+",
-      label: "Specialized Services",
-      sublabel: "Commerce, code, AI search optimization & paid media",
-    },
-  ],
+  // Numerical proof points remain unpublished until evidence is approved.
+  stats: [],
   socials: {
     linkedin: "https://www.linkedin.com/company/unified-branding-experts/",
     facebook: "https://www.facebook.com/profile.php?id=61584754554542",
@@ -103,12 +75,10 @@ export const COMPANY_INFO: CompanyInfo = {
   ratings: {
     trustpilot: {
       score: "Verified Profile",
-      reviewsCount: 142,
       url: "https://www.trustpilot.com/review/unifiedbrandingexperts.com",
     },
     google: {
       score: "Verified Profile",
-      reviewsCount: 88,
       url: "https://share.google/vER55Ui41l2QeKXT9",
     },
     crunchbase: {

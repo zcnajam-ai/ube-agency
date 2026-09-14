@@ -1,5 +1,8 @@
 "use client";
 
+import { SHOPIFY_SETUP_PRICE_LABEL } from "@/data/commerce-pricing";
+
+
 import React from "react";
 import Link from "next/link";
 import {
@@ -20,7 +23,7 @@ export default function HomePackagesGrid() {
     {
       title: "eCommerce Growth Plans",
       slug: "/ecommerce-growth-packages",
-      price: "$399",
+      price: `${SHOPIFY_SETUP_PRICE_LABEL}`,
       priceSub: "launch · $799 scale",
       badge: "SHOPIFY & MARKETPLACES",
       icon: <ShoppingBag className="w-5 h-5 text-emerald-600" />,

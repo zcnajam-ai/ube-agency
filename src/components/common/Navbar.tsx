@@ -1,5 +1,8 @@
 "use client";
 
+import { SHOPIFY_SETUP_PRICE_LABEL } from "@/data/commerce-pricing";
+
+
 import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -415,7 +418,7 @@ export default function Navbar() {
                           >
                             <div className="font-display font-bold text-xs text-[#161616] group-hover:text-[#9F8BE7] flex items-center justify-between">
                               <span>eCommerce Growth Plans</span>
-                              <span className="text-[10px] font-mono-num text-emerald-600 font-bold">$399+</span>
+                              <span className="text-[10px] font-mono-num text-emerald-600 font-bold">{SHOPIFY_SETUP_PRICE_LABEL}+</span>
                             </div>
                             <p className="text-[10px] text-[#585858]">Shopify, Amazon, Etsy &amp; eBay</p>
                           </Link>
@@ -439,7 +442,7 @@ export default function Navbar() {
                           >
                             <div className="font-display font-bold text-xs text-[#161616] group-hover:text-[#9F8BE7] flex items-center justify-between">
                               <span>Custom Web &amp; eCom</span>
-                              <span className="text-[10px] font-mono-num text-emerald-600 font-bold">$450+</span>
+                              <span className="text-[10px] font-mono-num text-emerald-600 font-bold">{SHOPIFY_SETUP_PRICE_LABEL}+</span>
                             </div>
                             <p className="text-[10px] text-[#585858]">Bespoke portals &amp; stores</p>
                           </Link>
