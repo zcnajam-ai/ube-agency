@@ -272,7 +272,7 @@ export default function AiSeoHubPage() {
               Buyers increasingly ask complete questions: which platform fits a catalog, what an implementation costs, or how two approaches differ. AI products can summarize those decisions before a visitor reaches a website. The commercial goal is therefore broader than ranking a page. A business needs accurate information that can be discovered, understood, attributed, and verified across several search experiences.
             </p>
             <p className={`${prose} mt-5`}>
-              That shift does not make every brand a fit for an AI SEO retainer. If core pages are thin, indexing is unstable, or the offer is not clearly explained, foundational work comes first. Our <Link className="font-semibold text-[#715CC4] underline-offset-4 hover:underline" href="/insights/what-is-ai-seo-seo-vs-aeo-vs-geo">SEO, AEO, and GEO comparison</Link> provides a plain-language starting point, while the <Link className="font-semibold text-[#715CC4] underline-offset-4 hover:underline" href="/insights/ai-seo-aeo-geo-guide">complete AI SEO guide</Link> covers the disciplines in greater depth.
+              That shift does not make every brand a fit for an AI SEO retainer. If core pages are thin, indexing is unstable, or the offer is not clearly explained, foundational work comes first. This hub provides a plain-language SEO, AEO, and GEO comparison, while the <Link className="font-semibold text-[#715CC4] underline-offset-4 hover:underline" href="/insights/ai-seo-aeo-geo-guide">complete AI SEO guide</Link> covers the disciplines in greater depth.
             </p>
           </section>
 
