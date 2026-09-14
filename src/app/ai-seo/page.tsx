@@ -18,7 +18,7 @@ const published = "2026-09-14";
 const updated = "2026-09-14";
 
 export const metadata: Metadata = {
-  title: "AI SEO Agency: Get Cited in ChatGPT, Google AI Overviews & Perplexity | UBE",
+  title: { absolute: "AI SEO Agency: Get Cited in ChatGPT, Google AI Overviews & Perplexity | UBE" },
   description:
     "UBE is an AI SEO agency that gets brands cited in ChatGPT, Google AI Overviews, and Perplexity. Schema-driven, entity-first, with named case studies and 100-site audit data. Packages from $349.",
   alternates: { canonical: url },
