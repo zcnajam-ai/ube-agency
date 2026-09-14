@@ -32,8 +32,14 @@ const MONTH_NUMBER: Record<string, string> = {
   December: "12",
 };
 
-function toSchemaMonth(value: string): string {
-  const [month, year] = value.trim().split(/\s+/);
+function toSchemaDate(value: string): string {
+  const normalized = value.trim();
+
+  if (/^\d{4}-\d{2}(-\d{2})?$/.test(normalized)) {
+    return normalized;
+  }
+
+  const [month, year] = normalized.split(/\s+/);
   const monthNumber = MONTH_NUMBER[month];
 
   if (!monthNumber || !/^\d{4}$/.test(year)) {
@@ -60,8 +66,8 @@ export async function generateMetadata({
   if (!article) return { title: "Article Not Found | Unified Branding Experts" };
 
   const canonicalUrl = `https://unifiedbrandingexperts.com/insights/${article.slug}`;
-  const publishedTime = toSchemaMonth(article.publishedAt);
-  const modifiedTime = toSchemaMonth(article.updatedAt);
+  const publishedTime = toSchemaDate(article.publishedAt);
+  const modifiedTime = toSchemaDate(article.updatedAt);
 
   const ogImageUrl = article.coverImage
     ? article.coverImage.startsWith("http")
@@ -111,8 +117,8 @@ export default async function InsightArticlePage({
 
   if (!article) return notFound();
 
-  const publishedDate = toSchemaMonth(article.publishedAt);
-  const modifiedDate = toSchemaMonth(article.updatedAt);
+  const publishedDate = toSchemaDate(article.publishedAt);
+  const modifiedDate = toSchemaDate(article.updatedAt);
 
   // Find related articles
   const relatedArticles = article.relatedSlugs
