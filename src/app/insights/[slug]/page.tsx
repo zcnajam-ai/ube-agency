@@ -33,10 +33,10 @@ const MONTH_NUMBER: Record<string, string> = {
 };
 
 function toSchemaMonth(value: string): string {
-  const [month, year] = value.trim().split(/\\s+/);
+  const [month, year] = value.trim().split(/\s+/);
   const monthNumber = MONTH_NUMBER[month];
 
-  if (!monthNumber || !/^\\d{4}$/.test(year)) {
+  if (!monthNumber || !/^\d{4}$/.test(year)) {
     throw new Error(`Invalid insight date: ${value}`);
   }
 
