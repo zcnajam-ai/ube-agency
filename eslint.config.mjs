@@ -12,6 +12,10 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // One-off maintenance scripts are excluded from the application lint gate.
+    "*.js",
+    "scripts/*.js",
+    "scratch/**",
   ]),
 ]);
 
