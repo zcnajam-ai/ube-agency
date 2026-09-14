@@ -286,6 +286,10 @@ export default function AiSeoPackagesPage() {
             AI SEO packages combine technical SEO, Answer Engine Optimization, Generative Engine Optimization, structured data, and content improvements to help your business become discoverable across Google AI Overviews, ChatGPT, video search, and conventional search. Start with a one-time audit from $349 or an ongoing plan from $749/month for implementation and growth.
           </p>
 
+          <p className="text-sm text-[#585858] font-body">
+            <Link href="/ai-seo" className="text-[#9F8BE7] font-bold underline hover:text-[#161616]">Understand our AI SEO methodology</Link> before choosing an implementation tier.
+          </p>
+
           <div className="inline-block p-3 rounded-2xl bg-white border border-[#E0DDDB] text-xs font-mono-num text-[#161616] font-bold shadow-xs">
             Starting from <span className="text-emerald-600 font-black text-sm">$349</span> for a one-time AI SEO audit. Monthly retainers available for ongoing growth.
           </div>
@@ -311,7 +315,7 @@ export default function AiSeoPackagesPage() {
 
         {/* 2. Packages Pricing Grid */}
         <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch">
-          {packages.map((pkg) => (
+          {packages.map((pkg, index) => (
             <div
               key={pkg.id}
               id={pkg.id}
@@ -344,6 +348,11 @@ export default function AiSeoPackagesPage() {
                   >
                     {pkg.tagline}
                   </p>
+                  {index === 0 && (
+                    <Link href="/ai-seo" className="mt-3 inline-block text-xs font-bold text-[#9F8BE7] underline hover:text-[#161616]">
+                      See what&apos;s included in each tier
+                    </Link>
+                  )}
                 </div>
 
                 {/* Price Display */}
