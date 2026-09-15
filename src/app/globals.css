@@ -87,6 +87,36 @@
   }
 }
 
+/* Lightweight section entrances: 0.5s, transform-only, and released after reveal. */
+.scroll-reveal {
+  opacity: 0.001;
+  transform: translate3d(0, 20px, 0) scale(0.975);
+  transform-origin: 50% 50%;
+  transition:
+    opacity 0.5s ease-out,
+    transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform;
+}
+
+.scroll-reveal.scroll-reveal--visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0) scale(1);
+  will-change: auto;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto !important;
+  }
+
+  .scroll-reveal,
+  .scroll-reveal.scroll-reveal--visible {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
 /* Typography Classes */
 .font-display {
   font-family: var(--font-display), "Funnel Display", sans-serif;
