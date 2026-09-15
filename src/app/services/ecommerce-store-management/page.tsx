@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 
 export default function StoreManagementServicePage() {
   const schema = { "@context": "https://schema.org", "@graph": [
-    { "@type": "Service", "@id": `${url}#service`, name: "eCommerce Store Management", serviceType: "Online store operations and maintenance", url, description: metadata.description, provider: { "@type": "Organization", name: "Unified Branding Experts", url: base } },
+    { "@type": "Service", "@id": `${url}#service`, name: "eCommerce Store Management", serviceType: "Online store operations and maintenance", url, description: metadata.description, provider: { "@id": `${base}/#organization` } },
     { "@type": "BreadcrumbList", itemListElement: [{ "@type": "ListItem", position: 1, name: "Home", item: base }, { "@type": "ListItem", position: 2, name: "Services", item: `${base}/services` }, { "@type": "ListItem", position: 3, name: "eCommerce", item: `${base}/services/ecommerce` }, { "@type": "ListItem", position: 4, name: "Store Management", item: url }] },
   ] };
   const areas = [

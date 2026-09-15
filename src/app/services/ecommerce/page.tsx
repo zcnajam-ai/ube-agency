@@ -85,9 +85,7 @@ export default function EcommerceGrowthServicePage() {
         "description":
           "End-to-end eCommerce storefront development, multi-channel marketplace optimization (Shopify, Amazon, Etsy, eBay), product listing SEO, workflow automation, and conversion optimization.",
         "provider": {
-          "@type": "Organization",
-          "name": "Unified Branding Experts",
-          "url": "https://unifiedbrandingexperts.com",
+          "@id": "https://unifiedbrandingexperts.com/#organization",
         },
         "url": "https://unifiedbrandingexperts.com/services/ecommerce",
         "image": "https://unifiedbrandingexperts.com/images/projects/happy-knot/hero.png",
@@ -357,7 +355,7 @@ export default function EcommerceGrowthServicePage() {
           </div>
 
           <p className="text-xs text-[#585858] leading-relaxed">
-            Where appropriate, Amazon can also be aligned with a brand's Shopify storefront and wider digital marketing strategy.
+            Where appropriate, Amazon can also be aligned with a brand&apos;s Shopify storefront and wider digital marketing strategy.
           </p>
 
           <div className="pt-2">
@@ -478,7 +476,7 @@ export default function EcommerceGrowthServicePage() {
           </p>
 
           <p className="text-xs text-[#585858] leading-relaxed">
-            Where supported by available integrations and the client's business model, we can also help streamline product and inventory workflows between eBay and other selling channels.
+            Where supported by available integrations and the client&apos;s business model, we can also help streamline product and inventory workflows between eBay and other selling channels.
           </p>
         </div>
 

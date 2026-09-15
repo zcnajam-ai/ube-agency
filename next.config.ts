@@ -73,6 +73,14 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     return [
+      // The public Vercel production alias must never compete with the canonical domain.
+      // Match this hostname exactly so branch and deployment previews remain available.
+      {
+        source: "/:path*",
+        has: [{ type: "host", value: "ube-agency.vercel.app" }],
+        destination: "https://unifiedbrandingexperts.com/:path*",
+        permanent: true,
+      },
       // Keep previously advertised icon URLs working with the current brand mark.
       ...[
         "/favicon.ico", "/favicon.svg", "/icon.png", "/apple-icon.png",

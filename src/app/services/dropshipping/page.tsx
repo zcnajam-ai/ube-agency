@@ -18,7 +18,6 @@ import {
   ArrowRight,
 } from "lucide-react";
 import ServiceProjectModalTrigger from "@/components/services/ServiceProjectModalTrigger";
-import { COMPANY_INFO } from "@/data/company";
 
 export const metadata: Metadata = {
   title: "Shopify Dropshipping Setup & Supplier Integrations",
@@ -57,9 +56,7 @@ export default function DropshippingServicePage() {
     name: "Dropshipping Store Setup & Automation Services",
     serviceType: "eCommerce Storefront Setup & Fulfillment Automation",
     provider: {
-      "@type": "Organization",
-      name: COMPANY_INFO.name,
-      url: "https://unifiedbrandingexperts.com",
+      "@id": "https://unifiedbrandingexperts.com/#organization",
     },
     areaServed: "Worldwide",
     description:
