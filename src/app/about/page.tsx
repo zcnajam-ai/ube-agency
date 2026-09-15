@@ -36,17 +36,7 @@ export default function AboutPage() {
     url: "https://unifiedbrandingexperts.com/about",
     description: "Learn about Unified Branding Experts, our strategic craft, full-service philosophy, and multidisciplinary design and engineering team.",
     mainEntity: {
-      "@type": "Organization",
-      name: COMPANY_INFO.name,
-      url: "https://unifiedbrandingexperts.com",
-      telephone: COMPANY_INFO.phone,
-      email: COMPANY_INFO.email,
-      address: {
-        "@type": "PostalAddress",
-        addressLocality: COMPANY_INFO.address.city,
-        addressRegion: COMPANY_INFO.address.state,
-        addressCountry: COMPANY_INFO.address.country,
-      },
+      "@id": "https://unifiedbrandingexperts.com/#organization",
     },
   };
 

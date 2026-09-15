@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 export default function StoreManagementPackagesPage() {
   const schema = { "@context": "https://schema.org", "@graph": [
     { "@type": "BreadcrumbList", itemListElement: [{ "@type": "ListItem", position: 1, name: "Home", item: base }, { "@type": "ListItem", position: 2, name: "Packages", item: `${base}/packages` }, { "@type": "ListItem", position: 3, name: "Store Management Packages", item: url }] },
-    { "@type": "Service", name: "eCommerce Store Management", url: `${base}/services/ecommerce-store-management`, provider: { "@type": "Organization", name: "Unified Branding Experts", url: base }, offers: STORE_MANAGEMENT_PLANS.flatMap(plan => [
+    { "@type": "Service", name: "eCommerce Store Management", url: `${base}/services/ecommerce-store-management`, provider: { "@id": `${base}/#organization` }, offers: STORE_MANAGEMENT_PLANS.flatMap(plan => [
       { "@type": "Offer", name: `${plan.name} — monthly billing`, price: plan.monthly, priceCurrency: "USD", url, description: `${plan.scope}. Billed monthly.`, priceSpecification: { "@type": "UnitPriceSpecification", price: plan.monthly, priceCurrency: "USD", unitText: "month" } },
       { "@type": "Offer", name: `${plan.name} — annual billing`, price: plan.annual, priceCurrency: "USD", url, description: "12 months paid upfront; monthly deliverable limits apply.", priceSpecification: { "@type": "UnitPriceSpecification", price: plan.annual, priceCurrency: "USD", unitText: "year" } },
     ]) },

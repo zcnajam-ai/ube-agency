@@ -72,9 +72,7 @@ export default function EcommercePackagesPage() {
         "name": "eCommerce Growth Packages",
         "serviceType": "eCommerce Development & Marketplace Growth Packages",
         "provider": {
-          "@type": "Organization",
-          "name": "Unified Branding Experts",
-          "url": "https://unifiedbrandingexperts.com",
+          "@id": "https://unifiedbrandingexperts.com/#organization",
         },
         "url": "https://unifiedbrandingexperts.com/ecommerce-growth-packages",
         "hasOfferCatalog": {

@@ -10,7 +10,6 @@ import {
   ShieldCheck,
 } from "lucide-react";
 import ServiceProjectModalTrigger from "@/components/services/ServiceProjectModalTrigger";
-import { COMPANY_INFO } from "@/data/company";
 
 export const metadata: Metadata = {
   title: "Small Business Web Design Packages & Pricing",
@@ -107,9 +106,7 @@ export default function WebDesignPackagesPage() {
     serviceType: "Web Design & Development",
     description: "Transparent Web Design & Development packages starting at $300.",
     provider: {
-      "@type": "Organization",
-      name: COMPANY_INFO.name,
-      url: "https://unifiedbrandingexperts.com",
+      "@id": "https://unifiedbrandingexperts.com/#organization",
     },
     image: {
       "@type": "ImageObject",

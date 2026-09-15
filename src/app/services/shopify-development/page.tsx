@@ -147,9 +147,7 @@ export default function ShopifyDevelopmentPage() {
     name: "Shopify Store Setup & Custom Theme Development Services",
     serviceType: "eCommerce Development",
     provider: {
-      "@type": "Organization",
-      name: "Unified Branding Experts",
-      url: "https://unifiedbrandingexperts.com",
+      "@id": "https://unifiedbrandingexperts.com/#organization",
     },
     areaServed: "Worldwide",
     description: "End-to-end Shopify store setup and custom theme development. Custom Shopify Plus stores, dropshipping automation, 3PL inventory sync, and responsive checkout flows.",
