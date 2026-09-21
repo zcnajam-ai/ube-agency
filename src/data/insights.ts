@@ -969,13 +969,13 @@ export const INSIGHTS: InsightArticle[] = [
     serviceCta: {
       title: "Need a High-Impact Custom Logo?",
       desc: "Our senior design team creates 100% original vector logos tailored to your brand personality.",
-      href: "/best-logo-design-agency",
+      href: "/services/branding",
       buttonText: "Explore Logo Design Services",
     },
     packageCta: {
       title: "Transparent Logo Design Packages",
       priceBadge: "From $299 One-Time",
-      href: "/logo-design-packages",
+      href: "/branding-packages",
       buttonText: "Compare Logo Packages",
     },
   },
@@ -1089,7 +1089,7 @@ export const INSIGHTS: InsightArticle[] = [
     serviceCta: {
       title: "Ready to Work with Senior Brand Designers?",
       desc: "Get handcrafted vector concepts tailored to your industry within 48 to 72 hours.",
-      href: "/best-logo-design-agency",
+      href: "/services/branding",
       buttonText: "View Logo Design Services",
     },
     packageCta: {
@@ -1211,7 +1211,7 @@ export const INSIGHTS: InsightArticle[] = [
     serviceCta: {
       title: "Need a High-Performance Website for Your Business?",
       desc: "Get a bespoke, mobile-responsive website engineered for fast loading and lead capture.",
-      href: "/best-website-development-agency",
+      href: "/services/web-design-development",
       buttonText: "Explore Web Development Services",
     },
     packageCta: {
@@ -1323,7 +1323,7 @@ export const INSIGHTS: InsightArticle[] = [
     packageCta: {
       title: "Explore Website Development Packages",
       priceBadge: "From $300 One-Time",
-      href: "/our-website-development-packages",
+      href: "/web-design-packages",
       buttonText: "View Web Dev Packages",
     },
   },
@@ -1438,7 +1438,7 @@ export const INSIGHTS: InsightArticle[] = [
     packageCta: {
       title: "View Custom eCommerce Packages",
       priceBadge: `From ${SHOPIFY_SETUP_PRICE_LABEL} One-Time`,
-      href: "/our-custom-web-design-development-packages",
+      href: "/web-design-packages",
       buttonText: "Compare eCom Packages",
     },
   },
@@ -1576,7 +1576,7 @@ export const INSIGHTS: InsightArticle[] = [
     packageCta: {
       title: "Explore eCommerce Packages",
       priceBadge: `From ${SHOPIFY_SETUP_PRICE_LABEL} One-Time`,
-      href: "/our-custom-web-design-development-packages",
+      href: "/web-design-packages",
       buttonText: "View eCom Packages",
     },
   },
@@ -1974,7 +1974,7 @@ export const INSIGHTS: InsightArticle[] = [
     packageCta: {
       title: "View eCommerce Packages",
       priceBadge: `From ${SHOPIFY_SETUP_PRICE_LABEL}`,
-      href: "/our-custom-web-design-development-packages",
+      href: "/web-design-packages",
       buttonText: "View Packages",
     },
   },
