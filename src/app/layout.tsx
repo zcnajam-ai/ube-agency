@@ -41,7 +41,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://unifiedbrandingexperts.com"),
   title: {
     default: "Web Design, Shopify, AI SEO & Digital Marketing Agency | Unified Branding Experts",
-    template: "%s | Unified Branding Experts",
+    template: "%s | UBE",
   },
   description:
     "Grow your business with expert Shopify development, eCommerce, AI SEO, branding, web design, Google Ads and digital marketing services across the U.S.",
@@ -65,9 +65,12 @@ export const metadata: Metadata = {
         follow: false,
       },
   icons: {
-    icon: [{ url: "/favicon.jpg", sizes: "1536x1536", type: "image/jpeg" }],
-    shortcut: "/favicon.jpg",
-    apple: [{ url: "/favicon.jpg", sizes: "1536x1536", type: "image/jpeg" }],
+    icon: [
+      { url: "/favicon-48x48.png", sizes: "48x48", type: "image/png" },
+      { url: "/favicon-96x96.png", sizes: "96x96", type: "image/png" },
+    ],
+    shortcut: "/favicon.ico",
+    apple: [{ url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }],
   },
   openGraph: {
     type: "website",
@@ -120,8 +123,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           }}
         />
         {/* End Google Tag Manager */}
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       </head>
       <body className="bg-[#FAF7F6] text-[#161616] font-body flex flex-col min-h-screen relative overflow-x-hidden">
         {/* Google Tag Manager (noscript) */}
