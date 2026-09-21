@@ -118,8 +118,8 @@ export default function AboutPage() {
           <p>
             We created a unified agency structure where senior brand designers, full-stack engineers, eCommerce
             architects, and AISEO strategists collaborate as a single dedicated unit. This cohesion ensures that
-            every visual asset, codebase optimization, and marketing campaign works seamlessly to accelerate business
-            growth.
+            every visual asset, codebase optimization, and marketing campaign works together around the same business facts.
+            See <Link href="/ai-seo" className="text-[#9F8BE7] font-bold underline hover:text-[#161616]">how we approach AI SEO</Link> across technical, content, entity, and authority work.
           </p>
           <p>
             Explore our specialized <Link href="/services" className="text-[#9F8BE7] font-bold underline hover:text-[#161616]">agency services</Link>, view our <Link href="/work" className="text-[#9F8BE7] font-bold underline hover:text-[#161616]">active client case studies</Link>, or read our latest technical <Link href="/insights" className="text-[#9F8BE7] font-bold underline hover:text-[#161616]">editorial insights</Link> to see how we build scalable digital systems.
