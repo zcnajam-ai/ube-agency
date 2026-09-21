@@ -1,4 +1,5 @@
 import React from "react";
+import ServiceSchema from "@/components/seo/ServiceSchema";
 import Link from "next/link";
 import { Metadata } from "next";
 import {
@@ -108,6 +109,12 @@ export default function GoogleAdsServicePage() {
 
   return (
     <div className="pt-32 pb-24 px-4 sm:px-6 md:px-12 max-w-7xl mx-auto space-y-24">
+      <ServiceSchema
+        name="Google Ads Management"
+        description="Google Search, Shopping and Performance Max campaign management with conversion measurement and landing-page alignment."
+        path="/services/google-ads"
+        serviceType="Google Ads management"
+      />
       {/* Schema Markup */}
       <script
         type="application/ld+json"
