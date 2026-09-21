@@ -1,4 +1,5 @@
 import React from "react";
+import ServiceSchema from "@/components/seo/ServiceSchema";
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getServiceBySlug } from "@/data/services";
@@ -32,6 +33,12 @@ export default function SocialMediaServicePage() {
   if (!service) return notFound();
   return (
     <>
+      <ServiceSchema
+        name="Social Media Management Services"
+        description="Editorial planning, branded social content, scheduling, community-response guidance and monthly performance review."
+        path="/services/social-media-management"
+        serviceType="Social media management"
+      />
       <ServiceDetailView service={service} />
       <section className="px-4 sm:px-6 md:px-12 pb-24">
         <div className="max-w-5xl mx-auto rounded-3xl bg-white border border-[#E0DDDB] p-7 sm:p-10 space-y-8">
