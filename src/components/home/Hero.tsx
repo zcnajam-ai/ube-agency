@@ -20,7 +20,7 @@ export default function Hero() {
     { label: "Shopify & Dropshipping", href: "/services/shopify-development", icon: <Shopify3DIcon size={18} /> },
     { label: "TikTok Shop & Meta Ads", href: "/tiktok-marketing-packages", icon: <TikTok3DIcon size={18} /> },
     { label: "Google Marketing", href: "/services/google-ads", icon: <Google3DIcon size={18} /> },
-    { label: "AI SEO & Overviews", href: "/ai-seo-packages", icon: <Heading3DSparkle size={18} /> },
+    { label: "AI SEO agency", href: "/ai-seo", icon: <Heading3DSparkle size={18} /> },
     { label: "Branding (From $299)", href: "/branding-packages", icon: <Palette className="w-4 h-4 text-blue-600" /> },
   ];
 
