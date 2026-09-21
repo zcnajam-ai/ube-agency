@@ -1,4 +1,5 @@
 import React from "react";
+import ServiceSchema from "@/components/seo/ServiceSchema";
 import Link from "next/link";
 import Image from "next/image";
 import { Metadata } from "next";
@@ -137,6 +138,12 @@ export default function AiAutomationServicePage() {
 
   return (
     <div className="pt-32 pb-24 px-4 sm:px-6 md:px-12 max-w-7xl mx-auto space-y-24">
+      <ServiceSchema
+        name="AI Automation Services"
+        description="CRM automation, lead follow-up workflows, AI chatbots, email sequences and business-system integrations."
+        path="/services/ai-automation"
+        serviceType="AI workflow automation"
+      />
       {/* 1. Hero Section */}
       <section className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center border-b border-[#E0DDDB] pb-16">
         <div className="lg:col-span-7 space-y-6">
