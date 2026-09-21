@@ -190,7 +190,7 @@ export default function MobileAppPackagesPage() {
       {/* Breadcrumb */}
       <div className="flex items-center justify-between border-b border-[#E0DDDB] pb-4">
         <Link
-          href="/services/mobile-apps"
+          href="/services/mobile-app-development"
           className="inline-flex items-center gap-2 text-xs font-mono-num text-[#585858] hover:text-[#161616] transition-colors"
         >
           <ArrowLeft className="w-3.5 h-3.5 text-[#9F8BE7]" />
