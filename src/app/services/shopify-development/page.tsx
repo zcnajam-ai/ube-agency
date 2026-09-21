@@ -304,7 +304,7 @@ export default function ShopifyDevelopmentPage() {
         <div className="p-6 rounded-3xl bg-gradient-to-br from-[#FAF7F6] to-white border-2 border-[#9F8BE7] shadow-sm mb-10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
         <div className="space-y-1">
           <span className="text-xs font-mono-num font-bold text-[#9F8BE7] uppercase tracking-wider block">SHOPIFY AI SEARCH READINESS</span>
-          <p className="text-sm font-body text-[#161616] font-medium">Learn how Shopify product data, Merchant Center and AI search optimization work together.</p>
+          <p className="text-sm font-body text-[#161616] font-medium">Learn how Shopify product data, Merchant Center and AI search optimization work together. <Link href="/ai-seo" className="text-[#9F8BE7] font-bold underline hover:text-[#161616]">See how AI SEO integrates with Shopify builds</Link>.</p>
         </div>
         <Link href="/insights/shopify-ai-seo-guide" className="px-5 py-2.5 rounded-full bg-[#9F8BE7] text-[#161616] font-display font-bold text-xs hover:bg-[#b4a3f7] transition-all shrink-0 flex items-center gap-1.5 shadow-xs">
           <span>Read Shopify AI SEO Guide</span>
