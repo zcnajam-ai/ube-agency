@@ -421,6 +421,9 @@ export default function BrandingServicePage() {
           <h2 className="font-display text-3xl sm:text-4xl font-bold tracking-tight text-[#161616]">
             Our Branding Process
           </h2>
+          <p className="text-sm text-[#585858] font-body leading-relaxed">
+            Consistent identity supports <Link href="/ai-seo" className="text-[#9F8BE7] font-bold underline hover:text-[#161616]">brand authority signals — a key AI SEO input</Link> across owned and referenced sources.
+          </p>
         </div>
 
         <div className="space-y-6">
