@@ -244,12 +244,15 @@ export default function ContactClient() {
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div className="space-y-1.5">
-                  <label className="text-xs font-mono-num font-bold text-[#161616] block">
+                  <label htmlFor="contact-name" className="text-xs font-mono-num font-bold text-[#161616] block">
                     YOUR NAME <span className="text-rose-500">*</span>
                   </label>
                   <input
+                    id="contact-name"
+                    name="name"
                     type="text"
                     required
+                    autoComplete="name"
                     placeholder="e.g. Alex Morgan"
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
@@ -258,12 +261,15 @@ export default function ContactClient() {
                 </div>
 
                 <div className="space-y-1.5">
-                  <label className="text-xs font-mono-num font-bold text-[#161616] block">
+                  <label htmlFor="contact-email" className="text-xs font-mono-num font-bold text-[#161616] block">
                     WORK EMAIL <span className="text-rose-500">*</span>
                   </label>
                   <input
+                    id="contact-email"
+                    name="email"
                     type="email"
                     required
+                    autoComplete="email"
                     placeholder="alex@company.com"
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
@@ -274,11 +280,14 @@ export default function ContactClient() {
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div className="space-y-1.5">
-                  <label className="text-xs font-mono-num font-bold text-[#161616] block">
+                  <label htmlFor="contact-phone" className="text-xs font-mono-num font-bold text-[#161616] block">
                     PHONE / WHATSAPP
                   </label>
                   <input
+                    id="contact-phone"
+                    name="phone"
                     type="tel"
+                    autoComplete="tel"
                     placeholder="+1 (555) 000-0000"
                     value={formData.phone}
                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
@@ -287,11 +296,14 @@ export default function ContactClient() {
                 </div>
 
                 <div className="space-y-1.5">
-                  <label className="text-xs font-mono-num font-bold text-[#161616] block">
+                  <label htmlFor="contact-company" className="text-xs font-mono-num font-bold text-[#161616] block">
                     COMPANY / BRAND NAME
                   </label>
                   <input
+                    id="contact-company"
+                    name="company"
                     type="text"
+                    autoComplete="organization"
                     placeholder="Acme Commerce"
                     value={formData.company}
                     onChange={(e) => setFormData({ ...formData, company: e.target.value })}
@@ -302,10 +314,10 @@ export default function ContactClient() {
 
               {/* Service Selection */}
               <div className="space-y-2">
-                <label className="text-xs font-mono-num font-bold text-[#161616] block">
+                <div id="contact-service-label" className="text-xs font-mono-num font-bold text-[#161616] block">
                   PRIMARY SERVICE AREA
-                </label>
-                <div className="flex flex-wrap gap-2">
+                </div>
+                <div role="group" aria-labelledby="contact-service-label" className="flex flex-wrap gap-2">
                   {servicesList.map((srv) => (
                     <button
                       key={srv}
@@ -326,10 +338,10 @@ export default function ContactClient() {
               {/* Budget & Timeline Selectors */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
                 <div className="space-y-1.5">
-                  <label className="text-xs font-mono-num font-bold text-[#161616] block">
+                  <div id="contact-budget-label" className="text-xs font-mono-num font-bold text-[#161616] block">
                     ESTIMATED BUDGET
-                  </label>
-                  <div className="flex flex-wrap gap-1.5">
+                  </div>
+                  <div role="group" aria-labelledby="contact-budget-label" className="flex flex-wrap gap-1.5">
                     {budgetList.map((b) => (
                       <button
                         key={b}
@@ -348,13 +360,16 @@ export default function ContactClient() {
 
                   {formData.budget === "Other / Custom Budget" && (
                     <div className="mt-2 space-y-1 animate-fadeIn">
-                      <label className="block text-[11px] font-mono-num font-bold text-[#161616]">
+                      <label htmlFor="contact-custom-budget" className="block text-[11px] font-mono-num font-bold text-[#161616]">
                         Your Estimated Budget
                       </label>
                       <div className="relative flex items-center">
                         <span className="absolute left-3 text-xs font-mono-num font-bold text-[#585858]">$</span>
                         <input
+                          id="contact-custom-budget"
+                          name="customBudget"
                           type="text"
+                          inputMode="numeric"
                           placeholder="e.g. 750 or 2,500"
                           value={customBudgetInput}
                           onChange={(e) => setCustomBudgetInput(e.target.value)}
@@ -366,10 +381,12 @@ export default function ContactClient() {
                 </div>
 
                 <div className="space-y-1.5">
-                  <label className="text-xs font-mono-num font-bold text-[#161616] block">
+                  <label htmlFor="contact-timeline" className="text-xs font-mono-num font-bold text-[#161616] block">
                     TIMELINE
                   </label>
                   <select
+                    id="contact-timeline"
+                    name="timeline"
                     value={formData.timeline}
                     onChange={(e) => setFormData({ ...formData, timeline: e.target.value })}
                     className="w-full px-4 py-2.5 rounded-2xl bg-[#FAF7F6] border border-[#E0DDDB] text-xs font-mono-num text-[#161616] focus:outline-none focus:border-[#9F8BE7]"
@@ -384,10 +401,12 @@ export default function ContactClient() {
 
               {/* Description */}
               <div className="space-y-1.5">
-                <label className="text-xs font-mono-num font-bold text-[#161616] block">
+                <label htmlFor="contact-details" className="text-xs font-mono-num font-bold text-[#161616] block">
                   PROJECT DETAILS &amp; GOALS <span className="text-rose-500">*</span>
                 </label>
                 <textarea
+                  id="contact-details"
+                  name="description"
                   required
                   rows={4}
                   placeholder="Describe your current challenge, current platform, target launch date, and key deliverables..."
@@ -398,7 +417,7 @@ export default function ContactClient() {
               </div>
 
               {error && (
-                <div className="p-3.5 rounded-2xl bg-rose-50 border border-rose-200 text-xs text-rose-600 font-mono-num">
+                <div role="alert" aria-live="assertive" className="p-3.5 rounded-2xl bg-rose-50 border border-rose-200 text-xs text-rose-600 font-mono-num">
                   {error}
                 </div>
               )}
