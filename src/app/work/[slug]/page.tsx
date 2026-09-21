@@ -26,7 +26,7 @@ export async function generateMetadata({
   if (!project) return { title: "Project Not Found" };
 
   return {
-    title: `${project.title} — Case Study`,
+    title: `${project.client} Case Study`,
     description: project.tagline,
     alternates: {
       canonical: `https://unifiedbrandingexperts.com/work/${project.slug}`,
@@ -38,7 +38,7 @@ export async function generateMetadata({
       siteName: "Unified Branding Experts",
       images: [
         {
-          url: "https://unifiedbrandingexperts.com/og-default.png",
+          url: `https://unifiedbrandingexperts.com${project.heroImage}`,
           width: 1200,
           height: 630,
           alt: project.title,
@@ -49,7 +49,7 @@ export async function generateMetadata({
       card: "summary_large_image",
       title: `${project.title} | Unified Branding Experts`,
       description: project.tagline,
-      images: ["https://unifiedbrandingexperts.com/og-default.png"],
+      images: [`https://unifiedbrandingexperts.com${project.heroImage}`],
     },
   };
 }
@@ -64,8 +64,38 @@ export default async function ProjectDetailPage({
 
   if (!project) return notFound();
 
+  const caseStudyUrl = `https://unifiedbrandingexperts.com/work/${project.slug}`;
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "CreativeWork",
+        "@id": `${caseStudyUrl}#case-study`,
+        name: project.title,
+        description: project.tagline,
+        url: caseStudyUrl,
+        image: `https://unifiedbrandingexperts.com${project.heroImage}`,
+        creator: { "@id": "https://unifiedbrandingexperts.com/#organization" },
+        about: project.category,
+        inLanguage: "en-US",
+      },
+      {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Home", item: "https://unifiedbrandingexperts.com" },
+          { "@type": "ListItem", position: 2, name: "Work", item: "https://unifiedbrandingexperts.com/work" },
+          { "@type": "ListItem", position: 3, name: project.client, item: caseStudyUrl },
+        ],
+      },
+    ],
+  };
+
   return (
     <div className="pt-28 sm:pt-36 pb-24 px-4 sm:px-6 md:px-12 max-w-6xl mx-auto space-y-16">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData).replace(/</g, "\\u003c") }}
+      />
       {/* Back Link */}
       <Link
         href="/work"
@@ -211,17 +241,6 @@ export default async function ProjectDetailPage({
         )
       )}
 
-      {/* Testimonial Quote if available */}
-      {project.testimonial && (
-        <div className="p-8 sm:p-12 rounded-3xl bg-[#FAF7F6] border border-[#E0DDDB] space-y-4 shadow-xs">
-          <blockquote className="font-display text-lg sm:text-xl font-bold text-[#161616] leading-relaxed">
-            &ldquo;{project.testimonial.quote}&rdquo;
-          </blockquote>
-          <div className="text-xs font-mono-num text-[#9F8BE7] font-bold">
-            {project.testimonial.author} — {project.testimonial.role}
-          </div>
-        </div>
-      )}
 
       {/* Technology Stack & Bottom CTA */}
       <div className="p-8 rounded-3xl bg-white border border-[#E0DDDB] flex flex-col sm:flex-row sm:items-center justify-between gap-6 shadow-xs">

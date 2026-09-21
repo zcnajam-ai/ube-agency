@@ -240,7 +240,7 @@ export default function AiSeoServicePage() {
           </p>
 
           <p className="text-sm sm:text-base text-[#303030] font-body font-medium">
-            At Unified Branding Experts, we help you get found where search is heading. We optimize your content for traditional rankings and for the AI systems now shaping how people discover businesses. <Link href="/insights/ai-seo-aeo-geo-guide" className="text-[#9F8BE7] underline font-bold hover:text-[#161616]">Read our complete guide to AI SEO, AEO and GEO</Link> for an in-depth breakdown of machine-readable entity architecture.
+            At Unified Branding Experts, we help you get found where search is heading. We optimize your content for traditional rankings and for the AI systems now shaping how people discover businesses. <Link href="/ai-seo" className="text-[#9F8BE7] underline font-bold hover:text-[#161616]">See the full AI SEO methodology</Link>, then use our <Link href="/insights/ai-seo-aeo-geo-guide" className="text-[#9F8BE7] underline font-bold hover:text-[#161616]">complete guide to AI SEO, AEO and GEO</Link> for a deeper technical breakdown.
           </p>
 
           {/* Core Deliverable Highlights */}
@@ -436,6 +436,9 @@ export default function AiSeoServicePage() {
           <h2 className="font-display text-3xl sm:text-4xl font-bold tracking-tight text-[#161616]">
             Our AI SEO Process
           </h2>
+          <p className="text-sm text-[#585858] font-body leading-relaxed">
+            Use the <Link href="/ai-seo" className="text-[#9F8BE7] font-bold underline hover:text-[#161616]">AI SEO hub guide</Link> to review the audit, entity, content, authority, and measurement stages together.
+          </p>
         </div>
 
         <div className="space-y-6">
@@ -481,7 +484,7 @@ export default function AiSeoServicePage() {
             Compare Our AI SEO Packages & Retainers
           </h2>
           <p className="text-sm text-[#585858] font-body">
-            Explore our 5 tiers: One-Time Audit ($349), Starter ($749/mo), Growth ($1,499/mo), Authority ($2,999/mo), and Enterprise Custom.
+            Explore our 5 tiers: One-Time Audit ($349), Starter ($749/mo), Growth ($1,499/mo), Authority ($2,999/mo), and Enterprise Custom. <Link href="/ai-seo" className="text-[#9F8BE7] font-bold underline hover:text-[#161616]">Read the complete AI SEO framework</Link> before comparing scope.
           </p>
         </div>
 

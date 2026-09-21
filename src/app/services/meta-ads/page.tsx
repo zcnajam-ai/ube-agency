@@ -1,4 +1,5 @@
 import React from "react";
+import ServiceSchema from "@/components/seo/ServiceSchema";
 import Link from "next/link";
 import { Metadata } from "next";
 import {
@@ -110,6 +111,12 @@ export default function MetaAdsServicePage() {
 
   return (
     <div className="pt-32 pb-24 px-4 sm:px-6 md:px-12 max-w-7xl mx-auto space-y-24">
+      <ServiceSchema
+        name="Meta Ads Management"
+        description="Facebook and Instagram advertising with creative testing, audience strategy, retargeting and conversion measurement."
+        path="/services/meta-ads"
+        serviceType="Meta advertising management"
+      />
       {/* Schema Markup */}
       <script
         type="application/ld+json"

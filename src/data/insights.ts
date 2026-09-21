@@ -112,6 +112,7 @@ export const INSIGHTS: InsightArticle[] = [
         id: "understanding-ai-seo-aeo-geo",
         h2: "Understanding the Shift: Traditional SEO vs AEO vs GEO in 2026",
         body: [
+        "For the commercial methodology behind this guide, review <a href=\"/ai-seo\"><strong>The complete AI SEO framework</strong></a>.",
           "Search behavior has undergone a fundamental transformation. Rather than browsing ten blue links on search engine results pages (SERPs), users increasingly expect instant, synthesized answers directly inside conversational search engines like Google AI Overviews, ChatGPT Search, Bing Copilot, and Perplexity.",
           "To stay visible, modern brands must optimize across three distinct search frameworks: <strong>Search Engine Optimization (SEO)</strong> for traditional keyword ranking, <strong>Answer Engine Optimization (AEO)</strong> for featured snippets and conversational query answers, and <strong>Generative Engine Optimization (GEO)</strong> for inclusion inside large language model synthesis outputs.",
           "Building an integrated strategy requires aligning your <a href=\"/services/web-design-development\" className=\"text-[#9F8BE7] underline font-medium hover:text-[#161616]\">custom web development</a> and content architecture so search crawlers and AI bots can easily extract authoritative brand facts."
@@ -182,6 +183,7 @@ export const INSIGHTS: InsightArticle[] = [
         id: "implementation-checklist-2026",
         h2: "Actionable 2026 AI SEO Implementation Checklist",
         body: [
+        "Use the <a href=\"/ai-seo\"><strong>AI SEO hub guide</strong></a> to connect this checklist to audit scope, pricing, fit, and measurement.",
           "Follow this step-by-step checklist to prepare your digital ecosystem for AI search discovery:",
           "✓ Verify <code>robots.txt</code> allows <code>Googlebot</code>, <code>Bingbot</code>, <code>OAI-SearchBot</code>, and <code>PerplexityBot</code>.",
           "✓ Implement valid <code>Organization</code>, <code>WebSite</code>, and <code>Service</code> JSON-LD schema with canonical <code>@id</code> anchors.",
@@ -266,6 +268,7 @@ export const INSIGHTS: InsightArticle[] = [
         id: "can-you-get-listed-on-chatgpt",
         h2: "Can You Get Your Business Listed on ChatGPT?",
         body: [
+        "Start with the <a href=\"/ai-seo\"><strong>Full AI SEO methodology</strong></a> for the technical, entity, content, authority, and measurement sequence.",
           "Getting your business mentioned in ChatGPT isn't as simple as submitting your company to a traditional directory or adding a special piece of schema markup to your website. There is no 'Add My Business to ChatGPT' button.",
           "According to <a href=\"https://help.openai.com/en/articles/10008544-chatgpt-search\" target=\"_blank\" rel=\"noopener noreferrer\" className=\"text-[#9F8BE7] underline font-medium hover:text-[#161616]\">official OpenAI publisher guidance</a>, public websites can appear in ChatGPT Search results. For content to be discoverable and eligible to appear in summaries and snippets, OpenAI recommends allowing its dedicated search crawler, <code>OAI-SearchBot</code>, to access your website.",
           "That creates eligibility. It does not guarantee placement. OpenAI explicitly states that ChatGPT Search uses multiple retrieval factors intended to help users find relevant and reliable information, and there is no way to pay for top placement.",
@@ -364,6 +367,7 @@ export const INSIGHTS: InsightArticle[] = [
         id: "sources-and-further-reading",
         h2: "Official Sources & Further Reading",
         body: [
+        "Return to the <a href=\"/ai-seo\"><strong>AI SEO hub guide</strong></a> for service scope, pricing factors, and cross-platform measurement.",
           "For authoritative publisher specifications directly from OpenAI, consult these official documentation resources:",
           "• <a href=\"https://platform.openai.com/docs/bots/oai-searchbot\" target=\"_blank\" rel=\"noopener noreferrer\" className=\"text-[#9F8BE7] underline font-medium hover:text-[#161616]\">OpenAI OAI-SearchBot Documentation</a> — Official specification for OpenAI's search discovery crawler.",
           "• <a href=\"https://help.openai.com/en/articles/10008544-chatgpt-search\" target=\"_blank\" rel=\"noopener noreferrer\" className=\"text-[#9F8BE7] underline font-medium hover:text-[#161616]\">OpenAI ChatGPT Search & Publisher Guidance</a> — Guidance on public website eligibility, retrieval factors, and UTM referral tracking.",
@@ -469,6 +473,7 @@ export const INSIGHTS: InsightArticle[] = [
         id: "what-are-google-ai-overviews",
         h2: "What Are Google AI Overviews & AI Mode?",
         body: [
+        "Review the <a href=\"/ai-seo\"><strong>Complete AI SEO framework</strong></a> before applying the Google-specific recommendations below.",
           "Google Search is evolving beyond the traditional list of organic results. AI Overviews and AI Mode can help users research complex questions, compare options and explore topics through AI-generated responses supported by links to web sources.",
           "<strong>What Are Google AI Overviews?</strong><br>AI Overviews are AI-generated summaries that Google may display for searches where its systems determine that an overview can provide additional value beyond traditional search results. These responses can include links to supporting websites so users can explore the subject further.",
           "AI Overviews are particularly useful for questions where users may benefit from information synthesized across multiple sources or concepts. They do not appear for every query. Google determines when an AI Overview adds value to the search experience.",
@@ -969,13 +974,13 @@ export const INSIGHTS: InsightArticle[] = [
     serviceCta: {
       title: "Need a High-Impact Custom Logo?",
       desc: "Our senior design team creates 100% original vector logos tailored to your brand personality.",
-      href: "/best-logo-design-agency",
+      href: "/services/branding",
       buttonText: "Explore Logo Design Services",
     },
     packageCta: {
       title: "Transparent Logo Design Packages",
       priceBadge: "From $299 One-Time",
-      href: "/logo-design-packages",
+      href: "/branding-packages",
       buttonText: "Compare Logo Packages",
     },
   },
@@ -1089,7 +1094,7 @@ export const INSIGHTS: InsightArticle[] = [
     serviceCta: {
       title: "Ready to Work with Senior Brand Designers?",
       desc: "Get handcrafted vector concepts tailored to your industry within 48 to 72 hours.",
-      href: "/best-logo-design-agency",
+      href: "/services/branding",
       buttonText: "View Logo Design Services",
     },
     packageCta: {
@@ -1211,7 +1216,7 @@ export const INSIGHTS: InsightArticle[] = [
     serviceCta: {
       title: "Need a High-Performance Website for Your Business?",
       desc: "Get a bespoke, mobile-responsive website engineered for fast loading and lead capture.",
-      href: "/best-website-development-agency",
+      href: "/services/web-design-development",
       buttonText: "Explore Web Development Services",
     },
     packageCta: {
@@ -1323,7 +1328,7 @@ export const INSIGHTS: InsightArticle[] = [
     packageCta: {
       title: "Explore Website Development Packages",
       priceBadge: "From $300 One-Time",
-      href: "/our-website-development-packages",
+      href: "/web-design-packages",
       buttonText: "View Web Dev Packages",
     },
   },
@@ -1438,7 +1443,7 @@ export const INSIGHTS: InsightArticle[] = [
     packageCta: {
       title: "View Custom eCommerce Packages",
       priceBadge: `From ${SHOPIFY_SETUP_PRICE_LABEL} One-Time`,
-      href: "/our-custom-web-design-development-packages",
+      href: "/web-design-packages",
       buttonText: "Compare eCom Packages",
     },
   },
@@ -1576,7 +1581,7 @@ export const INSIGHTS: InsightArticle[] = [
     packageCta: {
       title: "Explore eCommerce Packages",
       priceBadge: `From ${SHOPIFY_SETUP_PRICE_LABEL} One-Time`,
-      href: "/our-custom-web-design-development-packages",
+      href: "/web-design-packages",
       buttonText: "View eCom Packages",
     },
   },
@@ -1974,7 +1979,7 @@ export const INSIGHTS: InsightArticle[] = [
     packageCta: {
       title: "View eCommerce Packages",
       priceBadge: `From ${SHOPIFY_SETUP_PRICE_LABEL}`,
-      href: "/our-custom-web-design-development-packages",
+      href: "/web-design-packages",
       buttonText: "View Packages",
     },
   },

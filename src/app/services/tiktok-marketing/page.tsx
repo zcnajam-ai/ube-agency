@@ -1,4 +1,5 @@
 import React from "react";
+import ServiceSchema from "@/components/seo/ServiceSchema";
 import Link from "next/link";
 import Image from "next/image";
 import TikTokMinimalVisual from "@/components/common/TikTokMinimalVisual";
@@ -138,6 +139,12 @@ export default function TikTokMarketingServicePage() {
 
   return (
     <div className="pt-32 pb-24 px-4 sm:px-6 md:px-12 max-w-7xl mx-auto space-y-24">
+      <ServiceSchema
+        name="TikTok Marketing Services"
+        description="TikTok content strategy, short-form creative planning, creator coordination and paid campaign management."
+        path="/services/tiktok-marketing"
+        serviceType="TikTok marketing"
+      />
       {/* 1. Hero Section */}
       <section className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center border-b border-[#E0DDDB] pb-16">
         <div className="lg:col-span-7 space-y-6">
