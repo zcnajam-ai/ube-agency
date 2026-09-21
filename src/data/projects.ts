@@ -69,12 +69,6 @@ export const FEATURED_PROJECTS: Project[] = [
     accentColor: "#FFE600",
     typography: "Space Grotesk & Outfit (Bold, Medium, Regular)",
     palette: ["#FFE600", "#1E1F24", "#FFFFFF"],
-    testimonial: {
-      quote:
-        "Unified Branding Experts captured Fixoria's vision with extraordinary clarity. The bold yellow and black identity system instantly elevated our brand presence across digital apps, stationery, and team merchandise.",
-      author: "Milan Jak",
-      role: "Operations Director, Fixoria Studio",
-    },
   },
   {
     id: "happy-knot-creations",
@@ -116,12 +110,6 @@ export const FEATURED_PROJECTS: Project[] = [
     accentColor: "#B79BD6",
     typography: "Playfair Display, Quicksand & Nunito",
     palette: ["#F7B7C2", "#B79BD6", "#A8B987", "#FFF7F1", "#E9A3B0"],
-    testimonial: {
-      quote:
-        "Unified Branding Experts built an online store and visual system that truly reflects the love and craft behind Happy Knot Creations. Our collectors and gift shoppers love how simple and fast it is to order directly from us.",
-      author: "Happy Knot Creations Team",
-      role: "Founders, Happy Knot Creations",
-    },
   },
   {
     id: "everhome-real-estate",
@@ -163,12 +151,6 @@ export const FEATURED_PROJECTS: Project[] = [
     accentColor: "#989388",
     typography: "Gotham Pro (Bold, Medium, Regular, Light)",
     palette: ["#E4E7DD", "#D0CEC1", "#989388", "#1E1F1D", "#FFFFFF"],
-    testimonial: {
-      quote:
-        "The visual identity and brand system created by Unified Branding Experts gave Everhome an immediate sense of warmth, trust, and architectural elegance. Clients and property developers resonated with our vision instantly.",
-      author: "Marcus Lindqvist",
-      role: "Managing Director, Everhome Real Estate",
-    },
   },
   {
     id: "eaudacity-fragrance",
@@ -206,12 +188,6 @@ export const FEATURED_PROJECTS: Project[] = [
     accentColor: "#C8A265",
     typography: "Helvetica Neue Bold",
     palette: ["#000000", "#FFFFFF", "#C8A265", "#FAF7F6"],
-    testimonial: {
-      quote:
-        "The brand system and packaging design by Unified Branding Experts gave Eau'dacity an immediate aura of luxury and prestige. Retail buyers and online customers were captivated from day one.",
-      author: "Camille Laurent",
-      role: "Founder & Master Perfumer, Eau'dacity",
-    },
   },
   {
     id: "botane-beauty",
@@ -249,12 +225,6 @@ export const FEATURED_PROJECTS: Project[] = [
     accentColor: "#064E30",
     typography: "Big Caslon CC / Azo Sans",
     palette: ["#F9E7D8", "#064E30", "#161616", "#FFFFFF"],
-    testimonial: {
-      quote:
-        "Botāne's visual identity and packaging designed by UBE elevated our organic perfume to the level of heritage luxury houses. It gives our customers a truly magical unboxing experience.",
-      author: "Aria Montgomery",
-      role: "Founder & Creative Director, Botāne",
-    },
   },
   {
     id: "bugle-chaser-apparel",
@@ -275,7 +245,7 @@ export const FEATURED_PROJECTS: Project[] = [
     execution:
       "We produced the master mascot emblem, hoodie & headwear collection tech-packs, Shopify storefront theme setup, payment gateway configuration, and short-form ad creatives.",
     results: [
-      { metric: "15+", label: "Merchandise SKUs Configured" },
+      { metric: "Catalog", label: "Merchandise SKUs Configured" },
       { metric: "Automated", label: "Dropshipping Fulfillment Flow" },
       { metric: "Mobile-First", label: "Responsive Shopify Theme" },
     ],
@@ -292,12 +262,6 @@ export const FEATURED_PROJECTS: Project[] = [
     accentColor: "#8BC53F",
     typography: "Legend M54 / Robotto",
     palette: ["#000000", "#8BC53F", "#FFFFFF", "#FAF7F6"],
-    testimonial: {
-      quote:
-        "UBE nailed our vision on the first pass. From the emblem to our hats, hoodies, and storefront, they built a brand that our community wears with genuine pride.",
-      author: "Hunter Sterling",
-      role: "Founder, Bugle Chaser",
-    },
   },
 ];
 
