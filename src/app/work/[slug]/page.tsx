@@ -38,7 +38,7 @@ export async function generateMetadata({
       siteName: "Unified Branding Experts",
       images: [
         {
-          url: `https://unifiedbrandingexperts.com${project.heroImage}`
+          url: `https://unifiedbrandingexperts.com${project.heroImage}`,
           width: 1200,
           height: 630,
           alt: project.title,
@@ -49,7 +49,7 @@ export async function generateMetadata({
       card: "summary_large_image",
       title: `${project.title} | Unified Branding Experts`,
       description: project.tagline,
-      images: [`https://unifiedbrandingexperts.com${project.heroImage}`]
+      images: [`https://unifiedbrandingexperts.com${project.heroImage}`],
     },
   };
 }
