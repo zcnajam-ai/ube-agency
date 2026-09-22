@@ -179,8 +179,8 @@ export default function CommerceHubPage({ hub }: { hub: MarketplaceHub }) {
             <p className="text-xs font-mono-num font-bold text-[#9F8BE7] tracking-[0.18em]">FIT</p>
             <h2 className="mt-3 font-display text-3xl sm:text-4xl font-bold tracking-tight">Who {hub.platform} support is for</h2>
             <div className="mt-8 grid md:grid-cols-2 gap-5">
-              <div className="rounded-2xl border border-emerald-200 bg-emerald-50/70 p-6"><h3 className="font-display text-xl font-bold">A practical fit</h3><ul className="mt-5 space-y-3">{hub.fit.right.map((item) => <li key={item} className="flex gap-3 text-sm leading-6"><Check className="h-5 w-5 shrink-0 text-emerald-700" />{item}</li>)}</ul></div>
-              <div className="rounded-2xl border border-rose-200 bg-rose-50/70 p-6"><h3 className="font-display text-xl font-bold">Not the right fit</h3><ul className="mt-5 space-y-3">{hub.fit.notRight.map((item) => <li key={item} className="flex gap-3 text-sm leading-6"><X className="h-5 w-5 shrink-0 text-rose-700" />{item}</li>)}</ul></div>
+              <div className="rounded-2xl border border-[#9F8BE7]/60 bg-white p-6"><h3 className="font-display text-xl font-bold">A practical fit</h3><ul className="mt-5 space-y-3">{hub.fit.right.map((item) => <li key={item} className="flex gap-3 text-sm leading-6"><Check className="h-5 w-5 shrink-0 text-[#9F8BE7]" />{item}</li>)}</ul></div>
+              <div className="rounded-2xl border border-[#E0DDDB] bg-white p-6"><h3 className="font-display text-xl font-bold">Not the right fit</h3><ul className="mt-5 space-y-3">{hub.fit.notRight.map((item) => <li key={item} className="flex gap-3 text-sm leading-6"><X className="h-5 w-5 shrink-0 text-[#585858]" />{item}</li>)}</ul></div>
             </div>
           </section>
 
@@ -211,4 +211,3 @@ export default function CommerceHubPage({ hub }: { hub: MarketplaceHub }) {
     </main>
   );
 }
-
