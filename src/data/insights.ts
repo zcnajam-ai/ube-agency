@@ -2061,8 +2061,8 @@ export const INSIGHTS: InsightArticle[] = [
   "publishedAt": "2026-03-01",
   "updatedAt": "2026-03-05",
   "author": {
-    "name": "Zain Najam",
-    "role": "Senior eCommerce Architect",
+    "name": "Shopify Specialist",
+    "role": "Shopify & eCommerce",
     "avatar": "/images/logo/ube-png-black.png"
   },
   "reviewer": {
@@ -2221,8 +2221,8 @@ export const INSIGHTS: InsightArticle[] = [
   "publishedAt": "2026-03-02",
   "updatedAt": "2026-03-05",
   "author": {
-    "name": "Zain Najam",
-    "role": "Senior eCommerce Architect",
+    "name": "Dropshipping Specialist",
+    "role": "Dropshipping & eCommerce",
     "avatar": "/images/logo/ube-png-black.png"
   },
   "reviewer": {
@@ -2354,8 +2354,8 @@ export const INSIGHTS: InsightArticle[] = [
   "publishedAt": "2026-03-02",
   "updatedAt": "2026-03-05",
   "author": {
-    "name": "Zain Najam",
-    "role": "Senior eCommerce Architect",
+    "name": "Dropshipping Specialist",
+    "role": "Dropshipping & eCommerce",
     "avatar": "/images/logo/ube-png-black.png"
   },
   "reviewer": {
@@ -2492,8 +2492,8 @@ export const INSIGHTS: InsightArticle[] = [
   "publishedAt": "2026-03-03",
   "updatedAt": "2026-03-05",
   "author": {
-    "name": "Zain Najam",
-    "role": "Senior eCommerce Architect",
+    "name": "TikTok Shop Specialist",
+    "role": "TikTok Commerce",
     "avatar": "/images/logo/ube-png-black.png"
   },
   "reviewer": {
@@ -2608,8 +2608,8 @@ export const INSIGHTS: InsightArticle[] = [
   "publishedAt": "2026-03-03",
   "updatedAt": "2026-03-05",
   "author": {
-    "name": "Zain Najam",
-    "role": "Senior eCommerce Architect",
+    "name": "TikTok Shop Integration Specialist",
+    "role": "Shopify & TikTok Commerce",
     "avatar": "/images/logo/ube-png-black.png"
   },
   "reviewer": {
@@ -2729,8 +2729,8 @@ export const INSIGHTS: InsightArticle[] = [
   "publishedAt": "2026-03-04",
   "updatedAt": "2026-03-05",
   "author": {
-    "name": "Zain Najam",
-    "role": "Senior AI SEO Architect",
+    "name": "AI SEO Specialist",
+    "role": "AI SEO, AEO & GEO",
     "avatar": "/images/logo/ube-png-black.png"
   },
   "reviewer": {
@@ -2878,8 +2878,8 @@ export const INSIGHTS: InsightArticle[] = [
   "publishedAt": "2026-03-04",
   "updatedAt": "2026-03-05",
   "author": {
-    "name": "Zain Najam",
-    "role": "Senior Paid Media Strategist",
+    "name": "Google & Meta Ads Specialist",
+    "role": "Paid Media Strategy",
     "avatar": "/images/logo/ube-png-black.png"
   },
   "reviewer": {
