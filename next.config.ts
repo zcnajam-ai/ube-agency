@@ -86,6 +86,8 @@ const nextConfig: NextConfig = {
       { source: "/portfolio/", destination: "/work", permanent: true },
       { source: "/pricing", destination: "/packages", permanent: true },
       { source: "/pricing/", destination: "/packages", permanent: true },
+      { source: "/services/tiktok-shop-setup", destination: "/tiktok-shop", permanent: true },
+      { source: "/services/tiktok-shop-setup/", destination: "/tiktok-shop", permanent: true },
 
       // Legacy WordPress Category Archives -> Canonical Destinations
       { source: "/category/ui-ux-design", destination: "/services/web-design-development", permanent: true },

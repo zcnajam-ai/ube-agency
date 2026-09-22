@@ -304,6 +304,17 @@ export default function Navbar() {
                       </div>
                     </div>
 
+                    <div className="pt-3 border-t border-[#E0DDDB]">
+                      <span className="text-[10px] font-mono-num font-bold text-[#585858] uppercase tracking-wider">Commerce platform hubs</span>
+                      <div className="mt-2 flex flex-wrap gap-x-4 gap-y-2 text-[11px] font-bold">
+                        <Link href="/shopify" onClick={() => setServicesOpen(false)} className="hover:text-[#9F8BE7]">Shopify</Link>
+                        <Link href="/tiktok-shop" onClick={() => setServicesOpen(false)} className="hover:text-[#9F8BE7]">TikTok Shop</Link>
+                        <Link href="/amazon" onClick={() => setServicesOpen(false)} className="hover:text-[#9F8BE7]">Amazon</Link>
+                        <Link href="/walmart-marketplace" onClick={() => setServicesOpen(false)} className="hover:text-[#9F8BE7]">Walmart</Link>
+                        <Link href="/ebay" onClick={() => setServicesOpen(false)} className="hover:text-[#9F8BE7]">eBay</Link>
+                      </div>
+                    </div>
+
                     {/* Bottom Strip */}
                     <div className="pt-3 border-t border-[#E0DDDB] flex items-center justify-between text-xs">
                       <Link

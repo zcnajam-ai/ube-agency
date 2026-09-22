@@ -15,14 +15,21 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/about` },
     { url: `${baseUrl}/insights` },
     { url: `${baseUrl}/ai-seo`, lastModified: new Date("2026-09-14") },
+    { url: `${baseUrl}/shopify`, lastModified: new Date("2026-09-22") },
+    { url: `${baseUrl}/tiktok-shop`, lastModified: new Date("2026-09-22") },
+    { url: `${baseUrl}/amazon`, lastModified: new Date("2026-09-22") },
+    { url: `${baseUrl}/walmart-marketplace`, lastModified: new Date("2026-09-22") },
+    { url: `${baseUrl}/ebay`, lastModified: new Date("2026-09-22") },
     { url: `${baseUrl}/research/ai-search-readiness-study-2026`, lastModified: new Date("2026-08-31") },
     { url: `${baseUrl}/contact` },
   ];
 
   // 2. Primary Service Pages (14)
-  const serviceRoutes: MetadataRoute.Sitemap = ALL_SERVICES.map((s) => ({
-    url: `${baseUrl}/services/${s.slug}`,
-  }));
+  const serviceRoutes: MetadataRoute.Sitemap = ALL_SERVICES
+    .filter((s) => s.slug !== "tiktok-shop-setup")
+    .map((s) => ({
+      url: `${baseUrl}/services/${s.slug}`,
+    }));
 
   // 3. Dedicated Package Hub Pages (8)
   const packageRoutes: MetadataRoute.Sitemap = [
