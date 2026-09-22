@@ -229,6 +229,7 @@ export default function AiSeoHubPage() {
                 <Phone aria-hidden="true" size={18} /> Call +1 224-266-8081
               </a>
             </div>
+            </div>
             <figure className="group relative mx-auto w-full max-w-[520px] overflow-hidden rounded-[2rem] border border-[#E0DDDB] bg-[#161616] p-5 shadow-lg sm:p-8">
               <div className="absolute inset-[20%] rounded-full bg-[#9F8BE7]/25 blur-3xl transition-opacity duration-500 group-hover:opacity-90" aria-hidden="true" />
               <Image
