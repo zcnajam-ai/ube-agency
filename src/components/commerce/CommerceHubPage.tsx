@@ -1,11 +1,42 @@
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight, Check, Phone, X } from "lucide-react";
 import type { MarketplaceHub } from "@/data/marketplace-hubs";
 
 const UPDATED = "2026-09-22";
 
+const PLATFORM_VISUALS: Record<MarketplaceHub["slug"], { src: string; alt: string; title: string }> = {
+  shopify: {
+    src: "/images/commerce/shopify-commerce-3d.webp",
+    alt: "3D Shopify storefront system with product catalog and shopping bag",
+    title: "Shopify Store Design and Development System",
+  },
+  "tiktok-shop": {
+    src: "/images/commerce/tiktok-shop-commerce-3d.webp",
+    alt: "3D TikTok Shop mobile storefront with video commerce and product fulfillment",
+    title: "TikTok Shop Setup and Management System",
+  },
+  amazon: {
+    src: "/images/commerce/amazon-marketplace-3d.webp",
+    alt: "3D Amazon marketplace storefront with listing card and fulfillment package",
+    title: "Amazon Marketplace Management System",
+  },
+  "walmart-marketplace": {
+    src: "/images/commerce/walmart-marketplace-3d.webp",
+    alt: "3D Walmart Marketplace storefront with organized catalog and inventory package",
+    title: "Walmart Marketplace Setup and Management System",
+  },
+  ebay: {
+    src: "/images/commerce/ebay-marketplace-3d.webp",
+    alt: "3D eBay marketplace storefront with product tag, auction gavel and shipping package",
+    title: "eBay Store Setup and Management System",
+  },
+};
+
 export default function CommerceHubPage({ hub }: { hub: MarketplaceHub }) {
   const canonical = `https://unifiedbrandingexperts.com/${hub.slug}`;
+  const visual = PLATFORM_VISUALS[hub.slug];
+  const imageUrl = `https://unifiedbrandingexperts.com${visual.src}`;
   const toc = [
     ["deliverables", "What we deliver"],
     ["process", "How we work"],
@@ -31,6 +62,7 @@ export default function CommerceHubPage({ hub }: { hub: MarketplaceHub }) {
         author: { "@id": "https://unifiedbrandingexperts.com/#organization" },
         publisher: { "@id": "https://unifiedbrandingexperts.com/#organization" },
         mainEntityOfPage: { "@id": `${canonical}#webpage` },
+        image: { "@id": `${canonical}#primaryimage` },
       },
       {
         "@type": "Service",
@@ -40,11 +72,22 @@ export default function CommerceHubPage({ hub }: { hub: MarketplaceHub }) {
         url: canonical,
         provider: { "@id": "https://unifiedbrandingexperts.com/#organization" },
         areaServed: { "@type": "Country", name: "United States" },
+        image: { "@id": `${canonical}#primaryimage` },
         offers: {
           "@type": "Offer",
           url: `https://unifiedbrandingexperts.com${hub.pricing.href}`,
           description: hub.pricing.detail,
         },
+      },
+      {
+        "@type": "ImageObject",
+        "@id": `${canonical}#primaryimage`,
+        url: imageUrl,
+        contentUrl: imageUrl,
+        width: 768,
+        height: 768,
+        caption: visual.alt,
+        representativeOfPage: true,
       },
       {
         "@type": "FAQPage",
@@ -99,9 +142,24 @@ export default function CommerceHubPage({ hub }: { hub: MarketplaceHub }) {
               </div>
               <p className="mt-5 text-xs text-[#585858]">Published and last updated: September 22, 2026</p>
             </div>
-            <div className="bg-[#161616] text-white p-7 sm:p-10 flex flex-col justify-between">
+            <div className="group bg-[#161616] text-white p-6 sm:p-8 lg:p-9 flex flex-col justify-between overflow-hidden">
               <div>
                 <p className="font-mono-num text-xs tracking-[0.2em] text-[#b4a3f7]">TRANSPARENT SCOPE</p>
+                <figure className="relative mx-auto mt-2 w-full max-w-[260px] sm:max-w-[300px] lg:max-w-[320px]">
+                  <div className="absolute inset-[18%] rounded-full bg-[#9F8BE7]/25 blur-3xl transition-opacity duration-500 group-hover:opacity-90" aria-hidden="true" />
+                  <Image
+                    src={visual.src}
+                    alt={visual.alt}
+                    title={visual.title}
+                    width={768}
+                    height={768}
+                    priority
+                    sizes="(max-width: 640px) 72vw, (max-width: 1024px) 42vw, 320px"
+                    className="relative h-auto w-full drop-shadow-[0_22px_28px_rgba(0,0,0,0.32)] transition-transform duration-500 ease-out group-hover:-translate-y-2 group-hover:scale-[1.04] motion-reduce:transform-none motion-reduce:transition-none"
+                  />
+                  <figcaption className="sr-only">{visual.title}</figcaption>
+                </figure>
+                <p className="font-display text-center text-sm font-bold text-white/85">{visual.title}</p>
                 <p className="mt-5 font-display text-3xl font-bold">{hub.pricing.label}</p>
                 <p className="mt-4 text-sm leading-6 text-white/70">{hub.pricing.detail}</p>
               </div>
@@ -179,8 +237,8 @@ export default function CommerceHubPage({ hub }: { hub: MarketplaceHub }) {
             <p className="text-xs font-mono-num font-bold text-[#9F8BE7] tracking-[0.18em]">FIT</p>
             <h2 className="mt-3 font-display text-3xl sm:text-4xl font-bold tracking-tight">Who {hub.platform} support is for</h2>
             <div className="mt-8 grid md:grid-cols-2 gap-5">
-              <div className="rounded-2xl border border-[#9F8BE7]/60 bg-white p-6"><h3 className="font-display text-xl font-bold">A practical fit</h3><ul className="mt-5 space-y-3">{hub.fit.right.map((item) => <li key={item} className="flex gap-3 text-sm leading-6"><Check className="h-5 w-5 shrink-0 text-[#9F8BE7]" />{item}</li>)}</ul></div>
-              <div className="rounded-2xl border border-[#E0DDDB] bg-white p-6"><h3 className="font-display text-xl font-bold">Not the right fit</h3><ul className="mt-5 space-y-3">{hub.fit.notRight.map((item) => <li key={item} className="flex gap-3 text-sm leading-6"><X className="h-5 w-5 shrink-0 text-[#585858]" />{item}</li>)}</ul></div>
+              <div className="rounded-2xl border border-emerald-200 bg-emerald-50/70 p-6"><h3 className="font-display text-xl font-bold">A practical fit</h3><ul className="mt-5 space-y-3">{hub.fit.right.map((item) => <li key={item} className="flex gap-3 text-sm leading-6"><Check className="h-5 w-5 shrink-0 text-emerald-700" />{item}</li>)}</ul></div>
+              <div className="rounded-2xl border border-rose-200 bg-rose-50/70 p-6"><h3 className="font-display text-xl font-bold">Not the right fit</h3><ul className="mt-5 space-y-3">{hub.fit.notRight.map((item) => <li key={item} className="flex gap-3 text-sm leading-6"><X className="h-5 w-5 shrink-0 text-rose-700" />{item}</li>)}</ul></div>
             </div>
           </section>
 
