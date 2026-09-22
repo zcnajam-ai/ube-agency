@@ -56,6 +56,16 @@ export default function AiSeoServicePage() {
     areaServed: "Worldwide",
     description: "Get found in Google AI Overviews, ChatGPT Search, Perplexity, and generative search engines with Answer Engine Optimization (AEO) and JSON-LD schema.",
     url: "https://unifiedbrandingexperts.com/services/aiseo",
+    image: {
+      "@type": "ImageObject",
+      "@id": "https://unifiedbrandingexperts.com/services/aiseo#primaryimage",
+      url: "https://unifiedbrandingexperts.com/images/ai-seo/ai-seo-service-3d.webp",
+      contentUrl: "https://unifiedbrandingexperts.com/images/ai-seo/ai-seo-service-3d.webp",
+      width: 768,
+      height: 768,
+      caption: "AI SEO implementation system connecting search, structured data, content and measurement",
+      representativeOfPage: true,
+    },
     offers: {
       "@type": "Offer",
       price: "349.00",
@@ -284,15 +294,16 @@ export default function AiSeoServicePage() {
         <div className="lg:col-span-5">
           <div className="relative aspect-[4/3] w-full rounded-3xl overflow-hidden bg-white border border-[#E0DDDB] shadow-md group">
             <Image
-              src="/images/editorial/ai-search-content-strategy.webp"
-              alt="Search strategist reviewing answer-oriented content and topic relationships"
+              src="/images/ai-seo/ai-seo-service-3d.webp"
+              alt="3D AI SEO implementation system connecting search, structured data, content and measurement"
+              title="AI SEO Implementation and Search Visibility System"
               fill
               priority
               sizes="(max-width: 1024px) 100vw, 45vw"
-              className="object-contain object-center p-2 transition-transform duration-700 group-hover:scale-102"
+              className="object-contain object-center p-3 sm:p-5 transition-transform duration-500 ease-out group-hover:-translate-y-2 group-hover:scale-[1.04] motion-reduce:transform-none motion-reduce:transition-none"
             />
             <div className="absolute bottom-4 left-4 right-4 p-4 rounded-2xl bg-white/90 backdrop-blur-md border border-[#E0DDDB] text-xs font-mono-num text-[#161616] flex items-center justify-between shadow-xs">
-              <span className="font-bold">AEO • GEO • AI OVERVIEWS</span>
+              <span className="font-bold">AI SEO IMPLEMENTATION SYSTEM</span>
               <span className="text-emerald-600 font-bold">STARTING AT $349</span>
             </div>
           </div>

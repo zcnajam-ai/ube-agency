@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import {
   ArrowRight,
   BarChart3,
@@ -15,7 +16,7 @@ import {
 
 const url = "https://unifiedbrandingexperts.com/ai-seo";
 const published = "2026-09-14";
-const updated = "2026-09-14";
+const updated = "2026-09-22";
 
 export const metadata: Metadata = {
   title: { absolute: "AI SEO Agency: Get Cited in ChatGPT, Google AI Overviews & Perplexity | UBE" },
@@ -119,10 +120,23 @@ const articleSchema = {
       url: "https://unifiedbrandingexperts.com/images/logo/ube-logo.png",
     },
   },
+  image: { "@id": `${url}#primaryimage` },
   citation: [
     "https://unifiedbrandingexperts.com/research/ai-search-readiness-study-2026",
   ],
   about: ["AI SEO", "Answer Engine Optimization", "Generative Engine Optimization"],
+};
+
+const imageSchema = {
+  "@context": "https://schema.org",
+  "@type": "ImageObject",
+  "@id": `${url}#primaryimage`,
+  url: "https://unifiedbrandingexperts.com/images/ai-seo/ai-seo-authority-hub-3d.webp",
+  contentUrl: "https://unifiedbrandingexperts.com/images/ai-seo/ai-seo-authority-hub-3d.webp",
+  width: 768,
+  height: 768,
+  caption: "AI SEO research and answer-engine authority system connecting evidence, citations and structured knowledge",
+  representativeOfPage: true,
 };
 
 const faqSchema = {
@@ -169,6 +183,7 @@ export default function AiSeoHubPage() {
   return (
     <main className="min-h-screen overflow-x-clip bg-[#FAF7F6] text-[#161616]">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(imageSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
@@ -179,7 +194,8 @@ export default function AiSeoHubPage() {
             <span aria-hidden="true" className="px-2">/</span>
             <span aria-current="page">AI SEO</span>
           </nav>
-          <div className="max-w-5xl">
+          <div className="grid items-center gap-10 lg:grid-cols-[1.25fr_.75fr]">
+            <div>
             <p className="mb-5 font-mono text-xs uppercase tracking-[0.24em] text-[#715CC4]">
               AI SEO · AEO · GEO
             </p>
@@ -195,7 +211,7 @@ export default function AiSeoHubPage() {
             <div className="mt-8 flex flex-wrap gap-3 text-sm text-[#585858]">
               <span>Published September 14, 2026</span>
               <span aria-hidden="true">·</span>
-              <span>Last updated September 14, 2026</span>
+              <span>Last updated September 22, 2026</span>
             </div>
             <div className="mt-10 flex flex-col gap-3 sm:flex-row">
               <Link
@@ -213,6 +229,23 @@ export default function AiSeoHubPage() {
                 <Phone aria-hidden="true" size={18} /> Call +1 224-266-8081
               </a>
             </div>
+            </div>
+            <figure className="group relative mx-auto w-full max-w-[520px] overflow-hidden rounded-[2rem] border border-[#E0DDDB] bg-[#161616] p-5 shadow-lg sm:p-8">
+              <div className="absolute inset-[20%] rounded-full bg-[#9F8BE7]/25 blur-3xl transition-opacity duration-500 group-hover:opacity-90" aria-hidden="true" />
+              <Image
+                src="/images/ai-seo/ai-seo-authority-hub-3d.webp"
+                alt="3D AI SEO research system connecting evidence, citations and structured knowledge"
+                title="AI SEO Research and Answer-Engine Authority System"
+                width={768}
+                height={768}
+                priority
+                sizes="(max-width: 1024px) 82vw, 430px"
+                className="relative h-auto w-full drop-shadow-[0_22px_28px_rgba(0,0,0,0.34)] transition-transform duration-500 ease-out group-hover:-translate-y-2 group-hover:scale-[1.04] motion-reduce:transform-none motion-reduce:transition-none"
+              />
+              <figcaption className="relative mt-3 text-center text-sm font-semibold text-white/85">
+                AI SEO Research and Answer-Engine Authority System
+              </figcaption>
+            </figure>
           </div>
         </div>
       </section>
