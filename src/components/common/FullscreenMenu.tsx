@@ -33,6 +33,11 @@ export default function FullscreenMenu({ isOpen, onClose }: FullscreenMenuProps)
   const dedicatedServices = [
     { label: "eCommerce Store Management", href: "/services/ecommerce-store-management" },
     { label: "eCommerce Growth Services", href: "/services/ecommerce" },
+    { label: "Shopify Agency Hub", href: "/shopify" },
+    { label: "TikTok Shop Agency", href: "/tiktok-shop" },
+    { label: "Amazon Store Management", href: "/amazon" },
+    { label: "Walmart Marketplace", href: "/walmart-marketplace" },
+    { label: "eBay Store Management", href: "/ebay" },
     { label: "AI SEO & Answer Engines", href: "/services/aiseo" },
     { label: "Digital Marketing Services", href: "/services/digital-marketing" },
     { label: "Branding & Visual Identity", href: "/services/branding" },
