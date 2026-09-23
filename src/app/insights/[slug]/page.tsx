@@ -88,7 +88,7 @@ export async function generateMetadata({
       type: "article",
       publishedTime,
       modifiedTime,
-      authors: [article.author.name],
+      authors: [COMPANY_INFO.name],
       images: [
         {
           url: ogImageUrl,
@@ -135,15 +135,15 @@ export default async function InsightArticlePage({
     datePublished: publishedDate,
     dateModified: modifiedDate,
     author: {
-      "@type": "Person",
-      name: article.author.name,
-      jobTitle: article.author.role,
-      url: "https://unifiedbrandingexperts.com/about",
+      "@type": "Organization",
+      "@id": "https://unifiedbrandingexperts.com/#organization",
+      name: COMPANY_INFO.name,
+      url: "https://unifiedbrandingexperts.com",
     },
     reviewedBy: {
-      "@type": "Person",
-      name: article.reviewer?.name || "Zain Najam",
-      jobTitle: article.reviewer?.role || "Senior Technical Director & AI Architect",
+      "@type": "Organization",
+      "@id": "https://unifiedbrandingexperts.com/#organization",
+      name: COMPANY_INFO.name,
       url: "https://unifiedbrandingexperts.com/about",
     },
     publisher: {
