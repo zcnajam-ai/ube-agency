@@ -52,7 +52,7 @@ export default function ShopifyDevelopmentPage() {
     {
       title: "Streamlined Checkout & Cart Funnels",
       desc: "Slide-out cart drawers, tiered shipping bars, upsell configurations, bundles, and Shopify Checkout Extensibility configured to simplify purchasing.",
-      icon: <CreditCard className="w-5 h-5 text-emerald-600" />,
+      icon: <CreditCard className="w-5 h-5 text-emerald-700" />,
       image: "/images/official/shopify/shopify-conversion-metrics.webp",
     },
     {
@@ -241,7 +241,7 @@ export default function ShopifyDevelopmentPage() {
               className="px-8 py-4 rounded-full border border-[#E0DDDB] bg-white hover:border-[#9F8BE7] text-sm font-display font-bold text-[#161616] transition-all flex items-center gap-2 shadow-xs"
             >
               <span>View eCom Packages</span>
-              <span className="text-xs font-mono-num text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-full">
+              <span className="text-xs font-mono-num text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full">
                 From {SHOPIFY_SETUP_PRICE_LABEL}
               </span>
               <ArrowUpRight className="w-4 h-4 text-[#715CC4]" />
@@ -262,7 +262,7 @@ export default function ShopifyDevelopmentPage() {
             />
             <div className="absolute bottom-3 left-3 right-3 p-3 rounded-2xl bg-white/90 backdrop-blur-md border border-[#E0DDDB] text-xs font-mono-num text-[#161616] flex items-center justify-between shadow-xs">
               <span className="font-bold">SHOPIFY • DROPSHIPPING • ECOMMERCE</span>
-              <span className="text-emerald-600 font-bold">FROM {SHOPIFY_SETUP_PRICE_LABEL}</span>
+              <span className="text-emerald-700 font-bold">FROM {SHOPIFY_SETUP_PRICE_LABEL}</span>
             </div>
           </div>
         </div>
@@ -406,7 +406,7 @@ export default function ShopifyDevelopmentPage() {
       {/* 5. PACKAGE CTA */}
       <section className="p-8 sm:p-12 rounded-3xl bg-gradient-to-br from-white to-[#F4EFEB] border-2 border-[#9F8BE7] shadow-sm flex flex-col md:flex-row items-center justify-between gap-8">
         <div className="space-y-2 max-w-2xl">
-          <span className="text-xs font-mono-num text-emerald-600 font-bold uppercase tracking-wider block">
+          <span className="text-xs font-mono-num text-emerald-700 font-bold uppercase tracking-wider block">
             AFFORDABLE ECOMMERCE PACKAGES
           </span>
           <h2 className="font-display text-2xl sm:text-4xl font-bold text-[#161616]">

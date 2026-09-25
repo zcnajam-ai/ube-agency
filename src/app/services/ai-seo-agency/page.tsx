@@ -108,7 +108,7 @@ export default function AiSeoServicePage() {
     {
       title: "Answer Engine Optimization (AEO)",
       desc: "People ask questions. Engines want clean answers. We structure your content into clear, direct responses that answer engines can lift and feature, from FAQ formatting to concise definitions.",
-      icon: <Cpu className="w-5 h-5 text-emerald-600" />,
+      icon: <Cpu className="w-5 h-5 text-emerald-700" />,
       image: "/images/official/aiseo/aeo-structure.jpeg",
     },
     {
@@ -245,9 +245,14 @@ export default function AiSeoServicePage() {
             Get Found in Google AI Overviews, ChatGPT Search &amp; Generative AI Engines.
           </p>
 
-          <p className="text-base sm:text-lg text-[#585858] font-body leading-relaxed max-w-2xl">
-            Search has changed. For years, ranking meant climbing to the top of a page of blue links. But today your customers ask ChatGPT, read Google&apos;s AI Overviews, and get answers before they ever click. If your business isn&apos;t showing up in those answers, you&apos;re invisible to the people already looking for you.
-          </p>
+          <div className="space-y-2 text-base sm:text-lg text-[#585858] font-body leading-relaxed max-w-2xl">
+            <p>
+              Search has changed. For years, ranking meant climbing to the top of a page of blue links.
+            </p>
+            <p>
+              Today your customers ask ChatGPT, read Google&apos;s AI Overviews, and get answers before they ever click. If your business isn&apos;t showing up in those answers, you&apos;re invisible to the people already looking for you.
+            </p>
+          </div>
 
           <p className="text-sm sm:text-base text-[#303030] font-body font-medium">
             At Unified Branding Experts, we help you get found where search is heading. We optimize your content for traditional rankings and for the AI systems now shaping how people discover businesses. <Link href="/ai-seo" className="text-[#715CC4] underline font-bold hover:text-[#161616]">See the full AI SEO methodology</Link>, then use our <Link href="/insights/ai-seo-aeo-geo-guide" className="text-[#715CC4] underline font-bold hover:text-[#161616]">complete guide to AI SEO, AEO and GEO</Link> for a deeper technical breakdown.
@@ -282,7 +287,7 @@ export default function AiSeoServicePage() {
               className="px-8 py-4 rounded-full border border-[#E0DDDB] bg-white hover:border-[#9F8BE7] text-sm font-display font-bold text-[#161616] transition-all flex items-center gap-2 shadow-xs"
             >
               <span>Explore AI SEO Packages</span>
-              <span className="text-xs font-mono-num text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-full">
+              <span className="text-xs font-mono-num text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full">
                 Audit From $349
               </span>
               <ArrowUpRight className="w-4 h-4 text-[#715CC4]" />
@@ -306,7 +311,7 @@ export default function AiSeoServicePage() {
             />
             <div className="absolute bottom-4 left-4 right-4 p-4 rounded-2xl bg-white/90 backdrop-blur-md border border-[#E0DDDB] text-xs font-mono-num text-[#161616] flex items-center justify-between shadow-xs">
               <span className="font-bold">AI SEO IMPLEMENTATION SYSTEM</span>
-              <span className="text-emerald-600 font-bold">STARTING AT $349</span>
+              <span className="text-emerald-700 font-bold">STARTING AT $349</span>
             </div>
           </div>
         </div>
