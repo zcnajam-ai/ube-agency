@@ -23,6 +23,7 @@ import EcommerceMultiChannelVisual from "@/components/services/EcommerceMultiCha
 import ProductListingOptimizationVisual from "@/components/services/ProductListingOptimizationVisual";
 import EcommerceAutomationVisual from "@/components/services/EcommerceAutomationVisual";
 import ServiceProjectModalTrigger from "@/components/services/ServiceProjectModalTrigger";
+import FaqSchema from "@/components/seo/FaqSchema";
 
 export const metadata: Metadata = {
   title: "eCommerce Growth Services | Shopify, Amazon, Etsy & eBay",
@@ -41,7 +42,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "https://unifiedbrandingexperts.com/og-default.png",
+        url: "https://unifiedbrandingexperts.com/services/ecommerce/opengraph-image",
         width: 1200,
         height: 630,
         alt: "eCommerce Growth & Marketplace Services - Unified Branding Experts",
@@ -53,11 +54,19 @@ export const metadata: Metadata = {
     title: "eCommerce Growth Services | Shopify, Amazon, Etsy & eBay | Unified Branding Experts",
     description:
       "Professional eCommerce store development, marketplace optimization, product SEO, and multi-channel strategy for Shopify, Amazon, Etsy, and eBay.",
-    images: ["https://unifiedbrandingexperts.com/og-default.png"],
+    images: ["https://unifiedbrandingexperts.com/services/ecommerce/opengraph-image"],
   },
 };
 
 export default function EcommerceGrowthServicePage() {
+  const faqs = [
+    { q: "Which eCommerce platforms do you work with?", a: "We support Shopify, Amazon, Etsy, eBay, WooCommerce and selected supplier or fulfillment platforms depending on project requirements." },
+    { q: "Can you build a Shopify store from scratch?", a: "Yes. We can handle store setup, design, product organization, collections, payment configuration, shipping, integrations, mobile optimization and launch preparation." },
+    { q: "Do you help with Amazon, Etsy and eBay listings?", a: "Yes. We can help structure and optimize product listings, marketplace content, categories, keywords and storefront organization." },
+    { q: "Can you help with dropshipping?", a: "Yes. Where appropriate suppliers and integrations are available, we can configure storefronts, supplier connections, product imports and fulfillment workflows." },
+    { q: "Does eCommerce development include advertising?", a: "Advertising budgets and ongoing advertising management are separate unless explicitly included in a proposal." },
+    { q: "Can a business start with one platform and expand later?", a: "Yes. In many situations, establishing one strong channel first is more practical than attempting to launch everywhere simultaneously." },
+  ];
   const jsonLd = {
     "@context": "https://schema.org",
     "@graph": [
@@ -100,6 +109,7 @@ export default function EcommerceGrowthServicePage() {
 
   return (
     <main className="pt-28 pb-20 space-y-20 px-4 sm:px-6 md:px-12 max-w-7xl mx-auto overflow-hidden">
+      <FaqSchema faqs={faqs} />
       {/* Schema.org Structured Data */}
       <script
         type="application/ld+json"
@@ -564,7 +574,7 @@ export default function EcommerceGrowthServicePage() {
         </div>
 
         <div className="flex flex-wrap items-center gap-6 pt-2 text-xs font-display font-bold">
-          <Link href="/services/aiseo" className="text-[#161616] hover:text-[#9F8BE7] underline underline-offset-4">
+          <Link href="/services/ai-seo-agency" className="text-[#161616] hover:text-[#9F8BE7] underline underline-offset-4">
             Explore AI SEO &amp; Answer Engine Services →
           </Link>
           <Link href="/insights/how-much-does-a-small-business-website-cost" className="text-[#161616] hover:text-[#9F8BE7] underline underline-offset-4">

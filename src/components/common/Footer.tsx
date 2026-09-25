@@ -126,7 +126,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/services/aiseo" className="hover:text-white transition-colors flex items-center justify-between py-1 min-h-[28px]">
+                <Link href="/services/ai-seo-agency" className="hover:text-white transition-colors flex items-center justify-between py-1 min-h-[28px]">
                   <span>AI Search Optimization (AEO/GEO)</span>
                   <span className="text-[10px] text-[#DDF160] font-mono-num font-bold">02</span>
                 </Link>

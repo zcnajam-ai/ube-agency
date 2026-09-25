@@ -17,6 +17,7 @@ import {
   Layers,
 } from "lucide-react";
 import ServiceProjectModalTrigger from "@/components/services/ServiceProjectModalTrigger";
+import FaqSchema from "@/components/seo/FaqSchema";
 
 export const metadata: Metadata = {
   title: "Digital Marketing Services | Google Ads, Meta Ads & TikTok",
@@ -35,7 +36,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "https://unifiedbrandingexperts.com/og-default.png",
+        url: "https://unifiedbrandingexperts.com/services/digital-marketing/opengraph-image",
         width: 2048,
         height: 676,
         alt: "Digital marketing campaign dashboard showing Google Ads, Meta Ads, TikTok and conversion performance",
@@ -47,7 +48,7 @@ export const metadata: Metadata = {
     title: "Digital Marketing Services | Google Ads, Meta Ads & TikTok | Unified Branding Experts",
     description:
       "Integrated digital marketing services across Google Ads, Meta Ads, TikTok Marketing, and paid social funnels.",
-    images: ["https://unifiedbrandingexperts.com/og-default.png"],
+    images: ["https://unifiedbrandingexperts.com/services/digital-marketing/opengraph-image"],
   },
 };
 
@@ -136,10 +137,23 @@ export default function DigitalMarketingServiceHubPage() {
       q: "What is included in UBE digital marketing campaign management?",
       a: "Every engagement includes strategic audience research, creative copywriting, ad asset production, campaign setup, bid management, A/B audience testing, weekly budget reallocation, and transparent reporting.",
     },
+    {
+      q: "How much do digital marketing services cost?",
+      a: "Management fees depend on the channels, creative workload, tracking requirements, and reporting scope. Advertising spend is separate. We document the monthly fee, media budget, and included deliverables before launch.",
+    },
+    {
+      q: "How long does it take to launch a digital marketing campaign?",
+      a: "A focused campaign can often be prepared in one to three weeks after access, approved creative, tracking, and landing pages are ready. More complex multi-channel programs take longer and follow a written launch schedule.",
+    },
+    {
+      q: "Do I need tracking and creative assets before campaign management starts?",
+      a: "Not necessarily. We can scope tracking setup and creative production as part of the engagement. Campaigns do not launch until the required access, measurement, offer details, and approved assets are in place.",
+    },
   ];
 
   return (
     <main className="pt-28 pb-20 space-y-20 px-4 sm:px-6 md:px-12 max-w-7xl mx-auto overflow-hidden">
+      <FaqSchema faqs={faqs} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

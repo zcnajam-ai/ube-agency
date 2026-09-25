@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     url: "https://unifiedbrandingexperts.com/branding-packages",
     images: [
       {
-        url: "https://unifiedbrandingexperts.com/og-default.png",
+        url: "https://unifiedbrandingexperts.com/branding-packages/opengraph-image",
         width: 1200,
         height: 630,
         alt: "Branding Packages by Unified Branding Experts",
@@ -165,7 +165,7 @@ export default function BrandingPackagesPage() {
     serviceType: "Brand Identity and Logo Design",
     description:
       "Professional branding and logo design packages starting from $299 to full enterprise brand systems.",
-    image: "https://unifiedbrandingexperts.com/og-default.png",
+    image: "https://unifiedbrandingexperts.com/branding-packages/opengraph-image",
     provider: {
       "@type": "Organization",
       name: COMPANY_INFO.name,

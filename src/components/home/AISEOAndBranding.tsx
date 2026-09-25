@@ -102,7 +102,7 @@ export default function AISEOAndBranding() {
 
             <div className="pt-4 border-t border-white/10 flex items-center justify-between relative z-10">
               <Link
-                href="/services/aiseo"
+                href="/services/ai-seo-agency"
                 className="text-xs font-display font-bold text-[#DDF160] hover:underline flex items-center gap-1"
               >
                 <span>Read AI SEO Specs</span>

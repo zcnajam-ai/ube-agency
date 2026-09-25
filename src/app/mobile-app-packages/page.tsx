@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     url: "https://unifiedbrandingexperts.com/mobile-app-packages",
     images: [
       {
-        url: "https://unifiedbrandingexperts.com/og-default.png",
+        url: "https://unifiedbrandingexperts.com/mobile-app-packages/opengraph-image",
         width: 1200,
         height: 630,
         alt: "Mobile App Packages by Unified Branding Experts",
@@ -146,7 +146,7 @@ export default function MobileAppPackagesPage() {
     },
     image: {
       "@type": "ImageObject",
-      url: "https://unifiedbrandingexperts.com/og-default.png",
+      url: "https://unifiedbrandingexperts.com/mobile-app-packages/opengraph-image",
     },
     offers: {
       "@type": "AggregateOffer",

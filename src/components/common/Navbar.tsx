@@ -154,7 +154,7 @@ export default function Navbar() {
                           </Link>
 
                           <Link
-                            href="/services/aiseo"
+                            href="/services/ai-seo-agency"
                             onClick={() => setServicesOpen(false)}
                             className="p-2 rounded-xl hover:bg-[#FAF7F6] block transition-colors group"
                           >

@@ -38,7 +38,7 @@ export default function FullscreenMenu({ isOpen, onClose }: FullscreenMenuProps)
     { label: "Amazon Store Management", href: "/amazon" },
     { label: "Walmart Marketplace", href: "/walmart-marketplace" },
     { label: "eBay Store Management", href: "/ebay" },
-    { label: "AI SEO & Answer Engines", href: "/services/aiseo" },
+    { label: "AI SEO & Answer Engines", href: "/services/ai-seo-agency" },
     { label: "Digital Marketing Services", href: "/services/digital-marketing" },
     { label: "Branding & Visual Identity", href: "/services/branding" },
     { label: "Our Work & Case Studies", href: "/work" },

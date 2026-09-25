@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     url: "https://unifiedbrandingexperts.com/services/mobile-app-development",
     images: [
       {
-        url: "https://unifiedbrandingexperts.com/og-default.png",
+        url: "https://unifiedbrandingexperts.com/services/mobile-app-development/opengraph-image",
         width: 1200,
         height: 630,
         alt: "Mobile App Development Services - Unified Branding Experts",

@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     url: "https://unifiedbrandingexperts.com/ai-automation-packages",
     images: [
       {
-        url: "https://unifiedbrandingexperts.com/og-default.png",
+        url: "https://unifiedbrandingexperts.com/ai-automation-packages/opengraph-image",
         width: 1200,
         height: 630,
         alt: "AI Automation Packages by Unified Branding Experts",
@@ -175,7 +175,7 @@ export default function AiAutomationPackagesPage() {
     },
     image: {
       "@type": "ImageObject",
-      url: "https://unifiedbrandingexperts.com/og-default.png",
+      url: "https://unifiedbrandingexperts.com/ai-automation-packages/opengraph-image",
     },
     offers: {
       "@type": "AggregateOffer",

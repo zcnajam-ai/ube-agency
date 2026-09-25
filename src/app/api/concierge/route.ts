@@ -108,7 +108,7 @@ export async function POST(request: NextRequest) {
         { type: "recommend_service", label: "Build a Website", route: "/services/web-design-development" },
         { type: "recommend_service", label: "Launch an Online Store", route: "/services/shopify-development" },
         { type: "recommend_service", label: "Brand My Business", route: "/services/branding" },
-        { type: "recommend_service", label: "Improve Search Visibility", route: "/services/aiseo" },
+        { type: "recommend_service", label: "Improve Search Visibility", route: "/services/ai-seo-agency" },
         { type: "recommend_package", label: "Compare Packages", route: "/packages" },
       ],
     });

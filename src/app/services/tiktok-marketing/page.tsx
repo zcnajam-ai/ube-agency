@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import TikTokMinimalVisual from "@/components/common/TikTokMinimalVisual";
 import { Metadata } from "next";
+import FaqSchema from "@/components/seo/FaqSchema";
 import {
   Sparkles,
   ArrowUpRight,
@@ -31,7 +32,7 @@ export const metadata: Metadata = {
     url: "https://unifiedbrandingexperts.com/services/tiktok-marketing",
     images: [
       {
-        url: "https://unifiedbrandingexperts.com/og-default.png",
+        url: "https://unifiedbrandingexperts.com/services/tiktok-marketing/opengraph-image",
         width: 1200,
         height: 630,
         alt: "TikTok Marketing Services - Unified Branding Experts",
@@ -135,10 +136,19 @@ export default function TikTokMarketingServicePage() {
       q: "How does paid TikTok advertising work alongside organic posts?",
       a: "Organic content tests which hooks and angles resonate with viewers. We then take the top-performing organic videos and amplify them with paid ad spend to reach thousands of targeted buyers.",
     },
+    {
+      q: "How much does TikTok marketing cost?",
+      a: "The cost depends on content volume, creator coordination, campaign management, and whether TikTok Shop is included. Media spend and creator fees are separate unless the proposal says otherwise.",
+    },
+    {
+      q: "What happens after the first TikTok campaign launches?",
+      a: "We review delivery and conversion signals, compare creative angles, and document the next test. Ongoing publishing, paid optimization, and creator outreach continue only within the selected monthly scope.",
+    },
   ];
 
   return (
     <div className="pt-32 pb-24 px-4 sm:px-6 md:px-12 max-w-7xl mx-auto space-y-24">
+      <FaqSchema faqs={faqs} />
       <ServiceSchema
         name="TikTok Marketing Services"
         description="TikTok content strategy, short-form creative planning, creator coordination and paid campaign management."

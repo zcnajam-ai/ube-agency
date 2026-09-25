@@ -17,7 +17,7 @@ export async function GET() {
 - [Etsy Shop Setup](https://unifiedbrandingexperts.com/services/etsy-shop-setup): 13-tag Etsy search optimization, shop branding, and listing launch.
 - [TikTok Shop Setup](https://unifiedbrandingexperts.com/services/tiktok-shop-setup): Seller Center sync, affiliate product catalog, and in-feed checkout setup.
 - [TikTok Marketing](https://unifiedbrandingexperts.com/services/tiktok-marketing): High-performing short-form video ads, viral content strategy, and TikTok spark ads.
-- [AI SEO & Search Discovery](https://unifiedbrandingexperts.com/services/aiseo): Generative Engine Optimization (GEO), entity schema, and Google AI Overviews ranking.
+- [AI SEO & Search Discovery](https://unifiedbrandingexperts.com/services/ai-seo-agency): Generative Engine Optimization (GEO), entity schema, and Google AI Overviews ranking.
 - [Google Ads](https://unifiedbrandingexperts.com/services/google-ads): High-intent Google Search, Performance Max, and Shopping ad management.
 - [Meta Ads](https://unifiedbrandingexperts.com/services/meta-ads): Facebook and Instagram visual sales funnels with Conversion API tracking.
 - [Social Media Management](https://unifiedbrandingexperts.com/services/social-media-management): Strategic social content calendars, community management, and visual posts.

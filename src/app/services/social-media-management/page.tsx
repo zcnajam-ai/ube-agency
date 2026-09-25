@@ -4,6 +4,16 @@ import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getServiceBySlug } from "@/data/services";
 import ServiceDetailView from "@/components/services/ServiceDetailView";
+import FaqSchema, { type ServiceFaq } from "@/components/seo/FaqSchema";
+
+const faqs: ServiceFaq[] = [
+  { q: "How much does social media management cost?", a: "Pricing depends on the number of channels, monthly publishing volume, creative requirements, community-response scope, and reporting needs. Paid media spend, creator fees, and on-location production are separate unless included in the proposal." },
+  { q: "How long does it take to start social media management?", a: "Most engagements begin with a short onboarding and planning cycle. Timing depends on account access, brand assets, approvals, and the number of channels. We confirm the first calendar and publishing date before production starts." },
+  { q: "Do I need a brand guide before social media management begins?", a: "A complete brand guide is helpful but not required. We need approved logos, colors, offer details, audience information, and an approval contact. If the visual system needs work, branding can be scoped separately." },
+  { q: "What is the difference between social media management and paid social advertising?", a: "Management covers the organic publishing system: planning, content, scheduling, and community guidance. Paid social uses advertising budgets and campaign targeting to distribute offers. The two can be coordinated but have separate scopes and costs." },
+  { q: "Can you work with content my business already creates?", a: "Yes. We can organize and adapt approved photography, video, product information, and founder content into the agreed channel formats. Usage rights and source-file access must be confirmed before publishing." },
+  { q: "What happens after the first month of social media management?", a: "We review the work completed, available channel signals, approval bottlenecks, and upcoming business priorities. The next calendar is adjusted within the agreed scope; no specific follower, engagement, or sales outcome is guaranteed." },
+];
 
 export const metadata: Metadata = {
   title: "Social Media Management & Content Strategy",
@@ -19,7 +29,7 @@ export const metadata: Metadata = {
     url: "https://unifiedbrandingexperts.com/services/social-media-management",
     images: [
       {
-        url: "https://unifiedbrandingexperts.com/images/editorial/social-content-planning.webp",
+        url: "https://unifiedbrandingexperts.com/services/social-media-management/opengraph-image",
         width: 1200,
         height: 630,
         alt: "Social Media Management - Unified Branding Experts",
@@ -33,6 +43,7 @@ export default function SocialMediaServicePage() {
   if (!service) return notFound();
   return (
     <>
+      <FaqSchema faqs={faqs} />
       <ServiceSchema
         name="Social Media Management Services"
         description="Editorial planning, branded social content, scheduling, community-response guidance and monthly performance review."
@@ -59,6 +70,15 @@ export default function SocialMediaServicePage() {
           <div className="space-y-3">
             <h2 className="font-display text-xl font-bold">A useful fit for teams that need consistency</h2>
             <p className="text-sm text-[#585858] leading-relaxed">This service is designed for businesses with an established offer that need a dependable publishing process across selected channels. It is not a substitute for product-market fit or customer service. When paid acquisition is required, the organic calendar can be coordinated with our Google Ads, Meta Ads and TikTok marketing work without mixing ad spend into the management fee.</p>
+          </div>
+          <div className="space-y-4">
+            <h2 className="font-display text-2xl sm:text-3xl font-bold">Social media management questions</h2>
+            {faqs.map((faq) => (
+              <details key={faq.q} className="rounded-2xl border border-[#E0DDDB] p-5">
+                <summary className="cursor-pointer font-display font-bold text-[#161616]">{faq.q}</summary>
+                <p className="mt-3 text-sm leading-relaxed text-[#585858]">{faq.a}</p>
+              </details>
+            ))}
           </div>
         </div>
       </section>

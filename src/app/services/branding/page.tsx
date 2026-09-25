@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Metadata } from "next";
+import FaqSchema from "@/components/seo/FaqSchema";
 import {
   Sparkles,
   ArrowUpRight,
@@ -29,7 +30,7 @@ export const metadata: Metadata = {
     url: "https://unifiedbrandingexperts.com/services/branding",
     images: [
       {
-        url: "https://unifiedbrandingexperts.com/og-default.png",
+        url: "https://unifiedbrandingexperts.com/services/branding/opengraph-image",
         width: 1200,
         height: 630,
         alt: "Branding Services - Unified Branding Experts",
@@ -185,6 +186,7 @@ export default function BrandingServicePage() {
 
   return (
     <div className="pt-32 pb-24 px-4 sm:px-6 md:px-12 max-w-7xl mx-auto space-y-24">
+      <FaqSchema faqs={faqs} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}

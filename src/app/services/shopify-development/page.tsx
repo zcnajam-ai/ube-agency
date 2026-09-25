@@ -4,6 +4,7 @@ import StoreManagementLink from "@/components/services/StoreManagementLink";
 import Link from "next/link";
 import Image from "next/image";
 import { Metadata } from "next";
+import FaqSchema from "@/components/seo/FaqSchema";
 import {
   Sparkles,
   ArrowUpRight,
@@ -31,7 +32,7 @@ export const metadata: Metadata = {
     url: "https://unifiedbrandingexperts.com/services/shopify-development",
     images: [
       {
-        url: "https://unifiedbrandingexperts.com/og-default.png",
+        url: "https://unifiedbrandingexperts.com/services/shopify-development/opengraph-image",
         width: 2048,
         height: 684,
         alt: "Shopify store setup and custom theme development with responsive storefront and ecommerce performance analytics",
@@ -187,6 +188,7 @@ export default function ShopifyDevelopmentPage() {
 
   return (
     <div className="pt-32 pb-24 px-4 sm:px-6 md:px-12 max-w-7xl mx-auto space-y-24">
+      <FaqSchema faqs={faqs} />
       {/* Schema Markup */}
       <script
         type="application/ld+json"

@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     url: "https://unifiedbrandingexperts.com/services/dropshipping",
     images: [
       {
-        url: "https://unifiedbrandingexperts.com/og-default.png",
+        url: "https://unifiedbrandingexperts.com/services/dropshipping/opengraph-image",
         width: 1200,
         height: 630,
         alt: "Dropshipping Store Setup & Automation - Unified Branding Experts",
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     title: "Dropshipping Store Setup & Automation | Unified Branding Experts",
     description:
       "Professional Shopify dropshipping store development, supplier integrations, inventory sync, and automated fulfillment workflows.",
-    images: ["https://unifiedbrandingexperts.com/og-default.png"],
+    images: ["https://unifiedbrandingexperts.com/services/dropshipping/opengraph-image"],
   },
 };
 
