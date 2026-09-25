@@ -16,7 +16,7 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "AI SEO Agency for ChatGPT, AEO & GEO Services | UBE",
+  title: "AI SEO Agency for ChatGPT, AEO & GEO Services",
   description:
     "Hire a senior AI SEO agency for technical SEO, schema, AEO and GEO across Google AI Overviews, ChatGPT and Perplexity. Audits start at $349.",
   alternates: {
