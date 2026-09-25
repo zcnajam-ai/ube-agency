@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     url: "https://unifiedbrandingexperts.com/services/meta-ads",
     images: [
       {
-        url: "https://unifiedbrandingexperts.com/og-default.png",
+        url: "https://unifiedbrandingexperts.com/services/meta-ads/opengraph-image",
         width: 1200,
         height: 630,
         alt: "Meta Ads Management - Unified Branding Experts",

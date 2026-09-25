@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     url: "https://unifiedbrandingexperts.com/ai-seo-packages",
     images: [
       {
-        url: "https://unifiedbrandingexperts.com/og-default.png",
+        url: "https://unifiedbrandingexperts.com/ai-seo-packages/opengraph-image",
         width: 1200,
         height: 630,
         alt: "AI SEO Packages by Unified Branding Experts",
@@ -196,7 +196,7 @@ export default function AiSeoPackagesPage() {
     serviceType: "AI Search Engine Optimization",
     description:
       "AEO, GEO, and generative AI search optimization packages starting from $349 audit to full-scale monthly retainers.",
-    image: "https://unifiedbrandingexperts.com/og-default.png",
+    image: "https://unifiedbrandingexperts.com/ai-seo-packages/opengraph-image",
     provider: {
       "@type": "Organization",
       name: COMPANY_INFO.name,
@@ -236,7 +236,7 @@ export default function AiSeoPackagesPage() {
     itemListElement: [
       { "@type": "ListItem", position: 1, name: "Home", item: "https://unifiedbrandingexperts.com" },
       { "@type": "ListItem", position: 2, name: "Services", item: "https://unifiedbrandingexperts.com/services" },
-      { "@type": "ListItem", position: 3, name: "AI SEO", item: "https://unifiedbrandingexperts.com/services/aiseo" },
+      { "@type": "ListItem", position: 3, name: "AI SEO", item: "https://unifiedbrandingexperts.com/services/ai-seo-agency" },
       { "@type": "ListItem", position: 4, name: "AI SEO Packages", item: "https://unifiedbrandingexperts.com/ai-seo-packages" },
     ],
   };
@@ -256,14 +256,14 @@ export default function AiSeoPackagesPage() {
         {/* Breadcrumb Navigation */}
         <div className="flex items-center justify-between border-b border-[#E0DDDB] pb-4">
           <Link
-            href="/services/aiseo"
+            href="/services/ai-seo-agency"
             className="inline-flex items-center gap-2 text-xs font-mono-num text-[#585858] hover:text-[#161616] transition-colors"
           >
             <ArrowLeft className="w-3.5 h-3.5 text-[#9F8BE7]" />
             <span>Back to AI SEO Service Details</span>
           </Link>
           <div className="text-xs font-mono-num text-[#585858]">
-            <Link href="/" className="hover:underline">Home</Link> / <Link href="/services" className="hover:underline">Services</Link> / <Link href="/services/aiseo" className="hover:underline">AI SEO</Link> / <span className="text-[#161616] font-bold">Packages</span>
+            <Link href="/" className="hover:underline">Home</Link> / <Link href="/services" className="hover:underline">Services</Link> / <Link href="/services/ai-seo-agency" className="hover:underline">AI SEO</Link> / <span className="text-[#161616] font-bold">Packages</span>
           </div>
         </div>
 
@@ -469,7 +469,7 @@ export default function AiSeoPackagesPage() {
         {/* 5. Cross-Links */}
         <section className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <Link
-            href="/services/aiseo"
+            href="/services/ai-seo-agency"
             className="p-6 rounded-3xl bg-white border border-[#E0DDDB] hover:border-[#9F8BE7] space-y-2 transition-all group shadow-xs"
           >
             <span className="text-xs font-mono-num text-[#9F8BE7] font-bold">DEEP DIVE</span>

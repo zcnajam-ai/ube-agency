@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     url: "https://unifiedbrandingexperts.com/services/web-design-development",
     images: [
       {
-        url: "https://unifiedbrandingexperts.com/og-default.png",
+        url: "https://unifiedbrandingexperts.com/services/web-design-development/opengraph-image",
         width: 1200,
         height: 630,
         alt: "Website Design & Custom Web Development - Unified Branding Experts",
@@ -502,7 +502,7 @@ export default function WebDesignServicePage() {
               </div>
 
               <Link
-                href="/services/aiseo"
+                href="/services/ai-seo-agency"
                 className="p-3 rounded-2xl bg-[#9F8BE7]/15 border border-[#9F8BE7]/40 text-[#161616] font-display font-bold text-xs flex items-center justify-between hover:bg-[#9F8BE7]/25 transition-all"
               >
                 <span>Explore AI SEO Services</span>
@@ -546,7 +546,7 @@ export default function WebDesignServicePage() {
 
           <div className="pt-4">
             <Link
-              href="/services/aiseo"
+              href="/services/ai-seo-agency"
               className="inline-flex items-center gap-2 text-sm font-display font-bold text-[#161616] hover:text-[#9F8BE7] transition-colors border-b border-[#161616] pb-0.5"
             >
               <span>Explore AI SEO Services</span>

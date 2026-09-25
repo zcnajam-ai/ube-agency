@@ -124,7 +124,7 @@ export const UBE_SERVICES_KNOWLEDGE: ServiceKnowledge[] = [
     slug: "aiseo",
     name: "AI SEO, AEO & GEO Search Optimization",
     category: "Search & Visibility",
-    route: "/services/aiseo",
+    route: "/services/ai-seo-agency",
     packageRoute: "/ai-seo-packages",
     tagline: "Optimize for Google Search, AI Overviews, ChatGPT & Perplexity",
     summary:

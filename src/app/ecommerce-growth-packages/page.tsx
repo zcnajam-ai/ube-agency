@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "https://unifiedbrandingexperts.com/og-default.png",
+        url: "https://unifiedbrandingexperts.com/ecommerce-growth-packages/opengraph-image",
         width: 1200,
         height: 630,
         alt: "eCommerce Growth Packages & Pricing - Unified Branding Experts",
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     title: "eCommerce Packages & Pricing | Shopify, Amazon, Etsy & eBay | UBE",
     description:
       `Shopify store setup, dropshipping integrations, marketplace optimization, product SEO, and multi-channel growth plans from ${SHOPIFY_SETUP_PRICE_LABEL}.`,
-    images: ["https://unifiedbrandingexperts.com/og-default.png"],
+    images: ["https://unifiedbrandingexperts.com/ecommerce-growth-packages/opengraph-image"],
   },
 };
 

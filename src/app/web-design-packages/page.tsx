@@ -110,7 +110,7 @@ export default function WebDesignPackagesPage() {
     },
     image: {
       "@type": "ImageObject",
-      url: "https://unifiedbrandingexperts.com/og-default.png",
+      url: "https://unifiedbrandingexperts.com/web-design-packages/opengraph-image",
     },
     offers: {
       "@type": "AggregateOffer",

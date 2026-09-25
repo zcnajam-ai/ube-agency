@@ -4,6 +4,7 @@ import StoreManagementLink from "@/components/services/StoreManagementLink";
 import Link from "next/link";
 import Image from "next/image";
 import { Metadata } from "next";
+import FaqSchema from "@/components/seo/FaqSchema";
 import {
   Sparkles,
   ArrowUpRight,
@@ -31,7 +32,7 @@ export const metadata: Metadata = {
     url: "https://unifiedbrandingexperts.com/services/etsy-shop-setup",
     images: [
       {
-        url: "https://unifiedbrandingexperts.com/og-default.png",
+        url: "https://unifiedbrandingexperts.com/services/etsy-shop-setup/opengraph-image",
         width: 1200,
         height: 630,
         alt: "Etsy Shop Setup - Unified Branding Experts",
@@ -151,6 +152,7 @@ export default function EtsyShopSetupPage() {
 
   return (
     <div className="pt-32 pb-24 px-4 sm:px-6 md:px-12 max-w-7xl mx-auto space-y-24">
+      <FaqSchema faqs={faqs} />
       <ServiceSchema
         name="Etsy Shop Setup and SEO Services"
         description="Etsy shop setup, branding, buyer-intent keyword research, listing optimization, policies and launch support."

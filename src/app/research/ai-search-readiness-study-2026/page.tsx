@@ -755,7 +755,7 @@ export default function AiSearchReadinessStudyPage() {
               <span className="truncate">Shopify AI SEO & Schema Guide</span>
               <ChevronRight className="w-4 h-4 text-slate-400 shrink-0" />
             </Link>
-            <Link href="/services/aiseo" className="p-4 bg-white rounded-2xl border border-slate-200 hover:border-blue-400 font-semibold text-slate-900 hover:text-blue-600 transition-colors flex items-center justify-between shadow-2xs min-w-0">
+            <Link href="/services/ai-seo-agency" className="p-4 bg-white rounded-2xl border border-slate-200 hover:border-blue-400 font-semibold text-slate-900 hover:text-blue-600 transition-colors flex items-center justify-between shadow-2xs min-w-0">
               <span className="truncate">UBE AI SEO Services</span>
               <ChevronRight className="w-4 h-4 text-slate-400 shrink-0" />
             </Link>
@@ -852,7 +852,7 @@ export default function AiSearchReadinessStudyPage() {
               Request an AI Search Audit
             </Link>
             <Link
-              href="/services/aiseo"
+              href="/services/ai-seo-agency"
               className="inline-flex items-center gap-2 px-6 sm:px-7 py-3 sm:py-3.5 bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-bold uppercase tracking-wider rounded-xl transition-colors border border-slate-700"
             >
               Explore AI SEO Services

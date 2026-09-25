@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     url: "https://unifiedbrandingexperts.com/tiktok-marketing-packages",
     images: [
       {
-        url: "https://unifiedbrandingexperts.com/og-default.png",
+        url: "https://unifiedbrandingexperts.com/tiktok-marketing-packages/opengraph-image",
         width: 1200,
         height: 630,
         alt: "TikTok Marketing Packages by Unified Branding Experts",
@@ -145,7 +145,7 @@ export default function TikTokMarketingPackagesPage() {
     },
     image: {
       "@type": "ImageObject",
-      url: "https://unifiedbrandingexperts.com/og-default.png",
+      url: "https://unifiedbrandingexperts.com/tiktok-marketing-packages/opengraph-image",
     },
     offers: {
       "@type": "AggregateOffer",

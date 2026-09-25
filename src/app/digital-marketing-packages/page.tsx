@@ -89,7 +89,7 @@ export default function DigitalMarketingPackagesPage() {
     },
     image: {
       "@type": "ImageObject",
-      url: "https://unifiedbrandingexperts.com/og-default.png",
+      url: "https://unifiedbrandingexperts.com/digital-marketing-packages/opengraph-image",
     },
     offers: {
       "@type": "AggregateOffer",

@@ -16,23 +16,23 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "AI SEO Services for AEO & GEO",
+  title: "AI SEO Agency for ChatGPT, AEO & GEO Services",
   description:
-    "Improve visibility across Google AI Overviews, ChatGPT and search with technical AI SEO, Answer Engine Optimization, GEO and structured content.",
+    "Hire a senior AI SEO agency for technical SEO, schema, AEO and GEO across Google AI Overviews, ChatGPT and Perplexity. Audits start at $349.",
   alternates: {
-    canonical: "https://unifiedbrandingexperts.com/services/aiseo",
+    canonical: "https://unifiedbrandingexperts.com/services/ai-seo-agency",
   },
   openGraph: {
-    title: "AI SEO Services | AEO, GEO & Search Optimization | Unified Branding Experts",
+    title: "AI SEO Agency for ChatGPT, AEO & GEO Services | UBE",
     description:
-      "Get found in Google AI Overviews, ChatGPT Search, and generative search engines.",
-    url: "https://unifiedbrandingexperts.com/services/aiseo",
+      "Technical SEO, schema, AEO and GEO services for visibility across Google AI Overviews, ChatGPT and Perplexity. Audits start at $349.",
+    url: "https://unifiedbrandingexperts.com/services/ai-seo-agency",
     images: [
       {
-        url: "https://unifiedbrandingexperts.com/og-default.png",
+        url: "https://unifiedbrandingexperts.com/services/ai-seo-agency/opengraph-image",
         width: 1200,
         height: 630,
-        alt: "AI SEO Services - Unified Branding Experts",
+        alt: "AI SEO agency services by Unified Branding Experts",
       },
     ],
   },
@@ -55,10 +55,10 @@ export default function AiSeoServicePage() {
     },
     areaServed: "Worldwide",
     description: "Get found in Google AI Overviews, ChatGPT Search, Perplexity, and generative search engines with Answer Engine Optimization (AEO) and JSON-LD schema.",
-    url: "https://unifiedbrandingexperts.com/services/aiseo",
+    url: "https://unifiedbrandingexperts.com/services/ai-seo-agency",
     image: {
       "@type": "ImageObject",
-      "@id": "https://unifiedbrandingexperts.com/services/aiseo#primaryimage",
+      "@id": "https://unifiedbrandingexperts.com/services/ai-seo-agency#primaryimage",
       url: "https://unifiedbrandingexperts.com/images/ai-seo/ai-seo-service-3d.webp",
       contentUrl: "https://unifiedbrandingexperts.com/images/ai-seo/ai-seo-service-3d.webp",
       width: 768,
@@ -94,7 +94,7 @@ export default function AiSeoServicePage() {
         "@type": "ListItem",
         position: 3,
         name: "AI SEO",
-        item: "https://unifiedbrandingexperts.com/services/aiseo",
+        item: "https://unifiedbrandingexperts.com/services/ai-seo-agency",
       },
     ],
   };
@@ -238,7 +238,7 @@ export default function AiSeoServicePage() {
           </div>
 
           <h1 className="font-display text-4xl sm:text-6xl font-bold tracking-tight text-[#161616] leading-tight">
-            AI SEO &amp; Generative Engine Optimization (GEO) Services.
+            AI SEO Agency for ChatGPT, Google AI Overviews &amp; Perplexity
           </h1>
 
           <p className="text-lg sm:text-xl font-display font-semibold text-[#9F8BE7]">

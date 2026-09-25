@@ -247,7 +247,7 @@ export const CONCIERGE_DECISION_TREE: Record<
           summary:
             "Improve search visibility and strengthen how your business is understood across traditional and AI-powered discovery through technical audits, structured data, and on-page optimization.",
           actions: [
-            { type: "link", label: "View Search Services", url: "/services/aiseo" },
+            { type: "link", label: "View Search Services", url: "/services/ai-seo-agency" },
             { type: "link", label: "View SEO Packages", url: "/ai-seo-packages" },
             { type: "estimate", label: "Get Project Estimate" },
           ],
@@ -260,7 +260,7 @@ export const CONCIERGE_DECISION_TREE: Record<
           summary:
             "Improve search visibility and strengthen how your business is understood across Google and AI-powered search engines through entity schemas, answer engine formatting, and IndexNow feeds.",
           actions: [
-            { type: "link", label: "View AI SEO Services", url: "/services/aiseo" },
+            { type: "link", label: "View AI SEO Services", url: "/services/ai-seo-agency" },
             { type: "link", label: "View AI SEO Packages", url: "/ai-seo-packages" },
             { type: "estimate", label: "Get Project Estimate" },
           ],
@@ -285,7 +285,7 @@ export const CONCIERGE_DECISION_TREE: Record<
         summary:
           "A complete visibility strategy aligning technical on-page SEO, high-authority content modeling, and Answer Engine Optimization (AEO) for modern search discovery.",
         actions: [
-          { type: "link", label: "View AI SEO Services", url: "/services/aiseo" },
+          { type: "link", label: "View AI SEO Services", url: "/services/ai-seo-agency" },
           { type: "link", label: "View AI SEO Packages", url: "/ai-seo-packages" },
           { type: "estimate", label: "Get Project Estimate" },
         ],
@@ -559,7 +559,7 @@ export const CONCIERGE_DECISION_TREE: Record<
           summary:
             "Improve search visibility and strengthen how your business is understood across Google and AI-powered search engines through structured data and technical SEO.",
           actions: [
-            { type: "link", label: "View Search Services", url: "/services/aiseo" },
+            { type: "link", label: "View Search Services", url: "/services/ai-seo-agency" },
             { type: "link", label: "View SEO Packages", url: "/ai-seo-packages" },
             { type: "estimate", label: "Get Project Estimate" },
           ],

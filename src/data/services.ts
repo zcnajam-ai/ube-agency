@@ -291,7 +291,7 @@ export const SERVICE_PILLARS: ServicePillar[] = [
       },
       {
         id: "aiseo-search",
-        slug: "aiseo",
+        slug: "ai-seo-agency",
         title: "AI Search Optimization & Structured Content",
         shortTitle: "AI SEO & GEO/AEO",
         kicker: "Modern Search Visibility",

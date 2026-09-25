@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   title: "eCommerce Store Management Packages from $249/mo",
   description: "Compare Essentials, Growth and Scale store management plans. Product updates, inventory checks and order monitoring from $249/month. Save 16.7% with annual billing.",
   alternates: { canonical: url },
-  openGraph: { title: "eCommerce Store Management Packages & Pricing", description: "Three plans from $249/month for ongoing store operations. Annual billing saves two months’ fees.", url, images: [`${base}/images/editorial/shopify-storefront-development.webp`] },
+  openGraph: { title: "eCommerce Store Management Packages & Pricing", description: "Three plans from $249/month for ongoing store operations. Annual billing saves two months’ fees.", url, images: [`${url}/opengraph-image`] },
 };
 
 export default function StoreManagementPackagesPage() {
@@ -38,6 +38,6 @@ export default function StoreManagementPackagesPage() {
     <section className="space-y-5"><h2 className="font-display text-3xl font-bold">Store management pricing questions</h2>
       {STORE_MANAGEMENT_FAQS.map(faq => <details key={faq.question} className="rounded-2xl border border-[#E0DDDB] p-5 bg-white"><summary className="font-semibold cursor-pointer">{faq.question}</summary><p className="mt-4 text-[#585858] leading-relaxed">{faq.answer}</p></details>)}
     </section>
-    <section className="space-y-4"><h2 className="font-display text-2xl font-bold">Build, manage and improve your store</h2><div className="flex flex-wrap gap-5 text-[#6B46C1] underline underline-offset-4"><Link href="/services/ecommerce-store-management">Store management service</Link><Link href="/ecommerce-growth-packages">Store setup & growth packages</Link><Link href="/services/shopify-development">Shopify development</Link><Link href="/services/ecommerce">eCommerce & marketplace services</Link><Link href="/services/aiseo">AI SEO services</Link></div></section>
+    <section className="space-y-4"><h2 className="font-display text-2xl font-bold">Build, manage and improve your store</h2><div className="flex flex-wrap gap-5 text-[#6B46C1] underline underline-offset-4"><Link href="/services/ecommerce-store-management">Store management service</Link><Link href="/ecommerce-growth-packages">Store setup & growth packages</Link><Link href="/services/shopify-development">Shopify development</Link><Link href="/services/ecommerce">eCommerce & marketplace services</Link><Link href="/services/ai-seo-agency">AI SEO services</Link></div></section>
   </main>;
 }

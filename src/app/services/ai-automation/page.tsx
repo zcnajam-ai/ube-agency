@@ -3,6 +3,7 @@ import ServiceSchema from "@/components/seo/ServiceSchema";
 import Link from "next/link";
 import Image from "next/image";
 import { Metadata } from "next";
+import FaqSchema from "@/components/seo/FaqSchema";
 import {
   Sparkles,
   ArrowUpRight,
@@ -30,7 +31,7 @@ export const metadata: Metadata = {
     url: "https://unifiedbrandingexperts.com/services/ai-automation",
     images: [
       {
-        url: "https://unifiedbrandingexperts.com/og-default.png",
+        url: "https://unifiedbrandingexperts.com/services/ai-automation/opengraph-image",
         width: 1200,
         height: 630,
         alt: "AI Automation Services by Unified Branding Experts",
@@ -134,10 +135,19 @@ export default function AiAutomationServicePage() {
       q: "Do I have to pay ongoing platform fees?",
       a: "Third-party tools (such as Zapier, Make, or CRM subscriptions) are billed directly by those platforms. We guide you on the most cost-efficient plan for your usage volume.",
     },
+    {
+      q: "Do I need a CRM before starting AI automation?",
+      a: "No. We can audit your current process first, recommend an appropriate CRM or automation stack, and scope any migration separately. If you already use a CRM, we work within it when the platform can support the required workflow.",
+    },
+    {
+      q: "What happens after an automation is delivered?",
+      a: "We test the agreed workflow, document the key steps, and provide a handoff. Ongoing monitoring, optimization, new integrations, and platform subscription costs are included only when they appear in the approved scope.",
+    },
   ];
 
   return (
     <div className="pt-32 pb-24 px-4 sm:px-6 md:px-12 max-w-7xl mx-auto space-y-24">
+      <FaqSchema faqs={faqs} />
       <ServiceSchema
         name="AI Automation Services"
         description="CRM automation, lead follow-up workflows, AI chatbots, email sequences and business-system integrations."

@@ -281,7 +281,7 @@ export default function AiSeoHubPage() {
           <section id="what-is-ai-seo" className="scroll-mt-28 border-b border-[#E0DDDB] pb-16">
             <h2 className="text-4xl font-semibold tracking-[-0.045em] sm:text-5xl">What is AI SEO (and why it matters in 2026)</h2>
             <p className={`${prose} mt-7`}>
-              AI SEO is the practice of improving a brand's eligibility to appear as a source in AI-assisted discovery. It starts with the same requirements as search engine optimization: a crawlable site, useful pages, stable URLs, descriptive metadata, and enough authority for search systems to trust the information. It then adds work for an answer environment, where the user may receive a synthesized response instead of a list of blue links.
+              AI SEO is the practice of improving a brand’s eligibility to appear as a source in AI-assisted discovery. It starts with the same requirements as search engine optimization: a crawlable site, useful pages, stable URLs, descriptive metadata, and enough authority for search systems to trust the information. It then adds work for an answer environment, where the user may receive a synthesized response instead of a list of blue links.
             </p>
             <p className={`${prose} mt-5`}>
               An answer engine needs to identify who made a claim, what entity the claim describes, whether other sources support it, and which passage answers the question without ambiguity. A page can be technically indexed yet remain hard to retrieve because its language is vague, its business details conflict across the web, its evidence is weak, or the useful answer is buried beneath sales copy. AI SEO addresses those gaps as one connected system.
@@ -295,7 +295,7 @@ export default function AiSeoHubPage() {
             </p>
             <h3 className={h3}>AEO and GEO defined</h3>
             <p className={`${prose} mt-4`}>
-              Answer Engine Optimization (AEO) makes information easy to extract as a direct response. It uses descriptive headings, concise definitions, question-and-answer formats where appropriate, semantic HTML, and schema that matches the visible page. Generative Engine Optimization (GEO) focuses on the evidence and authority that make the response supportable: original research, expert attribution, credible citations, consistent entities, and corroboration beyond the company's own domain.
+              Answer Engine Optimization (AEO) makes information easy to extract as a direct response. It uses descriptive headings, concise definitions, question-and-answer formats where appropriate, semantic HTML, and schema that matches the visible page. Generative Engine Optimization (GEO) focuses on the evidence and authority that make the response supportable: original research, expert attribution, credible citations, consistent entities, and corroboration beyond the company’s own domain.
             </p>
             <p className={`${prose} mt-5`}>
               The labels are useful, but the work should not be split into artificial silos. A precise answer without authority may not be selected. Authority without accessible, well-structured content may not be retrieved. We use AI SEO as the operating layer that connects technical SEO, AEO, GEO, content, digital PR, and analytics.
@@ -312,7 +312,7 @@ export default function AiSeoHubPage() {
           <section id="what-an-agency-does" className="scroll-mt-28 border-b border-[#E0DDDB] py-16">
             <h2 className="text-4xl font-semibold tracking-[-0.045em] sm:text-5xl">What an AI SEO agency actually does</h2>
             <p className={`${prose} mt-7`}>
-              A credible engagement begins by separating controllable work from platform behavior. We can repair rendering, improve information architecture, publish stronger evidence, and instrument measurement. We cannot choose the sources shown by an AI system. The agency's value is coordination: technical, editorial, entity, and authority tasks follow one prioritized diagnostic instead of becoming disconnected checklists.
+              A credible engagement begins by separating controllable work from platform behavior. We can repair rendering, improve information architecture, publish stronger evidence, and instrument measurement. We cannot choose the sources shown by an AI system. The agency’s value is coordination: technical, editorial, entity, and authority tasks follow one prioritized diagnostic instead of becoming disconnected checklists.
             </p>
             <h3 className={h3}>Technical foundations</h3>
             <p className={`${prose} mt-4`}>
@@ -330,10 +330,10 @@ export default function AiSeoHubPage() {
             </p>
             <h3 className={h3}>Entity and authority building</h3>
             <p className={`${prose} mt-4`}>
-              An entity is the identifiable business, person, product, or concept described by the content. We align the company's official name, website, logo, contact details, profiles, authors, and service relationships across the site. Author pages and review processes should identify real responsibility. Third-party mentions should be earned and relevant, not manufactured through link schemes.
+              An entity is the identifiable business, person, product, or concept described by the content. We align the company’s official name, website, logo, contact details, profiles, authors, and service relationships across the site. Author pages and review processes should identify real responsibility. Third-party mentions should be earned and relevant, not manufactured through link schemes.
             </p>
             <p className={`${prose} mt-5`}>
-              Authority grows when a business contributes something worth referencing: original data, a transparent methodology, a well-documented case study, a useful calculator, or expert commentary grounded in practice. UBE's study is one example. It publishes the scoring model, aggregate findings, limits, and downloadable data so a reader can evaluate the work rather than accept a vague claim.
+              Authority grows when a business contributes something worth referencing: original data, a transparent methodology, a well-documented case study, a useful calculator, or expert commentary grounded in practice. UBE’s study is one example. It publishes the scoring model, aggregate findings, limits, and downloadable data so a reader can evaluate the work rather than accept a vague claim.
             </p>
             <h3 className={h3}>Measurement</h3>
             <p className={`${prose} mt-4`}>
@@ -344,7 +344,7 @@ export default function AiSeoHubPage() {
           <section id="ube-methodology" className="scroll-mt-28 border-b border-[#E0DDDB] py-16">
             <h2 className="text-4xl font-semibold tracking-[-0.045em] sm:text-5xl">How we approach AI SEO at UBE (the methodology)</h2>
             <p className={`${prose} mt-7`}>
-              Our method moves from diagnosis to evidence. Each stage has a deliverable, an owner, and a test. The sequence matters: publishing more articles before resolving duplicate URLs or unclear entity data usually creates more pages to maintain, not more authority. The full <Link className="font-semibold text-[#715CC4] underline-offset-4 hover:underline" href="/services/aiseo">AI SEO service scope</Link> explains how implementation support fits around this framework.
+              Our method moves from diagnosis to evidence. Each stage has a deliverable, an owner, and a test. The sequence matters: publishing more articles before resolving duplicate URLs or unclear entity data usually creates more pages to maintain, not more authority. The full <Link className="font-semibold text-[#715CC4] underline-offset-4 hover:underline" href="/services/ai-seo-agency">AI SEO service scope</Link> explains how implementation support fits around this framework.
             </p>
             {[
               ["Step 1 — AI search readiness audit", "We crawl priority templates, inspect indexing and canonicals, review structured data, map current queries, test representative answer prompts, and document entity inconsistencies. The audit separates urgent defects, content opportunities, authority gaps, and measurement limitations. Recommendations name the URL, intended outcome, dependency, and validation step."],
@@ -386,7 +386,7 @@ export default function AiSeoHubPage() {
               The contrast is the important finding. Many sampled sites handled basic technical access reasonably well, while authority and evidence signals were much weaker. Eighty percent also failed the original data and proprietary research criterion. That does not mean every company needs a large research report. It means specific, attributable knowledge remains scarce compared with generic service copy.
             </p>
             <p className={`${prose} mt-5`}>
-              Read the <Link className="font-semibold text-[#715CC4] underline-offset-4 hover:underline" href="/research/ai-search-readiness-study-2026">100-Site AI Search Readiness Study</Link> for the scoring model, complete findings, caveats, and downloadable aggregate CSV. We reference these four figures exactly as reported and do not turn them into a prediction about any individual site's visibility.
+              Read the <Link className="font-semibold text-[#715CC4] underline-offset-4 hover:underline" href="/research/ai-search-readiness-study-2026">100-Site AI Search Readiness Study</Link> for the scoring model, complete findings, caveats, and downloadable aggregate CSV. We reference these four figures exactly as reported and do not turn them into a prediction about any individual site’s visibility.
             </p>
           </section>
 
@@ -422,7 +422,7 @@ export default function AiSeoHubPage() {
           </section>
 
           <section id="fit" className="scroll-mt-28 border-b border-[#E0DDDB] py-16">
-            <h2 className="text-4xl font-semibold tracking-[-0.045em] sm:text-5xl">Who AI SEO is for (and who it isn't)</h2>
+            <h2 className="text-4xl font-semibold tracking-[-0.045em] sm:text-5xl">Who AI SEO is for (and who it isn’t)</h2>
             <p className={`${prose} mt-7`}>
               AI SEO is most useful when the business already has a real offer, verifiable expertise, and a reason for buyers to compare it with alternatives. It is especially relevant for companies whose customers ask research-heavy questions before contacting a provider or buying a considered product.
             </p>
@@ -498,7 +498,7 @@ export default function AiSeoHubPage() {
                 </Link>
               </div>
               <div className="mt-7 flex flex-wrap gap-x-6 gap-y-3 text-sm text-white/75">
-                <Link className="underline-offset-4 hover:underline" href="/services/aiseo">Review AI SEO services</Link>
+                <Link className="underline-offset-4 hover:underline" href="/services/ai-seo-agency">Review AI SEO services</Link>
                 <Link className="underline-offset-4 hover:underline" href="/ai-seo-packages">Compare AI SEO packages</Link>
                 <a className="inline-flex items-center gap-1 underline-offset-4 hover:underline" href="tel:+12242668081">
                   <Phone aria-hidden="true" size={15} /> +1 224-266-8081

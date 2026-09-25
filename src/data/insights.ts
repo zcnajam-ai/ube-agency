@@ -159,7 +159,7 @@ export const INSIGHTS: InsightArticle[] = [
         body: [
           "Structured data can help search engines understand explicit relationships between your organization, website, services and content. It complements — rather than replaces — clear page content, semantic HTML and broader authority signals.",
           "At a minimum, every professional website benefits from a connected JSON-LD graph uniting <code>Organization</code>, <code>WebSite</code>, <code>WebPage</code>, and <code>Service</code> entities with stable <code>@id</code> identifiers.",
-          "Our specialized <a href=\"/services/aiseo\" className=\"text-[#9F8BE7] underline font-medium hover:text-[#161616]\">AI SEO services</a> engineer bespoke entity graph architectures tailored to pass strict schema validation."
+          "Our specialized <a href=\"/services/ai-seo-agency\" className=\"text-[#9F8BE7] underline font-medium hover:text-[#161616]\">AI SEO services</a> engineer bespoke entity graph architectures tailored to pass strict schema validation."
         ]
       },
       {
@@ -215,7 +215,7 @@ export const INSIGHTS: InsightArticle[] = [
     serviceCta: {
       title: "AI Search Optimization Services",
       desc: "Structure your business for Google AI Overviews, ChatGPT Search, and modern AI search engines.",
-      href: "/services/aiseo",
+      href: "/services/ai-seo-agency",
       buttonText: "Explore AI SEO Services"
     },
     packageCta: {
@@ -360,7 +360,7 @@ export const INSIGHTS: InsightArticle[] = [
           "✓ <strong>Entity Alignment:</strong> Implement valid <code>Organization</code> JSON-LD schema linking core capabilities, team, and verified profiles.",
           "✓ <strong>Content Architecture:</strong> Add 40-60 word answer-first passages under key headings and cluster content around core pillars.",
           "✓ <strong>Authority & Proof:</strong> Publish citation-worthy first-party data and earn independent editorial mentions.",
-          "✓ <strong>Analytics & Measurement:</strong> Monitor <code>utm_source=chatgpt.com</code> referral traffic and maintain monthly prompt benchmarks using specialized <a href=\"/services/aiseo\" className=\"text-[#9F8BE7] underline font-medium hover:text-[#161616]\">AI SEO services</a> and transparent <a href=\"/ai-seo-packages\" className=\"text-[#9F8BE7] underline font-medium hover:text-[#161616]\">AI SEO growth packages</a>."
+          "✓ <strong>Analytics & Measurement:</strong> Monitor <code>utm_source=chatgpt.com</code> referral traffic and maintain monthly prompt benchmarks using specialized <a href=\"/services/ai-seo-agency\" className=\"text-[#9F8BE7] underline font-medium hover:text-[#161616]\">AI SEO services</a> and transparent <a href=\"/ai-seo-packages\" className=\"text-[#9F8BE7] underline font-medium hover:text-[#161616]\">AI SEO growth packages</a>."
         ]
       },
       {
@@ -416,7 +416,7 @@ export const INSIGHTS: InsightArticle[] = [
     serviceCta: {
       title: "Structure Your Brand for ChatGPT Search",
       desc: "Our AI SEO architects engineer entity schemas, OAI-SearchBot accessibility, and GEO content clusters.",
-      href: "/services/aiseo",
+      href: "/services/ai-seo-agency",
       buttonText: "Explore AI SEO Services"
     },
     packageCta: {
@@ -535,7 +535,7 @@ export const INSIGHTS: InsightArticle[] = [
           "<strong>2. Satisfy the User's Real Search Intent:</strong> Don't optimize content around a keyword while ignoring the actual problem behind the search. Someone searching <em>'Shopify store not getting sales'</em> probably doesn't want a definition of Shopify — they need actionable guidance on traffic quality, conversion rate, pricing, trust, and checkout friction. Build content around complete user needs.",
           "<strong>3. Provide Clear, Self-Contained Answers:</strong> Users often ask Google increasingly specific and conversational questions. Follow the structured pattern: <em>Question → Direct Answer (40-60 words) → Explanation → Evidence → Next Step</em>. For example: <em>Does schema guarantee inclusion in Google AI Overviews? No. Structured data can help Google understand information on a page, but it does not guarantee inclusion.</em>",
           "<strong>4. Build Topical Depth (Query Fan-Out Optimization):</strong> Google's description of query fan-out provides another reason to think beyond exact-match keywords. A strong website should cover meaningful subtopics surrounding its areas of expertise. A comprehensive pillar like our <a href=\"/insights/ai-seo-aeo-geo-guide\" className=\"text-[#9F8BE7] underline font-medium hover:text-[#161616]\">AI SEO, AEO & GEO Complete Guide</a> connects AI search, AEO, GEO, schema, and measurement.",
-          "<strong>5. Strengthen Internal Linking:</strong> Internal links help users and search engines discover related information. A supporting article should naturally connect to the primary AI SEO pillar, specialized <a href=\"/services/aiseo\" className=\"text-[#9F8BE7] underline font-medium hover:text-[#161616]\">AI SEO services</a>, related <a href=\"/insights/how-to-get-your-business-mentioned-in-chatgpt\" className=\"text-[#9F8BE7] underline font-medium hover:text-[#161616]\">ChatGPT Search guides</a>, and empirical <a href=\"/research/ai-search-readiness-study-2026\" className=\"text-[#9F8BE7] underline font-medium hover:text-[#161616]\">AI Search Readiness Study 2026</a>.",
+          "<strong>5. Strengthen Internal Linking:</strong> Internal links help users and search engines discover related information. A supporting article should naturally connect to the primary AI SEO pillar, specialized <a href=\"/services/ai-seo-agency\" className=\"text-[#9F8BE7] underline font-medium hover:text-[#161616]\">AI SEO services</a>, related <a href=\"/insights/how-to-get-your-business-mentioned-in-chatgpt\" className=\"text-[#9F8BE7] underline font-medium hover:text-[#161616]\">ChatGPT Search guides</a>, and empirical <a href=\"/research/ai-search-readiness-study-2026\" className=\"text-[#9F8BE7] underline font-medium hover:text-[#161616]\">AI Search Readiness Study 2026</a>.",
           "<strong>6. Use Structured Data Accurately:</strong> Structured data remains useful — but it should not be treated as an AI ranking hack. Google says structured data should match visible page content. Useful schema types include <code>Organization</code>, <code>WebSite</code>, <code>WebPage</code>, <code>Article</code>, <code>Service</code>, and <code>BreadcrumbList</code>. Never manufacture fake reviews, fake ratings, or imaginary 'AI Overview schema.'",
           "<strong>7. Demonstrate Real Experience and Evidence:</strong> Generic statements are easy to reproduce; real experience is harder to replace. Strengthen important content with legitimate case studies, process screenshots, first-party data, and expert commentary.",
           "<strong>8. Publish Original Information:</strong> Google emphasizes unique, valuable, non-commodity content in its guidance for AI search experiences. According to UBE's <a href=\"/research/ai-search-readiness-study-2026\" className=\"text-[#9F8BE7] underline font-medium hover:text-[#161616]\">audit of 100 business websites</a>, content retrievability and direct-answer formatting averaged only 62.20% of maximum possible framework points. Original research, benchmarks, frameworks, or industry surveys give external publishers and retrieval systems stronger reasons to reference your work.",
@@ -583,7 +583,7 @@ export const INSIGHTS: InsightArticle[] = [
           "✓ <strong>Content & Intent:</strong> Add 40-60 word self-contained answers under key headings and cover subtopics matching query fan-out patterns.",
           "✓ <strong>Entity & Trust:</strong> Implement valid Organization schema linking core capabilities, team, and verified profiles.",
           "✓ <strong>Proof & Authority:</strong> Publish citation-worthy original data and earn independent editorial mentions.",
-          "✓ <strong>Analytics:</strong> Monitor Search Console Generative AI reports using specialized <a href=\"/services/aiseo\" className=\"text-[#9F8BE7] underline font-medium hover:text-[#161616]\">AI SEO services</a> and transparent <a href=\"/ai-seo-packages\" className=\"text-[#9F8BE7] underline font-medium hover:text-[#161616]\">AI SEO growth packages</a>."
+          "✓ <strong>Analytics:</strong> Monitor Search Console Generative AI reports using specialized <a href=\"/services/ai-seo-agency\" className=\"text-[#9F8BE7] underline font-medium hover:text-[#161616]\">AI SEO services</a> and transparent <a href=\"/ai-seo-packages\" className=\"text-[#9F8BE7] underline font-medium hover:text-[#161616]\">AI SEO growth packages</a>."
         ]
       },
       {
@@ -638,7 +638,7 @@ export const INSIGHTS: InsightArticle[] = [
     serviceCta: {
       title: "Optimize Your Website for Google AI Search",
       desc: "Our AI SEO architects engineer entity schemas, Search Central compliance, and query fan-out content clusters.",
-      href: "/services/aiseo",
+      href: "/services/ai-seo-agency",
       buttonText: "Explore AI SEO Services"
     },
     packageCta: {
@@ -2831,7 +2831,7 @@ export const INSIGHTS: InsightArticle[] = [
         "✓ Implement Organization and Service schema.",
         "✓ Add answer-first summaries under key H2 headers.",
         "✓ Read UBE's <a href=\"/research/ai-search-readiness-study-2026\" className=\"text-[#9F8BE7] font-bold underline hover:text-[#161616]\">2026 AI Search Readiness Study</a> for empirical audit benchmarks.",
-        "✓ Explore specialized <a href=\"/services/aiseo\" className=\"text-[#9F8BE7] font-bold underline hover:text-[#161616]\">AI SEO services</a> and <a href=\"/ai-seo-packages\" className=\"text-[#9F8BE7] font-bold underline hover:text-[#161616]\">AI SEO growth packages</a>."
+        "✓ Explore specialized <a href=\"/services/ai-seo-agency\" className=\"text-[#9F8BE7] font-bold underline hover:text-[#161616]\">AI SEO services</a> and <a href=\"/ai-seo-packages\" className=\"text-[#9F8BE7] font-bold underline hover:text-[#161616]\">AI SEO growth packages</a>."
       ]
     }
   ],
@@ -2849,7 +2849,7 @@ export const INSIGHTS: InsightArticle[] = [
   "serviceCta": {
     "title": "Want More Visibility Across Search and AI Answers?",
     "desc": "Our AI SEO architects structure entity schemas, Search Central compliance, and generative query clusters.",
-    "href": "/services/aiseo",
+    "href": "/services/ai-seo-agency",
     "buttonText": "Request an AI SEO Assessment"
   },
   "packageCta": {
