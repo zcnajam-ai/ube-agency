@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import dynamic from "next/dynamic";
+import Script from "next/script";
 import { Funnel_Display, Funnel_Sans, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import SmoothScrollProvider from "@/components/providers/SmoothScrollProvider";
@@ -11,7 +12,7 @@ import { COMPANY_INFO } from "@/data/company";
 
 const Footer = dynamic(() => import("@/components/common/Footer"));
 const ClientProjectModal = dynamic(() => import("@/components/common/ClientProjectModal"));
-const ConciergeProvider = dynamic(() => import("@/components/concierge/ConciergeProvider"));
+const DeferredConcierge = dynamic(() => import("@/components/concierge/DeferredConcierge"));
 
 const funnelDisplay = Funnel_Display({
   variable: "--font-display",
@@ -111,19 +112,7 @@ export default function RootLayout({
       lang="en"
       className={`${funnelDisplay.variable} ${funnelSans.variable} ${spaceGrotesk.variable} antialiased selection:bg-[#9F8BE7] selection:text-[#161616]`}
     >
-      <head>
-        {/* Google Tag Manager */}
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-T3W5QR6T');`,
-          }}
-        />
-        {/* End Google Tag Manager */}
-      </head>
+      <head />
       <body className="bg-[#FAF7F6] text-[#161616] font-body flex flex-col min-h-screen relative overflow-x-hidden">
         {/* Google Tag Manager (noscript) */}
         <noscript>
@@ -136,6 +125,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </noscript>
         {/* End Google Tag Manager (noscript) */}
         {/* GA4, Google Ads, and Meta Pixel Analytics Scripts */}
+        <Script id="gtm-init" strategy="afterInteractive">
+          {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-T3W5QR6T');`}
+        </Script>
         <AnalyticsScripts />
         <AnalyticsEventBridge />
 
@@ -156,7 +152,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           <ClientProjectModal />
 
           {/* UBE AI Sales & Service Concierge */}
-          <ConciergeProvider />
+          <DeferredConcierge />
         </SmoothScrollProvider>
       </body>
     </html>

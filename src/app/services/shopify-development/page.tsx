@@ -46,7 +46,7 @@ export default function ShopifyDevelopmentPage() {
     {
       title: "Custom Shopify 2.0 Theme Architecture",
       desc: "Bespoke Liquid and JSON templates engineered with modular drag-and-drop sections. Built without bloated third-party page builders for clean maintenance and content updates.",
-      icon: <ShoppingBag className="w-5 h-5 text-[#9F8BE7]" />,
+      icon: <ShoppingBag className="w-5 h-5 text-[#715CC4]" />,
       image: "/images/official/ecommerce/storefront-setup.jpeg",
     },
     {
@@ -201,7 +201,7 @@ export default function ShopifyDevelopmentPage() {
       {/* 1. HERO SECTION */}
       <section className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center border-b border-[#E0DDDB] pb-16">
         <div className="lg:col-span-7 space-y-6">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-[#E0DDDB] text-xs font-mono-num text-[#9F8BE7] font-bold shadow-xs">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-[#E0DDDB] text-xs font-mono-num text-[#715CC4] font-bold shadow-xs">
             <Sparkles className="w-3.5 h-3.5" />
             <span>SHOPIFY EXPERTS &amp; ECOMMERCE ARCHITECTURE</span>
           </div>
@@ -222,7 +222,7 @@ export default function ShopifyDevelopmentPage() {
               "Streamlined checkout & upsell configuration",
             ].map((item) => (
               <div key={item} className="flex items-center gap-2.5 text-xs text-[#303030] font-medium">
-                <CheckCircle2 className="w-4 h-4 text-[#9F8BE7] shrink-0" />
+                <CheckCircle2 className="w-4 h-4 text-[#715CC4] shrink-0" />
                 <span>{item}</span>
               </div>
             ))}
@@ -244,7 +244,7 @@ export default function ShopifyDevelopmentPage() {
               <span className="text-xs font-mono-num text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-full">
                 From {SHOPIFY_SETUP_PRICE_LABEL}
               </span>
-              <ArrowUpRight className="w-4 h-4 text-[#9F8BE7]" />
+              <ArrowUpRight className="w-4 h-4 text-[#715CC4]" />
             </Link>
           </div>
         </div>
@@ -283,7 +283,7 @@ export default function ShopifyDevelopmentPage() {
         </div>
 
         <div className="lg:col-span-6 space-y-6 order-1 lg:order-2">
-          <span className="text-xs font-mono-num text-[#9F8BE7] uppercase tracking-widest font-bold">
+          <span className="text-xs font-mono-num text-[#715CC4] uppercase tracking-widest font-bold">
             STOREFRONT ARCHITECTURE
           </span>
           <h2 className="font-display text-3xl sm:text-5xl font-bold tracking-tight text-[#161616]">
@@ -305,8 +305,8 @@ export default function ShopifyDevelopmentPage() {
       <section className="space-y-12">
         <div className="p-6 rounded-3xl bg-gradient-to-br from-[#FAF7F6] to-white border-2 border-[#9F8BE7] shadow-sm mb-10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
         <div className="space-y-1">
-          <span className="text-xs font-mono-num font-bold text-[#9F8BE7] uppercase tracking-wider block">SHOPIFY AI SEARCH READINESS</span>
-          <p className="text-sm font-body text-[#161616] font-medium">Learn how Shopify product data, Merchant Center and AI search optimization work together. <Link href="/ai-seo" className="text-[#9F8BE7] font-bold underline hover:text-[#161616]">See how AI SEO integrates with Shopify builds</Link>.</p>
+          <span className="text-xs font-mono-num font-bold text-[#715CC4] uppercase tracking-wider block">SHOPIFY AI SEARCH READINESS</span>
+          <p className="text-sm font-body text-[#161616] font-medium">Learn how Shopify product data, Merchant Center and AI search optimization work together. <Link href="/ai-seo" className="text-[#715CC4] font-bold underline hover:text-[#161616]">See how AI SEO integrates with Shopify builds</Link>.</p>
         </div>
         <Link href="/insights/shopify-ai-seo-guide" className="px-5 py-2.5 rounded-full bg-[#9F8BE7] text-[#161616] font-display font-bold text-xs hover:bg-[#b4a3f7] transition-all shrink-0 flex items-center gap-1.5 shadow-xs">
           <span>Read Shopify AI SEO Guide</span>
@@ -315,7 +315,7 @@ export default function ShopifyDevelopmentPage() {
       </div>
 
       <div className="max-w-2xl space-y-3">
-          <span className="text-xs font-mono-num text-[#9F8BE7] uppercase tracking-widest font-bold">
+          <span className="text-xs font-mono-num text-[#715CC4] uppercase tracking-widest font-bold">
             TECHNICAL SCOPE
           </span>
           <h2 className="font-display text-3xl sm:text-5xl font-bold tracking-tight text-[#161616]">
@@ -347,7 +347,7 @@ export default function ShopifyDevelopmentPage() {
                   <div className="w-9 h-9 rounded-xl bg-[#FAF7F6] border border-[#E0DDDB] flex items-center justify-center">
                     {service.icon}
                   </div>
-                  <h3 className="font-display text-lg font-bold text-[#161616] group-hover:text-[#9F8BE7] transition-colors">
+                  <h3 className="font-display text-lg font-bold text-[#161616] group-hover:text-[#715CC4] transition-colors">
                     {service.title}
                   </h3>
                 </div>
@@ -363,7 +363,7 @@ export default function ShopifyDevelopmentPage() {
       {/* 4. PROCESS STEPS */}
       <section className="p-8 sm:p-12 rounded-3xl bg-white border border-[#E0DDDB] space-y-8 shadow-xs">
         <div className="max-w-2xl space-y-2">
-          <span className="text-xs font-mono-num text-[#9F8BE7] uppercase tracking-widest font-bold">
+          <span className="text-xs font-mono-num text-[#715CC4] uppercase tracking-widest font-bold">
             LAUNCH SPRINT
           </span>
           <h2 className="font-display text-3xl sm:text-4xl font-bold tracking-tight text-[#161616]">
@@ -378,7 +378,7 @@ export default function ShopifyDevelopmentPage() {
               className="p-6 rounded-2xl bg-[#FAF7F6] border border-[#E0DDDB] grid grid-cols-1 md:grid-cols-12 gap-4 items-center"
             >
               <div className="md:col-span-3 flex items-center gap-4">
-                <span className="font-display font-black text-3xl text-[#9F8BE7] font-mono-num">
+                <span className="font-display font-black text-3xl text-[#715CC4] font-mono-num">
                   {step.number}
                 </span>
                 <h3 className="font-display text-base font-bold text-[#161616]">{step.title}</h3>
@@ -429,7 +429,7 @@ export default function ShopifyDevelopmentPage() {
       {/* 6. FAQS */}
       <section className="space-y-8">
         <div className="max-w-2xl space-y-2">
-          <span className="text-xs font-mono-num text-[#9F8BE7] uppercase tracking-widest font-bold">
+          <span className="text-xs font-mono-num text-[#715CC4] uppercase tracking-widest font-bold">
             FREQUENT QUESTIONS
           </span>
           <h2 className="font-display text-3xl sm:text-4xl font-bold tracking-tight text-[#161616]">
@@ -444,7 +444,7 @@ export default function ShopifyDevelopmentPage() {
               className="p-6 rounded-3xl bg-white border border-[#E0DDDB] space-y-2 shadow-xs"
             >
               <h3 className="font-display text-base font-bold text-[#161616] flex items-start gap-2">
-                <HelpCircle className="w-4 h-4 text-[#9F8BE7] shrink-0 mt-1" />
+                <HelpCircle className="w-4 h-4 text-[#715CC4] shrink-0 mt-1" />
                 <span>{faq.q}</span>
               </h3>
               <p className="text-xs sm:text-sm text-[#585858] font-body leading-relaxed pl-6">

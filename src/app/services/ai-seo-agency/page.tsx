@@ -102,7 +102,7 @@ export default function AiSeoServicePage() {
     {
       title: "AI-Driven Search Optimization",
       desc: "We optimize your pages to rank in both traditional results and AI-generated summaries. That means aligning your content with how modern engines read, weigh, and cite information.",
-      icon: <Search className="w-5 h-5 text-[#9F8BE7]" />,
+      icon: <Search className="w-5 h-5 text-[#715CC4]" />,
       image: "/images/official/aiseo/ai-discovery.jpeg",
     },
     {
@@ -232,7 +232,7 @@ export default function AiSeoServicePage() {
       {/* 1. Hero Section */}
       <section className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center border-b border-[#E0DDDB] pb-16">
         <div className="lg:col-span-7 space-y-6">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-[#E0DDDB] text-xs font-mono-num text-[#9F8BE7] font-bold shadow-xs">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-[#E0DDDB] text-xs font-mono-num text-[#715CC4] font-bold shadow-xs">
             <Sparkles className="w-3.5 h-3.5" />
             <span>AI SEARCH & DISCOVERY ARCHITECTURE</span>
           </div>
@@ -241,7 +241,7 @@ export default function AiSeoServicePage() {
             AI SEO Agency for ChatGPT, Google AI Overviews &amp; Perplexity
           </h1>
 
-          <p className="text-lg sm:text-xl font-display font-semibold text-[#9F8BE7]">
+          <p className="text-lg sm:text-xl font-display font-semibold text-[#715CC4]">
             Get Found in Google AI Overviews, ChatGPT Search &amp; Generative AI Engines.
           </p>
 
@@ -250,7 +250,7 @@ export default function AiSeoServicePage() {
           </p>
 
           <p className="text-sm sm:text-base text-[#303030] font-body font-medium">
-            At Unified Branding Experts, we help you get found where search is heading. We optimize your content for traditional rankings and for the AI systems now shaping how people discover businesses. <Link href="/ai-seo" className="text-[#9F8BE7] underline font-bold hover:text-[#161616]">See the full AI SEO methodology</Link>, then use our <Link href="/insights/ai-seo-aeo-geo-guide" className="text-[#9F8BE7] underline font-bold hover:text-[#161616]">complete guide to AI SEO, AEO and GEO</Link> for a deeper technical breakdown.
+            At Unified Branding Experts, we help you get found where search is heading. We optimize your content for traditional rankings and for the AI systems now shaping how people discover businesses. <Link href="/ai-seo" className="text-[#715CC4] underline font-bold hover:text-[#161616]">See the full AI SEO methodology</Link>, then use our <Link href="/insights/ai-seo-aeo-geo-guide" className="text-[#715CC4] underline font-bold hover:text-[#161616]">complete guide to AI SEO, AEO and GEO</Link> for a deeper technical breakdown.
           </p>
 
           {/* Core Deliverable Highlights */}
@@ -262,7 +262,7 @@ export default function AiSeoServicePage() {
               "Structured, machine-readable content engines trust",
             ].map((item) => (
               <div key={item} className="flex items-center gap-2.5 text-xs text-[#303030] font-medium">
-                <CheckCircle2 className="w-4 h-4 text-[#9F8BE7] shrink-0" />
+                <CheckCircle2 className="w-4 h-4 text-[#715CC4] shrink-0" />
                 <span>{item}</span>
               </div>
             ))}
@@ -285,7 +285,7 @@ export default function AiSeoServicePage() {
               <span className="text-xs font-mono-num text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-full">
                 Audit From $349
               </span>
-              <ArrowUpRight className="w-4 h-4 text-[#9F8BE7]" />
+              <ArrowUpRight className="w-4 h-4 text-[#715CC4]" />
             </Link>
           </div>
         </div>
@@ -297,10 +297,12 @@ export default function AiSeoServicePage() {
               src="/images/ai-seo/ai-seo-service-3d.webp"
               alt="3D AI SEO implementation system connecting search, structured data, content and measurement"
               title="AI SEO Implementation and Search Visibility System"
-              fill
-              priority
-              sizes="(max-width: 1024px) 100vw, 45vw"
-              className="object-contain object-center p-3 sm:p-5 transition-transform duration-500 ease-out group-hover:-translate-y-2 group-hover:scale-[1.04] motion-reduce:transform-none motion-reduce:transition-none"
+              width={768}
+              height={768}
+              preload
+              quality={70}
+              sizes="(max-width: 639px) calc(100vw - 32px), (max-width: 1023px) calc(100vw - 48px), 480px"
+              className="h-full w-full object-contain object-center p-3 sm:p-5 transition-transform duration-500 ease-out group-hover:-translate-y-2 group-hover:scale-[1.04] motion-reduce:transform-none motion-reduce:transition-none"
             />
             <div className="absolute bottom-4 left-4 right-4 p-4 rounded-2xl bg-white/90 backdrop-blur-md border border-[#E0DDDB] text-xs font-mono-num text-[#161616] flex items-center justify-between shadow-xs">
               <span className="font-bold">AI SEO IMPLEMENTATION SYSTEM</span>
@@ -318,14 +320,16 @@ export default function AiSeoServicePage() {
               src="/images/official/aiseo/aeo-structure.jpeg"
               alt="Answer Engine Optimization and structured data architecture"
               fill
-              sizes="(max-width: 1024px) 100vw, 50vw"
+              loading="lazy"
+              quality={60}
+              sizes="(max-width: 639px) calc(100vw - 32px), (max-width: 1023px) calc(100vw - 48px), 560px"
               className="object-cover object-center"
             />
           </div>
         </div>
 
         <div className="lg:col-span-6 space-y-6 order-1 lg:order-2">
-          <span className="text-xs font-mono-num text-[#9F8BE7] uppercase tracking-widest font-bold">
+          <span className="text-xs font-mono-num text-[#715CC4] uppercase tracking-widest font-bold">
             NEW DISCOVERY PARADIGM
           </span>
           <h2 className="font-display text-3xl sm:text-5xl font-bold tracking-tight text-[#161616]">
@@ -349,7 +353,7 @@ export default function AiSeoServicePage() {
       {/* 3. Why AI SEO Matters */}
       <section className="p-8 sm:p-12 rounded-3xl bg-white border border-[#E0DDDB] space-y-8 shadow-xs">
         <div className="max-w-3xl space-y-3">
-          <span className="text-xs font-mono-num text-[#9F8BE7] uppercase tracking-widest font-bold">
+          <span className="text-xs font-mono-num text-[#715CC4] uppercase tracking-widest font-bold">
             WHY IT MATTERS
           </span>
           <h2 className="font-display text-3xl sm:text-4xl font-bold tracking-tight text-[#161616]">
@@ -393,7 +397,7 @@ export default function AiSeoServicePage() {
       {/* 4. What Our AI SEO Service Includes */}
       <section className="space-y-12">
         <div className="max-w-2xl space-y-3">
-          <span className="text-xs font-mono-num text-[#9F8BE7] uppercase tracking-widest font-bold">
+          <span className="text-xs font-mono-num text-[#715CC4] uppercase tracking-widest font-bold">
             COMPREHENSIVE CAPABILITIES
           </span>
           <h2 className="font-display text-3xl sm:text-5xl font-bold tracking-tight text-[#161616]">
@@ -415,7 +419,9 @@ export default function AiSeoServicePage() {
                   src={service.image}
                   alt={service.title}
                   fill
-                  sizes="(max-width: 768px) 100vw, 33vw"
+                  loading="lazy"
+                  quality={60}
+                  sizes="(max-width: 639px) calc(100vw - 32px), (max-width: 1023px) 50vw, 380px"
                   className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
                 />
               </div>
@@ -425,7 +431,7 @@ export default function AiSeoServicePage() {
                   <div className="w-9 h-9 rounded-xl bg-[#FAF7F6] border border-[#E0DDDB] flex items-center justify-center">
                     {service.icon}
                   </div>
-                  <h3 className="font-display text-xl font-bold text-[#161616] group-hover:text-[#9F8BE7] transition-colors">
+                  <h3 className="font-display text-xl font-bold text-[#161616] group-hover:text-[#715CC4] transition-colors">
                     {service.title}
                   </h3>
                 </div>
@@ -441,14 +447,14 @@ export default function AiSeoServicePage() {
       {/* 5. Our 5-Step Process */}
       <section className="p-8 sm:p-12 rounded-3xl bg-white border border-[#E0DDDB] space-y-8 shadow-xs">
         <div className="max-w-2xl space-y-2">
-          <span className="text-xs font-mono-num text-[#9F8BE7] uppercase tracking-widest font-bold">
+          <span className="text-xs font-mono-num text-[#715CC4] uppercase tracking-widest font-bold">
             PROVEN METHODOLOGY
           </span>
           <h2 className="font-display text-3xl sm:text-4xl font-bold tracking-tight text-[#161616]">
             Our AI SEO Process
           </h2>
           <p className="text-sm text-[#585858] font-body leading-relaxed">
-            Use the <Link href="/ai-seo" className="text-[#9F8BE7] font-bold underline hover:text-[#161616]">AI SEO hub guide</Link> to review the audit, entity, content, authority, and measurement stages together.
+            Use the <Link href="/ai-seo" className="text-[#715CC4] font-bold underline hover:text-[#161616]">AI SEO hub guide</Link> to review the audit, entity, content, authority, and measurement stages together.
           </p>
         </div>
 
@@ -459,7 +465,7 @@ export default function AiSeoServicePage() {
               className="p-6 rounded-2xl bg-[#FAF7F6] border border-[#E0DDDB] grid grid-cols-1 md:grid-cols-12 gap-4 items-center"
             >
               <div className="md:col-span-3 flex items-center gap-4">
-                <span className="font-display font-black text-3xl text-[#9F8BE7] font-mono-num">
+                <span className="font-display font-black text-3xl text-[#715CC4] font-mono-num">
                   {step.number}
                 </span>
                 <h3 className="font-display text-base font-bold text-[#161616]">{step.title}</h3>
@@ -488,14 +494,14 @@ export default function AiSeoServicePage() {
       <section className="p-8 sm:p-12 rounded-3xl bg-gradient-to-br from-white to-[#F4EFEB] border-2 border-[#9F8BE7] shadow-sm flex flex-col md:flex-row items-center justify-between gap-8">
         <div className="space-y-3 max-w-2xl">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#9F8BE7]/15 text-xs font-mono-num text-[#161616] font-bold">
-            <Sparkles className="w-3.5 h-3.5 text-[#9F8BE7]" />
+            <Sparkles className="w-3.5 h-3.5 text-[#715CC4]" />
             <span>TRANSPARENT AI SEO PACKAGES</span>
           </div>
           <h2 className="font-display text-2xl sm:text-4xl font-bold text-[#161616]">
             Compare Our AI SEO Packages & Retainers
           </h2>
           <p className="text-sm text-[#585858] font-body">
-            Explore our 5 tiers: One-Time Audit ($349), Starter ($749/mo), Growth ($1,499/mo), Authority ($2,999/mo), and Enterprise Custom. <Link href="/ai-seo" className="text-[#9F8BE7] font-bold underline hover:text-[#161616]">Read the complete AI SEO framework</Link> before comparing scope.
+            Explore our 5 tiers: One-Time Audit ($349), Starter ($749/mo), Growth ($1,499/mo), Authority ($2,999/mo), and Enterprise Custom. <Link href="/ai-seo" className="text-[#715CC4] font-bold underline hover:text-[#161616]">Read the complete AI SEO framework</Link> before comparing scope.
           </p>
         </div>
 
@@ -511,7 +517,7 @@ export default function AiSeoServicePage() {
       {/* 7. FAQs */}
       <section className="space-y-8">
         <div className="max-w-2xl space-y-2">
-          <span className="text-xs font-mono-num text-[#9F8BE7] uppercase tracking-widest font-bold">
+          <span className="text-xs font-mono-num text-[#715CC4] uppercase tracking-widest font-bold">
             QUESTIONS & ANSWERS
           </span>
           <h2 className="font-display text-3xl sm:text-4xl font-bold tracking-tight text-[#161616]">
@@ -526,7 +532,7 @@ export default function AiSeoServicePage() {
               className="p-6 rounded-3xl bg-white border border-[#E0DDDB] space-y-2 shadow-xs"
             >
               <h3 className="font-display text-base font-bold text-[#161616] flex items-start gap-2">
-                <HelpCircle className="w-4 h-4 text-[#9F8BE7] shrink-0 mt-1" />
+                <HelpCircle className="w-4 h-4 text-[#715CC4] shrink-0 mt-1" />
                 <span>{faq.q}</span>
               </h3>
               <p className="text-xs sm:text-sm text-[#585858] font-body leading-relaxed pl-6">
