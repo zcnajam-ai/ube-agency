@@ -86,8 +86,8 @@ const nextConfig: NextConfig = {
       { source: "/portfolio/", destination: "/work", permanent: true },
       { source: "/pricing", destination: "/packages", permanent: true },
       { source: "/pricing/", destination: "/packages", permanent: true },
-      { source: "/services/aiseo", destination: "/services/ai-seo-agency", permanent: true },
-      { source: "/services/aiseo/", destination: "/services/ai-seo-agency", permanent: true },
+      { source: "/services/aiseo", destination: "/services/ai-seo-agency", statusCode: 301 },
+      { source: "/services/aiseo/", destination: "/services/ai-seo-agency", statusCode: 301 },
       { source: "/services/tiktok-shop-setup", destination: "/tiktok-shop", permanent: true },
       { source: "/services/tiktok-shop-setup/", destination: "/tiktok-shop", permanent: true },
 
