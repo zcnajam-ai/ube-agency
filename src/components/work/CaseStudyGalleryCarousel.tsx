@@ -7,9 +7,10 @@ import { ChevronLeft, ChevronRight, Play, Pause, Maximize2, X, Sparkles } from "
 interface CaseStudyGalleryCarouselProps {
   images: string[];
   title: string;
+  altText?: string[];
 }
 
-export default function CaseStudyGalleryCarousel({ images, title }: CaseStudyGalleryCarouselProps) {
+export default function CaseStudyGalleryCarousel({ images, title, altText = [] }: CaseStudyGalleryCarouselProps) {
   const [activeIndex, setActiveIndex] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
   const [lightboxOpen, setLightboxOpen] = useState(false);
@@ -53,11 +54,15 @@ export default function CaseStudyGalleryCarousel({ images, title }: CaseStudyGal
 
   return (
     <div className="space-y-6">
+      <div>
+        <p className="text-xs font-mono-num font-bold uppercase tracking-wider text-[#9F8BE7]">Project visuals</p>
+        <h2 className="mt-2 font-display text-2xl sm:text-3xl font-bold tracking-tight text-[#161616]">Project Gallery</h2>
+      </div>
       {/* Section Subtitle with Controls */}
       <div className="flex flex-wrap sm:flex-nowrap items-center justify-between gap-2 border-b border-[#E0DDDB] pb-3">
         <div className="flex items-center gap-2 text-[11px] sm:text-xs font-mono-num uppercase tracking-wider text-[#9F8BE7] font-bold min-w-0">
           <Sparkles className="w-3.5 h-3.5 shrink-0" />
-          <span className="truncate">VISUAL ASSET MATRIX &amp; SHOWCASE ({total} ASSETS)</span>
+          <span className="truncate">{title} · {total} images</span>
         </div>
 
         <div className="flex items-center gap-2 shrink-0">
@@ -98,9 +103,9 @@ export default function CaseStudyGalleryCarousel({ images, title }: CaseStudyGal
       >
         <Image
           src={images[activeIndex]}
-          alt={`${title} Asset ${activeIndex + 1}`}
+          alt={altText[activeIndex] ?? `${title} project gallery image ${activeIndex + 1}`}
           fill
-          priority
+          priority={activeIndex === 0}
           sizes="(max-width: 1024px) 100vw, 1200px"
           className="object-cover object-center transition-all duration-700 group-hover:scale-102"
         />
@@ -131,7 +136,7 @@ export default function CaseStudyGalleryCarousel({ images, title }: CaseStudyGal
           >
             <Image
               src={imgSrc}
-              alt={`${title} thumbnail ${idx + 1}`}
+              alt={`${altText[idx] ?? `${title} project gallery image ${idx + 1}`} thumbnail`}
               fill
               sizes="120px"
               className="object-cover object-center"
@@ -162,7 +167,7 @@ export default function CaseStudyGalleryCarousel({ images, title }: CaseStudyGal
           <div className="relative flex-1 w-full max-h-[80vh] my-auto flex items-center justify-center">
             <Image
               src={images[activeIndex]}
-              alt={`${title} Lightbox View`}
+              alt={altText[activeIndex] ?? `${title} project gallery image ${activeIndex + 1}`}
               fill
               sizes="100vw"
               className="object-contain"

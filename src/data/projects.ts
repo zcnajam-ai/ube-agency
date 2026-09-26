@@ -4,9 +4,18 @@ export interface Project {
   title: string;
   client: string;
   category: string;
+  projectType: "website-build" | "brand-identity";
+  industry: string;
   tagline: string;
-  year: string;
+  year?: string;
   platform: string;
+  liveUrl?: string;
+  clientDescription?: string;
+  galleryAltText?: string[];
+  caseStudySections?: Array<{
+    heading: string;
+    paragraphs: string[];
+  }>;
   services: string[];
   summary: string;
   challenge: string;
@@ -36,8 +45,10 @@ export const FEATURED_PROJECTS: Project[] = [
     title: "Fixoria Studio Modern Brand Architecture & Product System",
     client: "Fixoria Studio",
     category: "Brand Strategy & Product Identity System",
+    projectType: "brand-identity",
+    industry: "Design studio",
     tagline: "Explore efficient solutions: Modern geometric 'F' logomark, signature Cyber Yellow palette, and complete print collateral / merchandise kit",
-    year: "2026",
+    year: undefined,
     platform: "Figma / Adobe Illustrator / Print & Merch Architecture",
     services: ["Brand Strategy & Identity", "Vector Logomark Architecture", "Stationery & Collateral Kit", "Merchandise & Apparel Design"],
     summary:
@@ -49,9 +60,9 @@ export const FEATURED_PROJECTS: Project[] = [
     execution:
       "We delivered primary logomark matrices, employee identification badges, premium embroidered headwear & merchandise tote bags, dual-tone business cards, boardroom acrylic signage, and mobile application UI icons.",
     results: [
-      { metric: "100%", label: "Bespoke Geometric 'F' Vector Architecture" },
-      { metric: "Omnichannel", label: "Print Stationery, ID Badges & Merch Kit" },
-      { metric: "Complete", label: "Mobile App UI & Social Brand System" },
+      { metric: "Identity", label: "Geometric F mark and vector system" },
+      { metric: "Applications", label: "Stationery, badges and merchandise" },
+      { metric: "Digital", label: "App UI and social brand assets" },
     ],
     heroImage: "/case-studies/fixoria/images/01-fixoria-case-study-cover.webp",
     galleryImages: [
@@ -73,40 +84,93 @@ export const FEATURED_PROJECTS: Project[] = [
   {
     id: "happy-knot-creations",
     slug: "happy-knot-creations-shopify-storefront",
-    title: "Happy Knot Creations Custom Shopify Storefront & Brand Experience",
+    title: "Happy Knot Creations Shopify Store Case Study",
     client: "Happy Knot Creations",
     category: "eCommerce & Shopify D2C Storefront",
-    tagline: "Handmade Crochet Plushies & Custom Amigurumi: Bespoke Shopify 2.0 storefront, mobile-first product catalog, and optimized D2C checkout",
-    year: "2026",
-    platform: "Shopify 2.0 / Liquid / Custom Checkout",
+    projectType: "website-build",
+    industry: "Handmade crochet and gifts",
+    tagline: "Shopify storefront, store management, and AI SEO for a handmade crochet and custom amigurumi business.",
+    year: undefined,
+    platform: "Shopify",
+    liveUrl: "https://happyknotcreations.com/",
+    clientDescription: "Happy Knot Creations is a handmade crochet business based in Pahrump, Nevada. Its storefront presents made-to-order amigurumi, ready-to-shop plushies, themed collections, and crochet gifts.",
     services: [
       "Custom Shopify Storefront",
-      "Brand Identity & Creative Direction",
-      "AISEO & Content Optimization",
-      "Social Media Management & Reels",
+      "Shopify Store Management",
+      "AI SEO",
     ],
     summary:
-      "A bespoke direct-to-consumer Shopify storefront and complete brand ecosystem engineered for Happy Knot Creations (happyknotcreations.com). Designed specifically for artisanal handcrafted crochet plushies, custom amigurumi, and nursery gifts with intuitive collection categorization, high-resolution product galleries, structured AISEO content architecture, and a cohesive social media content strategy.",
+      "UBE's project brief records Shopify storefront development, ongoing store management, and AI SEO for Happy Knot Creations. The current live storefront presents custom-order entry points alongside ready-to-shop handmade products, themed collection navigation, product detail pages, customer reviews, and information about the maker.",
     challenge:
-      "Transitioning a handcrafted artisan boutique from marketplace fee dependency (Etsy) to an independent, high-converting branded Shopify storefront with full ownership over visual identity, customer relationships, search engine discovery, and social media growth.",
+      "The live store serves two distinct shopping needs: customers can browse finished handmade items or start a custom-order conversation. Product groupings such as Ocean Friends, Animal Friends, Custom Friends, and Gifts for Crocheters help visitors narrow a varied handmade catalog without treating every item as the same kind of purchase. The project brief supplied by UBE identifies Shopify build, store management, and AI SEO as the scope; no prior-platform migration or sales challenge is documented.",
     strategy:
-      "We engineered a complete brand experience: custom logo refinement, Playfair & Quicksand typography, warm blush & sage color palette, structured AISEO schema markup, and mobile-first Shopify theme design with instant Shop Pay checkout.",
+      "The current store makes two buying paths visible: browse ready-to-buy handmade products or start a custom-order conversation. Its navigation also groups products by theme and customer interest. UBE’s confirmed scope for this project is Shopify storefront work, ongoing store management, and AI SEO. This case study does not claim a marketplace migration, custom checkout, or specific third-party integration without project records to support it.",
     execution:
-      "We designed custom Liquid collection templates, multi-variant plushie product pages, AI-powered product descriptions and blog content planning, custom packaging inserts and care guides, and social media reel content templates.",
+      "The current Shopify experience includes collection pages, product detail pages with product imagery and purchase controls, a custom-order route, review content, and business information about the maker and order fulfillment. UBE's owner-provided scope also includes ongoing store management and AI SEO. Specific theme-code changes, schema deployments, packaging work, and social-media deliverables are not included here because they have not been independently documented.",
     results: [
-      { metric: "100%", label: "Bespoke Shopify 2.0 Storefront & Brand System" },
-      { metric: "Direct D2C", label: "Independent Brand Storefront & Domain" },
-      { metric: "Structured", label: "AISEO Content & Social Media Strategy" },
+      { metric: "Shopify", label: "Storefront build (scope supplied by UBE)" },
+      { metric: "Management", label: "Ongoing store management (scope supplied by UBE)" },
+      { metric: "AI SEO", label: "Search optimization (scope supplied by UBE)" },
     ],
-    heroImage: "/images/projects/happy-knot/hero.webp",
+    heroImage: "/images/projects/happy-knot/maker-workspace.webp",
     galleryImages: [
-      "/images/projects/happy-knot/hero.webp",
-      "/images/projects/happy-knot/storefront-design.webp",
-      "/images/projects/happy-knot/brand-identity.webp",
-      "/images/projects/happy-knot/aiseo-content.webp",
-      "/images/projects/happy-knot/social-media.webp",
+      "/images/projects/happy-knot/maker-workspace.webp",
+      "/images/projects/happy-knot/crochet-plush.webp",
+      "/images/projects/happy-knot/storefront-hero.webp",
+      "/images/projects/happy-knot/ocean-friends-collection.webp",
     ],
-    technologies: ["Shopify 2.0", "Liquid", "AISEO & Schema Markup", "Figma / Brand Identity", "Social Media Management"],
+    galleryAltText: [
+      "Handmade crocheted plushies displayed on shelves in the maker's workspace",
+      "Handmade crochet plush shown on the Happy Knot Creations store",
+      "Handmade crochet plush displayed on the Happy Knot Creations storefront",
+      "Pastel crochet ocean animals displayed together in a collection photograph",
+    ],
+    caseStudySections: [
+      {
+        heading: "The Client",
+        paragraphs: [
+          "Happy Knot Creations is a handmade crochet business based in Pahrump, Nevada. Its current Shopify storefront presents ready-to-shop plushies alongside custom-order entry points, giving visitors a way to browse available work or ask about a made-to-order piece. The products and imagery on the live site show a small-batch, maker-led catalog rather than a mass-produced toy range.",
+          "This case study focuses on the digital commerce system and the visible customer experience. It does not imply that UBE designed the crochet products, authored customer reviews, or controls the production capacity and fulfillment schedule. Those details belong to the business and can change as its catalog and availability change.",
+        ],
+      },
+      {
+        heading: "The Challenge",
+        paragraphs: [
+          "A handmade catalog asks shoppers to make several decisions before they can confidently place an order. They need to distinguish an item that is currently available from a custom request, understand what kinds of products the maker offers, and find enough detail to decide whether a particular plush or gift suits their needs. A storefront that treats every product as one undifferentiated list makes that discovery harder, especially when the catalog includes different characters, themes, and purchase expectations.",
+          "Custom work creates a second interaction pattern. A ready-to-buy product can use the familiar product page and cart flow; a made-to-order request may require a conversation about the desired character, timing, or other details. The site therefore needs to make the distinction understandable without presenting a custom request as if it were an immediately available item. The live store now exposes both product browsing and custom-order routes. This description refers to what visitors can see; it does not assert a specific internal production workflow or turnaround time.",
+          "The business also has to communicate the character of handmade work through the screen. Product photographs, collection names, descriptions, maker information, and support details each help set expectations. These elements should work together: imagery introduces the item, collection structure helps the shopper orient, and product-level information supports the purchase decision. On mobile, where many visitors encounter a store in a narrow viewport, these paths must remain understandable without relying on hover behavior or dense navigation.",
+          "UBE’s owner-provided project scope identifies three connected responsibilities: Shopify storefront development, ongoing store management, and AI SEO. No project analytics, baseline rankings, sales figures, or conversion data were supplied for this case study. The challenge is therefore described as a commerce and discovery problem, not as a claim that the business had a particular revenue, traffic, or search-performance issue.",
+        ],
+      },
+      {
+        heading: "What UBE Built and Managed",
+        paragraphs: [
+          "UBE’s confirmed work includes a Shopify storefront for the business. The current public experience gives shoppers access to a homepage, themed product collections, individual product pages, cart and purchase controls, business information, and a custom-order path. These are the visible storefront areas a prospective customer can review today. The case study does not attribute every current detail to a particular custom-code change because implementation records identifying theme edits or application settings were not available for this write-up.",
+          "The collection structure helps visitors browse by interest instead of needing to know a specific product name first. Current navigation and collection content include groupings such as Ocean Friends, Animal Friends, Custom Friends, Fantasy Friends, and Gifts for Crocheters. These labels establish useful entry points for different shopping intentions: find a particular style, explore a theme, consider a custom creation, or shop for someone who crochets. Collection names and availability may evolve with the maker’s catalog, so this page describes the public site observed during review rather than promising a fixed inventory.",
+          "Product pages provide the next level of decision support. Shoppers can view product imagery and the purchase controls associated with an item, then continue into the store’s cart flow. For a handmade catalog, the product page is where the broad story of the collection meets the specific item under consideration. Clear photography and product-specific information matter because the customer is evaluating an individual crafted object, not a generic SKU with no visual distinction.",
+          "The project scope also includes ongoing store management. That is an owner-confirmed service responsibility, but the records provided do not enumerate a dated task log, specific publishing cadence, or every managed product change. We therefore describe the service at the confirmed level and do not invent a number of listings updated, campaigns launched, or hours of support. This distinction keeps the case study useful without converting a service category into an unsupported performance claim.",
+          "AI SEO is the third owner-confirmed part of the scope. The current website can be explored by people and crawlers through its public pages and descriptive collection/product content, but the evidence available for this story does not establish which structured-data changes, page-level optimizations, or indexing outcomes UBE implemented. We do not claim that the site has been cited by a particular AI answer engine or that a ranking improved. The case study records AI SEO as project scope and leaves outcome measurement for a future version if dated implementation records or Search Console data become available.",
+        ],
+      },
+      {
+        heading: "How the Work Maps to The Unified System™",
+        paragraphs: [
+          "The Unified System™ is UBE’s current four-stage model: Brand, Build, Launch, and Scale. The available project brief confirms storefront development, management, and AI SEO, but it does not provide dated project notes proving that every stage was delivered in a particular sequence. The mapping below is an editorial way to explain how these confirmed responsibilities fit together; it is not a claim that a complete brand identity or a specific four-stage engagement was separately commissioned.",
+          "Build is the clearest documented connection: the Shopify storefront gives the business a place to present its catalog and accept online orders. The live experience includes collection discovery, product detail pages, a cart flow, and a route for custom inquiries. This is the foundation on which product presentation and ongoing store operations can be organized.",
+          "Launch describes the discoverability layer. AI SEO is part of the scope supplied by UBE, but no implementation checklist or measured search outcome was provided. The responsible conclusion is that search optimization was included as a service area, while exact technical deliverables and visibility changes remain unverified in the evidence available for this case study.",
+          "Scale connects to ongoing management: a handmade business can update its catalog and customer-facing information as products and availability change. UBE confirms store management was included, but this page does not imply a guaranteed sales trajectory, a defined monthly volume of updates, or a specific retention period. Brand remains a supporting consideration expressed through the maker’s own product identity and photography; a separate UBE brand-identity package is not claimed here.",
+        ],
+      },
+      {
+        heading: "Visible Storefront Evidence and Limits",
+        paragraphs: [
+          "The current public storefront provides observable evidence of the shopping experience: themed collections, product imagery, product pages, purchase controls, custom-order information, reviews displayed by the merchant, and maker/business information. These are descriptions of the live site at the time this case study was prepared. Reviews shown on the merchant’s website are not presented as UBE testimonials, and no review markup or rating claim is added here.",
+          "No verified before-and-after analytics, revenue, order count, average order value, organic impressions, search positions, conversion rate, or traffic report was supplied. For that reason, this case study reports the deliverable categories and current storefront structure rather than a numerical business result. Store performance also depends on factors outside a build or management engagement, including product demand, pricing, available stock, fulfillment, customer service, and ongoing promotion.",
+          "The strongest next evidence for a fuller results section would be an owner-approved project timeline, implementation notes, a list of specific management tasks, and permissioned analytics or Search Console comparisons. Until those records are available, the live site and UBE’s confirmed scope are the boundaries of what we claim.",
+        ],
+      },
+    ],
+    technologies: ["Shopify", "Store management", "AI SEO"],
     accentColor: "#B79BD6",
     typography: "Playfair Display, Quicksand & Nunito",
     palette: ["#F7B7C2", "#B79BD6", "#A8B987", "#FFF7F1", "#E9A3B0"],
@@ -117,8 +181,10 @@ export const FEATURED_PROJECTS: Project[] = [
     title: "Everhome Modern Real Estate Brand Architecture & Visual System",
     client: "Everhome Real Estate",
     category: "Brand Strategy & Visual Identity System",
+    projectType: "brand-identity",
+    industry: "Real estate",
     tagline: "A place that truly feels like home: Minimalist real estate visual language, custom logomark, and multi-channel asset matrix",
-    year: "2026",
+    year: undefined,
     platform: "Figma / Adobe Illustrator / Print & Digital",
     services: ["Custom Logo Design", "Visual Identity System", "Brand Strategy", "Stationery & Collateral"],
     summary:
@@ -130,9 +196,9 @@ export const FEATURED_PROJECTS: Project[] = [
     execution:
       "We engineered the complete brand identity system: primary logomarks and safe zone matrices, Gotham Pro typography guidelines, Moon Mist & Pastel Stone color specs, property catalogues, agent ID badges, stationery kits, and mobile application UI components.",
     results: [
-      { metric: "100%", label: "Bespoke Geometric Logomark System" },
-      { metric: "Complete", label: "Gotham Pro Typography & Color Spec" },
-      { metric: "Omnichannel", label: "Print Catalogue & Digital App Assets" },
+      { metric: "Identity", label: "Geometric logo system" },
+      { metric: "Visual system", label: "Typography and color specifications" },
+      { metric: "Applications", label: "Print and digital assets" },
     ],
     heroImage: "/images/projects/everhome/hero.webp",
     galleryImages: [
@@ -158,22 +224,24 @@ export const FEATURED_PROJECTS: Project[] = [
     title: "Eau'dacity Luxury Fragrance & Visual Identity System",
     client: "Eau'dacity Parfums",
     category: "Brand Strategy & Packaging Architecture",
-    tagline: "Monochromatic luxury identity, bespoke bottle packaging, and high-converting fragrance storefront",
-    year: "2025",
-    platform: "Shopify / Figma / Cinema 4D",
-    services: ["Brand Strategy & Logo", "Luxury Packaging Design", "Typography & Color Systems", "eCommerce Experience"],
+    projectType: "brand-identity",
+    industry: "Fragrance and beauty",
+    tagline: "Monochromatic fragrance identity and packaging design concepts.",
+    year: undefined,
+    platform: "Figma / Adobe Illustrator / 3D concept assets",
+    services: ["Brand Identity", "Packaging Design", "Typography & Color Systems"],
     summary:
-      "A minimalist brand system for Eau'dacity luxury perfumery. Featuring monochromatic typography (Helvetica Neue Bold), premium gold/amber glass bottle packaging, tactile retail unboxing systems, and a direct-to-consumer digital storefront.",
+      "A minimalist brand identity and packaging concept project for Eau'dacity Parfums. Available design assets show a monochromatic type direction, amber bottle concepts, carton artwork, and digital brand applications. The project is presented as design work only; no live storefront is included.",
     challenge:
       "Creating an unmistakably modern, high-end aesthetic that stands out in the luxury fragrance space while maintaining stark visual elegance across physical packaging, digital media, and retail signage.",
     strategy:
       "We recommended a high-contrast monochromatic identity system paired with warm amber glass product photography and minimalist packaging typography to emphasize premium craft.",
     execution:
-      "We designed custom logomarks, secondary seals, embossed folding cartons, glass bottle mockups, social media editorial templates, and a streamlined direct-to-consumer storefront.",
+      "The existing project assets document logo and seal directions, folding-carton concepts, glass bottle mockups, and social editorial layouts. This case study does not represent the packaging as manufactured or claim that UBE built an eCommerce site for this project.",
     results: [
-      { metric: "100%", label: "Bespoke Packaging Asset Matrix" },
-      { metric: "Custom", label: "Amber Glass Bottle System" },
-      { metric: "Omnichannel", label: "Retail & Digital Integration" },
+      { metric: "Identity", label: "Logo and typography direction" },
+      { metric: "Packaging", label: "Bottle and carton design concepts" },
+      { metric: "Applications", label: "Retail and digital design assets" },
     ],
     heroImage: "/images/projects/eaudacity/hero.webp",
     galleryImages: [
@@ -184,7 +252,7 @@ export const FEATURED_PROJECTS: Project[] = [
       "/images/projects/eaudacity/showcase-9.jpg",
       "/images/projects/eaudacity/showcase-10.jpg",
     ],
-    technologies: ["Figma", "Adobe Illustrator", "3D Packaging Mockups", "Shopify"],
+    technologies: ["Figma", "Adobe Illustrator", "3D Packaging Mockups"],
     accentColor: "#C8A265",
     typography: "Helvetica Neue Bold",
     palette: ["#000000", "#FFFFFF", "#C8A265", "#FAF7F6"],
@@ -195,22 +263,25 @@ export const FEATURED_PROJECTS: Project[] = [
     title: "Botāne Plant-Based Luxury Perfume & Visual Identity",
     client: "Botāne Beauty & Fragrance",
     category: "Botanical Branding & Packaging System",
-    tagline: "Bloom Your Beauty: Organic botanical perfume branding, luxury packaging, and retail visual system",
-    year: "2026",
-    platform: "Shopify / Adobe Suite / Print Packaging",
-    services: ["Brand Identity & Logo", "Eco-Luxury Packaging Design", "Social Commerce Strategy", "Retail Display Guidelines"],
+    projectType: "brand-identity",
+    industry: "Beauty and fragrance",
+    tagline: "Brand identity and packaging design concepts for a botanical beauty and fragrance brand.",
+    year: undefined,
+    platform: "Adobe design tools / packaging concepts",
+    services: ["Brand Identity", "Packaging Design", "Retail Visual Assets"],
     summary:
-      "A bespoke botanical luxury brand identity for Botāne Plant-Based Perfume. Integrating classic Big Caslon CC and contemporary Azo Sans typography, an earthy palette of Cream (#F9E7D8), Forest Green (#064E30), and Deep Noir (#161616), custom glass bottles, eco-friendly folding cartons, and curated social media commerce kits.",
+      "A botanical visual identity and packaging concept system for Botāne Beauty & Fragrance, using the existing project artwork's Big Caslon CC and Azo Sans typography direction, cream and forest-green palette, floral mark, and product-presentation assets. Product formulation, material sourcing, and manufacturing claims are not established by the design files and are not made here.",
     challenge:
-      "Bridging the gap between 100% plant-based organic ethics and ultra-premium luxury aesthetics without falling into generic greenwashing tropes.",
+      "The design brief called for a recognizable beauty identity that could combine botanical visual cues with a refined product presentation. The available project assets document visual identity and packaging concepts; they do not verify product ingredients, environmental performance, or manufactured packaging materials.",
     strategy:
-      "We paired classic editorial serif typography with rich botanical green accents and tactile embossed packaging to communicate clean formulation with luxury heritage.",
+      "The available artwork pairs editorial serif typography with botanical green accents and tactile-looking packaging mockups. This describes the visual direction only; it does not make a claim about product formulation or manufactured materials.",
     execution:
       "We created custom floral ligature logomarks, geometric foliage patterns, luxury packaging die-lines, retail counter displays, and curated social media launch kits.",
     results: [
       { metric: "Complete", label: "Brand Bible & Style Guide" },
-      { metric: "Eco-Luxury", label: "Sustainable Packaging Spec" },
-      { metric: "Omnichannel", label: "Social Commerce & In-Store" },
+      { metric: "Identity", label: "Logo, type, and color direction" },
+      { metric: "Packaging", label: "Packaging design concepts" },
+      { metric: "Applications", label: "Social and in-store design assets" },
     ],
     heroImage: "/images/projects/botane/hero.webp",
     galleryImages: [
@@ -221,47 +292,10 @@ export const FEATURED_PROJECTS: Project[] = [
       "/images/projects/botane/showcase-2.jpg",
       "/images/projects/botane/showcase-1.jpg",
     ],
-    technologies: ["Figma", "Adobe Illustrator", "Cinema 4D", "Shopify"],
+    technologies: ["Adobe Illustrator", "Cinema 4D", "Packaging concept design"],
     accentColor: "#064E30",
     typography: "Big Caslon CC / Azo Sans",
     palette: ["#F9E7D8", "#064E30", "#161616", "#FFFFFF"],
-  },
-  {
-    id: "bugle-chaser-apparel",
-    slug: "bugle-chaser-outdoor-apparel-brand",
-    title: "Bugle Chaser Outdoor Apparel & Lifestyle Brand Engine",
-    client: "Bugle Chaser Outdoor Co.",
-    category: "Apparel Merchandise & eCommerce Storefront",
-    tagline: "Outdoor apparel branding, rugged merchandise lineup, and automated Shopify store",
-    year: "2025",
-    platform: "Shopify / Print-on-Demand & Dropshipping",
-    services: ["Logo & Mascot Design", "Apparel & Merchandise Design", "Shopify Store Setup", "Social Video Advertising"],
-    summary:
-      "A complete lifestyle brand ecosystem for Bugle Chaser outdoor and hunting apparel. Combining the rugged Legend M54 and Robotto typography, Forest Black and Neon Green (#8BC53F) color system, technical merchandise (hoodies, headwear, flasks, outdoor gear), and a mobile-first eCommerce storefront.",
-    challenge:
-      "Creating an authentic outdoor brand identity with broad appeal to hunting and outdoor enthusiasts while establishing a seamless direct-to-consumer apparel store with automated fulfillment.",
-    strategy:
-      "We developed a high-visibility archery elk motif, high-contrast merchandise apparel mockups, and an automated Shopify store integrated with supplier dropshipping fulfillment.",
-    execution:
-      "We produced the master mascot emblem, hoodie & headwear collection tech-packs, Shopify storefront theme setup, payment gateway configuration, and short-form ad creatives.",
-    results: [
-      { metric: "Catalog", label: "Merchandise SKUs Configured" },
-      { metric: "Automated", label: "Dropshipping Fulfillment Flow" },
-      { metric: "Mobile-First", label: "Responsive Shopify Theme" },
-    ],
-    heroImage: "/images/projects/bugle-chaser/hero.webp",
-    galleryImages: [
-      "/images/projects/bugle-chaser/showcase-4.jpg",
-      "/images/projects/bugle-chaser/showcase-5.jpg",
-      "/images/projects/bugle-chaser/showcase-7.jpg",
-      "/images/projects/bugle-chaser/showcase-8.jpg",
-      "/images/projects/bugle-chaser/showcase-13.jpg",
-      "/images/projects/bugle-chaser/showcase-17.jpg",
-    ],
-    technologies: ["Illustrator", "Photoshop", "Shopify", "TikTok Ads Manager", "Meta Ads"],
-    accentColor: "#8BC53F",
-    typography: "Legend M54 / Robotto",
-    palette: ["#000000", "#8BC53F", "#FFFFFF", "#FAF7F6"],
   },
 ];
 
