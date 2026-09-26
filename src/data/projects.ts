@@ -176,6 +176,95 @@ export const FEATURED_PROJECTS: Project[] = [
     palette: ["#F7B7C2", "#B79BD6", "#A8B987", "#FFF7F1", "#E9A3B0"],
   },
   {
+    id: "shipster-supply",
+    slug: "shipster-supply",
+    title: "Shipster Supply Shopify Store Case Study",
+    client: "Shipster Supply",
+    category: "eCommerce Storefront & Catalog Experience",
+    projectType: "website-build",
+    industry: "Home, camping, outdoor cooking, and everyday goods",
+    tagline: "Shopify storefront, ongoing store management, and AI SEO for a wide-ranging home and outdoor catalog.",
+    year: undefined,
+    platform: "Shopify",
+    liveUrl: "https://shipstersupply.com/",
+    clientDescription: "Shipster Supply is an online retailer presenting home, kitchen, camping, outdoor-cooking, furniture, and storage products through a Shopify storefront.",
+    services: ["Shopify Storefront", "Shopify Store Management", "AI SEO"],
+    summary:
+      "UBE’s confirmed project scope for Shipster Supply includes Shopify storefront work, ongoing store management, and AI SEO. The current live shop spans home and outdoor categories, with collection landing points, product pages, cart controls, shipping and support information, and policy pages. This case study describes that visible experience and the scope UBE supplied; it does not claim measured sales, traffic, or search outcomes.",
+    challenge:
+      "A wide-ranging catalog creates an information-architecture challenge: a shopper looking for a kitchen item should not have to navigate through camping gear, while someone comparing outdoor cooking products needs a clear way to explore grills, fire pits, cookware, and accessories. The public store brings together products for different rooms, uses, and purchase contexts. Its organization has to help people orient themselves before they begin comparing individual items.",
+    strategy:
+      "The storefront uses category and collection entry points to separate major shopping contexts. The case study describes the current public structure rather than attributing unrecorded custom code or third-party integrations to UBE. UBE’s confirmed scope is Shopify storefront work, management, and AI SEO; the exact theme changes and optimization checklist were not included in the evidence available for this write-up.",
+    execution:
+      "The live Shopify experience includes collection discovery, product cards with visible pricing and availability states, product detail pages, cart actions, shipping and support information, and store policies. The current home page also presents product groupings and category links for the store’s home, camping, cooking, furniture, and outdoor ranges. These observations document the storefront a visitor can use today; they are not claims about a particular code customization.",
+    results: [
+      { metric: "Shopify", label: "Storefront project scope confirmed by UBE" },
+      { metric: "Management", label: "Ongoing store-management scope confirmed by UBE" },
+      { metric: "AI SEO", label: "Search-optimization scope confirmed by UBE" },
+    ],
+    heroImage: "/images/projects/shipster-supply/hero.webp",
+    galleryImages: [
+      "/images/projects/shipster-supply/hero.webp",
+      "/images/projects/shipster-supply/camping-accessories.webp",
+      "/images/projects/shipster-supply/furniture.webp",
+      "/images/projects/shipster-supply/fire-pit.webp",
+    ],
+    galleryAltText: [
+      "Shipster Supply homepage banner featuring its outdoor and camping brand presentation",
+      "Camping accessories collection image shown on Shipster Supply",
+      "Furniture category image shown on Shipster Supply",
+      "Fire pit category image shown on Shipster Supply",
+    ],
+    caseStudySections: [
+      {
+        heading: "The Client",
+        paragraphs: [
+          "Shipster Supply presents a broad online assortment across home, kitchen, furniture, camping, outdoor cooking, fire pits, hunting blinds, and storage. Its live homepage introduces the retailer with the message “Gear Up for Bigger Adventures,” then gives visitors ways to browse collections and product features. The breadth is part of the store’s identity: the catalog is not limited to one product type or one room in the home.",
+          "UBE’s project brief confirms Shopify storefront work, ongoing store management, and AI SEO for the client. The scope is stated at that service level because the source material does not include a dated implementation log, approved task list, or access to private analytics. Product availability, pricing, delivery options, and site content can change; the screenshots and descriptions here represent the public store observed during this review.",
+        ],
+      },
+      {
+        heading: "The Challenge",
+        paragraphs: [
+          "A general merchandise catalog can become difficult to navigate when unrelated products share a single browsing path. Home décor, kitchen appliances, camping accessories, furniture, grills, fire pits, hunting blinds, and storage products answer different customer needs. A visitor who arrives with a specific task—such as choosing a camping stove or browsing a storage solution—benefits from category links that make the next step easy to identify.",
+          "The catalog also asks customers to evaluate products with different kinds of specifications. A piece of furniture, an outdoor grill, and a camping accessory are not compared using the same details. Product pages and category structures therefore need to let each item retain its own description, imagery, options, pricing, and availability without flattening the experience into a generic list. The live storefront displays product cards, product detail pages, quick add or choose-options controls, and sold-out states for some items. These are visible interface features, not evidence of a particular conversion result.",
+          "A second requirement is clarity around practical purchase questions. The current store includes support and policy links and tells shoppers that shipping options are shown at checkout based on the item and delivery destination. Its homepage also displays a delivery message. These customer-facing details matter because delivery expectations, product options, returns, and pre-purchase questions can affect whether a shopper feels ready to proceed. This case study reports the public information architecture, not UBE’s authorship of the retailer’s policy terms or its fulfillment operations.",
+          "UBE’s confirmed scope is the Shopify storefront, management, and AI SEO. We did not receive records showing the client’s original business goals, catalog size at launch, previous platform, launch timeline, or search baseline. Consequently, the challenge is framed through the observable complexity of a multi-category store rather than a claim about a prior technical failure, lost sales, or quantified SEO problem.",
+        ],
+      },
+      {
+        heading: "What UBE Built and Managed",
+        paragraphs: [
+          "The confirmed build work centers on a Shopify storefront that supports multiple category and collection paths. The current navigation exposes Home, Shop, Collections, and Contact. From the homepage, visitors can move into areas such as Camping Accessories, Furniture, Cookware & Appliances, Fire Pits & Accessories, Home Decor, Grills & Outdoor Cooking, Hunting & Blinds, and Storage & Organization. These routes give distinct parts of the catalog a recognizable starting point.",
+          "Collection and featured-product sections bring selected inventory into the home page. The current page presents home and living products, outdoor-cooking merchandise, and outdoor favorites, with product cards that show item names, imagery, prices, sale labels, and availability where applicable. Product cards include actions such as Add to cart or Choose options. Those labels are useful evidence of the shopping flow a visitor encounters, but this description does not imply that every product section or merchandising rule was custom-developed by UBE.",
+          "At the product level, the Shopify experience allows shoppers to reach detail pages, review the displayed product information, select options when the item requires them, and use the cart flow. Product-level information matters especially in broad catalogs because the shopper needs to assess each item on its own terms. We have not been given a project record listing the number of products UBE uploaded or the exact variant, collection, or app configuration performed, so none of those quantities or integrations are claimed.",
+          "The project brief also confirms store management. A managed Shopify store may require catalog upkeep, review of storefront content, changes to collections, maintenance of customer-facing details, or other agreed operational tasks. For Shipster Supply, the available evidence confirms the management service category but does not identify each task, its dates, or its cadence. We therefore do not publish unsupported counts of products maintained, promotional campaigns, support tickets, or monthly hours.",
+          "AI SEO is the third scope area supplied by UBE. The public store contains crawlable category and product routes, descriptive item names, product-specific content, and navigational paths that expose the assortment. Those visible elements help explain how a search engine or answer engine can encounter the catalog, but they do not prove that a particular JSON-LD implementation, indexation result, AI citation, or ranking change was delivered. Such implementation details should be added only if the project record confirms them.",
+          "The live storefront also publishes practical help content and operational information. Its homepage has shipping and product-selection prompts, contact links, and policy navigation. These components let customers look for answers without treating every question as a sales inquiry. The exact wording of policies is controlled by the merchant, and the current live content may be updated independently of the work described in this case study.",
+        ],
+      },
+      {
+        heading: "How the Work Maps to The Unified System™",
+        paragraphs: [
+          "The Unified System™ is UBE’s current Brand → Build → Launch → Scale model. The owner-provided project scope confirms Shopify storefront work, ongoing management, and AI SEO. It does not contain dated records proving that all four stages were performed as a named engagement, so this section maps the confirmed service areas to the current methodology rather than claiming a documented historical stage-by-stage delivery.",
+          "Build is visible in the Shopify storefront and its routes into a diverse catalog. The category and collection hierarchy gives products distinct browsing contexts, while product pages and cart controls support the next actions. The current implementation also shows how home and outdoor ranges can sit under one commerce experience without requiring every shopper to browse every category.",
+          "Launch connects to the discoverability and readiness work represented by AI SEO. UBE confirms that AI SEO was included in the project scope; however, there is no optimization checklist or before-and-after report available for publication. We therefore identify the service without suggesting guaranteed indexing, rankings, organic traffic, or AI-answer citations.",
+          "Scale corresponds to ongoing store management: the store’s product range, categories, and customer-facing information can be maintained as the retailer’s operation changes. The available brief confirms that ongoing management was part of the work, but it does not establish the duration or specific volume of changes. Brand, the first stage, is not represented as a separately delivered brand-identity project here; the public storefront’s existing brand presentation is shown as client context only.",
+        ],
+      },
+      {
+        heading: "Visible Storefront Evidence and Results",
+        paragraphs: [
+          "The public website provides a concrete view of the current customer experience: category-based navigation, collection pages, featured products, product details, cart controls, visible pricing and availability, contact information, shipping content, customer support sections, and policy pages. A shopper can browse across home, kitchen, camping, furniture, and outdoor-cooking needs from a single Shopify storefront. These are observable deliverables and interface characteristics—not financial results.",
+          "No verified project analytics, organic Search Console comparison, revenue report, conversion data, sales volume, average order value, or customer-acquisition result was provided. This case study makes no numeric performance claim. The current store shows product prices, sale labels, reviews, and availability because those are part of its public retail experience; they are not presented as proof of UBE’s results or endorsements of UBE.",
+          "To strengthen the results record later, UBE would need an owner-approved project timeline, a list of exact build and management deliverables, AI SEO implementation notes, and permissioned analytics or Search Console comparisons. Until those materials are available, this page stays within the confirmed scope and visible evidence. Commerce outcomes also depend on the product assortment, price, stock, delivery, customer service, merchandising, demand, and ongoing marketing—not only on the storefront itself.",
+        ],
+      },
+    ],
+    technologies: ["Shopify", "Store management", "AI SEO"],
+    accentColor: "#9F8BE7",
+  },
+  {
     id: "everhome-real-estate",
     slug: "everhome-real-estate-brand-system",
     title: "Everhome Modern Real Estate Brand Architecture & Visual System",
