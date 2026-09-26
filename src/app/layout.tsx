@@ -26,6 +26,7 @@ const funnelSans = Funnel_Sans({
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700", "800"],
   display: "swap",
+  preload: false,
 });
 
 const spaceGrotesk = Space_Grotesk({
@@ -33,6 +34,7 @@ const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
   display: "swap",
+  preload: false,
 });
 
 // Environment-aware indexing: allow indexing on production domain by default, noindex ONLY on Vercel preview builds
