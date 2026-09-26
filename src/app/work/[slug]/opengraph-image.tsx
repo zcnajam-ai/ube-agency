@@ -1,6 +1,3 @@
-import { readFile } from "node:fs/promises";
-import { join } from "node:path";
-import sharp from "sharp";
 import { ImageResponse } from "next/og";
 import { notFound } from "next/navigation";
 import { getProjectBySlug } from "@/data/projects";
@@ -30,13 +27,6 @@ export default async function ProjectOpenGraphImage({ params }: RouteProps) {
   const project = getProjectBySlug(slug);
   if (!project) notFound();
 
-  const imagePath = join(process.cwd(), "public", project.heroImage.replace(/^\\//, ""));
-  const imageData = await readFile(imagePath);
-  // Satori (used by next/og) does not reliably decode WebP data URIs. Convert
-  // the existing optimized project image to PNG for the generated social card.
-  const pngData = await sharp(imageData).png().toBuffer();
-  const imageSrc = `data:image/png;base64,${pngData.toString("base64")}`;
-
   return new ImageResponse(
     (
       <div
@@ -44,27 +34,81 @@ export default async function ProjectOpenGraphImage({ params }: RouteProps) {
           display: "flex",
           width: "100%",
           height: "100%",
-          padding: 54,
+          padding: 64,
           background: "#161616",
           color: "#FAF7F6",
-          alignItems: "flex-end",
+          alignItems: "stretch",
           justifyContent: "space-between",
+          position: "relative",
+          overflow: "hidden",
         }}
       >
-        <img
-          src={imageSrc}
-          alt=""
-          width={420}
-          height={520}
-          style={{ objectFit: "cover", borderRadius: 28, border: "4px solid #9F8BE7" }}
+        <div
+          style={{
+            display: "flex",
+            position: "absolute",
+            width: 390,
+            height: 390,
+            right: -90,
+            top: -120,
+            borderRadius: 195,
+            border: `3px solid ${project.accentColor}`,
+            opacity: 0.5,
+          }}
         />
-        <div style={{ display: "flex", flexDirection: "column", width: 620, gap: 20 }}>
-          <div style={{ color: "#9F8BE7", fontSize: 22, letterSpacing: 4, fontWeight: 700 }}>
+        <div
+          style={{
+            display: "flex",
+            position: "absolute",
+            width: 250,
+            height: 250,
+            right: 30,
+            top: 50,
+            borderRadius: 125,
+            background: project.accentColor,
+            opacity: 0.12,
+          }}
+        />
+        <div style={{ display: "flex", flexDirection: "column", justifyContent: "space-between", width: "100%" }}>
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              gap: 16,
+              color: project.accentColor,
+              fontSize: 22,
+              letterSpacing: 4,
+              fontWeight: 700,
+            }}
+          >
+            <div
+              style={{
+                display: "flex",
+                width: 14,
+                height: 14,
+                borderRadius: 7,
+                background: project.accentColor,
+              }}
+            />
             UNIFIED BRANDING EXPERTS · CASE STUDY
           </div>
-          <div style={{ fontSize: 54, lineHeight: 1.08, fontWeight: 700 }}>{project.client}</div>
-          <div style={{ color: "#D5D0CE", fontSize: 26, lineHeight: 1.25 }}>{project.category}</div>
-          <div style={{ color: "#D5D0CE", fontSize: 19 }}>{project.industry}</div>
+          <div style={{ display: "flex", flexDirection: "column", maxWidth: 940, gap: 18 }}>
+            <div style={{ fontSize: 62, lineHeight: 1.08, fontWeight: 700 }}>{project.client}</div>
+            <div style={{ color: "#D5D0CE", fontSize: 30, lineHeight: 1.2 }}>{project.category}</div>
+            <div style={{ color: "#D5D0CE", fontSize: 21 }}>{project.industry}</div>
+          </div>
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              color: "#D5D0CE",
+              fontSize: 18,
+              letterSpacing: 2,
+              textTransform: "uppercase",
+            }}
+          >
+            Project scope · ${project.services.join(" · ")}
+          </div>
         </div>
       </div>
     ),
