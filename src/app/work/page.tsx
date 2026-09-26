@@ -13,14 +13,14 @@ import PortfolioAutoScroll from "@/components/work/PortfolioAutoScroll";
 export const metadata: Metadata = {
   title: "Our Work & Case Studies",
   description:
-    "Explore case studies in custom Shopify eCommerce, brand identity design, Next.js web applications, and multi-channel performance marketing.",
+    "See selected eCommerce storefront and brand identity projects, with project scope described without unsupported performance claims.",
   alternates: {
     canonical: "https://unifiedbrandingexperts.com/work",
   },
   openGraph: {
     title: "Our Work & Case Studies | Unified Branding Experts",
     description:
-      "Explore case studies in custom Shopify eCommerce, brand identity design, Next.js web applications, and multi-channel performance marketing.",
+      "See selected eCommerce storefront and brand identity projects, with project scope described without unsupported performance claims.",
     url: "https://unifiedbrandingexperts.com/work",
     type: "website",
     images: [
@@ -47,7 +47,7 @@ export default function WorkIndexPage() {
     "@type": "CollectionPage",
     name: "Featured Client Case Studies",
     url: "https://unifiedbrandingexperts.com/work",
-    description: "Explore case studies across eCommerce, brand identity, and web engineering.",
+      description: "Explore selected eCommerce storefront and brand identity projects.",
   };
 
   const breadcrumbSchema = {
@@ -95,7 +95,7 @@ export default function WorkIndexPage() {
             Digital Platforms Built to Move Brands Forward.
           </h1>
           <p className="text-base sm:text-lg text-[#585858] font-body leading-relaxed max-w-2xl">
-            Explore our latest brand transformations, bespoke fragrance and apparel systems, high-converting Shopify storefronts, and search optimization campaigns.
+            Explore eCommerce storefronts and visual identity work. Each project page distinguishes visible storefront details from outcomes that require client analytics.
           </p>
         </div>
 
@@ -140,7 +140,9 @@ export default function WorkIndexPage() {
                 <div className="p-6 sm:p-8 space-y-4">
                   <div className="flex items-center justify-between text-xs font-mono-num text-[#585858]">
                     <span className="font-semibold text-[#161616]">{project.client}</span>
-                    <span className="font-bold text-[#9F8BE7]">{project.year}</span>
+                    <span className="font-bold text-[#9F8BE7]">
+                      {project.year ?? (project.projectType === "website-build" ? "Website Build" : "Brand Identity")}
+                    </span>
                   </div>
 
                   <h2 className="font-display text-2xl font-bold text-[#161616] group-hover:text-[#9F8BE7] transition-colors leading-tight">
@@ -166,7 +168,7 @@ export default function WorkIndexPage() {
 
               <div className="p-6 sm:p-8 pt-0 border-t border-[#E0DDDB]/60 mt-4 flex items-center justify-between">
                 <span className="text-xs font-mono-num text-emerald-600 font-bold">
-                  {project.results[0]?.metric} {project.results[0]?.label}
+                  {project.results[0]?.label}
                 </span>
                 <Link
                   href={`/work/${project.slug}`}

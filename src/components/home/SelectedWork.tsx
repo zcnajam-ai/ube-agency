@@ -86,7 +86,7 @@ export default function SelectedWork() {
               Work Built to Move Businesses Forward.
             </h2>
             <p className="text-sm sm:text-base text-[#585858] font-body">
-              Explore recent brand identity transformations, real estate visual systems, luxury fragrance packaging, and high-converting eCommerce storefronts.
+              Explore brand identity work and eCommerce storefront projects, with deliverables described without unsupported performance claims.
             </p>
           </div>
 
@@ -162,7 +162,7 @@ export default function SelectedWork() {
                   </div>
 
                   <div className="absolute top-4 right-4 z-10 px-2.5 py-0.5 rounded-full bg-[#161616]/80 text-white text-[10px] font-mono-num font-bold">
-                    {project.year}
+                    {project.year ?? (project.projectType === "website-build" ? "Website Build" : "Brand Identity")}
                   </div>
 
                   <div className="absolute bottom-4 right-4 z-20 w-11 h-11 rounded-full bg-[#9F8BE7] text-[#161616] flex items-center justify-center shadow-lg transition-all duration-300 group-hover:scale-110 group-hover:rotate-45 group-hover:bg-[#b4a3f7]">
@@ -189,7 +189,7 @@ export default function SelectedWork() {
                   <div className="pt-3 border-t border-[#E0DDDB] flex flex-wrap items-center justify-between gap-2">
                     <span className="text-xs font-mono-num text-[#585858]">Deliverable Highlight:</span>
                     <span className="text-xs font-mono-num text-[#161616] font-bold bg-white px-3 py-1 rounded-full border border-[#E0DDDB] shadow-2xs break-words max-w-full">
-                      {project.results[0]?.metric} {project.results[0]?.label}
+                      {project.results[0]?.label}
                     </span>
                   </div>
                 </div>

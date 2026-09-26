@@ -85,6 +85,8 @@ const nextConfig: NextConfig = {
       // Legacy Portfolio URLs -> Canonical Work Destination (/work)
       { source: "/portfolio", destination: "/work", permanent: true },
       { source: "/portfolio/", destination: "/work", permanent: true },
+      { source: "/work/bugle-chaser-outdoor-apparel-brand", destination: "/work", permanent: true },
+      { source: "/work/bugle-chaser-outdoor-apparel-brand/", destination: "/work", permanent: true },
       { source: "/pricing", destination: "/packages", permanent: true },
       { source: "/pricing/", destination: "/packages", permanent: true },
       { source: "/services/aiseo", destination: "/services/ai-seo-agency", statusCode: 301 },

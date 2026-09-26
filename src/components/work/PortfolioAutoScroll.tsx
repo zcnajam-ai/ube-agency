@@ -114,7 +114,7 @@ export default function PortfolioAutoScroll() {
           </div>
 
           <div className="absolute top-4 right-4 z-10 px-3 py-1 rounded-full bg-[#161616]/80 text-white text-xs font-mono-num font-bold">
-            {currentProject.year}
+            {currentProject.year ?? (currentProject.projectType === "website-build" ? "Website Build" : "Brand Identity")}
           </div>
         </Link>
 
@@ -152,7 +152,7 @@ export default function PortfolioAutoScroll() {
                 Deliverable
               </span>
               <span className="text-xs sm:text-sm font-mono-num font-bold text-emerald-600">
-                {currentProject.results[0]?.metric} {currentProject.results[0]?.label}
+                {currentProject.results[0]?.label}
               </span>
             </div>
 
