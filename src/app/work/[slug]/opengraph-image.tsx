@@ -1,5 +1,6 @@
 import { readFile } from "node:fs/promises";
 import { join } from "node:path";
+import sharp from "sharp";
 import { ImageResponse } from "next/og";
 import { notFound } from "next/navigation";
 import { getProjectBySlug } from "@/data/projects";
@@ -28,9 +29,13 @@ export default async function ProjectOpenGraphImage({ params }: RouteProps) {
   const { slug } = await params;
   const project = getProjectBySlug(slug);
   if (!project) notFound();
-  const imagePath = join(process.cwd(), "public", project.heroImage.replace(/^\//, ""));
+
+  const imagePath = join(process.cwd(), "public", project.heroImage.replace(/^\\//, ""));
   const imageData = await readFile(imagePath);
-  const imageSrc = `data:image/webp;base64,${imageData.toString("base64")}`;
+  // Satori (used by next/og) does not reliably decode WebP data URIs. Convert
+  // the existing optimized project image to PNG for the generated social card.
+  const pngData = await sharp(imageData).png().toBuffer();
+  const imageSrc = `data:image/png;base64,${pngData.toString("base64")}`;
 
   return new ImageResponse(
     (
