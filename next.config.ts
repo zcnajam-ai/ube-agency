@@ -50,7 +50,8 @@ const nextConfig: NextConfig = {
   reactStrictMode: true,
   poweredByHeader: false,
   images: {
-    unoptimized: true,
+    formats: ["image/avif", "image/webp"],
+    qualities: [60, 70, 75],
   },
   experimental: {
     cpus: 2,
