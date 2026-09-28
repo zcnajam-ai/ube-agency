@@ -344,10 +344,10 @@ export default async function ProjectDetailPage({
             </a>
           )}
           <Link
-            href={project.projectType === "website-build" ? "/services/shopify-development" : "/services/branding"}
+            href={project.relatedServices?.[0]?.href ?? (project.projectType === "website-build" ? "/services/shopify-development" : "/services/branding")}
             className="px-6 py-3.5 rounded-full bg-white border border-[#E0DDDB] text-[#161616] font-display font-bold text-xs sm:text-sm hover:border-[#9F8BE7] transition-all text-center"
           >
-            Related UBE Service
+            {project.relatedServices?.[0]?.label ?? "Related UBE Service"}
           </Link>
           <Link
             href="/contact"
