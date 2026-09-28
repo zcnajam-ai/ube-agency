@@ -131,9 +131,11 @@ export default function WorkIndexPage() {
                 <Link href={`/work/${project.slug}`} className="block relative">
                   <InteractiveMedia
                     src={project.heroImage}
-                    alt={project.title}
+                    alt={project.galleryAltText?.[0] ?? project.title}
                     aspectRatio="aspect-[16/10]"
                     badgeText={project.category}
+                    objectFit={project.id === "happy-knot-creations" || project.id === "shipster-supply" ? "contain" : "cover"}
+                    quality={project.id === "happy-knot-creations" || project.id === "shipster-supply" ? 90 : 75}
                   />
                 </Link>
 

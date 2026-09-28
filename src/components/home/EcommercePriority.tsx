@@ -123,9 +123,12 @@ export default function EcommercePriority() {
           {/* Right Column: Visual eCommerce Showcase */}
           <div className="lg:col-span-5 space-y-4">
             <InteractiveMedia
-              src="/images/projects/happy-knot/hero.webp"
-              alt="Happy Knot Creations Shopify Storefront & Brand Experience by Unified Branding Experts"
-              aspectRatio="aspect-[4/3]"
+              src="/images/projects/happy-knot/hd-storefront-hero.webp"
+              alt="Happy Knot Creations homepage featuring a pink crochet plush and custom order invitation"
+              aspectRatio="aspect-[1559/1009]"
+              objectFit="contain"
+              sizes="(max-width: 1024px) 100vw, 40vw"
+              quality={90}
               badgeText="Shopify 2.0 & D2C Storefronts"
             />
             <div className="p-6 rounded-3xl bg-white border border-[#E0DDDB] space-y-3 text-center shadow-xs">

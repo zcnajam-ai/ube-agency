@@ -59,6 +59,7 @@ export default async function ProjectDetailPage({
   const project = getProjectBySlug(slug);
 
   if (!project) return notFound();
+  const isStorefrontScreenshot = project.id === "happy-knot-creations" || project.id === "shipster-supply";
 
   const caseStudyUrl = `https://unifiedbrandingexperts.com/work/${project.slug}`;
   const structuredData = {
@@ -144,14 +145,17 @@ export default async function ProjectDetailPage({
       )}
 
       {/* Hero Visual */}
-      <div className="relative aspect-[16/9] w-full rounded-3xl overflow-hidden border border-[#E0DDDB] shadow-md bg-white">
+      <div className={`relative w-full rounded-3xl overflow-hidden border border-[#E0DDDB] shadow-md bg-white ${
+        project.id === "happy-knot-creations" ? "aspect-[1559/1009]" : project.id === "shipster-supply" ? "aspect-[1877/838]" : "aspect-[16/9]"
+      }`}>
         <Image
           src={project.heroImage}
           alt={project.galleryAltText?.[0] ?? `${project.client} project overview`}
           fill
           priority
           sizes="(max-width: 768px) 100vw, 1152px"
-          className="object-cover object-center"
+          quality={isStorefrontScreenshot ? 90 : 75}
+          className={isStorefrontScreenshot ? "object-contain object-center" : "object-cover object-center"}
         />
       </div>
 

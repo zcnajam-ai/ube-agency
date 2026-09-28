@@ -102,11 +102,12 @@ export default function PortfolioAutoScroll() {
         >
           <Image
             src={currentProject.heroImage}
-            alt={currentProject.title}
+            alt={currentProject.galleryAltText?.[0] ?? currentProject.title}
             fill
             priority
             sizes="(max-width: 1024px) 100vw, 60vw"
-            className="object-cover object-center group-hover:scale-105 transition-transform duration-700"
+            quality={currentProject.id === "happy-knot-creations" || currentProject.id === "shipster-supply" ? 90 : 75}
+            className={`${currentProject.id === "happy-knot-creations" || currentProject.id === "shipster-supply" ? "object-contain" : "object-cover"} object-center group-hover:scale-105 transition-transform duration-700`}
           />
 
           <div className="absolute top-4 left-4 z-10 px-3.5 py-1 rounded-full bg-white/90 backdrop-blur-md border border-[#E0DDDB] text-xs font-mono-num font-bold text-[#161616] shadow-xs">

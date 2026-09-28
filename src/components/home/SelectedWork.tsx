@@ -151,10 +151,11 @@ export default function SelectedWork() {
                 <Link href={`/work/${project.slug}`} className="block relative aspect-[16/10] overflow-hidden bg-black/5">
                   <Image
                     src={project.heroImage}
-                    alt={`${project.title} Case Study`}
+                    alt={project.galleryAltText?.[0] ?? `${project.title} case study`}
                     fill
                     sizes="(max-width: 1024px) 100vw, 50vw"
-                    className="object-cover object-center group-hover:scale-105 transition-transform duration-700"
+                    quality={project.id === "happy-knot-creations" || project.id === "shipster-supply" ? 90 : 75}
+                    className={`${project.id === "happy-knot-creations" || project.id === "shipster-supply" ? "object-contain" : "object-cover"} object-center group-hover:scale-105 transition-transform duration-700`}
                   />
 
                   <div className="absolute top-4 left-4 z-10 px-3 py-1 rounded-full bg-white/90 backdrop-blur-md border border-[#E0DDDB] text-[11px] font-mono-num font-bold text-[#161616] shadow-xs max-w-[calc(100%-4rem)] truncate">
