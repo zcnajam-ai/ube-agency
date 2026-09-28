@@ -112,18 +112,10 @@ export const FEATURED_PROJECTS: Project[] = [
       { metric: "Management", label: "Ongoing store management (scope supplied by UBE)" },
       { metric: "AI SEO", label: "Search optimization (scope supplied by UBE)" },
     ],
-    heroImage: "/images/projects/happy-knot/maker-workspace.webp",
-    galleryImages: [
-      "/images/projects/happy-knot/maker-workspace.webp",
-      "/images/projects/happy-knot/crochet-plush.webp",
-      "/images/projects/happy-knot/storefront-hero.webp",
-      "/images/projects/happy-knot/ocean-friends-collection.webp",
-    ],
+    heroImage: "/images/projects/happy-knot/hd-storefront-hero.webp",
+    galleryImages: [],
     galleryAltText: [
-      "Handmade crocheted plushies displayed on shelves in the maker's workspace",
-      "Handmade crochet plush shown on the Happy Knot Creations store",
-      "Handmade crochet plush displayed on the Happy Knot Creations storefront",
-      "Pastel crochet ocean animals displayed together in a collection photograph",
+      "Happy Knot Creations Shopify homepage with a pink crochet plush, custom order message, and US dollar selector",
     ],
     caseStudySections: [
       {
@@ -202,18 +194,10 @@ export const FEATURED_PROJECTS: Project[] = [
       { metric: "Management", label: "Ongoing store-management scope confirmed by UBE" },
       { metric: "AI SEO", label: "Search-optimization scope confirmed by UBE" },
     ],
-    heroImage: "/images/projects/shipster-supply/hero.webp",
-    galleryImages: [
-      "/images/projects/shipster-supply/hero.webp",
-      "/images/projects/shipster-supply/camping-accessories.webp",
-      "/images/projects/shipster-supply/furniture.webp",
-      "/images/projects/shipster-supply/fire-pit.webp",
-    ],
+    heroImage: "/images/projects/shipster-supply/hd-storefront-hero.webp",
+    galleryImages: [],
     galleryAltText: [
-      "Shipster Supply homepage banner featuring its outdoor and camping brand presentation",
-      "Camping accessories collection image shown on Shipster Supply",
-      "Furniture category image shown on Shipster Supply",
-      "Fire pit category image shown on Shipster Supply",
+      "Shipster Supply Shopify homepage hero showing a campsite beside a mountain lake at sunset",
     ],
     caseStudySections: [
       {

@@ -12,6 +12,7 @@ interface InteractiveMediaProps {
   sizes?: string;
   badgeText?: string;
   objectFit?: "cover" | "contain";
+  quality?: number;
   enableTilt?: boolean;
   enableParallax?: boolean;
   enableReveal?: boolean;
@@ -27,6 +28,7 @@ export default function InteractiveMedia({
   sizes = "(max-width: 768px) 100vw, 50vw",
   badgeText,
   objectFit = "cover",
+  quality,
 }: InteractiveMediaProps) {
   return (
     <div
@@ -38,6 +40,7 @@ export default function InteractiveMedia({
         fill
         priority={priority}
         sizes={sizes}
+        quality={quality}
         className={`${
           objectFit === "contain"
             ? "object-contain object-center p-1 sm:p-2"
