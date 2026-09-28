@@ -1,3 +1,5 @@
+import { NEW_STOREFRONT_PROJECTS } from "./storefront-projects";
+
 export interface Project {
   id: string;
   slug: string;
@@ -12,6 +14,12 @@ export interface Project {
   liveUrl?: string;
   clientDescription?: string;
   galleryAltText?: string[];
+  seoTitle?: string;
+  metaDescription?: string;
+  heroWidth?: number;
+  heroHeight?: number;
+  storefrontScreenshot?: boolean;
+  relatedServices?: Array<{ label: string; href: string }>;
   caseStudySections?: Array<{
     heading: string;
     paragraphs: string[];
@@ -248,6 +256,7 @@ export const FEATURED_PROJECTS: Project[] = [
     technologies: ["Shopify", "Store management", "AI SEO"],
     accentColor: "#9F8BE7",
   },
+  ...NEW_STOREFRONT_PROJECTS,
   {
     id: "everhome-real-estate",
     slug: "everhome-real-estate-brand-system",

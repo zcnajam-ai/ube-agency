@@ -134,8 +134,8 @@ export default function WorkIndexPage() {
                     alt={project.galleryAltText?.[0] ?? project.title}
                     aspectRatio="aspect-[16/10]"
                     badgeText={project.category}
-                    objectFit={project.id === "happy-knot-creations" || project.id === "shipster-supply" ? "contain" : "cover"}
-                    quality={project.id === "happy-knot-creations" || project.id === "shipster-supply" ? 90 : 75}
+                    objectFit={project.storefrontScreenshot || project.id === "happy-knot-creations" || project.id === "shipster-supply" ? "contain" : "cover"}
+                    quality={project.storefrontScreenshot || project.id === "happy-knot-creations" || project.id === "shipster-supply" ? 90 : 75}
                   />
                 </Link>
 
