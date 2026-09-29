@@ -40,8 +40,8 @@ export default function SiteFloatingDots() {
         return {
           angle: seeded(n, 127.1) * Math.PI * 2,
           orbit: 0.12 + Math.sqrt(seeded(n, 311.7)) * 0.9,
-          size: 1.4 + seeded(n, 79.9) * 2.5,
-          alpha: 0.24 + seeded(n, 47.3) * 0.3,
+          size: 2 + seeded(n, 79.9) * 3.2,
+          alpha: 0.42 + seeded(n, 47.3) * 0.3,
           speed: 0.5 + seeded(n, 17.1) * 1.1,
           dash: seeded(n, 13.7) > 0.17,
         };
@@ -85,7 +85,7 @@ export default function SiteFloatingDots() {
           context.save();
           context.translate(x + offsetX, y + offsetY);
           context.rotate(angle + Math.PI / 2);
-          context.roundRect(-dot.size * 0.5, -0.6, dot.size + hover * 1.4, 1.2, 0.6);
+          context.roundRect(-dot.size * 0.5, -0.75, dot.size + hover * 1.4, 1.5, 0.75);
           context.fill();
           context.restore();
         } else {
