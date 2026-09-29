@@ -5,7 +5,6 @@ import { Sparkles, Phone, ShieldCheck } from "lucide-react";
 import { COMPANY_INFO } from "@/data/company";
 import { useScroll } from "@/components/providers/SmoothScrollProvider";
 import MagneticButton from "../common/MagneticButton";
-import BackgroundGrid from "../common/BackgroundGrid";
 import PurpleGlowField from "../common/PurpleGlowField";
 import OversizedTypography from "../common/OversizedTypography";
 
@@ -15,7 +14,6 @@ export default function FinalCTA() {
   return (
     <section className="relative py-20 sm:py-28 px-4 sm:px-6 md:px-12 bg-[#FAF7F6] border-t border-[#E0DDDB] overflow-hidden">
       {/* Ambient Decor */}
-      <BackgroundGrid opacity={0.03} size={80} maskRadial />
       <PurpleGlowField position="center" size={800} opacity={0.12} parallaxSpeed={0.2} />
       <OversizedTypography text="UNIFIED" direction="right" className="top-8 opacity-25" />
 

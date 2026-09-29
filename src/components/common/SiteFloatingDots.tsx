@@ -35,13 +35,13 @@ export default function SiteFloatingDots() {
       canvas.width = Math.round(width * ratio);
       canvas.height = Math.round(height * ratio);
       context.setTransform(ratio, 0, 0, ratio, 0, 0);
-      dots = Array.from({ length: width < 640 ? 72 : 178 }, (_, index) => {
+      dots = Array.from({ length: width < 640 ? 70 : 185 }, (_, index) => {
         const n = index + 1;
         return {
           angle: seeded(n, 127.1) * Math.PI * 2,
           orbit: 0.12 + Math.sqrt(seeded(n, 311.7)) * 0.9,
-          size: 2 + seeded(n, 79.9) * 3.2,
-          alpha: 0.42 + seeded(n, 47.3) * 0.3,
+          size: 4 + seeded(n, 79.9) * 4.2,
+          alpha: 0.65 + seeded(n, 47.3) * 0.3,
           speed: 0.5 + seeded(n, 17.1) * 1.1,
           dash: seeded(n, 13.7) > 0.17,
         };
@@ -57,39 +57,40 @@ export default function SiteFloatingDots() {
       const reach = Math.max(width * 0.52, height * 0.62);
 
       for (const dot of dots) {
-        const angle = dot.angle + (motion.matches ? 0 : time * 0.000012 * dot.speed + scroll * 0.00015 * dot.speed);
+        const angle = dot.angle + (motion.matches ? 0 : time * 0.000055 * dot.speed + scroll * 0.0005 * dot.speed);
         const radius = dot.orbit * reach;
         const x = centerX + Math.cos(angle) * radius;
         const y = centerY + Math.sin(angle) * radius * 0.82;
         const dx = x - pointer.x;
         const dy = y - pointer.y;
         const distance = Math.hypot(dx, dy);
-        const hover = motion.matches ? 0 : Math.max(0, 1 - distance / 145);
-        let offsetX = distance ? (dx / distance) * hover * 20 : 0;
-        let offsetY = distance ? (dy / distance) * hover * 20 : 0;
+        const hover = motion.matches ? 0 : Math.max(0, 1 - distance / 190);
+        // A small tangential push lets the field flow around the pointer.
+        let offsetX = distance ? ((dx / distance) * 27 - (dy / distance) * 18) * hover : 0;
+        let offsetY = distance ? ((dy / distance) * 27 + (dx / distance) * 18) * hover : 0;
 
         if (pulse && !motion.matches) {
           const age = (time - pulse.started) / 720;
           const tapDistance = Math.hypot(x - pulse.x, y - pulse.y);
-          const push = Math.max(0, 1 - tapDistance / 210) * (1 - age) * 34;
+          const push = Math.max(0, 1 - tapDistance / 230) * (1 - age) * 48;
           if (tapDistance) {
             offsetX += ((x - pulse.x) / tapDistance) * push;
             offsetY += ((y - pulse.y) / tapDistance) * push;
           }
         }
 
-        context.globalAlpha = dot.alpha + hover * 0.3;
+        context.globalAlpha = Math.min(1, dot.alpha + hover * 0.12);
         context.fillStyle = "#9F8BE7";
         context.beginPath();
         if (dot.dash) {
           context.save();
           context.translate(x + offsetX, y + offsetY);
           context.rotate(angle + Math.PI / 2);
-          context.roundRect(-dot.size * 0.5, -0.75, dot.size + hover * 1.4, 1.5, 0.75);
+          context.roundRect(-dot.size * 0.5, -1.1, dot.size + hover * 2, 2.2, 1.1);
           context.fill();
           context.restore();
         } else {
-          context.arc(x + offsetX, y + offsetY, dot.size * 0.32 + hover * 0.55, 0, Math.PI * 2);
+          context.arc(x + offsetX, y + offsetY, dot.size * 0.24 + hover * 0.65, 0, Math.PI * 2);
           context.fill();
         }
       }
@@ -102,7 +103,7 @@ export default function SiteFloatingDots() {
         } else {
           context.beginPath();
           context.arc(pulse.x, pulse.y, 12 + age * 55, 0, Math.PI * 2);
-          context.strokeStyle = `rgba(159, 139, 231, ${(1 - age) * 0.35})`;
+          context.strokeStyle = `rgba(159, 139, 231, ${(1 - age) * 0.55})`;
           context.lineWidth = 1.5;
           context.stroke();
         }

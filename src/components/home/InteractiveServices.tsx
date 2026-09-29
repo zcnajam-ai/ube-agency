@@ -10,7 +10,6 @@ import { Sparkles, ArrowUpRight, Zap, CheckCircle2, ChevronRight } from "lucide-
 import { SERVICE_PILLARS, ALL_SERVICES } from "@/data/services";
 import { useScroll } from "@/components/providers/SmoothScrollProvider";
 import CursorImagePreview from "../common/CursorImagePreview";
-import BackgroundGrid from "../common/BackgroundGrid";
 import OversizedTypography from "../common/OversizedTypography";
 import PurpleGlowField from "../common/PurpleGlowField";
 
@@ -144,7 +143,6 @@ export default function InteractiveServices() {
   return (
     <section id="services" className="relative py-24 sm:py-36 px-4 sm:px-6 md:px-12 bg-[#FAF7F6] border-t border-[#E0DDDB] overflow-hidden">
       {/* Background Decor */}
-      <BackgroundGrid opacity={0.035} size={80} maskRadial />
       <PurpleGlowField position="bottom-left" size={700} opacity={0.12} parallaxSpeed={0.15} />
       <OversizedTypography text="SYSTEMS" direction="right" className="top-1/3 opacity-40" />
 

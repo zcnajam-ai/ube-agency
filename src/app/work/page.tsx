@@ -4,7 +4,6 @@ import { Metadata } from "next";
 import { ArrowUpRight } from "lucide-react";
 import { FEATURED_PROJECTS } from "@/data/projects";
 import InteractiveMedia from "@/components/common/InteractiveMedia";
-import BackgroundGrid from "@/components/common/BackgroundGrid";
 import OversizedTypography from "@/components/common/OversizedTypography";
 import PurpleGlowField from "@/components/common/PurpleGlowField";
 import { Heading3DSparkle } from "@/components/common/Brand3DIcons";
@@ -81,7 +80,6 @@ export default function WorkIndexPage() {
       />
       <div className="relative pt-32 pb-24 px-4 sm:px-6 md:px-12 max-w-7xl mx-auto space-y-16 overflow-hidden">
         {/* Ambient Atmosphere */}
-        <BackgroundGrid opacity={0.03} size={80} maskRadial />
         <PurpleGlowField position="top-right" size={700} opacity={0.08} />
         <OversizedTypography text="CASE STUDIES" direction="left" className="top-24 opacity-30" />
 

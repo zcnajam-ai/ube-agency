@@ -6,7 +6,6 @@ import { ArrowUpRight, CheckCircle2 } from "lucide-react";
 import { useScroll } from "@/components/providers/SmoothScrollProvider";
 import InteractiveMedia from "../common/InteractiveMedia";
 import TikTokMinimalVisual from "../common/TikTokMinimalVisual";
-import BackgroundGrid from "../common/BackgroundGrid";
 import PurpleGlowField from "../common/PurpleGlowField";
 import OversizedTypography from "../common/OversizedTypography";
 import {
@@ -76,7 +75,6 @@ export default function GrowthAdsMarketing() {
   return (
     <section className="relative py-20 sm:py-28 px-4 sm:px-6 md:px-12 bg-white border-b border-[#E0DDDB] overflow-hidden">
       {/* Ambient Atmosphere */}
-      <BackgroundGrid opacity={0.025} size={72} maskRadial />
       <PurpleGlowField position="bottom-right" size={700} opacity={0.08} />
       <OversizedTypography text="PERFORMANCE" direction="left" className="top-12 opacity-30" />
 

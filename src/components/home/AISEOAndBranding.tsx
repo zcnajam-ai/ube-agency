@@ -8,7 +8,6 @@ import {
   CheckCircle2,
 } from "lucide-react";
 import InteractiveMedia from "../common/InteractiveMedia";
-import BackgroundGrid from "../common/BackgroundGrid";
 import PurpleGlowField from "../common/PurpleGlowField";
 import OversizedTypography from "../common/OversizedTypography";
 import { Google3DIcon, Heading3DSparkle } from "../common/Brand3DIcons";
@@ -17,7 +16,6 @@ export default function AISEOAndBranding() {
   return (
     <section className="relative py-20 sm:py-28 px-4 sm:px-6 md:px-12 bg-[#FAF7F6] border-b border-[#E0DDDB] overflow-hidden">
       {/* Ambient Atmosphere */}
-      <BackgroundGrid opacity={0.03} size={80} maskRadial />
       <PurpleGlowField position="center" size={800} opacity={0.08} />
       <OversizedTypography text="AI SEARCH" direction="right" className="top-12 opacity-30" />
 
