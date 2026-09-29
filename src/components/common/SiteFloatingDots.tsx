@@ -27,6 +27,16 @@ export default function SiteFloatingDots() {
     let scrollTarget = scroll;
     let pointer = { x: -1000, y: -1000 };
     let pulse: Pulse | null = null;
+    let clearAreas: Array<{ left: number; right: number; top: number; bottom: number }> = [];
+    let lastAreas = 0;
+
+    // Keep the particles in the open background, away from readable copy and controls.
+    const updateClearAreas = () => {
+      clearAreas = Array.from(document.querySelectorAll("main h1, main h2, main h3, main h4, main p, main a, main button, main img, main video, nav, footer a"))
+        .map((element) => element.getBoundingClientRect())
+        .filter((rect) => rect.width && rect.height && rect.bottom >= 0 && rect.top <= height)
+        .map((rect) => ({ left: rect.left - 8, right: rect.right + 8, top: rect.top - 8, bottom: rect.bottom + 8 }));
+    };
 
     const resize = () => {
       width = window.innerWidth;
@@ -46,6 +56,7 @@ export default function SiteFloatingDots() {
           dash: seeded(n, 13.7) > 0.17,
         };
       });
+      updateClearAreas();
       if (motion.matches) draw(0);
     };
 
@@ -79,18 +90,22 @@ export default function SiteFloatingDots() {
           }
         }
 
+        const finalX = x + offsetX;
+        const finalY = y + offsetY;
+        if (clearAreas.some((area) => finalX >= area.left && finalX <= area.right && finalY >= area.top && finalY <= area.bottom)) continue;
+
         context.globalAlpha = Math.min(1, dot.alpha + hover * 0.12);
         context.fillStyle = "#9F8BE7";
         context.beginPath();
         if (dot.dash) {
           context.save();
-          context.translate(x + offsetX, y + offsetY);
+          context.translate(finalX, finalY);
           context.rotate(angle + Math.PI / 2);
           context.roundRect(-dot.size * 0.5, -1.1, dot.size + hover * 2, 2.2, 1.1);
           context.fill();
           context.restore();
         } else {
-          context.arc(x + offsetX, y + offsetY, dot.size * 0.24 + hover * 0.65, 0, Math.PI * 2);
+          context.arc(finalX, finalY, dot.size * 0.24 + hover * 0.65, 0, Math.PI * 2);
           context.fill();
         }
       }
@@ -111,6 +126,10 @@ export default function SiteFloatingDots() {
     };
 
     const animate = (time: number) => {
+      if (time - lastAreas > 650) {
+        updateClearAreas();
+        lastAreas = time;
+      }
       if (time - lastFrame >= 32) {
         draw(time);
         lastFrame = time;
@@ -126,7 +145,7 @@ export default function SiteFloatingDots() {
     const onPointerDown = (event: PointerEvent) => {
       pulse = { x: event.clientX, y: event.clientY, started: performance.now() };
     };
-    const onScroll = () => { scrollTarget = window.scrollY; };
+    const onScroll = () => { scrollTarget = window.scrollY; lastAreas = 0; };
     const onVisibility = () => {
       cancelAnimationFrame(frame);
       if (!document.hidden && !motion.matches) frame = requestAnimationFrame(animate);
