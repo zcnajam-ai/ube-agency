@@ -107,7 +107,7 @@ export default async function ProjectOpenGraphImage({ params }: RouteProps) {
               textTransform: "uppercase",
             }}
           >
-            Project scope · ${project.services.join(" · ")}
+            {`Project scope · ${project.services.join(" · ")}`}
           </div>
         </div>
       </div>

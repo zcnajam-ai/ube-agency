@@ -836,6 +836,15 @@ export default function EcommerceGrowthServicePage() {
       </section>
 
       {/* 15. FINAL SERVICE CTA */}
+      <section className="rounded-3xl border border-[#E0DDDB] bg-white p-7 sm:p-10 space-y-4">
+        <h2 className="font-display text-2xl sm:text-3xl font-bold text-[#161616]">Storefront case studies</h2>
+        <p className="text-sm leading-relaxed text-[#585858]">Review three client stores across electronics, apparel, and barcode equipment.</p>
+        <div className="flex flex-wrap gap-4 text-sm font-semibold text-[#6B46C1] underline underline-offset-4">
+          <Link href="/work/cellestial-empyre-flip-phone-shopify-store">Cellestial Empyre Shopify store</Link>
+          <Link href="/work/tequila-outfitters-shopify-apparel-store">Tequila Outfitters Shopify store</Link>
+          <Link href="/work/the-barcode-lady-woocommerce-store">The Barcode Lady WooCommerce site</Link>
+        </div>
+      </section>
       <section className="p-8 sm:p-14 rounded-3xl bg-[#161616] text-white text-center space-y-6 shadow-xl border border-white/10">
         <h2 className="font-display text-3xl sm:text-5xl font-bold tracking-tight text-white">
           Ready to Build a Stronger eCommerce System?

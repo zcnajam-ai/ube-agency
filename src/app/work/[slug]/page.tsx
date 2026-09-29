@@ -27,11 +27,11 @@ export async function generateMetadata({
   if (!project) return { title: "Project Not Found" };
 
   return {
-    title: `${project.client} ${project.projectType === "website-build" ? "Shopify Store" : "Brand Identity"} Case Study`,
+    title: project.seoTitle ? { absolute: project.seoTitle } : `${project.client} ${project.projectType === "website-build" ? "Store" : "Brand Identity"} Case Study`,
     description:
-      project.id === "happy-knot-creations"
+      project.metaDescription ?? (project.id === "happy-knot-creations"
         ? "See how UBE supported Happy Knot Creations with Shopify storefront work, ongoing store management, and AI SEO. Explore the live handmade crochet store."
-        : project.tagline,
+        : project.tagline),
     alternates: {
       canonical: `https://unifiedbrandingexperts.com/work/${project.slug}`,
     },
@@ -59,7 +59,7 @@ export default async function ProjectDetailPage({
   const project = getProjectBySlug(slug);
 
   if (!project) return notFound();
-  const isStorefrontScreenshot = project.id === "happy-knot-creations" || project.id === "shipster-supply";
+  const isStorefrontScreenshot = project.storefrontScreenshot || project.id === "happy-knot-creations" || project.id === "shipster-supply";
 
   const caseStudyUrl = `https://unifiedbrandingexperts.com/work/${project.slug}`;
   const structuredData = {
@@ -145,19 +145,19 @@ export default async function ProjectDetailPage({
       )}
 
       {/* Hero Visual */}
-      <div className={`relative w-full rounded-3xl overflow-hidden border border-[#E0DDDB] shadow-md bg-white ${
-        project.id === "happy-knot-creations" ? "aspect-[1559/1009]" : project.id === "shipster-supply" ? "aspect-[1877/838]" : "aspect-[16/9]"
-      }`}>
+      <figure className={`relative w-full rounded-3xl overflow-hidden border border-[#E0DDDB] shadow-md bg-white ${
+        project.id === "happy-knot-creations" ? "aspect-[1559/1009]" : project.id === "shipster-supply" ? "aspect-[1877/838]" : !project.heroWidth ? "aspect-[16/9]" : ""
+      }`} style={project.heroWidth && project.heroHeight ? { aspectRatio: `${project.heroWidth} / ${project.heroHeight}` } : undefined}>
         <Image
           src={project.heroImage}
           alt={project.galleryAltText?.[0] ?? `${project.client} project overview`}
           fill
           priority
-          sizes="(max-width: 768px) 100vw, 1152px"
+          sizes="(max-width: 768px) calc(100vw - 32px), (max-width: 1200px) calc(100vw - 96px), 1152px"
           quality={isStorefrontScreenshot ? 90 : 75}
           className={isStorefrontScreenshot ? "object-contain object-center" : "object-cover object-center"}
         />
-      </div>
+      </figure>
 
       {/* Project scope highlights; these are deliverables, not performance metrics. */}
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
@@ -228,6 +228,22 @@ export default async function ProjectDetailPage({
           </div>
         </section>
       ))}
+
+      {project.relatedServices && (
+        <section className="rounded-3xl border border-[#E0DDDB] bg-white p-7 sm:p-10 space-y-5" aria-labelledby="related-project-services">
+          <h2 id="related-project-services" className="font-display text-2xl sm:text-3xl font-bold text-[#161616]">Explore the related UBE work</h2>
+          <p className="max-w-3xl text-base leading-relaxed text-[#585858]">
+            This project combines store creation, product presentation, search support and management. See how those services are scoped for a new project.
+          </p>
+          <div className="flex flex-wrap gap-3">
+            {project.relatedServices.map((service) => (
+              <Link key={service.href} href={service.href} className="inline-flex items-center rounded-full border border-[#E0DDDB] px-5 py-3 text-sm font-semibold text-[#161616] transition-colors hover:border-[#9F8BE7] hover:bg-[#FAF7F6]">
+                {service.label}
+              </Link>
+            ))}
+          </div>
+        </section>
+      )}
 
       {project.id === "happy-knot-creations" && (
         <section className="rounded-3xl border border-[#E0DDDB] bg-white p-7 sm:p-10 space-y-4">
@@ -328,10 +344,10 @@ export default async function ProjectDetailPage({
             </a>
           )}
           <Link
-            href={project.projectType === "website-build" ? "/services/shopify-development" : "/services/branding"}
+            href={project.relatedServices?.[0]?.href ?? (project.projectType === "website-build" ? "/services/shopify-development" : "/services/branding")}
             className="px-6 py-3.5 rounded-full bg-white border border-[#E0DDDB] text-[#161616] font-display font-bold text-xs sm:text-sm hover:border-[#9F8BE7] transition-all text-center"
           >
-            Related UBE Service
+            {project.relatedServices?.[0]?.label ?? "Related UBE Service"}
           </Link>
           <Link
             href="/contact"
