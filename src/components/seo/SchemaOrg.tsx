@@ -14,6 +14,9 @@ export default function SchemaOrg() {
     description: "Professional web design, branding, eCommerce development, and digital marketing agency.",
     telephone: COMPANY_INFO.phone,
     email: COMPANY_INFO.email,
+    founder: {
+      "@id": "https://unifiedbrandingexperts.com/about#ben-hox",
+    },
     address: {
       "@type": "PostalAddress",
       addressLocality: COMPANY_INFO.address.city,
