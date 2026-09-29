@@ -13,7 +13,6 @@ import {
 } from "../common/Brand3DIcons";
 import HeroVideoClient from "./HeroVideoClient";
 import HeroInteractiveCTA from "./HeroInteractiveCTA";
-import HeroDotsClient from "./HeroDotsClient";
 
 export default function Hero() {
   const priorityPills = [
@@ -32,9 +31,6 @@ export default function Hero() {
       <BackgroundGrid opacity={0.03} size={72} maskRadial />
       <PurpleGlowField position="top-right" size={700} opacity={0.08} />
       <OversizedTypography text="COMMERCE" direction="left" className="top-6 opacity-40" />
-
-      {/* 1b. Floating Particle Dots (above grid, below content) */}
-      <HeroDotsClient />
 
       {/* 2. Foreground Hero Content Container */}
       <div className="relative z-10 max-w-7xl mx-auto">

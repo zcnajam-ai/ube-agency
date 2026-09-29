@@ -9,6 +9,7 @@ import SchemaOrg from "@/components/seo/SchemaOrg";
 import AnalyticsScripts from "@/components/analytics/AnalyticsScripts";
 import AnalyticsEventBridge from "@/components/analytics/AnalyticsEventBridge";
 import { COMPANY_INFO } from "@/data/company";
+import SiteFloatingDots from "@/components/common/SiteFloatingDots";
 
 const Footer = dynamic(() => import("@/components/common/Footer"));
 const ClientProjectModal = dynamic(() => import("@/components/common/ClientProjectModal"));
@@ -139,6 +140,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <SchemaOrg />
 
         <SmoothScrollProvider>
+          <SiteFloatingDots />
           {/* Main Fixed Navigation Pill */}
           <Navbar />
 
