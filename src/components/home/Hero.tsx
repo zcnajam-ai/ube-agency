@@ -2,8 +2,6 @@ import React from "react";
 import Link from "next/link";
 import { ArrowUpRight, Palette } from "lucide-react";
 
-import PurpleGlowField from "../common/PurpleGlowField";
-import OversizedTypography from "../common/OversizedTypography";
 import {
   Shopify3DIcon,
   TikTok3DIcon,
@@ -26,10 +24,6 @@ export default function Hero() {
     <section
       className="relative pt-28 sm:pt-36 pb-16 sm:pb-24 px-4 sm:px-6 md:px-12 bg-[#FAF7F6] overflow-hidden border-b border-[#E0DDDB]"
     >
-      {/* 1. Ambient Background Layers */}
-      <PurpleGlowField position="top-right" size={700} opacity={0.08} />
-      <OversizedTypography text="COMMERCE" direction="left" className="top-6 opacity-40" />
-
       {/* 2. Foreground Hero Content Container */}
       <div className="relative z-10 max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 xl:gap-12 items-start">

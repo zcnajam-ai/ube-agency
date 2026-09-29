@@ -6,8 +6,6 @@ import { ArrowUpRight, CheckCircle2 } from "lucide-react";
 import { useScroll } from "@/components/providers/SmoothScrollProvider";
 import InteractiveMedia from "../common/InteractiveMedia";
 import TikTokMinimalVisual from "../common/TikTokMinimalVisual";
-import PurpleGlowField from "../common/PurpleGlowField";
-import OversizedTypography from "../common/OversizedTypography";
 import {
   TikTok3DIcon,
   Meta3DIcon,
@@ -74,9 +72,6 @@ export default function GrowthAdsMarketing() {
 
   return (
     <section className="relative py-20 sm:py-28 px-4 sm:px-6 md:px-12 bg-white border-b border-[#E0DDDB] overflow-hidden">
-      {/* Ambient Atmosphere */}
-      <PurpleGlowField position="bottom-right" size={700} opacity={0.08} />
-      <OversizedTypography text="PERFORMANCE" direction="left" className="top-12 opacity-30" />
 
       <div className="relative z-10 max-w-7xl mx-auto space-y-12">
         {/* Header */}

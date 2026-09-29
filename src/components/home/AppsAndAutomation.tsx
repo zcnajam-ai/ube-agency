@@ -10,15 +10,10 @@ import {
   Zap,
 } from "lucide-react";
 import InteractiveMedia from "../common/InteractiveMedia";
-import PurpleGlowField from "../common/PurpleGlowField";
-import OversizedTypography from "../common/OversizedTypography";
 
 export default function AppsAndAutomation() {
   return (
     <section className="relative py-20 sm:py-28 px-4 sm:px-6 md:px-12 bg-white border-b border-[#E0DDDB] overflow-hidden">
-      {/* Ambient Atmosphere */}
-      <PurpleGlowField position="top-left" size={700} opacity={0.09} parallaxSpeed={0.15} />
-      <OversizedTypography text="APPLICATIONS" direction="left" className="top-12 opacity-30" />
 
       <div className="relative z-10 max-w-7xl mx-auto space-y-12">
         {/* Header */}

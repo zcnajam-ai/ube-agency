@@ -5,17 +5,12 @@ import { Sparkles, Phone, ShieldCheck } from "lucide-react";
 import { COMPANY_INFO } from "@/data/company";
 import { useScroll } from "@/components/providers/SmoothScrollProvider";
 import MagneticButton from "../common/MagneticButton";
-import PurpleGlowField from "../common/PurpleGlowField";
-import OversizedTypography from "../common/OversizedTypography";
 
 export default function FinalCTA() {
   const { openProjectModal } = useScroll();
 
   return (
     <section className="relative py-20 sm:py-28 px-4 sm:px-6 md:px-12 bg-[#FAF7F6] border-t border-[#E0DDDB] overflow-hidden">
-      {/* Ambient Decor */}
-      <PurpleGlowField position="center" size={800} opacity={0.12} parallaxSpeed={0.2} />
-      <OversizedTypography text="UNIFIED" direction="right" className="top-8 opacity-25" />
 
       <div className="relative z-10 max-w-6xl mx-auto rounded-3xl bg-[#161616] p-8 sm:p-14 md:p-16 text-center space-y-6 overflow-hidden shadow-2xl text-white border border-white/10">
         {/* Subtle Ambient Radial */}

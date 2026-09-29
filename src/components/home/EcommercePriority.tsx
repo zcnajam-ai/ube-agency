@@ -11,8 +11,6 @@ import {
 } from "lucide-react";
 import { useScroll } from "@/components/providers/SmoothScrollProvider";
 import InteractiveMedia from "../common/InteractiveMedia";
-import PurpleGlowField from "../common/PurpleGlowField";
-import OversizedTypography from "../common/OversizedTypography";
 import { Shopify3DIcon, Heading3DSparkle } from "../common/Brand3DIcons";
 
 export default function EcommercePriority() {
@@ -47,9 +45,6 @@ export default function EcommercePriority() {
 
   return (
     <section className="relative py-20 sm:py-28 px-4 sm:px-6 md:px-12 bg-[#FAF7F6] border-b border-[#E0DDDB] overflow-hidden">
-      {/* Ambient Decor */}
-      <PurpleGlowField position="top-right" size={700} opacity={0.08} />
-      <OversizedTypography text="STOREFRONTS" direction="left" className="top-12 opacity-35" />
 
       <div className="relative z-10 max-w-7xl mx-auto space-y-12">
         {/* Section Header */}
