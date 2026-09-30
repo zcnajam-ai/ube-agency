@@ -93,7 +93,7 @@ export const INSIGHTS: InsightArticle[] = [
     },
     summary:
       "Learn how AI SEO, AEO and GEO help businesses improve visibility across Google AI Overviews, ChatGPT, Gemini and other AI-powered search experiences.",
-    coverImage: "/images/insights/ai-seo-aeo-geo-complete-guide-2026.webp",
+    coverImage: "/images/service-icons/ai-seo.webp",
     coverAlt: "AI SEO, AEO and GEO complete guide for 2026",
     primaryIntent: "AI SEO, AEO, GEO, Answer Engine Optimization, Generative Engine Optimization, ChatGPT SEO",
     quickAnswer:
@@ -673,7 +673,7 @@ export const INSIGHTS: InsightArticle[] = [
     },
     summary:
       "Learn how to optimize a Shopify store for ChatGPT, Google AI Mode, Gemini and traditional search using stronger product data, Merchant Center, structured data and AI-ready content.",
-    coverImage: "/images/editorial/ai-search-content-strategy.webp",
+    coverImage: "/images/service-icons/ai-seo.webp",
     primaryIntent: "Shopify AI SEO",
     quickAnswer:
       "Shopify AI SEO combines traditional search optimization with product-data completeness, Merchant Center feeds, Product structured data, and agentic storefront readiness. By optimizing core product attributes (GTIN, variants, materials, care instructions, policies) and connecting eligible stores to Shopify Catalog and Google Merchant Center, merchants create machine-readable product data eligible for discovery across ChatGPT, Google AI Mode, Gemini, and search engines.",
@@ -875,7 +875,7 @@ export const INSIGHTS: InsightArticle[] = [
     },
     summary:
       "A transparent breakdown of professional logo design costs in 2026. Compare DIY generators ($0-$50), freelance marketplaces ($100-$500), specialized branding agencies ($299-$2,499), and enterprise design firms ($10,000+).",
-    coverImage: "/images/official/branding/logo-design.jpeg",
+    coverImage: "/images/service-icons/brand-identity.webp",
     primaryIntent: "logo design cost, professional logo design cost, custom logo design price",
     quickAnswer:
       "In 2026, professional custom logo design costs between $299 and $2,499 for small-to-medium businesses working with specialized branding agencies. DIY generators cost $20–$50 but provide generic clip-art without trademark rights, while global enterprise branding firms charge $10,000 to $50,000+ for multi-market identity systems.",
@@ -1002,7 +1002,7 @@ export const INSIGHTS: InsightArticle[] = [
     },
     summary:
       "A step-by-step guide to evaluating and hiring the best logo design company. Learn the 7 critical criteria to look for, red flags to avoid, and essential questions to ask before hiring.",
-    coverImage: "/images/official/branding/brand-strategy.jpeg",
+    coverImage: "/images/service-icons/brand-identity.webp",
     primaryIntent: "best logo design company, logo design agency, professional logo designers",
     quickAnswer:
       "To choose the best logo design company, evaluate their portfolio for original vector versatility (not cookie-cutter templates), verify that full copyright ownership is included in writing, check that they deliver complete vector source files (AI, EPS, SVG), and ensure their process includes structured brand discovery and revisions.",
@@ -1122,7 +1122,7 @@ export const INSIGHTS: InsightArticle[] = [
     },
     summary:
       "A comprehensive guide to small business website costs in 2026. Compare DIY builders ($15-$40/mo), custom agency websites ($300-$1,200), and custom web applications ($1,500-$5,000+).",
-    coverImage: "/images/editorial/responsive-web-design.webp",
+    coverImage: "/images/service-icons/responsive-web-design.webp",
     primaryIntent: "website design cost, small business website cost, professional website cost",
     quickAnswer:
       "In 2026, a professional small business website built by an agency typically costs between $300 and $1,200 for a 3 to 15-page responsive site with CMS controls. DIY builders cost $200–$500/year in recurring subscriptions but require extensive personal labor, while complex custom web applications range from $1,500 to $5,000+.",
@@ -1244,7 +1244,7 @@ export const INSIGHTS: InsightArticle[] = [
     },
     summary:
       "How to evaluate and choose the best website design company for your business. Discover key questions to ask, performance benchmarks to verify, and common agency traps to avoid.",
-    coverImage: "/images/editorial/responsive-web-design.webp",
+    coverImage: "/images/service-icons/responsive-web-design.webp",
     primaryIntent: "best website design company, web design agency, website development company",
     quickAnswer:
       "To choose the best website design company, inspect their live client sites for mobile speed and Core Web Vitals scores, ensure they build on clean modern tech stacks (Next.js, React, or custom WordPress) rather than bloated page builders, verify that they transfer 100% code ownership, and confirm they integrate SEO architecture from day one.",
@@ -1350,7 +1350,7 @@ export const INSIGHTS: InsightArticle[] = [
     },
     summary:
       `Shopify store setup costs explained: UBE setup starts at ${SHOPIFY_SETUP_PRICE_LABEL}. Budget separately for platform subscriptions, themes, apps, domains and payment fees.`,
-    coverImage: "/images/official/ecommerce/storefront-setup.jpeg",
+    coverImage: "/images/service-icons/shopify-storefront.webp",
     primaryIntent: "Shopify store setup, Shopify store cost, Shopify website design, Shopify developer",
     quickAnswer:
       `UBE Shopify setup starts at ${SHOPIFY_SETUP_PRICE_LABEL}. Custom development is scoped separately; recurring platform, app and payment fees are additional.`,
@@ -1465,7 +1465,7 @@ export const INSIGHTS: InsightArticle[] = [
     },
     summary:
       "A comprehensive comparison of Shopify vs Etsy in 2026. Compare transaction fees, organic marketplace traffic vs brand control, scalability, and discover when to use both platforms together.",
-    coverImage: "/images/editorial/etsy-seller-listing.webp",
+    coverImage: "/images/service-icons/etsy-listings.webp",
     primaryIntent: "Shopify vs Etsy, Etsy vs Shopify, handmade ecommerce platform, happy knot creations shopify",
     quickAnswer:
       "Etsy is best for handmade, vintage, and craft creators who want built-in marketplace traffic with low upfront costs ($0.20 listing fee + 6.5% transaction fee). Shopify is best for serious brands that want full customer data ownership, custom branding, scalable paid marketing, and zero marketplace commission fees.",
@@ -1603,7 +1603,7 @@ export const INSIGHTS: InsightArticle[] = [
     },
     summary:
       "A complete, step-by-step masterclass on launching a profitable Etsy shop in 2026. Learn Etsy SEO keyword research, shop branding, listing copywriting, and Star Seller growth strategies.",
-    coverImage: "/images/editorial/artisan-product-styling.webp",
+    coverImage: "/images/service-icons/etsy-listings.webp",
     primaryIntent: "Etsy shop setup, how to start an Etsy shop, Etsy SEO, Etsy listing optimization",
     quickAnswer:
       "To start an Etsy shop in 2026, register your seller account, create professional shop branding (carousel banner, icon, announcement), perform 13-tag keyword research using eRank or Marmalead, write benefit-rich listing descriptions, upload high-res lifestyle mockups, and configure automated shipping profiles.",
@@ -1719,7 +1719,7 @@ export const INSIGHTS: InsightArticle[] = [
     },
     summary:
       "A complete guide to starting and scaling a TikTok Shop in 2026. Learn TikTok Seller Center registration, Shopify catalog integration, Creator Affiliate recruitment, and Shoppable Video Ads.",
-    coverImage: "/images/editorial/social-shop-catalog.webp",
+    coverImage: "/images/service-icons/tiktok-shop.webp",
     primaryIntent: "TikTok Shop setup, how to start TikTok Shop, TikTok Shop marketing",
     quickAnswer:
       "To start a TikTok Shop in 2026, register on TikTok Seller Center with verified business documents, sync your Shopify or WooCommerce product catalog, set up your Creator Affiliate commission structure (10%-20%), and produce short-form video hooks with in-feed shoppable anchor links.",
@@ -1825,7 +1825,7 @@ export const INSIGHTS: InsightArticle[] = [
     },
     summary:
       "A head-to-head comparison of TikTok Shop vs Shopify in 2026. Compare impulse viral conversion against long-term brand equity, customer data ownership, and fee structures.",
-    coverImage: "/images/editorial/social-commerce-creator.webp",
+    coverImage: "/images/service-icons/tiktok-shop.webp",
     primaryIntent: "TikTok Shop vs Shopify, Shopify TikTok, TikTok ecommerce",
     quickAnswer:
       "TikTok Shop delivers the highest viral impulse conversion rates with zero-click in-app purchases and massive creator affiliate reach. Shopify delivers long-term brand equity, complete customer list ownership, high average order values, and full website customization. The most profitable strategy is syncing Shopify as your backend hub while using TikTok Shop as a viral sales channel.",
@@ -1933,7 +1933,7 @@ export const INSIGHTS: InsightArticle[] = [
     },
     summary:
       "Why decoupling your storefront frontend from backend commerce engines leads to responsive mobile shopping experiences and reduced cart friction.",
-    coverImage: "/images/insights/insight-commerce.webp",
+    coverImage: "/images/service-icons/shopify-storefront.webp",
     primaryIntent: "headless ecommerce, shopify headless, fast ecommerce conversion",
     quickAnswer:
       "Headless eCommerce decouples the customer-facing frontend (Next.js/React) from backend commerce APIs (Shopify Plus/WooCommerce), eliminating template bloat and delivering responsive page transitions that streamline purchasing.",
@@ -1999,7 +1999,7 @@ export const INSIGHTS: InsightArticle[] = [
     },
     summary:
       "When branding, engineering, and paid acquisition are handled by disjointed vendors, growth stalls. Here is how a unified approach accelerates business scaling.",
-    coverImage: "/images/insights/insight-brand.webp",
+    coverImage: "/images/service-icons/brand-identity.webp",
     primaryIntent: "branding ecosystem, full service digital agency, unified branding",
     quickAnswer:
       "Hiring fragmented vendors for logo, web, and ads creates brand dissonance and wasted marketing spend. A unified agency ecosystem ensures visual identity, fast engineering, and paid acquisition work synergistically to compound growth.",
@@ -2072,7 +2072,7 @@ export const INSIGHTS: InsightArticle[] = [
   },
   "lastReviewedDate": "2026-03-05",
   "summary": "Detailed 2026 breakdown of Shopify store setup costs, including design, development, apps, themes, payment processing, and agency pricing tiers.",
-  "coverImage": "/images/editorial/shopify-storefront-development.webp",
+  "coverImage": "/images/service-icons/shopify-storefront.webp",
   "primaryIntent": "Commercial budgeting and platform cost planning for Shopify storefronts.",
   "quickAnswer": `UBE Shopify setup starts at ${SHOPIFY_SETUP_PRICE_LABEL}. The final project price depends on the agreed catalog, theme work and integrations. Shopify subscriptions, paid themes, apps, domains and transaction fees are separate.`,
   "tableOfContents": [
@@ -2232,7 +2232,7 @@ export const INSIGHTS: InsightArticle[] = [
   },
   "lastReviewedDate": "2026-03-05",
   "summary": "Step-by-step guide to launching a professional dropshipping business in 2026, from niche selection and supplier integration to Shopify setup.",
-  "coverImage": "/images/official/ecommerce/multichannel-growth.jpeg",
+  "coverImage": "/images/service-icons/dropshipping.webp",
   "primaryIntent": "Step-by-step guidance on setting up an automated dropshipping store.",
   "quickAnswer": "Starting a dropshipping business in 2026 requires selecting a specialized product category, partnering with verified supplier platforms (such as DSers, CJ Dropshipping, or Zendrop), building an organized Shopify storefront, and establishing automated order routing and tracking synchronization.",
   "tableOfContents": [
@@ -2365,7 +2365,7 @@ export const INSIGHTS: InsightArticle[] = [
   },
   "lastReviewedDate": "2026-03-05",
   "summary": "Realistic breakdown of the startup capital needed to build and launch an automated dropshipping store on Shopify in 2026.",
-  "coverImage": "/images/official/ecommerce/multichannel-growth.jpeg",
+  "coverImage": "/images/service-icons/dropshipping.webp",
   "primaryIntent": "Financial planning and budgeting for dropshipping storefront builds.",
   "quickAnswer": "Launching an automated dropshipping store on Shopify typically requires an initial capital budget of $500 to $2,500 depending on store design scope, supplier app subscriptions, initial product sample orders, and marketing launch testing budgets.",
   "tableOfContents": [
@@ -2503,7 +2503,7 @@ export const INSIGHTS: InsightArticle[] = [
   },
   "lastReviewedDate": "2026-03-05",
   "summary": "Learn how to set up, verify, and launch a TikTok Shop in 2026. Step-by-step guide covering Seller Center, Shopify integration, and affiliate marketing.",
-  "coverImage": "/images/editorial/social-shop-catalog.webp",
+  "coverImage": "/images/service-icons/tiktok-shop.webp",
   "primaryIntent": "Step-by-step guide to setting up and launching a TikTok Shop as a seller.",
   "quickAnswer": "Starting a TikTok Shop in 2026 requires registering a TikTok Seller Center account with verified US business documentation, connecting your product catalog (via Shopify app or manual feed), configuring warehouse dispatch rules, and launching a Creator Affiliate commission program to drive shoppable video sales.",
   "tableOfContents": [
@@ -2619,7 +2619,7 @@ export const INSIGHTS: InsightArticle[] = [
   },
   "lastReviewedDate": "2026-03-05",
   "summary": "Technical integration guide to syncing your Shopify catalog, inventory, and order fulfillment directly with TikTok Shop in 2026.",
-  "coverImage": "/images/official/shopify/shopify-performance.webp",
+  "coverImage": "/images/service-icons/tiktok-shop.webp",
   "primaryIntent": "Technical instruction on connecting a Shopify catalog to TikTok Shop.",
   "quickAnswer": "To connect Shopify to TikTok Shop, install the official TikTok App from the Shopify App Store, link your verified TikTok Seller Center account, map product categories and variants, enable automatic inventory sync, and verify order routing rules.",
   "tableOfContents": [
@@ -2740,7 +2740,7 @@ export const INSIGHTS: InsightArticle[] = [
   },
   "lastReviewedDate": "2026-03-05",
   "summary": "Demystifying AI SEO, Answer Engine Optimization (AEO), and Generative Engine Optimization (GEO). Learn how search engines and LLMs discover brands.",
-  "coverImage": "/images/editorial/ai-search-content-strategy.webp",
+  "coverImage": "/images/service-icons/ai-seo.webp",
   "primaryIntent": "Educational breakdown of AI search optimization frameworks.",
   "quickAnswer": "AI SEO combines traditional search engine optimization with AEO (Answer Engine Optimization) and GEO (Generative Engine Optimization) to ensure your business content is easily indexed by Google AI Overviews, ChatGPT Search, Bing Copilot, and conversational search engines.",
   "tableOfContents": [
@@ -2889,7 +2889,7 @@ export const INSIGHTS: InsightArticle[] = [
   },
   "lastReviewedDate": "2026-03-05",
   "summary": "In-depth comparison between Google Ads and Meta (Facebook/Instagram) Ads. Learn how to allocate paid acquisition budgets for maximum ROI.",
-  "coverImage": "/images/editorial/paid-media-creative.webp",
+  "coverImage": "/images/service-icons/paid-advertising.webp",
   "primaryIntent": "Comparing Google Search & Shopping Ads vs Meta Paid Acquisition.",
   "quickAnswer": "Google Ads captures active commercial search intent when customers are actively searching for products or services. Meta Ads (Facebook & Instagram) excels at visual discovery, brand awareness, and building interest through audience targeting. Combining both channels creates a balanced acquisition funnel.",
   "tableOfContents": [

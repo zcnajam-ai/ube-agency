@@ -46,37 +46,37 @@ export default function AiAutomationServicePage() {
       title: "CRM Automation",
       desc: "Your customer records should update themselves. We automate lead capture, contact tagging, pipeline stages, and status changes, so your CRM stays accurate without anyone babysitting it.",
       icon: <Users className="w-5 h-5 text-[#9F8BE7]" />,
-      image: "/images/official/automation/automation-strategy.jpeg",
+      image: "/images/service-icons/ai-automation.webp",
     },
     {
       title: "Workflow Automation",
       desc: "Most businesses run on a patchwork of disconnected tools. We connect them. When something happens in one app, the right action fires in another, quietly and reliably, without manual handoffs.",
       icon: <Workflow className="w-5 h-5 text-emerald-600" />,
-      image: "/images/official/automation/workflow-mapping.jpeg",
+      image: "/images/service-icons/ai-automation.webp",
     },
     {
       title: "Lead Nurturing Automation",
       desc: "A lead that goes quiet isn't always a lost lead. We build nurturing sequences that stay in touch, share the right message at the right moment, and keep prospects warm until they're ready to buy.",
       icon: <Cpu className="w-5 h-5 text-purple-600" />,
-      image: "/images/official/automation/system-integration.jpeg",
+      image: "/images/service-icons/ai-automation.webp",
     },
     {
       title: "Email Automation",
       desc: "The right email, sent at the right time, does real work. We set up automated emails for welcomes, follow-ups, reminders, and re-engagement, so your communication stays consistent without daily effort.",
       icon: <Mail className="w-5 h-5 text-blue-600" />,
-      image: "/images/official/automation/automation-scale.jpeg",
+      image: "/images/service-icons/analytics.webp",
     },
     {
       title: "AI Chatbots",
       desc: "Your customers ask questions at all hours. We build AI chatbots that answer common questions, qualify leads, and route real conversations to your team, so no inquiry sits waiting overnight.",
       icon: <Bot className="w-5 h-5 text-[#DDF160]" />,
-      image: "/images/official/automation/ai-action.jpeg",
+      image: "/images/service-icons/ai-automation.webp",
     },
     {
       title: "Process Automation",
       desc: "Beyond marketing and sales, whole operations run on repeatable steps. We automate onboarding, approvals, reporting, and internal handoffs, turning multi-step processes into workflows that mostly run themselves.",
       icon: <Database className="w-5 h-5 text-amber-600" />,
-      image: "/images/official/automation/workflow-mapping.jpeg",
+      image: "/images/service-icons/ai-automation.webp",
     },
   ];
 
@@ -212,12 +212,12 @@ export default function AiAutomationServicePage() {
         <div className="lg:col-span-5">
           <div className="relative aspect-[4/3] w-full rounded-3xl overflow-hidden bg-white border border-[#E0DDDB] shadow-md group">
             <Image
-              src="/images/official/automation/automation-strategy.jpeg"
+              src="/images/service-icons/ai-automation.webp"
               alt="Unified Branding Experts AI Automation and Workflow Strategy"
               fill
               priority
               sizes="(max-width: 1024px) 100vw, 45vw"
-              className="object-cover object-center transition-transform duration-700 group-hover:scale-105"
+              className="object-contain object-center p-3 sm:p-5 transition-transform duration-700 group-hover:scale-105"
             />
             <div className="absolute bottom-4 left-4 right-4 p-4 rounded-2xl bg-white/90 backdrop-blur-md border border-[#E0DDDB] text-xs font-mono-num text-[#161616] flex items-center justify-between shadow-xs">
               <span className="font-bold">CRM • WORKFLOWS • CHATBOTS</span>
@@ -232,11 +232,11 @@ export default function AiAutomationServicePage() {
         <div className="lg:col-span-6 order-2 lg:order-1">
           <div className="relative aspect-[4/3] w-full rounded-3xl overflow-hidden bg-white border border-[#E0DDDB] shadow-sm">
             <Image
-              src="/images/official/automation/workflow-mapping.jpeg"
+              src="/images/service-icons/ai-automation.webp"
               alt="Intelligent Workflow Mapping and System Connection"
               fill
               sizes="(max-width: 1024px) 100vw, 50vw"
-              className="object-cover object-center"
+              className="object-contain object-center p-3 sm:p-5"
             />
           </div>
         </div>
@@ -289,7 +289,7 @@ export default function AiAutomationServicePage() {
                   alt={service.title}
                   fill
                   sizes="(max-width: 768px) 100vw, 33vw"
-                  className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
+                  className="object-contain object-center p-3 sm:p-5 transition-transform duration-500 group-hover:scale-105"
                 />
               </div>
 

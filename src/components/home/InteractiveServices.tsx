@@ -26,7 +26,7 @@ const SERVICE_VISUALS: Record<
   }
 > = {
   "ecommerce-store-management": {
-    image: "/images/editorial/shopify-storefront-development.webp",
+    image: "/images/service-icons/store-management.webp",
     kicker: "Ongoing Store Operations",
     metrics: "Catalog, Orders & Inventory",
     packageUrl: "/ecommerce-store-management-packages",
@@ -34,7 +34,7 @@ const SERVICE_VISUALS: Record<
     starting: "From $249/mo",
   },
   "ecommerce-store-setup": {
-    image: "/images/editorial/shopify-storefront-development.webp",
+    image: "/images/service-icons/shopify-storefront.webp",
     kicker: "eCommerce Storefronts",
     metrics: "Custom Store Architecture",
     packageUrl: "/our-custom-web-design-development-packages",
@@ -42,7 +42,7 @@ const SERVICE_VISUALS: Record<
     starting: `From ${SHOPIFY_SETUP_PRICE_LABEL}`,
   },
   "shopify-development-service": {
-    image: "/images/editorial/shopify-storefront-development.webp",
+    image: "/images/service-icons/shopify-storefront.webp",
     kicker: "Shopify Store Setup",
     metrics: "Custom Theme & Integrations",
     packageUrl: "/our-custom-web-design-development-packages",
@@ -50,7 +50,7 @@ const SERVICE_VISUALS: Record<
     starting: `From ${SHOPIFY_SETUP_PRICE_LABEL}`,
   },
   "etsy-shop-setup-service": {
-    image: "/images/editorial/etsy-seller-listing.webp",
+    image: "/images/service-icons/etsy-listings.webp",
     kicker: "13-Tag Etsy SEO & Launch",
     metrics: "13/13 Optimized Listing Tags",
     packageUrl: "/branding-packages",
@@ -58,7 +58,7 @@ const SERVICE_VISUALS: Record<
     starting: "From $299",
   },
   "tiktok-shop-setup-service": {
-    image: "/images/editorial/social-commerce-creator.webp",
+    image: "/images/service-icons/tiktok-shop.webp",
     kicker: "Social Commerce & Affiliates",
     metrics: "TikTok Seller & Catalog Sync",
     packageUrl: "/tiktok-marketing-packages",
@@ -66,7 +66,7 @@ const SERVICE_VISUALS: Record<
     starting: "From $299/mo",
   },
   "web-design-dev": {
-    image: "/images/editorial/responsive-web-design.webp",
+    image: "/images/service-icons/responsive-web-design.webp",
     kicker: "Next.js Web Development",
     metrics: "Responsive Design & CMS",
     packageUrl: "/web-design-packages",
@@ -74,7 +74,7 @@ const SERVICE_VISUALS: Record<
     starting: "From $300",
   },
   "mobile-app-dev": {
-    image: "/images/editorial/mobile-app-development.webp",
+    image: "/images/service-icons/mobile-app.webp",
     kicker: "iOS & Android Apps",
     metrics: "Cross-Platform Engineering",
     packageUrl: "/mobile-app-packages",
@@ -82,7 +82,7 @@ const SERVICE_VISUALS: Record<
     starting: "From $999",
   },
   "branding-identity": {
-    image: "/images/official/branding/branding-hero.jpeg",
+    image: "/images/service-icons/brand-identity.webp",
     kicker: "Distinctive Visual Systems",
     metrics: "100% Custom Vector Assets",
     packageUrl: "/branding-packages",
@@ -90,7 +90,7 @@ const SERVICE_VISUALS: Record<
     starting: "From $299",
   },
   "aiseo-search": {
-    image: "/images/official/aiseo/ai-discovery.jpeg",
+    image: "/images/service-icons/ai-seo.webp",
     kicker: "AI Search Optimization",
     metrics: "Entity & Schema Architecture",
     packageUrl: "/ai-seo-packages",
@@ -98,7 +98,7 @@ const SERVICE_VISUALS: Record<
     starting: "From $349",
   },
   "google-ads": {
-    image: "/images/editorial/paid-media-creative.webp",
+    image: "/images/service-icons/paid-advertising.webp",
     kicker: "High-Intent Paid Search",
     metrics: "Google Search & Shopping",
     packageUrl: "/our-digital-marketing-packages",
@@ -106,7 +106,7 @@ const SERVICE_VISUALS: Record<
     starting: "From $299/mo",
   },
   "meta-ads": {
-    image: "/images/editorial/paid-media-creative.webp",
+    image: "/images/service-icons/paid-advertising.webp",
     kicker: "Visual Social Funnels",
     metrics: "Meta CAPI & Creative Testing",
     packageUrl: "/our-digital-marketing-packages",
@@ -114,7 +114,7 @@ const SERVICE_VISUALS: Record<
     starting: "From $299/mo",
   },
   "tiktok-marketing": {
-    image: "/images/editorial/social-commerce-creator.webp",
+    image: "/images/service-icons/tiktok-shop.webp",
     kicker: "Short-Form Video Ads",
     metrics: "Creative Scripting & Ads",
     packageUrl: "/tiktok-marketing-packages",
@@ -122,7 +122,7 @@ const SERVICE_VISUALS: Record<
     starting: "From $299/mo",
   },
   "social-media-management": {
-    image: "/images/editorial/social-content-planning.webp",
+    image: "/images/service-icons/content-writing.webp",
     kicker: "Omnichannel Brand Voice",
     metrics: "Consistent Social Authority",
     packageUrl: "/our-digital-marketing-packages",
@@ -280,7 +280,7 @@ export default function InteractiveServices() {
                   alt={activeService.title}
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"
-                  className="object-cover object-center transition-all duration-700 animate-fadeIn"
+                  className="object-contain object-center p-4 sm:p-6 transition-all duration-700 animate-fadeIn"
                 />
                 <div className="absolute top-3 left-3 px-3 py-1 rounded-full bg-white/95 backdrop-blur-md border border-[#E0DDDB] text-xs font-mono-num font-bold text-[#161616] shadow-xs">
                   {activeService.shortTitle}

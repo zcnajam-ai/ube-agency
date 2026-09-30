@@ -182,11 +182,11 @@ export default function MobileAppServicePage() {
           <div className="relative rounded-3xl overflow-hidden border border-[#E0DDDB] bg-white p-3 shadow-xl">
             <div className="relative h-[380px] sm:h-[440px] w-full rounded-2xl overflow-hidden bg-[#FAF7F6]">
               <Image
-                src="/images/editorial/mobile-app-development.webp"
-                alt="Mobile app interface shown in light and dark modes on two smartphones"
+                src="/images/service-icons/mobile-app.webp"
+                alt="3D smartphone app interface with connected feature tiles"
                 fill
                 priority
-                className="object-cover object-center group-hover:scale-[1.03] transition-transform duration-500"
+                className="object-contain object-center p-3 sm:p-5 group-hover:scale-[1.03] transition-transform duration-500"
                 sizes="(max-width: 1024px) 100vw, 45vw"
               />
               <div className="absolute bottom-4 left-4 right-4 p-3 rounded-2xl bg-white/90 backdrop-blur-md border border-[#E0DDDB] text-xs font-mono-num text-[#161616] flex items-center justify-between shadow-lg">
@@ -320,7 +320,7 @@ export default function MobileAppServicePage() {
                 src="/images/official/mobile-app/app-journey.jpeg"
                 alt="Mobile UX app journey mapping by Unified Branding Experts"
                 fill
-                className="object-cover object-center group-hover:scale-[1.03] transition-transform duration-500"
+                className="object-contain object-center p-3 sm:p-5 group-hover:scale-[1.03] transition-transform duration-500"
                 sizes="(max-width: 1024px) 100vw, 45vw"
               />
             </div>
@@ -433,10 +433,10 @@ export default function MobileAppServicePage() {
           <div className="relative rounded-3xl overflow-hidden border border-[#E0DDDB] bg-white p-3 shadow-xl">
             <div className="relative h-[360px] sm:h-[420px] w-full rounded-2xl overflow-hidden bg-[#FAF7F6]">
               <Image
-                src="/images/official/mobile-app/app-process.jpeg"
+                src="/images/service-icons/mobile-app.webp"
                 alt="Mobile app development process visualization"
                 fill
-                className="object-cover object-center group-hover:scale-[1.03] transition-transform duration-500"
+                className="object-contain object-center p-3 sm:p-5 group-hover:scale-[1.03] transition-transform duration-500"
                 sizes="(max-width: 1024px) 100vw, 45vw"
               />
             </div>
@@ -450,10 +450,10 @@ export default function MobileAppServicePage() {
           <div className="relative rounded-3xl overflow-hidden border border-[#E0DDDB] bg-white p-3 shadow-xl">
             <div className="relative h-[340px] sm:h-[380px] w-full rounded-2xl overflow-hidden bg-[#FAF7F6]">
               <Image
-                src="/images/official/mobile-app/app-team.jpeg"
+                src="/images/service-icons/mobile-app.webp"
                 alt="Mobile application engineering and backend cloud integration"
                 fill
-                className="object-cover object-center group-hover:scale-[1.03] transition-transform duration-500"
+                className="object-contain object-center p-3 sm:p-5 group-hover:scale-[1.03] transition-transform duration-500"
                 sizes="(max-width: 1024px) 100vw, 45vw"
               />
             </div>

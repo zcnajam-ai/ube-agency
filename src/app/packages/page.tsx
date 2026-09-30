@@ -48,7 +48,7 @@ export default function PackagesHubPage() {
       startingPrice: "From $249/month",
       bestFor: "Existing Stores Needing Ongoing Operations",
       description: "Catalog updates, inventory checks, order monitoring, merchandising and reporting. Choose monthly billing or save 16.7% with an annual plan.",
-      image: "/images/editorial/shopify-storefront-development.webp",
+      image: "/images/service-icons/store-management.webp",
       tiers: ["Essentials ($249/mo)", "Growth ($499/mo)", "Scale ($899/mo)"],
     },
     {
@@ -70,7 +70,7 @@ export default function PackagesHubPage() {
       bestFor: "Startups, Rebrands & Growing Businesses",
       description:
         "Custom logo design, brand strategy, typography, color palettes, visual identity systems, and brand guidelines.",
-      image: "/images/official/branding/branding-hero.jpeg",
+      image: "/images/service-icons/brand-identity.webp",
       tiers: ["Logo Essentials ($299)", "Brand Starter ($599)", "Brand Identity ($1,199)", "Brand Elevate ($2,499)", "Full Brand System"],
     },
     {
@@ -81,7 +81,7 @@ export default function PackagesHubPage() {
       bestFor: "Businesses Seeking Visibility in AI Answers",
       description:
         "Get found in Google AI Overviews, ChatGPT, and Bing Copilot. AEO direct answer formatting, GEO citation signals, schema, and content clusters.",
-      image: "/images/official/aiseo/ai-discovery.jpeg",
+      image: "/images/service-icons/ai-seo.webp",
       tiers: ["AI SEO Audit ($349)", "Starter ($749/mo)", "Growth ($1,499/mo)", "Authority ($2,999/mo)", "Enterprise Custom"],
     },
     {
@@ -92,7 +92,7 @@ export default function PackagesHubPage() {
       bestFor: "Teams Streamlining CRM & Ops",
       description:
         "Automate follow-ups, CRM pipeline stages, AI customer service chatbots, and multi-system data synchronization.",
-      image: "/images/official/automation/automation-strategy.jpeg",
+      image: "/images/service-icons/ai-automation.webp",
       tiers: ["Automation Audit ($349)", "Starter ($749/mo)", "Growth ($1,499/mo)", "Advanced ($2,999/mo)", "Enterprise"],
     },
     {
@@ -103,7 +103,7 @@ export default function PackagesHubPage() {
       bestFor: "Brands Scaling Viral Short-Form Video",
       description:
         "Short-form video strategy, content calendars, hook writing, community engagement, and paid TikTok ad campaign management.",
-      image: "/images/editorial/social-commerce-creator.webp",
+      image: "/images/service-icons/tiktok-shop.webp",
       tiers: ["Starter ($299/mo)", "Growth ($699/mo)", "Pro ($1,499/mo)", "Authority ($2,999/mo)", "Enterprise"],
     },
     {
@@ -114,7 +114,7 @@ export default function PackagesHubPage() {
       bestFor: "Founders Launching iOS & Android Products",
       description:
         "Concept MVP prototypes, native iOS/Android development, React Native cross-platform apps, backend architecture, and App Store release.",
-      image: "/images/editorial/mobile-app-development.webp",
+      image: "/images/service-icons/mobile-app.webp",
       tiers: ["App Concept MVP ($999)", "Starter App ($2,999)", "Growth App ($6,999)", "Advanced App ($14,999)", "Enterprise Custom"],
     },
   ];
@@ -182,7 +182,7 @@ export default function PackagesHubPage() {
                 alt={hub.title}
                 fill
                 sizes="(max-width: 768px) 100vw, 33vw"
-                className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
+                className={`${hub.image.startsWith("/images/service-icons/") ? "object-contain p-3 sm:p-5" : "object-cover"} object-center transition-transform duration-500 group-hover:scale-105`}
               />
               <div className="absolute top-3 right-3 px-3 py-1 rounded-full bg-white/95 backdrop-blur-md border border-[#E0DDDB] text-xs font-mono-num font-bold text-emerald-600 shadow-xs">
                 {hub.startingPrice}

@@ -45,31 +45,31 @@ export default function BrandingServicePage() {
       title: "Logo Design",
       desc: "Your logo is the face of your brand, the mark people connect to everything you do. We design custom logos grounded in your industry, your audience, and your goals, then deliver versions that stay sharp on a billboard, a website, and a phone-sized favicon alike.",
       icon: <Palette className="w-5 h-5 text-[#9F8BE7]" />,
-      image: "/images/official/branding/logo-design.jpeg",
+      image: "/images/service-icons/brand-identity.webp",
     },
     {
       title: "Brand Identity",
       desc: "A logo alone isn't a brand. We build the full visual system around it: your color palette, typography, imagery style, and supporting graphics. Together, these give your business a look that feels intentional and holds up across every channel.",
       icon: <Layers className="w-5 h-5 text-[#9F8BE7]" />,
-      image: "/images/official/branding/brand-identity.jpeg",
+      image: "/images/service-icons/brand-identity.webp",
     },
     {
       title: "Brand Strategy",
       desc: "Great design without strategy is just decoration. Before we choose a single color, we clarify who you serve, what you stand for, and how you differ from competitors. That thinking shapes every visual choice, so your brand looks the part and means something.",
       icon: <Compass className="w-5 h-5 text-emerald-600" />,
-      image: "/images/official/branding/brand-strategy.jpeg",
+      image: "/images/service-icons/brand-identity.webp",
     },
     {
       title: "Brand Guidelines",
       desc: "A brand only works when it's used consistently. We create clear guidelines, a practical rulebook covering how to use your logo, colors, fonts, and spacing, so your team, your printer, and any future designer stay perfectly aligned.",
       icon: <BookOpen className="w-5 h-5 text-[#DDF160]" />,
-      image: "/images/official/branding/brand-guidelines.jpeg",
+      image: "/images/service-icons/brand-identity.webp",
     },
     {
       title: "Rebranding",
       desc: "Sometimes a business outgrows its look. Maybe your identity feels dated, or it no longer reflects who you've become. We handle thoughtful rebrands that carry forward what's working, refresh what isn't, and reintroduce your business without losing the customers you've earned.",
       icon: <RefreshCw className="w-5 h-5 text-rose-500" />,
-      image: "/images/official/branding/branding-hero.jpeg",
+      image: "/images/service-icons/brand-identity.webp",
     },
   ];
 
@@ -256,12 +256,12 @@ export default function BrandingServicePage() {
         <div className="lg:col-span-5">
           <div className="relative aspect-[4/3] w-full rounded-3xl overflow-hidden bg-white border border-[#E0DDDB] shadow-md group">
             <Image
-              src="/images/official/branding/branding-hero.jpeg"
-              alt="Unified Branding Experts brand identity presentation with logo, typography and visual assets"
+              src="/images/service-icons/brand-identity.webp"
+              alt="3D brand identity card with a coordinated color palette"
               fill
               priority
               sizes="(max-width: 1024px) 100vw, 45vw"
-              className="object-cover object-center transition-transform duration-700 group-hover:scale-105"
+              className="object-contain object-center p-3 sm:p-5 transition-transform duration-700 group-hover:scale-105"
             />
             <div className="absolute bottom-4 left-4 right-4 p-4 rounded-2xl bg-white/90 backdrop-blur-md border border-[#E0DDDB] text-xs font-mono-num text-[#161616] flex items-center justify-between shadow-xs">
               <span className="font-bold">STRATEGY • LOGO • GUIDELINES</span>
@@ -276,11 +276,11 @@ export default function BrandingServicePage() {
         <div className="lg:col-span-6 order-2 lg:order-1">
           <div className="relative aspect-[4/3] w-full rounded-3xl overflow-hidden bg-white border border-[#E0DDDB] shadow-sm">
             <Image
-              src="/images/official/branding/brand-identity.jpeg"
-              alt="Unified Branding Experts complete brand identity system and typography guidelines"
+              src="/images/service-icons/brand-identity.webp"
+              alt="3D brand identity card with a coordinated color palette"
               fill
               sizes="(max-width: 1024px) 100vw, 50vw"
-              className="object-cover object-center"
+              className="object-contain object-center p-3 sm:p-5"
             />
           </div>
         </div>
@@ -392,7 +392,7 @@ export default function BrandingServicePage() {
                   alt={service.title}
                   fill
                   sizes="(max-width: 768px) 100vw, 33vw"
-                  className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
+                  className="object-contain object-center p-3 sm:p-5 transition-transform duration-500 group-hover:scale-105"
                 />
               </div>
 

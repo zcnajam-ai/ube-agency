@@ -27,7 +27,7 @@ export default function InteractiveMedia({
   priority = false,
   sizes = "(max-width: 768px) 100vw, 50vw",
   badgeText,
-  objectFit = "cover",
+  objectFit = src.startsWith("/images/service-icons/") ? "contain" : "cover",
   quality,
 }: InteractiveMediaProps) {
   return (

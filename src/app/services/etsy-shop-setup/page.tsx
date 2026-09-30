@@ -47,37 +47,37 @@ export default function EtsyShopSetupPage() {
       title: "Complete Etsy Shop Setup & Seller Verification",
       desc: "End-to-end configuration of your Etsy Seller account, payment methods, currency preferences, shipping profiles, tax settings, and shop policies compliant with Etsy standards.",
       icon: <ShoppingBag className="w-5 h-5 text-[#9F8BE7]" />,
-      image: "/images/editorial/etsy-seller-listing.webp",
+      image: "/images/service-icons/etsy-listings.webp",
     },
     {
       title: "Custom Etsy Shop Branding & Banner Kit",
       desc: "Stand out in search with cohesive visual identity: big carousel banners, mini shop icons, profile avatars, thank-you cards, and order confirmation branding.",
       icon: <Palette className="w-5 h-5 text-emerald-600" />,
-      image: "/images/editorial/artisan-product-styling.webp",
+      image: "/images/service-icons/product-catalog.webp",
     },
     {
       title: "Etsy SEO & 13-Tag Research",
       desc: "Buyer-intent keyword research, optimized listing titles, relevant long-tail tags, categories, and attribute mapping designed to improve listing relevance and discoverability.",
       icon: <Search className="w-5 h-5 text-purple-600" />,
-      image: "/images/editorial/etsy-seller-listing.webp",
+      image: "/images/service-icons/etsy-listings.webp",
     },
     {
       title: "High-Converting Listing Copywriting",
       desc: "Direct-response listing descriptions with clear benefit bullet points, dimension guides, material specifications, FAQs, and strong call-to-actions that prevent buyer hesitations.",
       icon: <Tag className="w-5 h-5 text-blue-600" />,
-      image: "/images/editorial/etsy-seller-listing.webp",
+      image: "/images/service-icons/etsy-listings.webp",
     },
     {
       title: "Product Photography Styling & Mockup Curation",
       desc: "Clean, high-resolution lifestyle mockups, zoomable thumbnail graphics, color chart graphics, and video listing covers formatted to maximize Etsy click-through rates.",
       icon: <Camera className="w-5 h-5 text-[#DDF160]" />,
-      image: "/images/editorial/artisan-product-styling.webp",
+      image: "/images/service-icons/product-catalog.webp",
     },
     {
       title: "Customer Experience & Post-Launch Support",
       desc: "Message-to-buyer templates, coupon workflows for repeat purchases, and customer-service guidance designed to support a consistent buyer experience after launch.",
       icon: <Star className="w-5 h-5 text-amber-600" />,
-      image: "/images/editorial/artisan-product-styling.webp",
+      image: "/images/service-icons/product-catalog.webp",
     },
   ];
 
@@ -213,12 +213,12 @@ export default function EtsyShopSetupPage() {
         <div className="lg:col-span-5">
           <div className="relative aspect-[4/3] w-full rounded-3xl overflow-hidden bg-white border border-[#E0DDDB] shadow-md group">
             <Image
-              src="/images/editorial/etsy-seller-listing.webp"
-              alt="Ceramics seller photographing handmade products beside an online listing draft"
+              src="/images/service-icons/etsy-listings.webp"
+              alt="3D handmade product listing with camera and price tag"
               fill
               priority
               sizes="(max-width: 1024px) 100vw, 45vw"
-              className="object-cover object-center transition-transform duration-700 group-hover:scale-105"
+              className="object-contain object-center p-3 sm:p-5 transition-transform duration-700 group-hover:scale-105"
             />
             <div className="absolute bottom-4 left-4 right-4 p-4 rounded-2xl bg-white/90 backdrop-blur-md border border-[#E0DDDB] text-xs font-mono-num text-[#161616] flex items-center justify-between shadow-xs">
               <span className="font-bold">ETSY SEO • 13 TAGS • BRANDING</span>
@@ -233,11 +233,11 @@ export default function EtsyShopSetupPage() {
         <div className="lg:col-span-6 order-2 lg:order-1">
           <div className="relative aspect-[4/3] w-full rounded-3xl overflow-hidden bg-white border border-[#E0DDDB] shadow-sm">
             <Image
-              src="/images/editorial/artisan-product-styling.webp"
-              alt="Handmade ceramics arranged with packaging and photography tools for product listings"
+              src="/images/service-icons/product-catalog.webp"
+              alt="3D product tiles with color swatches and merchandising tag"
               fill
               sizes="(max-width: 1024px) 100vw, 50vw"
-              className="object-cover object-center"
+              className="object-contain object-center p-3 sm:p-5"
             />
           </div>
         </div>
@@ -287,7 +287,7 @@ export default function EtsyShopSetupPage() {
                   alt={service.title}
                   fill
                   sizes="(max-width: 768px) 100vw, 33vw"
-                  className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
+                  className="object-contain object-center p-3 sm:p-5 transition-transform duration-500 group-hover:scale-105"
                 />
               </div>
 

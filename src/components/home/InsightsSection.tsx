@@ -51,7 +51,7 @@ export default function InsightsSection() {
                     alt={article.title}
                     fill
                     sizes="(max-width: 768px) 100vw, 33vw"
-                    className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
+                    className={`${article.coverImage.startsWith("/images/service-icons/") ? "object-contain p-3 sm:p-5" : "object-cover"} object-center transition-transform duration-500 group-hover:scale-105`}
                   />
                   <div className="absolute top-4 left-4 z-10">
                     <span className="px-3.5 py-1 rounded-full bg-white/90 backdrop-blur-md border border-[#E0DDDB] text-[11px] font-mono-num text-[#161616] font-bold shadow-xs">

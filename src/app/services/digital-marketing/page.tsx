@@ -39,7 +39,7 @@ export const metadata: Metadata = {
         url: "https://unifiedbrandingexperts.com/services/digital-marketing/opengraph-image",
         width: 2048,
         height: 676,
-        alt: "Digital marketing campaign dashboard showing Google Ads, Meta Ads, TikTok and conversion performance",
+        alt: "3D megaphone representing targeted digital advertising campaigns",
       },
     ],
   },
@@ -197,10 +197,10 @@ export default function DigitalMarketingServiceHubPage() {
 
           {/* HERO VISUAL (Exact Intrinsic 2048/676 Aspect Ratio Container) */}
           <div className="lg:col-span-5 relative w-full">
-            <div className="relative w-full aspect-[2048/676] rounded-3xl overflow-hidden border border-[#E0DDDB] shadow-lg bg-white group">
+            <div className="relative w-full aspect-[4/3] rounded-3xl overflow-hidden border border-[#E0DDDB] shadow-lg bg-white group">
               <Image
-                src="/images/official/digital-marketing/digital-marketing-hero.webp"
-                alt="Digital marketing campaign dashboard showing Google Ads, Meta Ads, TikTok and conversion performance"
+                src="/images/service-icons/paid-advertising.webp"
+                alt="3D megaphone representing targeted digital advertising campaigns"
                 fill
                 priority
                 sizes="(max-width: 1024px) 100vw, 45vw"
@@ -313,8 +313,8 @@ export default function DigitalMarketingServiceHubPage() {
           <div className="lg:col-span-5 relative w-full">
             <div className="relative w-full aspect-[1024/684] rounded-2xl overflow-hidden border border-[#E0DDDB] bg-white shadow-md">
               <Image
-                src="/images/official/digital-marketing/digital-marketing-funnel.webp"
-                alt="Full-funnel digital marketing approach from brand awareness to customer retention"
+                src="/images/service-icons/paid-advertising.webp"
+                alt="3D megaphone representing paid campaign planning"
                 fill
                 sizes="(max-width: 1024px) 100vw, 40vw"
                 className="object-contain object-center"

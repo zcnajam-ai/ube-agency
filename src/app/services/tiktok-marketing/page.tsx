@@ -47,37 +47,37 @@ export default function TikTokMarketingServicePage() {
       title: "Content Strategy",
       desc: "Random posting rarely goes anywhere. We build a content strategy grounded in your audience, your goals, and what actually performs in your space. That means a clear content calendar, defined themes, and a plan for the trends worth joining.",
       icon: <Layers className="w-5 h-5 text-[#9F8BE7]" />,
-      image: "/images/editorial/social-commerce-creator.webp",
+      image: "/images/service-icons/tiktok-shop.webp",
     },
     {
       title: "Account Setup & Optimization",
       desc: "Your profile is your first impression. We set up or refine your account with a clear bio, the right category, a strong profile visual, and the details that help TikTok understand and surface your brand.",
       icon: <Video className="w-5 h-5 text-rose-500" />,
-      image: "/images/editorial/social-shop-catalog.webp",
+      image: "/images/service-icons/product-catalog.webp",
     },
     {
       title: "Video Production Guidance",
       desc: "You don't need a film crew to succeed here, but you do need direction. We guide your video production with hooks that stop the scroll, formats that hold attention, and creative frameworks you can repeat.",
       icon: <TrendingUp className="w-5 h-5 text-emerald-600" />,
-      image: "/images/editorial/social-commerce-creator.webp",
+      image: "/images/service-icons/tiktok-shop.webp",
     },
     {
       title: "Paid Advertising",
       desc: "Organic reach is powerful, but paid reach is precise. We plan and manage TikTok ad campaigns, from setup and targeting to creative and budget, so your spend reaches the right people and every dollar has a job to do.",
       icon: <Target className="w-5 h-5 text-purple-600" />,
-      image: "/images/editorial/social-shop-catalog.webp",
+      image: "/images/service-icons/product-catalog.webp",
     },
     {
       title: "Influencer & Creator Marketing",
       desc: "The right creator can introduce your brand to an audience that already trusts them. We help identify creators who fit your brand, coordinate partnerships, and shape collaborations that feel authentic.",
       icon: <Users2 className="w-5 h-5 text-blue-600" />,
-      image: "/images/editorial/social-commerce-creator.webp",
+      image: "/images/service-icons/tiktok-shop.webp",
     },
     {
       title: "Analytics and Plain-Language Reporting",
       desc: "Guesswork is expensive. We track what matters, from views and engagement to follower growth and conversions, then translate it into plain-language reporting so you always know where your budget is going.",
       icon: <BarChart3 className="w-5 h-5 text-[#DDF160]" />,
-      image: "/images/editorial/social-shop-catalog.webp",
+      image: "/images/service-icons/product-catalog.webp",
     },
   ];
 
@@ -220,11 +220,11 @@ export default function TikTokMarketingServicePage() {
         <div className="lg:col-span-6 order-2 lg:order-1">
           <div className="relative aspect-[4/3] w-full rounded-3xl overflow-hidden bg-white border border-[#E0DDDB] shadow-sm">
             <Image
-              src="/images/editorial/social-commerce-creator.webp"
-              alt="Small business creator filming a short product video"
+              src="/images/service-icons/tiktok-shop.webp"
+              alt="3D shoppable video and product catalog on a smartphone"
               fill
               sizes="(max-width: 1024px) 100vw, 50vw"
-              className="object-cover object-center"
+              className="object-contain object-center p-3 sm:p-5"
             />
           </div>
         </div>
@@ -274,7 +274,7 @@ export default function TikTokMarketingServicePage() {
                   alt={service.title}
                   fill
                   sizes="(max-width: 768px) 100vw, 33vw"
-                  className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
+                  className="object-contain object-center p-3 sm:p-5 transition-transform duration-500 group-hover:scale-105"
                 />
               </div>
 

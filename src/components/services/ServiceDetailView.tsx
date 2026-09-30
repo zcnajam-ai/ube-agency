@@ -15,25 +15,25 @@ const SERVICE_PACKAGE_MAP: Record<
     packageUrl: "/mobile-app-packages",
     packageText: "Explore 5 Mobile App Packages",
     starting: "From $999 (MVP)",
-    heroImage: "/images/editorial/mobile-app-development.webp",
+    heroImage: "/images/service-icons/mobile-app.webp",
   },
   ecommerce: {
     packageUrl: "/packages",
     packageText: "Explore Storefront Packages",
     starting: "Custom Scope",
-    heroImage: "/images/official/ecommerce/storefront-setup.jpeg",
+    heroImage: "/images/service-icons/shopify-storefront.webp",
   },
   "web-design-development": {
     packageUrl: "/web-design-packages",
     packageText: "Explore Web Design Packages",
     starting: "From $300",
-    heroImage: "/images/editorial/responsive-web-design.webp",
+    heroImage: "/images/service-icons/responsive-web-design.webp",
   },
   "social-media-management": {
     packageUrl: "/tiktok-marketing-packages",
     packageText: "Explore Video Marketing Plans",
     starting: "From $299/mo",
-    heroImage: "/images/editorial/social-content-planning.webp",
+    heroImage: "/images/service-icons/content-writing.webp",
   },
 };
 
@@ -114,7 +114,7 @@ export default function ServiceDetailView({ service }: ServiceDetailViewProps) {
                 fill
                 priority
                 sizes="(max-width: 1024px) 100vw, 45vw"
-                className="object-cover object-center"
+                className="object-contain object-center p-4 sm:p-6"
               />
             </div>
           </div>

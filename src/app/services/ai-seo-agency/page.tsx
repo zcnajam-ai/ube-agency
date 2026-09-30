@@ -103,37 +103,37 @@ export default function AiSeoServicePage() {
       title: "AI-Driven Search Optimization",
       desc: "We optimize your pages to rank in both traditional results and AI-generated summaries. That means aligning your content with how modern engines read, weigh, and cite information.",
       icon: <Search className="w-5 h-5 text-[#715CC4]" />,
-      image: "/images/official/aiseo/ai-discovery.jpeg",
+      image: "/images/service-icons/ai-seo.webp",
     },
     {
       title: "Answer Engine Optimization (AEO)",
       desc: "People ask questions. Engines want clean answers. We structure your content into clear, direct responses that answer engines can lift and feature, from FAQ formatting to concise definitions.",
       icon: <Cpu className="w-5 h-5 text-emerald-700" />,
-      image: "/images/official/aiseo/aeo-structure.jpeg",
+      image: "/images/service-icons/content-writing.webp",
     },
     {
       title: "Generative Engine Optimization (GEO)",
       desc: "Tools like ChatGPT, Gemini, and Perplexity pull from sources they trust. We work to make your brand one of them, strengthening the signals that get you cited in generative answers.",
       icon: <Bot className="w-5 h-5 text-purple-600" />,
-      image: "/images/official/aiseo/topical-authority.jpeg",
+      image: "/images/service-icons/content-writing.webp",
     },
     {
       title: "Structured Content and Schema",
       desc: "Machines read structure before they read prose. We organize your content with clear headings, logical hierarchy, and schema markup so engines understand exactly what each page offers.",
       icon: <FileCode className="w-5 h-5 text-[#DDF160]" />,
-      image: "/images/official/aiseo/schema-implementation.jpeg",
+      image: "/images/service-icons/technical-seo.webp",
     },
     {
       title: "Topical Authority Building",
       desc: "One strong page isn't enough. We map and build content clusters around your core topics, so search systems see your site as a genuine authority worth recommending.",
       icon: <Network className="w-5 h-5 text-blue-600" />,
-      image: "/images/official/aiseo/ai-monitoring.jpeg",
+      image: "/images/service-icons/analytics.webp",
     },
     {
       title: "Technical SEO Foundation",
       desc: "None of this works on a shaky base. We handle crawlability, page speed, mobile readiness, and indexing so your content can actually be found and read.",
       icon: <Wrench className="w-5 h-5 text-amber-600" />,
-      image: "/images/official/aiseo/aeo-structure.jpeg",
+      image: "/images/service-icons/content-writing.webp",
     },
   ];
 
@@ -322,13 +322,13 @@ export default function AiSeoServicePage() {
         <div className="lg:col-span-6 order-2 lg:order-1">
           <div className="relative aspect-[4/3] w-full rounded-3xl overflow-hidden bg-white border border-[#E0DDDB] shadow-sm">
             <Image
-              src="/images/official/aiseo/aeo-structure.jpeg"
+              src="/images/service-icons/content-writing.webp"
               alt="Answer Engine Optimization and structured data architecture"
               fill
               loading="lazy"
               quality={60}
               sizes="(max-width: 639px) calc(100vw - 32px), (max-width: 1023px) calc(100vw - 48px), 560px"
-              className="object-cover object-center"
+              className="object-contain object-center p-3 sm:p-5"
             />
           </div>
         </div>
@@ -427,7 +427,7 @@ export default function AiSeoServicePage() {
                   loading="lazy"
                   quality={60}
                   sizes="(max-width: 639px) calc(100vw - 32px), (max-width: 1023px) 50vw, 380px"
-                  className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
+                  className="object-contain object-center p-3 sm:p-5 transition-transform duration-500 group-hover:scale-105"
                 />
               </div>
 
