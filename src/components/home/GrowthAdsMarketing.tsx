@@ -26,7 +26,7 @@ export default function GrowthAdsMarketing() {
       tagline: "Turn Short-Form Content into Direct Sales & Brand Discovery",
       badge: "TIKTOK COMMERCE & ADS",
       packageUrl: "/tiktok-marketing-packages",
-      image: "/images/editorial/social-commerce-creator.webp",
+      image: "/images/service-icons/tiktok-shop.webp",
       desc: "We build structured TikTok content strategies, video creative frameworks, creator whitelisting, and TikTok Shop storefront integrations designed to connect with engaged buyers.",
       icon: <TikTok3DIcon size={24} />,
       deliverables: [
@@ -42,7 +42,7 @@ export default function GrowthAdsMarketing() {
       tagline: "Visual Advertising & Conversion API Funnels",
       badge: "META AD MANAGEMENT",
       packageUrl: "/services/meta-ads",
-      image: "/images/editorial/paid-media-creative.webp",
+      image: "/images/service-icons/paid-advertising.webp",
       desc: "We architect full-funnel Meta advertising campaigns with structured audience segmentation, visual creative variations, catalog sales ads, and Meta Conversions API (CAPI) server-side tracking.",
       icon: <Meta3DIcon size={24} />,
       deliverables: [
@@ -58,7 +58,7 @@ export default function GrowthAdsMarketing() {
       tagline: "Reach High-Intent Customers Actively Searching for Your Products",
       badge: "GOOGLE SEARCH & SHOPPING",
       packageUrl: "/services/google-ads",
-      image: "/images/editorial/paid-media-creative.webp",
+      image: "/images/service-icons/paid-advertising.webp",
       desc: "We build structured Google Search campaigns, Google Merchant Center Shopping feeds, and tailored Performance Max asset groups synchronized with transparent performance reporting.",
       icon: <Google3DIcon size={24} />,
       deliverables: [

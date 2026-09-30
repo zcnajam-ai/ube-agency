@@ -290,7 +290,7 @@ export default async function InsightArticlePage({
             fill
             priority
             sizes="(max-width: 1024px) 100vw, 1000px"
-            className="object-cover object-center"
+            className={`${article.coverImage.startsWith("/images/service-icons/") ? "object-contain p-4 sm:p-8" : "object-cover"} object-center`}
           />
         </div>
 

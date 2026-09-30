@@ -47,37 +47,37 @@ export default function ShopifyDevelopmentPage() {
       title: "Custom Shopify 2.0 Theme Architecture",
       desc: "Bespoke Liquid and JSON templates engineered with modular drag-and-drop sections. Built without bloated third-party page builders for clean maintenance and content updates.",
       icon: <ShoppingBag className="w-5 h-5 text-[#715CC4]" />,
-      image: "/images/official/ecommerce/storefront-setup.jpeg",
+      image: "/images/service-icons/shopify-storefront.webp",
     },
     {
       title: "Streamlined Checkout & Cart Funnels",
       desc: "Slide-out cart drawers, tiered shipping bars, upsell configurations, bundles, and Shopify Checkout Extensibility configured to simplify purchasing.",
       icon: <CreditCard className="w-5 h-5 text-emerald-700" />,
-      image: "/images/official/shopify/shopify-conversion-metrics.webp",
+      image: "/images/service-icons/checkout.webp",
     },
     {
       title: "3PL, ERP & Multi-Warehouse Inventory Sync",
       desc: "Automated synchronization with fulfillment centers, ShipStation, multi-location warehouse routing, and dropshipping supplier feeds (DSers, CJ).",
       icon: <Truck className="w-5 h-5 text-purple-600" />,
-      image: "/images/official/ecommerce/multichannel-growth.jpeg",
+      image: "/images/service-icons/dropshipping.webp",
     },
     {
       title: "Performance & Core Web Vitals Optimization",
       desc: "Optimized asset loading, responsive image formats, lazy-loaded offscreen media, and streamlined app configurations that support fast mobile browsing.",
       icon: <Zap className="w-5 h-5 text-blue-600" />,
-      image: "/images/official/shopify/shopify-performance.webp",
+      image: "/images/service-icons/responsive-web-design.webp",
     },
     {
       title: "Custom App Development & Private APIs",
       desc: "Private Shopify apps, custom discount calculators, wholesale B2B pricing portals, and tailor-made third-party API connectors.",
       icon: <Settings2 className="w-5 h-5 text-[#DDF160]" />,
-      image: "/images/official/automation/system-integration.jpeg",
+      image: "/images/service-icons/ai-automation.webp",
     },
     {
       title: "Store Migration & 301 Redirect Mapping",
       desc: "Migrate from WooCommerce, Magento, BigCommerce, or Etsy to Shopify with organized data mapping: customer records, order archives, and complete 301 URL redirect maps to support organic search continuity.",
       icon: <RefreshCw className="w-5 h-5 text-amber-600" />,
-      image: "/images/official/ecommerce/multichannel-growth.jpeg",
+      image: "/images/service-icons/dropshipping.webp",
     },
   ];
 
@@ -253,12 +253,12 @@ export default function ShopifyDevelopmentPage() {
         <div className="lg:col-span-5 relative w-full">
           <div className="relative w-full aspect-[4/3] rounded-3xl overflow-hidden bg-white border border-[#E0DDDB] shadow-md group">
             <Image
-              src="/images/editorial/shopify-storefront-development.webp"
-              alt="Online retailer reviewing a responsive product storefront on desktop and mobile"
+              src="/images/service-icons/shopify-storefront.webp"
+              alt="3D responsive online storefront on desktop and phone"
               fill
               priority
               sizes="(max-width: 1024px) 100vw, 45vw"
-              className="object-cover object-center transition-transform duration-700 group-hover:scale-[1.01]"
+              className="object-contain object-center p-3 sm:p-5 transition-transform duration-700 group-hover:scale-[1.01]"
             />
             <div className="absolute bottom-3 left-3 right-3 p-3 rounded-2xl bg-white/90 backdrop-blur-md border border-[#E0DDDB] text-xs font-mono-num text-[#161616] flex items-center justify-between shadow-xs">
               <span className="font-bold">SHOPIFY • DROPSHIPPING • ECOMMERCE</span>
@@ -273,8 +273,8 @@ export default function ShopifyDevelopmentPage() {
         <div className="lg:col-span-6 order-2 lg:order-1">
           <div className="relative w-full aspect-[1024/684] rounded-3xl overflow-hidden bg-white border border-[#E0DDDB] shadow-sm">
             <Image
-              src="/images/official/shopify/shopify-performance.webp"
-              alt="Shopify mobile storefront optimization, fast loading speeds, and checkout conversion features"
+              src="/images/service-icons/responsive-web-design.webp"
+              alt="3D responsive web design on desktop and phone"
               fill
               sizes="(max-width: 1024px) 100vw, 50vw"
               className="object-contain object-center"
@@ -338,7 +338,7 @@ export default function ShopifyDevelopmentPage() {
                   alt={service.title}
                   fill
                   sizes="(max-width: 768px) 100vw, 33vw"
-                  className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
+                  className="object-contain object-center p-3 sm:p-5 transition-transform duration-500 group-hover:scale-105"
                 />
               </div>
 

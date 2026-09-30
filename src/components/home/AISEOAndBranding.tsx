@@ -76,8 +76,8 @@ export default function AISEOAndBranding() {
 
               {/* Visual Preview */}
               <InteractiveMedia
-                src="/images/editorial/ai-search-content-strategy.webp"
-                alt="Content strategist reviewing search result structures and entity relationships"
+                src="/images/service-icons/ai-seo.webp"
+                alt="3D search icon showing a magnifying glass and connected citation signals"
                 aspectRatio="aspect-[4/3] sm:aspect-[16/11]"
                 objectFit="contain"
                 badgeText="Structured Search Architecture"
@@ -141,8 +141,8 @@ export default function AISEOAndBranding() {
 
               {/* Visual Preview */}
               <InteractiveMedia
-                src="/images/official/branding/branding-hero.webp"
-                alt="Unified Branding Experts Corporate Branding & Visual System"
+                src="/images/service-icons/brand-identity.webp"
+                alt="3D brand identity card with a coordinated color palette"
                 aspectRatio="aspect-[16/9]"
                 badgeText="Complete Brand Guidelines"
               />

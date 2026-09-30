@@ -92,11 +92,11 @@ export default function EcommerceShowcase() {
               {/* Storefront preview */}
               <div className="relative aspect-[16/10] w-full overflow-hidden bg-[#FAF7F6]">
                 <Image
-                  src="/images/editorial/shopify-storefront-development.webp"
+                  src="/images/service-icons/shopify-storefront.webp"
                   alt="Responsive product storefront viewed on desktop and mobile"
                   fill
                   sizes="(max-width: 1024px) 100vw, 60vw"
-                  className="object-cover object-center transition-transform duration-700 group-hover:scale-105"
+                  className="object-contain object-center p-3 sm:p-5 transition-transform duration-700 group-hover:scale-105"
                 />
               </div>
             </div>

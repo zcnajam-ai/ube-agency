@@ -74,8 +74,8 @@ export default function AppsAndAutomation() {
 
               {/* Visual Preview */}
               <InteractiveMedia
-                src="/images/editorial/mobile-app-development.webp"
-                alt="Mobile app interface shown in light and dark modes on two smartphones"
+                src="/images/service-icons/mobile-app.webp"
+                alt="3D smartphone app interface with connected feature tiles"
                 aspectRatio="aspect-[4/3] sm:aspect-[16/11]"
                 objectFit="contain"
                 badgeText="iOS & Android Native"
@@ -132,8 +132,8 @@ export default function AppsAndAutomation() {
 
               {/* Visual Preview with 3D Tilt */}
               <InteractiveMedia
-                src="/images/official/automation/system-integration.webp"
-                alt="Unified Branding Experts Automation Strategy"
+                src="/images/service-icons/ai-automation.webp"
+                alt="3D connected workflow and automation nodes"
                 aspectRatio="aspect-[16/9]"
                 enableTilt
                 enableParallax
