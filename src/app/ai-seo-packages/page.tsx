@@ -8,18 +8,25 @@ import {
   ArrowLeft,
 } from "lucide-react";
 import { COMPANY_INFO } from "@/data/company";
+import { AI_SEO_PACKAGES } from "@/data/aiSeoPackages";
 
 export const metadata: Metadata = {
-  title: "AI SEO & Video Search Packages",
+  title: "AI SEO Packages & Pricing | AEO, GEO & Video Search",
   description:
-    "Compare AI SEO and video search packages for Google AI Overviews, ChatGPT, AEO, GEO and video-supporting content. Audits from $349; plans from $749/month.",
+    "Compare AI SEO packages by price, page limits, content and reporting. Audit from $349; AEO and GEO plans from $749/month. Video production quoted separately.",
   alternates: {
     canonical: "https://unifiedbrandingexperts.com/ai-seo-packages",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "AI SEO Packages & Pricing | AEO, GEO & Video Search",
+    description: "Compare AI SEO packages by price, page limits, content and reporting. Audit from $349; AEO and GEO plans from $749/month.",
+    images: ["https://unifiedbrandingexperts.com/ai-seo-packages/opengraph-image"],
+  },
   openGraph: {
-    title: "AI SEO & Video Search Packages",
+    title: "AI SEO Packages & Pricing | AEO, GEO & Video Search",
     description:
-      "Compare AI SEO and video search packages for Google AI Overviews, ChatGPT, AEO, GEO and video-supporting content. Audits from $349; plans from $749/month.",
+      "Compare AI SEO packages by price, page limits, content and reporting. Audit from $349; AEO and GEO plans from $749/month. Video production quoted separately.",
     url: "https://unifiedbrandingexperts.com/ai-seo-packages",
     images: [
       {
@@ -33,106 +40,7 @@ export const metadata: Metadata = {
 };
 
 export default function AiSeoPackagesPage() {
-  const packages = [
-    {
-      id: "ai-seo-audit",
-      name: "AI SEO Audit",
-      bestFor: "Best for businesses testing the water",
-      tagline: "See exactly where you stand before you spend on more.",
-      price: "$349",
-      pricePeriod: "one-time",
-      popular: false,
-      deliverables: [
-        "Full AI search visibility audit",
-        "Traditional ranking and technical health check",
-        "AI Overview and answer-engine presence review",
-        "Up to 10 pages analyzed",
-        "Keyword and question opportunity snapshot",
-        "Schema and structured-data gap review",
-        "Prioritized action report",
-        "One 30-minute findings walkthrough",
-      ],
-    },
-    {
-      id: "ai-seo-starter",
-      name: "AI SEO Starter",
-      bestFor: "Best for small sites making their first move",
-      tagline: "Lay the groundwork that AI search actually reads.",
-      price: "$749",
-      pricePeriod: "/month",
-      popular: false,
-      deliverables: [
-        "Everything in the Audit",
-        "On-page optimization for up to 10 pages",
-        "AEO formatting on key pages (direct-answer structure)",
-        "Core schema and structured-data setup",
-        "Keyword and question mapping",
-        "Technical SEO fixes (crawl, speed, mobile, indexing)",
-        "Monthly performance report",
-        "1 support call per month",
-      ],
-    },
-    {
-      id: "ai-seo-growth",
-      name: "AI SEO Growth",
-      bestFor: "Best for growing businesses building authority",
-      tagline: "Turn a solid foundation into steady visibility.",
-      price: "$1,499",
-      pricePeriod: "/month",
-      popular: true,
-      deliverables: [
-        "Everything in Starter",
-        "Optimization for up to 25 pages",
-        "2 topical content clusters built per month",
-        "GEO signals to earn AI citations",
-        "Expanded AEO and FAQ optimization",
-        "Ongoing technical monitoring",
-        "AI Overview presence tracking",
-        "Bi-weekly performance reporting",
-        "2 support calls per month",
-      ],
-    },
-    {
-      id: "ai-seo-authority",
-      name: "AI SEO Authority",
-      bestFor: "Best for competitive niches and established brands",
-      tagline: "Compete for the answer, not just the ranking.",
-      price: "$2,999",
-      pricePeriod: "/month",
-      popular: false,
-      deliverables: [
-        "Everything in Growth",
-        "Optimization across up to 50 pages",
-        "4 topical content clusters built per month",
-        "Advanced GEO and citation-building strategy",
-        "Full entity and Organization signal optimization",
-        "Competitor AI-visibility tracking",
-        "Conversion-focused content refinement",
-        "Weekly monitoring and reporting",
-        "Dedicated strategist and monthly strategy session",
-      ],
-    },
-    {
-      id: "ai-seo-enterprise",
-      name: "AI SEO Enterprise",
-      bestFor: "Best for full-scale, multi-market visibility",
-      tagline: "Own your space across search and AI, everywhere it matters.",
-      price: "Custom",
-      pricePeriod: "tailored retainer",
-      popular: false,
-      deliverables: [
-        "Everything in Authority",
-        "Unlimited page and content optimization",
-        "Full topical authority program across your site",
-        "Multi-location or multi-market AI SEO strategy",
-        "Priority GEO, AEO, and structured-data implementation",
-        "Continuous AI Overview and citation monitoring",
-        "Custom reporting dashboard",
-        "Quarterly roadmap planning",
-        "Priority support with a dedicated team",
-      ],
-    },
-  ];
+  const packages = AI_SEO_PACKAGES;
 
   const infoBlocks = [
     {
@@ -145,7 +53,7 @@ export default function AiSeoPackagesPage() {
     },
     {
       title: "Results and Timelines",
-      desc: "AI SEO is a build, not a switch. Early technical and structural gains can appear within weeks, but meaningful ranking and citation growth typically develops over three to six months. We share regular reports so progress is always visible.",
+      desc: "Implementation and search outcomes have different timelines. We agree priorities and a delivery schedule after reviewing your site. Rankings, citations, and leads depend on competition, indexing, content, and existing authority; no fixed results date is promised. Reporting follows your selected tier.",
     },
     {
       title: "AI Placements",
@@ -254,7 +162,7 @@ export default function AiSeoPackagesPage() {
 
       <div className="pt-32 pb-24 px-4 sm:px-6 md:px-12 max-w-7xl mx-auto space-y-20">
         {/* Breadcrumb Navigation */}
-        <div className="flex items-center justify-between border-b border-[#E0DDDB] pb-4">
+        <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between border-b border-[#E0DDDB] pb-4">
           <Link
             href="/services/ai-seo-agency"
             className="inline-flex items-center gap-2 text-xs font-mono-num text-[#585858] hover:text-[#161616] transition-colors"
@@ -275,11 +183,11 @@ export default function AiSeoPackagesPage() {
           </div>
 
           <h1 className="font-display text-4xl sm:text-6xl font-bold tracking-tight text-[#161616]">
-            AI SEO &amp; Video Search Packages
+            AI SEO Packages &amp; Pricing
           </h1>
 
           <p className="text-xl sm:text-2xl font-display font-medium text-[#303030]">
-            Choose the Search Strategy That Fits Where You Are
+            Compare Plans for AEO, GEO & Video Search
           </p>
 
           <p className="text-sm sm:text-base text-[#585858] font-body leading-relaxed max-w-2xl mx-auto">
@@ -289,6 +197,10 @@ export default function AiSeoPackagesPage() {
           <p className="text-sm text-[#585858] font-body">
             <Link href="/ai-seo" className="text-[#9F8BE7] font-bold underline hover:text-[#161616]">Understand our AI SEO methodology</Link> before choosing an implementation tier.
           </p>
+
+          <a href="#compare-plans" className="inline-flex items-center gap-2 rounded-full bg-[#161616] px-6 py-3 text-sm font-bold text-white hover:bg-[#303030] transition-colors">
+            Compare all five plans <ArrowUpRight className="w-4 h-4" aria-hidden="true" />
+          </a>
 
           <div className="inline-block p-3 rounded-2xl bg-white border border-[#E0DDDB] text-xs font-mono-num text-[#161616] font-bold shadow-xs">
             Starting from <span className="text-emerald-600 font-black text-sm">$349</span> for a one-time AI SEO audit. Monthly retainers available for ongoing growth.
@@ -313,13 +225,48 @@ export default function AiSeoPackagesPage() {
           </div>
         </section>
 
+        <section id="compare-plans" aria-labelledby="plan-comparison-heading" className="scroll-mt-32 space-y-5">
+          <div className="space-y-2">
+            <h2 id="plan-comparison-heading" className="font-display text-3xl sm:text-4xl font-bold tracking-tight text-[#161616]">Compare AI SEO Packages at a Glance</h2>
+            <p className="text-sm text-[#585858]">Compare the published scope before reviewing each plan below. All prices are in USD.</p>
+          </div>
+          <div role="region" aria-label="AI SEO plan comparison, scroll horizontally on smaller screens" tabIndex={0} className="overflow-x-auto rounded-3xl border border-[#E0DDDB] bg-white focus-visible:outline-2 focus-visible:outline-[#6B46C1]">
+            <table className="w-full min-w-[850px] text-left text-sm">
+              <caption className="sr-only">AI SEO package prices, page coverage, content clusters, and reporting cadence</caption>
+              <thead className="bg-[#FAF7F6]">
+                <tr>
+                  <th scope="col" className="p-5 font-semibold">Scope</th>
+                  {packages.map((pkg) => <th key={pkg.id} scope="col" className="p-5 font-semibold"><a href={`#${pkg.id}`} className="text-[#6B46C1] underline underline-offset-4">{pkg.name}</a></th>)}
+                </tr>
+              </thead>
+              <tbody className="text-[#303030]">
+                <tr className="border-t border-[#E0DDDB]">
+                  <th scope="row" className="p-5 font-semibold">Price</th>
+                  {packages.map((pkg) => <td key={pkg.id} className="p-5"><span className="block font-bold text-[#161616]">{pkg.price}</span><span className="text-xs">{pkg.pricePeriod}</span></td>)}
+                </tr>
+                {([
+                  ["Page coverage", "pages"],
+                  ["Content clusters", "content"],
+                  ["Reporting", "reporting"],
+                ] as const).map(([label, field]) => (
+                  <tr key={field} className="border-t border-[#E0DDDB]">
+                    <th scope="row" className="p-5 font-semibold">{label}</th>
+                    {packages.map((pkg) => <td key={pkg.id} className="p-5 align-top">{pkg.comparison[field]}</td>)}
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <p className="text-xs text-[#585858] leading-relaxed">The Audit provides recommendations; monthly plans include implementation. Dedicated video production and channel management are quoted separately. Additional pages or content require an agreed scope.</p>
+        </section>
+
         {/* 2. Packages Pricing Grid */}
         <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch">
           {packages.map((pkg, index) => (
             <div
               key={pkg.id}
               id={pkg.id}
-              className={`rounded-3xl p-8 flex flex-col justify-between transition-all duration-300 relative ${
+              className={`scroll-mt-32 rounded-3xl p-8 flex flex-col justify-between transition-all duration-300 relative ${
                 pkg.popular
                   ? "bg-[#161616] text-white border-2 border-[#9F8BE7] shadow-xl scale-[1.02]"
                   : "bg-white text-[#161616] border border-[#E0DDDB] shadow-xs hover:border-[#9F8BE7]"
@@ -349,7 +296,7 @@ export default function AiSeoPackagesPage() {
                     {pkg.tagline}
                   </p>
                   {index === 0 ? (
-                    <Link href="/ai-seo" className="mt-3 inline-block text-xs font-bold text-[#9F8BE7] underline hover:text-[#161616]">
+                    <Link href="#compare-plans" className="mt-3 inline-block text-xs font-bold text-[#9F8BE7] underline hover:text-[#161616]">
                       See what&apos;s included in each tier
                     </Link>
                   ) : null}
@@ -398,7 +345,7 @@ export default function AiSeoPackagesPage() {
               {/* Action Button */}
               <div className="pt-8 mt-6 border-t border-[#E0DDDB]/30">
                 <Link
-                  href={`/contact?package=aiseo-${pkg.id}`}
+                  href={`/contact?package=${pkg.id}`}
                   className={`w-full py-3.5 rounded-full font-display font-bold text-xs flex items-center justify-center gap-2 transition-all cursor-pointer ${
                     pkg.popular
                       ? "bg-[#9F8BE7] text-[#161616] hover:bg-[#b4a3f7] shadow-[0_4px_15px_rgba(159,139,231,0.4)]"
@@ -483,30 +430,30 @@ export default function AiSeoPackagesPage() {
           </Link>
 
           <Link
-            href="/services/ai-automation"
+            href="/work/happy-knot-creations-shopify-storefront"
             className="p-6 rounded-3xl bg-white border border-[#E0DDDB] hover:border-[#9F8BE7] space-y-2 transition-all group shadow-xs"
           >
-            <span className="text-xs font-mono-num text-emerald-600 font-bold">COMPLEMENTARY</span>
+            <span className="text-xs font-mono-num text-emerald-600 font-bold">PROJECT SCOPE</span>
             <h3 className="font-display text-base font-bold text-[#161616] group-hover:text-[#9F8BE7] flex items-center justify-between">
-              <span>AI Automation Services</span>
+              <span>Happy Knot Creations</span>
               <ArrowUpRight className="w-4 h-4 text-[#585858] group-hover:text-[#9F8BE7]" />
             </h3>
             <p className="text-xs text-[#585858]">
-              Automate CRM lead routing, customer support bots, and internal ops.
+              Review our Shopify, store management, and AI SEO project scope for a handmade crochet business.
             </p>
           </Link>
 
           <Link
-            href="/branding-packages"
+            href="/insights/how-to-optimize-for-google-ai-overviews"
             className="p-6 rounded-3xl bg-white border border-[#E0DDDB] hover:border-[#9F8BE7] space-y-2 transition-all group shadow-xs"
           >
-            <span className="text-xs font-mono-num text-purple-600 font-bold">BRAND IDENTITY</span>
+            <span className="text-xs font-mono-num text-purple-600 font-bold">SEARCH GUIDE</span>
             <h3 className="font-display text-base font-bold text-[#161616] group-hover:text-[#9F8BE7] flex items-center justify-between">
-              <span>Branding Packages</span>
+              <span>Google AI Overviews Guide</span>
               <ArrowUpRight className="w-4 h-4 text-[#585858] group-hover:text-[#9F8BE7]" />
             </h3>
             <p className="text-xs text-[#585858]">
-              Get a memorable brand identity and custom logo starting from $299.
+              Learn how technical access, clear answers, and supporting evidence contribute to search readiness.
             </p>
           </Link>
         </section>
@@ -521,7 +468,7 @@ export default function AiSeoPackagesPage() {
           </p>
           <div className="flex flex-wrap items-center justify-center gap-4 pt-2">
             <Link
-              href="/contact?type=aiseo"
+              href="/contact?package=ai-seo-audit"
               className="px-8 py-4 rounded-full bg-[#9F8BE7] text-[#161616] font-display font-bold text-sm hover:bg-[#b4a3f7] transition-all shadow-md"
             >
               Request an AI SEO Audit
