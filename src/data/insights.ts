@@ -853,7 +853,7 @@ export const INSIGHTS: InsightArticle[] = [
     },
     caseStudyCta: {
       title: "Happy Knot Creations Shopify Storefront",
-      desc: "Explore how we built a custom, high-converting D2C Shopify storefront optimized for search and mobile commerce.",
+      desc: "Explore the documented Shopify storefront, store-management scope, and AI SEO work delivered for Happy Knot Creations.",
       href: "/work/happy-knot-creations-shopify-storefront",
       buttonText: "Read Storefront Case Study"
     }
@@ -1473,8 +1473,8 @@ export const INSIGHTS: InsightArticle[] = [
       { id: "direct-comparison", title: "Shopify vs Etsy: Side-by-Side Comparison (2026)" },
       { id: "fee-structure", title: "Fee Structures: Which Platform Takes Less of Your Profit?" },
       { id: "traffic-control", title: "Built-In Marketplace Traffic vs Complete Brand Control" },
-      { id: "case-study-happy-knot", title: "Case Study: How Happy Knot Creations Scaled on Shopify" },
-      { id: "hybrid-strategy", title: "The Winning Hybrid Strategy: Using Both Together" },
+      { id: "case-study-happy-knot", title: "Case Study: Happy Knot Creations on Shopify" },
+      { id: "hybrid-strategy", title: "Hybrid Strategy: Using Both Together" },
       { id: "verdict", title: "Final Verdict: Which Platform Should You Choose?" },
     ],
     sections: [
@@ -1520,14 +1520,14 @@ export const INSIGHTS: InsightArticle[] = [
       },
       {
         id: "case-study-happy-knot",
-        h2: "Case Study: How Happy Knot Creations Scaled on Shopify",
+        h2: "Case Study: Happy Knot Creations on Shopify",
         body: [
-          "A real-world example of this transition is **Happy Knot Creations** (happyknotcreations.com), an artisanal brand specializing in handmade crochet plushies, custom amigurumi, and nursery keepsakes.",
-          "Originally subject to marketplace listing fees, algorithm shifts, and competitor ads on similar listings, Happy Knot partnered with Unified Branding Experts to launch a dedicated Shopify 2.0 direct-to-consumer flagship store.",
+          "A real-world Shopify example is **Happy Knot Creations** (happyknotcreations.com). Unified Branding Experts' documented scope covers its Shopify storefront, ongoing store management, and AI SEO work.",
+          "The available project record does not establish a verified marketplace migration or before-and-after sales performance, so this example focuses on the work that can be documented.",
           "Key architectural elements delivered:",
           "• **Custom Mobile-First Catalog**: Clean categorization for plushies, custom commissions, and collector items.",
-          "• **One-Click Shop Pay Checkout**: Frictionless payment processing eliminating cart drop-offs.",
-          "• **Zero Marketplace Commission**: Direct customer relationship ownership and higher profit margins on bespoke handmade creations.",
+          "• **Commerce Experience**: Storefront work designed to support a clear mobile shopping journey.",
+          "• **Direct Storefront**: A branded Shopify destination where the business can present its catalog and customer experience directly.",
         ],
         callout: {
           title: "Live Storefront Reference",
@@ -1537,9 +1537,9 @@ export const INSIGHTS: InsightArticle[] = [
       },
       {
         id: "hybrid-strategy",
-        h2: "The Winning Hybrid Strategy: Using Both Together",
+        h2: "Hybrid Strategy: Using Both Together",
         body: [
-          "The most profitable eCommerce brands use Etsy as a top-of-funnel customer acquisition channel to capture marketplace searches, while directing repeat customers to their custom Shopify flagship store via package inserts and VIP rewards.",
+          "Some eCommerce businesses use marketplaces for discovery while maintaining a branded Shopify storefront for direct customer relationships. The right channel mix depends on margins, customer acquisition costs, platform rules and the business model. Where permitted, merchants can use compliant packaging and post-purchase touchpoints to build brand recognition and VIP rewards.",
         ],
       },
       {
@@ -1568,7 +1568,7 @@ export const INSIGHTS: InsightArticle[] = [
     ],
     caseStudyCta: {
       title: "Real Client Spotlight: Happy Knot Creations",
-      desc: "See how Happy Knot Creations (happyknotcreations.com) scaled their handcrafted crochet plushies and amigurumi from marketplace selling to a custom Shopify 2.0 direct-to-consumer flagship.",
+      desc: "See the documented Shopify storefront, store-management scope, and AI SEO work for Happy Knot Creations.",
       href: "/work/happy-knot-creations-shopify-storefront",
       buttonText: "Read Happy Knot Case Study",
     },
