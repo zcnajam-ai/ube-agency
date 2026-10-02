@@ -8,12 +8,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // 1. Core & Research Pages
   const coreRoutes: MetadataRoute.Sitemap = [
-    { url: baseUrl },
-    { url: `${baseUrl}/services` },
+    { url: baseUrl, lastModified: new Date("2026-10-03") },
+    { url: `${baseUrl}/services`, lastModified: new Date("2026-10-03") },
     { url: `${baseUrl}/packages` },
-    { url: `${baseUrl}/work` },
-    { url: `${baseUrl}/about` },
-    { url: `${baseUrl}/insights` },
+    { url: `${baseUrl}/work`, lastModified: new Date("2026-10-03") },
+    { url: `${baseUrl}/about`, lastModified: new Date("2026-10-03") },
+    { url: `${baseUrl}/insights`, lastModified: new Date("2026-10-03") },
     { url: `${baseUrl}/ai-seo`, lastModified: new Date("2026-09-14") },
     { url: `${baseUrl}/shopify`, lastModified: new Date("2026-09-22") },
     { url: `${baseUrl}/tiktok-shop`, lastModified: new Date("2026-09-22") },
@@ -64,8 +64,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
     return true;
   });
 
+  const refreshedInsightSlugs = new Set([
+    "how-much-does-professional-logo-design-cost",
+    "shopify-store-setup-cost-2026",
+  ]);
+
   const insightRoutes: MetadataRoute.Sitemap = uniqueInsights.map((i) => ({
     url: `${baseUrl}/insights/${i.slug}`,
+    ...(refreshedInsightSlugs.has(i.slug)
+      ? { lastModified: new Date("2026-10-03") }
+      : {}),
   }));
 
   return [

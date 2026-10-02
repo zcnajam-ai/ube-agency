@@ -867,7 +867,7 @@ export const INSIGHTS: InsightArticle[] = [
     category: "Branding",
     readTime: "7 min read",
     publishedAt: "August 24, 2026",
-    updatedAt: "August 28, 2026",
+    updatedAt: "October 3, 2026",
     author: {
       name: "Senior Creative Director",
       role: "Brand Identity & Strategy",
@@ -878,7 +878,7 @@ export const INSIGHTS: InsightArticle[] = [
     coverImage: "/images/service-icons/brand-identity.webp",
     primaryIntent: "logo design cost, professional logo design cost, custom logo design price",
     quickAnswer:
-      "In 2026, professional custom logo design costs between $299 and $2,499 for small-to-medium businesses working with specialized branding agencies. DIY generators cost $20–$50 but provide generic clip-art without trademark rights, while global enterprise branding firms charge $10,000 to $50,000+ for multi-market identity systems.",
+      "In 2026, professional custom logo design costs between $299 and $2,499 for small-to-medium businesses working with specialized branding agencies. DIY generators may rely on templates or AI-assisted output; exclusivity, copyright protection and trademark registrability depend on the specific design, source rights, human authorship, distinctiveness and potential conflicts. Global enterprise branding firms may charge $10,000 to $50,000+ for multi-market identity systems.",
     tableOfContents: [
       { id: "cost-overview", title: "2026 Logo Design Cost Tiers at a Glance" },
       { id: "diy-vs-freelance-vs-agency", title: "DIY Generators vs Freelancers vs Specialized Agencies" },
@@ -908,13 +908,13 @@ export const INSIGHTS: InsightArticle[] = [
         id: "diy-vs-freelance-vs-agency",
         h2: "DIY Generators vs Freelancers vs Specialized Agencies",
         body: [
-          "Cheap AI logo generators combine stock icons and generic fonts. Because hundreds of other businesses share the exact same template icons, you cannot trademark AI-generated marks, leaving your brand legally unprotected.",
+          "Low-cost logo generators may combine stock assets, templates or AI-generated elements. Non-exclusive assets can make a mark harder to distinguish, and legal protection depends on the facts. The U.S. Copyright Office evaluates human authorship in works containing AI-generated material, while trademark registrability is a separate USPTO analysis that considers distinctiveness, use and conflicts with existing marks.",
           "Freelance platforms can offer decent value, but quality is inconsistent. Freelancers often fail to provide complete vector master files (AI, EPS, SVG) or color palette guides (CMYK, RGB, Pantone), leading to blurry results when ordering apparel embroidery or billboard signage.",
           "Working with a specialized agency like Unified Branding Experts ensures senior human designers research your competitive landscape, explore 2 to 6 unique handcrafted concepts, and transfer 100% intellectual property ownership upon completion.",
         ],
         callout: {
           title: "Critical Trademark Notice",
-          text: "Under United States and international copyright law, purely AI-generated graphics cannot be registered for exclusive copyright ownership. Professional human vector design is required for trademark protection.",
+          text: "In the United States, copyright generally protects human-authored expression, including qualifying human-created elements in works that also contain AI-generated material. Trademark protection is a separate analysis based on factors such as distinctiveness and likelihood of confusion. Review the U.S. Copyright Office AI guidance and USPTO trademark guidance, and consult qualified counsel for advice on a specific mark.",
           type: "warning",
         },
       },
@@ -1210,7 +1210,7 @@ export const INSIGHTS: InsightArticle[] = [
     ],
     relatedSlugs: [
       "how-to-choose-the-best-website-design-company",
-      "shopify-store-setup-cost",
+      "shopify-store-setup-cost-2026",
       "ai-seo-aeo-geo-guide",
     ],
     serviceCta: {
@@ -1562,7 +1562,7 @@ export const INSIGHTS: InsightArticle[] = [
       },
     ],
     relatedSlugs: [
-      "shopify-store-setup-cost",
+      "shopify-store-setup-cost-2026",
       "how-to-start-an-etsy-shop",
       "tiktok-shop-vs-shopify",
     ],
@@ -1791,7 +1791,7 @@ export const INSIGHTS: InsightArticle[] = [
     ],
     relatedSlugs: [
       "tiktok-shop-vs-shopify",
-      "shopify-store-setup-cost",
+      "shopify-store-setup-cost-2026",
       "how-to-start-an-etsy-shop",
     ],
     serviceCta: {
@@ -1899,7 +1899,7 @@ export const INSIGHTS: InsightArticle[] = [
     ],
     relatedSlugs: [
       "how-to-start-a-tiktok-shop-2026",
-      "shopify-store-setup-cost",
+      "shopify-store-setup-cost-2026",
       "shopify-vs-etsy",
     ],
     serviceCta: {
@@ -1966,7 +1966,7 @@ export const INSIGHTS: InsightArticle[] = [
       },
     ],
     relatedSlugs: [
-      "shopify-store-setup-cost",
+      "shopify-store-setup-cost-2026",
       "shopify-vs-etsy",
       "tiktok-shop-vs-shopify",
     ],
@@ -2059,7 +2059,7 @@ export const INSIGHTS: InsightArticle[] = [
   "category": "Shopify & eCommerce",
   "readTime": "8 min read",
   "publishedAt": "April 15, 2026",
-  "updatedAt": "April 18, 2026",
+  "updatedAt": "October 3, 2026",
   "author": {
     "name": "Shopify Specialist",
     "role": "Shopify & eCommerce",
@@ -2070,7 +2070,7 @@ export const INSIGHTS: InsightArticle[] = [
     "role": "eCommerce Engineering Audit Team",
     "avatar": "/images/logo/ube-png-black.png"
   },
-  "lastReviewedDate": "October 2, 2026",
+  "lastReviewedDate": "October 3, 2026",
   "summary": "Detailed 2026 breakdown of Shopify store setup costs, including design, development, apps, themes, payment processing, and agency pricing tiers.",
   "coverImage": "/images/service-icons/shopify-storefront.webp",
   "primaryIntent": "Commercial budgeting and platform cost planning for Shopify storefronts.",
@@ -2204,7 +2204,7 @@ export const INSIGHTS: InsightArticle[] = [
   },
   "caseStudyCta": {
     "title": "Happy Knot Creations Shopify Storefront",
-    "desc": "See how custom theme architecture and optimized checkout expanded online revenue for Happy Knot Creations.",
+    "desc": "See the documented Shopify storefront, store-management scope, and AI SEO work for Happy Knot Creations without unverified revenue claims.",
     "href": "/work/happy-knot-creations-shopify-storefront",
     "buttonText": "Read Case Study"
   }
