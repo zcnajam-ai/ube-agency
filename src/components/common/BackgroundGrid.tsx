@@ -18,6 +18,7 @@ export default function BackgroundGrid({
   return (
     <div
       aria-hidden="true"
+      data-background-grid=""
       className={`pointer-events-none absolute inset-0 select-none ${className}`}
       style={{
         backgroundImage: `
