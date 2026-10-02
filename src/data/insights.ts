@@ -729,7 +729,7 @@ export const INSIGHTS: InsightArticle[] = [
           "<strong>10. Optimize Product Images for Search and AI Discovery:</strong> Provide high-quality photography, multiple angles, modern formats (WebP), and descriptive alt text (e.g. <em>'Men's black waterproof trail running shoe, side view'</em>).",
           "<strong>11. Complete Shipping, Returns and Store Policies:</strong> Maintain clear Shipping, Return/Refund, Privacy, Terms, and Contact policy pages. Shopify requires core store policies for participation in agentic storefront experiences.",
           "<strong>12. Use Shopify Knowledge Base Where Appropriate:</strong> Utilize Shopify's Knowledge Base app to review and customize store FAQs used by AI shopping agents, ensuring policy and store answers remain accurate.",
-          "<strong>13. Strengthen Brand and Store Entity Signals:</strong> Communicate brand story, contact info, real reviews, and Organization structured data so search engines recognize your store as an established brand. For example, in our custom <a href=\"/work/happy-knot-creations-shopify-storefront\" className=\"text-[#9F8BE7] underline font-medium hover:text-[#161616]\">Happy Knot Creations D2C Shopify storefront</a>, unifying brand visual identity with clean Product schema and structured collection taxonomy strengthened mobile user experience and search discoverability.",
+          "<strong>13. Strengthen Brand and Store Entity Signals:</strong> Communicate brand story, contact info, real reviews, and Organization structured data so search engines recognize your store as an established brand. For example, our documented <a href=\"/work/happy-knot-creations-shopify-storefront\" className=\"text-[#9F8BE7] underline font-medium hover:text-[#161616]\">Happy Knot Creations Shopify storefront</a> shows how clear collection structure, product information, and custom-order entry points can support customer discovery without relying on unverified ranking or revenue claims.",
           "<strong>14. Build Supporting Informational Content:</strong> Publish educational buying guides (e.g. <em>'Best Golf Polo Materials for Hot Weather'</em>) that naturally link internally to commercial collections and products.",
           "<strong>15. Build External Product and Brand Authority:</strong> Earn genuine customer reviews, editorial mentions, product reviews, and creator coverage to provide independent corroboration across the web."
         ]
@@ -853,7 +853,7 @@ export const INSIGHTS: InsightArticle[] = [
     },
     caseStudyCta: {
       title: "Happy Knot Creations Shopify Storefront",
-      desc: "Explore how we built a custom, high-converting D2C Shopify storefront optimized for search and mobile commerce.",
+      desc: "Explore the documented Shopify storefront, store-management scope, and AI SEO work for Happy Knot Creations.",
       href: "/work/happy-knot-creations-shopify-storefront",
       buttonText: "Read Storefront Case Study"
     }
@@ -908,7 +908,7 @@ export const INSIGHTS: InsightArticle[] = [
         id: "diy-vs-freelance-vs-agency",
         h2: "DIY Generators vs Freelancers vs Specialized Agencies",
         body: [
-          "Low-cost logo generators may combine stock assets, templates or AI-generated elements. Non-exclusive assets can make a mark harder to distinguish, and legal protection depends on the facts. The U.S. Copyright Office evaluates human authorship in works containing AI-generated material, while trademark registrability is a separate USPTO analysis that considers distinctiveness, use and conflicts with existing marks.",
+          "Low-cost logo generators may combine stock assets, templates or AI-generated elements. Non-exclusive assets can make a mark harder to distinguish, and legal protection depends on the facts. The <a href=\"https://www.copyright.gov/ai/\" target=\"_blank\" rel=\"noopener noreferrer\" className=\"text-[#9F8BE7] underline font-medium hover:text-[#161616]\">U.S. Copyright Office</a> evaluates human authorship in works containing AI-generated material, while trademark registrability is a separate <a href=\"https://www.uspto.gov/trademarks/basics\" target=\"_blank\" rel=\"noopener noreferrer\" className=\"text-[#9F8BE7] underline font-medium hover:text-[#161616]\">USPTO</a> analysis that considers distinctiveness, use and conflicts with existing marks.",
           "Freelance platforms can offer decent value, but quality is inconsistent. Freelancers often fail to provide complete vector master files (AI, EPS, SVG) or color palette guides (CMYK, RGB, Pantone), leading to blurry results when ordering apparel embroidery or billboard signage.",
           "Working with a specialized agency like Unified Branding Experts ensures senior human designers research your competitive landscape, explore 2 to 6 unique handcrafted concepts, and transfer 100% intellectual property ownership upon completion.",
         ],
@@ -1473,7 +1473,7 @@ export const INSIGHTS: InsightArticle[] = [
       { id: "direct-comparison", title: "Shopify vs Etsy: Side-by-Side Comparison (2026)" },
       { id: "fee-structure", title: "Fee Structures: Which Platform Takes Less of Your Profit?" },
       { id: "traffic-control", title: "Built-In Marketplace Traffic vs Complete Brand Control" },
-      { id: "case-study-happy-knot", title: "Case Study: How Happy Knot Creations Scaled on Shopify" },
+      { id: "case-study-happy-knot", title: "Case Study: Happy Knot Creations on Shopify" },
       { id: "hybrid-strategy", title: "The Winning Hybrid Strategy: Using Both Together" },
       { id: "verdict", title: "Final Verdict: Which Platform Should You Choose?" },
     ],
@@ -1520,14 +1520,14 @@ export const INSIGHTS: InsightArticle[] = [
       },
       {
         id: "case-study-happy-knot",
-        h2: "Case Study: How Happy Knot Creations Scaled on Shopify",
+        h2: "Case Study: Happy Knot Creations on Shopify",
         body: [
-          "A real-world example of this transition is **Happy Knot Creations** (happyknotcreations.com), an artisanal brand specializing in handmade crochet plushies, custom amigurumi, and nursery keepsakes.",
-          "Originally subject to marketplace listing fees, algorithm shifts, and competitor ads on similar listings, Happy Knot partnered with Unified Branding Experts to launch a dedicated Shopify 2.0 direct-to-consumer flagship store.",
-          "Key architectural elements delivered:",
-          "• **Custom Mobile-First Catalog**: Clean categorization for plushies, custom commissions, and collector items.",
-          "• **One-Click Shop Pay Checkout**: Frictionless payment processing eliminating cart drop-offs.",
-          "• **Zero Marketplace Commission**: Direct customer relationship ownership and higher profit margins on bespoke handmade creations.",
+          "Happy Knot Creations (happyknotcreations.com) is a handmade crochet business with a Shopify storefront presenting ready-to-shop plushies, themed collections, gifts, and custom-order entry points.",
+          "UBE's confirmed project scope covers Shopify storefront development, ongoing store management, and AI SEO. No prior-platform migration, sales lift, ranking gain, or conversion improvement is claimed without supporting project records.",
+          "Current storefront elements visible in the public experience include:",
+          "• **Collection Structure**: Themed browsing paths for handmade products, gifts, and custom-order interests.",
+          "• **Shopify Purchase Flow**: Product pages, cart controls, and purchase actions within the live Shopify storefront.",
+          "• **Custom-Order Path**: A separate route for visitors who want to discuss a made-to-order crochet piece.",
         ],
         callout: {
           title: "Live Storefront Reference",
@@ -1568,7 +1568,7 @@ export const INSIGHTS: InsightArticle[] = [
     ],
     caseStudyCta: {
       title: "Real Client Spotlight: Happy Knot Creations",
-      desc: "See how Happy Knot Creations (happyknotcreations.com) scaled their handcrafted crochet plushies and amigurumi from marketplace selling to a custom Shopify 2.0 direct-to-consumer flagship.",
+      desc: "See the documented Shopify storefront, store-management scope, and AI SEO work for Happy Knot Creations.",
       href: "/work/happy-knot-creations-shopify-storefront",
       buttonText: "Read Happy Knot Case Study",
     },
@@ -2104,7 +2104,7 @@ export const INSIGHTS: InsightArticle[] = [
       "body": [
         "Budgeting for a Shopify storefront requires separating fixed platform fees from one-time design, development, and marketing investments.",
         "<strong>1. Shopify Platform Subscription:</strong> Monthly software access starting at $39/month for Basic Shopify when billed monthly.",
-        "<strong>2. Theme Selection:</strong> Free official themes vs premium Shopify Theme Store templates ($180–$380 one-time fee) vs bespoke Liquid custom themes.",
+        "<strong>2. Theme Selection:</strong> Free official themes vs paid Shopify Theme Store themes (pricing varies by theme) vs bespoke Liquid custom themes.",
         "<strong>3. Storefront Development & Customization:</strong> Professional setup, catalog structuring, payment integration, and responsive mobile optimization.",
         "<strong>4. Essential Third-Party Apps:</strong> Subscriptions for reviews, currency conversion, email marketing, and inventory routing ($20–$150/month).",
         "<strong>5. Domain & Payment Processing:</strong> Custom `.com` domain ($15/year) and standard online credit card rates."
@@ -2149,10 +2149,10 @@ export const INSIGHTS: InsightArticle[] = [
       "id": "platform-subscriptions-and-fees",
       "h2": "Shopify Platform Subscriptions & Transaction Fees",
       "body": [
-        "Official Shopify plan pricing for U.S. merchants in 2026 includes:",
+        "As of October 3, 2026, <a href=\"https://www.shopify.com/pricing\" target=\"_blank\" rel=\"noopener noreferrer\" className=\"text-[#9F8BE7] underline font-medium hover:text-[#161616]\">Shopify's U.S. pricing page</a> lists:",
         "• <strong>Basic Shopify:</strong> $39/month (or $29/mo billed annually). Online credit card rate: 2.9% + 30¢.",
-        "• <strong>Shopify (Standard):</strong> $105/month (or $79/mo billed annually). Online credit card rate: 2.6% + 30¢.",
-        "• <strong>Advanced Shopify:</strong> $399/month (or $299/mo billed annually). Online credit card rate: 2.4% + 30¢.",
+        "• <strong>Grow:</strong> $105/month (or $79/mo billed annually). Online credit card rate: 2.7% + 30¢.",
+        "• <strong>Advanced:</strong> $399/month (or $299/mo billed annually). Online credit card rate: 2.5% + 30¢.",
         "Using Shopify Payments waives third-party transaction fees. If using an external gateway (like PayPal or Stripe directly), Shopify adds an additional 0.6%–2.0% fee depending on your plan."
       ]
     },
@@ -2161,7 +2161,7 @@ export const INSIGHTS: InsightArticle[] = [
       "h2": "DIY Build vs. Professional Agency Engineering",
       "body": [
         "While building a store yourself saves initial capital, improper theme setup, bloated app stacks, and slow mobile loading often reduce conversion rates.",
-        "Partnering with a specialized agency ensures clean mobile usability, sub-second load times, structured schema, and a store layout engineered to convert visitors into customers from day one."
+        "A specialized agency can improve mobile usability, reduce unnecessary app and theme overhead, implement appropriate structured data, and build a clearer purchase journey. Actual performance and conversion outcomes depend on the final theme, apps, catalog, traffic quality, offer, and ongoing store operations."
       ]
     },
     {
