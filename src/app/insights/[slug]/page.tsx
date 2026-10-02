@@ -39,11 +39,18 @@ function toSchemaDate(value: string): string {
     return normalized;
   }
 
-  const [month, year] = normalized.split(/\s+/);
+  const parts = normalized.split(/\s+/);
+  const month = parts[0];
+  const year = parts[parts.length - 1];
   const monthNumber = MONTH_NUMBER[month];
 
   if (!monthNumber || !/^\d{4}$/.test(year)) {
     throw new Error(`Invalid insight date: ${value}`);
+  }
+
+  if (parts.length >= 3) {
+    const day = parts[1].replace(",", "").padStart(2, "0");
+    return `${year}-${monthNumber}-${day}`;
   }
 
   return `${year}-${monthNumber}`;
