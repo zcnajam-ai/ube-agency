@@ -5,6 +5,7 @@ import { Phone, Mail, MapPin, Sparkles, Send, CheckCircle2, ShieldCheck } from "
 import confetti from "canvas-confetti";
 import { COMPANY_INFO } from "@/data/company";
 import { trackLeadSubmit, trackPhoneClick, trackEmailClick } from "@/lib/analytics";
+import SocialProfiles from "@/components/common/SocialProfiles";
 
 export default function ContactClient() {
   const [formData, setFormData] = useState({
@@ -186,6 +187,12 @@ export default function ContactClient() {
               <CheckCircle2 className="w-4 h-4 text-emerald-600" />
               <span>Full project scope proposal tailored to your goals</span>
             </div>
+          </div>
+
+          <div className="pt-6 border-t border-[#E0DDDB] space-y-3">
+            <h2 className="font-display text-lg font-bold text-[#161616]">Find us online</h2>
+            <p className="text-xs leading-relaxed text-[#585858]">Connect with us on social media and explore our company profiles.</p>
+            <SocialProfiles variant="light" />
           </div>
         </div>
 

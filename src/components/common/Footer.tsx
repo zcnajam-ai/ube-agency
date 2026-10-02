@@ -12,11 +12,10 @@ import { useScroll } from "@/components/providers/SmoothScrollProvider";
 import {
   TrustpilotOfficialIcon,
   GoogleOfficialIcon,
-  TikTokOfficialIcon,
-  MetaOfficialIcon,
 } from "./OfficialBrandLogos";
 import { Heading3DSparkle } from "./Brand3DIcons";
 import { trackPhoneClick, trackEmailClick } from "@/lib/analytics";
+import SocialProfiles from "./SocialProfiles";
 
 export default function Footer() {
   const { scrollTo, openProjectModal } = useScroll();
@@ -255,6 +254,14 @@ export default function Footer() {
               </div>
             </div>
           </div>
+        </div>
+
+        <div className="border-t border-white/10 pt-8 flex flex-col lg:flex-row lg:items-start gap-5 lg:gap-12">
+          <div className="lg:w-56 shrink-0">
+            <h4 className="font-display text-sm font-bold text-white">Connect with UBE</h4>
+            <p className="mt-1 text-xs leading-relaxed text-[#ACACAC]">Social channels and company profiles.</p>
+          </div>
+          <SocialProfiles />
         </div>
 
         {/* Monolithic Headline */}
