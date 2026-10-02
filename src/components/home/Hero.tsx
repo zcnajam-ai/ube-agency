@@ -15,7 +15,7 @@ import HeroVideoClient from "./HeroVideoClient";
 import HeroInteractiveCTA from "./HeroInteractiveCTA";
 import HeroDotsClient from "./HeroDotsClient";
 
-export default function Hero() {
+export default function Hero({ gradientPreview = false }: { gradientPreview?: boolean }) {
   const priorityPills = [
     { label: "Shopify & Dropshipping", href: "/services/shopify-development", icon: <Shopify3DIcon size={18} /> },
     { label: "TikTok Shop & Meta Ads", href: "/tiktok-marketing-packages", icon: <TikTok3DIcon size={18} /> },
@@ -26,15 +26,19 @@ export default function Hero() {
 
   return (
     <section
-      className="relative pt-28 sm:pt-36 pb-16 sm:pb-24 px-4 sm:px-6 md:px-12 bg-[#FAF7F6] overflow-hidden border-b border-[#E0DDDB]"
+      className={`relative pt-28 sm:pt-36 pb-16 sm:pb-24 px-4 sm:px-6 md:px-12 overflow-hidden border-b border-[#E0DDDB] ${gradientPreview ? "bg-transparent" : "bg-[#FAF7F6]"}`}
     >
       {/* 1. Ambient Background Layers */}
-      <BackgroundGrid opacity={0.03} size={72} maskRadial />
-      <PurpleGlowField position="top-right" size={700} opacity={0.08} />
-      <OversizedTypography text="COMMERCE" direction="left" className="top-6 opacity-40" />
+      {!gradientPreview && (
+        <>
+          <BackgroundGrid opacity={0.03} size={72} maskRadial />
+          <PurpleGlowField position="top-right" size={700} opacity={0.08} />
+          <OversizedTypography text="COMMERCE" direction="left" className="top-6 opacity-40" />
+        </>
+      )}
 
       {/* 1b. Floating Particle Dots (above grid, below content) */}
-      <HeroDotsClient />
+      {!gradientPreview && <HeroDotsClient />}
 
       {/* 2. Foreground Hero Content Container */}
       <div className="relative z-10 max-w-7xl mx-auto">
