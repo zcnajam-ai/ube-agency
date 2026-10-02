@@ -7,7 +7,8 @@
 }
 
 /* Retire the legacy grid wherever it appears so the background stays clean. */
-.site-gradient-page [data-background-grid] { display: none; }
+.site-gradient-page [data-background-grid],
+.site-gradient-page [data-background-typography] { display: none; }
 
 @layer base {
   :root {
