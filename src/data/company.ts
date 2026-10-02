@@ -28,6 +28,9 @@ export interface CompanyInfo {
     instagram: string;
     threads: string;
     pinterest: string;
+    x: string;
+    github: string;
+    clutch: string;
   };
   ratings: {
     trustpilot: {
@@ -67,10 +70,13 @@ export const COMPANY_INFO: CompanyInfo = {
   stats: [],
   socials: {
     linkedin: "https://www.linkedin.com/company/unified-branding-experts/",
-    facebook: "https://www.facebook.com/profile.php?id=61584754554542",
+    facebook: "https://www.facebook.com/Unifiedbrandingexperts/",
     instagram: "https://www.instagram.com/unifiedbrandingexperts",
     threads: "https://www.threads.com/@unifiedbrandingexperts",
     pinterest: "https://www.pinterest.com/unifiedbrandingexperts/",
+    x: "https://x.com/unifiedbrandin",
+    github: "https://github.com/unifiedbrandingexperts",
+    clutch: "https://clutch.co/profile/unified-branding-experts",
   },
   ratings: {
     trustpilot: {
