@@ -1,3 +1,4 @@
+import RelatedServiceLinks from "@/components/services/RelatedServiceLinks";
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -556,6 +557,7 @@ export default function BrandingServicePage() {
           </Link>
         </div>
       </section>
-    </div>
+
+      <RelatedServiceLinks slug="branding" />    </div>
   );
 }

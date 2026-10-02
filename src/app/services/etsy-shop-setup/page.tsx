@@ -1,3 +1,4 @@
+import RelatedServiceLinks from "@/components/services/RelatedServiceLinks";
 import React from "react";
 import ServiceSchema from "@/components/seo/ServiceSchema";
 import StoreManagementLink from "@/components/services/StoreManagementLink";
@@ -428,6 +429,7 @@ export default function EtsyShopSetupPage() {
         </div>
       </section>
       <StoreManagementLink />
-    </div>
+
+      <RelatedServiceLinks slug="etsy-shop-setup" />    </div>
   );
 }

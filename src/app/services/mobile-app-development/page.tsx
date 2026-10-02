@@ -1,3 +1,4 @@
+import RelatedServiceLinks from "@/components/services/RelatedServiceLinks";
 import React from "react";
 import ServiceSchema from "@/components/seo/ServiceSchema";
 import Link from "next/link";
@@ -554,6 +555,7 @@ export default function MobileAppServicePage() {
           </a>
         </div>
       </section>
-    </div>
+
+      <RelatedServiceLinks slug="mobile-app-development" />    </div>
   );
 }

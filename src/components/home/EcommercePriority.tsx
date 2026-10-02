@@ -138,7 +138,7 @@ export default function EcommercePriority() {
                 </span>
               </div>
               <p className="text-xs text-[#585858] font-body leading-relaxed">
-                Bespoke D2C plushie &amp; amigurumi storefront featuring custom Liquid sections, mobile-first product filtering, and instant Shop Pay checkout.
+                Shopify storefront for handmade plushies and amigurumi, with store creation, product content and graphics, AI SEO, and ongoing management.
               </p>
               <div className="pt-2 border-t border-[#E0DDDB] flex items-center justify-center gap-4 text-xs font-mono-num">
                 <Link

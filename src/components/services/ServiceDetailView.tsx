@@ -30,9 +30,9 @@ const SERVICE_PACKAGE_MAP: Record<
     heroImage: "/images/service-icons/responsive-web-design.webp",
   },
   "social-media-management": {
-    packageUrl: "/tiktok-marketing-packages",
-    packageText: "Explore Video Marketing Plans",
-    starting: "From $299/mo",
+    packageUrl: "/packages",
+    packageText: "Explore Service Packages",
+    starting: "Custom Scope",
     heroImage: "/images/service-icons/content-writing.webp",
   },
 };

@@ -1,3 +1,4 @@
+import RelatedServiceLinks from "@/components/services/RelatedServiceLinks";
 import { SHOPIFY_SETUP_PRICE_LABEL } from "@/data/commerce-pricing";
 import React from "react";
 import StoreManagementLink from "@/components/services/StoreManagementLink";
@@ -863,6 +864,7 @@ export default function EcommerceGrowthServicePage() {
         </div>
       </section>
       <StoreManagementLink />
-    </main>
+
+      <RelatedServiceLinks slug="ecommerce" />    </main>
   );
 }

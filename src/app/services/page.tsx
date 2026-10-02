@@ -94,7 +94,7 @@ export default function ServicesPage() {
                       {sub.kicker}
                     </span>
                     <h3 className="font-display text-xl font-bold text-[#161616] group-hover:text-[#9F8BE7] transition-colors">
-                      <Link href={`/services/${sub.slug}`}>{sub.title}</Link>
+                      <Link href={sub.slug === "tiktok-shop-setup" ? "/tiktok-shop" : `/services/${sub.slug}`}>{sub.title}</Link>
                     </h3>
                     <p className="text-xs text-[#585858] font-body leading-relaxed line-clamp-3">
                       {sub.summary}
@@ -106,7 +106,7 @@ export default function ServicesPage() {
                       {sub.deliverableScope}
                     </span>
                     <Link
-                      href={`/services/${sub.slug}`}
+                      href={sub.slug === "tiktok-shop-setup" ? "/tiktok-shop" : `/services/${sub.slug}`}
                       className="text-xs font-display font-bold text-[#161616] group-hover:text-[#9F8BE7] transition-colors flex items-center gap-1"
                     >
                       <span>Explore</span>
