@@ -40,6 +40,17 @@ if (typeof setInterval !== "undefined") {
 
 export async function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
+  const host = request.headers.get("host")?.split(":")[0].toLowerCase() || "";
+
+  // Canonical-host enforcement for production deployments only.
+  // Preview deployments remain accessible and are noindex via root metadata.
+  if (process.env.VERCEL_ENV === "production" && host.endsWith(".vercel.app")) {
+    const canonicalUrl = new URL(
+      `${pathname}${request.nextUrl.search}`,
+      "https://unifiedbrandingexperts.com"
+    );
+    return NextResponse.redirect(canonicalUrl, 308);
+  }
 
   // Intercept all API routes
   if (pathname.startsWith("/api/")) {
@@ -97,5 +108,7 @@ export async function proxy(request: NextRequest) {
 }
 
 export const config = {
-  matcher: "/api/:path*",
+  // Run on public page requests so production Vercel aliases can be canonicalized,
+  // while excluding framework assets that do not need host-level SEO redirects.
+  matcher: ["/((?!_next/static|_next/image|favicon.ico).*)"],
 };
