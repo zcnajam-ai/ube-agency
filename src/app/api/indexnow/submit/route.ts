@@ -7,10 +7,21 @@ export async function POST() {
   const key = process.env.INDEXNOW_KEY || "0200cab578334723aaa039320bb17977";
   const keyLocation = `https://${host}/api/indexnow`;
 
-  const insightUrls = INSIGHTS.map((i) => `https://${host}/insights/${i.slug}`);
-  const serviceUrls = ALL_SERVICES.map((s) => `https://${host}/services/${s.slug}`);
+  const legacyInsightSlugs = new Set([
+    "how-to-start-a-tiktok-shop",
+    "shopify-store-setup-cost",
+  ]);
+
+  const insightUrls = INSIGHTS
+    .filter((i) => !legacyInsightSlugs.has(i.slug))
+    .map((i) => `https://${host}/insights/${i.slug}`);
+
+  const serviceUrls = ALL_SERVICES
+    .filter((s) => s.slug !== "tiktok-shop-setup")
+    .map((s) => `https://${host}/services/${s.slug}`);
   
   const packageUrls = [
+    `https://${host}/ecommerce-store-management-packages`,
     `https://${host}/branding-packages`,
     `https://${host}/web-design-packages`,
     `https://${host}/digital-marketing-packages`,
@@ -29,6 +40,13 @@ export async function POST() {
     `https://${host}/about`,
     `https://${host}/contact`,
     `https://${host}/insights`,
+    `https://${host}/ai-seo`,
+    `https://${host}/shopify`,
+    `https://${host}/tiktok-shop`,
+    `https://${host}/amazon`,
+    `https://${host}/walmart-marketplace`,
+    `https://${host}/ebay`,
+    `https://${host}/research/ai-search-readiness-study-2026`,
     ...serviceUrls,
     ...packageUrls,
     ...insightUrls,
