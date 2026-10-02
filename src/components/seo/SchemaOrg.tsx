@@ -1,5 +1,6 @@
 import React from "react";
 import { COMPANY_INFO } from "@/data/company";
+import { SOCIAL_PROFILES } from "@/data/social-profiles";
 
 export default function SchemaOrg() {
   const organizationSchema = {
@@ -24,14 +25,10 @@ export default function SchemaOrg() {
       addressCountry: COMPANY_INFO.address.country,
     },
     sameAs: [
-      COMPANY_INFO.socials.linkedin,
-      COMPANY_INFO.socials.facebook,
-      COMPANY_INFO.socials.instagram,
+      ...SOCIAL_PROFILES.map(({ href }) => href),
       COMPANY_INFO.socials.threads,
-      COMPANY_INFO.socials.pinterest,
       COMPANY_INFO.ratings.trustpilot.url,
       COMPANY_INFO.ratings.google.url,
-      COMPANY_INFO.ratings.crunchbase.url,
     ],
     contactPoint: {
       "@type": "ContactPoint",
@@ -59,7 +56,7 @@ export default function SchemaOrg() {
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema).replace(/</g, "\\u003c") }}
       />
       <script
         type="application/ld+json"
