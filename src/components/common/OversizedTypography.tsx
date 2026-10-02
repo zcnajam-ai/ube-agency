@@ -17,6 +17,7 @@ export default function OversizedTypography({
   return (
     <div
       aria-hidden="true"
+      data-background-typography=""
       className={`pointer-events-none absolute w-full overflow-hidden select-none z-0 ${className}`}
     >
       <div
