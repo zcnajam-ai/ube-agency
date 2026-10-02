@@ -951,7 +951,7 @@ export const INSIGHTS: InsightArticle[] = [
     faqs: [
       {
         q: "Why does a custom logo cost more than an AI logo generator?",
-        a: "A custom logo is handcrafted by human designers based on competitive research, optical balance, and trademark viability. AI generators reuse stock icon components that cannot be legally copyrighted.",
+        a: "A custom logo can be developed by human designers around competitive research, optical balance, originality and practical brand use. AI-assisted and template-based tools vary; copyright protection and trademark registrability depend on the specific design, source rights, human authorship, distinctiveness and potential conflicts.",
       },
       {
         q: "What file formats should a professional logo package include?",
@@ -1039,7 +1039,7 @@ export const INSIGHTS: InsightArticle[] = [
         ],
         callout: {
           title: "Agency Red Flag Warning",
-          text: "Never hire a design provider that refuses to provide editable vector source files (AI/EPS). Without source files, you cannot trademark your mark or resize it for large print.",
+          text: "Be cautious with a design provider that refuses to provide agreed editable vector source files (AI/EPS/SVG). Vector files are important for reliable resizing, printing and future brand management; trademark registrability is a separate legal analysis.",
           type: "warning",
         },
       },
