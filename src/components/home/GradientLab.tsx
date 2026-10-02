@@ -5,25 +5,25 @@ import styles from "./GradientLab.module.css";
 
 const THEMES = [
   {
-    name: "Warm Lavender",
-    note: "Cream · lavender · soft blush",
+    name: "Violet & Blush",
+    note: "Cream · violet · soft rose",
     background:
-      "radial-gradient(ellipse 70% 80% at 78% 18%, #EAE2FF 0%, transparent 70%), radial-gradient(ellipse 60% 65% at 16% 60%, #F8EAF0 0%, transparent 72%), #FAF7F6",
-    colors: ["#A58DE8", "#D6B6E7", "#F1B8CB"],
+      "radial-gradient(ellipse 70% 85% at 82% 22%, #DED2FF 0%, transparent 70%), radial-gradient(ellipse 70% 60% at 10% 72%, #F7DFE9 0%, transparent 70%), #FAF7F6",
+    colors: ["#8F77DB", "#C4B2F4", "#E8ABC9"],
   },
   {
-    name: "Violet & Citrus",
-    note: "Cream · violet · soft lime",
+    name: "Violet & Sky",
+    note: "Pearl · violet · cool blue",
     background:
-      "radial-gradient(ellipse 70% 85% at 82% 22%, #DED2FF 0%, transparent 70%), radial-gradient(ellipse 70% 60% at 10% 72%, #EDF5CF 0%, transparent 70%), #FAF7F6",
-    colors: ["#8F77DB", "#C4B2F4", "#C8D877"],
+      "radial-gradient(ellipse 70% 85% at 82% 22%, #DCD0FF 0%, transparent 70%), radial-gradient(ellipse 70% 60% at 10% 72%, #DFEDFC 0%, transparent 70%), #FAF8FA",
+    colors: ["#8F77DB", "#C4B2F4", "#9FC9E8"],
   },
   {
-    name: "Pearl Aurora",
-    note: "Pearl · lilac · cool silver",
+    name: "Violet & Mint",
+    note: "Cream · violet · soft mint",
     background:
-      "radial-gradient(ellipse 78% 85% at 83% 18%, #D9D0F3 0%, transparent 70%), radial-gradient(ellipse 72% 65% at 15% 82%, #E6E2EC 0%, transparent 72%), #F8F7FA",
-    colors: ["#8979C4", "#B7A8E2", "#AAB0C4"],
+      "radial-gradient(ellipse 70% 85% at 82% 22%, #DED2FF 0%, transparent 70%), radial-gradient(ellipse 70% 60% at 10% 72%, #DCF1E8 0%, transparent 70%), #FAF8F7",
+    colors: ["#8F77DB", "#C4B2F4", "#9FD9C5"],
   },
 ] as const;
 
