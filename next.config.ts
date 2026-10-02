@@ -74,14 +74,18 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     return [
-      // The public Vercel production alias must never compete with the canonical domain.
-      // Match this hostname exactly so branch and deployment previews remain available.
-      {
+      // Production Vercel aliases must never compete with the canonical domain.
+      // These are aliases attached to the production deployment; preview-only hosts remain untouched.
+      ...[
+        "ube-agency.vercel.app",
+        "ube-agency-najam8.vercel.app",
+        "ube-agency-git-master-najam8.vercel.app",
+      ].map((host) => ({
         source: "/:path*",
-        has: [{ type: "host", value: "ube-agency.vercel.app" }],
+        has: [{ type: "host" as const, value: host }],
         destination: "https://unifiedbrandingexperts.com/:path*",
         permanent: true,
-      },
+      })),
       // Legacy Portfolio URLs -> Canonical Work Destination (/work)
       { source: "/portfolio", destination: "/work", permanent: true },
       { source: "/portfolio/", destination: "/work", permanent: true },
