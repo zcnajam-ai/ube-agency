@@ -5,8 +5,6 @@ import Link from "next/link";
 import Image from "next/image";
 import { ArrowUpRight, ChevronLeft, ChevronRight, Pause, Play } from "lucide-react";
 import { FEATURED_PROJECTS } from "@/data/projects";
-import OversizedTypography from "../common/OversizedTypography";
-import PurpleGlowField from "../common/PurpleGlowField";
 import { Heading3DSparkle } from "../common/Brand3DIcons";
 
 export default function SelectedWork() {
@@ -70,9 +68,6 @@ export default function SelectedWork() {
       id="selected-work"
       className="relative py-20 sm:py-28 px-4 sm:px-6 md:px-12 bg-white border-b border-[#E0DDDB] overflow-hidden"
     >
-      {/* Background Atmosphere */}
-      <PurpleGlowField position="top-right" size={700} opacity={0.08} />
-      <OversizedTypography text="PORTFOLIO" direction="left" className="top-16 opacity-35" />
 
       <div className="relative z-10 max-w-7xl mx-auto space-y-10">
         {/* Section Header with Auto-Scroll Controls */}

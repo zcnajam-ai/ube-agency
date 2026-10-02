@@ -3,9 +3,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import { Sparkles, CheckCircle2, Clock } from "lucide-react";
 import { PROCESS_STEPS } from "@/data/process";
-import BackgroundGrid from "../common/BackgroundGrid";
-import PurpleGlowField from "../common/PurpleGlowField";
-import OversizedTypography from "../common/OversizedTypography";
 
 export default function ProcessSection() {
   const [activeStepIndex, setActiveStepIndex] = useState(0);
@@ -40,10 +37,6 @@ export default function ProcessSection() {
       id="process"
       className="relative py-24 sm:py-36 px-4 sm:px-6 md:px-12 bg-[#FAF7F6] border-t border-[#E0DDDB] overflow-hidden"
     >
-      {/* Background Decor */}
-      <BackgroundGrid opacity={0.03} size={80} maskRadial />
-      <PurpleGlowField position="center" size={800} opacity={0.09} parallaxSpeed={0.18} />
-      <OversizedTypography text="METHODOLOGY" direction="left" className="top-16 opacity-35" />
 
       <div className="relative z-10 max-w-7xl mx-auto space-y-16">
         {/* Section Top Header */}
