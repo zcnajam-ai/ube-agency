@@ -29,8 +29,13 @@ export const metadata: Metadata = {
 };
 
 export default function InsightsIndexPage() {
+  const legacyInsightSlugs = new Set([
+    "how-to-start-a-tiktok-shop",
+    "shopify-store-setup-cost",
+  ]);
   const seenInsightSlugs = new Set<string>();
   const uniqueArticles = INSIGHTS.filter((i) => {
+    if (legacyInsightSlugs.has(i.slug)) return false;
     if (seenInsightSlugs.has(i.slug)) return false;
     seenInsightSlugs.add(i.slug);
     return true;
