@@ -38,7 +38,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/branding-packages` },
     { url: `${baseUrl}/web-design-packages` },
     { url: `${baseUrl}/digital-marketing-packages` },
-    { url: `${baseUrl}/ai-seo-packages` },
+    { url: `${baseUrl}/ai-seo-packages`, lastModified: new Date("2026-10-02") },
     { url: `${baseUrl}/ai-automation-packages` },
     { url: `${baseUrl}/tiktok-marketing-packages` },
     { url: `${baseUrl}/mobile-app-packages` },

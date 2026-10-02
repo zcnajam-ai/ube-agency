@@ -1,6 +1,7 @@
 import React from "react";
 import { Metadata } from "next";
 import ContactClient from "./ContactClient";
+import { AI_SEO_PACKAGES } from "@/data/aiSeoPackages";
 
 export const metadata: Metadata = {
   title: "Contact & Project Inquiries",
@@ -33,7 +34,16 @@ export const metadata: Metadata = {
   },
 };
 
-export default function ContactPage() {
+export default async function ContactPage({ searchParams }: {
+  searchParams: Promise<{ package?: string | string[]; type?: string | string[] }>;
+}) {
+  const query = await searchParams;
+  const selectedPackage = AI_SEO_PACKAGES.find((pkg) =>
+    query.package === pkg.id || query.package === `aiseo-${pkg.id}`
+  );
+  const initialService = selectedPackage || query.type === "aiseo"
+    ? "AISEO & Search Optimization"
+    : undefined;
   const contactSchema = {
     "@context": "https://schema.org",
     "@type": "ContactPage",
@@ -76,7 +86,15 @@ export default function ContactPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
-      <ContactClient />
+      <ContactClient
+        key={selectedPackage?.id ?? initialService ?? "general"}
+        initialService={initialService}
+        selectedPackage={selectedPackage ? {
+          name: selectedPackage.name,
+          price: selectedPackage.price,
+          pricePeriod: selectedPackage.pricePeriod,
+        } : undefined}
+      />
     </>
   );
 }

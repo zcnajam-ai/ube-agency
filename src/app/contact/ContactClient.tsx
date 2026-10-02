@@ -7,20 +7,27 @@ import { COMPANY_INFO } from "@/data/company";
 import { trackLeadSubmit, trackPhoneClick, trackEmailClick } from "@/lib/analytics";
 import SocialProfiles from "@/components/common/SocialProfiles";
 
-export default function ContactClient() {
+type ContactClientProps = {
+  initialService?: string;
+  selectedPackage?: { name: string; price: string; pricePeriod: string };
+};
+
+export default function ContactClient({ initialService, selectedPackage }: ContactClientProps) {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     phone: "",
     company: "",
-    service: "eCommerce Store Setup",
-    budget: "$500 – $1,000",
+    service: initialService ?? "eCommerce Store Setup",
+    budget: selectedPackage ? "Other / Custom Budget" : "$500 – $1,000",
     timeline: "1–2 Months",
     description: "",
     honeypot: "",
   });
 
-  const [customBudgetInput, setCustomBudgetInput] = useState("");
+  const [customBudgetInput, setCustomBudgetInput] = useState(
+    selectedPackage?.price.replace(/[^0-9]/g, "") ?? ""
+  );
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [error, setError] = useState("");
@@ -70,6 +77,10 @@ export default function ContactClient() {
         body: JSON.stringify({
           ...formData,
           budget: finalBudget,
+          description: selectedPackage
+            ? `Selected package: ${selectedPackage.name} (${selectedPackage.price} ${selectedPackage.pricePeriod})\n\n${formData.description}`
+            : formData.description,
+          sourcePage: selectedPackage ? "/ai-seo-packages" : "/contact",
         }),
       });
 
@@ -117,6 +128,12 @@ export default function ContactClient() {
         <p className="text-base sm:text-xl text-[#585858] font-body leading-relaxed">
           Tell us about your brand, goals, and timeline. Our team will review your requirements and follow up with you.
         </p>
+        {selectedPackage && (
+          <div className="rounded-2xl border border-[#9F8BE7] bg-white p-4 text-sm text-[#303030]">
+            <p className="font-bold">Selected package: {selectedPackage.name}</p>
+            <p>{selectedPackage.price} {selectedPackage.pricePeriod}. Tell us your site and goals below to request this scope.</p>
+          </div>
+        )}
       </div>
 
       {/* Grid Layout */}
