@@ -1,3 +1,4 @@
+import RelatedServiceLinks from "@/components/services/RelatedServiceLinks";
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -704,6 +705,7 @@ export default function WebDesignServicePage() {
           </a>
         </div>
       </section>
-    </div>
+
+      <RelatedServiceLinks slug="web-design-development" />    </div>
   );
 }

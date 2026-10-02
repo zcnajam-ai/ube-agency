@@ -64,7 +64,7 @@ export const UBE_SERVICES_KNOWLEDGE: ServiceKnowledge[] = [
     name: "Shopify Store Setup & Theme Development",
     category: "eCommerce",
     route: "/services/shopify-development",
-    packageRoute: "/our-website-development-packages",
+    packageRoute: "/web-design-packages",
     tagline: "High-Converting Shopify Stores & Liquid Theme Customization",
     summary:
       "Complete Shopify and Shopify Plus setup, custom 2.0 Liquid sections, app integrations, payment gateway routing, and responsive checkout optimization.",
@@ -85,7 +85,7 @@ export const UBE_SERVICES_KNOWLEDGE: ServiceKnowledge[] = [
     name: "eCommerce Store Engineering & Headless Architecture",
     category: "eCommerce",
     route: "/services/ecommerce",
-    packageRoute: "/our-custom-web-design-development-packages",
+    packageRoute: "/web-design-packages",
     tagline: "Scalable Multi-Channel Digital Storefronts",
     summary:
       "End-to-end commerce engineering covering custom catalog architecture, international multi-currency pricing, ERP feeds, and headless commerce platforms.",
@@ -146,7 +146,7 @@ export const UBE_SERVICES_KNOWLEDGE: ServiceKnowledge[] = [
     name: "Google Ads & Performance Max Campaigns",
     category: "Paid Advertising",
     route: "/services/google-ads",
-    packageRoute: "/our-digital-marketing-packages",
+    packageRoute: "/digital-marketing-packages",
     tagline: "High-Intent Search, Shopping & Performance Max Media Buying",
     summary:
       "Precision paid search management focusing on bottom-of-funnel customer intent, negative keyword scrubbing, Shopping feed optimization, and verified ROAS tracking.",
@@ -166,7 +166,7 @@ export const UBE_SERVICES_KNOWLEDGE: ServiceKnowledge[] = [
     name: "Meta Ads (Facebook & Instagram Paid Acquisition)",
     category: "Paid Advertising",
     route: "/services/meta-ads",
-    packageRoute: "/our-digital-marketing-packages",
+    packageRoute: "/digital-marketing-packages",
     tagline: "Creative-Led Paid Social Acquisition & Retargeting Funnels",
     summary:
       "Full-funnel Meta advertising campaigns blending scroll-stopping video/image ad creatives, server-side Conversions API (CAPI) tracking, and custom audience segmentation.",
@@ -203,7 +203,7 @@ export const UBE_SERVICES_KNOWLEDGE: ServiceKnowledge[] = [
     slug: "tiktok-shop-setup",
     name: "TikTok Shop Setup & Affiliate System",
     category: "Social Commerce",
-    route: "/services/tiktok-shop-setup",
+    route: "/tiktok-shop",
     packageRoute: "/tiktok-marketing-packages",
     tagline: "Sell Products Directly Inside TikTok Feeds & Creator Affiliate Portals",
     summary:
@@ -281,7 +281,7 @@ export const UBE_SERVICES_KNOWLEDGE: ServiceKnowledge[] = [
     name: "Social Media Management & Content Strategy",
     category: "Content & Social",
     route: "/services/social-media-management",
-    packageRoute: "/our-content-writing-packages",
+    packageRoute: "/packages",
     tagline: "Cohesive Visual Feeds, Content Creation & Community Engagement",
     summary:
       "Consistent, branded social media posting, custom graphic designs, short-form video editing, copywriting, and engagement monitoring across Instagram, LinkedIn, and Facebook.",
@@ -611,7 +611,7 @@ export const UBE_PROJECTS_KNOWLEDGE: ProjectKnowledge[] = [
     summary:
       "Archery elk mascot emblem, Legend M54 typography, technical apparel tech-packs, and an automated Shopify store with dropshipping supplier fulfillment.",
     deliverables: ["Merchandise SKU Lineup", "Dropshipping Fulfillment Flow", "Mobile-First Responsive Shopify Storefront"],
-    route: "/work/bugle-chaser-outdoor-apparel-brand",
+    route: "/work",
   },
 ];
 

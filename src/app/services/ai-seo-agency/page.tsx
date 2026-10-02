@@ -1,3 +1,4 @@
+import RelatedServiceLinks from "@/components/services/RelatedServiceLinks";
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -571,6 +572,7 @@ export default function AiSeoServicePage() {
           </Link>
         </div>
       </section>
-    </div>
+
+      <RelatedServiceLinks slug="ai-seo-agency" />    </div>
   );
 }

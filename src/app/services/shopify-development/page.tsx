@@ -1,3 +1,4 @@
+import RelatedServiceLinks from "@/components/services/RelatedServiceLinks";
 import { SHOPIFY_SETUP_PRICE_LABEL, SHOPIFY_SETUP_START_PRICE } from "@/data/commerce-pricing";
 import React from "react";
 import StoreManagementLink from "@/components/services/StoreManagementLink";
@@ -487,6 +488,7 @@ export default function ShopifyDevelopmentPage() {
         </div>
       </section>
       <StoreManagementLink />
-    </div>
+
+      <RelatedServiceLinks slug="shopify-development" />    </div>
   );
 }

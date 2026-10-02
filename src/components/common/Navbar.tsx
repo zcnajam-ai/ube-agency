@@ -372,7 +372,7 @@ export default function Navbar() {
                         </span>
                         <div className="space-y-1.5">
                           <Link
-                            href="/logo-design-packages"
+                            href="/branding-packages"
                             onClick={() => setPackagesOpen(false)}
                             className="p-2 rounded-xl hover:bg-[#FAF7F6] block transition-colors group"
                           >
@@ -447,7 +447,7 @@ export default function Navbar() {
                           </Link>
 
                           <Link
-                            href="/our-custom-web-design-development-packages"
+                            href="/web-design-packages"
                             onClick={() => setPackagesOpen(false)}
                             className="p-2 rounded-xl hover:bg-[#FAF7F6] block transition-colors group"
                           >
@@ -527,15 +527,15 @@ export default function Navbar() {
                           </Link>
 
                           <Link
-                            href="/our-content-writing-packages"
+                            href="/services/social-media-management"
                             onClick={() => setPackagesOpen(false)}
                             className="p-2 rounded-xl hover:bg-[#FAF7F6] block transition-colors group"
                           >
                             <div className="font-display font-bold text-xs text-[#161616] group-hover:text-[#9F8BE7] flex items-center justify-between">
-                              <span>Content Writing</span>
-                              <span className="text-[10px] font-mono-num text-emerald-600 font-bold">$199+</span>
+                              <span>Social Media &amp; Content</span>
+                              <span className="text-[10px] font-mono-num text-emerald-600 font-bold">Custom Scope</span>
                             </div>
-                            <p className="text-[10px] text-[#585858]">SEO Copywriting</p>
+                            <p className="text-[10px] text-[#585858]">Editorial Planning &amp; Branded Content</p>
                           </Link>
                         </div>
                       </div>

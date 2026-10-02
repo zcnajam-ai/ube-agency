@@ -1797,7 +1797,7 @@ export const INSIGHTS: InsightArticle[] = [
     serviceCta: {
       title: "Need Turnkey TikTok Shop Setup & Marketing?",
       desc: "Our team handles Seller Center verification, catalog sync, and creator affiliate recruitment.",
-      href: "/services/tiktok-shop-setup",
+      href: "/tiktok-shop",
       buttonText: "Explore TikTok Shop Services",
     },
     packageCta: {
@@ -1817,7 +1817,7 @@ export const INSIGHTS: InsightArticle[] = [
     category: "eCommerce",
     readTime: "8 min read",
     publishedAt: "May 22, 2026",
-    updatedAt: "May 26, 2026",
+    updatedAt: "October 3, 2026",
     author: {
       name: "Omnichannel Growth Team",
       role: "Social Media & eCommerce",
@@ -1828,7 +1828,7 @@ export const INSIGHTS: InsightArticle[] = [
     coverImage: "/images/service-icons/tiktok-shop.webp",
     primaryIntent: "TikTok Shop vs Shopify, Shopify TikTok, TikTok ecommerce",
     quickAnswer:
-      "TikTok Shop delivers the highest viral impulse conversion rates with zero-click in-app purchases and massive creator affiliate reach. Shopify delivers long-term brand equity, complete customer list ownership, high average order values, and full website customization. The most profitable strategy is syncing Shopify as your backend hub while using TikTok Shop as a viral sales channel.",
+      "TikTok Shop supports discovery through short-form video and in-app shopping. Shopify supports an independent storefront with more control over design and customer relationships. Using both can suit some businesses, but the choice depends on product fit, margins, audience, eligibility, and operating capacity.",
     tableOfContents: [
       { id: "platform-comparison", title: "TikTok Shop vs Shopify: Feature Comparison (2026)" },
       { id: "conversion-dynamics", title: "Impulse Viral Conversion vs Brand Equity & LTV" },
@@ -1846,12 +1846,12 @@ export const INSIGHTS: InsightArticle[] = [
         table: {
           headers: ["Feature / Metric", "TikTok Shop", "Shopify Storefront", "Verdict"],
           rows: [
-            ["Checkout Friction", "Zero-click in-app (Saved payment/address)", "Requires landing page click & checkout", "TikTok Shop"],
-            ["Viral Reach", "Massive (TikTok algorithm + Affiliate creators)", "Driven by paid ads, SEO, or social links", "TikTok Shop"],
-            ["Customer List Ownership", "Limited (TikTok restricts direct email access)", "100% Full ownership of emails & SMS", "Shopify"],
-            ["Average Order Value (AOV)", "Lower ($20–$50 impulse items)", "Higher ($60–$250+ bundles & upsells)", "Shopify"],
-            ["Platform Commission", "6% + transaction fees", "2.4%–2.9% + 30¢ (0% transaction fee)", "Shopify"],
-            ["Brand Building", "Constrained to TikTok feed format", "Unlimited bespoke UI/UX & storytelling", "Shopify"],
+            ["Checkout Journey", "In-app product discovery and checkout", "Storefront and configured checkout", "Depends on customer preferences"],
+            ["Discovery", "Videos, creators, and eligible advertising", "Search, advertising, social, and repeat visits", "Depends on distribution strategy"],
+            ["Customer Relationships", "Subject to marketplace data and messaging policies", "Direct relationships subject to consent and privacy rules", "Review data access and permissions"],
+            ["Average Order Value", "Varies by product, audience, and offer", "Varies by product, audience, and offer", "Measure with your own order data"],
+            ["Platform Costs", "Category and market fees; creator and advertising costs where used", "Subscription, payment processing, apps, and applicable transaction fees", "Compare total costs for your business"],
+            ["Brand Presentation", "Shop, video, and creator formats within platform rules", "Customizable storefront within plan and platform limits", "Choose the format your brand needs"],
           ],
         },
       },
@@ -1859,42 +1859,42 @@ export const INSIGHTS: InsightArticle[] = [
         id: "conversion-dynamics",
         h2: "Impulse Viral Conversion vs Brand Equity & LTV",
         body: [
-          "TikTok Shop excels at low-consideration, impulse purchases under $50. Viewers watch a 15-second creator video and buy instantly.",
-          "Shopify excels at high Average Order Value (AOV), luxury products, complex bundles, and long-term customer lifetime value (LTV) driven by Klaviyo email sequences and loyalty programs.",
+          "TikTok Shop can suit products that are easy to demonstrate in video. Discovery does not ensure a purchase: creative quality, price, trust, shipping, and audience fit influence results.",
+          "Shopify can suit brands that need a dedicated storefront, detailed product information, and repeat-customer programs. Order value and retention must be measured rather than assumed from the platform.",
         ],
       },
       {
         id: "fees-margins",
         h2: "Fee Structures & Profit Margins",
         body: [
-          "TikTok Shop charges a 6% commission fee on qualified transactions, plus creator affiliate commissions (typically 15%-20%).",
-          "Shopify charges a $39/mo flat fee plus standard payment processing (2.9% + 30¢), allowing for higher overall net profit margins on direct traffic.",
+          "For TikTok Shop, check the current fee schedule for your market and product category. Include any creator commissions, shipping, returns, and advertising in the margin calculation.",
+          "For Shopify, compare the current subscription, payment-processing rates, applicable third-party transaction fees, apps, and customer-acquisition costs. Neither platform guarantees a higher net margin.",
         ],
       },
       {
         id: "connected-strategy",
         h2: "The Connected Model: Syncing Shopify with TikTok Shop",
         body: [
-          "You don't have to choose one over the other. By integrating TikTok Shop with Shopify, your Shopify store acts as the central command center for inventory and shipping, while TikTok Shop functions as an automated viral sales channel.",
+          "Businesses eligible for both can connect Shopify and TikTok Shop to coordinate catalog, inventory, and orders where the integration supports them. Verify product mapping, stock sync, fulfillment, and returns before expanding.",
         ],
       },
       {
         id: "recommendation",
         h2: "Which Platform Should You Prioritize?",
         body: [
-          "• Launch TikTok Shop if you have visual, impulse-friendly products ($15-$45) and want to leverage viral short-form video creators.",
-          "• Launch Shopify if you are building an established brand, require custom checkout upsells, and want 100% ownership over customer data.",
+          "• Consider TikTok Shop if your products are suitable for video demonstrations and you can support content, creator relationships, fulfillment, and platform requirements.",
+          "• Consider Shopify if you need a dedicated storefront and more control over merchandising and customer relationships, and have a plan to attract visitors.",
         ],
       },
     ],
     faqs: [
       {
         q: "Can I connect my Shopify store directly to TikTok Shop?",
-        a: "Yes. Unified Branding Experts configures real-time inventory and order sync between Shopify and TikTok Shop.",
+        a: "Eligible businesses can connect the channels using supported integrations. UBE can help configure and test catalog, inventory, and order workflows; availability depends on market, accounts, and products.",
       },
       {
         q: "Do I need thousands of followers to sell on TikTok Shop?",
-        a: "No. Sellers can register a TikTok Shop with 0 followers and leverage the affiliate creator marketplace to generate sales immediately.",
+        a: "Seller and creator eligibility are separate and can vary by market and account type. Check current Seller Center requirements. An approved shop or creator partnership does not guarantee immediate sales.",
       },
     ],
     relatedSlugs: [
@@ -1904,7 +1904,7 @@ export const INSIGHTS: InsightArticle[] = [
     ],
     serviceCta: {
       title: "Ready to Build a Multi-Channel eCommerce Engine?",
-      desc: "Our team unifies Shopify development with TikTok Shop social commerce for maximum GMV.",
+      desc: "Our team can help plan storefront development, channel integration, and content around your products and operating requirements.",
       href: "/services/ecommerce",
       buttonText: "Explore eCommerce Services",
     },
@@ -2567,7 +2567,7 @@ export const INSIGHTS: InsightArticle[] = [
         "✓ Verify business documentation and register Seller Center.",
         "✓ Sync Shopify catalog and map product categories.",
         "✓ Create Open Affiliate plan for creators.",
-        "✓ Explore specialized <a href=\"/services/tiktok-shop-setup\" className=\"text-[#9F8BE7] font-bold underline hover:text-[#161616]\">TikTok Shop setup services</a> and <a href=\"/tiktok-marketing-packages\" className=\"text-[#9F8BE7] font-bold underline hover:text-[#161616]\">TikTok marketing packages</a>."
+        "✓ Explore specialized <a href=\"/tiktok-shop\" className=\"text-[#9F8BE7] font-bold underline hover:text-[#161616]\">TikTok Shop setup services</a> and <a href=\"/tiktok-marketing-packages\" className=\"text-[#9F8BE7] font-bold underline hover:text-[#161616]\">TikTok marketing packages</a>."
       ]
     }
   ],
@@ -2585,7 +2585,7 @@ export const INSIGHTS: InsightArticle[] = [
   "serviceCta": {
     "title": "Ready to Sell Directly Through TikTok Shop?",
     "desc": "Our social commerce team handles Seller Center verification, catalog sync, and creator affiliate workflows.",
-    "href": "/services/tiktok-shop-setup",
+    "href": "/tiktok-shop",
     "buttonText": "Launch Your TikTok Shop"
   },
   "packageCta": {
@@ -2701,7 +2701,7 @@ export const INSIGHTS: InsightArticle[] = [
   "serviceCta": {
     "title": "Need Professional Catalog & TikTok Shop Integration?",
     "desc": "Our eCommerce architects configure reliable product catalog feeds and TikTok Seller sync.",
-    "href": "/services/tiktok-shop-setup",
+    "href": "/tiktok-shop",
     "buttonText": "Launch Your TikTok Shop"
   },
   "packageCta": {
@@ -3005,10 +3005,10 @@ export const INSIGHTS: InsightArticle[] = [
     "buttonText": "Explore Digital Marketing Packages"
   },
   "caseStudyCta": {
-    "title": "Bugle Chaser Brand Campaign",
-    "desc": "See how unified multi-channel marketing elevated brand awareness and storefront sales for Bugle Chaser.",
-    "href": "/work/bugle-chaser-outdoor-apparel-brand",
-    "buttonText": "Read Case Study"
+    "title": "Explore Our Client Work",
+    "desc": "Review published storefront and brand projects and their documented deliverables.",
+    "href": "/work",
+    "buttonText": "View Client Work"
   }
 },
 

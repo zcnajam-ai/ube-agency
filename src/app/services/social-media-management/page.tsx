@@ -1,3 +1,4 @@
+import RelatedServiceLinks from "@/components/services/RelatedServiceLinks";
 import React from "react";
 import ServiceSchema from "@/components/seo/ServiceSchema";
 import { Metadata } from "next";
@@ -51,6 +52,7 @@ export default function SocialMediaServicePage() {
         serviceType="Social media management"
       />
       <ServiceDetailView service={service} />
+      <div className="px-6 md:px-12 max-w-7xl mx-auto pb-16"><RelatedServiceLinks slug="social-media-management" /></div>
       <section className="px-4 sm:px-6 md:px-12 pb-24">
         <div className="max-w-5xl mx-auto rounded-3xl bg-white border border-[#E0DDDB] p-7 sm:p-10 space-y-8">
           <div className="space-y-3">

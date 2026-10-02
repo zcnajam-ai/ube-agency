@@ -29,6 +29,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     .filter((s) => s.slug !== "tiktok-shop-setup")
     .map((s) => ({
       url: `${baseUrl}/services/${s.slug}`,
+      lastModified: new Date("2026-10-03"),
     }));
 
   // 3. Dedicated Package Hub Pages (8)
@@ -65,6 +66,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   });
 
   const refreshedInsightSlugs = new Set([
+    "tiktok-shop-vs-shopify",
     "how-much-does-professional-logo-design-cost",
     "shopify-store-setup-cost-2026",
   ]);

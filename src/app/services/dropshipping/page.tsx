@@ -1,3 +1,4 @@
+import RelatedServiceLinks from "@/components/services/RelatedServiceLinks";
 import { SHOPIFY_SETUP_START_PRICE } from "@/data/commerce-pricing";
 import React from "react";
 import StoreManagementLink from "@/components/services/StoreManagementLink";
@@ -370,7 +371,7 @@ export default function DropshippingServicePage() {
           </Link>
 
           <Link
-            href="/services/tiktok-shop-setup"
+            href="/tiktok-shop"
             className="p-6 rounded-2xl bg-white border border-[#E0DDDB] hover:border-[#9F8BE7] transition-all space-y-2 group shadow-2xs"
           >
             <span className="font-display font-bold text-base text-[#161616] group-hover:text-[#9F8BE7] transition-colors flex items-center justify-between">
@@ -427,6 +428,7 @@ export default function DropshippingServicePage() {
         />
       </section>
       <StoreManagementLink />
-    </div>
+
+      <RelatedServiceLinks slug="dropshipping" />    </div>
   );
 }

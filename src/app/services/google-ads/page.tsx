@@ -1,3 +1,4 @@
+import RelatedServiceLinks from "@/components/services/RelatedServiceLinks";
 import React from "react";
 import ServiceSchema from "@/components/seo/ServiceSchema";
 import Link from "next/link";
@@ -211,12 +212,12 @@ export default function GoogleAdsServicePage() {
                 </div>
                 <div className="flex items-center gap-4 text-xs">
                   <div>
-                    <span className="text-[10px] text-[#ACACAC] block">Conv. Rate</span>
-                    <strong className="text-white text-sm font-mono-num">+34%</strong>
+                    <span className="text-[10px] text-[#ACACAC] block">Measurement</span>
+                    <strong className="text-white text-sm font-mono-num">Conversions</strong>
                   </div>
                   <div>
-                    <span className="text-[10px] text-[#ACACAC] block">Intent Rank</span>
-                    <strong className="text-emerald-400 text-sm font-mono-num">Top 3</strong>
+                    <span className="text-[10px] text-[#ACACAC] block">Targeting</span>
+                    <strong className="text-emerald-400 text-sm font-mono-num">Buyer Intent</strong>
                   </div>
                 </div>
               </div>
@@ -577,6 +578,7 @@ export default function GoogleAdsServicePage() {
           </a>
         </div>
       </section>
-    </div>
+
+      <RelatedServiceLinks slug="google-ads" />    </div>
   );
 }

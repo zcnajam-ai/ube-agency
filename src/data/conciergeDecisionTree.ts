@@ -62,7 +62,7 @@ export const CONCIERGE_DECISION_TREE: Record<
           summary:
             "We modernize existing websites with high-performance Next.js architectures, refined brand typography, and conversion-focused user journeys.",
           actions: [
-            { type: "link", label: "View Redesign Services", url: "/professional-web-design-services" },
+            { type: "link", label: "View Redesign Services", url: "/services/web-design-development" },
             { type: "link", label: "View Web Packages", url: "/web-design-packages" },
             { type: "link", label: "See Our Work", url: "/work" },
             { type: "estimate", label: "Get Project Estimate" },
@@ -76,8 +76,8 @@ export const CONCIERGE_DECISION_TREE: Record<
           summary:
             "We engineer scalable custom web applications, member portals, and SaaS platforms built on modern Next.js and secure APIs.",
           actions: [
-            { type: "link", label: "View Custom Web Services", url: "/custom-web-development" },
-            { type: "link", label: "View Custom Packages", url: "/our-custom-web-design-development-packages" },
+            { type: "link", label: "View Custom Web Services", url: "/services/web-design-development" },
+            { type: "link", label: "View Custom Packages", url: "/web-design-packages" },
             { type: "link", label: "See Our Work", url: "/work" },
             { type: "estimate", label: "Get Project Estimate" },
           ],
@@ -181,8 +181,8 @@ export const CONCIERGE_DECISION_TREE: Record<
           summary:
             "We design distinctive, memorable custom logos with complete vector asset kits, typography guidance, and full ownership rights.",
           actions: [
-            { type: "link", label: "View Logo Packages", url: "/logo-design-packages" },
-            { type: "link", label: "Logo Agency Overview", url: "/best-logo-design-agency" },
+            { type: "link", label: "View Logo Packages", url: "/branding-packages" },
+            { type: "link", label: "Logo Agency Overview", url: "/services/branding" },
             { type: "link", label: "See Our Work", url: "/work" },
             { type: "estimate", label: "Get Project Estimate" },
           ],
@@ -311,7 +311,7 @@ export const CONCIERGE_DECISION_TREE: Record<
             "We build and manage high-intent Google Search, Performance Max, and Shopping campaigns focused on qualified leads and measurable return on ad spend.",
           actions: [
             { type: "link", label: "View Google Ads Services", url: "/services/google-ads" },
-            { type: "link", label: "View Marketing Packages", url: "/our-digital-marketing-packages" },
+            { type: "link", label: "View Marketing Packages", url: "/digital-marketing-packages" },
             { type: "estimate", label: "Get Project Estimate" },
           ],
         };
@@ -324,7 +324,7 @@ export const CONCIERGE_DECISION_TREE: Record<
             "We create targeted Meta advertising funnels with bespoke creative ad sets, custom audiences, and full pixel event tracking.",
           actions: [
             { type: "link", label: "View Meta Ads Services", url: "/services/meta-ads" },
-            { type: "link", label: "View Marketing Packages", url: "/our-digital-marketing-packages" },
+            { type: "link", label: "View Marketing Packages", url: "/digital-marketing-packages" },
             { type: "estimate", label: "Get Project Estimate" },
           ],
         };
@@ -348,7 +348,7 @@ export const CONCIERGE_DECISION_TREE: Record<
         summary:
           "We can help you choose based on what you sell, your audience, and your marketing objective to maximize advertising efficiency.",
         actions: [
-          { type: "link", label: "View Digital Marketing", url: "/digital-marketing-services-agency" },
+          { type: "link", label: "View Digital Marketing", url: "/services/digital-marketing" },
           { type: "estimate", label: "Get Project Estimate" },
           { type: "contact", label: "Talk with Our Team", url: "/contact" },
         ],
@@ -493,7 +493,7 @@ export const CONCIERGE_DECISION_TREE: Record<
         { type: "link", label: "Branding Packages ($299+)", url: "/branding-packages" },
         { type: "link", label: "Web Packages ($399+)", url: "/web-design-packages" },
         { type: "link", label: "AI SEO Packages ($349/mo)", url: "/ai-seo-packages" },
-        { type: "link", label: "Marketing Packages ($499/mo)", url: "/our-digital-marketing-packages" },
+        { type: "link", label: "Marketing Packages ($499/mo)", url: "/digital-marketing-packages" },
         { type: "link", label: "App Packages ($1,499+)", url: "/mobile-app-packages" },
         { type: "link", label: "View Complete Directory", url: "/packages" },
         { type: "estimate", label: "Get Custom Estimate" },
