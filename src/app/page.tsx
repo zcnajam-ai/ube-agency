@@ -33,7 +33,7 @@ export const metadata: Metadata = {
 
 export default function HomePage() {
   return (
-    <div className="relative overflow-hidden bg-[#FAF7F6]">
+    <div className="relative overflow-hidden">
       {/* 1. Hero Section */}
       <Hero />
 

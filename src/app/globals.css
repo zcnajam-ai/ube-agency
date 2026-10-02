@@ -1,5 +1,15 @@
 @import "tailwindcss";
 
+/* Violet & Blush lives behind page content; solid cards and dark panels retain their contrast. */
+.site-gradient-page > :is(div, section, article):is([class~="bg-[#FAF7F6]"], [class~="bg-white"]),
+.site-gradient-page > div > section:is([class~="bg-[#FAF7F6]"], [class~="bg-white"]) {
+  background-color: transparent;
+}
+
+/* Retire the legacy grid wherever it appears so the background stays clean. */
+.site-gradient-page [data-background-grid],
+.site-gradient-page [data-background-typography] { display: none; }
+
 @layer base {
   :root {
     /* Rayo Exact Light Theme Tokens */

@@ -8,6 +8,7 @@ import Navbar from "@/components/common/Navbar";
 import SchemaOrg from "@/components/seo/SchemaOrg";
 import AnalyticsScripts from "@/components/analytics/AnalyticsScripts";
 import AnalyticsEventBridge from "@/components/analytics/AnalyticsEventBridge";
+import SiteAmbientBackground from "@/components/common/SiteAmbientBackground";
 import { COMPANY_INFO } from "@/data/company";
 
 const Footer = dynamic(() => import("@/components/common/Footer"));
@@ -113,7 +114,8 @@ export default function RootLayout({
       className={`${funnelDisplay.variable} ${funnelSans.variable} ${spaceGrotesk.variable} antialiased selection:bg-[#9F8BE7] selection:text-[#161616]`}
     >
       <head />
-      <body className="bg-[#FAF7F6] text-[#161616] font-body flex flex-col min-h-screen relative overflow-x-hidden">
+      <body className="site-gradient-body bg-[#FAF7F6] text-[#161616] font-body flex flex-col min-h-screen relative overflow-x-hidden">
+        <SiteAmbientBackground />
         {/* Google Tag Manager (noscript) */}
         <noscript>
           <iframe
@@ -143,7 +145,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           <Navbar />
 
           {/* Page Body */}
-          <main className="flex-1 w-full relative z-10">{children}</main>
+          <main className="site-gradient-page flex-1 w-full relative z-10">{children}</main>
 
           {/* Monolithic Footer */}
           <Footer />
