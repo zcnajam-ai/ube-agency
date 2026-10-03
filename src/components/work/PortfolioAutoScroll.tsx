@@ -23,11 +23,17 @@ export default function PortfolioAutoScroll() {
     setActiveIndex((prev) => (prev - 1 + total) % total);
   }, [total]);
 
-  // Auto-scroll every 3.8 seconds
+  // Keep the mobile spotlight stable during reading and initial rendering.
+  // Desktop auto-play also respects the visitor's reduced-motion preference.
   useEffect(() => {
     if (!isPaused && total > 1) {
       autoPlayRef.current = setInterval(() => {
-        nextSlide();
+        if (
+          window.matchMedia("(min-width: 768px)").matches &&
+          !window.matchMedia("(prefers-reduced-motion: reduce)").matches
+        ) {
+          nextSlide();
+        }
       }, 3800);
     }
     return () => {
