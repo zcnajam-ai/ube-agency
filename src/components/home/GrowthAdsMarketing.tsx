@@ -143,7 +143,7 @@ export default function GrowthAdsMarketing() {
             <div className="flex flex-wrap items-center justify-between gap-3">
               <div className="flex items-center gap-2">
                 {current.icon}
-                <span className="text-xs font-mono-num font-bold text-[#9F8BE7] uppercase tracking-wider">
+                <span className="text-xs font-mono-num font-bold text-[#6B4BA7] uppercase tracking-wider">
                   {current.badge}
                 </span>
               </div>
@@ -156,7 +156,7 @@ export default function GrowthAdsMarketing() {
               <h3 className="font-display text-2xl sm:text-4xl font-bold text-[#161616]">
                 {current.title}
               </h3>
-              <p className="font-display text-sm sm:text-base font-semibold text-[#9F8BE7]">
+              <p className="font-display text-sm sm:text-base font-semibold text-[#6B4BA7]">
                 {current.tagline}
               </p>
             </div>
