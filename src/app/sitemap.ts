@@ -69,6 +69,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "tiktok-shop-vs-shopify",
     "how-much-does-professional-logo-design-cost",
     "shopify-store-setup-cost-2026",
+    "how-to-start-a-tiktok-shop-2026",
+    "how-to-start-a-dropshipping-business-2026",
+    "how-to-get-more-website-and-store-traffic",
+    "why-visitors-leave-without-buying-or-contacting",
+    "how-to-get-your-business-found-in-ai-search",
+    "what-you-need-before-launching-a-website-or-store",
+    "how-to-track-website-performance-and-results",
+    "how-to-check-if-your-website-is-secure",
   ]);
 
   const insightRoutes: MetadataRoute.Sitemap = uniqueInsights.map((i) => ({

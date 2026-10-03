@@ -1,4 +1,6 @@
 import { SHOPIFY_SETUP_PRICE_LABEL } from "@/data/commerce-pricing";
+import { NEW_GROWTH_GUIDES } from "./insights-growth-guides";
+import { GUIDE_REVISIONS } from "./insights-guide-revisions";
 export interface TableData {
   headers: string[];
   rows: string[][];
@@ -3013,6 +3015,13 @@ export const INSIGHTS: InsightArticle[] = [
 },
 
 ];
+
+// Refresh existing canonical guides instead of creating overlapping URLs.
+for (const article of INSIGHTS) {
+  const revision = GUIDE_REVISIONS[article.slug];
+  if (revision) Object.assign(article, revision);
+}
+INSIGHTS.push(...NEW_GROWTH_GUIDES);
 
 export function getInsightBySlug(slug: string): InsightArticle | undefined {
   return INSIGHTS.find((i) => i.slug === slug);

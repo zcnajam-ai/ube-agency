@@ -76,11 +76,7 @@ export async function generateMetadata({
   const publishedTime = toSchemaDate(article.publishedAt);
   const modifiedTime = toSchemaDate(article.updatedAt);
 
-  const ogImageUrl = article.coverImage
-    ? article.coverImage.startsWith("http")
-      ? article.coverImage
-      : `https://unifiedbrandingexperts.com${article.coverImage}`
-    : "https://unifiedbrandingexperts.com/og-default.png";
+  const ogImageUrl = `https://unifiedbrandingexperts.com/insights/${article.slug}/opengraph-image`;
 
   return {
     title: article.title,
@@ -101,7 +97,7 @@ export async function generateMetadata({
           url: ogImageUrl,
           width: 1200,
           height: 630,
-          alt: article.coverAlt || article.title,
+          alt: `${article.title} article by Unified Branding Experts`,
         },
       ],
     },
