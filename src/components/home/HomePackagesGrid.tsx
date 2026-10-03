@@ -147,7 +147,7 @@ export default function HomePackagesGrid() {
                   </div>
                   <span
                     className={`text-[10px] font-mono-num font-bold uppercase tracking-wider ${
-                      pkg.popular ? "text-[#DDF160]" : "text-[#9F8BE7]"
+                      pkg.popular ? "text-[#DDF160]" : "text-[#6B4BA7]"
                     }`}
                   >
                     {pkg.badge}
