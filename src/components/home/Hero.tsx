@@ -33,7 +33,7 @@ export default function Hero() {
             <div className="space-y-4">
               <h1 className="font-display text-3xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-[#161616] tracking-tighter leading-[1.06] break-words">
                 eCommerce Web Design <br className="hidden sm:block" />
-                &amp; <span className="text-[#9F8BE7]">Growth Marketing</span>.
+                &amp; <span className="text-[#6B4BA7]">Growth Marketing</span>.
               </h1>
 
               <p className="text-sm sm:text-base md:text-lg lg:text-xl text-[#585858] font-body leading-relaxed max-w-3xl">
@@ -51,7 +51,7 @@ export default function Hero() {
                   <Link
                     key={pill.label}
                     href={pill.href}
-                    className="inline-flex items-center gap-2 px-3 py-1.5 sm:px-3.5 sm:py-1.5 rounded-full bg-white/95 backdrop-blur-xs border border-[#E0DDDB] hover:border-[#9F8BE7] text-xs font-display font-semibold text-[#161616] hover:text-[#9F8BE7] transition-all shadow-2xs group"
+                    className="inline-flex items-center gap-2 px-3 py-1.5 sm:px-3.5 sm:py-1.5 rounded-full bg-white/95 backdrop-blur-xs border border-[#E0DDDB] hover:border-[#9F8BE7] text-xs font-display font-semibold text-[#161616] hover:text-[#6B4BA7] transition-all shadow-2xs group"
                   >
                     {pill.icon}
                     <span>{pill.label}</span>
