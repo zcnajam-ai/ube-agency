@@ -92,7 +92,7 @@ export default function Navbar() {
           </Link>
 
           {/* Desktop Navigation Links with Dropdowns */}
-          <div className="hidden lg:flex items-center gap-1 xl:gap-1.5">
+          <div className="hidden xl:flex shrink-0 items-center gap-1.5 whitespace-nowrap">
             <Link
               href="/work"
               className="px-3 py-1.5 rounded-full text-xs font-display font-semibold text-[#303030] hover:text-[#161616] hover:bg-[#FAF7F6] transition-all"
@@ -582,13 +582,13 @@ export default function Navbar() {
           </div>
 
           {/* Action CTAs */}
-          <div className="flex items-center gap-2 sm:gap-3">
+          <div className="flex shrink-0 items-center gap-2 sm:gap-3">
             {/* Direct Phone link */}
             <a
               href={`tel:${COMPANY_INFO.phoneRaw}`}
               onClick={() => trackPhoneClick("header")}
               data-analytics-handled="true"
-              className="hidden md:flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#FAF7F6] border border-[#E0DDDB] hover:border-[#9F8BE7] text-xs font-mono-num text-[#161616] transition-all shadow-xs"
+              className="hidden xl:flex shrink-0 items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#FAF7F6] border border-[#E0DDDB] hover:border-[#9F8BE7] text-xs font-mono-num text-[#161616] transition-all shadow-xs whitespace-nowrap"
             >
               <Phone className="w-3.5 h-3.5 text-[#9F8BE7]" />
               <span>{COMPANY_INFO.phone}</span>
