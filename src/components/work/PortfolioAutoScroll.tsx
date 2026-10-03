@@ -67,7 +67,7 @@ export default function PortfolioAutoScroll() {
         <div className="flex items-center gap-2 shrink-0">
           <button
             onClick={() => setIsPaused((prev) => !prev)}
-            className="px-3 py-1 rounded-full bg-white border border-[#E0DDDB] text-[11px] sm:text-xs font-mono-num text-[#585858] hover:text-[#161616] flex items-center gap-1.5 transition-colors cursor-pointer whitespace-nowrap shrink-0"
+            className="hidden md:flex motion-reduce:hidden px-3 py-1 rounded-full bg-white border border-[#E0DDDB] text-[11px] sm:text-xs font-mono-num text-[#585858] hover:text-[#161616] items-center gap-1.5 transition-colors cursor-pointer whitespace-nowrap shrink-0"
             title={isPaused ? "Resume auto-scroll" : "Pause auto-scroll"}
           >
             {isPaused ? <Play className="w-3 h-3 text-emerald-600 shrink-0" /> : <Pause className="w-3 h-3 shrink-0" />}
