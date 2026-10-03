@@ -11,9 +11,19 @@ export default function SiteAmbientBackground() {
   useEffect(() => {
     const motion = window.matchMedia("(prefers-reduced-motion: reduce)");
     let frame = 0;
-    let last = 0;
-    let pointerX = 0;
-    let pointerY = 0;
+
+    const update = () => {
+      frame = 0;
+      if (motion.matches || document.hidden) return;
+      const { x, y } = pointerRef.current;
+      const wave = Math.sin(window.scrollY / 700) * 24;
+      if (violetRef.current) violetRef.current.style.transform = `translate3d(${x * 0.45}px, ${wave + y * 0.5}px, 0)`;
+      if (blushRef.current) blushRef.current.style.transform = `translate3d(${-x * 0.35}px, ${-wave * 0.75 - y * 0.4}px, 0)`;
+    };
+
+    const schedule = () => {
+      if (!frame && !motion.matches && !document.hidden) frame = requestAnimationFrame(update);
+    };
 
     const onPointerMove = (event: PointerEvent) => {
       if (event.pointerType === "touch") return;
@@ -21,18 +31,7 @@ export default function SiteAmbientBackground() {
         x: (event.clientX / window.innerWidth - 0.5) * 28,
         y: (event.clientY / window.innerHeight - 0.5) * 22,
       };
-    };
-
-    const animate = (time: number) => {
-      frame = requestAnimationFrame(animate);
-      if (time - last < 33) return;
-      last = time;
-      pointerX += (pointerRef.current.x - pointerX) * 0.12;
-      pointerY += (pointerRef.current.y - pointerY) * 0.12;
-      const scroll = window.scrollY;
-      const wave = Math.sin(scroll / 700) * 24;
-      if (violetRef.current) violetRef.current.style.transform = `translate3d(${pointerX * 0.45}px, ${wave + pointerY * 0.5}px, 0)`;
-      if (blushRef.current) blushRef.current.style.transform = `translate3d(${-pointerX * 0.35}px, ${-wave * 0.75 - pointerY * 0.4}px, 0)`;
+      schedule();
     };
 
     const reset = () => {
@@ -42,18 +41,21 @@ export default function SiteAmbientBackground() {
 
     const sync = () => {
       cancelAnimationFrame(frame);
+      frame = 0;
       if (motion.matches) reset();
-      else if (!document.hidden) frame = requestAnimationFrame(animate);
+      else schedule();
     };
 
     window.addEventListener("pointermove", onPointerMove, { passive: true });
+    window.addEventListener("scroll", schedule, { passive: true });
     document.addEventListener("visibilitychange", sync);
     motion.addEventListener("change", sync);
-    sync();
+    schedule();
 
     return () => {
       cancelAnimationFrame(frame);
       window.removeEventListener("pointermove", onPointerMove);
+      window.removeEventListener("scroll", schedule);
       document.removeEventListener("visibilitychange", sync);
       motion.removeEventListener("change", sync);
     };
