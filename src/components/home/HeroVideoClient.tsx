@@ -9,17 +9,9 @@ export default function HeroVideoClient() {
   const [shouldPlay, setShouldPlay] = useState(false);
   const [isMuted, setIsMuted] = useState(true);
 
-  // The video is below the headline on phones. Keep its 22 MB source out of
-  // the mobile critical path until a visitor chooses to watch it.
-  useEffect(() => {
-    const timer = window.setTimeout(() => {
-      if (window.matchMedia("(min-width: 1024px)").matches &&
-          !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-        setShouldPlay(true);
-      }
-    }, 200);
-    return () => window.clearTimeout(timer);
-  }, []);
+  // Keep the 22 MB video off the critical path on every screen size.
+  // Visitors can play it explicitly from the poster without a failed
+  // background request interrupting the rest of the page.
 
   useEffect(() => {
     if (shouldPlay) videoRef.current?.play().catch(() => {});
@@ -31,7 +23,6 @@ export default function HeroVideoClient() {
         <video
           ref={videoRef}
           poster="/images/home/ube-video-poster.webp"
-          autoPlay
           muted={isMuted}
           loop
           playsInline
