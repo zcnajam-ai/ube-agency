@@ -1,92 +1,79 @@
 "use client";
 
-import React, { useRef, useEffect, useState } from "react";
-import { Volume2, VolumeX } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
+import Image from "next/image";
+import { Play, Volume2, VolumeX } from "lucide-react";
 
 export default function HeroVideoClient() {
   const videoRef = useRef<HTMLVideoElement>(null);
+  const [shouldPlay, setShouldPlay] = useState(false);
   const [isMuted, setIsMuted] = useState(true);
 
+  // The video is below the headline on phones. Keep its 22 MB source out of
+  // the mobile critical path until a visitor chooses to watch it.
   useEffect(() => {
-    // Defer video playback slightly to allow critical hero fonts and layout to finish rendering first
-    const timer = setTimeout(() => {
-      if (videoRef.current) {
-        videoRef.current.play().catch(() => {});
+    const timer = window.setTimeout(() => {
+      if (window.matchMedia("(min-width: 1024px)").matches &&
+          !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+        setShouldPlay(true);
       }
-    }, 400);
-
-    // Unmute on the visitor's first trusted click or touch interaction.
-    const handleFirstInteraction = () => {
-      const pref = sessionStorage.getItem("ube_video_sound_pref");
-      if (pref !== "muted" && videoRef.current) {
-        videoRef.current.muted = false;
-        videoRef.current.volume = 0.65;
-        setIsMuted(false);
-        sessionStorage.setItem("ube_video_sound_pref", "unmuted");
-        videoRef.current.play().catch(() => {});
-      }
-      window.removeEventListener("click", handleFirstInteraction);
-      window.removeEventListener("touchstart", handleFirstInteraction);
-    };
-
-    window.addEventListener("click", handleFirstInteraction, { once: true });
-    window.addEventListener("touchstart", handleFirstInteraction, { once: true });
-
-    return () => {
-      clearTimeout(timer);
-      window.removeEventListener("click", handleFirstInteraction);
-      window.removeEventListener("touchstart", handleFirstInteraction);
-    };
+    }, 200);
+    return () => window.clearTimeout(timer);
   }, []);
 
-  const toggleMute = (e: React.MouseEvent) => {
-    e.stopPropagation();
-    if (!videoRef.current) return;
-    const newMuted = !isMuted;
-    setIsMuted(newMuted);
-    videoRef.current.muted = newMuted;
-    if (!newMuted) {
-      videoRef.current.volume = 0.65;
-      videoRef.current.play().catch(() => {});
-      sessionStorage.setItem("ube_video_sound_pref", "unmuted");
-    } else {
-      sessionStorage.setItem("ube_video_sound_pref", "muted");
-    }
-  };
+  useEffect(() => {
+    if (shouldPlay) videoRef.current?.play().catch(() => {});
+  }, [shouldPlay]);
 
   return (
-    <div className="relative aspect-[16/9] w-full rounded-2xl sm:rounded-[28px] overflow-hidden border border-[#E0DDDB] shadow-lg bg-white/95 backdrop-blur-xs hover:border-[#9F8BE7] transition-all duration-300 group">
-      <video
-        ref={videoRef}
-        autoPlay
-        muted={isMuted}
-        loop
-        playsInline
-        preload="none"
-        className="w-full h-full object-contain rounded-2xl sm:rounded-[28px] bg-[#FAF7F6]"
-      >
-        <source src="/videos/ube-promotional-video.mp4" type="video/mp4" />
-      </video>
+    <div className="relative aspect-[16/9] w-full rounded-2xl sm:rounded-[28px] overflow-hidden border border-[#E0DDDB] shadow-lg bg-[#FAF7F6] hover:border-[#9F8BE7] transition-colors group">
+      {shouldPlay ? (
+        <video
+          ref={videoRef}
+          poster="/images/home/ube-video-poster.webp"
+          autoPlay
+          muted={isMuted}
+          loop
+          playsInline
+          preload="none"
+          className="w-full h-full object-contain bg-[#FAF7F6]"
+          aria-label="Unified Branding Experts promotional video"
+        >
+          <source src="/videos/ube-promotional-video.mp4" type="video/mp4" />
+        </video>
+      ) : (
+        <>
+          <Image
+            src="/images/home/ube-video-poster.webp"
+            alt=""
+            fill
+            sizes="(max-width: 1023px) calc(100vw - 32px), 50vw"
+            className="object-cover"
+          />
+          <button
+            type="button"
+            onClick={() => setShouldPlay(true)}
+            className="absolute inset-0 flex items-center justify-center bg-black/10 text-white focus-visible:outline-4 focus-visible:outline-offset-[-4px] focus-visible:outline-[#9F8BE7]"
+            aria-label="Play Unified Branding Experts promotional video"
+          >
+            <span className="flex items-center gap-2 rounded-full bg-[#161616]/90 px-5 py-3 text-sm font-semibold shadow-md">
+              <Play className="h-5 w-5 fill-current" aria-hidden="true" /> Play video
+            </span>
+          </button>
+        </>
+      )}
 
-      {/* Sound Toggle Button Overlay */}
-      <button
-        type="button"
-        onClick={toggleMute}
-        className="absolute bottom-3 right-3 sm:bottom-4 sm:right-4 z-20 px-3 py-1.5 sm:px-3.5 sm:py-1.5 rounded-full bg-white/90 backdrop-blur-md border border-[#E0DDDB] hover:border-[#9F8BE7] text-xs font-mono-num font-bold text-[#161616] flex items-center gap-1.5 shadow-sm transition-all hover:scale-105 min-h-[36px]"
-        aria-label={isMuted ? "Unmute promotional video" : "Mute promotional video"}
-      >
-        {isMuted ? (
-          <>
-            <VolumeX className="w-3.5 h-3.5 text-rose-500 shrink-0" />
-            <span>Sound Off</span>
-          </>
-        ) : (
-          <>
-            <Volume2 className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
-            <span>Sound On</span>
-          </>
-        )}
-      </button>
+      {shouldPlay && (
+        <button
+          type="button"
+          onClick={() => setIsMuted((muted) => !muted)}
+          className="absolute bottom-3 right-3 sm:bottom-4 sm:right-4 z-20 px-3 py-1.5 sm:px-3.5 sm:py-1.5 rounded-full bg-white/95 border border-[#E0DDDB] hover:border-[#9F8BE7] text-xs font-mono-num font-bold text-[#161616] flex items-center gap-1.5 shadow-sm min-h-[36px]"
+          aria-label={isMuted ? "Unmute promotional video" : "Mute promotional video"}
+        >
+          {isMuted ? <VolumeX className="w-4 h-4" aria-hidden="true" /> : <Volume2 className="w-4 h-4" aria-hidden="true" />}
+          <span>{isMuted ? "Sound Off" : "Sound On"}</span>
+        </button>
+      )}
     </div>
   );
 }
