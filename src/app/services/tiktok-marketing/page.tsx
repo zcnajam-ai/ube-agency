@@ -341,7 +341,7 @@ export default function TikTokMarketingServicePage() {
       </section>
 
       {/* 5. Package Cross-Link Banner */}
-      <section className="p-8 sm:p-12 rounded-3xl bg-gradient-to-br from-white to-[#F4EFEB] border-2 border-[#9F8BE7] shadow-sm flex flex-col md:flex-row items-center justify-between gap-8">
+      <section className="p-8 sm:p-12 rounded-3xl bg-gradient-to-br from-white to-[#F4EFEB] border-2 border-[#9F8BE7] shadow-sm flex flex-col xl:flex-row items-stretch xl:items-center justify-between gap-8">
         <div className="space-y-3 max-w-2xl">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#9F8BE7]/15 text-xs font-mono-num text-[#161616] font-bold">
             <Sparkles className="w-3.5 h-3.5 text-[#9F8BE7]" />
@@ -357,7 +357,7 @@ export default function TikTokMarketingServicePage() {
 
         <Link
           href="/tiktok-marketing-packages"
-          className="px-8 py-4 rounded-full bg-[#9F8BE7] text-[#161616] font-display font-bold text-sm hover:bg-[#b4a3f7] transition-all shadow-[0_4px_20px_rgba(159,139,231,0.35)] shrink-0 flex items-center gap-2"
+          className="px-8 py-4 rounded-full bg-[#9F8BE7] text-[#161616] font-display font-bold text-sm hover:bg-[#b4a3f7] transition-all shadow-[0_4px_20px_rgba(159,139,231,0.35)] w-full sm:w-auto min-w-0 flex flex-wrap items-center justify-center text-center gap-2"
         >
           <span>View All TikTok Packages</span>
           <ArrowUpRight className="w-4 h-4" />
