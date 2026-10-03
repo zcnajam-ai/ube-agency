@@ -155,7 +155,7 @@ export default function PackagesHubPage() {
       <div className="pt-32 pb-24 px-4 sm:px-6 md:px-12 max-w-7xl mx-auto space-y-20">
       {/* 1. Header Section */}
       <section className="text-center space-y-5 max-w-4xl mx-auto">
-        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-[#E0DDDB] text-xs font-mono-num text-[#9F8BE7] font-bold shadow-xs">
+        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-[#E0DDDB] text-xs font-mono-num text-[#6B4BA7] font-bold shadow-xs">
           <Sparkles className="w-3.5 h-3.5" />
           <span>TRANSPARENT COMMERCIAL PACKAGES</span>
         </div>
@@ -196,9 +196,9 @@ export default function PackagesHubPage() {
                     {hub.icon}
                   </div>
                   <div>
-                    <h3 className="font-display text-xl font-bold text-[#161616] group-hover:text-[#9F8BE7] transition-colors">
+                    <h2 className="font-display text-xl font-bold text-[#161616] group-hover:text-[#6B4BA7] transition-colors">
                       {hub.title}
-                    </h3>
+                    </h2>
                     <span className="text-[11px] font-mono-num text-[#585858] block">
                       {hub.bestFor}
                     </span>
@@ -250,9 +250,9 @@ export default function PackagesHubPage() {
               <span className="text-xs font-mono-num text-[#DDF160] font-bold uppercase tracking-wider">
                 Custom Engineering
               </span>
-              <h3 className="font-display text-2xl font-bold text-white">
+              <h2 className="font-display text-2xl font-bold text-white">
                 eCommerce &amp; Web Development
-              </h3>
+              </h2>
             </div>
             <p className="text-xs text-[#ACACAC] leading-relaxed font-body">
               For high-volume multi-channel storefronts (Shopify Plus, WooCommerce) and custom Next.js web applications, we provide bespoke architecture scoped to your exact business specifications.

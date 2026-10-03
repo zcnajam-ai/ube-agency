@@ -53,7 +53,7 @@ export default function PortfolioAutoScroll() {
     <div className="space-y-6">
       {/* Top Header with Auto-Scroll Controls */}
       <div className="flex flex-wrap sm:flex-nowrap items-center justify-between gap-2 border-b border-[#E0DDDB] pb-4">
-        <div className="flex items-center gap-2 text-[11px] sm:text-xs font-mono-num uppercase tracking-wider text-[#9F8BE7] font-bold min-w-0">
+        <div className="flex items-center gap-2 text-[11px] sm:text-xs font-mono-num uppercase tracking-wider text-[#6B4BA7] font-bold min-w-0">
           <Sparkles className="w-3.5 h-3.5 shrink-0" />
           <span className="truncate">FEATURED SPOTLIGHT ({activeIndex + 1} OF {total})</span>
         </div>
@@ -124,10 +124,10 @@ export default function PortfolioAutoScroll() {
           <div className="space-y-4">
             <div className="flex items-center justify-between text-xs font-mono-num text-[#585858]">
               <span>Client: <strong className="text-[#161616] font-semibold">{currentProject.client}</strong></span>
-              <span className="text-[#9F8BE7] font-bold">Spotlight 0{activeIndex + 1}</span>
+              <span className="text-[#6B4BA7] font-bold">Spotlight 0{activeIndex + 1}</span>
             </div>
 
-            <h2 className="font-display text-2xl sm:text-3xl font-bold tracking-tight text-[#161616] group-hover:text-[#9F8BE7] transition-colors leading-tight">
+            <h2 className="font-display text-2xl sm:text-3xl font-bold tracking-tight text-[#161616] group-hover:text-[#6B4BA7] transition-colors leading-tight">
               <Link href={`/work/${currentProject.slug}`}>{currentProject.title}</Link>
             </h2>
 
@@ -152,13 +152,14 @@ export default function PortfolioAutoScroll() {
               <span className="text-[10px] font-mono-num uppercase tracking-wider text-[#585858] block font-bold">
                 Deliverable
               </span>
-              <span className="text-xs sm:text-sm font-mono-num font-bold text-emerald-600">
+              <span className="text-xs sm:text-sm font-mono-num font-bold text-emerald-700">
                 {currentProject.results[0]?.label}
               </span>
             </div>
 
             <Link
               href={`/work/${currentProject.slug}`}
+              aria-label={`Explore ${currentProject.client} case study`}
               className="px-5 py-2.5 rounded-full bg-[#161616] hover:bg-black text-white text-xs sm:text-sm font-display font-bold flex items-center gap-1.5 transition-all shadow-xs shrink-0"
             >
               <span>Explore Case Study</span>
@@ -169,18 +170,18 @@ export default function PortfolioAutoScroll() {
       </div>
 
       {/* Progress Dots */}
-      <div className="flex items-center justify-center gap-2 pt-1">
+      <div className="flex items-center justify-center gap-0 pt-1">
         {projects.map((_, idx) => (
           <button
             key={idx}
+            type="button"
             onClick={() => setActiveIndex(idx)}
             aria-label={`Go to spotlight slide ${idx + 1}`}
-            className={`h-2 rounded-full transition-all duration-300 cursor-pointer ${
-              activeIndex === idx
-                ? "w-8 bg-[#9F8BE7]"
-                : "w-2 bg-[#E0DDDB] hover:bg-[#A0A0A0]"
-            }`}
-          />
+            aria-current={activeIndex === idx ? "true" : undefined}
+            className="w-11 h-11 inline-flex items-center justify-center rounded-full cursor-pointer focus-visible:outline-2 focus-visible:outline-[#6B4BA7]"
+          >
+            <span className={`h-2 rounded-full transition-all duration-300 ${activeIndex === idx ? "w-6 bg-[#6B4BA7]" : "w-2 bg-[#A0A0A0]"}`} />
+          </button>
         ))}
       </div>
     </div>

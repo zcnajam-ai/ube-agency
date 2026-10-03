@@ -87,7 +87,7 @@ export default function WorkIndexPage() {
 
         {/* Editorial Page Hero */}
         <div className="relative z-10 space-y-4 max-w-3xl border-b border-[#E0DDDB] pb-12">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white border border-[#E0DDDB] text-xs font-mono-num uppercase tracking-wider text-[#9F8BE7] font-bold shadow-xs">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white border border-[#E0DDDB] text-xs font-mono-num uppercase tracking-wider text-[#6B4BA7] font-bold shadow-xs">
             <Heading3DSparkle size={16} />
             <span>PORTFOLIO &amp; CLIENT CASE STUDIES</span>
           </div>
@@ -115,7 +115,7 @@ export default function WorkIndexPage() {
                 Browse all verified project deliveries, branding kits, and custom storefront builds.
               </p>
             </div>
-            <span className="text-xs font-mono-num text-[#9F8BE7] font-bold bg-[#FAF7F6] px-3 py-1 rounded-full border border-[#E0DDDB]">
+            <span className="text-xs font-mono-num text-[#6B4BA7] font-bold bg-[#FAF7F6] px-3 py-1 rounded-full border border-[#E0DDDB]">
               Showing {FEATURED_PROJECTS.length} Projects
             </span>
           </div>
@@ -142,12 +142,12 @@ export default function WorkIndexPage() {
                 <div className="p-6 sm:p-8 space-y-4">
                   <div className="flex items-center justify-between text-xs font-mono-num text-[#585858]">
                     <span className="font-semibold text-[#161616]">{project.client}</span>
-                    <span className="font-bold text-[#9F8BE7]">
+                    <span className="font-bold text-[#6B4BA7]">
                       {project.year ?? (project.projectType === "website-build" ? "Website Build" : "Brand Identity")}
                     </span>
                   </div>
 
-                  <h2 className="font-display text-2xl font-bold text-[#161616] group-hover:text-[#9F8BE7] transition-colors leading-tight">
+                  <h2 className="font-display text-2xl font-bold text-[#161616] group-hover:text-[#6B4BA7] transition-colors leading-tight">
                     <Link href={`/work/${project.slug}`}>{project.title}</Link>
                   </h2>
 
@@ -169,11 +169,12 @@ export default function WorkIndexPage() {
               </div>
 
               <div className="p-6 sm:p-8 pt-0 border-t border-[#E0DDDB]/60 mt-4 flex items-center justify-between">
-                <span className="text-xs font-mono-num text-emerald-600 font-bold">
+                <span className="text-xs font-mono-num text-emerald-700 font-bold">
                   {project.results[0]?.label}
                 </span>
                 <Link
                   href={`/work/${project.slug}`}
+                  aria-label={`Explore ${project.client} case study`}
                   className="inline-flex items-center gap-1.5 text-xs font-display font-bold text-[#161616] group-hover:text-[#9F8BE7] transition-colors"
                 >
                   <span>Explore Case Study</span>
