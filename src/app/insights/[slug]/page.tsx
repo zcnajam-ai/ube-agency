@@ -97,7 +97,7 @@ export async function generateMetadata({
           url: ogImageUrl,
           width: 1200,
           height: 630,
-          alt: article.coverAlt || article.title,
+          alt: `${article.title} article by Unified Branding Experts`,
         },
       ],
     },
