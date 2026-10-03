@@ -31,8 +31,8 @@ export default function Footer() {
 
       <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10 space-y-16">
         {/* Top Callout Strip */}
-        <div className="p-8 sm:p-12 rounded-3xl bg-white/5 border border-white/10 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8 backdrop-blur-xl">
-          <div className="space-y-2 max-w-2xl">
+        <div className="p-6 sm:p-8 xl:p-12 rounded-3xl bg-white/5 border border-white/10 flex flex-col xl:flex-row items-start xl:items-center justify-between gap-8 backdrop-blur-xl">
+          <div className="min-w-0 space-y-2 max-w-2xl">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#DDF160]/15 border border-[#DDF160]/30 text-xs font-mono-num text-[#DDF160] font-bold">
               <Heading3DSparkle size={16} />
               <span>READY TO SCALE YOUR BRAND?</span>
@@ -45,18 +45,18 @@ export default function Footer() {
             </p>
           </div>
 
-          <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 sm:gap-4 w-full lg:w-auto">
+          <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 sm:gap-4 w-full xl:w-auto xl:shrink-0">
             <button
               type="button"
               onClick={() => openProjectModal()}
-              className="w-full sm:w-auto px-7 py-3.5 rounded-full bg-[#9F8BE7] text-[#161616] font-display font-bold text-sm md:text-base hover:bg-[#b4a3f7] transition-all shadow-[0_4px_20px_rgba(159,139,231,0.4)] flex items-center justify-center gap-2 whitespace-normal text-center min-h-[48px] cursor-pointer"
+              className="w-full sm:w-auto px-7 py-3.5 rounded-full bg-[#9F8BE7] text-[#161616] font-display font-bold text-sm md:text-base hover:bg-[#b4a3f7] transition-all shadow-[0_4px_20px_rgba(159,139,231,0.4)] flex items-center justify-center gap-2 whitespace-nowrap text-center min-h-[48px] cursor-pointer"
             >
               <span>Start Your Project</span>
               <ArrowUpRight className="w-4 h-4 shrink-0" />
             </button>
             <a
               href={`tel:${COMPANY_INFO.phoneRaw}`}
-              className="w-full sm:w-auto px-6 py-3.5 rounded-full border border-white/20 bg-white/5 hover:bg-white/10 hover:border-[#9F8BE7] transition-all text-xs sm:text-sm font-mono-num text-white flex items-center justify-center gap-2 whitespace-normal text-center min-h-[48px]"
+              className="w-full sm:w-auto px-6 py-3.5 rounded-full border border-white/20 bg-white/5 hover:bg-white/10 hover:border-[#9F8BE7] transition-all text-xs sm:text-sm font-mono-num text-white flex items-center justify-center gap-2 whitespace-nowrap text-center min-h-[48px]"
             >
               <Phone className="w-4 h-4 text-[#9F8BE7] shrink-0" />
               <span>{COMPANY_INFO.phone}</span>

@@ -548,7 +548,7 @@ export default function GoogleAdsServicePage() {
       </section>
 
       {/* 8. FINAL CALLOUT CTA */}
-      <section className="p-8 sm:p-14 rounded-3xl bg-[#161616] text-white border border-white/10 flex flex-col md:flex-row items-center justify-between gap-8 backdrop-blur-xl">
+      <section className="p-8 sm:p-14 rounded-3xl bg-[#161616] text-white border border-white/10 flex flex-col xl:flex-row items-stretch xl:items-center justify-between gap-8 backdrop-blur-xl">
         <div className="space-y-3 max-w-2xl">
           <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#DDF160]/15 border border-[#DDF160]/30 text-xs font-mono-num text-[#DDF160] font-bold">
             <Sparkles className="w-3.5 h-3.5" />

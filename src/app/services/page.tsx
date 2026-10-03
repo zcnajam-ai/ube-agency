@@ -121,7 +121,7 @@ export default function ServicesPage() {
       </div>
 
       {/* Package Quick Strip */}
-      <div className="p-8 sm:p-12 rounded-3xl bg-[#161616] text-white flex flex-col md:flex-row items-center justify-between gap-6 shadow-xl">
+      <div className="p-8 sm:p-12 rounded-3xl bg-[#161616] text-white flex flex-col xl:flex-row items-stretch xl:items-center justify-between gap-6 shadow-xl">
         <div className="space-y-2">
           <span className="text-xs font-mono-num text-[#DDF160] uppercase font-bold tracking-widest">
             DIRECT PACKAGE PATHWAYS
@@ -136,7 +136,7 @@ export default function ServicesPage() {
 
         <Link
           href="/packages"
-          className="px-8 py-4 rounded-full bg-[#9F8BE7] text-[#161616] font-display font-bold text-sm hover:bg-[#b4a3f7] transition-all shadow-md shrink-0 flex items-center gap-2"
+          className="px-8 py-4 rounded-full bg-[#9F8BE7] text-[#161616] font-display font-bold text-sm hover:bg-[#b4a3f7] transition-all shadow-md w-full sm:w-auto min-w-0 flex flex-wrap items-center justify-center text-center gap-2"
         >
           <span>Open Packages Directory</span>
           <ArrowUpRight className="w-4 h-4" />

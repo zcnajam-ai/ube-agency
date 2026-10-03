@@ -405,7 +405,7 @@ export default function ShopifyDevelopmentPage() {
       </section>
 
       {/* 5. PACKAGE CTA */}
-      <section className="p-8 sm:p-12 rounded-3xl bg-gradient-to-br from-white to-[#F4EFEB] border-2 border-[#9F8BE7] shadow-sm flex flex-col md:flex-row items-center justify-between gap-8">
+      <section className="p-8 sm:p-12 rounded-3xl bg-gradient-to-br from-white to-[#F4EFEB] border-2 border-[#9F8BE7] shadow-sm flex flex-col xl:flex-row items-stretch xl:items-center justify-between gap-8">
         <div className="space-y-2 max-w-2xl">
           <span className="text-xs font-mono-num text-emerald-700 font-bold uppercase tracking-wider block">
             AFFORDABLE ECOMMERCE PACKAGES
@@ -420,7 +420,7 @@ export default function ShopifyDevelopmentPage() {
 
         <Link
           href="/ecommerce-growth-packages"
-          className="px-8 py-4 rounded-full bg-[#9F8BE7] text-[#161616] font-display font-bold text-sm hover:bg-[#b4a3f7] transition-all shadow-[0_4px_20px_rgba(159,139,231,0.35)] shrink-0 flex items-center gap-2"
+          className="px-8 py-4 rounded-full bg-[#9F8BE7] text-[#161616] font-display font-bold text-sm hover:bg-[#b4a3f7] transition-all shadow-[0_4px_20px_rgba(159,139,231,0.35)] w-full sm:w-auto min-w-0 flex flex-wrap items-center justify-center text-center gap-2"
         >
           <span>View eCom Packages</span>
           <ArrowUpRight className="w-4 h-4" />
