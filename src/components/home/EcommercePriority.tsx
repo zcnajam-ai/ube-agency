@@ -1,155 +1,134 @@
 "use client";
 
-import React from "react";
 import Link from "next/link";
-import {
-  CreditCard,
-  Truck,
-  ArrowUpRight,
-  CheckCircle2,
-  Layers,
-} from "lucide-react";
+import { ArrowRight, ArrowUpRight, Check, ShoppingBag } from "lucide-react";
 import { useScroll } from "@/components/providers/SmoothScrollProvider";
 import InteractiveMedia from "../common/InteractiveMedia";
-import BackgroundGrid from "../common/BackgroundGrid";
-import PurpleGlowField from "../common/PurpleGlowField";
-import OversizedTypography from "../common/OversizedTypography";
-import { Shopify3DIcon, Heading3DSparkle } from "../common/Brand3DIcons";
+
+const pathways = [
+  {
+    number: "01", label: "Starting out", title: "Launch a store",
+    description: "Get a Shopify or WooCommerce storefront with a usable catalog, product pages, payment and shipping setup, and a mobile shopping experience.",
+    details: ["Store design", "Catalog setup", "Launch checks"],
+    href: "/services/shopify-development", linkText: "Explore store builds",
+  },
+  {
+    number: "02", label: "Already selling", title: "Improve the buying journey",
+    description: "Work through confusing navigation, thin product content, checkout friction, and search visibility with a prioritized improvement plan.",
+    details: ["Product discovery", "Checkout review", "Search foundations"],
+    href: "/services/ecommerce", linkText: "Explore eCommerce growth",
+  },
+  {
+    number: "03", label: "Need ongoing help", title: "Keep the store moving",
+    description: "Hand off product updates, merchandising, promotions, catalog checks, and routine store operations to a defined management plan.",
+    details: ["Catalog updates", "Store operations", "Reporting"],
+    href: "/services/ecommerce-store-management", linkText: "Explore store management",
+  },
+];
 
 export default function EcommercePriority() {
   const { openProjectModal } = useScroll();
 
-  const ecommercePillars = [
-    {
-      icon: <Shopify3DIcon size={26} />,
-      title: "Shopify & Custom Storefronts",
-      desc: "Custom Shopify and WooCommerce storefronts designed with clean navigation, clear product photography, responsive mobile layouts, and fast loading speeds.",
-      highlights: ["Custom Theme Customization", "Mobile-Optimized Layouts", "Intuitive Product Catalog"],
-    },
-    {
-      icon: <Truck className="w-5 h-5 text-emerald-600" />,
-      title: "Dropshipping & Supplier Integrations",
-      desc: "Automated dropshipping workflows connecting suppliers, real-time inventory synchronization, tracking updates, and multi-channel fulfillment.",
-      highlights: ["Automated Order Routing", "Supplier API Connections", "Live Inventory Tracking"],
-    },
-    {
-      icon: <CreditCard className="w-5 h-5 text-blue-600" />,
-      title: "Secure Payment & Shipping Setup",
-      desc: "Multi-currency payment gateways (Stripe, Apple Pay, PayPal), automated tax calculation, and localized shipping zone configuration.",
-      highlights: ["Trusted Payment Gateways", "Automated Tax & Shipping Rules", "Simple, Clear Checkout"],
-    },
-    {
-      icon: <Layers className="w-5 h-5 text-purple-600" />,
-      title: "WooCommerce & Multi-Channel Scaling",
-      desc: "Custom WordPress/WooCommerce builds organized for expanding product catalogs, wholesale B2B pricing tiers, and marketplace connections.",
-      highlights: ["Structured Category Architecture", "B2B Wholesale Ordering", "Marketplace Syndication"],
-    },
-  ];
-
   return (
-    <section className="relative py-20 sm:py-28 px-4 sm:px-6 md:px-12 bg-[#FAF7F6] border-b border-[#E0DDDB] overflow-hidden">
-      {/* Ambient Decor */}
-      <BackgroundGrid opacity={0.03} size={80} maskRadial />
-      <PurpleGlowField position="top-right" size={700} opacity={0.08} />
-      <OversizedTypography text="STOREFRONTS" direction="left" className="top-12 opacity-35" />
-
-      <div className="relative z-10 max-w-7xl mx-auto space-y-12">
-        {/* Section Header */}
-        <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 border-b border-[#E0DDDB] pb-6">
-          <div className="space-y-2 max-w-3xl">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white border border-[#E0DDDB] text-xs font-mono-num text-[#6B46C1] font-bold shadow-2xs">
-              <Heading3DSparkle size={16} />
-              <span>ECOMMERCE DESIGN &amp; DEVELOPMENT</span>
-            </div>
-            <h2 className="font-display text-3xl sm:text-5xl font-bold tracking-tight text-[#161616]">
-              Professional eCommerce Store Design &amp; Development
-            </h2>
-            <p className="text-sm sm:text-base text-[#585858] font-body leading-relaxed">
-              We design and develop professional Shopify and WooCommerce stores with organized product collections, mobile-friendly shopping experiences, secure payment setup, shipping configuration, supplier integrations, and checkout flows built to make purchasing simple.
-            </p>
-          </div>
-
-          <div className="flex flex-wrap items-center gap-3 shrink-0">
-            <button
-              type="button"
-              onClick={() => openProjectModal("eCommerce Store Design")}
-              className="px-6 py-3 rounded-full bg-[#9F8BE7] text-[#161616] font-display font-bold text-xs sm:text-sm hover:bg-[#b4a3f7] transition-all shadow-[0_4px_15px_rgba(159,139,231,0.35)] cursor-pointer"
-            >
-              Start eCommerce Project
-            </button>
-            <Link
-              href="/services/ecommerce"
-              className="px-6 py-3 rounded-full bg-white border border-[#E0DDDB] hover:border-[#9F8BE7] text-xs sm:text-sm font-display font-bold text-[#161616] transition-all flex items-center gap-1.5 shadow-2xs"
-            >
-              <span>Explore eCommerce Services</span>
-              <ArrowUpRight className="w-3.5 h-3.5 text-[#9F8BE7]" />
-            </Link>
-          </div>
+    <section aria-labelledby="ecommerce-pathways-title" className="relative isolate overflow-hidden border-b border-[#E0DDDB] bg-[linear-gradient(135deg,#FAF7F6_0%,#F4F0FC_55%,#FAF7F6_100%)] px-4 py-20 sm:px-6 sm:py-28 md:px-12">
+      <div className="pointer-events-none absolute -right-36 top-0 h-80 w-80 rounded-full bg-[#9F8BE7]/15 blur-3xl" aria-hidden="true" />
+      <div className="relative mx-auto max-w-7xl">
+        <div className="max-w-4xl">
+          <p className="mb-5 inline-flex items-center gap-2 rounded-full border border-[#DDD5F3] bg-white/80 px-4 py-2 font-mono-num text-xs font-bold uppercase tracking-[0.14em] text-[#6B4BA7]">
+            <ShoppingBag className="h-4 w-4" aria-hidden="true" />
+            eCommerce, from launch onward
+          </p>
+          <h2 id="ecommerce-pathways-title" className="max-w-3xl font-display text-4xl font-bold leading-[1.08] tracking-tight text-[#161616] sm:text-5xl lg:text-6xl">
+            What does your store need next?
+          </h2>
+          <p className="mt-5 max-w-2xl font-body text-base leading-relaxed text-[#585858] sm:text-lg">
+            You may need a first storefront, a better way for shoppers to find and buy products, or reliable help after launch. Choose the work that fits where your business is now.
+          </p>
         </div>
 
-        {/* Feature Grid & Visual Presentation */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-          {/* Left Column: 4 Core eCommerce Capabilities */}
-          <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-4">
-            {ecommercePillars.map((pillar) => (
-              <div
-                key={pillar.title}
-                className="p-6 rounded-3xl bg-white border border-[#E0DDDB] hover:border-[#9F8BE7] transition-all space-y-3 shadow-xs flex flex-col justify-between group"
-              >
-                <div className="space-y-2.5">
-                  <div className="w-10 h-10 rounded-2xl bg-[#FAF7F6] border border-[#E0DDDB] flex items-center justify-center group-hover:border-[#9F8BE7] transition-colors">
-                    {pillar.icon}
-                  </div>
-                  <h3 className="font-display text-base font-bold text-[#161616] group-hover:text-[#6B4BA7] transition-colors">
-                    {pillar.title}
-                  </h3>
-                  <p className="text-xs text-[#585858] font-body leading-relaxed">
-                    {pillar.desc}
-                  </p>
-                </div>
-
-                <div className="space-y-1.5 pt-3 border-t border-[#E0DDDB]">
-                  {pillar.highlights.map((h, i) => (
-                    <div key={i} className="flex items-center gap-1.5 text-[11px] font-mono-num text-[#585858]">
-                      <CheckCircle2 className="w-3 h-3 text-emerald-600 shrink-0" />
-                      <span>{h}</span>
+        <div className="mt-12 grid items-start gap-6 lg:grid-cols-[minmax(0,1fr)_minmax(0,0.92fr)] lg:gap-8">
+          <div className="space-y-3" aria-label="Choose your eCommerce starting point">
+            {pathways.map((pathway) => (
+              <Link key={pathway.number} href={pathway.href}
+                className="group block rounded-[1.75rem] border border-[#E0DDDB] bg-white/95 p-5 shadow-xs transition-[border-color,transform,box-shadow] duration-300 hover:-translate-y-0.5 hover:border-[#9F8BE7] hover:shadow-lg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#6B4BA7] sm:p-7">
+                <div className="flex items-start gap-4 sm:gap-6">
+                  <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-[#EDE7FB] font-mono-num text-sm font-bold text-[#6B4BA7] sm:h-12 sm:w-12" aria-hidden="true">
+                    {pathway.number}
+                  </span>
+                  <div className="min-w-0 flex-1">
+                    <span className="font-mono-num text-[11px] font-bold uppercase tracking-[0.15em] text-[#6B4BA7]">{pathway.label}</span>
+                    <div className="mt-1 flex items-start justify-between gap-3">
+                      <h3 className="font-display text-xl font-bold leading-tight text-[#161616] sm:text-2xl">{pathway.title}</h3>
+                      <ArrowUpRight className="h-5 w-5 shrink-0 text-[#6B4BA7] transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" aria-hidden="true" />
                     </div>
-                  ))}
+                    <p className="mt-2 font-body text-sm leading-relaxed text-[#585858]">{pathway.description}</p>
+                    <div className="mt-4 flex flex-wrap gap-x-4 gap-y-2 border-t border-[#E0DDDB] pt-4">
+                      {pathway.details.map((detail) => (
+                        <span key={detail} className="inline-flex items-center gap-1.5 text-xs font-medium text-[#414141]">
+                          <Check className="h-3.5 w-3.5 text-[#6B4BA7]" aria-hidden="true" />{detail}
+                        </span>
+                      ))}
+                    </div>
+                    <span className="mt-4 inline-flex items-center gap-1.5 font-display text-sm font-bold text-[#6B4BA7]">
+                      {pathway.linkText}<ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" aria-hidden="true" />
+                    </span>
+                  </div>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
 
-          {/* Right Column: Visual eCommerce Showcase */}
-          <div className="lg:col-span-5 space-y-4">
-            <InteractiveMedia
-              src="/images/projects/happy-knot/hd-storefront-hero.webp"
-              alt="Happy Knot Creations homepage featuring a pink crochet plush and custom order invitation"
-              aspectRatio="aspect-[1559/1009]"
-              objectFit="contain"
-              sizes="(max-width: 1024px) 100vw, 40vw"
-              quality={90}
-              badgeText="Shopify 2.0 & D2C Storefronts"
-            />
-            <div className="p-6 rounded-3xl bg-white border border-[#E0DDDB] space-y-3 text-center shadow-xs">
-              <div className="flex items-center justify-center gap-2">
-                <span className="text-xs font-mono-num font-bold text-[#161616] bg-[#FAF7F6] px-3.5 py-1 rounded-full border border-[#E0DDDB] inline-block">
-                  Verified Client Work: Happy Knot Creations
-                </span>
-              </div>
-              <p className="text-xs text-[#585858] font-body leading-relaxed">
-                Shopify storefront for handmade plushies and amigurumi, with store creation, product content and graphics, AI SEO, and ongoing management.
-              </p>
-              <div className="pt-2 border-t border-[#E0DDDB] flex items-center justify-center gap-4 text-xs font-mono-num">
-                <Link
-                  href="/work/happy-knot-creations-shopify-storefront"
-                  className="text-[#6B4BA7] font-bold hover:underline inline-flex items-center gap-1"
-                >
-                  <span>Explore Case Study</span>
-                  <ArrowUpRight className="w-3.5 h-3.5" />
-                </Link>
-              </div>
+          <div className="overflow-hidden rounded-[2rem] border border-[#303035] bg-[#161616] p-4 text-white shadow-lg sm:p-6 lg:sticky lg:top-28">
+            <div className="flex items-center justify-between gap-3 px-1 pb-4">
+              <span className="font-mono-num text-xs font-bold uppercase tracking-[0.15em] text-[#C3B2FF]">A storefront we worked on</span>
+              <span className="rounded-full border border-white/20 px-3 py-1 font-mono-num text-[11px] text-white/80">Shopify</span>
             </div>
+            <Link href="/work/happy-knot-creations-shopify-storefront" aria-label="View the Happy Knot Creations Shopify case study"
+              className="block rounded-2xl focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#C3B2FF]">
+              <InteractiveMedia
+                src="/images/projects/happy-knot/hd-storefront-hero.webp"
+                alt="Happy Knot Creations storefront featuring handmade crochet plushies and a custom order invitation"
+                aspectRatio="aspect-[1559/1009]" objectFit="contain"
+                sizes="(max-width: 1024px) 100vw, 42vw" quality={85}
+              />
+            </Link>
+            <div className="px-1 pb-2 pt-6">
+              <p className="font-mono-num text-xs font-bold uppercase tracking-[0.15em] text-[#C3B2FF]">Happy Knot Creations</p>
+              <h3 className="mt-2 font-display text-2xl font-bold leading-tight sm:text-3xl">A home for handmade products and custom orders.</h3>
+              <p className="mt-3 font-body text-sm leading-relaxed text-[#D1D1D1]">
+                UBE worked on the Shopify storefront, product content and graphics, AI SEO, and ongoing store management. See how the store presents handmade products and custom orders.
+              </p>
+              <Link href="/work/happy-knot-creations-shopify-storefront"
+                className="mt-5 inline-flex min-h-11 items-center gap-2 rounded-full bg-[#9F8BE7] px-5 font-display text-sm font-bold text-[#161616] transition-colors hover:bg-[#b4a3f7] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">
+                See the Happy Knot project<ArrowUpRight className="h-4 w-4" aria-hidden="true" />
+              </Link>
+            </div>
+          </div>
+        </div>
+
+        <div className="mt-6 grid gap-3 sm:grid-cols-2">
+          <Link href="/work/shipster-supply" className="group flex min-h-20 items-center justify-between gap-4 rounded-2xl border border-[#E0DDDB] bg-white/80 px-5 py-4 transition-colors hover:border-[#9F8BE7] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#6B4BA7]">
+            <span><span className="block font-display text-base font-bold text-[#161616]">Shipster Supply</span><span className="mt-1 block font-body text-xs text-[#585858]">Shopify storefront and catalog experience</span></span>
+            <ArrowUpRight className="h-5 w-5 shrink-0 text-[#6B4BA7] transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" aria-hidden="true" />
+          </Link>
+          <Link href="/work/cellestial-empyre-flip-phone-shopify-store" className="group flex min-h-20 items-center justify-between gap-4 rounded-2xl border border-[#E0DDDB] bg-white/80 px-5 py-4 transition-colors hover:border-[#9F8BE7] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#6B4BA7]">
+            <span><span className="block font-display text-base font-bold text-[#161616]">Cellestial Empyre</span><span className="mt-1 block font-body text-xs text-[#585858]">Flip phone catalog and Shopify storefront</span></span>
+            <ArrowUpRight className="h-5 w-5 shrink-0 text-[#6B4BA7] transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" aria-hidden="true" />
+          </Link>
+        </div>
+
+        <div className="mt-10 flex flex-col gap-4 border-t border-[#D9D3E3] pt-8 sm:flex-row sm:items-center sm:justify-between">
+          <p className="max-w-xl font-body text-sm leading-relaxed text-[#585858]">
+            Unsure which path fits? Tell us what you sell and where the store is today. We will scope the next step with you.
+          </p>
+          <div className="flex flex-wrap gap-3">
+            <button type="button" onClick={() => openProjectModal("eCommerce Store Design")}
+              className="min-h-11 rounded-full bg-[#9F8BE7] px-5 font-display text-sm font-bold text-[#161616] transition-colors hover:bg-[#b4a3f7] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#6B4BA7] cursor-pointer">
+              Discuss your store
+            </button>
+            <Link href="/ecommerce-growth-packages" className="inline-flex min-h-11 items-center gap-2 rounded-full border border-[#CFC8D8] bg-white px-5 font-display text-sm font-bold text-[#161616] transition-colors hover:border-[#9F8BE7] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#6B4BA7]">
+              Compare eCommerce packages<ArrowUpRight className="h-4 w-4" aria-hidden="true" />
+            </Link>
           </div>
         </div>
       </div>
