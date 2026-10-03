@@ -10,6 +10,7 @@
 .violet, .blush {
   position: absolute;
   will-change: transform;
+  transition: transform 300ms ease-out;
 }
 
 .violet {
@@ -36,5 +37,5 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .violet, .blush { will-change: auto; }
+  .violet, .blush { will-change: auto; transition: none; }
 }

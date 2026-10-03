@@ -125,7 +125,7 @@ export default function AISEOAndBranding() {
                 <div className="w-10 h-10 rounded-2xl bg-[#FAF7F6] border border-[#E0DDDB] flex items-center justify-center">
                   <Palette className="w-5 h-5 text-[#9F8BE7]" />
                 </div>
-                <span className="text-xs font-mono-num px-3 py-1 rounded-full bg-[#9F8BE7]/15 text-[#9F8BE7] border border-[#9F8BE7]/30 font-bold">
+                <span className="text-xs font-mono-num px-3 py-1 rounded-full bg-[#9F8BE7]/15 text-[#6B4BA7] border border-[#9F8BE7]/30 font-bold">
                   PLANS FROM $299
                 </span>
               </div>

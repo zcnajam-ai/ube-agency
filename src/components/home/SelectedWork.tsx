@@ -78,7 +78,7 @@ export default function SelectedWork() {
         {/* Section Header with Auto-Scroll Controls */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-[#E0DDDB] pb-6">
           <div className="space-y-2 max-w-2xl">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#FAF7F6] border border-[#E0DDDB] text-xs font-mono-num text-[#9F8BE7] font-bold shadow-2xs">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#FAF7F6] border border-[#E0DDDB] text-xs font-mono-num text-[#6B4BA7] font-bold shadow-2xs">
               <Heading3DSparkle size={16} />
               <span>FEATURED CLIENT CASE STUDIES &amp; PORTFOLIO</span>
             </div>
@@ -175,10 +175,10 @@ export default function SelectedWork() {
                   <div className="space-y-2 min-w-0">
                     <div className="flex items-center justify-between text-xs font-mono-num text-[#585858]">
                       <span className="truncate max-w-[70%]">Client: <strong className="text-[#161616]">{project.client}</strong></span>
-                      <span className="text-[#9F8BE7] font-bold shrink-0">0{idx + 1} / 0{totalSlides}</span>
+                      <span className="text-[#6B4BA7] font-bold shrink-0">0{idx + 1} / 0{totalSlides}</span>
                     </div>
 
-                    <h3 className="font-display text-xl sm:text-2xl font-bold text-[#161616] group-hover:text-[#9F8BE7] transition-colors break-words leading-snug">
+                    <h3 className="font-display text-xl sm:text-2xl font-bold text-[#161616] group-hover:text-[#6B4BA7] transition-colors break-words leading-snug">
                       <Link href={`/work/${project.slug}`}>{project.title}</Link>
                     </h3>
 
