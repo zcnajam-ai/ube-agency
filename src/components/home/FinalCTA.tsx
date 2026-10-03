@@ -69,7 +69,7 @@ export default function FinalCTA() {
         </p>
 
         {/* Scope Indicators */}
-        <div className="flex flex-wrap items-center justify-center gap-4 pt-2 text-xs font-mono-num text-[#838383] relative z-10">
+        <div className="flex flex-wrap items-center justify-center gap-4 pt-2 text-xs font-mono-num text-[#B8B8B8] relative z-10">
           <span className="flex items-center gap-1.5">
             <ShieldCheck className="w-4 h-4 text-emerald-400" />
             Defined Project Scope
