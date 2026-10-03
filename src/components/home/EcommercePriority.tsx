@@ -100,7 +100,7 @@ export default function EcommercePriority() {
                   <div className="w-10 h-10 rounded-2xl bg-[#FAF7F6] border border-[#E0DDDB] flex items-center justify-center group-hover:border-[#9F8BE7] transition-colors">
                     {pillar.icon}
                   </div>
-                  <h3 className="font-display text-base font-bold text-[#161616] group-hover:text-[#9F8BE7] transition-colors">
+                  <h3 className="font-display text-base font-bold text-[#161616] group-hover:text-[#6B4BA7] transition-colors">
                     {pillar.title}
                   </h3>
                   <p className="text-xs text-[#585858] font-body leading-relaxed">
@@ -143,7 +143,7 @@ export default function EcommercePriority() {
               <div className="pt-2 border-t border-[#E0DDDB] flex items-center justify-center gap-4 text-xs font-mono-num">
                 <Link
                   href="/work/happy-knot-creations-shopify-storefront"
-                  className="text-[#9F8BE7] font-bold hover:underline inline-flex items-center gap-1"
+                  className="text-[#6B4BA7] font-bold hover:underline inline-flex items-center gap-1"
                 >
                   <span>Explore Case Study</span>
                   <ArrowUpRight className="w-3.5 h-3.5" />
