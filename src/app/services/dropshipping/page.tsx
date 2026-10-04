@@ -14,7 +14,7 @@ import {
 import ServiceProjectModalTrigger from "@/components/services/ServiceProjectModalTrigger";
 
 export const metadata: Metadata = {
-  title: "Dropshipping Store Setup, Sourcing & Management | UBE",
+  title: "Dropshipping Store Setup, Sourcing & Management",
   description:
     "UBE builds and manages dropshipping stores with product sourcing, supplier integrations, catalog design, fulfillment workflows and launch support.",
   alternates: {
