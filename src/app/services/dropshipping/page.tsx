@@ -30,7 +30,7 @@ export const metadata: Metadata = {
         url: "https://unifiedbrandingexperts.com/services/dropshipping/opengraph-image",
         width: 1200,
         height: 630,
-        alt: "Dropshipping Store Setup & Automation - Unified Branding Experts",
+        alt: "Dropshipping store setup, product sourcing and management from Unified Branding Experts",
       },
     ],
   },
@@ -52,12 +52,13 @@ export default function DropshippingServicePage() {
     provider: {
       "@id": "https://unifiedbrandingexperts.com/#organization",
     },
-    areaServed: "Worldwide",
+    areaServed: "United States",
     description:
       "Store setup, product and supplier research, catalog content, fulfillment workflows, launch marketing and ongoing management for eligible eCommerce channels.",
     url: "https://unifiedbrandingexperts.com/services/dropshipping",
     offers: {
       "@type": "Offer",
+      name: "Shopify storefront setup starting price; managed services scoped separately",
       price: SHOPIFY_SETUP_START_PRICE.toFixed(2),
       priceCurrency: "USD",
       url: "https://unifiedbrandingexperts.com/ecommerce-growth-packages",
@@ -255,6 +256,20 @@ export default function DropshippingServicePage() {
               <ArrowUpRight className="w-4 h-4 text-[#9F8BE7] group-hover:translate-x-0.5 transition-transform" />
             </Link>
           </div>
+          <nav aria-label="On this page" className="flex flex-wrap gap-2 pt-3 text-sm">
+            <span className="w-full font-semibold text-[#303030]">Jump to:</span>
+            {[
+              { href: "#supplier-options-heading", label: "Suppliers" },
+              { href: "#channel-heading", label: "Sales channels" },
+              { href: "#launch-plan-heading", label: "Our process" },
+              { href: "#profit-heading", label: "Costs and profit" },
+              { href: "#dropshipping-faq-heading", label: "Common questions" },
+            ].map((item) => (
+              <a key={item.href} href={item.href} className="rounded-full border border-[#D8CFF2] bg-white px-3 py-2 font-medium text-[#563B90] hover:bg-[#F4F0FC] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#6B46C1]">
+                {item.label}
+              </a>
+            ))}
+          </nav>
         </div>
 
         {/* Hero Visual Card */}
@@ -575,7 +590,7 @@ export default function DropshippingServicePage() {
           <span className="text-xs font-mono-num uppercase tracking-[0.2em] text-[#9F8BE7] font-bold">
             FREQUENTLY ASKED QUESTIONS
           </span>
-          <h2 className="font-display text-3xl font-bold text-[#161616]">
+          <h2 id="dropshipping-faq-heading" className="font-display text-3xl font-bold text-[#161616]">
             Dropshipping questions clients ask before they sign
           </h2>
         </div>
