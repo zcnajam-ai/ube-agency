@@ -214,6 +214,9 @@ export default function ShopifyDevelopmentPage() {
           <p className="text-base sm:text-lg text-[#585858] font-body leading-relaxed max-w-2xl">
             We build custom, reliable <strong className="text-[#161616]">Shopify &amp; Shopify Plus</strong> stores engineered for clean navigation, automated dropshipping/3PL logistics, and fast mobile browsing.
           </p>
+          <p className="max-w-2xl font-body text-sm leading-relaxed text-[#585858]">
+            Planning a supplier-fulfilled store? Review our <Link href="/services/dropshipping" className="font-semibold text-[#6B4BA7] underline underline-offset-4">dropshipping setup, sourcing and management process</Link> for supplier checks, order flow, marketplace rules and post-launch work.
+          </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
             {[
