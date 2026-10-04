@@ -9,7 +9,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // 1. Core & Research Pages
   const coreRoutes: MetadataRoute.Sitemap = [
     { url: baseUrl, lastModified: new Date("2026-10-03") },
-    { url: `${baseUrl}/services`, lastModified: new Date("2026-10-03") },
+    { url: `${baseUrl}/services`, lastModified: new Date("2026-10-04") },
     { url: `${baseUrl}/packages` },
     { url: `${baseUrl}/work`, lastModified: new Date("2026-10-03") },
     { url: `${baseUrl}/about`, lastModified: new Date("2026-10-03") },
@@ -29,7 +29,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     .filter((s) => s.slug !== "tiktok-shop-setup")
     .map((s) => ({
       url: `${baseUrl}/services/${s.slug}`,
-      lastModified: new Date("2026-10-03"),
+      lastModified: new Date(s.slug === "dropshipping" ? "2026-10-04" : "2026-10-03"),
     }));
 
   // 3. Dedicated Package Hub Pages (8)
