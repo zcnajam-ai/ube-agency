@@ -63,9 +63,10 @@ export default function FinalCTA() {
         </div>
 
         <p className="max-w-3xl mx-auto text-sm leading-relaxed text-[#ACACAC] text-center">
-          We build and optimize digital systems; we cannot guarantee sales or search rankings.
-          Results also depend on your offer, product-market fit, pricing, traffic, competition,
-          budget, customer service and ongoing marketing.
+          A store build alone does not guarantee sales or search rankings. For qualifying managed
+          engagements, any performance commitment is defined in the signed agreement, including
+          its target, time frame, conditions and remedy. Results also depend on the offer, pricing,
+          traffic, fulfillment, budget and ongoing marketing.
         </p>
 
         {/* Scope Indicators */}
