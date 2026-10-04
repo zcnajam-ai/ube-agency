@@ -10,27 +10,20 @@ import {
   CheckCircle2,
   HelpCircle,
   Truck,
-  RefreshCw,
-  Layers,
-  Settings2,
-  Package,
-  ShieldCheck,
-  Zap,
-  ArrowRight,
 } from "lucide-react";
 import ServiceProjectModalTrigger from "@/components/services/ServiceProjectModalTrigger";
 
 export const metadata: Metadata = {
-  title: "Shopify Dropshipping Setup & Supplier Integrations",
+  title: "Dropshipping Store Setup, Sourcing & Management | UBE",
   description:
-    "Launch a professional dropshipping store with supplier integrations, product setup, inventory sync and automated fulfillment. Unified Branding Experts builds Shopify dropshipping systems designed for organized store operations and scalable growth.",
+    "UBE builds and manages dropshipping stores with product sourcing, supplier integrations, catalog design, fulfillment workflows and launch support.",
   alternates: {
     canonical: "https://unifiedbrandingexperts.com/services/dropshipping",
   },
   openGraph: {
-    title: "Dropshipping Store Setup & Automation | Unified Branding Experts",
+    title: "Dropshipping Store Setup, Sourcing & Management | UBE",
     description:
-      "Professional Shopify dropshipping store development, supplier integrations (DSers, CJ Dropshipping, Zendrop), inventory sync, and order routing.",
+      "Store development, product sourcing, supplier connections, fulfillment workflows and ongoing dropshipping management.",
     url: "https://unifiedbrandingexperts.com/services/dropshipping",
     images: [
       {
@@ -43,9 +36,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Dropshipping Store Setup & Automation | Unified Branding Experts",
+    title: "Dropshipping Store Setup, Sourcing & Management | UBE",
     description:
-      "Professional Shopify dropshipping store development, supplier integrations, inventory sync, and automated fulfillment workflows.",
+      "Store development, product sourcing, supplier connections, fulfillment workflows and ongoing dropshipping management.",
     images: ["https://unifiedbrandingexperts.com/services/dropshipping/opengraph-image"],
   },
 };
@@ -54,14 +47,14 @@ export default function DropshippingServicePage() {
   const serviceSchema = {
     "@context": "https://schema.org",
     "@type": "Service",
-    name: "Dropshipping Store Setup & Automation Services",
-    serviceType: "eCommerce Storefront Setup & Fulfillment Automation",
+    name: "Dropshipping Store Setup, Sourcing & Management",
+    serviceType: "Dropshipping Store Development, Product Sourcing & Fulfillment",
     provider: {
       "@id": "https://unifiedbrandingexperts.com/#organization",
     },
     areaServed: "Worldwide",
     description:
-      "Launch a professional dropshipping store with supplier integrations, product catalog setup, inventory sync and automated fulfillment routing.",
+      "Store setup, product and supplier research, catalog content, fulfillment workflows, launch marketing and ongoing management for eligible eCommerce channels.",
     url: "https://unifiedbrandingexperts.com/services/dropshipping",
     offers: {
       "@type": "Offer",
@@ -103,7 +96,7 @@ export default function DropshippingServicePage() {
     },
     {
       q: "Which suppliers can you connect?",
-      a: "We integrate with leading dropshipping supplier platforms including DSers (AliExpress), CJ Dropshipping, Zendrop, and custom CSV/API private supplier feeds.",
+      a: "Depending on the products, supplier agreement and store eligibility, we work with Printify, Printful, CJ Dropshipping, Spocket, DSers, Shopify Collective and private supplier feeds. We check product availability, fulfillment terms and integration fit before recommending a source.",
     },
     {
       q: "Can you import products for me?",
@@ -124,6 +117,14 @@ export default function DropshippingServicePage() {
     {
       q: "How long does setup take?",
       a: "Standard dropshipping store builds are completed in 7 to 14 business days depending on package tier and catalog size.",
+    },
+    {
+      q: "Can you source, design and ship custom products too?",
+      a: "Yes, in a separately scoped project we can coordinate product sourcing, design, manufacturing, packaging and shipping with suitable vendors. These are different workflows from app-based dropshipping, and production, inventory, freight and customs costs are quoted separately.",
+    },
+    {
+      q: "Do you guarantee sales or profit from a dropshipping store?",
+      a: "A store setup package by itself does not guarantee sales or profit. Some managed engagements may include a specific performance commitment in a signed agreement. Any target, time period, measurement method, client responsibilities, exclusions and remedy must be written into that agreement. We do not describe every project as guaranteed or promise a profit level without verified records.",
     },
   ];
 
@@ -176,15 +177,15 @@ export default function DropshippingServicePage() {
           </div>
 
           <h1 className="font-display text-4xl sm:text-6xl font-bold tracking-tight text-[#161616] leading-tight">
-            Dropshipping Store Setup &amp; Supplier Automation
+            Dropshipping Store Setup, Product Sourcing &amp; Fulfillment
           </h1>
 
           <p className="text-base sm:text-lg text-[#585858] font-body leading-relaxed max-w-2xl">
-            Launch a dropshipping business with the storefront, supplier connections and fulfillment workflows working together from the beginning.
+            Build a store around products you can actually source and deliver. We connect the storefront, product content, supplier arrangements, order flow and post-launch work in one scoped plan.
           </p>
 
           <p className="text-sm sm:text-base text-[#303030] font-body leading-relaxed max-w-2xl">
-            Unified Branding Experts builds professional dropshipping stores with organized product catalogs, supplier integrations, inventory synchronization, order-routing workflows and responsive customer experiences. Whether you are starting with Shopify, connecting an existing supplier or expanding into additional product categories, we structure the system so the operational side of the store is easier to manage as it grows.
+            Unified Branding Experts works on Shopify and eligible marketplace selling across TikTok Shop, eBay, Amazon and Etsy. Our scope can cover product and supplier research, branding, graphics, catalog setup, packaging coordination, store development, search foundations, marketing and ongoing operations. Each platform and fulfillment model has different requirements, so we define the channels, supplier responsibilities and deliverables before work begins.
           </p>
 
           <div className="flex flex-wrap items-center gap-4 pt-4">
@@ -237,6 +238,36 @@ export default function DropshippingServicePage() {
             </div>
           </div>
         </div>
+      </section>
+
+      <section className="rounded-3xl border border-[#E0DDDB] bg-white p-6 shadow-xs sm:p-10 space-y-6">
+        <div className="max-w-3xl space-y-3">
+          <span className="font-mono-num text-xs font-bold uppercase tracking-wider text-[#6B4BA7]">THE WORK BEHIND THE STOREFRONT</span>
+          <h2 className="font-display text-2xl font-bold text-[#161616] sm:text-3xl">From supplier decision to a customer delivery</h2>
+          <p className="font-body text-sm leading-relaxed text-[#585858] sm:text-base">A storefront is one part of the business. We map the product, fulfillment and customer experience before recommending a channel or launch plan.</p>
+        </div>
+        <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+          {[
+            { title: "Research products and suppliers", body: "Review product demand, wholesale terms, quality evidence, landed cost, shipping times, returns and supplier reliability. Depending on the project, we evaluate vendors in the U.S., China, Korea, Vietnam, Pakistan and the UAE against the required delivery promise." },
+            { title: "Build the brand and catalog", body: "Define positioning, create store and product graphics, organize collections, write useful product information and prepare photography or approved supplier assets." },
+            { title: "Connect the operating system", body: "Configure eligible supplier feeds, inventory updates, order routing, shipping settings, test orders, tracking and customer notifications. The available automation depends on each supplier and platform." },
+            { title: "Plan custom products when needed", body: "For private-label work, scope product design, manufacturing, packaging, quality checks and logistics separately. This is not the same as importing ready-made dropshipping products." },
+            { title: "Launch and manage channels", body: "Support the store and, where eligible, TikTok Shop or marketplace listings. Post-launch plans can include catalog updates, campaign work, operational monitoring and reporting." },
+            { title: "Measure the business", body: "Review traffic, conversion, product margin, fulfillment costs, returns and customer feedback. We use those inputs to prioritize improvements rather than treating a store launch as proof of profitable sales." },
+          ].map((step) => (
+            <div key={step.title} className="rounded-2xl border border-[#E0DDDB] bg-[#FAF7F6] p-5">
+              <h3 className="font-display text-lg font-bold text-[#161616]">{step.title}</h3>
+              <p className="mt-2 font-body text-sm leading-relaxed text-[#585858]">{step.body}</p>
+            </div>
+          ))}
+        </div>
+        <p className="font-body text-sm text-[#585858]">Explore our <Link href="/ecommerce-growth-packages" className="font-semibold text-[#6B4BA7] underline underline-offset-4">store packages</Link>, <Link href="/services/ecommerce-store-management" className="font-semibold text-[#6B4BA7] underline underline-offset-4">ongoing management</Link>, and <Link href="/tiktok-shop" className="font-semibold text-[#6B4BA7] underline underline-offset-4">TikTok Shop work</Link>. Custom sourcing, manufacturing and marketing are quoted in the written scope.</p>
+      </section>
+
+      <section className="rounded-3xl border border-[#D8CFF2] bg-[#F4F0FC] p-6 sm:p-10 space-y-4">
+        <h2 className="font-display text-2xl font-bold text-[#161616] sm:text-3xl">Store build or managed sales plan?</h2>
+        <p className="max-w-4xl font-body text-sm leading-relaxed text-[#414141] sm:text-base">A store build delivers the agreed storefront and operational setup. A managed program can also cover product testing, content, marketing, conversion work and ongoing store operations over an agreed two, three or six month period. Some managed agreements include a sales commitment. We put the exact outcome, deadline, measurement method, required client inputs, exclusions and remedy in the signed contract rather than applying one promise to every store or suggesting that sales equal profit.</p>
+        <Link href="/contact" className="inline-flex min-h-11 items-center rounded-full bg-[#9F8BE7] px-6 font-display text-sm font-bold text-[#161616] hover:bg-[#b4a3f7] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#161616]">Discuss a managed dropshipping plan</Link>
       </section>
 
       {/* 2. WHAT IS DROPSHIPPING */}
@@ -299,10 +330,10 @@ export default function DropshippingServicePage() {
           </p>
           <div className="grid grid-cols-2 gap-3 pt-2">
             {[
-              "DSers (AliExpress)",
+              "Printify / Printful",
               "CJ Dropshipping",
-              "Zendrop",
-              "Private Supplier CSV / APIs",
+              "Spocket / DSers",
+              "Shopify Collective*",
             ].map((sup) => (
               <div key={sup} className="p-3 rounded-2xl bg-[#FAF7F6] border border-[#E0DDDB] text-xs font-bold text-[#161616] flex items-center gap-2">
                 <Truck className="w-4 h-4 text-[#9F8BE7] shrink-0" />
@@ -310,6 +341,7 @@ export default function DropshippingServicePage() {
               </div>
             ))}
           </div>
+          <p className="text-xs leading-relaxed text-[#585858]">*Shopify Collective connections depend on retailer and supplier eligibility. Private supplier feeds and regional vendors can also be assessed for a custom scope.</p>
         </div>
 
         <div className="lg:col-span-6 p-6 rounded-2xl bg-[#FAF7F6] border border-[#E0DDDB] space-y-4 font-mono-num text-xs">
