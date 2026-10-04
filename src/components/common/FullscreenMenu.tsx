@@ -31,6 +31,7 @@ export default function FullscreenMenu({ isOpen, onClose }: FullscreenMenuProps)
   ];
 
   const dedicatedServices = [
+    { label: "Dropshipping Store Setup & Management", href: "/services/dropshipping" },
     { label: "eCommerce Store Management", href: "/services/ecommerce-store-management" },
     { label: "eCommerce Growth Services", href: "/services/ecommerce" },
     { label: "Shopify Agency Hub", href: "/shopify" },
