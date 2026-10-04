@@ -92,7 +92,7 @@ export default function Navbar() {
           </Link>
 
           {/* Desktop Navigation Links with Dropdowns */}
-          <div className="hidden xl:flex shrink-0 items-center gap-1.5 whitespace-nowrap">
+          <div className="hidden lg:flex shrink-0 items-center gap-1.5 whitespace-nowrap">
             <Link
               href="/work"
               className="px-3 py-1.5 rounded-full text-xs font-display font-semibold text-[#303030] hover:text-[#161616] hover:bg-[#FAF7F6] transition-all"
