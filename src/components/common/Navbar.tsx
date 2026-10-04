@@ -135,6 +135,17 @@ export default function Navbar() {
                         </span>
                         <div className="space-y-1.5">
                           <Link
+                            href="/services/dropshipping"
+                            onClick={() => setServicesOpen(false)}
+                            className="p-2 rounded-xl hover:bg-[#FAF7F6] block transition-colors group"
+                          >
+                            <div className="font-display font-bold text-xs text-[#161616] group-hover:text-[#715CC4] flex items-center justify-between">
+                              <span>Dropshipping Store Setup</span>
+                              <ArrowUpRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
+                            </div>
+                            <p className="text-[10px] text-[#585858] line-clamp-1">Sourcing, fulfillment &amp; management</p>
+                          </Link>
+                          <Link
                             href="/services/ecommerce-store-management"
                             onClick={() => setServicesOpen(false)}
                             className="p-2 rounded-xl hover:bg-[#FAF7F6] block text-xs font-bold"
