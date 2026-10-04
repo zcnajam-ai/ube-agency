@@ -655,7 +655,7 @@ export default function EcommercePackagesPage() {
               Do you guarantee sales?
             </h3>
             <p className="text-xs text-[#585858] leading-relaxed">
-              No. Sales and ROI depend on numerous factors including product demand, pricing, competition, audience, traffic and marketing. UBE builds and optimizes the technical, content and conversion foundation.
+              A storefront setup package alone does not guarantee sales or profit. Some separately scoped management agreements may include a written performance commitment. The signed agreement must define the target, time period, measurement method, client responsibilities, exclusions and remedy. Product demand, pricing, traffic, fulfillment and marketing still affect the outcome.
             </p>
           </div>
         </div>
