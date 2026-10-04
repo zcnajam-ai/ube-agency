@@ -6,18 +6,10 @@ import Link from "next/link";
 import Image from "next/image";
 import { Metadata } from "next";
 import {
-  ShoppingBag,
   ArrowUpRight,
   CheckCircle2,
   Sparkles,
-  Zap,
-  Layers,
-  Search,
-  Bot,
-  BarChart3,
-  Globe,
   ArrowRight,
-  TrendingUp,
 } from "lucide-react";
 import CommercePlatformIcon3D from "@/components/common/CommercePlatformIcon3D";
 import EcommerceMultiChannelVisual from "@/components/services/EcommerceMultiChannelVisual";
@@ -64,7 +56,7 @@ export default function EcommerceGrowthServicePage() {
     { q: "Which eCommerce platforms do you work with?", a: "We support Shopify, Amazon, Etsy, eBay, WooCommerce and selected supplier or fulfillment platforms depending on project requirements." },
     { q: "Can you build a Shopify store from scratch?", a: "Yes. We can handle store setup, design, product organization, collections, payment configuration, shipping, integrations, mobile optimization and launch preparation." },
     { q: "Do you help with Amazon, Etsy and eBay listings?", a: "Yes. We can help structure and optimize product listings, marketplace content, categories, keywords and storefront organization." },
-    { q: "Can you help with dropshipping?", a: "Yes. Where appropriate suppliers and integrations are available, we can configure storefronts, supplier connections, product imports and fulfillment workflows." },
+    { q: "Can you help with dropshipping?", a: "Yes. We can research products and suppliers, develop the storefront, prepare product content and graphics, configure eligible supplier integrations and fulfillment workflows, and manage the store after launch. Manufacturing or custom packaging is quoted separately when needed." },
     { q: "Does eCommerce development include advertising?", a: "Advertising budgets and ongoing advertising management are separate unless explicitly included in a proposal." },
     { q: "Can a business start with one platform and expand later?", a: "Yes. In many situations, establishing one strong channel first is more practical than attempting to launch everywhere simultaneously." },
   ];
@@ -98,7 +90,7 @@ export default function EcommerceGrowthServicePage() {
           "@id": "https://unifiedbrandingexperts.com/#organization",
         },
         "url": "https://unifiedbrandingexperts.com/services/ecommerce",
-        "image": "https://unifiedbrandingexperts.com/images/projects/happy-knot/hero.png",
+        "image": "https://unifiedbrandingexperts.com/images/projects/happy-knot/hd-storefront-hero.webp",
         "hasOfferCatalog": {
           "@type": "OfferCatalog",
           "name": "eCommerce Growth Packages",
@@ -136,7 +128,7 @@ export default function EcommerceGrowthServicePage() {
             </p>
 
             <p className="text-xs sm:text-sm text-[#585858] font-body leading-relaxed max-w-2xl">
-              From your own Shopify storefront to marketplaces such as Amazon, Etsy and eBay, we connect store experience, product listings, search visibility, automation, analytics and marketplace strategy into one scalable commerce system.
+              From your own Shopify storefront to eligible channels such as TikTok Shop, Amazon, Etsy and eBay, we connect product sourcing, supplier relationships, branding, listings, fulfillment, search visibility, analytics and ongoing management. Each channel requires its own seller eligibility and fulfillment review.
             </p>
 
             <div className="flex flex-wrap items-center gap-4 pt-2">
@@ -812,7 +804,7 @@ export default function EcommerceGrowthServicePage() {
               Can you help with dropshipping?
             </h3>
             <p className="text-xs text-[#585858] leading-relaxed">
-              Yes. Where appropriate suppliers and integrations are available, we can configure storefronts, supplier connections, product imports and fulfillment workflows.
+              Yes. We can research products and suppliers, develop the storefront, prepare product content and graphics, configure eligible supplier integrations and fulfillment workflows, and manage the store after launch. Manufacturing or custom packaging is quoted separately when needed. <Link href="/services/dropshipping" className="font-semibold text-[#6B4BA7] underline underline-offset-4">Review our dropshipping scope</Link>.
             </p>
           </div>
 
