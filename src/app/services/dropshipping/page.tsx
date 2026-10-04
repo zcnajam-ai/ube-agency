@@ -124,11 +124,23 @@ export default function DropshippingServicePage() {
     },
     {
       q: "Do you guarantee sales within two, three or six months?",
-      a: "We offer defined performance commitments in eligible managed agreements. The signed plan specifies the sales outcome, two, three or six month window, attribution and measurement, required ad and operating budgets, client responsibilities, exclusions and the remedy if the target is missed. A basic store setup does not include that commitment, and a sales target is not a profit guarantee.",
+      a: "Eligible managed plans include the sales commitment specified in the signed package agreement. We often plan around a 60-day investment-recovery objective, then continue toward steadier sales and scaling over the agreed term. The actual target, period, attribution, required budget, client responsibilities and remedy are written in the contract. A stand-alone store build has no automatic sales commitment, and sales revenue is not the same as profit or full investment recovery.",
     },
     {
       q: "Can you guarantee that the store will be profitable?",
-      a: "Profit depends on revenue minus product costs, shipping, duties, fees, refunds, advertising, software and operating expenses. We build a margin model and manage toward it, but we do not advertise an unconditional profit guarantee. Any measurable profit commitment would have to be explicitly defined and accepted in a separate signed agreement.",
+      a: "We build and manage toward profitable unit economics, but a revenue or order guarantee is not automatically a net-profit guarantee. Profit accounts for product costs, shipping, duties, fees, refunds, ads, software and operations. If an agreement promises investment recovery or a profit outcome, it must define exactly which costs count, the data source, time period and remedy in writing.",
+    },
+    {
+      q: "What do you mean by return on investment within 60 days?",
+      a: "Our 60-day objective is to recover the agreed investment through sales contribution after product, fulfillment, transaction and return costs, not merely to show gross sales equal to our fee. We compare that contribution with agreed project spending such as agency fees, ads and software, without counting any cost twice. Whether recovery itself is guaranteed depends on the selected managed package and its signed terms; no one-size-fits-all ROI number applies to every store.",
+    },
+    {
+      q: "Why will a store build alone not bring the same results as a managed plan?",
+      a: "The build makes the store operational, but it does not by itself generate qualified demand or continuously improve the offer. A managed plan adds product tests, technical and on-page SEO, useful content, paid acquisition where budgeted, creative, conversion reviews, order monitoring and reporting. These are separate workstreams with separate fees and client inputs.",
+    },
+    {
+      q: "What happens if the contracted sales target is missed?",
+      a: "The signed agreement defines the target, date, reporting source, conditions and specific remedy. We review performance and act on issues throughout the plan instead of waiting until the deadline. We will explain the actual remedy before the client commits; it cannot be inferred from a general website statement.",
     },
     {
       q: "What budget do I need beyond your fee?",
@@ -307,9 +319,23 @@ export default function DropshippingServicePage() {
 
       <section className="rounded-3xl border border-[#D8CFF2] bg-[#F4F0FC] p-6 sm:p-10 space-y-4">
         <h2 className="font-display text-2xl font-bold text-[#161616] sm:text-3xl">A managed sales plan with a defined commitment</h2>
-        <p className="max-w-4xl font-body text-sm leading-relaxed text-[#414141] sm:text-base">A store build delivers the agreed storefront and operating setup. For clients who want us to take responsibility beyond launch, we also scope two, three or six month managed programs covering product tests, creative, traffic acquisition, conversion work and day-to-day operations. Eligible managed contracts can include a guaranteed sales outcome within the agreed period. We establish the target and the work needed to pursue it before signing, then report progress against the same definition throughout the engagement.</p>
+        <p className="max-w-4xl font-body text-sm leading-relaxed text-[#414141] sm:text-base">A store build delivers the agreed storefront and operating setup. It cannot create demand by itself. For clients who want us to take responsibility beyond launch, we scope two, three or six month managed programs covering product tests, technical and on-page SEO, AI search readiness, creative, paid acquisition where budgeted, conversion work and day-to-day operations. Eligible managed packages include the sales commitment defined in their signed agreement. We establish the target and the work needed to pursue it before signing, then report progress against the same definition throughout the engagement.</p>
+        <p className="max-w-4xl font-body text-sm leading-relaxed text-[#414141] sm:text-base">Our first 60 days focus on earning back the agreed investment through a working offer and measurable sales contribution. After that, we focus on stability, repeatable acquisition and scaling the products and channels that justify more spend. A goal to recover investment is stronger than simply counting orders, so the agreement must say which costs are included and whether investment recovery itself is guaranteed for that specific package.</p>
         <p className="max-w-4xl font-body text-sm leading-relaxed text-[#414141] sm:text-base">A meaningful guarantee has terms: which sales count, the start date and deadline, attribution and reporting source, minimum client approvals and operating or advertising budget, exclusions, and what we do if the target is missed. These go in the signed agreement. We will not advertise one universal target or confuse sales revenue with net profit. If your supplier economics or market conditions make a proposed target unsound, we revise the plan before committing.</p>
         <Link href="/contact" className="inline-flex min-h-11 items-center rounded-full bg-[#9F8BE7] px-6 font-display text-sm font-bold text-[#161616] hover:bg-[#b4a3f7] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#161616]">Discuss a managed dropshipping plan</Link>
+      </section>
+
+      <section className="space-y-6" aria-labelledby="sixty-day-plan-heading">
+        <div className="max-w-4xl space-y-3">
+          <h2 id="sixty-day-plan-heading" className="font-display text-3xl font-bold text-[#161616]">Why the first 60 days are an operating plan, not a waiting period</h2>
+          <p className="font-body text-base leading-relaxed text-[#414141]">A client who buys only a storefront receives a storefront. Sales need product-market fit, a competitive offer, reliable fulfillment and enough qualified people reaching a page that converts. Our managed strategy ties those pieces together instead of asking you to wait for orders after launch.</p>
+        </div>
+        <div className="grid gap-4 md:grid-cols-3">
+          <div className="rounded-2xl border border-[#E0DDDB] bg-white p-6"><span className="font-mono-num text-xs font-bold text-[#6B4BA7]">FOUNDATION</span><h3 className="mt-2 font-display text-lg font-bold text-[#161616]">Prepare the store and offer</h3><p className="mt-2 font-body text-sm leading-relaxed text-[#585858]">Check supplier margins and shipping promises, build product and collection pages, fix technical indexing barriers, set up analytics, and prepare creative and policies. We establish what an order must contribute after variable costs.</p></div>
+          <div className="rounded-2xl border border-[#E0DDDB] bg-white p-6"><span className="font-mono-num text-xs font-bold text-[#6B4BA7]">FIRST 60 DAYS</span><h3 className="mt-2 font-display text-lg font-bold text-[#161616]">Acquire, test and optimize</h3><p className="mt-2 font-body text-sm leading-relaxed text-[#585858]">Work on technical, on-page and off-page search where appropriate, AI-readable answers and product content, and an approved mix of Meta, Instagram, TikTok Shop, Google or other campaigns. Compare channel cost with actual orders, fix weak pages and pause products that cannot support the economics.</p></div>
+          <div className="rounded-2xl border border-[#E0DDDB] bg-white p-6"><span className="font-mono-num text-xs font-bold text-[#6B4BA7]">60 TO 90 DAYS AND BEYOND</span><h3 className="mt-2 font-display text-lg font-bold text-[#161616]">Stabilize and scale</h3><p className="mt-2 font-body text-sm leading-relaxed text-[#585858]">Improve fulfillment, retention and customer support, expand winning creative or channels, and adjust spend only when the margin model supports it. SEO and AI search work may compound over longer periods; paid campaigns can test demand earlier but require a separate media budget.</p></div>
+        </div>
+        <p className="font-body text-sm leading-relaxed text-[#585858]">For a 60-day investment-recovery objective, we define investment as the costs written into the plan, not a vague promise that any amount a client spends will be returned. We compare sales contribution after product, fulfillment, transaction and return costs with agreed project spending, including agency, media and software costs as applicable, without double-counting them. A package-specific guarantee applies only when its signed terms explicitly include that outcome. <Link href="/services/ai-seo-agency" className="font-semibold text-[#6B4BA7] underline underline-offset-4">See our AI SEO service</Link>, <Link href="/services/meta-ads" className="font-semibold text-[#6B4BA7] underline underline-offset-4">Meta advertising</Link>, and <Link href="/services/ecommerce-store-management" className="font-semibold text-[#6B4BA7] underline underline-offset-4">store management</Link> for the individual workstreams.</p>
       </section>
 
       <section className="space-y-8" aria-labelledby="dropshipping-models-heading">
