@@ -13,7 +13,7 @@ import HeroInteractiveCTA from "./HeroInteractiveCTA";
 
 export default function Hero() {
   const priorityPills = [
-    { label: "Shopify & Dropshipping", href: "/services/shopify-development", icon: <Shopify3DIcon size={18} /> },
+    { label: "Shopify & Dropshipping", href: "/services/dropshipping", icon: <Shopify3DIcon size={18} /> },
     { label: "TikTok Shop & Meta Ads", href: "/tiktok-marketing-packages", icon: <TikTok3DIcon size={18} /> },
     { label: "Google Marketing", href: "/services/google-ads", icon: <Google3DIcon size={18} /> },
     { label: "AI SEO agency", href: "/ai-seo", icon: <Heading3DSparkle size={18} /> },
@@ -37,7 +37,7 @@ export default function Hero() {
               </h1>
 
               <p className="text-sm sm:text-base md:text-lg lg:text-xl text-[#585858] font-body leading-relaxed max-w-3xl">
-                We help U.S. businesses build and improve Shopify and WooCommerce stores, connect marketplace operations, and bring their branding, search optimization and marketing into a clear plan. Start with the store you need today and scope the work that comes next.
+                We help U.S. businesses build and manage Shopify and WooCommerce stores, source products and suppliers, set up eligible marketplace channels, and connect branding, search and marketing to a practical launch plan. Start with the store you need today and scope what comes next.
               </p>
             </div>
 

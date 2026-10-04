@@ -27,7 +27,7 @@ export const metadata: Metadata = {
 };
 
 const departments = [
-  { name: "eCommerce & store management", description: "Store creation, product catalog structure, merchandising, product updates and continued operations across Shopify, WooCommerce and relevant marketplaces.", href: "/services/ecommerce-store-management" },
+  { name: "eCommerce & store management", description: "Shopify and WooCommerce stores, product sourcing, supplier integrations, catalog management and continued operations across eligible marketplaces.", href: "/services/dropshipping" },
   { name: "Development", description: "Developers build responsive storefronts and websites, connect systems and improve the technical experience around the business.", href: "/services/web-design-development" },
   { name: "Brand & design", description: "Brand developers and designers connect positioning, identity, visual systems and product graphics into a consistent customer experience.", href: "/services/branding" },
   { name: "Content", description: "Writers develop service, collection and product content that explains the offer and helps buyers make informed decisions.", href: "/insights" },
@@ -135,7 +135,7 @@ export default function AboutPage() {
         </div>
         <div className="space-y-4 leading-relaxed text-[#585858]">
           <p>UBE brings multiple departments and teams under one company. Developers, designers, brand developers, content writers, AI SEO experts, video specialists, AI experts and eCommerce specialists work on their respective parts of a project. The scope is based on what the client needs; every engagement does not automatically include every department.</p>
-          <p>Our primary work centers on Shopify and WooCommerce stores, eCommerce operations, web design, branding, search foundations and growth marketing. We also support marketplace projects, AI automation and mobile development when they fit the brief. Store structure informs content, content supports product discovery, and the management plan keeps the site useful after launch.</p>
+          <p>Our primary work centers on Shopify and WooCommerce stores, <Link href="/services/dropshipping" className="font-semibold text-[#6049B0] underline underline-offset-4">dropshipping setup and product sourcing</Link>, eCommerce operations, web design, branding, search foundations and growth marketing. Depending on the engagement, specialists can coordinate supplier integrations, product graphics, packaging, eligible marketplace channels and fulfillment planning. Store structure informs content, content supports product discovery, and the management plan keeps the site useful after launch.</p>
         </div>
       </section>
 
