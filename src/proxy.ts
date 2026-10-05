@@ -1,5 +1,12 @@
 import { NextRequest, NextResponse } from "next/server";
 
+// Preserve a single-hop 301 for these legacy URLs with trailing slashes.
+const legacySlashRedirects: Record<string, string> = {
+  "/best-logo-design-agency/": "/services/branding",
+  "/logo-design-packages/": "/branding-packages",
+  "/portfolio/": "/work",
+};
+
 // Edge Sliding Window IP Rate Limiter
 interface RateLimitRecord {
   count: number;
@@ -50,6 +57,15 @@ export async function proxy(request: NextRequest) {
       "https://unifiedbrandingexperts.com"
     );
     return NextResponse.redirect(canonicalUrl, 308);
+  }
+
+  // Match Next.js' usual 308 normalization on unrelated URLs, while keeping
+  // the three legacy slash URLs on a direct 301 to their canonical destination.
+  if (pathname.length > 1 && pathname.endsWith("/")) {
+    const url = new URL(request.url);
+    const legacyTarget = legacySlashRedirects[pathname];
+    url.pathname = legacyTarget ?? pathname.replace(/[/]+$/, "");
+    return NextResponse.redirect(url, legacyTarget ? 301 : 308);
   }
 
   // Intercept all API routes
