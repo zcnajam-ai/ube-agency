@@ -13,9 +13,9 @@ export const metadata: Metadata = {
 };
 
 const plans = [
-  { name: "Launch", price: "$399", items: ["Shopify or WooCommerce storefront", "Theme, mobile layout and navigation", "Up to 50 product uploads", "Payment, shipping and basic product SEO"], note: "For a store foundation. Supplier automation and advertising are separate." },
-  { name: "Growth", price: "$799", items: ["Everything in Launch", "Up to 100 product uploads", "Scoped supplier connection and stock workflow", "Analytics, product-page and email-flow setup"], note: "Supplier choice and app permissions are confirmed in the proposal." },
-  { name: "Scale", price: "$999", items: ["Everything in Growth", "Up to 200 product uploads", "Marketplace readiness and eligibility review", "Advanced search and catalog planning"], note: "Marketplace seller approval and ongoing management are separate." },
+  { name: "Starter Package", tagline: "Best for new sellers", price: "$399", items: ["Complete store setup", "Theme customization", "Up to 50 products uploaded", "Payment gateway setup", "Shipping setup", "Mobile responsive design", "Basic product SEO and optimization", "Shopify, Amazon, Etsy or eBay setup"], note: "Choose one store or eligible marketplace for the written scope. Seller approval and platform fees are separate." },
+  { name: "Growth Package", tagline: "Best for starting a dropshipping business", price: "$799", items: ["Everything in Starter", "Up to 100 products uploaded", "Complete dropshipping setup", "Supplier integration such as CJ Dropshipping or Printify", "Basic store automation", "Reviews, upsell and other essential app integrations", "Meta Pixel and Google Ads tracking setup", "Store structured for future marketing and scaling"], note: "Supplier access, app fees and advertising spend are scoped separately." },
+  { name: "Premium Package", tagline: "Best for a more complete automated ecommerce business", price: "$999", items: ["Everything in Growth", "Up to 200 products uploaded", "Advanced dropshipping setup", "Supplier, order and fulfillment automation", "Meta Pixel and analytics setup", "Upsell and cross sell setup", "Marketplace integration with Amazon, eBay or Etsy", "Priority support", "Strategy session for growth and scaling"], note: "Marketplace integration depends on seller approval, product eligibility and supported connectors." },
 ];
 
 export default function DropshippingStoreOfferPage() {
@@ -32,14 +32,12 @@ export default function DropshippingStoreOfferPage() {
           <a href="#compare" className="inline-flex min-h-12 items-center gap-2 rounded-full bg-[#9F8BE7] px-6 font-bold text-[#161616] hover:bg-[#b4a3f7]">Compare the three builds <ArrowRight className="h-4 w-4" /></a>
         </div>
         <div className="relative overflow-hidden rounded-[2rem] border border-[#E0DDDB] bg-white shadow-lg">
-          <div className="relative aspect-[16/10] overflow-hidden"><Image src="/images/offers/store-launch-offer.webp" alt="UBE store launch campaign creative showing storefront devices and commerce platform marks" fill priority sizes="(max-width: 1024px) 100vw, 48vw" className="object-cover object-top" />
-          </div>
-          <p className="p-4 text-sm text-[#414141]">This campaign visual introduces the offer. The deliverables below and your signed project scope define the work for your store.</p>
+          <Image src="/images/offers/store-launch-offer.webp" alt="Unified Branding Experts dropshipping store offer showing Starter $399, Growth $799 and Premium $999 packages" width={1200} height={1200} priority sizes="(max-width: 1024px) 100vw, 48vw" className="block h-auto w-full" />
         </div>
       </section>
       <section id="compare" aria-labelledby="compare-title" className="space-y-6 scroll-mt-28">
-        <h2 id="compare-title" className="font-display text-3xl font-bold">Choose the right store build</h2>
-        <div className="grid gap-5 md:grid-cols-3">{plans.map((plan) => <article key={plan.name} className="rounded-[2rem] border border-[#DDD5E8] bg-white p-6 shadow-sm transition-transform hover:-translate-y-1 motion-reduce:transform-none"><h3 className="font-display text-2xl font-bold">{plan.name}</h3><p className="mt-2 text-3xl font-bold text-[#6049B0]">{plan.price}<span className="ml-2 text-sm font-normal text-[#585858]">one-time</span></p><ul className="mt-6 space-y-3">{plan.items.map((item) => <li key={item} className="flex gap-2 text-sm text-[#303030]"><CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-[#6049B0]" />{item}</li>)}</ul><p className="mt-6 border-t border-[#E0DDDB] pt-4 text-sm text-[#585858]">{plan.note}</p></article>)}</div>
+        <h2 id="compare-title" className="font-display text-3xl font-bold">Compare the complete offers</h2>
+        <div className="grid gap-5 md:grid-cols-3">{plans.map((plan) => <article key={plan.name} className="rounded-[2rem] border border-[#DDD5E8] bg-white p-6 shadow-sm transition-transform hover:-translate-y-1 motion-reduce:transform-none"><h3 className="font-display text-2xl font-bold">{plan.name}</h3><p className="mt-1 text-sm font-medium text-[#585858]">{plan.tagline}</p><p className="mt-4 text-3xl font-bold text-[#6049B0]">{plan.price}<span className="ml-2 text-sm font-normal text-[#585858]">one-time</span></p><ul className="mt-6 space-y-3">{plan.items.map((item) => <li key={item} className="flex gap-2 text-sm text-[#303030]"><CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-[#6049B0]" />{item}</li>)}</ul><p className="mt-6 border-t border-[#E0DDDB] pt-4 text-sm text-[#585858]">{plan.note}</p></article>)}</div>
         <p className="text-sm text-[#585858]">Platform subscriptions, paid apps, product samples, inventory and ad spend are not included. See the <Link className="font-semibold text-[#6049B0] underline" href="/ecommerce-growth-packages">full eCommerce package details</Link> for the existing package scope.</p>
       </section>
       <section className="grid gap-8 rounded-[2rem] bg-[#F2ECFA] p-6 lg:grid-cols-2 lg:p-10">
