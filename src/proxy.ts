@@ -62,7 +62,7 @@ export async function proxy(request: NextRequest) {
   // Match Next.js' usual 308 normalization on unrelated URLs, while keeping
   // the three legacy slash URLs on a direct 301 to their canonical destination.
   if (pathname.length > 1 && pathname.endsWith("/")) {
-    const url = request.nextUrl.clone();
+    const url = new URL(request.url);
     const legacyTarget = legacySlashRedirects[pathname];
     url.pathname = legacyTarget ?? pathname.replace(/[/]+$/, "");
     return NextResponse.redirect(url, legacyTarget ? 301 : 308);
