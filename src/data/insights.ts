@@ -1,6 +1,7 @@
 import { SHOPIFY_SETUP_PRICE_LABEL } from "@/data/commerce-pricing";
 import { NEW_GROWTH_GUIDES } from "./insights-growth-guides";
 import { GUIDE_REVISIONS } from "./insights-guide-revisions";
+import { INSIGHT_CTR_REVISIONS } from "./insights-ctr-revisions";
 export interface TableData {
   headers: string[];
   rows: string[][];
@@ -3022,6 +3023,39 @@ for (const article of INSIGHTS) {
   if (revision) Object.assign(article, revision);
 }
 INSIGHTS.push(...NEW_GROWTH_GUIDES);
+
+// Refresh six existing canonical articles to match buyer questions without altering legacy duplicate records.
+for (const article of INSIGHTS) {
+  const revision = INSIGHT_CTR_REVISIONS[article.slug];
+  if (!revision) continue;
+
+  article.title = revision.title;
+  article.h1 = revision.h1;
+  article.summary = revision.summary;
+  article.quickAnswer = revision.quickAnswer;
+  article.updatedAt = "October 5, 2026";
+  const firstSection = article.sections[0];
+  if (firstSection) {
+    article.sections = [
+      { ...firstSection, body: [revision.leadParagraph, ...firstSection.body] },
+      ...article.sections.slice(1),
+    ];
+  }
+  article.faqs = [...article.faqs, ...revision.faqs];
+  if (article.slug === "how-to-optimize-for-google-ai-overviews") {
+    article.disableFaqSchema = false;
+  }
+  if (article.slug === "how-to-connect-shopify-to-tiktok-shop") {
+    article.faqs = article.faqs.map((faq) =>
+      faq.q === "Will inventory automatically update when a product sells on TikTok Shop?"
+        ? {
+            ...faq,
+            a: "Inventory updates depend on the supported integration, linked warehouses and sync settings. Verify the stock change with a test order and monitor errors; do not assume every product and location updates automatically.",
+          }
+        : faq
+    );
+  }
+}
 
 export function getInsightBySlug(slug: string): InsightArticle | undefined {
   return INSIGHTS.find((i) => i.slug === slug);
