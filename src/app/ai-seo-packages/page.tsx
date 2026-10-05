@@ -11,22 +11,22 @@ import { COMPANY_INFO } from "@/data/company";
 import { AI_SEO_PACKAGES } from "@/data/aiSeoPackages";
 
 export const metadata: Metadata = {
-  title: "AI SEO Packages & Pricing | AEO, GEO & Video Search",
+  title: "Best AI SEO Packages 2026: Compare Tiers & Pricing",
   description:
-    "Compare AI SEO packages by price, page limits, content and reporting. Audit from $349; AEO and GEO plans from $749/month. Video production quoted separately.",
+    "Compare AI SEO packages from a $349 audit to $2,999/month. See AEO, GEO, ChatGPT, Google AI Overviews and video search scope, informed by our 100-site study.",
   alternates: {
     canonical: "https://unifiedbrandingexperts.com/ai-seo-packages",
   },
   twitter: {
     card: "summary_large_image",
-    title: "AI SEO Packages & Pricing | AEO, GEO & Video Search",
-    description: "Compare AI SEO packages by price, page limits, content and reporting. Audit from $349; AEO and GEO plans from $749/month.",
+    title: "Best AI SEO Packages 2026: Compare Tiers & Pricing",
+    description: "Compare AI SEO packages from a $349 audit to $2,999/month. See AEO, GEO, ChatGPT, Google AI Overviews and video search scope, informed by our 100-site study.",
     images: ["https://unifiedbrandingexperts.com/ai-seo-packages/opengraph-image"],
   },
   openGraph: {
-    title: "AI SEO Packages & Pricing | AEO, GEO & Video Search",
+    title: "Best AI SEO Packages 2026: Compare Tiers & Pricing",
     description:
-      "Compare AI SEO packages by price, page limits, content and reporting. Audit from $349; AEO and GEO plans from $749/month. Video production quoted separately.",
+      "Compare AI SEO packages from a $349 audit to $2,999/month. See AEO, GEO, ChatGPT, Google AI Overviews and video search scope, informed by our 100-site study.",
     url: "https://unifiedbrandingexperts.com/ai-seo-packages",
     images: [
       {
@@ -183,7 +183,7 @@ export default function AiSeoPackagesPage() {
           </div>
 
           <h1 className="font-display text-4xl sm:text-6xl font-bold tracking-tight text-[#161616]">
-            AI SEO Packages &amp; Pricing
+            Best AI SEO Packages for ChatGPT, Google AI Overviews &amp; Perplexity
           </h1>
 
           <p className="text-xl sm:text-2xl font-display font-medium text-[#303030]">
@@ -191,7 +191,7 @@ export default function AiSeoPackagesPage() {
           </p>
 
           <p className="text-sm sm:text-base text-[#585858] font-body leading-relaxed max-w-2xl mx-auto">
-            AI SEO packages combine technical SEO, Answer Engine Optimization, Generative Engine Optimization, structured data, and content improvements to help your business become discoverable across Google AI Overviews, ChatGPT, video search, and conventional search. Start with a one-time audit from $349 or an ongoing plan from $749/month for implementation and growth.
+            The best AI SEO package depends on what your site needs now. Start with the $349 Audit to identify crawl, content, and entity gaps. Starter ($749/month) implements the foundations; Growth ($1,499/month) and Authority ($2,999/month) expand page coverage and content work. These plans support visibility in ChatGPT, Google AI Overviews, Perplexity, and conventional search, but cannot guarantee citations. Our <Link href="/research/ai-search-readiness-study-2026" className="font-semibold text-[#6049B0] underline">100-site AI Search Readiness Study</Link> informs the audit framework.
           </p>
 
           <p className="text-sm text-[#585858] font-body">
@@ -205,6 +205,17 @@ export default function AiSeoPackagesPage() {
           <div className="inline-block p-3 rounded-2xl bg-white border border-[#E0DDDB] text-xs font-mono-num text-[#161616] font-bold shadow-xs">
             Starting from <span className="text-emerald-600 font-black text-sm">$349</span> for a one-time AI SEO audit. Monthly retainers available for ongoing growth.
           </div>
+        </section>
+
+        <section aria-labelledby="package-criteria-heading" className="rounded-3xl border border-[#E0DDDB] bg-white p-8 sm:p-10">
+          <h2 id="package-criteria-heading" className="font-display text-2xl sm:text-3xl font-bold tracking-tight text-[#161616]">What should I look for in an AI SEO package?</h2>
+          <ul className="mt-5 list-disc space-y-3 pl-6 text-sm sm:text-base leading-relaxed text-[#414141]">
+            <li><strong>Diagnosis before deliverables:</strong> Check crawlability, indexing, analytics, and existing buyer questions before buying a content quota.</li>
+            <li><strong>Clear implementation limits:</strong> Compare the number of pages, content clusters, structured-data tasks, and reporting frequency in each tier.</li>
+            <li><strong>Evidence and originality:</strong> Ask how claims will be sourced, how business entities will be verified, and how useful answers will be maintained.</li>
+            <li><strong>Measurement you can audit:</strong> Track search impressions, qualified visits, leads, and observable AI mentions without promising a specific citation.</li>
+            <li><strong>Scope boundaries:</strong> Confirm whether video production, paid media, extra pages, platform access, and review cycles are included or separately quoted.</li>
+          </ul>
         </section>
 
         {/* Direct answer for a high-impression search question */}
