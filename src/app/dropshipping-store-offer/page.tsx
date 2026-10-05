@@ -32,7 +32,7 @@ export default function DropshippingStoreOfferPage() {
           <a href="#compare" className="inline-flex min-h-12 items-center gap-2 rounded-full bg-[#9F8BE7] px-6 font-bold text-[#161616] hover:bg-[#b4a3f7]">Compare the three builds <ArrowRight className="h-4 w-4" /></a>
         </div>
         <div className="relative overflow-hidden rounded-[2rem] border border-[#E0DDDB] bg-white shadow-lg">
-          <div className="relative aspect-[16/10] overflow-hidden"><Image src="/images/offers/store-launch-offer.webp" alt="UBE store launch campaign creative showing Shopify storefront devices and dropshipping package tiers" fill priority sizes="(max-width: 1024px) 100vw, 48vw" className="object-cover object-center" />
+          <div className="relative aspect-[16/10] overflow-hidden"><Image src="/images/offers/store-launch-offer.webp" alt="UBE store launch campaign creative showing storefront devices and commerce platform marks" fill priority sizes="(max-width: 1024px) 100vw, 48vw" className="object-cover object-top" />
           </div>
           <p className="p-4 text-sm text-[#414141]">This campaign visual introduces the offer. The deliverables below and your signed project scope define the work for your store.</p>
         </div>
