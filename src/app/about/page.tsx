@@ -132,6 +132,11 @@ export default function AboutPage() {
         <div className="space-y-4">
           <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#6049B0]">What the company does</p>
           <h2 id="company-heading" className="font-display text-3xl font-bold text-[#161616] sm:text-4xl">A coordinated company, with specialist departments.</h2>
+          <div className="ube-logo-stage relative mt-8 grid min-h-72 place-items-center overflow-hidden rounded-[2rem] border border-[#D9D0EA] bg-gradient-to-br from-white via-[#F4F0FC] to-[#E7DBFA] p-8" aria-label="Unified Branding Experts logo">
+            <div className="ube-logo-orbit absolute h-52 w-52 rounded-full border border-[#A58DD5]/50 sm:h-60 sm:w-60" aria-hidden="true" />
+            <div className="ube-logo-orbit ube-logo-orbit-reverse absolute h-64 w-64 rounded-full border border-[#A58DD5]/30 sm:h-72 sm:w-72" aria-hidden="true" />
+            <Image src="/images/logo/ube-logo-black.svg" width={230} height={180} alt="Unified Branding Experts official logo" className="ube-logo-float relative z-10 h-auto w-44 drop-shadow-[8px_15px_15px_rgba(72,44,110,0.25)] sm:w-56" />
+          </div>
         </div>
         <div className="space-y-4 leading-relaxed text-[#585858]">
           <p>UBE brings multiple departments and teams under one company. Developers, designers, brand developers, content writers, AI SEO experts, video specialists, AI experts and eCommerce specialists work on their respective parts of a project. The scope is based on what the client needs; every engagement does not automatically include every department.</p>

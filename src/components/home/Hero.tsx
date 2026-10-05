@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowUpRight, Palette } from "lucide-react";
 
 import {
@@ -60,6 +61,11 @@ export default function Hero() {
             </div>
 
             {/* Action Conversion CTAs */}
+            <Link href="/dropshipping-store-offer" className="group flex max-w-xl items-center gap-3 rounded-2xl border border-[#D0BFED] bg-gradient-to-r from-white to-[#F0E8FF] p-3 shadow-sm transition-transform hover:-translate-y-0.5 motion-reduce:transform-none" aria-label="Explore the dropshipping store setup offer starting at $399">
+              <span className="relative h-16 w-16 shrink-0 overflow-hidden rounded-xl"><Image src="/images/offers/store-launch-offer.webp" alt="" fill sizes="64px" className="object-cover scale-[1.6]" /></span>
+              <span className="min-w-0"><span className="block text-xs font-bold uppercase tracking-wider text-[#6049B0]">Store launch offer</span><span className="block font-display text-sm font-bold text-[#161616] sm:text-base">Store builds from $399 · See what is included</span></span>
+              <ArrowUpRight className="ml-auto h-5 w-5 shrink-0 text-[#6049B0]" aria-hidden="true" />
+            </Link>
             <div className="pt-6 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 border-t border-[#E0DDDB]">
               <HeroInteractiveCTA />
 

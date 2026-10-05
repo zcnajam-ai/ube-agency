@@ -22,6 +22,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/ebay`, lastModified: new Date("2026-09-22") },
     { url: `${baseUrl}/research/ai-search-readiness-study-2026`, lastModified: new Date("2026-08-31") },
     { url: `${baseUrl}/contact` },
+    { url: `${baseUrl}/dropshipping-store-offer`, lastModified: new Date("2026-10-05") },
+    { url: `${baseUrl}/dropshipping-growth-plans`, lastModified: new Date("2026-10-05") },
   ];
 
   // 2. Primary Service Pages (14)
@@ -38,7 +40,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/branding-packages` },
     { url: `${baseUrl}/web-design-packages` },
     { url: `${baseUrl}/digital-marketing-packages` },
-    { url: `${baseUrl}/ai-seo-packages`, lastModified: new Date("2026-10-02") },
+    { url: `${baseUrl}/ai-seo-packages` },
     { url: `${baseUrl}/ai-automation-packages` },
     { url: `${baseUrl}/tiktok-marketing-packages` },
     { url: `${baseUrl}/mobile-app-packages` },
@@ -69,14 +71,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "tiktok-shop-vs-shopify",
     "how-much-does-professional-logo-design-cost",
     "shopify-store-setup-cost-2026",
-    "how-to-start-a-tiktok-shop-2026",
-    "how-to-start-a-dropshipping-business-2026",
-    "how-to-get-more-website-and-store-traffic",
-    "why-visitors-leave-without-buying-or-contacting",
-    "how-to-get-your-business-found-in-ai-search",
-    "what-you-need-before-launching-a-website-or-store",
-    "how-to-track-website-performance-and-results",
-    "how-to-check-if-your-website-is-secure",
   ]);
 
   const insightRoutes: MetadataRoute.Sitemap = uniqueInsights.map((i) => ({

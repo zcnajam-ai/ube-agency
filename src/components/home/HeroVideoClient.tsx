@@ -1,70 +1,48 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import Image from "next/image";
-import { Play, Volume2, VolumeX } from "lucide-react";
+import { Volume2, VolumeX } from "lucide-react";
 
 export default function HeroVideoClient() {
   const videoRef = useRef<HTMLVideoElement>(null);
-  const [shouldPlay, setShouldPlay] = useState(false);
   const [isMuted, setIsMuted] = useState(true);
-
-  // Keep the 22 MB video off the critical path on every screen size.
-  // Visitors can play it explicitly from the poster without a failed
-  // background request interrupting the rest of the page.
+  const [allowMotion, setAllowMotion] = useState(false);
 
   useEffect(() => {
-    if (shouldPlay) videoRef.current?.play().catch(() => {});
-  }, [shouldPlay]);
+    const video = videoRef.current;
+    if (!video || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    setAllowMotion(true);
+    video.play().catch(() => {});
+  }, []);
 
   return (
     <div className="relative aspect-[16/9] w-full rounded-2xl sm:rounded-[28px] overflow-hidden border border-[#E0DDDB] shadow-lg bg-[#FAF7F6] hover:border-[#9F8BE7] transition-colors group">
-      {shouldPlay ? (
-        <video
+      <video
           ref={videoRef}
           poster="/images/home/ube-video-poster.webp"
           muted={isMuted}
+          autoPlay={allowMotion}
           loop
           playsInline
-          preload="none"
+          preload="metadata"
           className="w-full h-full object-contain bg-[#FAF7F6]"
           aria-label="Unified Branding Experts promotional video"
         >
           <source src="/videos/ube-promotional-video.mp4" type="video/mp4" />
-        </video>
-      ) : (
-        <>
-          <Image
-            src="/images/home/ube-video-poster.webp"
-            alt=""
-            fill
-            sizes="(max-width: 1023px) calc(100vw - 32px), 50vw"
-            className="object-cover"
-          />
-          <button
-            type="button"
-            onClick={() => setShouldPlay(true)}
-            className="absolute inset-0 flex items-center justify-center bg-black/10 text-white focus-visible:outline-4 focus-visible:outline-offset-[-4px] focus-visible:outline-[#9F8BE7]"
-            aria-label="Play Unified Branding Experts promotional video"
-          >
-            <span className="flex items-center gap-2 rounded-full bg-[#161616]/90 px-5 py-3 text-sm font-semibold shadow-md">
-              <Play className="h-5 w-5 fill-current" aria-hidden="true" /> Play video
-            </span>
-          </button>
-        </>
-      )}
+      </video>
 
-      {shouldPlay && (
         <button
           type="button"
-          onClick={() => setIsMuted((muted) => !muted)}
+          onClick={() => {
+            setIsMuted((muted) => !muted);
+            videoRef.current?.play().catch(() => {});
+          }}
           className="absolute bottom-3 right-3 sm:bottom-4 sm:right-4 z-20 px-3 py-1.5 sm:px-3.5 sm:py-1.5 rounded-full bg-white/95 border border-[#E0DDDB] hover:border-[#9F8BE7] text-xs font-mono-num font-bold text-[#161616] flex items-center gap-1.5 shadow-sm min-h-[36px]"
           aria-label={isMuted ? "Unmute promotional video" : "Mute promotional video"}
         >
           {isMuted ? <VolumeX className="w-4 h-4" aria-hidden="true" /> : <Volume2 className="w-4 h-4" aria-hidden="true" />}
           <span>{isMuted ? "Sound Off" : "Sound On"}</span>
         </button>
-      )}
     </div>
   );
 }

@@ -39,7 +39,7 @@ export default function InsightsIndexPage() {
     if (seenInsightSlugs.has(i.slug)) return false;
     seenInsightSlugs.add(i.slug);
     return true;
-  });
+  }).sort((a, b) => Date.parse(b.publishedAt) - Date.parse(a.publishedAt));
 
   const breadcrumbSchema = {
     "@context": "https://schema.org",

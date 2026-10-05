@@ -1,7 +1,9 @@
 "use client";
 
 import Link from "next/link";
-import { ArrowRight, ArrowUpRight, Check, ShoppingBag } from "lucide-react";
+import { useEffect, useState } from "react";
+import { FEATURED_PROJECTS } from "@/data/projects";
+import { ArrowLeft, ArrowRight, ArrowUpRight, Check, ShoppingBag } from "lucide-react";
 import { useScroll } from "@/components/providers/SmoothScrollProvider";
 import InteractiveMedia from "../common/InteractiveMedia";
 
@@ -28,6 +30,15 @@ const pathways = [
 
 export default function EcommercePriority() {
   const { openProjectModal } = useScroll();
+  const [active, setActive] = useState(0);
+  const [paused, setPaused] = useState(false);
+  const projects = FEATURED_PROJECTS;
+  useEffect(() => {
+    if (paused || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    const timer = window.setInterval(() => setActive((n) => (n + 1) % projects.length), 4800);
+    return () => window.clearInterval(timer);
+  }, [paused, projects.length]);
+  const project = projects[active];
 
   return (
     <section aria-labelledby="ecommerce-pathways-title" className="relative isolate overflow-hidden border-b border-[#E0DDDB] bg-[linear-gradient(135deg,#FAF7F6_0%,#F4F0FC_55%,#FAF7F6_100%)] px-4 py-20 sm:px-6 sm:py-28 md:px-12">
@@ -78,30 +89,26 @@ export default function EcommercePriority() {
             ))}
           </div>
 
-          <div className="overflow-hidden rounded-[2rem] border border-[#303035] bg-[#161616] p-4 text-white shadow-lg sm:p-6 lg:sticky lg:top-28">
+          <div className="overflow-hidden rounded-[2rem] border border-[#303035] bg-[#161616] p-4 text-white shadow-lg sm:p-6 lg:sticky lg:top-28" onMouseEnter={() => setPaused(true)} onMouseLeave={() => setPaused(false)} onFocusCapture={() => setPaused(true)} onBlurCapture={() => setPaused(false)}>
             <div className="flex items-center justify-between gap-3 px-1 pb-4">
-              <span className="font-mono-num text-xs font-bold uppercase tracking-[0.15em] text-[#C3B2FF]">A storefront we worked on</span>
-              <span className="rounded-full border border-white/20 px-3 py-1 font-mono-num text-[11px] text-white/80">Shopify</span>
+              <span className="font-mono-num text-xs font-bold uppercase tracking-[0.15em] text-[#C3B2FF]">Selected work · {active + 1} / {projects.length}</span>
+              <span className="rounded-full border border-white/20 px-3 py-1 font-mono-num text-[11px] text-white/80">{project.industry}</span>
             </div>
-            <Link href="/work/happy-knot-creations-shopify-storefront" aria-label="View the Happy Knot Creations Shopify case study"
-              className="block rounded-2xl focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#C3B2FF]">
-              <InteractiveMedia
-                src="/images/projects/happy-knot/hd-storefront-hero.webp"
-                alt="Happy Knot Creations storefront featuring handmade crochet plushies and a custom order invitation"
-                aspectRatio="aspect-[1559/1009]" objectFit="contain"
-                sizes="(max-width: 1024px) 100vw, 42vw" quality={85}
-              />
+            <Link href={`/work/${project.slug}`} aria-label={`View the ${project.client} case study`} className="block overflow-hidden rounded-2xl focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#C3B2FF]">
+              <InteractiveMedia key={project.slug} src={project.heroImage} alt={`${project.client} project preview`} aspectRatio="aspect-[1559/1009]" objectFit="contain" sizes="(max-width: 1024px) 100vw, 42vw" quality={85} />
             </Link>
             <div className="px-1 pb-2 pt-6">
-              <p className="font-mono-num text-xs font-bold uppercase tracking-[0.15em] text-[#C3B2FF]">Happy Knot Creations</p>
-              <h3 className="mt-2 font-display text-2xl font-bold leading-tight sm:text-3xl">A home for handmade products and custom orders.</h3>
-              <p className="mt-3 font-body text-sm leading-relaxed text-[#D1D1D1]">
-                UBE worked on the Shopify storefront, product content and graphics, AI SEO, and ongoing store management. See how the store presents handmade products and custom orders.
-              </p>
-              <Link href="/work/happy-knot-creations-shopify-storefront"
-                className="mt-5 inline-flex min-h-11 items-center gap-2 rounded-full bg-[#9F8BE7] px-5 font-display text-sm font-bold text-[#161616] transition-colors hover:bg-[#b4a3f7] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">
-                See the Happy Knot project<ArrowUpRight className="h-4 w-4" aria-hidden="true" />
-              </Link>
+              <p className="font-mono-num text-xs font-bold uppercase tracking-[0.15em] text-[#C3B2FF]">{project.client}</p>
+              <h3 className="mt-2 font-display text-2xl font-bold leading-tight sm:text-3xl">{project.category}</h3>
+              <p className="mt-3 font-body text-sm leading-relaxed text-[#D1D1D1] line-clamp-3">{project.summary}</p>
+              <div className="mt-5 flex flex-wrap items-center justify-between gap-3">
+                <Link href={`/work/${project.slug}`} className="inline-flex min-h-11 items-center gap-2 rounded-full bg-[#9F8BE7] px-5 font-display text-sm font-bold text-[#161616] transition-colors hover:bg-[#b4a3f7] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">Explore project<ArrowUpRight className="h-4 w-4" aria-hidden="true" /></Link>
+                <div className="flex gap-2" aria-label="Project carousel controls">
+                  <button type="button" onClick={() => setActive((n) => (n - 1 + projects.length) % projects.length)} aria-label="Previous project" className="grid h-11 w-11 place-items-center rounded-full border border-white/30 hover:bg-white/15 focus-visible:outline-2 focus-visible:outline-white"><ArrowLeft className="h-5 w-5" /></button>
+                  <button type="button" onClick={() => setActive((n) => (n + 1) % projects.length)} aria-label="Next project" className="grid h-11 w-11 place-items-center rounded-full border border-white/30 hover:bg-white/15 focus-visible:outline-2 focus-visible:outline-white"><ArrowRight className="h-5 w-5" /></button>
+                </div>
+              </div>
+              <div className="mt-5 flex gap-1" aria-hidden="true">{projects.map((item, i) => <span key={item.slug} className={`h-1 flex-1 rounded-full ${i === active ? "bg-[#9F8BE7]" : "bg-white/20"}`} />)}</div>
             </div>
           </div>
         </div>
