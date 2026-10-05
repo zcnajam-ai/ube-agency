@@ -87,8 +87,8 @@ const nextConfig: NextConfig = {
         permanent: true,
       })),
       // Legacy Portfolio URLs -> Canonical Work Destination (/work)
-      { source: "/portfolio", destination: "/work", permanent: true },
-      { source: "/portfolio/", destination: "/work", permanent: true },
+      { source: "/portfolio", destination: "/work", statusCode: 301 },
+      { source: "/portfolio/", destination: "/work", statusCode: 301 },
       { source: "/work/bugle-chaser-outdoor-apparel-brand", destination: "/work", permanent: true },
       { source: "/work/bugle-chaser-outdoor-apparel-brand/", destination: "/work", permanent: true },
       { source: "/pricing", destination: "/packages", permanent: true },
@@ -105,8 +105,8 @@ const nextConfig: NextConfig = {
       { source: "/category/case-studies/", destination: "/work", permanent: true },
 
       // Legacy Service Overlaps -> Canonical Service Destinations
-      { source: "/best-logo-design-agency", destination: "/services/branding", permanent: true },
-      { source: "/best-logo-design-agency/", destination: "/services/branding", permanent: true },
+      { source: "/best-logo-design-agency", destination: "/services/branding", statusCode: 301 },
+      { source: "/best-logo-design-agency/", destination: "/services/branding", statusCode: 301 },
       { source: "/professional-web-design-services", destination: "/services/web-design-development", permanent: true },
       { source: "/professional-web-design-services/", destination: "/services/web-design-development", permanent: true },
       { source: "/best-website-development-agency", destination: "/services/web-design-development", permanent: true },
@@ -119,8 +119,8 @@ const nextConfig: NextConfig = {
       { source: "/professional-content-writing-services/", destination: "/services", permanent: true },
 
       // Legacy Package Overlaps -> Canonical Package Destinations
-      { source: "/logo-design-packages", destination: "/branding-packages", permanent: true },
-      { source: "/logo-design-packages/", destination: "/branding-packages", permanent: true },
+      { source: "/logo-design-packages", destination: "/branding-packages", statusCode: 301 },
+      { source: "/logo-design-packages/", destination: "/branding-packages", statusCode: 301 },
       { source: "/our-website-development-packages", destination: "/web-design-packages", permanent: true },
       { source: "/our-website-development-packages/", destination: "/web-design-packages", permanent: true },
       { source: "/our-digital-marketing-packages", destination: "/digital-marketing-packages", permanent: true },
