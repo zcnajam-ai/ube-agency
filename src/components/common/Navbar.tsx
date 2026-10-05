@@ -432,7 +432,7 @@ export default function Navbar() {
                             className="p-2 rounded-xl hover:bg-[#FAF7F6] block transition-colors group"
                           >
                             <div className="font-display font-bold text-xs text-[#161616] group-hover:text-[#9F8BE7] flex items-start justify-between gap-2">
-                              <span className="min-w-0">eCommerce Store Management</span>
+                              <span className="min-w-0 whitespace-normal leading-tight">eCommerce Store Management</span>
                               <span className="shrink-0 text-[10px] font-mono-num text-emerald-600 font-bold">$249/mo</span>
                             </div>
                             <p className="text-[10px] text-[#585858]">Product updates &amp; store operations</p>
