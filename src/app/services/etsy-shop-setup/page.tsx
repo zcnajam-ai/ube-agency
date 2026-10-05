@@ -1,4 +1,5 @@
 import RelatedServiceLinks from "@/components/services/RelatedServiceLinks";
+import { PlatformBadgeRow } from "@/components/common/PlatformMark";
 import React from "react";
 import ServiceSchema from "@/components/seo/ServiceSchema";
 import StoreManagementLink from "@/components/services/StoreManagementLink";
@@ -169,8 +170,9 @@ export default function EtsyShopSetupPage() {
           </div>
 
           <h1 className="font-display text-4xl sm:text-6xl font-bold tracking-tight text-[#161616] leading-tight">
-            Etsy Shop Setup &amp; Etsy SEO Optimization.
-          </h1>
+              Etsy Shop Setup &amp; Etsy SEO Optimization.
+            </h1>
+            <PlatformBadgeRow platforms={["etsy"]} />
 
           <p className="text-base sm:text-lg text-[#585858] font-body leading-relaxed max-w-2xl">
             Build a credible, search-ready Etsy storefront. We handle everything from <strong className="text-[#161616]">shop branding and banner kits</strong> to <strong className="text-[#161616]">buyer-intent keyword research</strong>, relevant tags, lifestyle mockups, and conversion-focused listing copy.
@@ -214,12 +216,12 @@ export default function EtsyShopSetupPage() {
         <div className="lg:col-span-5">
           <div className="relative aspect-[4/3] w-full rounded-3xl overflow-hidden bg-white border border-[#E0DDDB] shadow-md group">
             <Image
-              src="/images/service-icons/etsy-listings.webp"
-              alt="3D handmade product listing with camera and price tag"
+              src="/images/platform-marks/etsy.svg"
+              alt="Etsy platform mark"
               fill
               priority
               sizes="(max-width: 1024px) 100vw, 45vw"
-              className="object-contain object-center p-3 sm:p-5 transition-transform duration-700 group-hover:scale-105"
+              className="object-contain object-center p-14 sm:p-20 transition-transform duration-700 group-hover:scale-[1.02] motion-reduce:transform-none"
             />
             <div className="absolute bottom-4 left-4 right-4 p-4 rounded-2xl bg-white/90 backdrop-blur-md border border-[#E0DDDB] text-xs font-mono-num text-[#161616] flex items-center justify-between shadow-xs">
               <span className="font-bold">ETSY SEO • 13 TAGS • BRANDING</span>

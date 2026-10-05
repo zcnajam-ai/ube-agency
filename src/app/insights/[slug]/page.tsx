@@ -16,6 +16,22 @@ import {
 } from "lucide-react";
 import { INSIGHTS, getInsightBySlug, ArticleFAQ, ArticleSection } from "@/data/insights";
 import { COMPANY_INFO } from "@/data/company";
+import { PlatformBadgeRow, PlatformMark, type PlatformName } from "@/components/common/PlatformMark";
+
+function articlePlatforms(title: string): PlatformName[] {
+  const value = title.toLowerCase();
+  const marks: PlatformName[] = [];
+  if (value.includes("shopify")) marks.push("shopify");
+  if (value.includes("etsy")) marks.push("etsy");
+  if (value.includes("ebay")) marks.push("ebay");
+  if (value.includes("amazon")) marks.push("amazon");
+  if (value.includes("tiktok")) marks.push("tiktok");
+  if (value.includes("facebook") || value.includes("meta ads")) marks.push("facebook");
+  if (value.includes("instagram") || value.includes("meta ads")) marks.push("instagram");
+  if (value.includes("google ads")) marks.push("googleads");
+  else if (value.includes("google")) marks.push("google");
+  return marks;
+}
 
 const MONTH_NUMBER: Record<string, string> = {
   January: "01",
@@ -76,7 +92,13 @@ export async function generateMetadata({
   const publishedTime = toSchemaDate(article.publishedAt);
   const modifiedTime = toSchemaDate(article.updatedAt);
 
-  const ogImageUrl = `https://unifiedbrandingexperts.com/insights/${article.slug}/opengraph-image`;
+  const ogImageUrl = articlePlatforms(article.title).length && article.coverImage.startsWith("/images/service-icons/")
+    ? `${canonicalUrl}/opengraph-image`
+    : article.coverImage
+    ? article.coverImage.startsWith("http")
+      ? article.coverImage
+      : `https://unifiedbrandingexperts.com${article.coverImage}`
+    : "https://unifiedbrandingexperts.com/og-default.png";
 
   return {
     title: article.title,
@@ -97,7 +119,7 @@ export async function generateMetadata({
           url: ogImageUrl,
           width: 1200,
           height: 630,
-          alt: `${article.title} article by Unified Branding Experts`,
+          alt: article.coverAlt || article.title,
         },
       ],
     },
@@ -122,6 +144,8 @@ export default async function InsightArticlePage({
 
   const publishedDate = toSchemaDate(article.publishedAt);
   const modifiedDate = toSchemaDate(article.updatedAt);
+  const platformMarks = articlePlatforms(article.title);
+  const brandedCover = platformMarks.length > 0 && article.coverImage.startsWith("/images/service-icons/");
 
   // Find related articles
   const relatedArticles = article.relatedSlugs
@@ -134,7 +158,9 @@ export default async function InsightArticlePage({
     "@type": "Article",
     headline: article.title,
     description: article.summary,
-    image: `https://unifiedbrandingexperts.com${article.coverImage}`,
+    image: brandedCover
+      ? `https://unifiedbrandingexperts.com/insights/${article.slug}/opengraph-image`
+      : `https://unifiedbrandingexperts.com${article.coverImage}`,
     datePublished: publishedDate,
     dateModified: modifiedDate,
     author: {
@@ -258,6 +284,7 @@ export default async function InsightArticlePage({
           <h1 className="font-display text-3xl sm:text-5xl md:text-6xl font-bold tracking-tight text-[#161616] leading-[1.15]">
             {article.h1 || article.title}
           </h1>
+          {platformMarks.length > 0 && <PlatformBadgeRow platforms={platformMarks} />}
 
           <p className="text-base sm:text-xl text-[#585858] font-body leading-relaxed max-w-4xl">
             {article.summary}
@@ -287,14 +314,21 @@ export default async function InsightArticlePage({
 
         {/* 3. Cover Image */}
         <div className="relative aspect-[16/9] w-full rounded-3xl overflow-hidden border border-[#E0DDDB] shadow-md bg-[#FAF7F6]">
-          <Image
+          {brandedCover ? (
+            <div className="flex h-full w-full flex-col items-center justify-center gap-5 bg-gradient-to-br from-white via-[#FAF7F6] to-[#EAE5FB] p-6 text-center">
+              <div className="flex flex-wrap justify-center gap-4 sm:gap-8">
+                {platformMarks.map((mark) => <span key={mark} className="flex h-20 w-20 items-center justify-center rounded-3xl border border-[#E0DDDB] bg-white shadow-lg sm:h-28 sm:w-28"><PlatformMark platform={mark} size={70} className="max-h-[65%] max-w-[65%] h-auto w-auto" /></span>)}
+              </div>
+              <p className="max-w-2xl font-display text-base sm:text-2xl font-bold text-[#161616]">{article.title}</p>
+            </div>
+          ) : <Image
             src={article.coverImage}
             alt={article.coverAlt || article.title}
             fill
             priority
             sizes="(max-width: 1024px) 100vw, 1000px"
             className={`${article.coverImage.startsWith("/images/service-icons/") ? "object-contain p-4 sm:p-8" : "object-cover"} object-center`}
-          />
+          />}
         </div>
 
         {/* 4. Answer-First Direct Takeaway Box (AEO & AISEO Target) */}

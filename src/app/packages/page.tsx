@@ -103,7 +103,7 @@ export default function PackagesHubPage() {
       bestFor: "Brands Scaling Viral Short-Form Video",
       description:
         "Short-form video strategy, content calendars, hook writing, community engagement, and paid TikTok ad campaign management.",
-      image: "/images/service-icons/tiktok-shop.webp",
+      image: "/images/platform-marks/tiktok.svg",
       tiers: ["Starter ($299/mo)", "Growth ($699/mo)", "Pro ($1,499/mo)", "Authority ($2,999/mo)", "Enterprise"],
     },
     {
@@ -182,7 +182,7 @@ export default function PackagesHubPage() {
                 alt={hub.title}
                 fill
                 sizes="(max-width: 768px) 100vw, 33vw"
-                className={`${hub.image.startsWith("/images/service-icons/") ? "object-contain p-3 sm:p-5" : "object-cover"} object-center transition-transform duration-500 group-hover:scale-105`}
+                  className={`${hub.image.startsWith("/images/platform-marks/") ? "object-contain p-12 sm:p-16" : hub.image.startsWith("/images/service-icons/") ? "object-contain p-3 sm:p-5" : "object-cover"} object-center transition-transform duration-500 group-hover:scale-105`}
               />
               <div className="absolute top-3 right-3 px-3 py-1 rounded-full bg-white/95 backdrop-blur-md border border-[#E0DDDB] text-xs font-mono-num font-bold text-emerald-600 shadow-xs">
                 {hub.startingPrice}

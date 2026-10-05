@@ -1,4 +1,5 @@
 import RelatedServiceLinks from "@/components/services/RelatedServiceLinks";
+import { PlatformBadgeRow } from "@/components/common/PlatformMark";
 import React from "react";
 import ServiceSchema from "@/components/seo/ServiceSchema";
 import Link from "next/link";
@@ -135,8 +136,9 @@ export default function GoogleAdsServicePage() {
           </div>
 
           <h1 className="font-display text-4xl sm:text-6xl font-bold tracking-tight text-[#161616] leading-tight">
-            Google Ads Built Around High-Intent Customers
-          </h1>
+              Google Ads Built Around High-Intent Customers
+            </h1>
+            <PlatformBadgeRow platforms={["googleads"]} />
 
           <p className="text-base sm:text-lg text-[#585858] font-body leading-relaxed max-w-2xl">
             Reach people who are actively searching for the products and services you sell. Unified Branding Experts plans, builds and manages Google Ads campaigns around search intent, conversion tracking and clear business objectives.

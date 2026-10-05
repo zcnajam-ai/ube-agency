@@ -3,19 +3,17 @@ import Link from "next/link";
 import { ArrowUpRight, Palette } from "lucide-react";
 
 import {
-  Shopify3DIcon,
-  TikTok3DIcon,
-  Google3DIcon,
   Heading3DSparkle,
 } from "../common/Brand3DIcons";
+import { PlatformMark } from "../common/PlatformMark";
 import HeroVideoClient from "./HeroVideoClient";
 import HeroInteractiveCTA from "./HeroInteractiveCTA";
 
 export default function Hero() {
   const priorityPills = [
-    { label: "Shopify & Dropshipping", href: "/services/dropshipping", icon: <Shopify3DIcon size={18} /> },
-    { label: "TikTok Shop & Meta Ads", href: "/tiktok-marketing-packages", icon: <TikTok3DIcon size={18} /> },
-    { label: "Google Marketing", href: "/services/google-ads", icon: <Google3DIcon size={18} /> },
+    { label: "Shopify & Dropshipping", href: "/services/dropshipping", icon: <PlatformMark platform="shopify" size={18} decorative /> },
+    { label: "TikTok Shop & Meta Ads", href: "/tiktok-marketing-packages", icon: <PlatformMark platform="tiktok" size={18} decorative /> },
+    { label: "Google Marketing", href: "/services/google-ads", icon: <PlatformMark platform="google" size={18} decorative /> },
     { label: "AI SEO agency", href: "/ai-seo", icon: <Heading3DSparkle size={18} /> },
     { label: "Branding (From $299)", href: "/branding-packages", icon: <Palette className="w-4 h-4 text-blue-600" /> },
   ];

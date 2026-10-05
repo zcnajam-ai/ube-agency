@@ -11,7 +11,7 @@ import {
   MessageCircle,
   Share2,
 } from "lucide-react";
-import { TikTok3DIcon } from "./Brand3DIcons";
+import { PlatformMark } from "./PlatformMark";
 
 interface TikTokMinimalVisualProps {
   className?: string;
@@ -31,7 +31,7 @@ export default function TikTokMinimalVisual({ className = "" }: TikTokMinimalVis
       <div className="relative z-10 flex items-center justify-between gap-2">
         <div className="flex items-center gap-1.5 sm:gap-2 px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-full bg-[#222222]/90 border border-[#3A3A3A] backdrop-blur-md min-w-0">
           <div className="w-4 h-4 sm:w-5 sm:h-5 flex items-center justify-center shrink-0">
-            <TikTok3DIcon size={16} />
+            <PlatformMark platform="tiktok" size={16} decorative className="brightness-0 invert" />
           </div>
           <span className="text-[10px] sm:text-xs font-display font-bold tracking-tight text-white whitespace-nowrap truncate">
             TikTok Commerce &amp; Ads

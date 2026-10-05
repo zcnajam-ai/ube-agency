@@ -1,12 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import {
-  Shopify3DIcon,
-  Amazon3DIcon,
-  Etsy3DIcon,
-  EBay3DIcon,
-} from "./Brand3DIcons";
+import { PlatformMark } from "./PlatformMark";
 
 export type CommercePlatformType = "shopify" | "amazon" | "etsy" | "ebay";
 
@@ -25,7 +20,6 @@ const PLATFORM_CONFIG: Record<
     bgColor: string;
     borderColor: string;
     glowColor: string;
-    icon: (size: number) => React.ReactNode;
   }
 > = {
   shopify: {
@@ -33,28 +27,24 @@ const PLATFORM_CONFIG: Record<
     bgColor: "bg-gradient-to-br from-emerald-50 via-white to-lime-50/50",
     borderColor: "border-emerald-200/80 hover:border-emerald-400",
     glowColor: "shadow-[0_10px_30px_rgba(149,191,71,0.22)]",
-    icon: (s) => <Shopify3DIcon size={s} className="aria-hidden:true" />,
   },
   amazon: {
     name: "Amazon",
     bgColor: "bg-gradient-to-br from-slate-900 via-slate-800 to-amber-950/40",
     borderColor: "border-amber-500/30 hover:border-amber-400",
     glowColor: "shadow-[0_10px_30px_rgba(255,153,0,0.25)]",
-    icon: (s) => <Amazon3DIcon size={s} className="aria-hidden:true" />,
   },
   etsy: {
     name: "Etsy",
     bgColor: "bg-gradient-to-br from-orange-50 via-white to-amber-50/50",
     borderColor: "border-orange-200/80 hover:border-orange-400",
     glowColor: "shadow-[0_10px_30px_rgba(241,100,30,0.22)]",
-    icon: (s) => <Etsy3DIcon size={s} className="aria-hidden:true" />,
   },
   ebay: {
     name: "eBay",
     bgColor: "bg-gradient-to-br from-blue-50 via-white to-slate-50",
     borderColor: "border-blue-200/80 hover:border-blue-400",
     glowColor: "shadow-[0_10px_30px_rgba(0,100,210,0.18)]",
-    icon: (s) => <EBay3DIcon size={s} className="aria-hidden:true" />,
   },
 };
 
@@ -104,14 +94,14 @@ export default function CommercePlatformIcon3D({
           transform: `perspective(600px) rotateX(${rotate.x}deg) rotateY(${rotate.y}deg)`,
           transition: "transform 300ms ease-out, shadow 300ms ease-out",
         }}
-        className={`relative aspect-square flex items-center justify-center border ${sizeConfig.container} ${config.bgColor} ${config.borderColor} ${config.glowColor} group cursor-pointer transition-all duration-300 hover:scale-105 active:scale-95`}
+        className={`relative aspect-square flex items-center justify-center border ${sizeConfig.container} ${config.bgColor} ${config.borderColor} ${config.glowColor} group transition-all duration-300 hover:scale-105 motion-reduce:transform-none`}
       >
         {/* Soft Ambient Light Glow & Specular Overlay */}
         <div className="absolute inset-0 rounded-[inherit] bg-gradient-to-tr from-transparent via-white/40 to-white/70 opacity-60 pointer-events-none group-hover:opacity-90 transition-opacity" />
         
         {/* Authentic Brand SVG Icon */}
         <div className="relative z-10 flex items-center justify-center transition-transform duration-300 group-hover:scale-110">
-          {config.icon(sizeConfig.iconSize)}
+          <PlatformMark platform={platform} size={sizeConfig.iconSize} decorative />
         </div>
 
         {/* Accessible Hidden Text for Screen Readers */}

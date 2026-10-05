@@ -10,11 +10,9 @@ import BackgroundGrid from "../common/BackgroundGrid";
 import PurpleGlowField from "../common/PurpleGlowField";
 import OversizedTypography from "../common/OversizedTypography";
 import {
-  TikTok3DIcon,
-  Meta3DIcon,
-  Google3DIcon,
   Heading3DGrowth,
 } from "../common/Brand3DIcons";
+import { PlatformMark } from "../common/PlatformMark";
 
 export default function GrowthAdsMarketing() {
   const { openProjectModal } = useScroll();
@@ -28,7 +26,7 @@ export default function GrowthAdsMarketing() {
       packageUrl: "/tiktok-marketing-packages",
       image: "/images/service-icons/tiktok-shop.webp",
       desc: "We build structured TikTok content strategies, video creative frameworks, creator whitelisting, and TikTok Shop storefront integrations designed to connect with engaged buyers.",
-      icon: <TikTok3DIcon size={24} />,
+      icon: <PlatformMark platform="tiktok" size={24} decorative />,
       deliverables: [
         "TikTok Shop Storefront Setup & Product Catalog Sync",
         "Short-Form Video Concepting & Scripting Frameworks",
@@ -44,7 +42,7 @@ export default function GrowthAdsMarketing() {
       packageUrl: "/digital-marketing-packages",
       image: "/images/service-icons/paid-advertising.webp",
       desc: "We architect full-funnel Meta advertising campaigns with structured audience segmentation, visual creative variations, catalog sales ads, and Meta Conversions API (CAPI) server-side tracking.",
-      icon: <Meta3DIcon size={24} />,
+      icon: <span className="inline-flex items-center gap-1"><PlatformMark platform="facebook" size={20} decorative /><PlatformMark platform="instagram" size={20} decorative /></span>,
       deliverables: [
         "Ad Creative Testing & Format Segmentation",
         "Advantage+ Catalog & Retargeting Funnels",
@@ -60,7 +58,7 @@ export default function GrowthAdsMarketing() {
       packageUrl: "/digital-marketing-packages",
       image: "/images/service-icons/paid-advertising.webp",
       desc: "We build structured Google Search campaigns, Google Merchant Center Shopping feeds, and tailored Performance Max asset groups synchronized with transparent performance reporting.",
-      icon: <Google3DIcon size={24} />,
+      icon: <PlatformMark platform="googleads" size={24} decorative />,
       deliverables: [
         "High-Intent Keyword Architecture & Negative Match Lists",
         "Google Merchant Center Product Feed Optimization",
@@ -107,7 +105,7 @@ export default function GrowthAdsMarketing() {
                   : "text-[#585858] hover:text-[#161616]"
               }`}
             >
-              <TikTok3DIcon size={18} />
+              <PlatformMark platform="tiktok" size={18} decorative />
               <span>TikTok Shop &amp; Ads</span>
             </button>
             <button
@@ -119,7 +117,7 @@ export default function GrowthAdsMarketing() {
                   : "text-[#585858] hover:text-[#161616]"
               }`}
             >
-              <Meta3DIcon size={18} />
+              <span className="inline-flex items-center gap-1"><PlatformMark platform="facebook" size={16} decorative /><PlatformMark platform="instagram" size={16} decorative /></span>
               <span>Meta Ads</span>
             </button>
             <button
@@ -131,7 +129,7 @@ export default function GrowthAdsMarketing() {
                   : "text-[#585858] hover:text-[#161616]"
               }`}
             >
-              <Google3DIcon size={18} />
+              <PlatformMark platform="googleads" size={18} decorative />
               <span>Google Marketing</span>
             </button>
           </div>

@@ -1,4 +1,5 @@
 import RelatedServiceLinks from "@/components/services/RelatedServiceLinks";
+import { PlatformBadgeRow } from "@/components/common/PlatformMark";
 import React from "react";
 import ServiceSchema from "@/components/seo/ServiceSchema";
 import Link from "next/link";
@@ -137,8 +138,9 @@ export default function MetaAdsServicePage() {
           </div>
 
           <h1 className="font-display text-4xl sm:text-6xl font-bold tracking-tight text-[#161616] leading-tight">
-            Facebook &amp; Instagram Ads Built to Turn Attention Into Action
-          </h1>
+              Facebook &amp; Instagram Ads Built to Turn Attention Into Action
+            </h1>
+            <PlatformBadgeRow platforms={["facebook", "instagram"]} />
 
           <p className="text-base sm:text-lg text-[#585858] font-body leading-relaxed max-w-2xl">
             Meta gives brands access to enormous audiences, but reach alone does not create a successful campaign. Unified Branding Experts develops Facebook and Instagram advertising around the combination of creative, audience strategy, offer positioning, landing-page experience and conversion measurement.

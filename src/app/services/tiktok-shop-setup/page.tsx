@@ -1,3 +1,4 @@
+import { PlatformBadgeRow } from "@/components/common/PlatformMark";
 import React from "react";
 import ServiceSchema from "@/components/seo/ServiceSchema";
 import StoreManagementLink from "@/components/services/StoreManagementLink";
@@ -167,8 +168,9 @@ export default function TikTokShopSetupPage() {
           </div>
 
           <h1 className="font-display text-4xl sm:text-6xl font-bold tracking-tight text-[#161616] leading-tight">
-            TikTok Shop Setup Services &amp; Shopify Integration
-          </h1>
+              TikTok Shop Setup Services &amp; Shopify Integration
+            </h1>
+            <PlatformBadgeRow platforms={["tiktok", "shopify"]} />
 
           <p className="text-base sm:text-lg text-[#585858] font-body leading-relaxed max-w-2xl">
             Tap into the world&apos;s fastest-growing social commerce engine. We handle <strong className="text-[#161616]">TikTok Seller Center verification</strong>, <strong className="text-[#161616]">Shopify catalog sync</strong>, Creator Affiliate recruitment, and high-converting Shoppable Video Ads.
