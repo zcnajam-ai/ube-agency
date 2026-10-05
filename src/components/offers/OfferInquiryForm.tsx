@@ -27,7 +27,7 @@ export default function OfferInquiryForm() {
       const data = await response.json();
       if (!response.ok) throw new Error(data.error || "Please try again.");
       setStatus("sent");
-      setMessage("Your offer inquiry was received. Check your inbox for our confirmation email.");
+      setMessage("Your offer inquiry was received. We’ll follow up by email.");
       trackLeadSubmit({ service: "Dropshipping Store Offer", source_page: "/dropshipping-store-offer" });
     } catch (error) {
       setStatus("error");
