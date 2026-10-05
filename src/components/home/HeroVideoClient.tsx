@@ -6,10 +6,12 @@ import { Volume2, VolumeX } from "lucide-react";
 export default function HeroVideoClient() {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isMuted, setIsMuted] = useState(true);
+  const [allowMotion, setAllowMotion] = useState(false);
 
   useEffect(() => {
     const video = videoRef.current;
     if (!video || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    setAllowMotion(true);
     video.play().catch(() => {});
   }, []);
 
@@ -19,7 +21,7 @@ export default function HeroVideoClient() {
           ref={videoRef}
           poster="/images/home/ube-video-poster.webp"
           muted={isMuted}
-          autoPlay
+          autoPlay={allowMotion}
           loop
           playsInline
           preload="metadata"
