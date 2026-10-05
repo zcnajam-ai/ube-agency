@@ -19,41 +19,23 @@ export default function PrivacyPolicyPage() {
             Privacy Policy
           </h1>
           <p className="text-xs font-mono-num text-[#585858] mt-2">
-            Last updated: February 2026
+            Last updated: October 5, 2026
           </p>
         </div>
 
-        <div className="space-y-6 text-sm sm:text-base text-[#303030] leading-relaxed">
-          <section className="space-y-2">
-            <h2 className="font-display text-xl font-bold text-[#161616]">1. Information We Collect</h2>
-            <p>
-              Unified Branding Experts (&ldquo;we&rdquo;, &ldquo;our&rdquo;, &ldquo;us&rdquo;) collects information you provide directly to us when you fill out our project inquiry form, subscribe to our insights newsletter, or contact us by phone ({COMPANY_INFO.phone}) or email ({COMPANY_INFO.email}).
-            </p>
-          </section>
-
-          <section className="space-y-2">
-            <h2 className="font-display text-xl font-bold text-[#161616]">2. How We Use Information</h2>
-            <p>
-              We use the information we collect to communicate with you regarding your project inquiries, deliver client services, improve our website performance, and provide technical and strategic updates.
-            </p>
-          </section>
-
-          <section className="space-y-2">
-            <h2 className="font-display text-xl font-bold text-[#161616]">3. Data Security & Storage</h2>
-            <p>
-              We implement industry-standard encryption and security protocols to safeguard your personal and business data against unauthorized access, loss, or misuse.
-            </p>
-          </section>
-
-          <section className="space-y-2">
-            <h2 className="font-display text-xl font-bold text-[#161616]">4. Contact Us</h2>
-            <p>
-              If you have questions about this policy, please reach us directly at{" "}
-              <a href={`mailto:${COMPANY_INFO.email}`} className="text-[#9F8BE7] underline font-medium">
-                {COMPANY_INFO.email}
-              </a>.
-            </p>
-          </section>
+        <div className="space-y-7 text-sm leading-relaxed text-[#303030] sm:text-base">
+          <p>This policy explains how Unified Branding Experts handles information through this website and its inquiry tools. A separate client agreement may cover information processed while we deliver a project.</p>
+          {[
+            ["1. What we receive", "When you contact us or use an inquiry form, we receive the details you choose to submit, such as name, email, phone, company, requested service and project description. The site may also receive ordinary technical information such as device, browser, pages visited, referral source and approximate location derived from an IP address."],
+            ["2. Why we use it", "We use inquiry details to answer requests, prepare a scope, provide service and follow up about your project. Technical and aggregated analytics information helps us understand site use, troubleshoot problems, measure marketing and protect the website. We do not ask you to send payment card details in an inquiry form."],
+            ["3. Forms and email delivery", "A form submission is processed by our website and our transactional email provider so we can receive your inquiry and send a confirmation. Do not include passwords, payment card numbers or sensitive personal records in an open text field."],
+            ["4. Analytics, advertising and cookies", "The site uses Google Tag Manager and Google Analytics to measure traffic and meaningful interactions. Advertising tags, including Meta Pixel where configured, may measure campaign performance. These providers may set cookies or use similar technologies under their own policies. Browser controls may let you limit cookies, but some site functions can be affected."],
+            ["5. Service providers and sharing", "We share information with providers needed to host the website, deliver inquiry emails, operate analytics and advertising tools, and support requested projects. We do not publish the contents of private inquiries. A service provider may process information in another country; its own privacy terms and the applicable agreement govern its handling."],
+            ["6. Storage and security", "We use access controls and operational measures appropriate to the information we handle. No internet transmission or storage method can be guaranteed completely secure. We retain inquiry records only as needed for communication, project administration, legal obligations or dispute resolution, and review deletion requests case by case."],
+            ["7. Your choices", "You can ask us to correct or delete information you submitted, or stop nonessential follow-up messages, by emailing us. We may need to retain some information where required for legal, billing or security reasons. You can also use your browser settings to manage cookies."],
+            ["8. External links and updates", "Links to Shopify, marketplaces and other sites lead to services with their own privacy practices. We may revise this policy when our practices change and will update the date shown above."],
+          ].map(([heading, body]) => <section key={heading} className="space-y-2"><h2 className="font-display text-xl font-bold text-[#161616]">{heading}</h2><p>{body}</p></section>)}
+          <p>Privacy questions and requests: <a href={`mailto:${COMPANY_INFO.email}`} className="font-semibold text-[#6049B0] underline">{COMPANY_INFO.email}</a> or call {COMPANY_INFO.phone}.</p>
         </div>
       </div>
     </div>

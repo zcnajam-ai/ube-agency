@@ -9,6 +9,7 @@ import SchemaOrg from "@/components/seo/SchemaOrg";
 import AnalyticsScripts from "@/components/analytics/AnalyticsScripts";
 import AnalyticsEventBridge from "@/components/analytics/AnalyticsEventBridge";
 import SiteAmbientBackground from "@/components/common/SiteAmbientBackground";
+import SectionProgressNavigator from "@/components/common/SectionProgressNavigator";
 import { COMPANY_INFO } from "@/data/company";
 
 const Footer = dynamic(() => import("@/components/common/Footer"));
@@ -149,6 +150,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
           {/* Monolithic Footer */}
           <Footer />
+          <SectionProgressNavigator />
 
           {/* Interactive Project Inquiry Modal with Overlay Scroll */}
           <ClientProjectModal />

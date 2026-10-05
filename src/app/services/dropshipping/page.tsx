@@ -1,6 +1,6 @@
 import RelatedServiceLinks from "@/components/services/RelatedServiceLinks";
 import { SHOPIFY_SETUP_START_PRICE } from "@/data/commerce-pricing";
-import { PlatformBadgeRow } from "@/components/common/PlatformMark";
+import { PlatformBadgeRow, PlatformMark } from "@/components/common/PlatformMark";
 import React from "react";
 import Image from "next/image";
 import StoreManagementLink from "@/components/services/StoreManagementLink";
@@ -9,8 +9,7 @@ import { Metadata } from "next";
 import {
   Sparkles,
   ArrowUpRight,
-  CheckCircle2,
-  HelpCircle,
+  HelpCircle, Store, LayoutGrid, PlugZap, PackageCheck, Route, MailCheck, CreditCard, SearchCheck, ShoppingBag, Boxes, Truck,
 } from "lucide-react";
 import ServiceProjectModalTrigger from "@/components/services/ServiceProjectModalTrigger";
 
@@ -184,14 +183,14 @@ export default function DropshippingServicePage() {
   };
 
   const deliverables = [
-    { title: "Shopify 2.0 Storefront", desc: "Customized responsive theme with clean homepage, product pages, and cart drawer." },
-    { title: "Product Catalog & Collections", desc: "Organized categories, variant structuring, and initial imported product listings." },
-    { title: "Supplier Integrations", desc: "API connection with DSers, CJ Dropshipping, Zendrop, or private supplier feeds." },
-    { title: "Inventory & Price Sync", desc: "Automated stock level tracking and margin price updates from suppliers." },
-    { title: "Automated Order Routing", desc: "One-click or automatic order forwarding to supplier fulfillment systems." },
-    { title: "Tracking & Customer Emails", desc: "Automated tracking number synchronization and customer shipping notifications." },
-    { title: "Payment & Shipping Config", desc: "Shopify Payments, PayPal, multi-currency settings, and shipping rate rules." },
-    { title: "Basic SEO & Analytics", desc: "Semantic HTML, meta tags, Google Analytics 4, and search console indexing setup." },
+    { title: "Shopify 2.0 Storefront", icon: Store, desc: "Customized responsive theme with clean homepage, product pages, and cart drawer." },
+    { title: "Product Catalog & Collections", icon: LayoutGrid, desc: "Organized categories, variant structuring, and initial imported product listings." },
+    { title: "Supplier Integrations", icon: PlugZap, desc: "API connection with DSers, CJ Dropshipping, Zendrop, or private supplier feeds." },
+    { title: "Inventory & Price Sync", icon: PackageCheck, desc: "Automated stock level tracking and margin price updates from suppliers." },
+    { title: "Automated Order Routing", icon: Route, desc: "One-click or automatic order forwarding to supplier fulfillment systems." },
+    { title: "Tracking & Customer Emails", icon: MailCheck, desc: "Automated tracking number synchronization and customer shipping notifications." },
+    { title: "Payment & Shipping Config", icon: CreditCard, desc: "Shopify Payments, PayPal, multi-currency settings, and shipping rate rules." },
+    { title: "Basic SEO & Analytics", icon: SearchCheck, desc: "Semantic HTML, meta tags, Google Analytics 4, and search console indexing setup." },
   ];
 
   const supplierOptions = [
@@ -287,17 +286,17 @@ export default function DropshippingServicePage() {
             </div>
 
             <div className="space-y-3 font-mono-num text-xs">
-              <div className="p-3.5 rounded-2xl bg-[#FAF7F6] border border-[#E0DDDB] flex items-center justify-between">
-                <span className="text-[#585858]">1. Customer Order</span>
-                <span className="font-bold text-[#161616]">Shopify Storefront</span>
+              <div className="group p-3.5 rounded-2xl bg-[#FAF7F6] border border-[#E0DDDB] flex flex-wrap items-center justify-between gap-2 transition-transform hover:translate-x-1 motion-reduce:transform-none">
+                <span className="flex items-center gap-2 text-[#414141]"><ShoppingBag className="h-5 w-5 text-[#6049B0]" />1. Customer order</span>
+                <span className="flex items-center gap-2 font-bold text-[#161616]"><PlatformMark platform="shopify" size={24} decorative />Shopify storefront</span>
               </div>
-              <div className="p-3.5 rounded-2xl bg-[#FAF7F6] border border-[#E0DDDB] flex items-center justify-between">
-                <span className="text-[#585858]">2. Supplier Route</span>
-                <span className="font-bold text-[#9F8BE7]">DSers / CJ / Zendrop</span>
+              <div className="group p-3.5 rounded-2xl bg-[#FAF7F6] border border-[#E0DDDB] flex flex-wrap items-center justify-between gap-2 transition-transform hover:translate-x-1 motion-reduce:transform-none">
+                <span className="flex items-center gap-2 text-[#414141]"><Boxes className="h-5 w-5 text-[#6049B0]" />2. Supplier route</span>
+                <span className="font-bold text-[#6049B0]">DSers / CJ / Zendrop</span>
               </div>
-              <div className="p-3.5 rounded-2xl bg-[#FAF7F6] border border-[#E0DDDB] flex items-center justify-between">
-                <span className="text-[#585858]">3. Dispatch &amp; Sync</span>
-                <span className="font-bold text-emerald-700">Auto Tracking Update</span>
+              <div className="group p-3.5 rounded-2xl bg-[#FAF7F6] border border-[#E0DDDB] flex flex-wrap items-center justify-between gap-2 transition-transform hover:translate-x-1 motion-reduce:transform-none">
+                <span className="flex items-center gap-2 text-[#414141]"><Truck className="h-5 w-5 text-[#6049B0]" />3. Dispatch &amp; sync</span>
+                <span className="font-bold text-emerald-700">Tracking update</span>
               </div>
             </div>
 
@@ -406,9 +405,9 @@ export default function DropshippingServicePage() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
           {deliverables.map((item) => (
-            <div key={item.title} className="p-6 rounded-3xl bg-white border border-[#E0DDDB] space-y-2 shadow-xs">
-              <div className="w-8 h-8 rounded-xl bg-[#9F8BE7]/15 flex items-center justify-center text-[#9F8BE7]">
-                <CheckCircle2 className="w-4 h-4" />
+            <div key={item.title} className="group p-6 rounded-3xl bg-white border border-[#E0DDDB] space-y-2 shadow-xs transition-[transform,box-shadow] hover:-translate-y-1 hover:shadow-lg motion-reduce:transform-none">
+              <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-[#E8DDFF] via-white to-[#C1F2E3] border border-[#D5C4F4] shadow-[3px_5px_0_#D8CDF0] flex items-center justify-center text-[#6244A0] transition-transform group-hover:-rotate-6 motion-reduce:transform-none">
+                <item.icon className="w-6 h-6" aria-hidden="true" />
               </div>
               <h3 className="font-display text-base font-bold text-[#161616] pt-1">
                 {item.title}
@@ -489,12 +488,12 @@ export default function DropshippingServicePage() {
           <p className="font-body text-base leading-relaxed text-[#414141]">A supplier being willing to ship does not mean a marketplace permits the product or the fulfillment arrangement. We decide which channels match the product, ownership documents, shipping ability and brand assets before creating listings.</p>
         </div>
         <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
-          <div><h3 className="font-display text-lg font-bold text-[#161616]">Shopify storefront</h3><p className="mt-2 font-body text-sm leading-relaxed text-[#585858]">Your owned storefront gives you control over design, collections, content, customer journey and approved supplier apps. We plan product pages, checkout, shipping policies, email flows, analytics and feeds. <Link href="/shopify" className="font-semibold text-[#6B4BA7] underline underline-offset-4">Explore Shopify development.</Link></p></div>
-          <div><h3 className="font-display text-lg font-bold text-[#161616]">TikTok Shop</h3><p className="mt-2 font-body text-sm leading-relaxed text-[#585858]">Product eligibility, seller verification, creator content, live shopping and fulfillment timing affect the plan. We can scope Seller Center setup, catalog sync, creative, affiliates and ads, then monitor dispatch and returns. <Link href="/tiktok-shop" className="font-semibold text-[#6B4BA7] underline underline-offset-4">See TikTok Shop services.</Link></p></div>
-          <div><h3 className="font-display text-lg font-bold text-[#161616]">Amazon</h3><p className="mt-2 font-body text-sm leading-relaxed text-[#585858]">We assess seller eligibility, listing rights, product identifiers, category requirements and fulfillment. Under <a href="https://sell.amazon.com/learn/what-is-dropshipping" className="font-semibold text-[#6B4BA7] underline underline-offset-4">Amazon&apos;s dropshipping guidance</a>, the merchant must remain the seller of record. Retailer-branded packing slips or another seller&apos;s details can create policy problems. <Link href="/amazon" className="font-semibold text-[#6B4BA7] underline underline-offset-4">Amazon marketplace support.</Link></p></div>
-          <div><h3 className="font-display text-lg font-bold text-[#161616]">eBay</h3><p className="mt-2 font-body text-sm leading-relaxed text-[#585858]">We can plan wholesale-supplier listings, inventory and shipping rules. <a href="https://www.ebay.com/help/selling/listings/dropshipping?id=4176" className="font-semibold text-[#6B4BA7] underline underline-offset-4">eBay permits wholesale-supplier dropshipping</a>, but buying from another retailer or marketplace only after an eBay sale is not allowed. <Link href="/ebay" className="font-semibold text-[#6B4BA7] underline underline-offset-4">eBay setup and management.</Link></p></div>
-          <div><h3 className="font-display text-lg font-bold text-[#161616]">Etsy</h3><p className="mt-2 font-body text-sm leading-relaxed text-[#585858]">Etsy is a fit for eligible original designs, custom goods and qualifying production-partner arrangements, not a general resale catalog. <a href="https://help.etsy.com/hc/en-us/articles/23948763872151-Does-Etsy-Allow-Drop-Shipping-or-Reselling" className="font-semibold text-[#6B4BA7] underline underline-offset-4">Etsy&apos;s policy</a> restricts ordinary dropshipping and reselling. We check creative ownership and partner disclosure before recommending Etsy. <Link href="/services/etsy-shop-setup" className="font-semibold text-[#6B4BA7] underline underline-offset-4">Etsy shop setup.</Link></p></div>
-          <div><h3 className="font-display text-lg font-bold text-[#161616]">Walmart Marketplace</h3><p className="mt-2 font-body text-sm leading-relaxed text-[#585858]">Seller approval, product compliance, reliable domestic delivery, packaging and tracking determine whether Walmart is appropriate. We evaluate fulfillment against <a href="https://marketplacelearn.walmart.com/guides/Policies%20%26%20standards/Performance/Seller-performance-standards" className="font-semibold text-[#6B4BA7] underline underline-offset-4">Walmart&apos;s seller standards</a> before listing. <Link href="/walmart-marketplace" className="font-semibold text-[#6B4BA7] underline underline-offset-4">Walmart marketplace support.</Link></p></div>
+          <div className="rounded-2xl border border-[#E0DDDB] bg-[#FAF7F6] p-5 transition-transform hover:-translate-y-1 motion-reduce:transform-none"><PlatformMark platform="shopify" size={36} decorative /><h3 className="mt-3 font-display text-lg font-bold text-[#161616]">Shopify storefront</h3><p className="mt-2 font-body text-sm leading-relaxed text-[#585858]">Your owned storefront gives you control over design, collections, content, customer journey and approved supplier apps. We plan product pages, checkout, shipping policies, email flows, analytics and feeds. <Link href="/shopify" className="font-semibold text-[#6B4BA7] underline underline-offset-4">Explore Shopify development.</Link></p></div>
+          <div className="rounded-2xl border border-[#E0DDDB] bg-[#FAF7F6] p-5 transition-transform hover:-translate-y-1 motion-reduce:transform-none"><PlatformMark platform="tiktok" size={36} decorative /><h3 className="mt-3 font-display text-lg font-bold text-[#161616]">TikTok Shop</h3><p className="mt-2 font-body text-sm leading-relaxed text-[#585858]">Product eligibility, seller verification, creator content, live shopping and fulfillment timing affect the plan. We can scope Seller Center setup, catalog sync, creative, affiliates and ads, then monitor dispatch and returns. <Link href="/tiktok-shop" className="font-semibold text-[#6B4BA7] underline underline-offset-4">See TikTok Shop services.</Link></p></div>
+          <div className="rounded-2xl border border-[#E0DDDB] bg-[#FAF7F6] p-5 transition-transform hover:-translate-y-1 motion-reduce:transform-none"><PlatformMark platform="amazon" size={36} decorative /><h3 className="mt-3 font-display text-lg font-bold text-[#161616]">Amazon</h3><p className="mt-2 font-body text-sm leading-relaxed text-[#585858]">We assess seller eligibility, listing rights, product identifiers, category requirements and fulfillment. Under <a href="https://sell.amazon.com/learn/what-is-dropshipping" className="font-semibold text-[#6B4BA7] underline underline-offset-4">Amazon&apos;s dropshipping guidance</a>, the merchant must remain the seller of record. Retailer-branded packing slips or another seller&apos;s details can create policy problems. <Link href="/amazon" className="font-semibold text-[#6B4BA7] underline underline-offset-4">Amazon marketplace support.</Link></p></div>
+          <div className="rounded-2xl border border-[#E0DDDB] bg-[#FAF7F6] p-5 transition-transform hover:-translate-y-1 motion-reduce:transform-none"><PlatformMark platform="ebay" size={36} decorative /><h3 className="mt-3 font-display text-lg font-bold text-[#161616]">eBay</h3><p className="mt-2 font-body text-sm leading-relaxed text-[#585858]">We can plan wholesale-supplier listings, inventory and shipping rules. <a href="https://www.ebay.com/help/selling/listings/dropshipping?id=4176" className="font-semibold text-[#6B4BA7] underline underline-offset-4">eBay permits wholesale-supplier dropshipping</a>, but buying from another retailer or marketplace only after an eBay sale is not allowed. <Link href="/ebay" className="font-semibold text-[#6B4BA7] underline underline-offset-4">eBay setup and management.</Link></p></div>
+          <div className="rounded-2xl border border-[#E0DDDB] bg-[#FAF7F6] p-5 transition-transform hover:-translate-y-1 motion-reduce:transform-none"><PlatformMark platform="etsy" size={36} decorative /><h3 className="mt-3 font-display text-lg font-bold text-[#161616]">Etsy</h3><p className="mt-2 font-body text-sm leading-relaxed text-[#585858]">Etsy is a fit for eligible original designs, custom goods and qualifying production-partner arrangements, not a general resale catalog. <a href="https://help.etsy.com/hc/en-us/articles/23948763872151-Does-Etsy-Allow-Drop-Shipping-or-Reselling" className="font-semibold text-[#6B4BA7] underline underline-offset-4">Etsy&apos;s policy</a> restricts ordinary dropshipping and reselling. We check creative ownership and partner disclosure before recommending Etsy. <Link href="/services/etsy-shop-setup" className="font-semibold text-[#6B4BA7] underline underline-offset-4">Etsy shop setup.</Link></p></div>
+          <div className="rounded-2xl border border-[#E0DDDB] bg-[#FAF7F6] p-5 transition-transform hover:-translate-y-1 motion-reduce:transform-none"><PlatformMark platform="walmart" size={36} decorative /><h3 className="mt-3 font-display text-lg font-bold text-[#161616]">Walmart Marketplace</h3><p className="mt-2 font-body text-sm leading-relaxed text-[#585858]">Seller approval, product compliance, reliable domestic delivery, packaging and tracking determine whether Walmart is appropriate. We evaluate fulfillment against <a href="https://marketplacelearn.walmart.com/guides/Policies%20%26%20standards/Performance/Seller-performance-standards" className="font-semibold text-[#6B4BA7] underline underline-offset-4">Walmart&apos;s seller standards</a> before listing. <Link href="/walmart-marketplace" className="font-semibold text-[#6B4BA7] underline underline-offset-4">Walmart marketplace support.</Link></p></div>
         </div>
       </section>
 

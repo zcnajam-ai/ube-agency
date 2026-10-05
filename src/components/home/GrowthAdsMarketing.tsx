@@ -4,7 +4,6 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { ArrowUpRight, CheckCircle2 } from "lucide-react";
 import { useScroll } from "@/components/providers/SmoothScrollProvider";
-import InteractiveMedia from "../common/InteractiveMedia";
 import TikTokMinimalVisual from "../common/TikTokMinimalVisual";
 import BackgroundGrid from "../common/BackgroundGrid";
 import PurpleGlowField from "../common/PurpleGlowField";
@@ -12,7 +11,31 @@ import OversizedTypography from "../common/OversizedTypography";
 import {
   Heading3DGrowth,
 } from "../common/Brand3DIcons";
-import { PlatformMark } from "../common/PlatformMark";
+import { PlatformMark, type PlatformName } from "../common/PlatformMark";
+
+const channelMarks: Record<"meta" | "google", { marks: { name: string; platform: PlatformName }[]; label: string }> = {
+  meta: { label: "ONE CONNECTED CAMPAIGN", marks: [{ name: "Meta", platform: "meta" }, { name: "Facebook", platform: "facebook" }, { name: "Instagram", platform: "instagram" }] },
+  google: { label: "SEARCH TO STORE", marks: [{ name: "Google Ads", platform: "googleads" }, { name: "Google", platform: "google" }] },
+};
+
+function ChannelVisual({ channel }: { channel: "meta" | "google" }) {
+  const visual = channelMarks[channel];
+  return (
+    <div className="relative isolate flex min-h-[280px] flex-col justify-center overflow-hidden rounded-[1.75rem] border border-[#D9D3E3] bg-[radial-gradient(circle_at_80%_20%,#E6DDFB_0%,#FAF7F6_55%,#FFFFFF_100%)] p-6 sm:min-h-[340px] sm:p-8" aria-label={`${visual.marks.map((mark) => mark.name).join(", ")} platform marks`}>
+      <div className="pointer-events-none absolute -right-10 -top-10 h-48 w-48 rounded-full border border-[#9F8BE7]/30" aria-hidden="true" />
+      <p className="relative text-xs font-bold tracking-[0.16em] text-[#6B4BA7]">{visual.label}</p>
+      <div className="relative mt-8 flex flex-wrap items-center justify-center gap-4 sm:gap-6">
+        {visual.marks.map((mark, index) => (
+          <div key={mark.platform} className={`group flex w-24 flex-col items-center gap-3 rounded-3xl border border-[#E0DDDB] bg-white p-4 shadow-md transition-all duration-300 hover:-translate-y-2 hover:rotate-0 hover:shadow-lg focus-within:shadow-lg motion-reduce:transform-none motion-reduce:transition-none sm:w-28 ${index % 2 === 0 ? "-rotate-3" : "rotate-3"}`}>
+            <PlatformMark platform={mark.platform} size={52} decorative />
+            <span className="text-center font-display text-xs font-bold text-[#161616]">{mark.name}</span>
+          </div>
+        ))}
+      </div>
+      <p className="relative mt-8 text-center text-xs font-medium text-[#585858]">Campaign structure · Creative · Measurement</p>
+    </div>
+  );
+}
 
 export default function GrowthAdsMarketing() {
   const { openProjectModal } = useScroll();
@@ -24,7 +47,6 @@ export default function GrowthAdsMarketing() {
       tagline: "Turn Short-Form Content into Direct Sales & Brand Discovery",
       badge: "TIKTOK COMMERCE & ADS",
       packageUrl: "/tiktok-marketing-packages",
-      image: "/images/service-icons/tiktok-shop.webp",
       desc: "We build structured TikTok content strategies, video creative frameworks, creator whitelisting, and TikTok Shop storefront integrations designed to connect with engaged buyers.",
       icon: <PlatformMark platform="tiktok" size={24} decorative />,
       deliverables: [
@@ -40,7 +62,6 @@ export default function GrowthAdsMarketing() {
       tagline: "Visual Advertising & Conversion API Funnels",
       badge: "META AD MANAGEMENT",
       packageUrl: "/digital-marketing-packages",
-      image: "/images/service-icons/paid-advertising.webp",
       desc: "We architect full-funnel Meta advertising campaigns with structured audience segmentation, visual creative variations, catalog sales ads, and Meta Conversions API (CAPI) server-side tracking.",
       icon: <span className="inline-flex items-center gap-1"><PlatformMark platform="facebook" size={20} decorative /><PlatformMark platform="instagram" size={20} decorative /></span>,
       deliverables: [
@@ -56,7 +77,6 @@ export default function GrowthAdsMarketing() {
       tagline: "Reach High-Intent Customers Actively Searching for Your Products",
       badge: "GOOGLE SEARCH & SHOPPING",
       packageUrl: "/digital-marketing-packages",
-      image: "/images/service-icons/paid-advertising.webp",
       desc: "We build structured Google Search campaigns, Google Merchant Center Shopping feeds, and tailored Performance Max asset groups synchronized with transparent performance reporting.",
       icon: <PlatformMark platform="googleads" size={24} decorative />,
       deliverables: [
@@ -202,13 +222,7 @@ export default function GrowthAdsMarketing() {
             {activeTab === "tiktok" ? (
               <TikTokMinimalVisual />
             ) : (
-              <InteractiveMedia
-                key={current.image}
-                src={current.image}
-                alt={current.title}
-                aspectRatio="aspect-[4/3]"
-                badgeText={current.badge}
-              />
+              <ChannelVisual channel={activeTab} />
             )}
           </div>
         </div>

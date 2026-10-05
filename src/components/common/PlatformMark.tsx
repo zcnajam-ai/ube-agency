@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { GoogleOfficialIcon } from "./OfficialBrandLogos";
 
-export type PlatformName = "shopify" | "amazon" | "etsy" | "ebay" | "tiktok" | "facebook" | "instagram" | "google" | "googleads" | "walmart";
+export type PlatformName = "shopify" | "amazon" | "etsy" | "ebay" | "tiktok" | "facebook" | "instagram" | "meta" | "google" | "googleads" | "walmart";
 
 const platforms: Record<PlatformName, { name: string; source: string }> = {
   shopify: { name: "Shopify", source: "/images/platform-marks/shopify.svg" },
@@ -11,6 +11,7 @@ const platforms: Record<PlatformName, { name: string; source: string }> = {
   tiktok: { name: "TikTok", source: "/images/platform-marks/tiktok.svg" },
   facebook: { name: "Facebook", source: "/images/platform-marks/facebook.svg" },
   instagram: { name: "Instagram", source: "/images/platform-marks/instagram.svg" },
+  meta: { name: "Meta", source: "/images/platform-marks/meta.svg" },
   google: { name: "Google", source: "/images/platform-marks/google.svg" },
   googleads: { name: "Google Ads", source: "/images/platform-marks/googleads.svg" },
   walmart: { name: "Walmart", source: "https://commons.wikimedia.org/wiki/Special:FilePath/Walmart_spark_(2025).svg" },

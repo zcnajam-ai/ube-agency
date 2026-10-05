@@ -293,3 +293,10 @@
     scroll-behavior: auto !important;
   }
 }
+@keyframes ube-logo-float { 0%, 100% { transform: translateY(4px) rotateY(-8deg) rotateX(4deg); } 50% { transform: translateY(-10px) rotateY(8deg) rotateX(-4deg); } }
+@keyframes ube-logo-orbit { to { transform: rotate(360deg); } }
+.ube-logo-stage { perspective: 800px; }
+.ube-logo-float { animation: ube-logo-float 7s ease-in-out infinite; transform-style: preserve-3d; }
+.ube-logo-orbit { animation: ube-logo-orbit 24s linear infinite; }
+.ube-logo-orbit-reverse { animation-direction: reverse; animation-duration: 33s; }
+@media (prefers-reduced-motion: reduce) { .ube-logo-float, .ube-logo-orbit { animation: none; } }
