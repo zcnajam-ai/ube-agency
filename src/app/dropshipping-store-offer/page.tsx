@@ -20,9 +20,11 @@ const plans = [
 
 export default function DropshippingStoreOfferPage() {
   const schema = { "@context": "https://schema.org", "@type": "Service", name: "Dropshipping store setup offer", url, provider: { "@id": "https://unifiedbrandingexperts.com/#organization" }, offers: plans.map((plan) => ({ "@type": "Offer", name: `${plan.name} store setup`, price: plan.price.slice(1), priceCurrency: "USD", url })) };
+  const breadcrumb = { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [{ "@type": "ListItem", position: 1, name: "Home", item: "https://unifiedbrandingexperts.com/" }, { "@type": "ListItem", position: 2, name: "Store setup offer", item: url }] };
   return (
     <div className="mx-auto max-w-7xl space-y-16 px-4 pb-24 pt-32 sm:px-6 md:px-12">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
       <nav aria-label="Breadcrumb" className="text-sm"><Link href="/" className="underline">Home</Link> / Store setup offer</nav>
       <section className="grid items-center gap-8 lg:grid-cols-2">
         <div className="space-y-6">
