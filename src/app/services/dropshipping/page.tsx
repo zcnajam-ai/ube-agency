@@ -2,6 +2,7 @@ import RelatedServiceLinks from "@/components/services/RelatedServiceLinks";
 import { SHOPIFY_SETUP_START_PRICE } from "@/data/commerce-pricing";
 import { PlatformBadgeRow } from "@/components/common/PlatformMark";
 import React from "react";
+import Image from "next/image";
 import StoreManagementLink from "@/components/services/StoreManagementLink";
 import Link from "next/link";
 import { Metadata } from "next";
@@ -10,7 +11,6 @@ import {
   ArrowUpRight,
   CheckCircle2,
   HelpCircle,
-  Truck,
 } from "lucide-react";
 import ServiceProjectModalTrigger from "@/components/services/ServiceProjectModalTrigger";
 
@@ -195,16 +195,16 @@ export default function DropshippingServicePage() {
   ];
 
   const supplierOptions = [
-    { name: "Shopify Collective", fit: "Eligible Shopify-to-Shopify brand partnerships and direct supplier fulfillment.", check: "Retailer and supplier eligibility, catalog permissions and settlement." },
-    { name: "DropCommerce", fit: "Shortlisting suppliers that ship from the U.S. and Canada.", check: "Actual warehouse, category fit, wholesale terms and delivery promise." },
-    { name: "Spocket", fit: "Sourcing across U.S. and European supplier catalogs.", check: "Product-level origin, stock, branded invoicing and returns." },
-    { name: "Syncee", fit: "Catalog discovery from U.S. and international suppliers.", check: "Supplier approval, feed accuracy and price or inventory sync." },
-    { name: "Zendrop", fit: "Supplier catalog, order flow and selected U.S. fulfillment options.", check: "Warehouse location and processing time for each product." },
-    { name: "Trendsi", fit: "Fashion and accessories with U.S. and overseas sourcing options.", check: "Product eligibility, shipping source, returns and content rights." },
-    { name: "Printify", fit: "Original-design print-on-demand products across print providers.", check: "Selected provider location, sample quality and production time." },
-    { name: "Printful", fit: "Print-on-demand, custom branding options and fulfillment.", check: "Fulfillment location, packaging availability and unit economics." },
-    { name: "CJ Dropshipping", fit: "Broad product sourcing and selected U.S. warehouse inventory.", check: "Stock location, shipping method and branded-product lead time." },
-    { name: "DSers", fit: "Supplier and order management for eligible AliExpress sourcing.", check: "Vendor reliability, actual shipping origin and customer promise." },
+    { name: "Shopify Collective", logo: "/images/supplier-marks/shopify-collective-card.webp", url: "https://www.shopify.com/collective", fit: "Eligible Shopify-to-Shopify brand partnerships and direct supplier fulfillment.", check: "Retailer and supplier eligibility, catalog permissions and settlement." },
+    { name: "DropCommerce", logo: "/images/supplier-marks/dropcommerce-card.webp", url: "https://www.dropcommerce.co/", fit: "Shortlisting suppliers that ship from the U.S. and Canada.", check: "Actual warehouse, category fit, wholesale terms and delivery promise." },
+    { name: "Spocket", logo: "/images/supplier-marks/spocket-card.webp", url: "https://www.spocket.co/", fit: "Sourcing across U.S. and European supplier catalogs.", check: "Product-level origin, stock, branded invoicing and returns." },
+    { name: "Syncee", logo: "/images/supplier-marks/syncee-card.webp", url: "https://syncee.com/", fit: "Catalog discovery from U.S. and international suppliers.", check: "Supplier approval, feed accuracy and price or inventory sync." },
+    { name: "Zendrop", logo: "/images/supplier-marks/zendrop-card.webp", url: "https://www.zendrop.com/", fit: "Supplier catalog, order flow and selected U.S. fulfillment options.", check: "Warehouse location and processing time for each product." },
+    { name: "Trendsi", logo: "/images/supplier-marks/trendsi-card.webp", url: "https://www.trendsi.com/", fit: "Fashion and accessories with U.S. and overseas sourcing options.", check: "Product eligibility, shipping source, returns and content rights." },
+    { name: "Printify", logo: "/images/supplier-marks/printify-card.webp", url: "https://printify.com/", fit: "Original-design print-on-demand products across print providers.", check: "Selected provider location, sample quality and production time." },
+    { name: "Printful", logo: "/images/supplier-marks/printful-card.webp", url: "https://www.printful.com/", fit: "Print-on-demand, custom branding options and fulfillment.", check: "Fulfillment location, packaging availability and unit economics." },
+    { name: "CJ Dropshipping", logo: "/images/supplier-marks/cj-dropshipping-card.webp", url: "https://cjdropshipping.com/", fit: "Broad product sourcing and selected U.S. warehouse inventory.", check: "Stock location, shipping method and branded-product lead time." },
+    { name: "DSers", logo: "/images/supplier-marks/dsers-card.webp", url: "https://www.dsers.com/", fit: "Supplier and order management for eligible AliExpress sourcing.", check: "Vendor reliability, actual shipping origin and customer promise." },
   ];
 
   return (
@@ -467,12 +467,17 @@ export default function DropshippingServicePage() {
         </div>
         <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-5">
           {supplierOptions.map((option) => (
-            <div key={option.name} className="min-w-0 rounded-2xl border border-[#E0DDDB] bg-white p-5 shadow-xs">
-              <Truck className="h-5 w-5 text-[#6B4BA7]" aria-hidden="true" />
+            <a key={option.name} href={option.url} target="_blank" rel="noopener noreferrer" aria-label={`Explore ${option.name} on its website (opens in a new tab)`} className="group block min-w-0 rounded-2xl border border-[#E0DDDB] bg-white p-5 shadow-xs transition-all duration-300 hover:-translate-y-1 hover:border-[#9F8BE7] hover:shadow-md focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#6B4BA7] motion-reduce:transform-none motion-reduce:transition-none">
+              <div className="flex items-start justify-between gap-3">
+                <span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl border border-[#E0DDDB] bg-[#FAF7F6] p-2 transition-transform duration-300 group-hover:scale-105 motion-reduce:transform-none">
+                  <Image src={option.logo} alt="" width={40} height={40} sizes="40px" className="h-10 w-10 object-contain" />
+                </span>
+                <ArrowUpRight className="h-4 w-4 shrink-0 text-[#6B4BA7] transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 motion-reduce:transform-none" aria-hidden="true" />
+              </div>
               <h3 className="mt-3 font-display text-lg font-bold text-[#161616]">{option.name}</h3>
               <p className="mt-2 font-body text-sm leading-relaxed text-[#414141]">{option.fit}</p>
               <p className="mt-3 border-t border-[#E0DDDB] pt-3 font-body text-xs leading-relaxed text-[#585858]"><strong className="text-[#161616]">We verify:</strong> {option.check}</p>
-            </div>
+            </a>
           ))}
         </div>
         <p className="font-body text-sm leading-relaxed text-[#585858]">Shopify Collective has <a className="font-semibold text-[#6B4BA7] underline underline-offset-4" href="https://help.shopify.com/en/manual/online-sales-channels/shopify-collective/retailers/requirements-and-considerations">retailer and supplier requirements</a>. A supplier platform listing is not an endorsement or a claim of a formal UBE partnership.</p>
