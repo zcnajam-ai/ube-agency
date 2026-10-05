@@ -1,4 +1,5 @@
 import RelatedServiceLinks from "@/components/services/RelatedServiceLinks";
+import { PlatformBadgeRow } from "@/components/common/PlatformMark";
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -176,6 +177,7 @@ export default function DigitalMarketingServiceHubPage() {
             <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-[#161616] leading-[1.1]">
               Digital Marketing Services for Search, Social &amp; Paid Growth
             </h1>
+            <PlatformBadgeRow platforms={["googleads", "facebook", "instagram", "tiktok"]} />
 
             <p className="text-sm sm:text-base text-[#585858] font-body leading-relaxed max-w-2xl">
               Scale customer acquisition with structured, data-driven paid marketing campaigns across Google, Meta (Facebook &amp; Instagram), and TikTok. Unified Branding Experts connects ad creative, conversion funnels, and tracking into a high-ROAS marketing engine.

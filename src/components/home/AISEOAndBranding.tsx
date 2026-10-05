@@ -11,7 +11,8 @@ import InteractiveMedia from "../common/InteractiveMedia";
 import BackgroundGrid from "../common/BackgroundGrid";
 import PurpleGlowField from "../common/PurpleGlowField";
 import OversizedTypography from "../common/OversizedTypography";
-import { Google3DIcon, Heading3DSparkle } from "../common/Brand3DIcons";
+import { Heading3DSparkle } from "../common/Brand3DIcons";
+import { PlatformMark } from "../common/PlatformMark";
 
 export default function AISEOAndBranding() {
   return (
@@ -58,7 +59,7 @@ export default function AISEOAndBranding() {
             <div className="space-y-6 relative z-10">
               <div className="flex items-center justify-between">
                 <div className="w-10 h-10 rounded-2xl bg-white/10 border border-white/20 flex items-center justify-center">
-                  <Google3DIcon size={24} />
+                  <PlatformMark platform="google" size={24} decorative />
                 </div>
                 <span className="text-xs font-mono-num px-3 py-1 rounded-full bg-[#DDF160]/15 text-[#DDF160] border border-[#DDF160]/30 font-bold">
                   PLANS FROM $349

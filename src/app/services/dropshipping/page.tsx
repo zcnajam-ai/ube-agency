@@ -1,5 +1,6 @@
 import RelatedServiceLinks from "@/components/services/RelatedServiceLinks";
 import { SHOPIFY_SETUP_START_PRICE } from "@/data/commerce-pricing";
+import { PlatformBadgeRow } from "@/components/common/PlatformMark";
 import React from "react";
 import StoreManagementLink from "@/components/services/StoreManagementLink";
 import Link from "next/link";
@@ -231,8 +232,9 @@ export default function DropshippingServicePage() {
           </div>
 
           <h1 className="font-display text-4xl sm:text-6xl font-bold tracking-tight text-[#161616] leading-tight">
-            Dropshipping Store Setup, Product Sourcing &amp; Fulfillment
-          </h1>
+              Dropshipping Store Setup, Product Sourcing &amp; Fulfillment
+            </h1>
+            <PlatformBadgeRow platforms={["shopify", "tiktok", "amazon", "etsy", "ebay"]} />
 
           <p className="text-base sm:text-lg text-[#585858] font-body leading-relaxed max-w-2xl">
             Build a store around products you can actually source and deliver. We connect the storefront, product content, supplier arrangements, order flow and post-launch work in one scoped plan.

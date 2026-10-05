@@ -1,42 +1,22 @@
 import Link from "next/link";
-import Image from "next/image";
 import { ArrowRight, Check, Phone, X } from "lucide-react";
 import type { MarketplaceHub } from "@/data/marketplace-hubs";
+import { PlatformMark, type PlatformName } from "@/components/common/PlatformMark";
 
 const UPDATED = "2026-09-22";
 
-const PLATFORM_VISUALS: Record<MarketplaceHub["slug"], { src: string; alt: string; title: string }> = {
-  shopify: {
-    src: "/images/commerce/shopify-commerce-3d.webp",
-    alt: "3D Shopify storefront system with product catalog and shopping bag",
-    title: "Shopify Store Design and Development System",
-  },
-  "tiktok-shop": {
-    src: "/images/commerce/tiktok-shop-commerce-3d.webp",
-    alt: "3D TikTok Shop mobile storefront with video commerce and product fulfillment",
-    title: "TikTok Shop Setup and Management System",
-  },
-  amazon: {
-    src: "/images/commerce/amazon-marketplace-3d.webp",
-    alt: "3D Amazon marketplace storefront with listing card and fulfillment package",
-    title: "Amazon Marketplace Management System",
-  },
-  "walmart-marketplace": {
-    src: "/images/commerce/walmart-marketplace-3d.webp",
-    alt: "3D Walmart Marketplace storefront with organized catalog and inventory package",
-    title: "Walmart Marketplace Setup and Management System",
-  },
-  ebay: {
-    src: "/images/commerce/ebay-marketplace-3d.webp",
-    alt: "3D eBay marketplace storefront with product tag, auction gavel and shipping package",
-    title: "eBay Store Setup and Management System",
-  },
+const PLATFORM_MARKS: Record<MarketplaceHub["slug"], PlatformName> = {
+  shopify: "shopify",
+  "tiktok-shop": "tiktok",
+  amazon: "amazon",
+  "walmart-marketplace": "walmart",
+  ebay: "ebay",
 };
 
 export default function CommerceHubPage({ hub }: { hub: MarketplaceHub }) {
   const canonical = `https://unifiedbrandingexperts.com/${hub.slug}`;
-  const visual = PLATFORM_VISUALS[hub.slug];
-  const imageUrl = `https://unifiedbrandingexperts.com${visual.src}`;
+  const mark = PLATFORM_MARKS[hub.slug];
+  const imageUrl = `${canonical}/opengraph-image`;
   const toc = [
     ["deliverables", "What we deliver"],
     ["process", "How we work"],
@@ -84,9 +64,9 @@ export default function CommerceHubPage({ hub }: { hub: MarketplaceHub }) {
         "@id": `${canonical}#primaryimage`,
         url: imageUrl,
         contentUrl: imageUrl,
-        width: 768,
-        height: 768,
-        caption: visual.alt,
+        width: 1200,
+        height: 630,
+        caption: hub.title,
         representativeOfPage: true,
       },
       {
@@ -145,21 +125,11 @@ export default function CommerceHubPage({ hub }: { hub: MarketplaceHub }) {
             <div className="group bg-[#161616] text-white p-6 sm:p-8 lg:p-9 flex flex-col justify-between overflow-hidden">
               <div>
                 <p className="font-mono-num text-xs tracking-[0.2em] text-[#b4a3f7]">TRANSPARENT SCOPE</p>
-                <figure className="relative mx-auto mt-2 w-full max-w-[260px] sm:max-w-[300px] lg:max-w-[320px]">
-                  <div className="absolute inset-[18%] rounded-full bg-[#9F8BE7]/25 blur-3xl transition-opacity duration-500 group-hover:opacity-90" aria-hidden="true" />
-                  <Image
-                    src={visual.src}
-                    alt={visual.alt}
-                    title={visual.title}
-                    width={768}
-                    height={768}
-                    priority
-                    sizes="(max-width: 640px) 72vw, (max-width: 1024px) 42vw, 320px"
-                    className="relative h-auto w-full drop-shadow-[0_22px_28px_rgba(0,0,0,0.32)] transition-transform duration-500 ease-out group-hover:-translate-y-2 group-hover:scale-[1.04] motion-reduce:transform-none motion-reduce:transition-none"
-                  />
-                  <figcaption className="sr-only">{visual.title}</figcaption>
+                <figure className="relative mx-auto mt-6 flex aspect-square w-full max-w-[240px] items-center justify-center rounded-[2.5rem] border border-white/20 bg-white p-8 shadow-lg transition-transform duration-500 group-hover:-translate-y-1 motion-reduce:transform-none">
+                  <PlatformMark platform={mark} size={150} className="max-h-[150px] max-w-[150px] h-auto w-auto" />
+                  <figcaption className="sr-only">{hub.platform} platform mark</figcaption>
                 </figure>
-                <p className="font-display text-center text-sm font-bold text-white/85">{visual.title}</p>
+                <p className="mt-5 font-display text-center text-sm font-bold text-white/85">{hub.platform} commerce services</p>
                 <p className="mt-5 font-display text-3xl font-bold">{hub.pricing.label}</p>
                 <p className="mt-4 text-sm leading-6 text-white/70">{hub.pricing.detail}</p>
               </div>

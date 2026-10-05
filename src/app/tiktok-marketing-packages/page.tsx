@@ -1,4 +1,5 @@
 import React from "react";
+import { PlatformBadgeRow } from "@/components/common/PlatformMark";
 import Link from "next/link";
 import { Metadata } from "next";
 import {
@@ -210,6 +211,7 @@ export default function TikTokMarketingPackagesPage() {
         <h1 className="font-display text-4xl sm:text-6xl font-bold tracking-tight text-[#161616]">
           TikTok Marketing Packages
         </h1>
+        <PlatformBadgeRow platforms={["tiktok"]} className="justify-center" />
 
         <p className="text-xl sm:text-2xl font-display font-medium text-[#303030]">
           Choose the TikTok Plan That Fits Where You Are

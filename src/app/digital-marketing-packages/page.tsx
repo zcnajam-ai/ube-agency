@@ -1,4 +1,5 @@
 import React from "react";
+import { PlatformBadgeRow } from "@/components/common/PlatformMark";
 import Link from "next/link";
 import { Metadata } from "next";
 import {
@@ -140,6 +141,7 @@ export default function DigitalMarketingPackagesPage() {
         <h1 className="font-display text-4xl sm:text-6xl font-bold tracking-tight text-[#161616]">
           Digital Marketing &amp; Paid Ads Packages
         </h1>
+        <PlatformBadgeRow platforms={["googleads", "facebook", "instagram", "tiktok"]} className="justify-center" />
 
         <p className="text-sm sm:text-base text-[#585858] font-body leading-relaxed max-w-2xl mx-auto">
           Scale your customer acquisition with data-backed paid ad campaigns across Meta, TikTok, and Google. Clear monthly management pricing with zero long-term lock-in contracts.

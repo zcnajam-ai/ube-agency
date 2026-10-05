@@ -34,7 +34,7 @@ const SERVICE_VISUALS: Record<
     starting: "From $249/mo",
   },
   "ecommerce-store-setup": {
-    image: "/images/service-icons/shopify-storefront.webp",
+    image: "/images/platform-marks/shopify.svg",
     kicker: "eCommerce Storefronts",
     metrics: "Custom Store Architecture",
     packageUrl: "/web-design-packages",
@@ -42,7 +42,7 @@ const SERVICE_VISUALS: Record<
     starting: `From ${SHOPIFY_SETUP_PRICE_LABEL}`,
   },
   "shopify-development-service": {
-    image: "/images/service-icons/shopify-storefront.webp",
+    image: "/images/platform-marks/shopify.svg",
     kicker: "Shopify Store Setup",
     metrics: "Custom Theme & Integrations",
     packageUrl: "/web-design-packages",
@@ -50,7 +50,7 @@ const SERVICE_VISUALS: Record<
     starting: `From ${SHOPIFY_SETUP_PRICE_LABEL}`,
   },
   "etsy-shop-setup-service": {
-    image: "/images/service-icons/etsy-listings.webp",
+    image: "/images/platform-marks/etsy.svg",
     kicker: "13-Tag Etsy SEO & Launch",
     metrics: "13/13 Optimized Listing Tags",
     packageUrl: "/branding-packages",
@@ -58,7 +58,7 @@ const SERVICE_VISUALS: Record<
     starting: "From $299",
   },
   "tiktok-shop-setup-service": {
-    image: "/images/service-icons/tiktok-shop.webp",
+    image: "/images/platform-marks/tiktok.svg",
     kicker: "Social Commerce & Affiliates",
     metrics: "TikTok Seller & Catalog Sync",
     packageUrl: "/tiktok-marketing-packages",
@@ -98,7 +98,7 @@ const SERVICE_VISUALS: Record<
     starting: "From $349",
   },
   "google-ads": {
-    image: "/images/service-icons/paid-advertising.webp",
+    image: "/images/platform-marks/googleads.svg",
     kicker: "High-Intent Paid Search",
     metrics: "Google Search & Shopping",
     packageUrl: "/digital-marketing-packages",
@@ -114,7 +114,7 @@ const SERVICE_VISUALS: Record<
     starting: "From $299/mo",
   },
   "tiktok-marketing": {
-    image: "/images/service-icons/tiktok-shop.webp",
+    image: "/images/platform-marks/tiktok.svg",
     kicker: "Short-Form Video Ads",
     metrics: "Creative Scripting & Ads",
     packageUrl: "/tiktok-marketing-packages",
@@ -280,7 +280,7 @@ export default function InteractiveServices() {
                   alt={activeService.title}
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"
-                  className="object-contain object-center p-4 sm:p-6 transition-all duration-700 animate-fadeIn"
+                  className={`object-contain object-center ${activeVisual.image.startsWith("/images/platform-marks/") ? "p-16 sm:p-24" : "p-4 sm:p-6"} transition-all duration-700 animate-fadeIn`}
                 />
                 <div className="absolute top-3 left-3 px-3 py-1 rounded-full bg-white/95 backdrop-blur-md border border-[#E0DDDB] text-xs font-mono-num font-bold text-[#161616] shadow-xs">
                   {activeService.shortTitle}

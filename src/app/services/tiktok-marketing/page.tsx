@@ -1,4 +1,5 @@
 import RelatedServiceLinks from "@/components/services/RelatedServiceLinks";
+import { PlatformBadgeRow } from "@/components/common/PlatformMark";
 import React from "react";
 import ServiceSchema from "@/components/seo/ServiceSchema";
 import Link from "next/link";
@@ -165,8 +166,9 @@ export default function TikTokMarketingServicePage() {
           </div>
 
           <h1 className="font-display text-4xl sm:text-6xl font-bold tracking-tight text-[#161616] leading-tight">
-            Turn Scrolls Into Sales on the App Everyone&apos;s Watching.
-          </h1>
+              Turn Scrolls Into Sales on the App Everyone&apos;s Watching.
+            </h1>
+            <PlatformBadgeRow platforms={["tiktok"]} />
 
           <p className="text-base sm:text-lg text-[#585858] font-body leading-relaxed max-w-2xl">
             Your customers are on TikTok right now. Not browsing casually, but watching, saving, and buying. A single video can put a small brand in front of millions overnight. But without the right strategy, your content disappears into the feed and takes your budget with it.

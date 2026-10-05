@@ -1,5 +1,6 @@
 import RelatedServiceLinks from "@/components/services/RelatedServiceLinks";
 import { SHOPIFY_SETUP_PRICE_LABEL, SHOPIFY_SETUP_START_PRICE } from "@/data/commerce-pricing";
+import { PlatformBadgeRow } from "@/components/common/PlatformMark";
 import React from "react";
 import StoreManagementLink from "@/components/services/StoreManagementLink";
 import Link from "next/link";
@@ -208,8 +209,9 @@ export default function ShopifyDevelopmentPage() {
           </div>
 
           <h1 className="font-display text-4xl sm:text-6xl font-bold tracking-tight text-[#161616] leading-tight">
-            Shopify Store Setup Services &amp; Custom Theme Development
-          </h1>
+              Shopify Store Setup Services &amp; Custom Theme Development
+            </h1>
+            <PlatformBadgeRow platforms={["shopify"]} />
 
           <p className="text-base sm:text-lg text-[#585858] font-body leading-relaxed max-w-2xl">
             We build custom, reliable <strong className="text-[#161616]">Shopify &amp; Shopify Plus</strong> stores engineered for clean navigation, automated dropshipping/3PL logistics, and fast mobile browsing.
@@ -257,12 +259,12 @@ export default function ShopifyDevelopmentPage() {
         <div className="lg:col-span-5 relative w-full">
           <div className="relative w-full aspect-[4/3] rounded-3xl overflow-hidden bg-white border border-[#E0DDDB] shadow-md group">
             <Image
-              src="/images/service-icons/shopify-storefront.webp"
-              alt="3D responsive online storefront on desktop and phone"
+              src="/images/platform-marks/shopify.svg"
+              alt="Shopify platform mark"
               fill
               priority
               sizes="(max-width: 1024px) 100vw, 45vw"
-              className="object-contain object-center p-3 sm:p-5 transition-transform duration-700 group-hover:scale-[1.01]"
+              className="object-contain object-center p-14 sm:p-20 transition-transform duration-700 group-hover:scale-[1.02] motion-reduce:transform-none"
             />
             <div className="absolute bottom-3 left-3 right-3 p-3 rounded-2xl bg-white/90 backdrop-blur-md border border-[#E0DDDB] text-xs font-mono-num text-[#161616] flex items-center justify-between shadow-xs">
               <span className="font-bold">SHOPIFY • DROPSHIPPING • ECOMMERCE</span>
