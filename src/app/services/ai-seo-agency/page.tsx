@@ -178,8 +178,16 @@ export default function AiSeoServicePage() {
 
   const faqs = [
     {
+      q: "What does an AI SEO agency do for an eCommerce store?",
+      a: "We review crawlability, product and collection content, internal links, structured data, business identity, useful buyer answers and search measurement. The work starts with the pages and products a customer actually needs, then connects them to relevant research and service content. Marketplace listings and paid ads have separate scopes.",
+    },
+    {
+      q: "How much do AI SEO services cost?",
+      a: "Our AI SEO audit starts at $349. Ongoing packages start at $749 per month, with scope based on technical issues, catalog size, content needs, research and reporting. We confirm the deliverables and any third-party costs before work begins.",
+    },
+    {
       q: "What's the difference between AI SEO and regular SEO?",
-      a: "Regular SEO focuses on ranking web pages in traditional search results. AI SEO includes that work but adds optimization for AI-driven experiences like Google AI Overviews, ChatGPT, and other answer engines. You need both to stay visible today.",
+      a: "Traditional SEO improves crawlability, relevance, usability and visibility in search results. AI search work also makes useful answers, sources and business details easier to find and understand across answer experiences. Neither approach guarantees a citation or ranking, and much of the technical and content foundation overlaps.",
     },
     {
       q: "What are AEO and GEO?",
@@ -191,7 +199,7 @@ export default function AiSeoServicePage() {
     },
     {
       q: "How long does AI SEO take to show results?",
-      a: "SEO is a long game. Early technical and structural improvements can show movement within weeks, but meaningful ranking and citation gains typically build over three to six months. We share progress reports along the way so you're never in the dark.",
+      a: "There is no fixed timeline. Technical fixes can be deployed quickly, but crawling, competition, site history, content quality and independent authority affect visibility. We agree on a baseline and report changes in relevant queries, qualified visits and leads when those data sources are available.",
     },
     {
       q: "Do I still need traditional SEO if I invest in AI SEO?",
@@ -199,7 +207,11 @@ export default function AiSeoServicePage() {
     },
     {
       q: "Will this work for a small business or a new website?",
-      a: "It will. Newer sites take longer to build authority, but the right structure and content strategy from the start give you a real advantage. We shape the plan around where your business is today.",
+      a: "A new site can benefit from clear architecture, useful content and accurate business details, but early visibility depends on competition, crawl and indexing, the offer and independent evidence. We scope foundational work first and set measurement expectations from the available baseline.",
+    },
+    {
+      q: "How do you measure AI SEO progress?",
+      a: "We track technical fixes, indexability, relevant queries and landing pages, qualified organic leads, and observed mentions in selected AI search experiences. AI answers vary by prompt and user context, so a single screenshot is not a reliable performance metric. We report what we can verify and separate our work from platform-controlled outcomes.",
     },
   ];
 

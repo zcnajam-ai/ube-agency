@@ -19,16 +19,16 @@ import ServiceProjectModalTrigger from "@/components/services/ServiceProjectModa
 import FaqSchema from "@/components/seo/FaqSchema";
 
 export const metadata: Metadata = {
-  title: "eCommerce Growth Services | Shopify, Amazon, Etsy & eBay",
+  title: "eCommerce Website Development & Marketplace Services",
   description:
-    "Grow your online business across Shopify, Amazon, Etsy and eBay with professional store development, marketplace optimization, product SEO, automation and multi-channel eCommerce strategy from Unified Branding Experts.",
+    "Build an eCommerce website, organize your product catalog and plan eligible marketplace channels. Compare Shopify setup, integrations and ongoing growth support.",
   alternates: {
     canonical: "https://unifiedbrandingexperts.com/services/ecommerce",
   },
   openGraph: {
-    title: "eCommerce Growth Services | Shopify, Amazon, Etsy & eBay | Unified Branding Experts",
+    title: "eCommerce Website Development & Marketplace Services | UBE",
     description:
-      "Grow your online business across Shopify, Amazon, Etsy and eBay with professional store development, marketplace optimization, product SEO, automation and multi-channel eCommerce strategy from Unified Branding Experts.",
+      "Plan your online store, product catalog, supplier connections and eligible marketplace channels with clear development and management scopes.",
     url: "https://unifiedbrandingexperts.com/services/ecommerce",
     siteName: "Unified Branding Experts",
     locale: "en_US",
@@ -44,21 +44,25 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "eCommerce Growth Services | Shopify, Amazon, Etsy & eBay | Unified Branding Experts",
+    title: "eCommerce Website Development & Marketplace Services | UBE",
     description:
-      "Professional eCommerce store development, marketplace optimization, product SEO, and multi-channel strategy for Shopify, Amazon, Etsy, and eBay.",
+      "Online store development, product organization, marketplace planning and post-launch support for growing eCommerce businesses.",
     images: ["https://unifiedbrandingexperts.com/services/ecommerce/opengraph-image"],
   },
 };
 
 export default function EcommerceGrowthServicePage() {
   const faqs = [
+    { q: "How much does eCommerce website development cost?", a: `Our defined Shopify store setup packages begin at ${SHOPIFY_SETUP_PRICE_LABEL}. The final price depends on product count, design, content, integrations, migration and testing. Shopify subscriptions, paid apps, marketplace fees, ad spend and ongoing management are separate unless your proposal includes them.` },
+    { q: "How long does it take to build an online store?", a: "A focused setup and a custom multi-channel build have different timelines. We estimate delivery after reviewing your catalog, assets, payment and shipping requirements, approvals, integrations and any migration. Marketplace account approval is controlled by each platform." },
+    { q: "Should I start with Shopify or WooCommerce?", a: "Shopify can simplify hosted storefront operations; WooCommerce offers more control within a WordPress site but requires its own hosting and maintenance decisions. The right choice depends on your catalog, team, integrations, budget and existing platform. We recommend a path after reviewing those requirements." },
     { q: "Which eCommerce platforms do you work with?", a: "We support Shopify, Amazon, Etsy, eBay, WooCommerce and selected supplier or fulfillment platforms depending on project requirements." },
     { q: "Can you build a Shopify store from scratch?", a: "Yes. We can handle store setup, design, product organization, collections, payment configuration, shipping, integrations, mobile optimization and launch preparation." },
     { q: "Do you help with Amazon, Etsy and eBay listings?", a: "Yes. We can help structure and optimize product listings, marketplace content, categories, keywords and storefront organization." },
     { q: "Can you help with dropshipping?", a: "Yes. We can research products and suppliers, develop the storefront, prepare product content and graphics, configure eligible supplier integrations and fulfillment workflows, and manage the store after launch. Manufacturing or custom packaging is quoted separately when needed." },
     { q: "Does eCommerce development include advertising?", a: "Advertising budgets and ongoing advertising management are separate unless explicitly included in a proposal." },
     { q: "Can a business start with one platform and expand later?", a: "Yes. In many situations, establishing one strong channel first is more practical than attempting to launch everywhere simultaneously." },
+    { q: "Does a finished eCommerce website guarantee sales?", a: "No. A working store makes purchases possible, but traffic, product demand, pricing, trust, fulfillment and ongoing marketing affect sales. We can scope SEO, advertising and store management after launch and measure the results against an agreed baseline." },
   ];
   const jsonLd = {
     "@context": "https://schema.org",
@@ -67,22 +71,22 @@ export default function EcommerceGrowthServicePage() {
         "@type": "WebPage",
         "@id": "https://unifiedbrandingexperts.com/services/ecommerce/#webpage",
         "url": "https://unifiedbrandingexperts.com/services/ecommerce",
-        "name": "eCommerce Growth Services | Shopify, Amazon, Etsy & eBay | UBE",
+        "name": "eCommerce Website Development & Marketplace Services | UBE",
         "description":
-          "Grow your online business across Shopify, Amazon, Etsy and eBay with professional store development, marketplace optimization, product SEO, automation and multi-channel eCommerce strategy.",
+          "Develop an eCommerce storefront, organize a product catalog and plan eligible marketplace channels with defined integrations and post-launch support.",
         "breadcrumb": {
           "@type": "BreadcrumbList",
           "itemListElement": [
             { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://unifiedbrandingexperts.com" },
             { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://unifiedbrandingexperts.com/services" },
-            { "@type": "ListItem", "position": 3, "name": "eCommerce Growth Services", "item": "https://unifiedbrandingexperts.com/services/ecommerce" },
+            { "@type": "ListItem", "position": 3, "name": "eCommerce Development", "item": "https://unifiedbrandingexperts.com/services/ecommerce" },
           ],
         },
       },
       {
         "@type": "Service",
         "@id": "https://unifiedbrandingexperts.com/services/ecommerce/#service",
-        "name": "eCommerce Growth & Marketplace Services",
+        "name": "eCommerce Website Development & Marketplace Services",
         "serviceType": "eCommerce Development & Marketplace Optimization",
         "description":
           "End-to-end eCommerce storefront development, multi-channel marketplace optimization (Shopify, Amazon, Etsy, eBay), product listing SEO, workflow automation, and conversion optimization.",
@@ -120,7 +124,7 @@ export default function EcommerceGrowthServicePage() {
             </div>
 
             <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-[#161616] leading-[1.1]">
-              eCommerce Growth Services for Shopify, Amazon, Etsy &amp; eBay
+              eCommerce Website Development &amp; Marketplace Growth
             </h1>
 
             <p className="text-sm sm:text-base text-[#585858] font-body leading-relaxed max-w-2xl">
@@ -129,6 +133,9 @@ export default function EcommerceGrowthServicePage() {
 
             <p className="text-xs sm:text-sm text-[#585858] font-body leading-relaxed max-w-2xl">
               From your own Shopify storefront to eligible channels such as TikTok Shop, Amazon, Etsy and eBay, we connect product sourcing, supplier relationships, branding, listings, fulfillment, search visibility, analytics and ongoing management. Each channel requires its own seller eligibility and fulfillment review.
+            </p>
+            <p className="text-xs sm:text-sm text-[#585858] font-body leading-relaxed max-w-2xl">
+              Need a Shopify build specifically? See our <Link href="/services/shopify-development" className="font-semibold text-[#6B46C1] underline underline-offset-4">Shopify store setup service</Link>. Comparing platform requirements first? Start with the <Link href="/shopify" className="font-semibold text-[#6B46C1] underline underline-offset-4">Shopify planning guide</Link>. Ongoing product updates and promotions belong in a separate <Link href="/services/ecommerce-store-management" className="font-semibold text-[#6B46C1] underline underline-offset-4">store management scope</Link>.
             </p>
 
             <div className="flex flex-wrap items-center gap-4 pt-2">

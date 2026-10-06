@@ -92,13 +92,8 @@ export async function generateMetadata({
   const publishedTime = toSchemaDate(article.publishedAt);
   const modifiedTime = toSchemaDate(article.updatedAt);
 
-  const ogImageUrl = articlePlatforms(article.title).length && article.coverImage.startsWith("/images/service-icons/")
-    ? `${canonicalUrl}/opengraph-image`
-    : article.coverImage
-    ? article.coverImage.startsWith("http")
-      ? article.coverImage
-      : `https://unifiedbrandingexperts.com${article.coverImage}`
-    : "https://unifiedbrandingexperts.com/og-default.png";
+  // The article cover remains in-page; the share card is unique to this article.
+  const ogImageUrl = `${canonicalUrl}/opengraph-image`;
 
   return {
     title: article.title,
@@ -119,7 +114,7 @@ export async function generateMetadata({
           url: ogImageUrl,
           width: 1200,
           height: 630,
-          alt: article.coverAlt || article.title,
+          alt: `${article.title} — Unified Branding Experts guide`,
         },
       ],
     },
@@ -158,9 +153,7 @@ export default async function InsightArticlePage({
     "@type": "Article",
     headline: article.title,
     description: article.summary,
-    image: brandedCover
-      ? `https://unifiedbrandingexperts.com/insights/${article.slug}/opengraph-image`
-      : `https://unifiedbrandingexperts.com${article.coverImage}`,
+    image: `https://unifiedbrandingexperts.com/insights/${article.slug}/opengraph-image`,
     datePublished: publishedDate,
     dateModified: modifiedDate,
     author: {

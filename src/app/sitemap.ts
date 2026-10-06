@@ -20,7 +20,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/amazon`, lastModified: new Date("2026-09-22") },
     { url: `${baseUrl}/walmart-marketplace`, lastModified: new Date("2026-09-22") },
     { url: `${baseUrl}/ebay`, lastModified: new Date("2026-09-22") },
-    { url: `${baseUrl}/research/ai-search-readiness-study-2026`, lastModified: new Date("2026-08-31") },
+    { url: `${baseUrl}/research/ai-search-readiness-study-2026`, lastModified: new Date("2026-10-06") },
     { url: `${baseUrl}/contact` },
     { url: `${baseUrl}/dropshipping-store-offer`, lastModified: new Date("2026-10-05") },
     { url: `${baseUrl}/dropshipping-growth-plans`, lastModified: new Date("2026-10-05") },
@@ -31,7 +31,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     .filter((s) => s.slug !== "tiktok-shop-setup")
     .map((s) => ({
       url: `${baseUrl}/services/${s.slug}`,
-      lastModified: new Date(s.slug === "dropshipping" ? "2026-10-04" : "2026-10-03"),
+      lastModified: new Date(
+        ["shopify-development", "ecommerce", "ai-seo-agency", "ecommerce-store-management"].includes(s.slug)
+          ? "2026-10-06"
+          : s.slug === "dropshipping" ? "2026-10-04" : "2026-10-03"
+      ),
     }));
 
   // 3. Dedicated Package Hub Pages (8)
