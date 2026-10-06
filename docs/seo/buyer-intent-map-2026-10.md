@@ -10,6 +10,7 @@ Improve existing URLs before adding pages. Preserve redirects, canonicals, track
 
 | Buyer intent / query family | Existing primary page | Existing supporting pages | This change / next decision |
 | --- | --- | --- | --- |
+| Broad eCommerce and dropshipping agency with web, search, automation and marketing | `/` | Core service pages below | Homepage hero now leads with the business model, then names the connected capabilities and links to each service. Platform-specific language remains on the relevant service pages. |
 | Shopify setup service, someone to build my store, setup inclusions | `/services/shopify-development` | `/shopify`, `/insights/shopify-store-setup-cost-2026`, `/ecommerce-growth-packages` | Clarify setup and development in title/H1; add service scope, post-launch and cost questions; link the hub and cost guide. Keep hub for broader comparison and planning. |
 | Shopify agency, platform choice, migration and integrations | `/shopify` | `/services/shopify-development`, `/services/ecommerce` | Keep the hub distinct as a planning guide; do not create another Shopify agency URL. Review GSC query×page overlap when accessible. |
 | eCommerce website development and marketplace support | `/services/ecommerce` | `/services/shopify-development`, `/amazon`, `/ebay`, `/walmart-marketplace`, `/services/etsy-shop-setup` | Clarify development intent in title/H1 and answer timing, platform choice, price and sales expectation. Marketplace hubs retain channel-specific intent. |
@@ -24,12 +25,13 @@ Improve existing URLs before adding pages. Preserve redirects, canonicals, track
 ## Implemented technical and editorial changes
 
 - Clarified Shopify and eCommerce service metadata, H1s and visible buyer FAQs. FAQ JSON-LD derives from the same arrays shown to visitors.
+- Positioned the homepage around eCommerce and dropshipping rather than naming two platforms in the hero, with direct pathways to website development, AI SEO, automation, TikTok and Instagram marketing.
 - Added answers about management product uploads and AI SEO measurement, with realistic dependencies. No sales or citation guarantee was added.
 - Used each article's existing dynamic image route in Article schema and OG metadata, rather than its reused service icon.
 - Added unique branded social images for Services, Packages, Work, Insights, Contact, and the research study. Reused the existing brand color system.
 - Aligned the web app manifest with the site's existing square PNG brand icons at 192 and 512 pixels; the actual favicon artwork was already correct.
 - Removed the research study's doubled `| UBE` title suffix and its `/research` breadcrumb dead end.
-- Updated sitemap `lastModified` only for the four service pages and research content touched by this PR. Metadata-only image changes are not presented as article publication-date changes.
+- Updated sitemap `lastModified` only for the homepage, four service pages and research content touched by this PR. Metadata-only image changes are not presented as article publication-date changes.
 
 ## Next content and measurement sequence
 

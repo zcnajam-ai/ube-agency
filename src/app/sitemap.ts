@@ -8,7 +8,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // 1. Core & Research Pages
   const coreRoutes: MetadataRoute.Sitemap = [
-    { url: baseUrl, lastModified: new Date("2026-10-03") },
+    { url: baseUrl, lastModified: new Date("2026-10-07") },
     { url: `${baseUrl}/services`, lastModified: new Date("2026-10-04") },
     { url: `${baseUrl}/packages` },
     { url: `${baseUrl}/work`, lastModified: new Date("2026-10-03") },

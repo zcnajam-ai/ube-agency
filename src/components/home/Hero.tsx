@@ -1,22 +1,21 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowUpRight, Palette } from "lucide-react";
+import { ArrowUpRight, Bot, Globe2, Search, ShoppingBag, Store } from "lucide-react";
 
-import {
-  Heading3DSparkle,
-} from "../common/Brand3DIcons";
 import { PlatformMark } from "../common/PlatformMark";
 import HeroVideoClient from "./HeroVideoClient";
 import HeroInteractiveCTA from "./HeroInteractiveCTA";
 
 export default function Hero() {
   const priorityPills = [
-    { label: "Shopify & Dropshipping", href: "/services/dropshipping", icon: <PlatformMark platform="shopify" size={18} decorative /> },
-    { label: "TikTok Shop & Meta Ads", href: "/tiktok-marketing-packages", icon: <PlatformMark platform="tiktok" size={18} decorative /> },
-    { label: "Google Marketing", href: "/services/google-ads", icon: <PlatformMark platform="google" size={18} decorative /> },
-    { label: "AI SEO agency", href: "/ai-seo", icon: <Heading3DSparkle size={18} /> },
-    { label: "Branding (From $299)", href: "/branding-packages", icon: <Palette className="w-4 h-4 text-blue-600" /> },
+    { label: "eCommerce", href: "/services/ecommerce", icon: <ShoppingBag className="w-4 h-4 text-[#6B4BA7]" aria-hidden="true" /> },
+    { label: "Dropshipping", href: "/services/dropshipping", icon: <Store className="w-4 h-4 text-[#6B4BA7]" aria-hidden="true" /> },
+    { label: "Website Development", href: "/services/web-design-development", icon: <Globe2 className="w-4 h-4 text-[#6B4BA7]" aria-hidden="true" /> },
+    { label: "AI SEO", href: "/services/ai-seo-agency", icon: <Search className="w-4 h-4 text-[#6B4BA7]" aria-hidden="true" /> },
+    { label: "AI Automation", href: "/services/ai-automation", icon: <Bot className="w-4 h-4 text-[#6B4BA7]" aria-hidden="true" /> },
+    { label: "TikTok Marketing", href: "/services/tiktok-marketing", icon: <PlatformMark platform="tiktok" size={18} decorative /> },
+    { label: "Instagram Marketing", href: "/services/meta-ads", icon: <PlatformMark platform="instagram" size={18} decorative /> },
   ];
 
   return (
@@ -31,19 +30,19 @@ export default function Hero() {
             {/* Hero Headline & Intro */}
             <div className="space-y-4">
               <h1 className="font-display text-3xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-[#161616] tracking-tighter leading-[1.06] break-words">
-                eCommerce Web Design <br className="hidden sm:block" />
-                &amp; <span className="text-[#6B4BA7]">Growth Marketing</span>.
+                eCommerce &amp; Dropshipping <br className="hidden sm:block" />
+                <span className="text-[#6B4BA7]">Built to Grow</span>.
               </h1>
 
               <p className="text-sm sm:text-base md:text-lg lg:text-xl text-[#585858] font-body leading-relaxed max-w-3xl">
-                We help U.S. businesses build and manage Shopify and WooCommerce stores, source products and suppliers, set up eligible marketplace channels, and connect branding, search and marketing to a practical launch plan. Start with the store you need today and scope what comes next.
+                We build and manage eCommerce stores, set up dropshipping operations, and create websites for U.S. businesses. AI SEO, automation, TikTok and Instagram marketing, and Google Ads connect the build to a practical plan for reaching buyers. Your platform and channel mix follow your products, budget and goals.
               </p>
             </div>
 
             {/* Quick Service Pathways (Interactive Pills with 3D Icons) */}
             <div className="space-y-2.5">
               <span className="text-[11px] font-mono-num uppercase tracking-wider text-[#585858] font-bold block">
-                Direct Service &amp; Package Pathways
+                Explore What We Do
               </span>
               <div className="flex flex-wrap gap-2 sm:gap-2.5">
                 {priorityPills.map((pill) => (
