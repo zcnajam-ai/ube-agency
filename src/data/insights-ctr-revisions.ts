@@ -1,6 +1,7 @@
 import type { ArticleFAQ } from "./insights";
 
 export interface InsightCtrRevision {
+  updatedAt?: string;
   title: string;
   h1: string;
   summary: string;
@@ -11,6 +12,7 @@ export interface InsightCtrRevision {
 
 export const INSIGHT_CTR_REVISIONS: Record<string, InsightCtrRevision> = {
   "how-to-optimize-for-google-ai-overviews": {
+    "updatedAt": "October 7, 2026",
     "title": "How to Optimize for Google AI Overviews in 2026: 10-Step Guide",
     "h1": "How to Optimize for Google AI Overviews in 2026: 10-Step Guide",
     "summary": "A practical 10-step guide to Google AI Overviews: indexing, direct answers, evidence, internal links, and structured data. Informed by our 100-site audit.",
@@ -82,6 +84,7 @@ export const INSIGHT_CTR_REVISIONS: Record<string, InsightCtrRevision> = {
     ]
   },
   "what-is-ai-seo-seo-vs-aeo-vs-geo": {
+    "updatedAt": "October 7, 2026",
     "title": "What Is AI SEO? SEO vs AEO vs GEO Explained (2026)",
     "h1": "What Is AI SEO? SEO vs AEO vs GEO Explained (2026)",
     "summary": "Understand AI SEO, AEO and GEO: how they differ, where they overlap, and when each matters. See practical steps informed by our 100-site search-readiness study.",

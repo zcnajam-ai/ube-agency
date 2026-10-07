@@ -447,7 +447,7 @@ export const INSIGHTS: InsightArticle[] = [
     category: "AI Search & Discovery",
     readTime: "11 min read",
     publishedAt: "September 15, 2026",
-    updatedAt: "September 20, 2026",
+    updatedAt: "October 7, 2026",
     author: {
       name: "Unified Branding Experts Editorial Team",
       role: "AI Search & Web Engineering Group",
@@ -511,7 +511,7 @@ export const INSIGHTS: InsightArticle[] = [
         ],
         callout: {
           title: "Core Eligibility Rule",
-          text: "Snippet eligibility + traditional Search indexing creates technical eligibility for Google AI Overviews. Placement depends on content usefulness, relevance, and domain authority.",
+          text: "Indexing and snippet eligibility are technical requirements for supporting links in Google AI Overviews. Meeting them does not guarantee that Google will show or cite the page.",
           type: "tip"
         }
       },
@@ -564,16 +564,16 @@ export const INSIGHTS: InsightArticle[] = [
         body: [
           "Traditional organic search and Google's AI experiences should not be treated as completely separate ecosystems. Google says its generative AI features are rooted in its core Search ranking and quality systems.",
           "The practical difference is the search experience: Traditional Search surfaces individual web links; AI Overviews synthesize information with supporting links; AI Mode supports deeper exploratory research.",
-          "<strong>How to Measure Google AI Search Visibility:</strong><br>Google Search Console now features a dedicated Generative AI performance report being rolled out progressively to eligible properties. Website owners can analyze generative AI impressions over time, top performing pages, countries, and devices.",
-          "Where available, establish a baseline in Search Console and monitor AI performance alongside overall organic impressions, clicks, CTR, and lead conversion rates."
+          "<strong>How to Measure Google AI Search Visibility:</strong><br>Google's Generative AI performance report for Search shows impressions from AI Overviews and AI Mode, with page, country, device and date breakdowns. Google says the report was rolled out worldwide by August 31, 2026, although a property may not show it if it has too few eligible impressions. It does not prove that an individual query generated a lead.",
+          "Use the dedicated report when it appears in your property, and compare it with overall Web search impressions, clicks and qualified leads. Record the date of site changes before claiming any effect."
         ],
         table: {
           headers: ["Measurement Metric", "Tracking Source", "Target KPI / Outcome"],
           rows: [
-            ["Generative AI Impressions", "Search Console Generative AI Performance Report", "Track total impressions & URL appearances in AI Overviews & AI Mode"],
+            ["Generative AI Impressions", "Search Console Generative AI Performance Report", "Track impressions and pages in AI Overviews and AI Mode where the report is available"],
             ["Classic Organic Search CTR", "Google Search Console (Search Type: Web)", "Monitor click-through rate & snippet performance alongside AI features"],
             ["Branded Search Growth", "Google Search Console & Analytics trend analysis", "Measure growth in direct brand queries & organic entity recognition"],
-            ["Commercial Conversion Rate", "Google Analytics 4 Goal Attribution", "Evaluate lead quality & conversion rate from organic AI touchpoints"]
+            ["Commercial Conversion Rate", "GA4 lead events and CRM records", "Evaluate qualified leads from organic search without assigning an unsupported AI citation source"]
           ]
         }
       },
@@ -597,8 +597,8 @@ export const INSIGHTS: InsightArticle[] = [
           "• <a href=\"https://developers.google.com/search/docs/appearance/ai-features\" target=\"_blank\" rel=\"noopener noreferrer\" className=\"text-[#9F8BE7] underline font-medium hover:text-[#161616]\">Google Search Central: Optimizing your website for generative AI features on Google Search</a> — Official Google guidance on Search technical requirements, snippet eligibility, and supporting links.",
           "• <a href=\"https://developers.google.com/search/docs/appearance/ai-features\" target=\"_blank\" rel=\"noopener noreferrer\" className=\"text-[#9F8BE7] underline font-medium hover:text-[#161616]\">Google Search Central: AI features and your website</a> — Overview of how Google Search incorporates generative AI and links to supporting web sources.",
           "• <a href=\"https://developers.google.com/search/docs/fundamentals/creating-helpful-content\" target=\"_blank\" rel=\"noopener noreferrer\" className=\"text-[#9F8BE7] underline font-medium hover:text-[#161616]\">Google Search Central: Top ways to ensure your content performs well in Google's AI experiences</a> — Key recommendations on helpful content and clear page structure.",
-          "• <a href=\"https://support.google.com/webmasters/answer/15174000\" target=\"_blank\" rel=\"noopener noreferrer\" className=\"text-[#9F8BE7] underline font-medium hover:text-[#161616]\">Google Search Console Help: Generative AI performance report (Search)</a> — Official documentation on tracking AI Overviews and AI Mode impressions.",
-          "• <a href=\"https://developers.google.com/search/docs/fundamentals/ai-generated-content\" target=\"_blank\" rel=\"noopener noreferrer\" className=\"text-[#9F8BE7] underline font-medium hover:text-[#161616]\">Google Search Central: Google Search's guidance about AI-generated content</a> — Standards on content quality, added user value, and search spam policies.",
+          "• <a href=\"https://support.google.com/webmasters/answer/16984139\" target=\"_blank\" rel=\"noopener noreferrer\" className=\"text-[#9F8BE7] underline font-medium hover:text-[#161616]\">Google Search Console Help: Generative AI performance report (Search)</a> — Official documentation on tracking AI Overviews and AI Mode impressions.",
+          "• <a href=\"https://developers.google.com/search/docs/fundamentals/using-gen-ai-content\" target=\"_blank\" rel=\"noopener noreferrer\" className=\"text-[#9F8BE7] underline font-medium hover:text-[#161616]\">Google Search Central: Google Search's guidance about generative AI content</a> — Standards on content quality, added user value, and search spam policies.",
           "• <a href=\"/insights/ai-seo-aeo-geo-guide\" className=\"text-[#9F8BE7] underline font-medium hover:text-[#161616]\">AI SEO, AEO & GEO: Complete Guide for 2026</a> — Unified Branding Experts primary authority framework for AI search optimization."
         ]
       }
@@ -626,7 +626,7 @@ export const INSIGHTS: InsightArticle[] = [
       },
       {
         q: "Can I track AI Overview impressions?",
-        a: "Google has introduced a dedicated Generative AI performance report in Search Console for eligible properties. The rollout is progressive, so the report may not yet be available for every website."
+        a: "Yes. Google's Generative AI performance report shows impressions for AI Overviews and AI Mode. Google says it rolled out worldwide by August 31, 2026; a property may still not show the report if it has too few qualifying impressions."
       },
       {
         q: "What are the best strategies to appear in Google AI Overviews?",
@@ -2062,7 +2062,7 @@ export const INSIGHTS: InsightArticle[] = [
   "category": "Shopify & eCommerce",
   "readTime": "8 min read",
   "publishedAt": "April 15, 2026",
-  "updatedAt": "October 3, 2026",
+  "updatedAt": "October 7, 2026",
   "author": {
     "name": "Shopify Specialist",
     "role": "Shopify & eCommerce",
@@ -2109,8 +2109,8 @@ export const INSIGHTS: InsightArticle[] = [
         "<strong>1. Shopify Platform Subscription:</strong> Monthly software access starting at $39/month for Basic Shopify when billed monthly.",
         "<strong>2. Theme Selection:</strong> Free official themes vs paid Shopify Theme Store themes (pricing varies by theme) vs bespoke Liquid custom themes.",
         "<strong>3. Storefront Development & Customization:</strong> Professional setup, catalog structuring, payment integration, and responsive mobile optimization.",
-        "<strong>4. Essential Third-Party Apps:</strong> Subscriptions for reviews, currency conversion, email marketing, and inventory routing ($20–$150/month).",
-        "<strong>5. Domain & Payment Processing:</strong> Custom `.com` domain ($15/year) and standard online credit card rates."
+        "<strong>4. Essential Third-Party Apps:</strong> Budget separately for any review, email, or inventory apps you actually need. Some have free tiers and paid plans vary by merchant, usage, and vendor.",
+        "<strong>5. Domain & Payment Processing:</strong> Check the current registrar price for your domain and the applicable payment rates for your store's country and plan."
       ]
     },
     {
@@ -2129,7 +2129,7 @@ export const INSIGHTS: InsightArticle[] = [
         "rows": [
           [
             "DIY Template Setup",
-            "$50 – $300",
+            "Platform, domain and optional theme costs",
             "Solopreneurs & test concepts",
             "Basic free theme, self-uploaded catalog, default checkout"
           ],
@@ -2141,7 +2141,7 @@ export const INSIGHTS: InsightArticle[] = [
           ],
           [
             "Enterprise Shopify Build",
-            "$2,500 – $5,000+",
+            "Custom quote after scoping",
             "Established brands & high-SKU stores",
             "Bespoke Liquid code, 3PL/ERP integration, custom checkout extensibility"
           ]
@@ -2152,11 +2152,11 @@ export const INSIGHTS: InsightArticle[] = [
       "id": "platform-subscriptions-and-fees",
       "h2": "Shopify Platform Subscriptions & Transaction Fees",
       "body": [
-        "As of October 3, 2026, <a href=\"https://www.shopify.com/pricing\" target=\"_blank\" rel=\"noopener noreferrer\" className=\"text-[#9F8BE7] underline font-medium hover:text-[#161616]\">Shopify's U.S. pricing page</a> lists:",
+        "As of October 7, 2026, <a href=\"https://www.shopify.com/pricing\" target=\"_blank\" rel=\"noopener noreferrer\" className=\"text-[#9F8BE7] underline font-medium hover:text-[#161616]\">Shopify's U.S. pricing page</a> lists these standard plans and starting online card rates. Promotions, card type, country and billing interval can change the final amount:",
         "• <strong>Basic Shopify:</strong> $39/month (or $29/mo billed annually). Online credit card rate: 2.9% + 30¢.",
         "• <strong>Grow:</strong> $105/month (or $79/mo billed annually). Online credit card rate: 2.7% + 30¢.",
         "• <strong>Advanced:</strong> $399/month (or $299/mo billed annually). Online credit card rate: 2.5% + 30¢.",
-        "Using Shopify Payments waives third-party transaction fees. If using an external gateway (like PayPal or Stripe directly), Shopify adds an additional 0.6%–2.0% fee depending on your plan."
+        "Shopify lists third-party transaction fees of 2% on Basic, 1% on Grow and 0.6% on Advanced when applicable. Shopify Payments transactions do not incur these additional fees; PayPal can be exempt when Shopify Payments is the primary provider. Check the current payment-provider terms for your exact configuration."
       ]
     },
     {
@@ -2171,7 +2171,7 @@ export const INSIGHTS: InsightArticle[] = [
       "id": "budgeting-checklist",
       "h2": "Actionable 2026 Shopify Budgeting Checklist",
       "body": [
-        "✓ Verify monthly platform budget ($39/mo Basic).",
+        "✓ Verify the current monthly or annual platform price for your market; U.S. Basic is listed at $39 per month on monthly billing as of October 7, 2026.",
         "✓ Select a clean, speed-optimized theme.",
         "✓ Budget for essential growth apps (email, reviews).",
         "✓ Review fixed-fee development options with specialized <a href=\"/services/shopify-development\" className=\"text-[#9F8BE7] font-bold underline hover:text-[#161616]\">Shopify development services</a> and transparent <a href=\"/ecommerce-growth-packages\" className=\"text-[#9F8BE7] font-bold underline hover:text-[#161616]\">eCommerce growth packages</a>."
@@ -2730,7 +2730,7 @@ export const INSIGHTS: InsightArticle[] = [
   "category": "AI SEO & Search Discovery",
   "readTime": "9 min read",
   "publishedAt": "February 10, 2026",
-  "updatedAt": "February 14, 2026",
+  "updatedAt": "October 7, 2026",
   "author": {
     "name": "AI SEO Specialist",
     "role": "AI SEO, AEO & GEO",
@@ -2773,15 +2773,18 @@ export const INSIGHTS: InsightArticle[] = [
       "id": "defining-ai-seo",
       "h2": "Defining AI SEO in 2026",
       "body": [
-        "Traditional SEO focuses primarily on ranking web pages in classic ten-blue-link search results.",
-        "AI SEO expands this discipline to ensure your entity, brand facts, and content passages can be retrieved and cited when users ask conversational AI tools direct questions."
+        "SEO is the foundation: make a useful page discoverable, understandable and eligible to appear in search. AI SEO is the shorthand many buyers use for extending that work to searches answered or summarized with AI. It is not a separate Google ranking switch or a promise that an AI assistant will cite you.",
+        "An example makes the difference clearer. A merchant asking 'What does a Shopify store cost?' needs a page with accurate prices, scope boundaries and a direct answer. Traditional SEO helps Google find and rank it; answer-focused writing helps a reader extract the relevant number; original examples and corroborated business information make it more trustworthy. The same page may serve a classic result, an AI Overview supporting link or a person comparing providers.",
+        "Start by checking whether the page is indexable, whether its title matches the question, and whether the answer is visible without opening a tab or downloading a PDF. Then review the evidence: published prices, actual deliverables, documented examples and the date those facts were checked. Our <a href=\"/ai-seo\" className=\"font-semibold underline\">AI SEO methodology</a> covers the implementation sequence in more detail."
       ]
     },
     {
       "id": "seo-aeo-geo-matrix",
       "h2": "SEO vs AEO vs GEO Comparison Matrix",
       "body": [
-        "Compare core objectives across search frameworks:"
+        "These labels describe overlapping work, not three separate algorithms. SEO addresses crawl access, useful content, search intent and links. Answer Engine Optimization (AEO) makes an answer easy to find and understand. Generative Engine Optimization (GEO) is an industry term for improving the clarity, evidence and context of material that generative systems might reference.",
+        "For 'AEO vs SEO,' the practical answer is that a direct answer cannot compensate for a page blocked by robots.txt, and an indexable page still needs to answer its visitor's question. GEO adds a further evidence check: can a reader verify who makes the claim, when it was updated, and where the supporting data came from? Google's <a href=\"https://developers.google.com/search/docs/appearance/ai-features\" target=\"_blank\" rel=\"noopener noreferrer\" className=\"font-semibold underline\">AI features guidance</a> says its normal Search technical requirements and content guidance remain relevant; it does not prescribe special AEO or GEO markup.",
+        "Compare the emphasis of each framework below. The examples are planning aids, not guaranteed ranking factors."
       ],
       "table": {
         "headers": [
@@ -2816,25 +2819,28 @@ export const INSIGHTS: InsightArticle[] = [
       "id": "entity-architecture-and-schema",
       "h2": "Entity Graphs & Connected JSON-LD Schema",
       "body": [
-        "Search engines use structured JSON-LD schema to understand relationships between your Organization, Website, Services, and Content. Implementing accurate schema helps remove ambiguity."
+        "A consistent organization name, contact details, service descriptions and article attribution reduce ambiguity for readers and crawlers. Where relevant, JSON-LD can describe the Organization, Service, Article and BreadcrumbList entities represented by visible content. Use the same canonical URL and stable organization identifier across related pages.",
+        "Do not add ratings, product offers, prices, authors or client results that are absent from the page or cannot be verified. Schema is a description of real content, not a way to create authority by declaration. Test the rendered JSON-LD after a release and compare it with the visible page. Our <a href=\"/research/ai-search-readiness-study-2026\" className=\"font-semibold underline\">100-site search-readiness study</a> documents how we assessed technical, content and authority signals; it does not prove a particular schema field causes AI citations."
       ]
     },
     {
       "id": "answer-first-content-structuring",
       "h2": "Answer-First Content Structuring",
       "body": [
-        "Placing direct 40–60 word answer summaries immediately under primary headings provides clear passages for retrieval systems."
+        "Put a short, accurate answer close to the question, then explain the assumptions. For a pricing question, state whether the figure is a one-time build, a monthly retainer or a platform subscription. For a comparison, tell the reader when each option fits and what information would change the recommendation. There is no magic word count for answers.",
+        "For example: 'Can AI SEO guarantee that my company appears in ChatGPT?' No. An agency can improve crawl access, content quality and verifiable evidence, then measure observed visibility; the AI product decides which sources to use. This is more useful than promising a citation and more defensible when the result varies by query.",
+        "Link from the answer to the deeper task rather than repeating an entire sales page. Someone learning terminology may want our <a href=\"/insights/how-to-optimize-for-google-ai-overviews\" className=\"font-semibold underline\">Google AI Overviews guide</a>; someone comparing implementation options may want <a href=\"/ai-seo-packages\" className=\"font-semibold underline\">AI SEO package scope and pricing</a>."
       ]
     },
     {
       "id": "ai-seo-checklist",
       "h2": "Actionable AI SEO Checklist",
       "body": [
-        "✓ Verify robots.txt permits search crawlers.",
-        "✓ Implement Organization and Service schema.",
-        "✓ Add answer-first summaries under key H2 headers.",
-        "✓ Read UBE's <a href=\"/research/ai-search-readiness-study-2026\" className=\"text-[#9F8BE7] font-bold underline hover:text-[#161616]\">2026 AI Search Readiness Study</a> for empirical audit benchmarks.",
-        "✓ Explore specialized <a href=\"/services/ai-seo-agency\" className=\"text-[#9F8BE7] font-bold underline hover:text-[#161616]\">AI SEO services</a> and <a href=\"/ai-seo-packages\" className=\"text-[#9F8BE7] font-bold underline hover:text-[#161616]\">AI SEO growth packages</a>."
+        "1. Check technical eligibility: return HTTP 200, allow the relevant crawler, remove accidental noindex directives, provide a self-canonical and make the main answer visible in rendered HTML. Google's AI features require indexing and snippet eligibility for supporting links.",
+        "2. Map one real buyer question to one primary page. Keep an explanatory glossary here, an implementation service on <a href=\"/services/ai-seo-agency\" className=\"font-semibold underline\">the AI SEO agency page</a>, and tier details on <a href=\"/ai-seo-packages\" className=\"font-semibold underline\">the packages page</a>. Update an existing page when it already serves the intent instead of creating another near-duplicate.",
+        "3. Write the answer before adding supporting detail. Include definitions, limitations, a process, and links to evidence when the claim needs proof. Confirm that titles, visible H1s, dates and schema agree.",
+        "4. Measure separately: Search Console Web queries and landing pages, the dedicated Generative AI impressions report when available, qualified organic leads in analytics and the CRM, and manually observed citations. A Web impression is not proof of an AI citation.",
+        "5. Revisit the page after it has been crawled and after enough comparable data exists. If impressions rise but clicks stay low, inspect the actual query-to-page pairing and search result before changing the title again. Our <a href=\"/research/ai-search-readiness-study-2026\" className=\"font-semibold underline\">AI Search Readiness Study</a> offers a framework for a fuller audit."
       ]
     }
   ],
@@ -3033,7 +3039,7 @@ for (const article of INSIGHTS) {
   article.h1 = revision.h1;
   article.summary = revision.summary;
   article.quickAnswer = revision.quickAnswer;
-  article.updatedAt = "October 5, 2026";
+  article.updatedAt = revision.updatedAt ?? "October 5, 2026";
   const firstSection = article.sections[0];
   if (firstSection) {
     article.sections = [
