@@ -14,7 +14,7 @@ import CommercePlatformIcon3D from "@/components/common/CommercePlatformIcon3D";
 import ServiceProjectModalTrigger from "@/components/services/ServiceProjectModalTrigger";
 
 export const metadata: Metadata = {
-  title: "eCommerce Store Setup Packages & Pricing | UBE",
+  title: "eCommerce Store Setup Packages & Pricing",
   description:
     `Compare one-time eCommerce store setup packages from ${SHOPIFY_SETUP_PRICE_LABEL}. See product limits, integrations and scope; marketplace work and ongoing marketing are quoted separately.`,
   alternates: {
