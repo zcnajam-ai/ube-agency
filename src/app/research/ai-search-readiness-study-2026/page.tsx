@@ -19,7 +19,7 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "AI Search Readiness Study 2026: 100 Websites Audited | UBE",
+  title: { absolute: "AI Search Readiness Study 2026: 100 Websites Audited | UBE" },
   description:
     "Original research by Unified Branding Experts auditing 100 business websites across 45 AI search readiness criteria, including technical SEO, AEO, entity signals, and GEO authority.",
   alternates: {
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     type: "article",
     images: [
       {
-        url: "https://unifiedbrandingexperts.com/og-default.png",
+        url: "https://unifiedbrandingexperts.com/research/ai-search-readiness-study-2026/opengraph-image",
         width: 1200,
         height: 630,
         alt: "UBE AI Search Readiness Study 2026",
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "AI Search Readiness Study 2026 | Unified Branding Experts",
     description: "Original research auditing 100 business websites across 45 AI search readiness criteria.",
-    images: ["https://unifiedbrandingexperts.com/og-default.png"],
+    images: ["https://unifiedbrandingexperts.com/research/ai-search-readiness-study-2026/opengraph-image"],
   }
 };
 
@@ -105,8 +105,8 @@ export default function AiSearchReadinessStudyPage() {
       {
         "@type": "ListItem",
         position: 2,
-        name: "Research",
-        item: "https://unifiedbrandingexperts.com/research"
+        name: "Insights",
+        item: "https://unifiedbrandingexperts.com/insights"
       },
       {
         "@type": "ListItem",

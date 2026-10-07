@@ -21,22 +21,22 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Shopify Store Setup Services & Pricing",
+  title: "Shopify Store Setup & Development Services",
   description:
-    `Shopify store setup services from ${SHOPIFY_SETUP_PRICE_LABEL}, including theme configuration, product organization, payments, shipping, responsive design and custom development.`,
+    `Get a Shopify store built around your catalog, payments, shipping and mobile checkout. Setup packages start at ${SHOPIFY_SETUP_PRICE_LABEL}; custom development is scoped separately.`,
   alternates: {
     canonical: "https://unifiedbrandingexperts.com/services/shopify-development",
   },
   openGraph: {
-    title: "Shopify Store Setup & Custom Theme Development",
+    title: "Shopify Store Setup & Development Services | UBE",
     description:
-      "End-to-end Shopify store setup and custom theme development with responsive storefront and ecommerce performance analytics.",
+      "Shopify store setup, custom theme development and launch checks, with clear scope for integrations, migrations and post-launch management.",
     url: "https://unifiedbrandingexperts.com/services/shopify-development",
     images: [
       {
         url: "https://unifiedbrandingexperts.com/services/shopify-development/opengraph-image",
-        width: 2048,
-        height: 684,
+        width: 1200,
+        height: 630,
         alt: "Shopify store setup and custom theme development with responsive storefront and ecommerce performance analytics",
       },
     ],
@@ -123,8 +123,16 @@ export default function ShopifyDevelopmentPage() {
 
   const faqs = [
     {
+      q: "Can someone build my Shopify store for me?",
+      a: "Yes. We can plan the catalog, configure a suitable theme, prepare agreed product pages, connect payments and shipping, test the buying path, and launch the store. You provide product facts, brand assets, policies, account access and approvals. Custom development, paid apps and ongoing marketing are scoped separately.",
+    },
+    {
+      q: "What is included in a Shopify store setup service?",
+      a: "The agreed setup covers the storefront structure, theme configuration, a defined number of products and collections, payment and shipping settings, mobile checks, basic search metadata and launch testing. The product count, creative work, integrations, revisions and handoff are listed in your package or proposal.",
+    },
+    {
       q: "How long does a custom Shopify store setup take?",
-      a: "A standard custom Shopify build typically takes 7 to 14 business days, depending on product catalog size, custom functionality requirements, and app integrations.",
+      a: "We provide a project timeline after reviewing the product catalog, brand assets, theme work, integrations, approvals and testing needs. A defined setup and a custom build have different schedules, and delays in assets or platform approvals can change the launch date.",
     },
     {
       q: "How much does Shopify store setup cost?",
@@ -142,12 +150,16 @@ export default function ShopifyDevelopmentPage() {
       q: "Can you migrate my existing store from WooCommerce or Etsy to Shopify?",
       a: "Yes. We can migrate product data, eligible customer and order records, and critical URL mappings. Careful 301 redirects support organic search continuity, but no migration provider can guarantee that every ranking will remain unchanged.",
     },
+    {
+      q: "What happens after my Shopify store launches?",
+      a: "We hand over the store, access, key settings and any agreed training or launch support. Product updates, promotions, supplier exceptions, SEO and advertising require ongoing work. You can manage those yourself or compare our separately scoped store management and marketing plans. A completed build does not guarantee sales.",
+    },
   ];
 
   const serviceSchema = {
     "@context": "https://schema.org",
     "@type": "Service",
-    name: "Shopify Store Setup & Custom Theme Development Services",
+    name: "Shopify Store Setup & Development Services",
     serviceType: "eCommerce Development",
     provider: {
       "@id": "https://unifiedbrandingexperts.com/#organization",
@@ -209,7 +221,7 @@ export default function ShopifyDevelopmentPage() {
           </div>
 
           <h1 className="font-display text-4xl sm:text-6xl font-bold tracking-tight text-[#161616] leading-tight">
-              Shopify Store Setup Services &amp; Custom Theme Development
+              Shopify Store Setup &amp; Development Services
             </h1>
             <PlatformBadgeRow platforms={["shopify"]} />
 
@@ -218,6 +230,9 @@ export default function ShopifyDevelopmentPage() {
           </p>
           <p className="max-w-2xl font-body text-sm leading-relaxed text-[#585858]">
             Planning a supplier-fulfilled store? Review our <Link href="/services/dropshipping" className="font-semibold text-[#6B4BA7] underline underline-offset-4">dropshipping setup, sourcing and management process</Link> for supplier checks, order flow, marketplace rules and post-launch work.
+          </p>
+          <p className="max-w-2xl font-body text-sm leading-relaxed text-[#585858]">
+            Comparing platforms, migrations or custom features first? Use our <Link href="/shopify" className="font-semibold text-[#6B4BA7] underline underline-offset-4">Shopify planning guide</Link>. For a defined launch scope, see the <Link href="/insights/shopify-store-setup-cost-2026" className="font-semibold text-[#6B4BA7] underline underline-offset-4">Shopify setup cost guide</Link> and package deliverables.
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">

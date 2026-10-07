@@ -13,21 +13,21 @@ const FinalCTA = dynamic(() => import("@/components/home/FinalCTA"));
 
 export const metadata: Metadata = {
   title: {
-    absolute: "eCommerce Web Design & Growth Agency | Unified Branding Experts",
+    absolute: "eCommerce & Dropshipping Agency | Web, AI SEO & Marketing | UBE",
   },
   description:
-    "Shopify and WooCommerce web design, branding, search optimization and growth marketing for U.S. businesses. Discuss your store, goals and project scope.",
+    "Build and manage an eCommerce or dropshipping business with websites, AI SEO, automation, TikTok and Instagram marketing, and Google Ads. Discuss your project with UBE.",
   openGraph: {
-    title: "eCommerce Web Design & Growth Agency | Unified Branding Experts",
+    title: "eCommerce & Dropshipping Agency | Unified Branding Experts",
     description:
-      "Shopify and WooCommerce web design, branding, search optimization and growth marketing for U.S. businesses.",
+      "eCommerce, dropshipping and website builds connected with AI SEO, automation, TikTok, Instagram and Google marketing.",
     url: "https://unifiedbrandingexperts.com",
     siteName: "Unified Branding Experts",
   },
   twitter: {
-    title: "eCommerce Web Design & Growth Agency | Unified Branding Experts",
+    title: "eCommerce & Dropshipping Agency | Unified Branding Experts",
     description:
-      "Shopify and WooCommerce web design, branding, search optimization and growth marketing for U.S. businesses.",
+      "eCommerce, dropshipping and website builds connected with AI SEO, automation, TikTok, Instagram and Google marketing.",
   },
 };
 
