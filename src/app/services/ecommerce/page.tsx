@@ -243,6 +243,9 @@ export default function EcommerceGrowthServicePage() {
           <p className="text-xs sm:text-sm text-[#585858] font-body leading-relaxed">
             We help build an ecosystem where these channels work together instead of operating as disconnected stores. Our focus is an organized foundation for product discovery, customer acquisition, conversion, fulfillment and future expansion.
           </p>
+          <p className="text-xs sm:text-sm text-[#585858] font-body leading-relaxed">
+            Considering another marketplace? Review <Link href="/walmart-marketplace" className="font-semibold text-[#6B46C1] underline underline-offset-4">Walmart Marketplace eligibility and setup</Link> before planning catalog or fulfillment integrations.
+          </p>
         </div>
 
         <EcommerceMultiChannelVisual />
@@ -365,7 +368,7 @@ export default function EcommerceGrowthServicePage() {
           </div>
 
           <p className="text-xs text-[#585858] leading-relaxed">
-            Where appropriate, Amazon can also be aligned with a brand&apos;s Shopify storefront and wider digital marketing strategy.
+            Where appropriate, Amazon can also be aligned with a brand&apos;s Shopify storefront and wider digital marketing strategy. See our <Link href="/amazon" className="font-semibold text-[#6B46C1] underline underline-offset-4">Amazon store setup and management scope</Link> for seller readiness, listings, fulfillment and ongoing work.
           </p>
 
           <div className="pt-2">
@@ -486,7 +489,7 @@ export default function EcommerceGrowthServicePage() {
           </p>
 
           <p className="text-xs text-[#585858] leading-relaxed">
-            Where supported by available integrations and the client&apos;s business model, we can also help streamline product and inventory workflows between eBay and other selling channels.
+            Where supported by available integrations and the client&apos;s business model, we can also help streamline product and inventory workflows between eBay and other selling channels. Compare our <Link href="/ebay" className="font-semibold text-[#6B46C1] underline underline-offset-4">eBay store setup and listing services</Link> before deciding on a channel plan.
           </p>
         </div>
 
