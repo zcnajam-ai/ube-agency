@@ -14,16 +14,16 @@ import CommercePlatformIcon3D from "@/components/common/CommercePlatformIcon3D";
 import ServiceProjectModalTrigger from "@/components/services/ServiceProjectModalTrigger";
 
 export const metadata: Metadata = {
-  title: "eCommerce Growth & Marketing Packages | Shopify & Marketplaces",
+  title: "eCommerce Store Setup Packages & Pricing",
   description:
-    `Compare eCommerce growth and marketing packages for Shopify, Amazon, Etsy and eBay. Store builds start at ${SHOPIFY_SETUP_PRICE_LABEL}; ongoing SEO and advertising are scoped separately.`,
+    `Compare one-time eCommerce store setup packages from ${SHOPIFY_SETUP_PRICE_LABEL}. See product limits, integrations and scope; marketplace work and ongoing marketing are quoted separately.`,
   alternates: {
     canonical: "https://unifiedbrandingexperts.com/ecommerce-growth-packages",
   },
   openGraph: {
-    title: "eCommerce Packages & Pricing | Shopify, Amazon, Etsy & eBay | UBE",
+    title: "eCommerce Store Setup Packages & Pricing | UBE",
     description:
-      `Compare eCommerce development and growth packages from Unified Branding Experts. Shopify setup, marketplace optimization, dropshipping integrations, SEO, automation and multi-channel growth plans from ${SHOPIFY_SETUP_PRICE_LABEL}.`,
+      `Compare one-time eCommerce store setup packages from ${SHOPIFY_SETUP_PRICE_LABEL}. Review product limits, integrations and exclusions before planning marketplace or marketing work.`,
     url: "https://unifiedbrandingexperts.com/ecommerce-growth-packages",
     siteName: "Unified Branding Experts",
     locale: "en_US",
@@ -33,15 +33,15 @@ export const metadata: Metadata = {
         url: "https://unifiedbrandingexperts.com/ecommerce-growth-packages/opengraph-image",
         width: 1200,
         height: 630,
-        alt: "eCommerce Growth Packages & Pricing - Unified Branding Experts",
+        alt: "eCommerce store setup packages and pricing from Unified Branding Experts",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "eCommerce Packages & Pricing | Shopify, Amazon, Etsy & eBay | UBE",
+    title: "eCommerce Store Setup Packages & Pricing | UBE",
     description:
-      `Shopify store setup, dropshipping integrations, marketplace optimization, product SEO, and multi-channel growth plans from ${SHOPIFY_SETUP_PRICE_LABEL}.`,
+      `Compare one-time storefront builds from ${SHOPIFY_SETUP_PRICE_LABEL}. Product limits and integrations vary by tier; marketplace and ongoing marketing work are separately scoped.`,
     images: ["https://unifiedbrandingexperts.com/ecommerce-growth-packages/opengraph-image"],
   },
 };
@@ -54,23 +54,23 @@ export default function EcommercePackagesPage() {
         "@type": "WebPage",
         "@id": "https://unifiedbrandingexperts.com/ecommerce-growth-packages/#webpage",
         "url": "https://unifiedbrandingexperts.com/ecommerce-growth-packages",
-        "name": "eCommerce Packages & Pricing | Shopify, Amazon, Etsy & eBay | UBE",
+        "name": "eCommerce Store Setup Packages & Pricing | UBE",
         "description":
-          `Compare eCommerce development and growth packages from Unified Branding Experts. Shopify setup, marketplace optimization, dropshipping integrations, SEO, automation and multi-channel growth plans from ${SHOPIFY_SETUP_PRICE_LABEL}.`,
+          `Compare one-time eCommerce store setup packages from ${SHOPIFY_SETUP_PRICE_LABEL}. Product limits and integrations vary by tier; marketplace and ongoing marketing work are separately scoped.`,
         "breadcrumb": {
           "@type": "BreadcrumbList",
           "itemListElement": [
             { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://unifiedbrandingexperts.com" },
             { "@type": "ListItem", "position": 2, "name": "Packages", "item": "https://unifiedbrandingexperts.com/packages" },
-            { "@type": "ListItem", "position": 3, "name": "eCommerce Growth Packages", "item": "https://unifiedbrandingexperts.com/ecommerce-growth-packages" },
+            { "@type": "ListItem", "position": 3, "name": "eCommerce Store Setup Packages", "item": "https://unifiedbrandingexperts.com/ecommerce-growth-packages" },
           ],
         },
       },
       {
         "@type": "Service",
         "@id": "https://unifiedbrandingexperts.com/ecommerce-growth-packages/#service",
-        "name": "eCommerce Growth Packages",
-        "serviceType": "eCommerce Development & Marketplace Growth Packages",
+        "name": "eCommerce Store Setup Packages",
+        "serviceType": "eCommerce Store Setup and Development",
         "provider": {
           "@id": "https://unifiedbrandingexperts.com/#organization",
         },
@@ -144,11 +144,11 @@ export default function EcommercePackagesPage() {
         </div>
 
         <h1 className="font-display text-4xl sm:text-6xl font-bold tracking-tight text-[#161616]">
-          eCommerce Growth &amp; Marketing Packages
+          eCommerce Store Setup Packages &amp; Pricing
         </h1>
 
         <p className="text-sm sm:text-base text-[#585858] font-body leading-relaxed max-w-2xl mx-auto">
-          Choose the level of eCommerce support that matches where your business is today. These fixed-price packages build the storefront, tracking, SEO foundation, automation, and marketplace structure. Ongoing content, paid advertising, and campaign management are available as a separately scoped marketing retainer.
+          Compare one-time store builds by product capacity, integrations, and launch scope. These packages establish your storefront and the included tracking, SEO, and automation foundations. Marketplace seller work and ongoing campaigns are quoted separately. If you need ongoing acquisition after launch, compare our <Link href="/digital-marketing-packages" className="font-semibold text-[#6B46C1] underline underline-offset-4">digital marketing packages</Link>.
         </p>
 
         {/* 3D Platform Cluster Badge */}
@@ -514,6 +514,9 @@ export default function EcommercePackagesPage() {
             <Link href="/contact?type=amazon" className="inline-flex items-center gap-1 text-xs font-bold text-[#6B46C1] underline underline-offset-4">
               Request an Amazon scope <ArrowUpRight className="h-3.5 w-3.5" />
             </Link>
+            <Link href="/amazon" className="block text-xs font-semibold text-[#6B46C1] underline underline-offset-4">
+              Review Amazon marketplace services
+            </Link>
           </div>
 
           <div id="etsy" className="p-5 rounded-2xl bg-white border border-[#E0DDDB] space-y-3 shadow-2xs scroll-mt-24">
@@ -536,6 +539,9 @@ export default function EcommercePackagesPage() {
             <Link href="/contact?type=ebay" className="inline-flex items-center gap-1 text-xs font-bold text-[#6B46C1] underline underline-offset-4">
               Request an eBay scope <ArrowUpRight className="h-3.5 w-3.5" />
             </Link>
+            <Link href="/ebay" className="block text-xs font-semibold text-[#6B46C1] underline underline-offset-4">
+              Review eBay marketplace services
+            </Link>
           </div>
 
           <div className="p-5 rounded-2xl bg-white border border-[#E0DDDB] space-y-2 shadow-2xs">
@@ -544,6 +550,9 @@ export default function EcommercePackagesPage() {
             <p className="text-xs text-[#585858] leading-relaxed">
               Strategy and integrations for businesses selling through their storefront and multiple marketplaces.
             </p>
+            <Link href="/walmart-marketplace" className="block text-xs font-semibold text-[#6B46C1] underline underline-offset-4">
+              Review Walmart Marketplace eligibility
+            </Link>
           </div>
         </div>
 
@@ -610,7 +619,7 @@ export default function EcommercePackagesPage() {
               What do eCommerce marketing packages include?
             </h3>
             <p className="text-xs text-[#585858] leading-relaxed">
-              The packages on this page include the technical growth foundation: storefront setup, product organization, tracking, on-page SEO, conversion features, automation, and marketplace preparation according to the selected tier. Ongoing SEO content, email campaigns, and paid advertising management require a separate written retainer.
+              These are one-time store setup packages. They include storefront setup, product organization, and the tracking, on-page SEO, conversion, automation, or marketplace preparation listed for the selected tier. Ongoing SEO content, email campaigns, and paid advertising management require a separate written retainer. <Link href="/digital-marketing-packages" className="font-semibold text-[#6B46C1] underline underline-offset-4">Compare ongoing marketing plans</Link>.
             </p>
           </div>
 
