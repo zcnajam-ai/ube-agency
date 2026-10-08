@@ -5,16 +5,16 @@ import { Sparkles, ArrowUpRight, CheckCircle2 } from "lucide-react";
 import { SERVICE_PILLARS } from "@/data/services";
 
 export const metadata: Metadata = {
-  title: "Services & Capabilities | eCommerce, Web Apps, Branding & AI SEO",
+  title: "Websites, Marketing, Automation & eCommerce Services",
   description:
-    "Explore our full spectrum of digital agency services: eCommerce store setup, bespoke web development, mobile applications, brand strategy, AI SEO, and performance advertising.",
+    "Explore website development, digital marketing, AI automation, and eCommerce services. Compare the scope of each and find the right starting point for your business.",
   alternates: {
     canonical: "https://unifiedbrandingexperts.com/services",
   },
   openGraph: {
-    title: "Services & Capabilities | eCommerce, Web Apps, Branding & AI SEO",
+    title: "Websites, Marketing, Automation & eCommerce Services",
     description:
-      "Explore our full spectrum of digital agency services: eCommerce store setup, bespoke web development, mobile applications, brand strategy, and AI SEO.",
+      "Website development, digital marketing, AI automation, and eCommerce services from Unified Branding Experts.",
     url: "https://unifiedbrandingexperts.com/services",
     images: [
       {
@@ -38,10 +38,10 @@ export default function ServicesPage() {
             <span>FULL-SERVICE AGENCY CAPABILITIES</span>
           </div>
           <h1 className="font-display text-4xl sm:text-6xl font-bold tracking-tight text-[#161616] leading-tight">
-            Architected for Growth. Engineered to Perform.
+            Websites, marketing, automation &amp; eCommerce services.
           </h1>
           <p className="text-base sm:text-lg text-[#585858] font-body leading-relaxed max-w-2xl">
-            We combine branding, full-stack engineering, high-velocity eCommerce, and AI search optimization under one unified growth strategy.
+            Start with the work your business needs now: a website, marketing, automation, or an online store. We connect the pieces when a project calls for more than one service. Branding and mobile apps support those projects where relevant.
           </p>
         </div>
 
@@ -62,7 +62,24 @@ export default function ServicesPage() {
         </Link>
       </div>
 
-      {/* 4 Pillars Overview */}
+      <nav aria-label="Explore core services" className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        {[
+          { title: "Websites", href: "/services/web-design-development", detail: "Business websites and custom web development" },
+          { title: "Marketing", href: "/services/digital-marketing", detail: "Search, social content, and paid campaigns" },
+          { title: "Automation", href: "/services/ai-automation", detail: "CRM workflows and connected operations" },
+          { title: "eCommerce", href: "/services/ecommerce", detail: "Store builds, marketplaces, and management" },
+        ].map((path) => (
+          <Link key={path.title} href={path.href} className="group flex flex-col justify-between gap-5 rounded-2xl border border-[#E0DDDB] bg-white/95 p-6 transition-colors hover:border-[#6B4BA7] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#6B4BA7]">
+            <span className="font-display text-xl font-bold text-[#161616]">{path.title}</span>
+            <span className="flex items-end justify-between gap-3 text-sm text-[#585858]">
+              <span>{path.detail}</span>
+              <ArrowUpRight className="h-5 w-5 shrink-0 text-[#6B4BA7] transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" aria-hidden="true" />
+            </span>
+          </Link>
+        ))}
+      </nav>
+
+      {/* Detailed Services Overview */}
       <div className="space-y-16">
         {SERVICE_PILLARS.map((pillar) => (
           <div

@@ -9,11 +9,12 @@ import HeroInteractiveCTA from "./HeroInteractiveCTA";
 
 export default function Hero() {
   const priorityPills = [
+    { label: "Website Development", href: "/services/web-design-development", icon: <Globe2 className="w-4 h-4 text-[#6B4BA7]" aria-hidden="true" /> },
+    { label: "Digital Marketing", href: "/services/digital-marketing", icon: <Search className="w-4 h-4 text-[#6B4BA7]" aria-hidden="true" /> },
+    { label: "AI Automation", href: "/services/ai-automation", icon: <Bot className="w-4 h-4 text-[#6B4BA7]" aria-hidden="true" /> },
     { label: "eCommerce", href: "/services/ecommerce", icon: <ShoppingBag className="w-4 h-4 text-[#6B4BA7]" aria-hidden="true" /> },
     { label: "Dropshipping", href: "/services/dropshipping", icon: <Store className="w-4 h-4 text-[#6B4BA7]" aria-hidden="true" /> },
-    { label: "Website Development", href: "/services/web-design-development", icon: <Globe2 className="w-4 h-4 text-[#6B4BA7]" aria-hidden="true" /> },
     { label: "AI SEO", href: "/services/ai-seo-agency", icon: <Search className="w-4 h-4 text-[#6B4BA7]" aria-hidden="true" /> },
-    { label: "AI Automation", href: "/services/ai-automation", icon: <Bot className="w-4 h-4 text-[#6B4BA7]" aria-hidden="true" /> },
     { label: "TikTok Marketing", href: "/services/tiktok-marketing", icon: <PlatformMark platform="tiktok" size={18} decorative /> },
     { label: "Instagram Marketing", href: "/services/meta-ads", icon: <PlatformMark platform="instagram" size={18} decorative /> },
   ];
@@ -30,12 +31,11 @@ export default function Hero() {
             {/* Hero Headline & Intro */}
             <div className="space-y-4">
               <h1 className="font-display text-3xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-[#161616] tracking-tighter leading-[1.06] break-words">
-                eCommerce &amp; Dropshipping <br className="hidden sm:block" />
-                <span className="text-[#6B4BA7]">Built to Grow</span>.
+                Websites, marketing, automation &amp; <span className="text-[#6B4BA7]">eCommerce</span>.
               </h1>
 
               <p className="text-sm sm:text-base md:text-lg lg:text-xl text-[#585858] font-body leading-relaxed max-w-3xl">
-                We build and manage eCommerce stores, set up dropshipping operations, and create websites for U.S. businesses. AI SEO, automation, TikTok and Instagram marketing, and Google Ads connect the build to a practical plan for reaching buyers. Your platform and channel mix follow your products, budget and goals.
+                We build websites and online stores, run search and paid marketing, and connect the tools that keep work moving. That can mean a Shopify or dropshipping launch, AI SEO, Google and social ads, or CRM automation. We scope the right combination around your business and budget.
               </p>
             </div>
 

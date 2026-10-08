@@ -6,8 +6,8 @@ export const contentType = "image/png";
 
 export default function Image() {
   return createBrandedOgImage({
-    title: "Services & Capabilities",
-    eyebrow: "ECOMMERCE · BRAND · GROWTH",
+    title: "Websites, Marketing, Automation & eCommerce",
+    eyebrow: "UBE SERVICES",
     detail: "Explore the services that fit your project",
   });
 }
