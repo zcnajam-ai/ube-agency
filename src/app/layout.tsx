@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import dynamic from "next/dynamic";
 import Script from "next/script";
 import { Funnel_Display, Funnel_Sans, Space_Grotesk } from "next/font/google";
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import "./globals.css";
 import SmoothScrollProvider from "@/components/providers/SmoothScrollProvider";
 import Navbar from "@/components/common/Navbar";
@@ -158,6 +159,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           {/* UBE AI Sales & Service Concierge */}
           <DeferredConcierge />
         </SmoothScrollProvider>
+        <SpeedInsights />
       </body>
     </html>
   );
